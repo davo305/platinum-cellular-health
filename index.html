@@ -240,15 +240,6 @@ button {
 
   background:
     rgba(255,255,255,.025);
-
-  cursor: pointer;
-
-  transition: .2s ease;
-}
-
-.gate-check:hover {
-  border-color:
-    rgba(213,173,85,.45);
 }
 
 .gate-check input {
@@ -285,8 +276,6 @@ button {
   font-weight: 900;
 
   letter-spacing: .7px;
-
-  cursor: pointer;
 }
 
 .gate-enter {
@@ -340,7 +329,6 @@ button {
 
 .site-header {
   position: sticky;
-
   top: 0;
 
   z-index: 1000;
@@ -438,7 +426,7 @@ button {
 
 
 /* =========================================
-   DESKTOP MEMBER STATUS
+   MEMBER STATUS
 ========================================= */
 
 .member-area {
@@ -474,12 +462,6 @@ button {
   font-size: 9px;
 
   font-weight: 900;
-
-  letter-spacing: .7px;
-}
-
-.member-login:hover {
-  border-color: var(--gold);
 }
 
 .member-signed-in {
@@ -525,10 +507,6 @@ button {
     0 0 10px rgba(213,173,85,.45);
 }
 
-.member-info {
-  line-height: 1.15;
-}
-
 .member-label {
   color: #767d82;
 
@@ -548,9 +526,9 @@ button {
 
   max-width: 90px;
 
-  white-space: nowrap;
-
   overflow: hidden;
+
+  white-space: nowrap;
 
   text-overflow: ellipsis;
 }
@@ -604,13 +582,11 @@ button {
   font-size: 8px;
 
   font-weight: 900;
-
-  cursor: pointer;
 }
 
 
 /* =========================================
-   VISIBLE MOBILE MEMBER BAR
+   MOBILE MEMBER BAR
 ========================================= */
 
 .mobile-member-status-bar {
@@ -656,8 +632,6 @@ button {
 
   font-weight: 900;
 
-  letter-spacing: .5px;
-
   background:
     rgba(213,173,85,.03);
 }
@@ -684,28 +658,15 @@ button {
   align-items: center;
 
   gap: 8px;
-
-  min-width: 0;
 }
 
 .mobile-status-dot {
   width: 7px;
   height: 7px;
 
-  min-width: 7px;
-
   border-radius: 50%;
 
   background: var(--gold);
-
-  box-shadow:
-    0 0 9px rgba(213,173,85,.55);
-}
-
-.mobile-status-copy {
-  min-width: 0;
-
-  line-height: 1.1;
 }
 
 .mobile-status-label {
@@ -714,36 +675,24 @@ button {
   font-size: 6px;
 
   font-weight: 900;
-
-  letter-spacing: 1px;
 }
 
 .mobile-status-name {
-  max-width: 130px;
-
-  overflow: hidden;
-
   color: var(--gold2);
 
   font-size: 10px;
 
   font-weight: 900;
-
-  white-space: nowrap;
-
-  text-overflow: ellipsis;
 }
 
 .mobile-status-actions {
   display: flex;
 
-  align-items: center;
-
   gap: 6px;
 }
 
 .mobile-status-actions a {
-  display: inline-flex;
+  display: flex;
 
   align-items: center;
 
@@ -761,14 +710,12 @@ button {
 
   background: #0d1012;
 
-  color: #c6cacc;
-
   font-size: 7px;
 
   font-weight: 900;
 }
 
-.mobile-status-actions a.gold {
+.mobile-status-actions .gold {
   border: 0;
 
   background:
@@ -792,8 +739,6 @@ button {
   width: 44px;
   height: 44px;
 
-  min-width: 44px;
-
   padding: 10px;
 
   border:
@@ -802,8 +747,6 @@ button {
   border-radius: 9px;
 
   background: #0d1012;
-
-  cursor: pointer;
 }
 
 .mobile-menu-button span {
@@ -814,11 +757,25 @@ button {
 
   margin: 5px 0;
 
-  border-radius: 10px;
-
   background: var(--gold2);
 
   transition: .25s ease;
+}
+
+.mobile-menu-button.active span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.active span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
 }
 
 .mobile-menu {
@@ -832,9 +789,6 @@ button {
 
   border-bottom:
     1px solid #252a2e;
-
-  box-shadow:
-    0 20px 40px rgba(0,0,0,.4);
 }
 
 .mobile-menu.open {
@@ -844,9 +798,8 @@ button {
 .mobile-menu-inner {
   display: grid;
 
-  padding-top: 10px;
-
-  padding-bottom: 18px;
+  padding:
+    10px 0 18px;
 }
 
 .mobile-menu-inner > a {
@@ -861,14 +814,7 @@ button {
   font-size: 12px;
 
   font-weight: 900;
-
-  letter-spacing: .7px;
 }
-
-
-/* =========================================
-   MOBILE MEMBER CARD
-========================================= */
 
 .mobile-member-box {
   margin-bottom: 12px;
@@ -925,14 +871,10 @@ button {
   font-size: 8px;
 
   font-weight: 900;
-
-  letter-spacing: 1px;
 }
 
 .mobile-member-name {
   margin-top: 3px;
-
-  color: #f4f4f4;
 
   font-size: 18px;
 
@@ -940,13 +882,9 @@ button {
 }
 
 .mobile-member-email {
-  margin-top: 2px;
-
   color: #777e83;
 
   font-size: 9px;
-
-  word-break: break-word;
 }
 
 .mobile-member-actions {
@@ -999,31 +937,7 @@ button {
 
 
 /* =========================================
-   MENU BUTTON ANIMATION
-========================================= */
-
-.mobile-menu-button.active
-span:nth-child(1) {
-  transform:
-    translateY(7px)
-    rotate(45deg);
-}
-
-.mobile-menu-button.active
-span:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu-button.active
-span:nth-child(3) {
-  transform:
-    translateY(-7px)
-    rotate(-45deg);
-}
-
-
-/* =========================================
-   PROMOTION BANNER
+   PROMO BANNER
 ========================================= */
 
 .promo-banner {
@@ -1042,9 +956,6 @@ span:nth-child(3) {
     );
 
   color: #080909;
-
-  border-bottom:
-    1px solid rgba(255,255,255,.12);
 }
 
 .promo-track {
@@ -1059,28 +970,22 @@ span:nth-child(3) {
 }
 
 .promo-track span {
-  display: inline-block;
-
   padding:
     9px 40px;
 
   font-size: 10px;
 
   font-weight: 900;
-
-  letter-spacing: 1.2px;
 }
 
 @keyframes promoScroll {
 
   from {
-    transform:
-      translateX(0);
+    transform: translateX(0);
   }
 
   to {
-    transform:
-      translateX(-50%);
+    transform: translateX(-50%);
   }
 
 }
@@ -1114,28 +1019,17 @@ span:nth-child(3) {
   font-size: 12px;
 
   font-weight: 900;
-
-  letter-spacing: .7px;
-
-  transition: .2s ease;
-}
-
-.btn:hover {
-  transform:
-    translateY(-2px);
-
-  border-color: var(--gold);
 }
 
 .btn-gold {
+  border: none;
+
   background:
     linear-gradient(
       135deg,
       #b98a32,
       #e2c16e
     );
-
-  border: none;
 
   color: #080909;
 }
@@ -1173,9 +1067,8 @@ span:nth-child(3) {
 
   align-items: center;
 
-  padding-top: 90px;
-
-  padding-bottom: 90px;
+  padding:
+    90px 0;
 }
 
 .eyebrow {
@@ -1191,8 +1084,6 @@ span:nth-child(3) {
 }
 
 .hero h1 {
-  max-width: 760px;
-
   font-size:
     clamp(
       42px,
@@ -1208,8 +1099,6 @@ span:nth-child(3) {
 }
 
 .hero-copy > p {
-  max-width: 650px;
-
   color: var(--muted);
 
   font-size: 17px;
@@ -1248,23 +1137,12 @@ span:nth-child(3) {
   padding:
     7px 10px;
 
-  border-radius: 5px;
-
   font-size: 9px;
 
   font-weight: 800;
-
-  letter-spacing: 1px;
 }
 
-
-/* =========================================
-   HERO VISUAL
-========================================= */
-
 .hero-visual {
-  position: relative;
-
   min-height: 480px;
 
   display: flex;
@@ -1287,28 +1165,6 @@ span:nth-child(3) {
 
   box-shadow:
     0 0 80px rgba(213,173,85,.08);
-
-  position: relative;
-}
-
-.logo-frame::before,
-.logo-frame::after {
-  content: "";
-
-  position: absolute;
-
-  border-radius: 50%;
-
-  border:
-    1px solid rgba(213,173,85,.09);
-}
-
-.logo-frame::before {
-  inset: -28px;
-}
-
-.logo-frame::after {
-  inset: -55px;
 }
 
 .logo-frame img {
@@ -1322,7 +1178,306 @@ span:nth-child(3) {
 
 
 /* =========================================
-   SECTIONS
+   OFFERS SIGNUP
+========================================= */
+
+.offers-section {
+  padding:
+    80px 0;
+
+  border-bottom:
+    1px solid var(--border);
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(213,173,85,.10),
+      transparent 35%
+    ),
+    #080a0b;
+}
+
+.offers-wrap {
+  display: grid;
+
+  grid-template-columns:
+    .82fr 1.18fr;
+
+  gap: 55px;
+
+  align-items: center;
+}
+
+.offers-copy h2 {
+  font-size:
+    clamp(
+      34px,
+      5vw,
+      54px
+    );
+
+  line-height: 1.02;
+
+  margin-bottom: 18px;
+}
+
+.offers-copy > p {
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.offers-benefits {
+  display: grid;
+
+  gap: 11px;
+
+  margin-top: 25px;
+}
+
+.offers-benefits div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #c2c7ca;
+
+  font-size: 13px;
+}
+
+.offer-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+}
+
+.offers-card {
+  padding: 32px;
+
+  border:
+    1px solid rgba(213,173,85,.30);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+}
+
+.offers-card-head {
+  margin-bottom: 25px;
+}
+
+.offers-card-head h3 {
+  font-size: 27px;
+
+  margin-bottom: 6px;
+}
+
+.offers-card-head p {
+  color: #858c91;
+
+  font-size: 12px;
+}
+
+.offer-fields {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 12px;
+}
+
+.offer-field {
+  display: grid;
+
+  gap: 7px;
+}
+
+.offer-field label {
+  color: #858c91;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+.offer-field input {
+  width: 100%;
+
+  min-height: 52px;
+
+  padding:
+    0 15px;
+
+  outline: none;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 10px;
+
+  background: #080a0c;
+
+  color: #fff;
+
+  font-size: 14px;
+}
+
+.offer-field input:focus {
+  border-color:
+    rgba(213,173,85,.65);
+}
+
+.consent-area {
+  display: grid;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.consent-option {
+  display: flex;
+
+  gap: 11px;
+
+  align-items: flex-start;
+
+  padding: 15px;
+
+  border:
+    1px solid #292e32;
+
+  border-radius: 11px;
+
+  background: #0b0e10;
+}
+
+.consent-option input {
+  width: 19px;
+  height: 19px;
+
+  min-width: 19px;
+
+  accent-color: var(--gold);
+}
+
+.consent-option strong {
+  display: block;
+
+  color: #e6e8e9;
+
+  font-size: 11px;
+
+  margin-bottom: 3px;
+}
+
+.consent-option span {
+  color: #858c91;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+.offer-submit {
+  width: 100%;
+
+  min-height: 54px;
+
+  margin-top: 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #f0d48c
+    );
+
+  color: #080909;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: .9px;
+}
+
+.offer-submit:disabled {
+  opacity: .5;
+}
+
+.offer-status {
+  display: none;
+
+  margin-top: 15px;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  font-size: 11px;
+}
+
+.offer-status.success {
+  display: block;
+
+  color: var(--success);
+
+  border:
+    1px solid rgba(130,211,148,.35);
+
+  background:
+    rgba(130,211,148,.05);
+}
+
+.offer-status.error {
+  display: block;
+
+  color: var(--error);
+
+  border:
+    1px solid rgba(226,139,139,.35);
+
+  background:
+    rgba(226,139,139,.05);
+}
+
+.offer-fineprint {
+  margin-top: 15px;
+
+  color: #666d72;
+
+  font-size: 8.5px;
+
+  line-height: 1.65;
+}
+
+.offer-fineprint a {
+  color: var(--gold2);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
 ========================================= */
 
 .section {
@@ -1359,8 +1514,6 @@ span:nth-child(3) {
     );
 
   line-height: 1.05;
-
-  letter-spacing: -1.4px;
 }
 
 .section-head > p,
@@ -1402,16 +1555,6 @@ span:nth-child(3) {
   border-radius: 14px;
 
   position: relative;
-
-  transition: .25s ease;
-}
-
-.feature-card:hover {
-  transform:
-    translateY(-5px);
-
-  border-color:
-    rgba(213,173,85,.45);
 }
 
 .feature-card .num {
@@ -1436,8 +1579,6 @@ span:nth-child(3) {
 
   font-weight: 900;
 
-  letter-spacing: 1.6px;
-
   margin-bottom: 55px;
 }
 
@@ -1451,8 +1592,6 @@ span:nth-child(3) {
   color: var(--muted);
 
   font-size: 14px;
-
-  line-height: 1.8;
 }
 
 .feature-card > span {
@@ -1467,8 +1606,6 @@ span:nth-child(3) {
   font-size: 10px;
 
   font-weight: 900;
-
-  letter-spacing: 1px;
 }
 
 
@@ -1507,13 +1644,6 @@ span:nth-child(3) {
   font-size: 14px;
 }
 
-.science-list div {
-  padding-bottom: 10px;
-
-  border-bottom:
-    1px solid #1d2124;
-}
-
 .lab-grid {
   display: grid;
 
@@ -1547,8 +1677,6 @@ span:nth-child(3) {
   color: var(--gold2);
 
   font-size: 45px;
-
-  letter-spacing: -2px;
 }
 
 .lab-stat span {
@@ -1557,8 +1685,6 @@ span:nth-child(3) {
   font-size: 9px;
 
   font-weight: 900;
-
-  letter-spacing: 1.4px;
 }
 
 
@@ -1607,8 +1733,6 @@ span:nth-child(3) {
   justify-content:
     space-between;
 
-  align-items: center;
-
   border-bottom:
     3px solid #111;
 
@@ -1619,12 +1743,6 @@ span:nth-child(3) {
 
 .coa-head strong {
   font-size: 32px;
-}
-
-.coa-head span {
-  font-size: 11px;
-
-  font-weight: 900;
 }
 
 .line {
@@ -1675,8 +1793,6 @@ span:nth-child(3) {
   font-size: 9px;
 
   font-weight: 900;
-
-  letter-spacing: 1px;
 }
 
 
@@ -1708,386 +1824,12 @@ span:nth-child(3) {
   display: block;
 
   margin-bottom: 8px;
-
-  color: #eee;
 }
 
 .standards-grid span {
   color: #7e858a;
 
   font-size: 12px;
-}
-
-
-/* =========================================
-   OFFERS / PROMO SIGNUP
-========================================= */
-
-.offers-section {
-  padding:
-    95px 0;
-
-  border-bottom:
-    1px solid var(--border);
-
-  background:
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(213,173,85,.10),
-      transparent 30%
-    ),
-    #07090a;
-}
-
-.offers-wrap {
-  display: grid;
-
-  grid-template-columns:
-    .82fr 1.18fr;
-
-  gap: 55px;
-
-  align-items: center;
-}
-
-.offers-copy h2 {
-  font-size:
-    clamp(
-      34px,
-      5vw,
-      54px
-    );
-
-  line-height: 1.02;
-
-  letter-spacing: -1.5px;
-
-  margin-bottom: 18px;
-}
-
-.offers-copy > p {
-  max-width: 520px;
-
-  color: var(--muted);
-
-  font-size: 15px;
-
-  line-height: 1.8;
-}
-
-.offers-benefits {
-  display: grid;
-
-  gap: 11px;
-
-  margin-top: 26px;
-}
-
-.offers-benefits div {
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  color: #c2c7ca;
-
-  font-size: 13px;
-}
-
-.offer-dot {
-  width: 7px;
-  height: 7px;
-
-  min-width: 7px;
-
-  border-radius: 50%;
-
-  background: var(--gold);
-
-  box-shadow:
-    0 0 10px rgba(213,173,85,.35);
-}
-
-
-/* FORM CARD */
-
-.offers-card {
-  padding: 32px;
-
-  border:
-    1px solid rgba(213,173,85,.30);
-
-  border-radius: 18px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c
-    );
-
-  box-shadow:
-    0 25px 70px
-    rgba(0,0,0,.25);
-}
-
-.offers-card-head {
-  margin-bottom: 25px;
-}
-
-.offers-card-head h3 {
-  font-size: 27px;
-
-  margin-bottom: 6px;
-}
-
-.offers-card-head p {
-  color: #858c91;
-
-  font-size: 12px;
-
-  line-height: 1.7;
-}
-
-
-/* CONTACT FIELDS */
-
-.offer-fields {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 12px;
-}
-
-.offer-field {
-  display: grid;
-
-  gap: 7px;
-}
-
-.offer-field label {
-  color: #858c91;
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: 1.2px;
-}
-
-.offer-field input {
-  width: 100%;
-
-  min-height: 52px;
-
-  padding:
-    0 15px;
-
-  outline: none;
-
-  border:
-    1px solid #30353a;
-
-  border-radius: 10px;
-
-  background: #080a0c;
-
-  color: #fff;
-
-  font-size: 14px;
-
-  transition: .2s ease;
-}
-
-.offer-field input:focus {
-  border-color:
-    rgba(213,173,85,.65);
-
-  box-shadow:
-    0 0 0 3px
-    rgba(213,173,85,.05);
-}
-
-.offer-field input::placeholder {
-  color: #5e656a;
-}
-
-
-/* CONSENT OPTIONS */
-
-.consent-area {
-  display: grid;
-
-  gap: 10px;
-
-  margin-top: 18px;
-}
-
-.consent-option {
-  display: flex;
-
-  gap: 11px;
-
-  align-items: flex-start;
-
-  padding: 15px;
-
-  border:
-    1px solid #292e32;
-
-  border-radius: 11px;
-
-  background: #0b0e10;
-
-  cursor: pointer;
-}
-
-.consent-option:hover {
-  border-color:
-    rgba(213,173,85,.38);
-}
-
-.consent-option input {
-  width: 19px;
-  height: 19px;
-
-  min-width: 19px;
-
-  margin-top: 2px;
-
-  accent-color: var(--gold);
-}
-
-.consent-option strong {
-  display: block;
-
-  margin-bottom: 3px;
-
-  color: #e6e8e9;
-
-  font-size: 11px;
-}
-
-.consent-option span {
-  color: #858c91;
-
-  font-size: 10px;
-
-  line-height: 1.6;
-}
-
-
-/* SUBMIT */
-
-.offer-submit {
-  width: 100%;
-
-  min-height: 54px;
-
-  margin-top: 18px;
-
-  border: none;
-
-  border-radius: 10px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #f0d48c
-    );
-
-  color: #080909;
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: .9px;
-
-  box-shadow:
-    0 8px 24px
-    rgba(213,173,85,.15);
-
-  transition: .2s ease;
-}
-
-.offer-submit:hover {
-  transform:
-    translateY(-2px);
-
-  box-shadow:
-    0 11px 30px
-    rgba(213,173,85,.23);
-}
-
-.offer-submit:disabled {
-  opacity: .5;
-
-  cursor: not-allowed;
-
-  transform: none;
-}
-
-
-/* FORM MESSAGES */
-
-.offer-status {
-  display: none;
-
-  margin-top: 15px;
-
-  padding: 14px;
-
-  border-radius: 10px;
-
-  font-size: 11px;
-
-  line-height: 1.6;
-}
-
-.offer-status.success {
-  display: block;
-
-  color: var(--success);
-
-  border:
-    1px solid rgba(130,211,148,.35);
-
-  background:
-    rgba(130,211,148,.05);
-}
-
-.offer-status.error {
-  display: block;
-
-  color: var(--error);
-
-  border:
-    1px solid rgba(226,139,139,.35);
-
-  background:
-    rgba(226,139,139,.05);
-}
-
-
-/* FINE PRINT */
-
-.offer-fineprint {
-  margin-top: 15px;
-
-  color: #666d72;
-
-  font-size: 8.5px;
-
-  line-height: 1.65;
-}
-
-.offer-fineprint a {
-  color: var(--gold2);
 }
 
 
@@ -2119,8 +1861,6 @@ footer {
   color: #c7c9ca;
 
   display: block;
-
-  margin-bottom: 4px;
 }
 
 
@@ -2146,7 +1886,7 @@ footer {
   .shell {
     width:
       min(
-        100% - 28px,
+        calc(100% - 28px),
         1180px
       );
   }
@@ -2185,19 +1925,12 @@ footer {
 
     gap: 40px;
 
-    padding-top: 65px;
-
-    padding-bottom: 70px;
+    padding:
+      65px 0 70px;
   }
 
   .hero h1 {
     font-size: 46px;
-
-    letter-spacing: -1.8px;
-  }
-
-  .hero-copy > p {
-    font-size: 15px;
   }
 
   .hero-actions {
@@ -2217,39 +1950,27 @@ footer {
     height: 260px;
   }
 
-  .section {
-    padding:
-      70px 0;
-  }
-
+  .offers-wrap,
   .section-head,
   .science-grid,
-  .quality-wrap,
-  .offers-wrap {
+  .quality-wrap {
     grid-template-columns: 1fr;
 
     gap: 30px;
   }
 
+  .offers-section {
+    padding:
+      65px 0;
+  }
+
+  .section {
+    padding:
+      70px 0;
+  }
+
   .feature-grid {
     grid-template-columns: 1fr;
-  }
-
-  .feature-card {
-    min-height: 300px;
-  }
-
-  .lab-grid {
-    grid-template-columns:
-      1fr 1fr;
-  }
-
-  .lab-stat {
-    min-height: 145px;
-  }
-
-  .lab-stat strong {
-    font-size: 36px;
   }
 
   .standards-grid {
@@ -2257,58 +1978,12 @@ footer {
       1fr 1fr;
   }
 
-  .offers-section {
-    padding:
-      70px 0;
-  }
-
   .footer-grid {
     flex-direction: column;
   }
 
-  .gate {
-    align-items: flex-start;
-
-    padding: 12px;
-  }
-
-  .gate-panel {
-    margin:
-      12px 0;
-
-    padding:
-      22px 16px;
-
-    border-radius: 16px;
-  }
-
-  .gate-logo {
-    width: 82px;
-    height: 82px;
-  }
-
-  .gate-panel h1 {
-    font-size: 28px;
-  }
-
-  .gate-intro {
-    font-size: 12px;
-  }
-
-  .gate-check {
-    padding: 11px;
-  }
-
-  .gate-check span {
-    font-size: 12px;
-  }
-
 }
 
-
-/* =========================================
-   SMALL PHONES
-========================================= */
 
 @media(max-width:520px) {
 
@@ -2323,39 +1998,14 @@ footer {
 
   .brand-title {
     font-size: 9px;
-
-    letter-spacing: .6px;
   }
 
   .brand-sub {
     font-size: 5.8px;
-
-    letter-spacing: 1.2px;
-  }
-
-  .mobile-member-status-inner {
-    min-height: 58px;
-  }
-
-  .mobile-status-name {
-    max-width: 95px;
-
-    font-size: 9px;
-  }
-
-  .mobile-status-actions a {
-    padding:
-      0 7px;
-
-    font-size: 6.5px;
   }
 
   .hero h1 {
     font-size: 39px;
-  }
-
-  .hero-meta span {
-    font-size: 8px;
   }
 
   .logo-frame {
@@ -2363,17 +2013,8 @@ footer {
     height: 225px;
   }
 
-  .hero-visual {
-    min-height: 300px;
-  }
-
-  .standards-grid {
+  .offer-fields {
     grid-template-columns: 1fr;
-  }
-
-  .lab-grid {
-    grid-template-columns:
-      1fr 1fr;
   }
 
   .offers-card {
@@ -2384,7 +2025,7 @@ footer {
     font-size: 38px;
   }
 
-  .offer-fields {
+  .standards-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2412,7 +2053,7 @@ footer {
 
 <img
   src="pch-logo.jpg"
-  alt="Platinum Cellular Health Labs"
+  alt="PCH Labs"
   class="gate-logo"
 >
 
@@ -2431,120 +2072,62 @@ accessing Platinum Cellular Health Labs.
 
 <div class="gate-checks">
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
-<strong>
-I certify that I am 21 years of age or older.
-</strong>
-
+<strong>I certify that I am 21 years of age or older.</strong>
 </span>
-
 </label>
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
 I understand that materials identified as
 <strong>Research Use Only</strong>
 are presented solely for legitimate laboratory,
 analytical, scientific, and educational research.
-
 </span>
-
 </label>
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
 I understand that Research Use Only materials are
-
 <strong>
 not intended for human or animal consumption,
 administration, treatment, diagnosis,
 disease prevention, or clinical/veterinary use.
 </strong>
-
 </span>
-
 </label>
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
 I agree not to use information or materials from
 this website for unlawful activity or in any manner
 inconsistent with product labeling.
-
 </span>
-
 </label>
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
 I understand that website content is for research
 and educational purposes and does not constitute
 medical, veterinary, diagnostic, or treatment advice.
-
 </span>
-
 </label>
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
 I understand that Platinum Cellular Health Labs
 reserves the right to restrict access or refuse service
 where misuse, unlawful conduct, or misrepresentation
 is suspected.
-
 </span>
-
 </label>
-
 
 </div>
 
@@ -2612,7 +2195,6 @@ LONGEVITY AT THE CELLULAR LEVEL
 </a>
 
 
-
 <div class="nav-right">
 
 
@@ -2649,11 +2231,7 @@ Contact
 </nav>
 
 
-
-<!-- DESKTOP MEMBER AREA -->
-
 <div class="member-area">
-
 
 <a
   href="login.html"
@@ -2669,12 +2247,11 @@ Contact
   id="desktopMemberArea"
 >
 
-
 <div class="member-pill">
 
 <span class="member-dot"></span>
 
-<div class="member-info">
+<div>
 
 <div class="member-label">
 SIGNED IN
@@ -2691,7 +2268,6 @@ MEMBER
 
 </div>
 
-
 <a
   href="login.html"
   class="member-link"
@@ -2699,14 +2275,12 @@ MEMBER
 ACCOUNT
 </a>
 
-
 <a
   href="login.html"
   class="member-link gold"
 >
 CHECKOUT
 </a>
-
 
 <button
   type="button"
@@ -2716,12 +2290,9 @@ CHECKOUT
 SIGN OUT
 </button>
 
-
 </div>
 
-
 </div>
-
 
 
 <button
@@ -2741,19 +2312,13 @@ SIGN OUT
 
 </div>
 
-
 </div>
 
 
 
-<!-- =========================================
-     MOBILE MEMBER BAR
-========================================= -->
-
 <div class="mobile-member-status-bar">
 
 <div class="shell mobile-member-status-inner">
-
 
 <a
   href="login.html"
@@ -2769,12 +2334,11 @@ SIGN OUT
   id="visibleMobileMember"
 >
 
-
 <div class="mobile-status-identity">
 
 <span class="mobile-status-dot"></span>
 
-<div class="mobile-status-copy">
+<div>
 
 <div class="mobile-status-label">
 SIGNED IN
@@ -2807,19 +2371,13 @@ CHECKOUT
 
 </div>
 
-
-</div>
-
-
 </div>
 
 </div>
 
+</div>
 
 
-<!-- =========================================
-     MOBILE MENU
-========================================= -->
 
 <div
   class="mobile-menu"
@@ -2830,7 +2388,6 @@ CHECKOUT
 
 
 <div class="mobile-member-box">
-
 
 <a
   href="login.html"
@@ -2846,11 +2403,9 @@ CHECKOUT
   id="mobileMemberArea"
 >
 
-
 <div class="mobile-status">
 ● SIGNED IN
 </div>
-
 
 <div
   class="mobile-member-name"
@@ -2858,7 +2413,6 @@ CHECKOUT
 >
 PCH Member
 </div>
-
 
 <div
   class="mobile-member-email"
@@ -2892,12 +2446,9 @@ CATALOG
 
 </div>
 
-
 </div>
 
-
 </div>
-
 
 
 <a href="index.html">
@@ -2932,16 +2483,11 @@ FAQ
 Contact PCH Labs
 </a>
 
-
 </div>
 
 </div>
 
 
-
-<!-- =========================================
-     PROMOTION BANNER
-========================================= -->
 
 <div class="promo-banner">
 
@@ -2987,10 +2533,6 @@ $15 SHIPPING OPTION INCLUDED · PREMIUM SHIPPING AVAILABLE
 </header>
 
 
-
-<!-- =========================================
-     MAIN
-========================================= -->
 
 <main>
 
@@ -3083,6 +2625,227 @@ COA DOCUMENTATION
 
 
 <!-- =========================================
+     OFFERS - MOVED TOWARD TOP
+========================================= -->
+
+<section
+  class="offers-section"
+  id="offers"
+>
+
+<div class="shell offers-wrap">
+
+
+<div class="offers-copy">
+
+<div class="eyebrow">
+PCH LABS UPDATES
+</div>
+
+<h2>
+Get offers & promo codes.
+</h2>
+
+<p>
+Join the PCH Labs notification list for promotional
+offers, discount codes, shipping promotions,
+catalog updates, and other announcements.
+</p>
+
+
+<div class="offers-benefits">
+
+<div>
+<span class="offer-dot"></span>
+Exclusive promotional offers
+</div>
+
+<div>
+<span class="offer-dot"></span>
+Discount and promo codes
+</div>
+
+<div>
+<span class="offer-dot"></span>
+Shipping promotions
+</div>
+
+<div>
+<span class="offer-dot"></span>
+Important catalog updates
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="offers-card">
+
+
+<div class="offers-card-head">
+
+<div class="eyebrow">
+STAY CONNECTED
+</div>
+
+<h3>
+Choose how we contact you.
+</h3>
+
+<p>
+Enter an email address, mobile number, or both.
+Then select the notifications you want to receive.
+</p>
+
+</div>
+
+
+<form
+  id="marketingForm"
+  novalidate
+>
+
+
+<div class="offer-fields">
+
+
+<div class="offer-field">
+
+<label for="marketingEmail">
+EMAIL ADDRESS
+</label>
+
+<input
+  type="email"
+  id="marketingEmail"
+  autocomplete="email"
+  placeholder="you@example.com"
+>
+
+</div>
+
+
+<div class="offer-field">
+
+<label for="marketingPhone">
+MOBILE NUMBER
+</label>
+
+<input
+  type="tel"
+  id="marketingPhone"
+  autocomplete="tel"
+  inputmode="tel"
+  placeholder="(555) 555-5555"
+>
+
+</div>
+
+
+</div>
+
+
+
+<div class="consent-area">
+
+
+<label class="consent-option">
+
+<input
+  type="checkbox"
+  id="emailConsent"
+>
+
+<span>
+
+<strong>
+EMAIL OFFERS & PROMOTIONS
+</strong>
+
+I agree to receive promotional emails,
+special offers, promo codes, and PCH Labs updates
+at the email address provided.
+
+</span>
+
+</label>
+
+
+<label class="consent-option">
+
+<input
+  type="checkbox"
+  id="smsConsent"
+>
+
+<span>
+
+<strong>
+TEXT / SMS OFFERS & PROMOTIONS
+</strong>
+
+I agree to receive promotional text messages
+from PCH Labs at the mobile number provided.
+Message frequency may vary. Message and data rates
+may apply. Reply STOP to opt out.
+
+</span>
+
+</label>
+
+
+</div>
+
+
+
+<button
+  type="submit"
+  class="offer-submit"
+  id="marketingSubmit"
+>
+SIGN UP FOR OFFERS
+</button>
+
+
+<div
+  class="offer-status"
+  id="marketingStatus"
+  role="status"
+  aria-live="polite"
+>
+</div>
+
+
+<div class="offer-fineprint">
+
+Consent to promotional communications is voluntary
+and is not required to access the website or create
+a PCH member account.
+
+See our
+<a href="policies.html">
+Policies
+</a>
+for additional information.
+
+</div>
+
+
+</form>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
      RESEARCH HUB
 ========================================= -->
 
@@ -3105,7 +2868,6 @@ Organized scientific resources.
 
 </div>
 
-
 <p>
 Research information, catalog listings,
 analytical documentation, and policies are separated
@@ -3114,7 +2876,6 @@ easier to navigate and review.
 </p>
 
 </div>
-
 
 
 <div class="feature-grid">
@@ -3288,54 +3049,23 @@ ENTER RESEARCH INFORMATION
 <div class="lab-grid">
 
 <div class="lab-stat">
-
-<strong>
-RUO
-</strong>
-
-<span>
-RESEARCH USE ONLY
-</span>
-
+<strong>RUO</strong>
+<span>RESEARCH USE ONLY</span>
 </div>
 
-
 <div class="lab-stat">
-
-<strong>
-COA
-</strong>
-
-<span>
-ANALYTICAL DOCUMENTATION
-</span>
-
+<strong>COA</strong>
+<span>ANALYTICAL DOCUMENTATION</span>
 </div>
 
-
 <div class="lab-stat">
-
-<strong>
-LOT
-</strong>
-
-<span>
-BATCH TRACEABILITY
-</span>
-
+<strong>LOT</strong>
+<span>BATCH TRACEABILITY</span>
 </div>
 
-
 <div class="lab-stat">
-
-<strong>
-21+
-</strong>
-
-<span>
-RESTRICTED ACCESS
-</span>
-
+<strong>21+</strong>
+<span>RESTRICTED ACCESS</span>
 </div>
 
 </div>
@@ -3397,13 +3127,11 @@ CERTIFICATE OF ANALYSIS
 
 </div>
 
-
 <div class="line wide"></div>
 
 <div class="line"></div>
 
 <div class="line short"></div>
-
 
 <div class="coa-grid">
 
@@ -3413,7 +3141,6 @@ CERTIFICATE OF ANALYSIS
 <div></div>
 
 </div>
-
 
 <div class="coa-foot">
 LOT · TEST DATE · LABORATORY · RESULT
@@ -3451,7 +3178,6 @@ Research-focused by design.
 
 </div>
 
-
 <p>
 Platinum Cellular Health Labs maintains
 a clear separation between scientific research,
@@ -3466,297 +3192,24 @@ and clinical-use information.
 <div class="standards-grid">
 
 <div>
-
-<strong>
-Research Use Only
-</strong>
-
-<span>
-Scientific and analytical context.
-</span>
-
+<strong>Research Use Only</strong>
+<span>Scientific and analytical context.</span>
 </div>
-
 
 <div>
-
-<strong>
-No Human or Animal Use
-</strong>
-
-<span>
-Research materials are not presented for administration.
-</span>
-
+<strong>No Human or Animal Use</strong>
+<span>Research materials are not presented for administration.</span>
 </div>
-
 
 <div>
-
-<strong>
-Documentation First
-</strong>
-
-<span>
-Available COAs organized by lot or batch.
-</span>
-
+<strong>Documentation First</strong>
+<span>Available COAs organized by lot or batch.</span>
 </div>
-
 
 <div>
-
-<strong>
-Restricted Access
-</strong>
-
-<span>
-21+ certification required.
-</span>
-
+<strong>Restricted Access</strong>
+<span>21+ certification required.</span>
 </div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     OFFERS & PROMO CODES
-========================================= -->
-
-<section
-  class="offers-section"
-  id="offers"
->
-
-<div class="shell offers-wrap">
-
-
-<div class="offers-copy">
-
-<div class="eyebrow">
-PCH LABS UPDATES
-</div>
-
-<h2>
-Get offers & promo codes.
-</h2>
-
-<p>
-Join the PCH Labs notification list for promotional
-offers, discount codes, shipping promotions,
-catalog updates, and other announcements.
-</p>
-
-
-<div class="offers-benefits">
-
-<div>
-
-<span class="offer-dot"></span>
-
-Exclusive promotional offers
-
-</div>
-
-
-<div>
-
-<span class="offer-dot"></span>
-
-Discount and promo codes
-
-</div>
-
-
-<div>
-
-<span class="offer-dot"></span>
-
-Shipping promotions
-
-</div>
-
-
-<div>
-
-<span class="offer-dot"></span>
-
-Important catalog updates
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-<div class="offers-card">
-
-
-<div class="offers-card-head">
-
-<div class="eyebrow">
-STAY CONNECTED
-</div>
-
-<h3>
-Choose how we contact you.
-</h3>
-
-<p>
-Enter an email address, mobile number, or both.
-Then select the notifications you want to receive.
-</p>
-
-</div>
-
-
-
-<form
-  id="marketingForm"
-  novalidate
->
-
-
-<div class="offer-fields">
-
-
-<div class="offer-field">
-
-<label for="marketingEmail">
-EMAIL ADDRESS
-</label>
-
-<input
-  type="email"
-  id="marketingEmail"
-  autocomplete="email"
-  placeholder="you@example.com"
->
-
-</div>
-
-
-
-<div class="offer-field">
-
-<label for="marketingPhone">
-MOBILE NUMBER
-</label>
-
-<input
-  type="tel"
-  id="marketingPhone"
-  autocomplete="tel"
-  inputmode="tel"
-  placeholder="(555) 555-5555"
->
-
-</div>
-
-
-</div>
-
-
-
-<div class="consent-area">
-
-
-<label class="consent-option">
-
-<input
-  type="checkbox"
-  id="emailConsent"
->
-
-<span>
-
-<strong>
-EMAIL OFFERS & PROMOTIONS
-</strong>
-
-I agree to receive promotional emails,
-special offers, promo codes, and PCH Labs updates
-at the email address provided.
-
-</span>
-
-</label>
-
-
-
-<label class="consent-option">
-
-<input
-  type="checkbox"
-  id="smsConsent"
->
-
-<span>
-
-<strong>
-TEXT / SMS OFFERS & PROMOTIONS
-</strong>
-
-I agree to receive promotional text messages
-from PCH Labs at the mobile number provided.
-Message frequency may vary. Message and data rates
-may apply. Reply STOP to opt out.
-
-</span>
-
-</label>
-
-
-</div>
-
-
-
-<button
-  type="submit"
-  class="offer-submit"
-  id="marketingSubmit"
->
-SIGN UP FOR OFFERS
-</button>
-
-
-
-<div
-  class="offer-status"
-  id="marketingStatus"
-  role="status"
-  aria-live="polite"
->
-</div>
-
-
-
-<div class="offer-fineprint">
-
-Consent to promotional communications is voluntary
-and is not required to access the website or create
-a PCH member account. You may unsubscribe from email
-communications or opt out of SMS communications.
-See our
-<a href="policies.html">
-Policies
-</a>
-for additional information.
-
-</div>
-
-
-</form>
-
 
 </div>
 
@@ -3769,10 +3222,6 @@ for additional information.
 </main>
 
 
-
-<!-- =========================================
-     FOOTER
-========================================= -->
 
 <footer>
 
@@ -3807,20 +3256,15 @@ contact@platinumcellularhealth.com
 
 
 
-<!-- =========================================
-     SUPABASE
-========================================= -->
-
 <script
   src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
 ></script>
 
 
-
 <script>
 
 /* =========================================
-   SUPABASE CONFIG
+   SUPABASE
 ========================================= */
 
 const SUPABASE_URL =
@@ -3861,7 +3305,7 @@ const supabaseClient =
 
 
 /* =========================================
-   AGE / RESEARCH GATE
+   GATE
 ========================================= */
 
 const gate =
@@ -3980,14 +3424,6 @@ if (
 }
 
 
-function leaveSite() {
-
-  window.location.href =
-    "https://www.google.com";
-
-}
-
-
 if (
   sessionStorage.getItem(
     "pchCertified"
@@ -3998,6 +3434,14 @@ if (
 
   document.body.style.overflow =
     "hidden";
+
+}
+
+
+function leaveSite() {
+
+  window.location.href =
+    "https://www.google.com";
 
 }
 
@@ -4078,10 +3522,6 @@ const visibleMobileMemberName =
   );
 
 
-/* =========================================
-   LOGGED OUT STATE
-========================================= */
-
 function showLoggedOutMemberState() {
 
   desktopLoginLink.style.display =
@@ -4112,10 +3552,6 @@ function showLoggedOutMemberState() {
 
 }
 
-
-/* =========================================
-   LOGGED IN STATE
-========================================= */
 
 function showLoggedInMemberState(
   user
@@ -4178,10 +3614,6 @@ function showLoggedInMemberState(
 }
 
 
-/* =========================================
-   RESTORE MEMBER SESSION
-========================================= */
-
 async function restoreMemberSession() {
 
   try {
@@ -4216,7 +3648,6 @@ async function restoreMemberSession() {
   catch(error) {
 
     console.error(
-      "PCH member session error:",
       error
     );
 
@@ -4228,30 +3659,13 @@ async function restoreMemberSession() {
 }
 
 
-/* =========================================
-   SIGN OUT
-========================================= */
-
 async function signOutMember() {
 
-  try {
-
-    await supabaseClient.auth
-      .signOut();
+  await supabaseClient.auth
+    .signOut();
 
 
-    showLoggedOutMemberState();
-
-  }
-
-  catch(error) {
-
-    console.error(
-      "PCH sign out error:",
-      error
-    );
-
-  }
+  showLoggedOutMemberState();
 
 }
 
@@ -4267,10 +3681,6 @@ mobileSignout.addEventListener(
   signOutMember
 );
 
-
-/* =========================================
-   AUTH STATE CHANGES
-========================================= */
 
 supabaseClient.auth
   .onAuthStateChange(
@@ -4321,7 +3731,7 @@ mobileMenuButton.addEventListener(
   "click",
   function() {
 
-    const isOpen =
+    const open =
       mobileMenu.classList.toggle(
         "open"
       );
@@ -4329,48 +3739,13 @@ mobileMenuButton.addEventListener(
 
     mobileMenuButton.classList.toggle(
       "active",
-      isOpen
+      open
     );
 
 
     mobileMenuButton.setAttribute(
       "aria-expanded",
-      isOpen
-    );
-
-  }
-);
-
-
-const mobileLinks =
-  mobileMenu.querySelectorAll(
-    "a"
-  );
-
-
-mobileLinks.forEach(
-  function(link) {
-
-    link.addEventListener(
-      "click",
-      function() {
-
-        mobileMenu.classList.remove(
-          "open"
-        );
-
-
-        mobileMenuButton.classList.remove(
-          "active"
-        );
-
-
-        mobileMenuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      }
+      open
     );
 
   }
@@ -4378,7 +3753,7 @@ mobileLinks.forEach(
 
 
 /* =========================================
-   MARKETING SIGNUP ELEMENTS
+   MARKETING FORM
 ========================================= */
 
 const marketingForm =
@@ -4423,11 +3798,7 @@ const marketingStatus =
   );
 
 
-/* =========================================
-   MARKETING HELPERS
-========================================= */
-
-function showMarketingError(
+function marketingError(
   message
 ) {
 
@@ -4441,7 +3812,7 @@ function showMarketingError(
 }
 
 
-function showMarketingSuccess(
+function marketingSuccess(
   message
 ) {
 
@@ -4467,36 +3838,11 @@ function validEmail(
 }
 
 
-function normalizePhone(
-  phone
-) {
-
-  return phone
-    .replace(
-      /[^\d+]/g,
-      ""
-    );
-
-}
-
-
-/* =========================================
-   MARKETING SIGNUP
-========================================= */
-
 marketingForm.addEventListener(
   "submit",
   async function(event) {
 
     event.preventDefault();
-
-
-    marketingStatus.className =
-      "offer-status";
-
-
-    marketingStatus.textContent =
-      "";
 
 
     const email =
@@ -4505,16 +3851,10 @@ marketingForm.addEventListener(
         .trim();
 
 
-    const rawPhone =
+    const phone =
       marketingPhone
         .value
         .trim();
-
-
-    const phone =
-      normalizePhone(
-        rawPhone
-      );
 
 
     const wantsEmail =
@@ -4525,15 +3865,13 @@ marketingForm.addEventListener(
       smsConsent.checked;
 
 
-    /* Must choose at least one notification type */
-
     if (
       !wantsEmail
       &&
       !wantsSms
     ) {
 
-      showMarketingError(
+      marketingError(
         "Please select email notifications, text notifications, or both."
       );
 
@@ -4542,26 +3880,20 @@ marketingForm.addEventListener(
     }
 
 
-    /* Email consent requires email */
-
     if (
       wantsEmail
       &&
       email === ""
     ) {
 
-      showMarketingError(
-        "Please enter your email address to receive email offers."
+      marketingError(
+        "Please enter your email address."
       );
-
-      marketingEmail.focus();
 
       return;
 
     }
 
-
-    /* Validate email */
 
     if (
       wantsEmail
@@ -4571,18 +3903,14 @@ marketingForm.addEventListener(
       )
     ) {
 
-      showMarketingError(
+      marketingError(
         "Please enter a valid email address."
       );
-
-      marketingEmail.focus();
 
       return;
 
     }
 
-
-    /* SMS consent requires phone */
 
     if (
       wantsSms
@@ -4590,18 +3918,14 @@ marketingForm.addEventListener(
       phone === ""
     ) {
 
-      showMarketingError(
-        "Please enter your mobile number to receive text offers."
+      marketingError(
+        "Please enter your mobile phone number."
       );
-
-      marketingPhone.focus();
 
       return;
 
     }
 
-
-    /* Basic US-style phone validation */
 
     if (
       wantsSms
@@ -4612,11 +3936,9 @@ marketingForm.addEventListener(
       ).length < 10
     ) {
 
-      showMarketingError(
+      marketingError(
         "Please enter a valid mobile phone number."
       );
-
-      marketingPhone.focus();
 
       return;
 
@@ -4634,61 +3956,6 @@ marketingForm.addEventListener(
     try {
 
       const {
-        data: sessionData
-      } =
-        await supabaseClient.auth
-          .getSession();
-
-
-      const currentUser =
-        sessionData.session
-        &&
-        sessionData.session.user
-        ?
-        sessionData.session.user
-        :
-        null;
-
-
-      const record = {
-
-        email:
-          email !== ""
-          ?
-          email
-          :
-          null,
-
-        phone:
-          rawPhone !== ""
-          ?
-          rawPhone
-          :
-          null,
-
-        email_consent:
-          wantsEmail,
-
-        sms_consent:
-          wantsSms,
-
-        source:
-          "homepage",
-
-        status:
-          "active",
-
-        user_id:
-          currentUser
-          ?
-          currentUser.id
-          :
-          null
-
-      };
-
-
-      const {
         error
       } =
         await supabaseClient
@@ -4696,7 +3963,25 @@ marketingForm.addEventListener(
             "marketing_subscribers"
           )
           .insert(
-            record
+            {
+
+              email:
+                email
+                ||
+                null,
+
+              phone:
+                phone
+                ||
+                null,
+
+              email_consent:
+                wantsEmail,
+
+              sms_consent:
+                wantsSms
+
+            }
           );
 
 
@@ -4707,8 +3992,8 @@ marketingForm.addEventListener(
       }
 
 
-      showMarketingSuccess(
-        "✓ You're subscribed! Watch for future PCH Labs offers, promotions, and updates."
+      marketingSuccess(
+        "✓ You're subscribed! Watch for future PCH Labs offers and promo codes."
       );
 
 
@@ -4743,7 +4028,7 @@ marketingForm.addEventListener(
       );
 
 
-      showMarketingError(
+      marketingError(
         "We couldn't save your signup. Please try again."
       );
 
@@ -4762,16 +4047,12 @@ marketingForm.addEventListener(
 
 
 /* =========================================
-   RESTORE SESSION WHEN RETURNING
+   RESTORE SESSION
 ========================================= */
 
 window.addEventListener(
   "pageshow",
-  function() {
-
-    restoreMemberSession();
-
-  }
+  restoreMemberSession
 );
 
 
@@ -4792,10 +4073,6 @@ document.addEventListener(
   }
 );
 
-
-/* =========================================
-   START
-========================================= */
 
 restoreMemberSession();
 
