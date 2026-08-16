@@ -104,7 +104,7 @@ input {
   z-index: 1000;
 
   background:
-    rgba(5,6,7,.95);
+    rgba(5,6,7,.96);
 
   backdrop-filter:
     blur(15px);
@@ -175,7 +175,7 @@ input {
 
   align-items: center;
 
-  gap: 22px;
+  gap: 20px;
 
   color: #b9bdc0;
 
@@ -186,6 +186,136 @@ input {
 
 .nav-links a:hover {
   color: var(--gold2);
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  padding: 10px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 9px;
+
+  background: #0d1012;
+
+  cursor: pointer;
+}
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  margin: 5px 0;
+
+  border-radius: 10px;
+
+  background: var(--gold2);
+
+  transition: .25s ease;
+}
+
+.mobile-menu {
+  display: none;
+
+  background:
+    rgba(6,7,8,.99);
+
+  border-top:
+    1px solid #202428;
+
+  border-bottom:
+    1px solid #252a2e;
+
+  box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.4);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu-inner {
+  display: grid;
+
+  padding-top: 10px;
+
+  padding-bottom: 18px;
+}
+
+.mobile-menu-inner > a {
+  padding:
+    15px 3px;
+
+  border-bottom:
+    1px solid #1f2326;
+
+  color: #c6cacc;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+}
+
+.mobile-menu-inner > a:hover {
+  color: var(--gold2);
+}
+
+.mobile-menu-inner
+.mobile-contact-button {
+  margin-top: 15px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+
+  text-align: center;
+}
+
+.mobile-menu-button.active
+span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.active
+span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.active
+span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
 }
 
 
@@ -202,7 +332,8 @@ input {
 
   min-height: 46px;
 
-  padding: 0 20px;
+  padding:
+    0 20px;
 
   border-radius: 8px;
 
@@ -223,9 +354,11 @@ input {
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  border-color: var(--gold);
+  border-color:
+    var(--gold);
 }
 
 .btn-gold {
@@ -251,7 +384,8 @@ input {
     90px 0 65px;
 
   border-bottom:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 }
 
 .back-link {
@@ -318,7 +452,8 @@ input {
 }
 
 .hero-meta span {
-  padding: 7px 10px;
+  padding:
+    7px 10px;
 
   border:
     1px solid #292e32;
@@ -338,7 +473,7 @@ input {
 
 
 /* =========================================
-   FAQ SEARCH
+   FAQ SECTION
 ========================================= */
 
 .faq-section {
@@ -378,6 +513,11 @@ input {
   line-height: 1.8;
 }
 
+
+/* =========================================
+   SEARCH
+========================================= */
+
 .search-box {
   display: flex;
 
@@ -389,7 +529,8 @@ input {
 
   margin-bottom: 30px;
 
-  padding: 0 17px;
+  padding:
+    0 17px;
 
   border:
     1px solid #2c3135;
@@ -456,171 +597,7 @@ input {
 
 
 /* =========================================
-   FAQ CATEGORY
-========================================= */
-
-.faq-category {
-  margin-bottom: 42px;
-}
-
-.category-title {
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  margin-bottom: 15px;
-}
-
-.category-title span {
-  color: var(--gold);
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: 1.5px;
-}
-
-.category-title h3 {
-  font-size: 22px;
-}
-
-
-/* =========================================
-   ACCORDION
-========================================= */
-
-.faq-list {
-  display: grid;
-
-  gap: 10px;
-}
-
-.faq-item {
-  overflow: hidden;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 12px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c
-    );
-
-  transition: .2s ease;
-}
-
-.faq-item:hover {
-  border-color:
-    rgba(213,173,85,.38);
-}
-
-.faq-question {
-  width: 100%;
-
-  min-height: 70px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 20px;
-
-  padding:
-    18px 21px;
-
-  border: 0;
-
-  background: transparent;
-
-  color: #f4f4f4;
-
-  text-align: left;
-
-  cursor: pointer;
-}
-
-.question-text {
-  font-size: 14px;
-
-  font-weight: 900;
-
-  line-height: 1.45;
-}
-
-.faq-plus {
-  width: 32px;
-  height: 32px;
-
-  min-width: 32px;
-
-  display: grid;
-
-  place-items: center;
-
-  border:
-    1px solid #30353a;
-
-  border-radius: 50%;
-
-  color: var(--gold2);
-
-  font-size: 20px;
-
-  font-weight: 400;
-
-  transition: .25s ease;
-}
-
-.faq-item.active
-.faq-plus {
-  transform: rotate(45deg);
-
-  border-color:
-    rgba(213,173,85,.5);
-}
-
-.faq-answer {
-  max-height: 0;
-
-  overflow: hidden;
-
-  transition:
-    max-height .35s ease;
-}
-
-.answer-inner {
-  padding:
-    0 21px 22px;
-
-  color: var(--muted);
-
-  font-size: 13px;
-
-  line-height: 1.85;
-}
-
-.answer-inner strong {
-  color: #d5d8da;
-}
-
-.answer-inner a {
-  color: var(--gold2);
-
-  font-weight: 800;
-}
-
-
-/* =========================================
-   PROMO FAQ BOX
+   PROMOTION
 ========================================= */
 
 .promo-box {
@@ -674,18 +651,184 @@ input {
 
 
 /* =========================================
+   FAQ CATEGORY
+========================================= */
+
+.faq-category {
+  margin-bottom: 42px;
+}
+
+.category-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 15px;
+}
+
+.category-title span {
+  color: var(--gold);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.category-title h3 {
+  font-size: 22px;
+}
+
+
+/* =========================================
+   ACCORDION
+========================================= */
+
+.faq-list {
+  display: grid;
+
+  gap: 10px;
+}
+
+.faq-item {
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  transition: .2s ease;
+}
+
+.faq-item:hover {
+  border-color:
+    rgba(213,173,85,.38);
+}
+
+.faq-question {
+  width: 100%;
+
+  min-height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+
+  padding:
+    18px 21px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #f4f4f4;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.question-text {
+  font-size: 14px;
+
+  font-weight: 900;
+
+  line-height: 1.45;
+}
+
+.faq-plus {
+  width: 32px;
+  height: 32px;
+
+  min-width: 32px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 50%;
+
+  color: var(--gold2);
+
+  font-size: 20px;
+
+  transition: .25s ease;
+}
+
+.faq-item.active
+.faq-plus {
+  transform: rotate(45deg);
+
+  border-color:
+    rgba(213,173,85,.5);
+}
+
+.faq-answer {
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition:
+    max-height .35s ease;
+}
+
+.answer-inner {
+  padding:
+    0 21px 22px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+.answer-inner strong {
+  color: #d5d8da;
+}
+
+.answer-inner a {
+  color: var(--gold2);
+
+  font-weight: 800;
+}
+
+
+/* =========================================
    NO RESULTS
 ========================================= */
 
 .no-results {
   display: none;
 
-  padding: 45px 25px;
+  padding:
+    45px 25px;
 
   text-align: center;
 
   border:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 
   border-radius: 14px;
 
@@ -706,7 +849,7 @@ input {
 
 
 /* =========================================
-   SUPPORT SECTION
+   SUPPORT
 ========================================= */
 
 .support-section {
@@ -716,7 +859,8 @@ input {
   background: #090b0c;
 
   border-top:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 }
 
 .support-box {
@@ -732,7 +876,8 @@ input {
   padding: 30px;
 
   border:
-    1px solid rgba(213,173,85,.25);
+    1px solid
+    rgba(213,173,85,.25);
 
   border-radius: 15px;
 
@@ -767,12 +912,14 @@ input {
 ========================================= */
 
 footer {
-  padding: 40px 0;
+  padding:
+    40px 0;
 
   background: #030404;
 
   border-top:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 }
 
 .footer-grid {
@@ -828,9 +975,12 @@ footer {
     font-size: 7px;
   }
 
-  .nav-links
-  a:not(.contact-link) {
+  .nav-links {
     display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
   }
 
   .page-hero {
@@ -865,12 +1015,25 @@ footer {
 
 @media(max-width:520px) {
 
+  .brand {
+    gap: 8px;
+  }
+
+  .brand img {
+    width: 41px;
+    height: 41px;
+  }
+
   .brand-title {
-    font-size: 10px;
+    font-size: 9px;
+
+    letter-spacing: .6px;
   }
 
   .brand-sub {
-    font-size: 6px;
+    font-size: 5.8px;
+
+    letter-spacing: 1.2px;
   }
 
   .page-hero h1 {
@@ -961,6 +1124,7 @@ LONGEVITY AT THE CELLULAR LEVEL
 </a>
 
 
+
 <nav class="nav-links">
 
 <a href="index.html">
@@ -983,9 +1147,13 @@ Quality & COA
 Policies
 </a>
 
+<a href="faq.html">
+FAQ
+</a>
+
 <a
   href="contact.html"
-  class="btn contact-link"
+  class="btn"
 >
 Contact
 </a>
@@ -993,7 +1161,68 @@ Contact
 </nav>
 
 
+
+<button
+  class="mobile-menu-button"
+  id="mobileMenuButton"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+>
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+
 </div>
+
+
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+<div class="shell mobile-menu-inner">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research Information
+</a>
+
+<a href="catalog.html">
+Research Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a
+  href="contact.html"
+  class="mobile-contact-button"
+>
+Contact PCH Labs
+</a>
+
+</div>
+
+</div>
+
 
 </header>
 
@@ -1099,8 +1328,6 @@ the topic you need.
 
 
 
-<!-- SEARCH -->
-
 <div class="search-box">
 
 <span class="search-icon">
@@ -1125,8 +1352,6 @@ the topic you need.
 
 
 
-<!-- PROMOTION -->
-
 <div class="promo-box">
 
 <span>
@@ -1143,7 +1368,7 @@ $280 qualify for the standard $15 shipping option
 at no charge. If a higher-cost shipping option is
 selected, the $15 standard-shipping value is applied
 and the customer pays the remaining difference.
-Optional insurance is separate.
+Optional shipping insurance is separate.
 </p>
 
 </div>
@@ -1177,7 +1402,7 @@ Research Use & Access
 
 <div
   class="faq-item searchable-faq"
-  data-search="age age requirement 21 access adult"
+  data-search="age 21 access requirement adult"
 >
 
 <button
@@ -1214,7 +1439,7 @@ who certify that they are at least
 
 <div
   class="faq-item searchable-faq"
-  data-search="research use only ruo human animal consumption administration"
+  data-search="research use only ruo human animal administration consumption"
 >
 
 <button
@@ -1254,7 +1479,7 @@ clinical use, or veterinary use.
 
 <div
   class="faq-item searchable-faq"
-  data-search="medical advice dosing administration instructions human use"
+  data-search="medical advice dosing administration instructions clinical"
 >
 
 <button
@@ -1321,7 +1546,7 @@ Payments
 
 <div
   class="faq-item searchable-faq"
-  data-search="payment methods crypto cryptocurrency usdc sol solana"
+  data-search="payment method cryptocurrency crypto usdc sol solana"
 >
 
 <button
@@ -1358,7 +1583,7 @@ and <strong>SOL</strong>.
 
 <div
   class="faq-item searchable-faq"
-  data-search="usdc network solana ethereum wrong network"
+  data-search="usdc solana network"
 >
 
 <button
@@ -1396,7 +1621,7 @@ wallet address, and amount before sending funds.
 
 <div
   class="faq-item searchable-faq"
-  data-search="seed phrase private key wallet credentials password security"
+  data-search="wallet seed phrase private key recovery credentials"
 >
 
 <button
@@ -1419,10 +1644,9 @@ Will PCH Labs ever ask for my seed phrase or private key?
 
 <div class="answer-inner">
 
-No. Never provide a wallet seed phrase,
-recovery phrase, private key, password,
-or authentication code to anyone claiming
-it is required to complete a PCH Labs payment.
+No. PCH Labs will never require your wallet seed phrase,
+recovery phrase, private key, password, or authentication
+code to receive or verify a payment.
 
 </div>
 
@@ -1434,7 +1658,7 @@ it is required to complete a PCH Labs payment.
 
 <div
   class="faq-item searchable-faq"
-  data-search="crypto irreversible mistake wrong address refund blockchain"
+  data-search="crypto payment reverse irreversible blockchain wrong address"
 >
 
 <button
@@ -1457,9 +1681,10 @@ Can a cryptocurrency payment be reversed?
 
 <div class="answer-inner">
 
-Blockchain transactions may be irreversible
-after confirmation. Customers should verify
-all payment information before sending funds.
+Blockchain transactions may be irreversible after
+confirmation. Customers should carefully verify the
+network, wallet address, token, and amount before
+sending payment.
 
 </div>
 
@@ -1501,7 +1726,7 @@ Shipping & Processing
 
 <div
   class="faq-item searchable-faq"
-  data-search="shipping cost price 15 60 delivery option"
+  data-search="shipping cost 15 60 delivery premium"
 >
 
 <button
@@ -1539,7 +1764,7 @@ and available delivery option.
 
 <div
   class="faq-item searchable-faq"
-  data-search="processing time 24 hours ship order placed"
+  data-search="processing time 24 hours order shipping"
 >
 
 <button
@@ -1564,8 +1789,8 @@ How quickly are orders processed?
 
 Orders are normally prepared for shipment within
 <strong>24 hours</strong> after the order is placed
-and payment has been confirmed. This is a normal
-processing target rather than an absolute guarantee.
+and payment is confirmed. This is a normal processing
+target and not an absolute guarantee.
 
 </div>
 
@@ -1577,7 +1802,7 @@ processing target rather than an absolute guarantee.
 
 <div
   class="faq-item searchable-faq"
-  data-search="free shipping promotion 280 15 standard"
+  data-search="free shipping 280 standard 15 promotion"
 >
 
 <button
@@ -1601,13 +1826,13 @@ How does the free-shipping promotion work?
 <div class="answer-inner">
 
 Orders with a merchandise subtotal
-<strong>greater than $280</strong> qualify for
-the standard <strong>$15 shipping option</strong>
+<strong>greater than $280</strong> qualify for the
+standard <strong>$15 shipping option</strong>
 at no charge.
 
-If a premium shipping method costs more,
-the $15 standard-shipping value is applied
-and the customer pays the difference.
+If the customer chooses a higher-cost shipping method,
+the $15 shipping value is applied and the customer
+pays the difference.
 
 </div>
 
@@ -1619,7 +1844,7 @@ and the customer pays the difference.
 
 <div
   class="faq-item searchable-faq"
-  data-search="insurance shipping optional 1 per hundred 100 order value"
+  data-search="insurance shipping optional one dollar 1 100 hundred"
 >
 
 <button
@@ -1642,11 +1867,11 @@ Is shipping insurance available?
 
 <div class="answer-inner">
 
-Yes. Optional shipping insurance may be added
-for <strong>$1 per $100 of order value</strong>.
+Yes. Optional shipping insurance may be added for
+<strong>$1 per $100 of order value</strong>.
 
-For example, a $300 order may carry a $3
-optional insurance charge.
+For example, a $300 order may carry a $3 optional
+insurance charge.
 
 </div>
 
@@ -1658,7 +1883,7 @@ optional insurance charge.
 
 <div
   class="faq-item searchable-faq"
-  data-search="tracking number shipment carrier"
+  data-search="tracking shipping number carrier"
 >
 
 <button
@@ -1699,7 +1924,7 @@ the shipment has been processed.
 
 
 <!-- =========================================
-     SALES / RETURNS
+     SALES
 ========================================= -->
 
 <div
@@ -1725,7 +1950,7 @@ Sales, Returns & Pricing
 
 <div
   class="faq-item searchable-faq"
-  data-search="refund returns return exchange all sales final"
+  data-search="refund return exchange all sales final"
 >
 
 <button
@@ -1748,10 +1973,9 @@ Do you accept returns or refunds?
 
 <div class="answer-inner">
 
-All sales are final. PCH Labs does not
-accept voluntary returns, exchanges, or refunds
-after a completed sale except where a remedy
-is required by applicable law.
+All sales are final. PCH Labs does not accept voluntary
+returns, exchanges, or refunds after a completed sale,
+except where a remedy is required by applicable law.
 
 </div>
 
@@ -1763,7 +1987,7 @@ is required by applicable law.
 
 <div
   class="faq-item searchable-faq"
-  data-search="change order mistake exchange change mind"
+  data-search="change order after payment mistake"
 >
 
 <button
@@ -1786,11 +2010,10 @@ Can I change an order after payment?
 
 <div class="answer-inner">
 
-Changes may not be available after an order
-and cryptocurrency payment have been accepted.
-Customers should carefully verify the product,
-amount, quantity, shipping option, and address
-before transmitting payment.
+Changes may not be available after an order and
+cryptocurrency payment have been accepted. Customers
+should carefully verify the product, amount, quantity,
+shipping option, and address before transmitting payment.
 
 </div>
 
@@ -1802,7 +2025,7 @@ before transmitting payment.
 
 <div
   class="faq-item searchable-faq"
-  data-search="price pricing change catalog availability"
+  data-search="price pricing catalog change availability"
 >
 
 <button
@@ -1869,7 +2092,7 @@ Certificates of Analysis
 
 <div
   class="faq-item searchable-faq"
-  data-search="coa certificate of analysis laboratory report quality"
+  data-search="coa certificate of analysis laboratory report"
 >
 
 <button
@@ -1892,10 +2115,9 @@ What is a Certificate of Analysis?
 
 <div class="answer-inner">
 
-A Certificate of Analysis, or COA, is an
-analytical laboratory report associated with
-a particular submitted sample, lot, batch,
-or laboratory identifier.
+A Certificate of Analysis, or COA, is an analytical
+laboratory report associated with a particular submitted
+sample, lot, batch, or laboratory identifier.
 
 </div>
 
@@ -1907,7 +2129,7 @@ or laboratory identifier.
 
 <div
   class="faq-item searchable-faq"
-  data-search="where find coa view coa catalog quality page"
+  data-search="where find coa quality catalog direct link"
 >
 
 <button
@@ -1931,10 +2153,12 @@ Where can I find available COAs?
 <div class="answer-inner">
 
 Visit the
-<a href="quality-coa.html">Quality & COA page</a>.
-Catalog products with matching documentation
-may also have a direct <strong>VIEW COA</strong>
-button.
+<a href="quality-coa.html">
+Quality & COA page
+</a>.
+
+Catalog products with matching documentation may also
+have a direct <strong>VIEW COA</strong> button.
 
 </div>
 
@@ -1946,7 +2170,7 @@ button.
 
 <div
   class="faq-item searchable-faq"
-  data-search="coa applies batch lot sample specific another batch"
+  data-search="coa batch lot sample applies every batch"
 >
 
 <button
@@ -1969,10 +2193,9 @@ Does one COA apply to every batch of a material?
 
 <div class="answer-inner">
 
-No. A laboratory result applies to the
-sample, lot, batch, or submission identified
-in that specific report and should not
-automatically be assumed to represent
+No. A laboratory result applies to the sample, lot,
+batch, or submission identified in that specific report
+and should not automatically be assumed to represent
 another batch.
 
 </div>
@@ -1985,7 +2208,7 @@ another batch.
 
 <div
   class="faq-item searchable-faq"
-  data-search="purity identity sterility endotoxin quantity testing"
+  data-search="purity identity sterility endotoxin content analytical"
 >
 
 <button
@@ -2008,10 +2231,10 @@ Does a purity result tell me everything about a sample?
 
 <div class="answer-inner">
 
-No. Purity, identity, quantity,
-sterility, endotoxin, and other laboratory
-measurements address different analytical questions.
-Always review the complete laboratory report.
+No. Purity, identity, quantity, sterility,
+endotoxin, and other laboratory measurements
+address different analytical questions.
+Review the complete laboratory report for context.
 
 </div>
 
@@ -2053,7 +2276,7 @@ Support & Contact
 
 <div
   class="faq-item searchable-faq"
-  data-search="contact email support customer service"
+  data-search="contact email customer service support"
 >
 
 <button
@@ -2080,8 +2303,11 @@ Email
 <a href="mailto:contact@platinumcellularhealth.com">
 contact@platinumcellularhealth.com
 </a>
+
 or visit the
-<a href="contact.html">Contact page</a>.
+<a href="contact.html">
+Contact page
+</a>.
 
 </div>
 
@@ -2093,7 +2319,7 @@ or visit the
 
 <div
   class="faq-item searchable-faq"
-  data-search="order support what information include"
+  data-search="order support information include name order reference"
 >
 
 <button
@@ -2119,8 +2345,48 @@ What should I include when contacting order support?
 Include your name, order reference if available,
 and a short description of the question.
 
-Never include a wallet seed phrase,
-private key, password, or authentication code.
+Never include a wallet seed phrase, private key,
+password, or authentication code.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div
+  class="faq-item searchable-faq"
+  data-search="policy page shipping payment terms"
+>
+
+<button
+  class="faq-question"
+  type="button"
+>
+
+<span class="question-text">
+Where can I review the full PCH Labs policies?
+</span>
+
+<span class="faq-plus">
++
+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<div class="answer-inner">
+
+Visit the
+<a href="policies.html">
+Policies page
+</a>
+for the full research-use, payment, shipping,
+sales, COA, pricing, and privacy policies.
 
 </div>
 
@@ -2157,6 +2423,7 @@ shipping, payment, COA, refund, or research.
 </div>
 
 </section>
+
 
 
 <!-- =========================================
@@ -2235,7 +2502,8 @@ Longevity at the Cellular Level
 <div>
 contact@platinumcellularhealth.com
 <br>
-21+ · Research Use Only · Not for human or animal use
+21+ · Research Use Only ·
+Not for human or animal use
 </div>
 
 
@@ -2246,14 +2514,14 @@ contact@platinumcellularhealth.com
 
 
 <!-- =========================================
-     FAQ JAVASCRIPT
+     JAVASCRIPT
 ========================================= -->
 
 <script>
 
-/*
-  ACCORDION
-*/
+/* =========================================
+   FAQ ACCORDION
+========================================= */
 
 const faqItems =
   document.querySelectorAll(
@@ -2313,10 +2581,9 @@ faqItems.forEach(
 );
 
 
-
-/*
-  SEARCH
-*/
+/* =========================================
+   FAQ SEARCH
+========================================= */
 
 const search =
   document.getElementById(
@@ -2466,6 +2733,82 @@ search.addEventListener(
       "block"
       :
       "none";
+
+  }
+);
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const mobileMenuButton =
+  document.getElementById(
+    "mobileMenuButton"
+  );
+
+
+const mobileMenu =
+  document.getElementById(
+    "mobileMenu"
+  );
+
+
+mobileMenuButton.addEventListener(
+  "click",
+  function() {
+
+    const isOpen =
+      mobileMenu.classList.toggle(
+        "open"
+      );
+
+
+    mobileMenuButton.classList.toggle(
+      "active",
+      isOpen
+    );
+
+
+    mobileMenuButton.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
+
+  }
+);
+
+
+const mobileLinks =
+  mobileMenu.querySelectorAll(
+    "a"
+  );
+
+
+mobileLinks.forEach(
+  function(link) {
+
+    link.addEventListener(
+      "click",
+      function() {
+
+        mobileMenu.classList.remove(
+          "open"
+        );
+
+
+        mobileMenuButton.classList.remove(
+          "active"
+        );
+
+
+        mobileMenuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+    );
 
   }
 );
