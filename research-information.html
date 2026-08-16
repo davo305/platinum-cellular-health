@@ -38,8 +38,8 @@ body {
 
   background:
     radial-gradient(
-      circle at 80% 4%,
-      rgba(213,173,85,.07),
+      circle at 50% 0%,
+      rgba(198,160,70,.07),
       transparent 30%
     ),
     #050607;
@@ -52,6 +52,8 @@ body {
     sans-serif;
 
   line-height: 1.6;
+
+  overflow-x: hidden;
 }
 
 a {
@@ -59,28 +61,34 @@ a {
   text-decoration: none;
 }
 
-button,
+img {
+  max-width: 100%;
+  display: block;
+}
+
 input {
   font-family: inherit;
 }
 
-.shell {
-  width: min(
-    1180px,
-    calc(100% - 36px)
-  );
-
-  margin: auto;
-}
-
-
 :root {
+  --black: #050607;
+  --panel: #0d0f11;
+  --panel2: #111417;
+  --border: #252a2e;
   --gold: #d5ad55;
   --gold2: #f0d48c;
-  --panel: #0d1012;
-  --panel2: #111416;
-  --border: #252a2e;
-  --muted: #979ea4;
+  --text: #f5f5f5;
+  --muted: #9da3a8;
+}
+
+.shell {
+  width:
+    min(
+      1180px,
+      calc(100% - 36px)
+    );
+
+  margin: auto;
 }
 
 
@@ -96,19 +104,18 @@ input {
   z-index: 1000;
 
   background:
-    rgba(5,6,7,.94);
+    rgba(5,6,7,.95);
 
   backdrop-filter:
-    blur(14px);
+    blur(15px);
 
   border-bottom:
     1px solid
-    rgba(255,255,255,.07);
+    rgba(255,255,255,.08);
 }
 
-
 .nav {
-  min-height: 76px;
+  min-height: 78px;
 
   display: flex;
 
@@ -120,20 +127,21 @@ input {
   gap: 25px;
 }
 
-
 .brand {
   display: flex;
 
   align-items: center;
 
   gap: 12px;
+
+  min-width: 0;
 }
 
-
 .brand img {
-  width: 50px;
+  width: 52px;
+  height: 52px;
 
-  height: 50px;
+  flex-shrink: 0;
 
   object-fit: cover;
 
@@ -144,7 +152,6 @@ input {
     rgba(213,173,85,.35);
 }
 
-
 .brand-title {
   font-size: 13px;
 
@@ -153,17 +160,15 @@ input {
   letter-spacing: 1px;
 }
 
-
 .brand-sub {
-  color: var(--gold);
-
   font-size: 8px;
+
+  color: var(--gold);
 
   letter-spacing: 2px;
 
   margin-top: 2px;
 }
-
 
 .nav-links {
   display: flex;
@@ -172,13 +177,12 @@ input {
 
   gap: 22px;
 
-  color: #b7bdc2;
+  color: #b9bdc0;
 
-  font-size: 12px;
+  font-size: 13px;
 
   font-weight: 700;
 }
-
 
 .nav-links a:hover {
   color: var(--gold2);
@@ -186,7 +190,7 @@ input {
 
 
 /* =========================================
-   BUTTON
+   BUTTONS
 ========================================= */
 
 .btn {
@@ -196,18 +200,18 @@ input {
 
   justify-content: center;
 
-  min-height: 43px;
+  min-height: 46px;
 
-  padding: 0 16px;
+  padding: 0 20px;
+
+  border-radius: 8px;
 
   border:
     1px solid #34393d;
 
-  border-radius: 8px;
-
   background: #101214;
 
-  color: white;
+  color: #f4f4f4;
 
   font-size: 11px;
 
@@ -215,12 +219,28 @@ input {
 
   letter-spacing: .7px;
 
-  cursor: pointer;
+  transition: .2s ease;
 }
 
-
 .btn:hover {
-  border-color: var(--gold);
+  transform:
+    translateY(-2px);
+
+  border-color:
+    var(--gold);
+}
+
+.btn-gold {
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  border: none;
+
+  color: #080909;
 }
 
 
@@ -230,111 +250,104 @@ input {
 
 .page-hero {
   padding:
-    85px 0
-    55px;
+    90px 0 65px;
 
   border-bottom:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 }
 
+.back-link {
+  display: inline-block;
 
-.back {
-  display:
-    inline-block;
+  margin-bottom: 32px;
 
-  color: var(--gold);
+  color: var(--gold2);
 
   font-size: 11px;
 
-  font-weight: 800;
+  font-weight: 900;
 
-  letter-spacing: .6px;
-
-  margin-bottom: 35px;
+  letter-spacing: 1px;
 }
-
 
 .eyebrow {
   color: var(--gold);
 
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 900;
 
-  letter-spacing: 2.3px;
+  letter-spacing: 2.5px;
 
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
-
 .page-hero h1 {
-  max-width: 800px;
+  max-width: 850px;
 
   font-size:
     clamp(
-      40px,
-      7vw,
-      68px
+      42px,
+      6vw,
+      70px
     );
 
   line-height: 1;
 
   letter-spacing: -2px;
 
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
-
 
 .page-hero p {
   max-width: 760px;
 
   color: var(--muted);
 
-  font-size: 16px;
+  font-size: 17px;
 
   line-height: 1.8;
 }
 
-
-.hero-tags {
+.hero-meta {
   display: flex;
 
   flex-wrap: wrap;
 
-  gap: 8px;
+  gap: 9px;
 
   margin-top: 25px;
 }
 
+.hero-meta span {
+  padding: 7px 10px;
 
-.hero-tags span {
   border:
-    1px solid var(--border);
-
-  background: #0c0e10;
+    1px solid #292e32;
 
   border-radius: 100px;
 
-  padding: 7px 10px;
+  background: #0c0e10;
 
-  color: #858c92;
+  color: #858c91;
 
   font-size: 9px;
 
-  font-weight: 800;
+  font-weight: 900;
 
   letter-spacing: 1px;
 }
 
 
 /* =========================================
-   RESEARCH LIBRARY
+   SEARCH
 ========================================= */
 
 .library {
-  padding: 60px 0 90px;
+  padding:
+    55px 0 90px;
 }
-
 
 .library-head {
   display: flex;
@@ -347,21 +360,19 @@ input {
 
   gap: 35px;
 
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
-
 
 .library-head h2 {
   font-size:
     clamp(
       30px,
-      5vw,
+      4vw,
       48px
     );
 
-  line-height: 1.05;
+  line-height: 1.08;
 }
-
 
 .library-head p {
   max-width: 520px;
@@ -369,8 +380,9 @@ input {
   color: var(--muted);
 
   font-size: 14px;
-}
 
+  line-height: 1.8;
+}
 
 .search-box {
   display: flex;
@@ -379,31 +391,49 @@ input {
 
   gap: 12px;
 
-  background: #0d1012;
+  width: 100%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #0a0c0d
+    );
 
   border:
-    1px solid
-    #2c3135;
+    1px solid #2c3135;
 
-  border-radius: 12px;
+  border-radius: 14px;
 
-  padding: 0 16px;
+  padding:
+    0 17px;
 
-  margin-bottom: 25px;
+  margin-bottom: 28px;
+
+  transition: .2s ease;
 }
 
+.search-box:focus-within {
+  border-color:
+    rgba(213,173,85,.65);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(213,173,85,.05);
+}
 
 .search-icon {
   color: var(--gold);
 
-  font-size: 18px;
-}
+  font-size: 21px;
 
+  flex-shrink: 0;
+}
 
 .search-box input {
   width: 100%;
 
-  min-height: 56px;
+  min-height: 60px;
 
   border: 0;
 
@@ -411,31 +441,54 @@ input {
 
   background: transparent;
 
-  color: white;
+  color: #f4f4f4;
 
-  font-size: 15px;
+  font-size: 16px;
 }
-
 
 .search-box input::placeholder {
-  color: #686f74;
+  color: #666d72;
 }
 
+.search-status {
+  display: none;
+
+  color: #747b80;
+
+  font-size: 11px;
+
+  margin:
+    -15px 0
+    25px;
+}
+
+
+/* =========================================
+   TOPIC GRID
+========================================= */
 
 .topic-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(3,1fr);
+    repeat(
+      3,
+      minmax(0,1fr)
+    );
 
-  gap: 16px;
+  gap: 18px;
 }
 
-
 .topic-card {
-  min-height: 280px;
+  position: relative;
 
-  padding: 24px;
+  min-height: 295px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 26px;
 
   background:
     linear-gradient(
@@ -445,42 +498,37 @@ input {
     );
 
   border:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 
-  border-radius: 14px;
-
-  position: relative;
+  border-radius: 16px;
 
   transition:
-    transform .2s ease,
-    border-color .2s ease;
+    .25s ease;
 }
-
 
 .topic-card:hover {
   transform:
-    translateY(-3px);
+    translateY(-4px);
 
   border-color:
-    rgba(213,173,85,.38);
+    rgba(213,173,85,.43);
 }
 
-
 .topic-number {
-  color:
-    rgba(213,173,85,.18);
-
-  font-size: 46px;
-
-  font-weight: 900;
-
   position: absolute;
+
+  top: 14px;
 
   right: 20px;
 
-  top: 12px;
-}
+  color:
+    rgba(213,173,85,.14);
 
+  font-size: 48px;
+
+  font-weight: 900;
+}
 
 .topic-label {
   color: var(--gold);
@@ -489,303 +537,160 @@ input {
 
   font-weight: 900;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.7px;
 
-  margin-bottom: 45px;
+  margin-bottom: 46px;
 }
-
 
 .topic-card h3 {
-  font-size: 22px;
+  font-size: 23px;
 
-  margin-bottom: 12px;
+  line-height: 1.2;
+
+  margin-bottom: 11px;
 }
-
 
 .topic-card p {
   color: var(--muted);
 
   font-size: 13px;
 
-  line-height: 1.75;
+  line-height: 1.8;
 }
-
 
 .topic-link {
-  display: inline-block;
+  margin-top: auto;
 
-  margin-top: 22px;
-
-  color: var(--gold2);
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: .8px;
-}
-
-
-/* =========================================
-   DEEP DIVE SECTION
-========================================= */
-
-.deep-section {
-  padding: 80px 0;
-
-  border-top:
-    1px solid var(--border);
-
-  border-bottom:
-    1px solid var(--border);
-
-  background: #090b0c;
-}
-
-
-.deep-grid {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 60px;
-
-  align-items: start;
-}
-
-
-.deep-copy h2 {
-  font-size:
-    clamp(
-      30px,
-      5vw,
-      48px
-    );
-
-  line-height: 1.05;
-
-  margin-bottom: 20px;
-}
-
-
-.deep-copy p {
-  color: var(--muted);
-
-  margin-bottom: 20px;
-}
-
-
-.definition-list {
-  display: grid;
-
-  gap: 12px;
-}
-
-
-.definition-item {
-  padding: 18px;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 10px;
-
-  background: #0d1012;
-}
-
-
-.definition-item strong {
-  display: block;
+  padding-top: 22px;
 
   color: var(--gold2);
 
-  font-size: 13px;
-
-  margin-bottom: 5px;
-}
-
-
-.definition-item span {
-  color: #939a9f;
-
-  font-size: 12px;
-
-  line-height: 1.7;
-}
-
-
-/* =========================================
-   ANALYTICAL SECTION
-========================================= */
-
-.analysis-section {
-  padding: 80px 0;
-}
-
-
-.analysis-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap: 14px;
-}
-
-
-.analysis-card {
-  min-height: 210px;
-
-  padding: 20px;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 12px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #101315,
-      #090b0c
-    );
-}
-
-
-.analysis-code {
-  color: var(--gold);
-
-  font-size: 10px;
+  font-size: 9px;
 
   font-weight: 900;
 
-  letter-spacing: 1.4px;
-
-  margin-bottom: 20px;
-}
-
-
-.analysis-card h3 {
-  font-size: 18px;
-
-  margin-bottom: 9px;
-}
-
-
-.analysis-card p {
-  color: var(--muted);
-
-  font-size: 12px;
-
-  line-height: 1.7;
+  letter-spacing: 1px;
 }
 
 
 /* =========================================
-   STORAGE / HANDLING
+   SECTION SHARED
 ========================================= */
 
-.storage-section {
-  padding: 80px 0;
-
-  background: #090b0c;
+.section {
+  padding:
+    80px 0;
 
   border-top:
-    1px solid var(--border);
-
-  border-bottom:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 }
 
-
-.storage-grid {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 55px;
+.section.alt {
+  background: #090b0c;
 }
 
+.section-head {
+  max-width: 760px;
 
-.storage-copy h2 {
+  margin-bottom: 35px;
+}
+
+.section-head h2 {
   font-size:
     clamp(
       30px,
-      5vw,
+      4vw,
       48px
     );
 
-  line-height: 1.05;
+  line-height: 1.08;
 
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-
-.storage-copy p {
+.section-head p {
   color: var(--muted);
+
+  font-size: 14px;
 
   line-height: 1.8;
 }
 
 
-.storage-list {
+/* =========================================
+   TERMINOLOGY
+========================================= */
+
+.definition-grid {
   display: grid;
 
-  gap: 12px;
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0,1fr)
+    );
+
+  gap: 14px;
 }
 
-
-.storage-list div {
-  padding: 16px 18px;
+.definition-card {
+  padding: 21px;
 
   border:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 
-  border-radius: 10px;
+  border-radius: 12px;
 
   background: #0d1012;
-
-  color: #b5bbc0;
-
-  font-size: 13px;
 }
 
+.definition-card strong {
+  display: block;
 
-.storage-list strong {
   color: var(--gold2);
+
+  font-size: 14px;
+
+  margin-bottom: 7px;
+}
+
+.definition-card p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.75;
 }
 
 
 /* =========================================
-   RESEARCH REFERENCES
+   ANALYTICAL TESTING
 ========================================= */
 
-.references {
-  padding: 80px 0;
-}
-
-
-.reference-grid {
+.analysis-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(2,1fr);
+    repeat(
+      4,
+      minmax(0,1fr)
+    );
 
-  gap: 16px;
+  gap: 14px;
 }
 
+.analysis-card {
+  min-height: 220px;
 
-.reference-card {
-  padding: 24px;
-
-  min-height: 200px;
+  padding: 22px;
 
   border:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 
-  border-radius: 12px;
+  border-radius: 13px;
 
   background:
     linear-gradient(
@@ -795,53 +700,115 @@ input {
     );
 }
 
-
-.reference-card h3 {
-  margin-bottom: 10px;
-}
-
-
-.reference-card p {
-  color: var(--muted);
-
-  font-size: 13px;
-
-  line-height: 1.75;
-}
-
-
-.reference-status {
-  display: inline-block;
-
-  margin-top: 20px;
-
+.analysis-code {
   color: var(--gold);
 
   font-size: 9px;
 
   font-weight: 900;
 
-  letter-spacing: 1.4px;
+  letter-spacing: 1.5px;
+
+  margin-bottom: 24px;
+}
+
+.analysis-card h3 {
+  font-size: 18px;
+
+  margin-bottom: 9px;
+}
+
+.analysis-card p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.75;
 }
 
 
 /* =========================================
-   DISCLAIMER
+   COA GUIDE
 ========================================= */
 
-.disclaimer-section {
-  padding: 60px 0 80px;
+.coa-guide-grid {
+  display: grid;
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap: 45px;
+
+  align-items: start;
 }
 
+.coa-copy p {
+  color: var(--muted);
 
-.disclaimer {
-  padding: 26px;
+  font-size: 14px;
+
+  line-height: 1.85;
+
+  margin-bottom: 15px;
+}
+
+.coa-list {
+  display: grid;
+
+  gap: 10px;
+}
+
+.coa-item {
+  padding: 16px 18px;
 
   border:
     1px solid
-    rgba(213,173,85,.24);
+    var(--border);
 
-  border-radius: 14px;
+  border-radius: 10px;
+
+  background: #0d1012;
+}
+
+.coa-item strong {
+  color: var(--gold2);
+
+  font-size: 13px;
+}
+
+.coa-item span {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   STORAGE
+========================================= */
+
+.storage-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0,1fr)
+    );
+
+  gap: 14px;
+}
+
+.storage-card {
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 12px;
 
   background:
     linear-gradient(
@@ -851,22 +818,220 @@ input {
     );
 }
 
-
-.disclaimer strong {
+.storage-card strong {
   display: block;
 
   color: var(--gold2);
 
-  margin-bottom: 9px;
+  font-size: 13px;
+
+  margin-bottom: 7px;
+}
+
+.storage-card p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.75;
 }
 
 
-.disclaimer p {
-  color: #90979d;
+/* =========================================
+   COMPOUND RESEARCH
+========================================= */
+
+.compound-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0,1fr)
+    );
+
+  gap: 14px;
+}
+
+.compound-card {
+  min-height: 220px;
+
+  padding: 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+}
+
+.compound-card h3 {
+  font-size: 19px;
+
+  margin-bottom: 10px;
+}
+
+.compound-card p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+.compound-status {
+  margin-top: auto;
+
+  padding-top: 20px;
+
+  color: var(--gold);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+
+/* =========================================
+   REFERENCE PRINCIPLES
+========================================= */
+
+.reference-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0,1fr)
+    );
+
+  gap: 14px;
+}
+
+.reference-card {
+  padding: 22px;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 13px;
+
+  background: #0d1012;
+}
+
+.reference-card strong {
+  display: block;
+
+  color: var(--gold2);
+
+  font-size: 14px;
+
+  margin-bottom: 8px;
+}
+
+.reference-card p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   NOTICE
+========================================= */
+
+.notice-section {
+  padding:
+    60px 0;
+
+  border-top:
+    1px solid
+    var(--border);
+}
+
+.notice {
+  padding: 25px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.25);
+
+  border-radius: 14px;
+
+  background:
+    rgba(213,173,85,.03);
+}
+
+.notice strong {
+  display: block;
+
+  color: var(--gold2);
 
   font-size: 13px;
 
-  line-height: 1.75;
+  letter-spacing: 1px;
+
+  margin-bottom: 8px;
+}
+
+.notice p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   NO RESULTS
+========================================= */
+
+.no-results {
+  display: none;
+
+  grid-column:
+    1 / -1;
+
+  padding: 45px 25px;
+
+  text-align: center;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 14px;
+
+  background: #0d1012;
+
+  color: var(--muted);
+}
+
+.no-results strong {
+  display: block;
+
+  color: var(--gold2);
+
+  font-size: 19px;
+
+  margin-bottom: 5px;
 }
 
 
@@ -877,16 +1042,12 @@ input {
 footer {
   padding: 40px 0;
 
-  border-top:
-    1px solid var(--border);
-
   background: #030404;
 
-  color: #6f767b;
-
-  font-size: 11px;
+  border-top:
+    1px solid
+    var(--border);
 }
-
 
 .footer-grid {
   display: flex;
@@ -895,15 +1056,18 @@ footer {
     space-between;
 
   gap: 30px;
+
+  color: #777d82;
+
+  font-size: 11px;
 }
 
-
 .footer-grid strong {
-  color: #bfc3c6;
+  color: #c7c9ca;
 
   display: block;
 
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 
@@ -911,110 +1075,153 @@ footer {
    MOBILE
 ========================================= */
 
-@media(max-width:900px) {
+@media
+(max-width: 900px) {
+
+  .shell {
+    width:
+      min(
+        100% - 28px,
+        1180px
+      );
+  }
 
   .nav {
     min-height: 68px;
   }
 
-
   .brand img {
-    width: 44px;
-    height: 44px;
+    width: 45px;
+    height: 45px;
   }
-
 
   .brand-title {
-    font-size: 10px;
+    font-size: 11px;
   }
-
 
   .brand-sub {
     font-size: 7px;
   }
 
-
-  .nav-links {
+  .nav-links
+  a:not(.contact-link) {
     display: none;
   }
 
+  .page-hero {
+    padding:
+      70px 0 50px;
+  }
+
+  .page-hero h1 {
+    font-size: 45px;
+  }
+
+  .page-hero p {
+    font-size: 15px;
+  }
+
+  .library-head {
+    display: block;
+  }
+
+  .library-head p {
+    margin-top: 14px;
+  }
 
   .topic-grid {
     grid-template-columns:
       1fr 1fr;
   }
 
-
-  .deep-grid,
-  .storage-grid {
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-  }
-
-
   .analysis-grid {
     grid-template-columns:
       1fr 1fr;
   }
 
+  .coa-guide-grid {
+    grid-template-columns:
+      1fr;
 
-  .library-head {
-    display: block;
+    gap: 28px;
   }
 
+  .compound-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
 
-  .library-head p {
-    margin-top: 15px;
+  .reference-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .footer-grid {
+    flex-direction:
+      column;
   }
 
 }
 
 
-@media(max-width:650px) {
+/* =========================================
+   SMALL PHONES
+========================================= */
 
-  .shell {
-    width:
-      calc(100% - 26px);
+@media
+(max-width: 520px) {
+
+  .brand-title {
+    font-size: 10px;
   }
 
-
-  .page-hero {
-    padding:
-      60px 0
-      40px;
+  .brand-sub {
+    font-size: 6px;
   }
-
 
   .page-hero h1 {
-    font-size: 43px;
+    font-size: 39px;
   }
 
+  .hero-meta {
+    display: grid;
 
-  .page-hero p {
-    font-size: 14px;
+    grid-template-columns:
+      1fr;
   }
 
-
-  .library {
-    padding-top: 35px;
+  .hero-meta span {
+    text-align: center;
   }
 
+  .search-box {
+    padding:
+      0 14px;
+  }
+
+  .search-box input {
+    min-height: 55px;
+
+    font-size: 15px;
+  }
 
   .topic-grid,
+  .definition-grid,
   .analysis-grid,
+  .storage-grid,
+  .compound-grid,
   .reference-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
   }
-
 
   .topic-card {
-    min-height: 240px;
+    min-height: 245px;
   }
 
-
-  .footer-grid {
-    flex-direction: column;
+  .section {
+    padding:
+      60px 0;
   }
 
 }
@@ -1022,6 +1229,7 @@ footer {
 </style>
 
 </head>
+
 
 
 <body>
@@ -1043,9 +1251,8 @@ footer {
 
 <img
   src="pch-logo.jpg"
-  alt="Platinum Cellular Health Labs"
+  alt="PCH Labs"
 >
-
 
 <div>
 
@@ -1082,7 +1289,7 @@ Policies
 
 <a
   href="contact.html"
-  class="btn"
+  class="btn contact-link"
 >
 Contact
 </a>
@@ -1096,6 +1303,9 @@ Contact
 
 
 
+<main>
+
+
 <!-- =========================================
      HERO
 ========================================= -->
@@ -1106,8 +1316,8 @@ Contact
 
 
 <a
-  class="back"
   href="index.html"
+  class="back-link"
 >
 ← BACK TO PCH LABS
 </a>
@@ -1119,19 +1329,20 @@ SCIENTIFIC REFERENCE LIBRARY
 
 
 <h1>
-Research Information
+Research information.
 </h1>
 
 
 <p>
-Explore scientific terminology, analytical concepts,
-research-compound classification, general laboratory
-storage principles, documentation practices,
-and organized scientific-reference material.
+A structured scientific-reference library covering
+laboratory terminology, analytical testing concepts,
+Certificate of Analysis interpretation, research-material
+classification, documentation principles, and general
+laboratory handling concepts.
 </p>
 
 
-<div class="hero-tags">
+<div class="hero-meta">
 
 <span>
 SCIENTIFIC REFERENCE
@@ -1142,7 +1353,7 @@ ANALYTICAL INFORMATION
 </span>
 
 <span>
-RESEARCH USE ONLY
+DOCUMENTATION EDUCATION
 </span>
 
 </div>
@@ -1155,7 +1366,7 @@ RESEARCH USE ONLY
 
 
 <!-- =========================================
-     RESEARCH LIBRARY
+     LIBRARY SEARCH
 ========================================= -->
 
 <section class="library">
@@ -1173,16 +1384,16 @@ RESEARCH LIBRARY
 </div>
 
 <h2>
-Scientific topics
+Browse scientific topics.
 </h2>
 
 </div>
 
 
 <p>
-This library is intentionally focused on
-scientific, analytical, and laboratory information
-rather than clinical-use guidance.
+Use the search field to quickly find terminology,
+analytical concepts, COA information, laboratory
+storage principles, or research-reference topics.
 </p>
 
 
@@ -1199,9 +1410,17 @@ rather than clinical-use guidance.
 <input
   id="researchSearch"
   type="search"
+  autocomplete="off"
   placeholder="Search research topics..."
 >
 
+</div>
+
+
+<div
+  class="search-status"
+  id="searchStatus"
+>
 </div>
 
 
@@ -1212,9 +1431,22 @@ rather than clinical-use guidance.
 >
 
 
-<article
-  class="topic-card"
-  data-search="research terminology definitions purity identity concentration lot batch reference standard"
+<!-- TOPIC 1 -->
+
+<a
+  href="#terminology"
+  class="topic-card searchable-topic"
+  data-search="
+    terminology
+    definitions
+    identity
+    purity
+    concentration
+    batch
+    lot
+    sample
+    reference standard
+  "
 >
 
 <div class="topic-number">
@@ -1230,57 +1462,37 @@ Research Terminology
 </h3>
 
 <p>
-Understand common laboratory terms such as
-purity, identity, concentration, lot number,
-batch number, sample identifier, and reference standard.
+Review common laboratory terms used in
+analytical reports and scientific documentation.
 </p>
 
-<span class="topic-link">
-SCIENTIFIC DEFINITIONS
-</span>
+<div class="topic-link">
+OPEN DEFINITIONS →
+</div>
 
-</article>
+</a>
 
 
 
-<article
-  class="topic-card"
-  data-search="compound classification molecular classification peptide research compound"
+<!-- TOPIC 2 -->
+
+<a
+  href="#analytical"
+  class="topic-card searchable-topic"
+  data-search="
+    analytical testing
+    hplc
+    lc ms
+    mass spectrometry
+    purity
+    identity
+    chromatographic
+    assay
+  "
 >
 
 <div class="topic-number">
 02
-</div>
-
-<div class="topic-label">
-CLASSIFICATION
-</div>
-
-<h3>
-Compound Classification
-</h3>
-
-<p>
-Organize research materials by scientific class,
-compound identity, molecular terminology,
-and research context without clinical claims.
-</p>
-
-<span class="topic-link">
-RESEARCH CLASSIFICATION
-</span>
-
-</article>
-
-
-
-<article
-  class="topic-card"
-  data-search="analytical testing purity identity hplc mass spectrometry testing analysis"
->
-
-<div class="topic-number">
-03
 </div>
 
 <div class="topic-label">
@@ -1292,26 +1504,37 @@ Analytical Testing
 </h3>
 
 <p>
-Learn why analytical methods can answer
-different questions about identity, purity,
-sample composition, and reported results.
+Understand why different laboratory methods
+answer different scientific questions.
 </p>
 
-<span class="topic-link">
-ANALYTICAL CONCEPTS
-</span>
+<div class="topic-link">
+EXPLORE TESTING →
+</div>
 
-</article>
+</a>
 
 
 
-<article
-  class="topic-card"
-  data-search="coa certificate analysis laboratory report documentation lot batch"
+<!-- TOPIC 3 -->
+
+<a
+  href="#coa-guide"
+  class="topic-card searchable-topic"
+  data-search="
+    coa
+    certificate of analysis
+    batch
+    laboratory
+    purity
+    quantity
+    report
+    documentation
+  "
 >
 
 <div class="topic-number">
-04
+03
 </div>
 
 <div class="topic-label">
@@ -1323,30 +1546,41 @@ Understanding a COA
 </h3>
 
 <p>
-Review common Certificate of Analysis fields,
-including sample identification, testing dates,
-lot references, methods, and reported results.
+Learn how to read common fields found on
+Certificates of Analysis and laboratory reports.
 </p>
 
-<span class="topic-link">
-COA INTERPRETATION
-</span>
+<div class="topic-link">
+READ COA GUIDE →
+</div>
 
-</article>
+</a>
 
 
 
-<article
-  class="topic-card"
-  data-search="storage handling temperature light moisture labeling laboratory storage"
+<!-- TOPIC 4 -->
+
+<a
+  href="#storage"
+  class="topic-card searchable-topic"
+  data-search="
+    storage
+    handling
+    temperature
+    moisture
+    light
+    labeling
+    laboratory
+    traceability
+  "
 >
 
 <div class="topic-number">
-05
+04
 </div>
 
 <div class="topic-label">
-LABORATORY PRACTICE
+LAB PRACTICE
 </div>
 
 <h3>
@@ -1354,22 +1588,72 @@ Storage & Handling Concepts
 </h3>
 
 <p>
-General laboratory concepts involving temperature,
-light exposure, moisture control, labeling,
-documentation, and material traceability.
+General laboratory principles involving
+environmental control, labeling, and traceability.
 </p>
 
-<span class="topic-link">
-LAB STORAGE PRINCIPLES
-</span>
+<div class="topic-link">
+VIEW LAB PRINCIPLES →
+</div>
 
-</article>
+</a>
 
 
 
-<article
-  class="topic-card"
-  data-search="published research studies papers literature scientific reference peer reviewed"
+<!-- TOPIC 5 -->
+
+<a
+  href="#compound-research"
+  class="topic-card searchable-topic"
+  data-search="
+    compound
+    research
+    peptide
+    materials
+    molecular
+    classification
+    literature
+  "
+>
+
+<div class="topic-number">
+05
+</div>
+
+<div class="topic-label">
+COMPOUND REFERENCE
+</div>
+
+<h3>
+Compound Research Pages
+</h3>
+
+<p>
+A framework for future compound-specific
+scientific literature and reference pages.
+</p>
+
+<div class="topic-link">
+VIEW RESEARCH AREAS →
+</div>
+
+</a>
+
+
+
+<!-- TOPIC 6 -->
+
+<a
+  href="#references"
+  class="topic-card searchable-topic"
+  data-search="
+    published research
+    primary literature
+    peer reviewed
+    papers
+    references
+    scientific sources
+  "
 >
 
 <div class="topic-number">
@@ -1381,20 +1665,35 @@ LITERATURE
 </div>
 
 <h3>
-Published Research
+Scientific References
 </h3>
 
 <p>
-A dedicated area for organizing links to
-peer-reviewed papers, primary literature,
-and other scientific references.
+Organize primary literature and scientific
+references around research topics and compounds.
 </p>
 
-<span class="topic-link">
-REFERENCE LIBRARY
-</span>
+<div class="topic-link">
+REFERENCE PRINCIPLES →
+</div>
 
-</article>
+</a>
+
+
+
+<div
+  class="no-results"
+  id="noResults"
+>
+
+<strong>
+No research topic found
+</strong>
+
+Try another scientific term
+or keyword.
+
+</div>
 
 
 </div>
@@ -1410,109 +1709,119 @@ REFERENCE LIBRARY
      TERMINOLOGY
 ========================================= -->
 
-<section class="deep-section">
+<section
+  class="section alt"
+  id="terminology"
+>
 
-<div class="shell deep-grid">
+<div class="shell">
 
 
-<div class="deep-copy">
+<div class="section-head">
 
 <div class="eyebrow">
 RESEARCH FOUNDATIONS
 </div>
 
 <h2>
-Core laboratory terminology
+Core laboratory terminology.
 </h2>
 
 <p>
-Clear terminology helps prevent confusion
-between analytical identity, reported purity,
-sample concentration, and lot-specific documentation.
-</p>
-
-<p>
-These concepts are especially important when
-reviewing testing reports and comparing records
-from different samples or laboratories.
+Understanding analytical language helps distinguish
+between the identity of a material, reported purity,
+quantity, batch information, and the specific sample
+that was actually tested.
 </p>
 
 </div>
 
 
 
-<div class="definition-list">
+<div class="definition-grid">
 
 
-<div class="definition-item">
+<div class="definition-card">
 
 <strong>
 Identity
 </strong>
 
-<span>
-Whether analytical evidence supports the stated
-chemical or molecular identity of a research sample.
-</span>
+<p>
+Whether analytical evidence is consistent with the
+stated chemical or molecular identity of the sample.
+</p>
 
 </div>
 
 
-<div class="definition-item">
+<div class="definition-card">
 
 <strong>
 Purity
 </strong>
 
-<span>
-A reported analytical measurement describing
-the proportion of a detected target component
-relative to other detected components under
-the stated testing method.
-</span>
+<p>
+A laboratory-reported measurement describing the
+relative proportion of a detected target component
+under the stated analytical method.
+</p>
 
 </div>
 
 
-<div class="definition-item">
+<div class="definition-card">
 
 <strong>
-Lot / Batch Number
+Quantity / Content
 </strong>
 
-<span>
-An identifier used to connect a specific
-production or research batch with its documentation,
-testing records, and traceability information.
-</span>
+<p>
+The amount of material reported by the analytical
+laboratory for the tested sample under its stated method.
+</p>
 
 </div>
 
 
-<div class="definition-item">
+<div class="definition-card">
+
+<strong>
+Lot / Batch
+</strong>
+
+<p>
+An identifier used to connect a production or
+research batch with documentation and testing records.
+</p>
+
+</div>
+
+
+<div class="definition-card">
 
 <strong>
 Sample Identifier
 </strong>
 
-<span>
-The identifier assigned to a specific submitted
-sample by a laboratory or submitting organization.
-</span>
+<p>
+A laboratory or submitter-assigned identifier used
+to distinguish one tested sample from another.
+</p>
 
 </div>
 
 
-<div class="definition-item">
+<div class="definition-card">
 
 <strong>
-Analytical Method
+Reference Standard
 </strong>
 
-<span>
-The testing technique or procedure used to
-generate a reported analytical result.
-</span>
+<p>
+A characterized material used by a laboratory as
+a comparison point during certain analytical procedures.
+</p>
 
 </div>
 
@@ -1527,21 +1836,36 @@ generate a reported analytical result.
 
 
 <!-- =========================================
-     ANALYTICAL CONCEPTS
+     ANALYTICAL TESTING
 ========================================= -->
 
-<section class="analysis-section">
+<section
+  class="section"
+  id="analytical"
+>
 
 <div class="shell">
 
+
+<div class="section-head">
 
 <div class="eyebrow">
 ANALYTICAL SCIENCE
 </div>
 
-<h2 style="margin-bottom:35px;">
+<h2>
 Different tests answer different questions.
 </h2>
+
+<p>
+A single analytical result does not necessarily
+describe every property of a research sample.
+Understanding the purpose of each method helps
+put laboratory results into the correct context.
+</p>
+
+</div>
+
 
 
 <div class="analysis-grid">
@@ -1554,17 +1878,15 @@ IDENTITY
 </div>
 
 <h3>
-Identity Testing
+Identity Analysis
 </h3>
 
 <p>
-Identity-focused analysis is used to evaluate
-whether analytical evidence is consistent with
-the stated research compound.
+Used to evaluate whether analytical evidence
+is consistent with the stated target material.
 </p>
 
 </div>
-
 
 
 <div class="analysis-card">
@@ -1574,53 +1896,48 @@ PURITY
 </div>
 
 <h3>
-Purity Analysis
+Chromatographic Purity
 </h3>
 
 <p>
-Purity-focused testing evaluates the relative
-composition of detected components under
-the analytical method used.
+Evaluates detected components under a stated
+chromatographic method and reporting system.
 </p>
 
 </div>
 
 
-
 <div class="analysis-card">
 
 <div class="analysis-code">
-REPORTING
+QUANTITY
 </div>
 
 <h3>
-Method Context
+Content Analysis
 </h3>
 
 <p>
-Reported values should be interpreted together
-with the analytical method, sample preparation,
-and reporting conventions used by the laboratory.
+Used to report the measured amount of material
+within the tested analytical sample.
 </p>
 
 </div>
 
 
-
 <div class="analysis-card">
 
 <div class="analysis-code">
-TRACEABILITY
+MICROBIOLOGY
 </div>
 
 <h3>
-Lot Matching
+Sterility / Endotoxin
 </h3>
 
 <p>
-Testing documentation is most useful when
-the report can be matched to the specific
-sample, lot, or batch being referenced.
+Separate analytical or microbiological assessments
+that address questions different from identity or purity.
 </p>
 
 </div>
@@ -1636,71 +1953,413 @@ sample, lot, or batch being referenced.
 
 
 <!-- =========================================
-     STORAGE PRINCIPLES
+     COA GUIDE
 ========================================= -->
 
-<section class="storage-section">
+<section
+  class="section alt"
+  id="coa-guide"
+>
 
-<div class="shell storage-grid">
+<div class="shell">
 
 
-<div class="storage-copy">
+<div class="section-head">
+
+<div class="eyebrow">
+DOCUMENTATION
+</div>
+
+<h2>
+How to read a Certificate of Analysis.
+</h2>
+
+</div>
+
+
+
+<div class="coa-guide-grid">
+
+
+<div class="coa-copy">
+
+<p>
+A Certificate of Analysis is best understood as a
+report connected to a specific submitted sample,
+lot, batch, or laboratory identifier.
+</p>
+
+<p>
+Results should be interpreted together with the
+test method, report date, sample identity, and
+any laboratory notes or limitations included
+on the original document.
+</p>
+
+<a
+  href="quality-coa.html"
+  class="btn btn-gold"
+>
+VIEW PCH COA LIBRARY
+</a>
+
+</div>
+
+
+
+<div class="coa-list">
+
+
+<div class="coa-item">
+
+<strong>
+Sample / Product Name
+</strong>
+
+<span>
+Identifies the material described in the report.
+</span>
+
+</div>
+
+
+<div class="coa-item">
+
+<strong>
+Batch or Lot Number
+</strong>
+
+<span>
+Connects the report to the batch or lot
+identified by the submitter or laboratory.
+</span>
+
+</div>
+
+
+<div class="coa-item">
+
+<strong>
+Laboratory / Task ID
+</strong>
+
+<span>
+Provides a report or sample reference that can
+help distinguish one analytical submission from another.
+</span>
+
+</div>
+
+
+<div class="coa-item">
+
+<strong>
+Reported Result
+</strong>
+
+<span>
+May include purity, quantity, identity,
+sterility, endotoxin, or other measurements.
+</span>
+
+</div>
+
+
+<div class="coa-item">
+
+<strong>
+Analysis / Report Date
+</strong>
+
+<span>
+Shows when testing or reporting occurred,
+depending on the laboratory's documentation format.
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     STORAGE
+========================================= -->
+
+<section
+  class="section"
+  id="storage"
+>
+
+<div class="shell">
+
+
+<div class="section-head">
 
 <div class="eyebrow">
 LABORATORY PRACTICE
 </div>
 
 <h2>
-General storage and documentation concepts
+General storage and handling principles.
 </h2>
 
 <p>
-Laboratory materials should be handled according to
-their specific manufacturer, supplier, institutional,
-or analytical requirements. General research practice
-also emphasizes labeling, environmental control,
-and traceability.
+Specific storage requirements depend on the material
+and its applicable documentation. These are general
+laboratory concepts rather than product-specific instructions.
 </p>
 
 </div>
 
 
 
-<div class="storage-list">
+<div class="storage-grid">
 
 
-<div>
-<strong>Temperature:</strong>
-Maintain storage conditions appropriate to the
-specific research material and its documentation.
+<div class="storage-card">
+
+<strong>
+Temperature Control
+</strong>
+
+<p>
+Maintain environmental conditions appropriate to the
+specific material and the storage documentation that applies to it.
+</p>
+
 </div>
 
 
-<div>
-<strong>Light Exposure:</strong>
+<div class="storage-card">
+
+<strong>
+Light Exposure
+</strong>
+
+<p>
 Some laboratory materials may require protection
 from direct or prolonged light exposure.
+</p>
+
 </div>
 
 
-<div>
-<strong>Moisture:</strong>
+<div class="storage-card">
+
+<strong>
+Moisture Control
+</strong>
+
+<p>
 Control moisture exposure when required by
 the material's documented storage conditions.
+</p>
+
 </div>
 
 
-<div>
-<strong>Labeling:</strong>
-Use clear labels that preserve sample identity,
-lot or batch information, and relevant dates.
+<div class="storage-card">
+
+<strong>
+Clear Labeling
+</strong>
+
+<p>
+Preserve sample identity, amount, lot or batch
+information, and relevant dates where applicable.
+</p>
+
 </div>
 
 
-<div>
-<strong>Traceability:</strong>
-Keep documentation associated with the
-specific research material being referenced.
+<div class="storage-card">
+
+<strong>
+Traceability
+</strong>
+
+<p>
+Keep analytical reports and related records
+connected to the specific material they reference.
+</p>
+
+</div>
+
+
+<div class="storage-card">
+
+<strong>
+Original Documentation
+</strong>
+
+<p>
+When available, retain the original analytical
+report rather than relying only on summarized results.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     COMPOUND RESEARCH
+========================================= -->
+
+<section
+  class="section alt"
+  id="compound-research"
+>
+
+<div class="shell">
+
+
+<div class="section-head">
+
+<div class="eyebrow">
+COMPOUND RESEARCH
+</div>
+
+<h2>
+Compound-specific research library.
+</h2>
+
+<p>
+This area is structured so individual research
+materials can eventually have dedicated pages
+with scientific terminology, molecular information,
+published literature, and corresponding COA links.
+</p>
+
+</div>
+
+
+
+<div class="compound-grid">
+
+
+<div class="compound-card">
+
+<h3>
+R-Series Research
+</h3>
+
+<p>
+Future scientific-reference material for
+R-series research compounds.
+</p>
+
+<div class="compound-status">
+REFERENCE PAGE COMING LATER
+</div>
+
+</div>
+
+
+<div class="compound-card">
+
+<h3>
+T-Series Research
+</h3>
+
+<p>
+Future scientific-reference material for
+T-series research compounds.
+</p>
+
+<div class="compound-status">
+REFERENCE PAGE COMING LATER
+</div>
+
+</div>
+
+
+<div class="compound-card">
+
+<h3>
+GHK-Cu
+</h3>
+
+<p>
+Future reference area for GHK-Cu scientific
+literature and analytical documentation.
+</p>
+
+<div class="compound-status">
+REFERENCE PAGE COMING LATER
+</div>
+
+</div>
+
+
+<div class="compound-card">
+
+<h3>
+MOTS-C
+</h3>
+
+<p>
+Future reference area for MOTS-C scientific
+literature and analytical documentation.
+</p>
+
+<div class="compound-status">
+REFERENCE PAGE COMING LATER
+</div>
+
+</div>
+
+
+<div class="compound-card">
+
+<h3>
+Cartalax
+</h3>
+
+<p>
+Future reference area for Cartalax scientific
+literature and analytical documentation.
+</p>
+
+<div class="compound-status">
+REFERENCE PAGE COMING LATER
+</div>
+
+</div>
+
+
+<div class="compound-card">
+
+<h3>
+Additional Materials
+</h3>
+
+<p>
+More compound-specific pages can be added as
+the PCH research library expands.
+</p>
+
+<div class="compound-status">
+LIBRARY EXPANDING
+</div>
+
 </div>
 
 
@@ -1717,33 +2376,30 @@ specific research material being referenced.
      REFERENCES
 ========================================= -->
 
-<section class="references">
+<section
+  class="section"
+  id="references"
+>
 
 <div class="shell">
 
 
-<div class="library-head">
-
-
-<div>
+<div class="section-head">
 
 <div class="eyebrow">
 SCIENTIFIC LITERATURE
 </div>
 
 <h2>
-Published research references
+Reference quality matters.
 </h2>
 
-</div>
-
-
 <p>
-This section is ready for primary literature,
-peer-reviewed papers, and official scientific
-resources as the research library expands.
+As the research library expands, scientific
+references should be organized with an emphasis
+on source quality and clear separation between
+original research and secondary interpretation.
 </p>
-
 
 </div>
 
@@ -1754,79 +2410,84 @@ resources as the research library expands.
 
 <div class="reference-card">
 
-<h3>
-Primary Research Papers
-</h3>
+<strong>
+Primary Literature
+</strong>
 
 <p>
-Links to peer-reviewed original research can be
-organized by compound, molecular class,
-or analytical topic.
+Original research papers provide direct access
+to study methods, results, limitations, and conclusions.
 </p>
-
-<span class="reference-status">
-REFERENCE COLLECTION COMING SOON
-</span>
 
 </div>
 
 
-
 <div class="reference-card">
 
-<h3>
-Analytical Methods
-</h3>
+<strong>
+Peer-Reviewed Sources
+</strong>
 
 <p>
-Scientific references explaining common
-analytical techniques and laboratory
-reporting concepts can be organized here.
+Peer-reviewed scientific publications can help
+provide context for laboratory and molecular research.
 </p>
-
-<span class="reference-status">
-REFERENCE COLLECTION COMING SOON
-</span>
 
 </div>
 
 
-
 <div class="reference-card">
 
-<h3>
-Compound Research
-</h3>
+<strong>
+Methodology Matters
+</strong>
 
 <p>
-Compound-specific research pages can eventually
-connect directly to relevant published literature
-without providing clinical-use instructions.
+Study design, analytical methods, sample size,
+and experimental conditions affect interpretation.
 </p>
-
-<span class="reference-status">
-COMPOUND PAGES COMING SOON
-</span>
 
 </div>
 
 
+<div class="reference-card">
+
+<strong>
+Separate Evidence from Claims
+</strong>
+
+<p>
+Scientific findings should be distinguished from
+marketing language, speculation, and unsupported conclusions.
+</p>
+
+</div>
+
 
 <div class="reference-card">
 
-<h3>
-Documentation Resources
-</h3>
+<strong>
+Date & Version Awareness
+</strong>
 
 <p>
-Resources explaining laboratory reports,
-Certificates of Analysis, and scientific
-documentation practices can be maintained here.
+Scientific understanding can change as newer
+research and analytical methods become available.
 </p>
 
-<span class="reference-status">
-RESOURCE LIBRARY EXPANDING
-</span>
+</div>
+
+
+<div class="reference-card">
+
+<strong>
+Original Documents
+</strong>
+
+<p>
+Whenever practical, link directly to original
+research papers and laboratory documentation.
+</p>
 
 </div>
 
@@ -1841,25 +2502,25 @@ RESOURCE LIBRARY EXPANDING
 
 
 <!-- =========================================
-     DISCLAIMER
+     NOTICE
 ========================================= -->
 
-<section class="disclaimer-section">
+<section class="notice-section">
 
 <div class="shell">
 
 
-<div class="disclaimer">
+<div class="notice">
 
 <strong>
-Research & Educational Information Only
+RESEARCH & EDUCATIONAL INFORMATION ONLY
 </strong>
 
 <p>
 Information presented in this research library is intended
 for scientific, analytical, laboratory, and educational
 reference. It does not provide medical, veterinary,
-diagnostic, treatment, dosing, administration,
+diagnostic, prescribing, treatment, dosing, administration,
 or other clinical-use guidance.
 </p>
 
@@ -1869,6 +2530,9 @@ or other clinical-use guidance.
 </div>
 
 </section>
+
+
+</main>
 
 
 
@@ -1895,7 +2559,8 @@ Longevity at the Cellular Level
 
 
 <div>
-21+ · Research Use Only · Not for human or animal use
+21+ · Research Use Only ·
+Not for human or animal use
 </div>
 
 
@@ -1906,7 +2571,7 @@ Longevity at the Cellular Level
 
 
 <!-- =========================================
-     SEARCH SCRIPT
+     SEARCH JAVASCRIPT
 ========================================= -->
 
 <script>
@@ -1916,12 +2581,21 @@ const researchSearch =
     "researchSearch"
   );
 
-
 const topics =
   Array.from(
     document.querySelectorAll(
-      ".topic-card"
+      ".searchable-topic"
     )
+  );
+
+const noResults =
+  document.getElementById(
+    "noResults"
+  );
+
+const searchStatus =
+  document.getElementById(
+    "searchStatus"
   );
 
 
@@ -1935,30 +2609,83 @@ researchSearch.addEventListener(
         .toLowerCase()
         .trim();
 
+    let visible =
+      0;
+
 
     topics.forEach(
-      topic => {
+      function(topic) {
 
         const text =
           (
-            topic.dataset.search
+            topic.innerText
             +
             " "
             +
-            topic.innerText
+            topic.dataset.search
           )
           .toLowerCase();
 
+        const match =
+          text.includes(
+            term
+          );
 
-        topic.style.display =
-          text.includes(term)
-          ?
-          "block"
-          :
-          "none";
+
+        if (match) {
+
+          topic.style.display =
+            "";
+
+          visible++;
+
+        }
+
+        else {
+
+          topic.style.display =
+            "none";
+
+        }
 
       }
     );
+
+
+    if (term === "") {
+
+      searchStatus.style.display =
+        "none";
+
+    }
+
+    else {
+
+      searchStatus.style.display =
+        "block";
+
+      searchStatus.textContent =
+        visible
+        +
+        (
+          visible === 1
+          ?
+          " research topic found"
+          :
+          " research topics found"
+        );
+
+    }
+
+
+    noResults.style.display =
+      visible === 0
+      &&
+      term !== ""
+      ?
+      "block"
+      :
+      "none";
 
   }
 );
