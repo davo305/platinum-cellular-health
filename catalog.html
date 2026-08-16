@@ -188,6 +188,83 @@ input {
 
 
 /* =========================================
+   MOVING PROMOTION BANNER
+========================================= */
+
+.promo-banner {
+  width: 100%;
+
+  overflow: hidden;
+
+  position: relative;
+
+  z-index: 900;
+
+  background:
+    linear-gradient(
+      90deg,
+      #8d6623,
+      #d5ad55,
+      #f0d48c,
+      #d5ad55,
+      #8d6623
+    );
+
+  color: #080909;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.12);
+
+  white-space: nowrap;
+}
+
+.promo-track {
+  display: flex;
+
+  width: max-content;
+
+  animation:
+    promoScroll 30s linear infinite;
+}
+
+.promo-content {
+  display: flex;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  padding: 10px 25px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+.promo-content span {
+  margin: 0 22px;
+
+  opacity: .65;
+}
+
+@keyframes promoScroll {
+
+  from {
+    transform:
+      translateX(0);
+  }
+
+  to {
+    transform:
+      translateX(-50%);
+  }
+
+}
+
+
+/* =========================================
    BUTTONS
 ========================================= */
 
@@ -226,19 +303,6 @@ input {
 
   border-color:
     var(--gold);
-}
-
-.btn-gold {
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
-  border: none;
-
-  color: #080909;
 }
 
 .btn-coa {
@@ -379,7 +443,7 @@ input {
 
 
 /* =========================================
-   SEARCH AREA
+   CATALOG / SEARCH
 ========================================= */
 
 .catalog-section {
@@ -743,7 +807,7 @@ input {
 
 
 /* =========================================
-   FOOTER NOTICE
+   CATALOG NOTICE
 ========================================= */
 
 .catalog-notice {
@@ -855,6 +919,18 @@ footer {
     display: none;
   }
 
+  .promo-content {
+    padding: 9px 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .promo-track {
+    animation-duration: 25s;
+  }
+
   .search-wrap {
     top: 68px;
   }
@@ -884,10 +960,6 @@ footer {
 
 }
 
-
-/* =========================================
-   SMALL PHONES
-========================================= */
 
 @media
 (max-width: 480px) {
@@ -1015,6 +1087,66 @@ Contact
 
 
 <!-- =========================================
+     $280 PROMOTION BANNER
+========================================= -->
+
+<div class="promo-banner">
+
+<div class="promo-track">
+
+
+<div class="promo-content">
+
+🔥 FREE STANDARD SHIPPING ON ORDERS OVER $280
+
+<span>◆</span>
+
+$15 SHIPPING OPTION INCLUDED
+
+<span>◆</span>
+
+PREMIUM SHIPPING AVAILABLE — PAY ONLY THE DIFFERENCE
+
+<span>◆</span>
+
+RESEARCH USE ONLY
+
+<span>◆</span>
+
+</div>
+
+
+<div
+  class="promo-content"
+  aria-hidden="true"
+>
+
+🔥 FREE STANDARD SHIPPING ON ORDERS OVER $280
+
+<span>◆</span>
+
+$15 SHIPPING OPTION INCLUDED
+
+<span>◆</span>
+
+PREMIUM SHIPPING AVAILABLE — PAY ONLY THE DIFFERENCE
+
+<span>◆</span>
+
+RESEARCH USE ONLY
+
+<span>◆</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
      HERO
 ========================================= -->
 
@@ -1060,6 +1192,10 @@ RESEARCH USE ONLY
 
 <span>
 COA LINKS WHERE AVAILABLE
+</span>
+
+<span>
+FREE STANDARD SHIPPING OVER $280
 </span>
 
 </div>
@@ -1543,7 +1679,7 @@ RESEARCH USE ONLY
 
 
 
-<!-- 8 GHKCU 50 -->
+<!-- 8 GHK-CU 50 -->
 
 <article
   class="product-card searchable has-coa"
@@ -1615,7 +1751,7 @@ RESEARCH USE ONLY
 
 
 
-<!-- 9 GHKCU 100 -->
+<!-- 9 GHK-CU 100 -->
 
 <article
   class="product-card searchable"
@@ -1866,7 +2002,7 @@ RESEARCH USE ONLY
 
 
 
-<!-- 13 PT141 -->
+<!-- 13 PT-141 -->
 
 <article
   class="product-card searchable"
@@ -2162,7 +2298,7 @@ RESEARCH USE ONLY
 
 
 
-<!-- 18 ARA 10 -->
+<!-- 18 ARA-290 10 -->
 
 <article
   class="product-card searchable"
@@ -2221,7 +2357,7 @@ RESEARCH USE ONLY
 
 
 
-<!-- 19 ARA 50 -->
+<!-- 19 ARA-290 50 -->
 
 <article
   class="product-card searchable"
@@ -2755,7 +2891,7 @@ RESEARCH USE ONLY
 
 
 
-<!-- 28 CJC / IPA -->
+<!-- 28 CJC / IPAMORELIN -->
 
 <article
   class="product-card searchable"
@@ -2886,7 +3022,7 @@ RESEARCH USE ONLY
 
 
 
-<!-- 30 SS31 -->
+<!-- 30 SS-31 -->
 
 <article
   class="product-card searchable"
@@ -2945,7 +3081,7 @@ RESEARCH USE ONLY
 
 
 
-<!-- 31 5-AMINO -->
+<!-- 31 5-AMINO-1MQ -->
 
 <article
   class="product-card searchable"
@@ -3004,7 +3140,7 @@ RESEARCH USE ONLY
 
 
 
-<!-- 32 NAD -->
+<!-- 32 NAD+ -->
 
 <article
   class="product-card searchable"
@@ -3066,7 +3202,9 @@ RESEARCH USE ONLY
 
 
 
-<!-- NO SEARCH RESULTS -->
+<!-- =========================================
+     NO SEARCH RESULTS
+========================================= -->
 
 <div
   class="no-results"
@@ -3084,6 +3222,10 @@ amount, or abbreviation.
 
 
 
+<!-- =========================================
+     CATALOG NOTICE
+========================================= -->
+
 <div class="catalog-notice">
 
 <strong>
@@ -3092,6 +3234,10 @@ CATALOG & DOCUMENTATION NOTICE
 
 <p>
 Catalog pricing and availability may change.
+Orders with a merchandise subtotal over $280
+qualify for the standard $15 shipping option
+at no charge. Customers selecting a higher-cost
+shipping option are responsible for the difference.
 Certificates of Analysis are linked only where
 corresponding documentation has been added to
 the website. Each COA should be reviewed in its
@@ -3147,7 +3293,7 @@ Not for human or animal use
 
 
 <!-- =========================================
-     SEARCH
+     SEARCH JAVASCRIPT
 ========================================= -->
 
 <script>
