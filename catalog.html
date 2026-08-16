@@ -18,6 +18,10 @@ Research Catalog | Platinum Cellular Health Labs
 
 <style>
 
+/* =========================================
+   RESET
+========================================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -69,6 +73,7 @@ input {
 :root {
   --black: #050607;
   --panel: #0d0f11;
+  --panel2: #111417;
   --border: #252a2e;
   --gold: #d5ad55;
   --gold2: #f0d48c;
@@ -86,9 +91,9 @@ input {
 }
 
 
-/* =========================
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 .site-header {
   position: sticky;
@@ -108,7 +113,9 @@ input {
   min-height: 78px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: 25px;
@@ -116,14 +123,19 @@ input {
 
 .brand {
   display: flex;
+
   align-items: center;
 
   gap: 12px;
+
+  min-width: 0;
 }
 
 .brand img {
   width: 52px;
   height: 52px;
+
+  flex-shrink: 0;
 
   object-fit: cover;
 
@@ -153,6 +165,7 @@ input {
 
 .nav-links {
   display: flex;
+
   align-items: center;
 
   gap: 18px;
@@ -169,14 +182,15 @@ input {
 }
 
 
-/* =========================
+/* =========================================
    BUTTONS
-========================= */
+========================================= */
 
 .btn {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   min-height: 45px;
@@ -197,9 +211,13 @@ input {
   font-weight: 900;
 
   letter-spacing: .7px;
+
+  transition: .2s ease;
 }
 
 .btn:hover {
+  transform: translateY(-2px);
+
   border-color: var(--gold);
 }
 
@@ -217,6 +235,7 @@ input {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   min-height: 44px;
@@ -240,15 +259,17 @@ input {
 }
 
 
-/* =========================
+/* =========================================
    MOBILE MENU
-========================= */
+========================================= */
 
 .mobile-menu-button {
   display: none;
 
   width: 44px;
   height: 44px;
+
+  min-width: 44px;
 
   padding: 10px;
 
@@ -270,9 +291,11 @@ input {
 
   margin: 5px 0;
 
+  border-radius: 10px;
+
   background: var(--gold2);
 
-  transition: .25s;
+  transition: .25s ease;
 }
 
 .mobile-menu-button.active span:nth-child(1) {
@@ -315,8 +338,7 @@ input {
 }
 
 .mobile-menu-inner a {
-  padding:
-    14px 3px;
+  padding: 14px 3px;
 
   border-bottom:
     1px solid #1f2326;
@@ -329,11 +351,13 @@ input {
 }
 
 
-/* =========================
-   PROMO
-========================= */
+/* =========================================
+   PROMO BANNER
+========================================= */
 
 .promo-banner {
+  width: 100%;
+
   overflow: hidden;
 
   background:
@@ -361,8 +385,7 @@ input {
 }
 
 .promo-track span {
-  padding:
-    9px 40px;
+  padding: 9px 40px;
 
   font-size: 10px;
 
@@ -374,21 +397,19 @@ input {
 @keyframes promoScroll {
 
   from {
-    transform:
-      translateX(0);
+    transform: translateX(0);
   }
 
   to {
-    transform:
-      translateX(-50%);
+    transform: translateX(-50%);
   }
 
 }
 
 
-/* =========================
+/* =========================================
    HERO
-========================= */
+========================================= */
 
 .page-hero {
   padding:
@@ -408,6 +429,8 @@ input {
   font-size: 11px;
 
   font-weight: 900;
+
+  letter-spacing: 1px;
 }
 
 .eyebrow {
@@ -423,6 +446,10 @@ input {
 }
 
 .page-hero h1 {
+  max-width: 800px;
+
+  margin-bottom: 20px;
+
   font-size:
     clamp(
       42px,
@@ -432,7 +459,7 @@ input {
 
   line-height: 1;
 
-  margin-bottom: 20px;
+  letter-spacing: -2px;
 }
 
 .page-hero p {
@@ -456,8 +483,7 @@ input {
 }
 
 .hero-meta span {
-  padding:
-    7px 10px;
+  padding: 7px 10px;
 
   border:
     1px solid #292e32;
@@ -476,9 +502,128 @@ input {
 }
 
 
-/* =========================
+/* =========================================
+   GENERAL MERCHANDISE CHECKOUT
+========================================= */
+
+.checkout-section {
+  padding: 38px 0;
+
+  background: #080a0b;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.checkout-box {
+  padding: 32px;
+
+  border:
+    1px solid rgba(213,173,85,.35);
+
+  border-radius: 16px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(213,173,85,.10),
+      transparent 65%
+    ),
+    #0d1012;
+
+  text-align: center;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.25);
+}
+
+.checkout-content {
+  max-width: 650px;
+
+  margin: auto;
+}
+
+.checkout-box h2 {
+  margin-bottom: 10px;
+
+  font-size:
+    clamp(
+      27px,
+      5vw,
+      38px
+    );
+}
+
+.checkout-box p {
+  margin-bottom: 22px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.checkout-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 55px;
+
+  padding: 0 30px;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #f0d48c
+    );
+
+  color: #080909;
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(213,173,85,.18);
+
+  transition: .2s ease;
+}
+
+.checkout-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(213,173,85,.28);
+}
+
+.checkout-small {
+  margin-top: 11px;
+
+  color: #737a7f;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: .6px;
+}
+
+
+/* =========================================
    CATALOG
-========================= */
+========================================= */
 
 .catalog-section {
   padding:
@@ -492,8 +637,7 @@ input {
 
   z-index: 100;
 
-  padding:
-    15px 0;
+  padding: 15px 0;
 
   background:
     rgba(5,6,7,.95);
@@ -509,8 +653,9 @@ input {
 
   gap: 12px;
 
-  padding:
-    0 17px;
+  width: 100%;
+
+  padding: 0 17px;
 
   border:
     1px solid #2c3135;
@@ -523,6 +668,17 @@ input {
       #111416,
       #0a0c0d
     );
+
+  transition: .2s ease;
+}
+
+.search-box:focus-within {
+  border-color:
+    rgba(213,173,85,.65);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(213,173,85,.05);
 }
 
 .search-icon {
@@ -560,12 +716,14 @@ input {
   font-size: 11px;
 
   font-weight: 800;
+
+  letter-spacing: .5px;
 }
 
 
-/* =========================
+/* =========================================
    GRID
-========================= */
+========================================= */
 
 .catalog-grid {
   display: grid;
@@ -580,9 +738,9 @@ input {
 }
 
 
-/* =========================
-   PRODUCT CARD
-========================= */
+/* =========================================
+   PRODUCT CARDS
+========================================= */
 
 .product-card {
   min-height: 335px;
@@ -605,7 +763,7 @@ input {
       #090b0c
     );
 
-  transition: .25s;
+  transition: .25s ease;
 }
 
 .product-card:hover {
@@ -620,6 +778,7 @@ input {
   display: flex;
 
   align-items: flex-start;
+
   justify-content: space-between;
 
   gap: 15px;
@@ -636,8 +795,7 @@ input {
 }
 
 .amount-badge {
-  padding:
-    7px 10px;
+  padding: 7px 10px;
 
   border:
     1px solid #30353a;
@@ -665,13 +823,13 @@ input {
 }
 
 .product-description {
+  margin-bottom: 18px;
+
   color: var(--muted);
 
   font-size: 13px;
 
   line-height: 1.75;
-
-  margin-bottom: 18px;
 }
 
 .coa-indicator {
@@ -736,6 +894,7 @@ input {
   display: flex;
 
   align-items: center;
+
   justify-content: space-between;
 
   flex-wrap: wrap;
@@ -756,9 +915,9 @@ input {
 }
 
 
-/* =========================
+/* =========================================
    NO RESULTS
-========================= */
+========================================= */
 
 .no-results {
   display: none;
@@ -780,9 +939,9 @@ input {
 }
 
 
-/* =========================
+/* =========================================
    NOTICE
-========================= */
+========================================= */
 
 .catalog-notice {
   margin-top: 45px;
@@ -819,13 +978,12 @@ input {
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
-  padding:
-    40px 0;
+  padding: 40px 0;
 
   border-top:
     1px solid var(--border);
@@ -848,15 +1006,15 @@ footer {
 .footer-grid strong {
   display: block;
 
-  color: #c7c9ca;
-
   margin-bottom: 4px;
+
+  color: #c7c9ca;
 }
 
 
-/* =========================
+/* =========================================
    MOBILE
-========================= */
+========================================= */
 
 @media(max-width:900px) {
 
@@ -930,14 +1088,27 @@ footer {
 
   .brand-title {
     font-size: 9px;
+
+    letter-spacing: .6px;
   }
 
   .brand-sub {
     font-size: 5.8px;
+
+    letter-spacing: 1.2px;
   }
 
   .page-hero h1 {
     font-size: 39px;
+  }
+
+  .checkout-box {
+    padding:
+      27px 20px;
+  }
+
+  .checkout-button {
+    width: 100%;
   }
 
   .product-card {
@@ -962,12 +1133,18 @@ footer {
 
 </head>
 
+
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="site-header">
 
 <div class="shell nav">
+
 
 <a
   href="index.html"
@@ -996,7 +1173,9 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 <nav class="nav-links">
 
-<a href="index.html">Home</a>
+<a href="index.html">
+Home
+</a>
 
 <a href="research-information.html">
 Research
@@ -1029,7 +1208,8 @@ Contact
   class="mobile-menu-button"
   id="mobileMenuButton"
   type="button"
-  aria-label="Open menu"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
 >
 
 <span></span>
@@ -1037,6 +1217,7 @@ Contact
 <span></span>
 
 </button>
+
 
 </div>
 
@@ -1048,7 +1229,9 @@ Contact
 
 <div class="shell mobile-menu-inner">
 
-<a href="index.html">Home</a>
+<a href="index.html">
+Home
+</a>
 
 <a href="research-information.html">
 Research Information
@@ -1078,6 +1261,8 @@ Contact
 
 </div>
 
+
+<!-- PROMOTION BANNER -->
 
 <div class="promo-banner">
 
@@ -1119,6 +1304,7 @@ OPTIONAL SHIPPING INSURANCE AVAILABLE
 
 </div>
 
+
 </header>
 
 
@@ -1126,9 +1312,14 @@ OPTIONAL SHIPPING INSURANCE AVAILABLE
 <main>
 
 
+<!-- =========================================
+     HERO
+========================================= -->
+
 <section class="page-hero">
 
 <div class="shell">
+
 
 <a
   href="index.html"
@@ -1137,19 +1328,23 @@ OPTIONAL SHIPPING INSURANCE AVAILABLE
 ← BACK TO PCH LABS
 </a>
 
+
 <div class="eyebrow">
 RESEARCH MATERIAL CATALOG
 </div>
 
+
 <h1>
 Research catalog.
 </h1>
+
 
 <p>
 Browse currently listed research materials,
 amounts, pricing, and available analytical
 documentation.
 </p>
+
 
 <div class="hero-meta">
 
@@ -1167,11 +1362,64 @@ COA LINKS WHERE AVAILABLE
 
 </div>
 
+
 </div>
 
 </section>
 
 
+
+<!-- =========================================
+     GENERAL MERCHANDISE CHECKOUT
+========================================= -->
+
+<section class="checkout-section">
+
+<div class="shell">
+
+<div class="checkout-box">
+
+<div class="checkout-content">
+
+<div class="eyebrow">
+GENERAL MERCHANDISE CHECKOUT
+</div>
+
+<h2>
+Ready to place an order?
+</h2>
+
+<p>
+Continue to the PCH order form for eligible
+general merchandise and supplies.
+</p>
+
+<a
+  href="https://ezformz.net/f/-wkx35g"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="checkout-button"
+>
+🛒 OPEN CHECKOUT
+</a>
+
+<div class="checkout-small">
+Checkout opens in a new tab.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     CATALOG
+========================================= -->
 
 <section class="catalog-section">
 
@@ -1189,6 +1437,7 @@ COA LINKS WHERE AVAILABLE
 <input
   id="catalogSearch"
   type="search"
+  autocomplete="off"
   placeholder="Search research materials..."
 >
 
@@ -1255,6 +1504,10 @@ in the original report.
 
 
 
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer>
 
 <div class="shell footer-grid">
@@ -1288,9 +1541,9 @@ Not for human or animal use
 
 <script>
 
-/* =========================
+/* =========================================
    MASTER PRODUCT LIST
-========================= */
+========================================= */
 
 const products = [
 
@@ -1593,9 +1846,9 @@ const products = [
 ];
 
 
-/* =========================
-   BUILD CARDS
-========================= */
+/* =========================================
+   BUILD PRODUCT CARDS
+========================================= */
 
 const catalogGrid =
   document.getElementById(
@@ -1605,8 +1858,7 @@ const catalogGrid =
 
 function buildCatalog(list) {
 
-  catalogGrid.innerHTML =
-    "";
+  catalogGrid.innerHTML = "";
 
 
   list.forEach(
@@ -1640,7 +1892,7 @@ function buildCatalog(list) {
         "";
 
 
-      const button =
+      const coaButton =
         product.coa
         ?
         `
@@ -1708,7 +1960,7 @@ function buildCatalog(list) {
 
         <div class="card-actions">
 
-          ${button}
+          ${coaButton}
 
           <span class="research-note">
             RESEARCH USE ONLY
@@ -1729,9 +1981,9 @@ function buildCatalog(list) {
 }
 
 
-/* =========================
+/* =========================================
    SEARCH
-========================= */
+========================================= */
 
 const search =
   document.getElementById(
@@ -1819,9 +2071,9 @@ search.addEventListener(
 );
 
 
-/* =========================
+/* =========================================
    MOBILE MENU
-========================= */
+========================================= */
 
 const menuButton =
   document.getElementById(
@@ -1849,13 +2101,50 @@ menuButton.addEventListener(
       open
     );
 
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      open
+    );
+
   }
 );
 
 
-/* =========================
-   START
-========================= */
+menu
+  .querySelectorAll("a")
+  .forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          menu.classList.remove(
+            "open"
+          );
+
+
+          menuButton.classList.remove(
+            "active"
+          );
+
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    }
+  );
+
+
+/* =========================================
+   START CATALOG
+========================================= */
 
 buildCatalog(
   products
