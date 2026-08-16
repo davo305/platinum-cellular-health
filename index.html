@@ -3,100 +3,701 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#08090b">
+<meta name="theme-color" content="#060708">
 <title>Platinum Cellular Health Labs</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <div class="gate" id="gate">
-  <div class="gate-box">
-    <img src="pch-logo.jpg" class="gate-logo" alt="Platinum Cellular Health Labs logo">
-    <h2>Website Entry & Research Use Certification</h2>
-    <p class="lead">Access requires confirmation of age and acceptance of our Research Use Only policies.</p>
 
-    <label class="check"><input class="req" type="checkbox"><span><strong>I certify that I am 21 years of age or older.</strong></span></label>
-    <label class="check"><input class="req" type="checkbox"><span>I understand that products identified as <strong>Research Use Only (RUO)</strong> are presented solely for legitimate laboratory, analytical, or scientific research purposes.</span></label>
-    <label class="check"><input class="req" type="checkbox"><span>I understand that RUO materials are <strong>not intended for human or animal consumption, administration, treatment, diagnosis, prevention of disease, or clinical/veterinary use.</strong></span></label>
-    <label class="check"><input class="req" type="checkbox"><span>I agree not to use information or materials from this website for unlawful activity or in a manner inconsistent with product labeling.</span></label>
-    <label class="check"><input class="req" type="checkbox"><span>I understand that website content is for research and educational purposes and does not constitute medical, veterinary, diagnostic, or treatment advice.</span></label>
-    <label class="check"><input class="req" type="checkbox"><span>I understand that Platinum Cellular Health Labs reserves the right to restrict or refuse access or transactions where misuse, unlawful activity, or misrepresentation is suspected.</span></label>
+<div class="gate-panel">
 
-    <div class="gate-actions">
-      <button type="button" class="btn gold" onclick="enterPCH()">I CERTIFY & ENTER</button>
-      <button type="button" class="btn" onclick="window.location.href='https://www.google.com'">I DO NOT AGREE — EXIT</button>
-    </div>
-    <div class="fine">21+ · Research Use Only · Not for human or animal use</div>
-  </div>
+<img
+src="pch-logo.jpg"
+alt="Platinum Cellular Health Labs"
+class="gate-logo"
+>
+
+<div class="eyebrow">
+Website Entry & Research Use Certification
+</div>
+
+<h1>Access Restricted to 21+</h1>
+
+<p class="gate-intro">
+Please review and confirm each statement before accessing
+Platinum Cellular Health Labs.
+</p>
+
+
+<label class="gate-check">
+<input class="req" type="checkbox">
+<span>
+<strong>I certify that I am 21 years of age or older.</strong>
+</span>
+</label>
+
+
+<label class="gate-check">
+<input class="req" type="checkbox">
+<span>
+I understand that products and materials identified as
+<strong>Research Use Only</strong>
+are presented solely for legitimate laboratory,
+analytical, scientific, and educational purposes.
+</span>
+</label>
+
+
+<label class="gate-check">
+<input class="req" type="checkbox">
+<span>
+I understand that Research Use Only materials are
+<strong>
+not intended for human or animal consumption,
+administration, treatment, diagnosis,
+disease prevention, or clinical/veterinary use.
+</strong>
+</span>
+</label>
+
+
+<label class="gate-check">
+<input class="req" type="checkbox">
+<span>
+I agree not to use information or materials from this website
+for unlawful activity or in any manner inconsistent
+with product labeling.
+</span>
+</label>
+
+
+<label class="gate-check">
+<input class="req" type="checkbox">
+<span>
+I understand that website content is for research
+and educational purposes only and does not constitute
+medical, veterinary, diagnostic, or treatment advice.
+</span>
+</label>
+
+
+<label class="gate-check">
+<input class="req" type="checkbox">
+<span>
+I understand that Platinum Cellular Health Labs reserves
+the right to restrict access or refuse service where misuse,
+unlawful conduct, or misrepresentation is suspected.
+</span>
+</label>
+
+
+<div class="gate-actions">
+
+<button
+class="btn btn-gold"
+type="button"
+onclick="enterPCH()">
+I CERTIFY & ENTER
+</button>
+
+<button
+class="btn"
+type="button"
+onclick="window.location.href='https://www.google.com'">
+I DO NOT AGREE
+</button>
+
+</div>
+
+<div class="fineprint">
+21+ · Research Use Only · Not for human or animal use
+</div>
+
+</div>
+
 </div>
 
 
-<header>
-  <div class="shell nav">
-    <a class="brand" href="index.html">
-      <img src="pch-logo.jpg" alt="PCH Labs">
-      <div>
-        <div class="brand-title">PLATINUM CELLULAR HEALTH LABS</div>
-        <div class="brand-sub">LONGEVITY AT THE CELLULAR LEVEL</div>
-      </div>
-    </a>
-    <nav class="navlinks">
-      <a href="research-information.html">Research</a>
-      <a href="catalog.html">Catalog</a>
-      <a href="quality-coa.html">Quality & COA</a>
-      <a href="policies.html">Policies</a>
-      <a class="btn keep" href="contact.html">Contact</a>
-    </nav>
-  </div>
+
+<header class="site-header">
+
+<div class="shell nav">
+
+<a href="index.html" class="brand">
+
+<img
+src="pch-logo.jpg"
+alt="PCH Labs"
+>
+
+<div>
+
+<div class="brand-title">
+PLATINUM CELLULAR HEALTH LABS
+</div>
+
+<div class="brand-sub">
+LONGEVITY AT THE CELLULAR LEVEL
+</div>
+
+</div>
+
+</a>
+
+
+<nav class="nav-links">
+
+<a href="research-information.html">
+Research
+</a>
+
+<a href="catalog.html">
+Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a
+class="btn nav-contact"
+href="contact.html">
+Contact
+</a>
+
+</nav>
+
+</div>
+
 </header>
 
 
+
 <main>
+
+
 <section class="hero">
-  <div class="shell">
-    <img src="pch-logo.jpg" class="hero-logo" alt="Platinum Cellular Health Labs">
-    <div class="eyebrow">Research · Documentation · Scientific Information</div>
-    <h1>Professional Research Information & Laboratory Documentation</h1>
-    <p>Platinum Cellular Health Labs is structured as a serious scientific resource for research-oriented product information, analytical documentation, and educational reference materials.</p>
-    <div class="hero-actions">
-      <a class="btn gold" href="catalog.html">View Research Catalog</a>
-      <a class="btn" href="research-information.html">Research Information</a>
-    </div>
-  </div>
+
+<div class="shell hero-grid">
+
+
+<div class="hero-copy">
+
+<div class="eyebrow">
+Scientific Research · Analytical Documentation
+</div>
+
+<h1>
+Research information presented with a laboratory-first standard.
+</h1>
+
+<p>
+Platinum Cellular Health Labs is built around organized
+scientific reference material, research-oriented catalog
+information, and transparent analytical documentation.
+</p>
+
+
+<div class="hero-actions">
+
+<a
+class="btn btn-gold"
+href="catalog.html">
+Explore Research Catalog
+</a>
+
+<a
+class="btn"
+href="research-information.html">
+View Research Information
+</a>
+
+</div>
+
+
+<div class="hero-meta">
+
+<span>21+ Access</span>
+
+<span>Research Use Only</span>
+
+<span>COA Documentation</span>
+
+</div>
+
+</div>
+
+
+
+<div class="hero-visual">
+
+<div class="logo-frame">
+
+<img
+src="pch-logo.jpg"
+alt="Platinum Cellular Health Labs"
+>
+
+</div>
+
+
+<div class="molecule-card">
+
+<div class="molecule-ring"></div>
+
+<div class="molecule-core">
+PCH
+</div>
+
+<div class="molecule-copy">
+
+<span>Science</span>
+
+<span>Documentation</span>
+
+<span>Traceability</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
 </section>
 
-<section>
-  <div class="shell">
-    <div class="section-head">
-      <div><span class="tag">Explore</span><h2>Research Hub</h2></div>
-      <p>Organized pages make it easy to find research material, catalog information, documentation, and site policies.</p>
-    </div>
-    <div class="grid">
-      <a class="card" href="research-information.html"><span class="tag">Science</span><h3>Research Information</h3><p>Scientific terminology, compound classifications, analytical concepts, storage principles, and published-reference organization.</p></a>
-      <a class="card" href="catalog.html"><span class="tag">Catalog</span><h3>Research Catalog</h3><p>Browse research materials by compound name and listed amount. Product documentation can be linked by lot or batch.</p></a>
-      <a class="card" href="quality-coa.html"><span class="tag">Documentation</span><h3>Quality & COA</h3><p>Certificates of Analysis, lot information, uploaded reports, and external laboratory verification links.</p></a>
-      <a class="card" href="policies.html"><span class="tag">Compliance</span><h3>Policies</h3><p>Research Use Only policy, age requirement, acceptable use, documentation standards, and website terms.</p></a>
-      <a class="card" href="contact.html"><span class="tag">Support</span><h3>Contact</h3><p>A clean contact page for general questions, documentation requests, and administrative support.</p></a>
-      <div class="card"><span class="tag">Coming Next</span><h3>Account Portal</h3><p>Reserved for a future secure account system once the public-facing research site is complete.</p></div>
-    </div>
-  </div>
+
+
+<section class="section">
+
+<div class="shell">
+
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+Research Hub
+</div>
+
+<h2>
+Built for organized scientific reference
+</h2>
+
+</div>
+
+
+<p>
+Research information, catalog listings,
+analytical documentation, and policies are separated
+so each section has a clear purpose.
+</p>
+
+</div>
+
+
+
+<div class="feature-grid">
+
+
+<a
+class="feature-card"
+href="research-information.html">
+
+<div class="num">
+01
+</div>
+
+<div class="tag">
+Scientific Reference
+</div>
+
+<h3>
+Research Information
+</h3>
+
+<p>
+Research terminology, compound classification,
+analytical concepts, storage principles,
+and published-reference organization.
+</p>
+
+<span>
+Open Research Library →
+</span>
+
+</a>
+
+
+
+<a
+class="feature-card"
+href="catalog.html">
+
+<div class="num">
+02
+</div>
+
+<div class="tag">
+Catalog
+</div>
+
+<h3>
+Research Catalog
+</h3>
+
+<p>
+Browse research materials by compound name
+and listed amount in a clean,
+searchable scientific catalog.
+</p>
+
+<span>
+Browse Catalog →
+</span>
+
+</a>
+
+
+
+<a
+class="feature-card"
+href="quality-coa.html">
+
+<div class="num">
+03
+</div>
+
+<div class="tag">
+Documentation
+</div>
+
+<h3>
+Quality & COA
+</h3>
+
+<p>
+Certificates of Analysis,
+lot and batch references,
+testing dates,
+and external verification links where available.
+</p>
+
+<span>
+View Documentation →
+</span>
+
+</a>
+
+
+</div>
+
+</div>
+
 </section>
 
-<section>
-  <div class="shell">
-    <div class="notice"><strong>Research Use Only:</strong> Content on this website is presented for laboratory, analytical, scientific, and educational purposes. It is not medical or veterinary advice and does not provide human or animal-use instructions.</div>
-  </div>
+
+
+<section class="section alt">
+
+<div class="shell science-grid">
+
+
+<div class="science-panel">
+
+<div class="eyebrow">
+Scientific Information
+</div>
+
+<h2>
+Clear separation between research data and clinical claims.
+</h2>
+
+<p>
+PCH Labs is structured to present laboratory,
+analytical, and educational material without dosing,
+administration, treatment, bodybuilding,
+weight-loss, or other human-use guidance.
+</p>
+
+
+<div class="science-list">
+
+<div>
+✓ Research terminology and compound identity
+</div>
+
+<div>
+✓ Analytical testing concepts and COA interpretation
+</div>
+
+<div>
+✓ Lot, batch, test-date, and documentation structure
+</div>
+
+<div>
+✓ Published scientific reference organization
+</div>
+
+</div>
+
+
+<a
+class="btn"
+href="research-information.html">
+Enter Research Information
+</a>
+
+</div>
+
+
+
+<div class="lab-grid">
+
+<div class="lab-stat">
+<strong>RUO</strong>
+<span>Research Use Only</span>
+</div>
+
+<div class="lab-stat">
+<strong>COA</strong>
+<span>Analytical Documentation</span>
+</div>
+
+<div class="lab-stat">
+<strong>LOT</strong>
+<span>Batch Traceability</span>
+</div>
+
+<div class="lab-stat">
+<strong>21+</strong>
+<span>Restricted Access</span>
+</div>
+
+</div>
+
+
+</div>
+
 </section>
+
+
+
+<section class="section">
+
+<div class="shell quality-wrap">
+
+
+<div>
+
+<div class="eyebrow">
+Transparency
+</div>
+
+<h2>
+Quality documentation should be easy to verify.
+</h2>
+
+<p class="muted">
+When a COA is available,
+documentation can be organized by product name,
+lot or batch, test date, and laboratory source.
+</p>
+
+<a
+class="btn btn-gold"
+href="quality-coa.html">
+Open Quality & COA
+</a>
+
+</div>
+
+
+
+<div class="coa-mock">
+
+<div class="coa-head">
+
+<strong>
+PCH
+</strong>
+
+<span>
+COA / REPORT
+</span>
+
+</div>
+
+
+<div class="line wide"></div>
+
+<div class="line"></div>
+
+<div class="line short"></div>
+
+
+<div class="coa-grid">
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+</div>
+
+
+<div class="coa-foot">
+Lot · Test Date · Laboratory · Result
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="section alt">
+
+<div class="shell">
+
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+Professional Standards
+</div>
+
+<h2>
+Simple, restrained, and serious by design
+</h2>
+
+</div>
+
+
+<p>
+The site avoids exaggerated claims and keeps research,
+documentation, and policy information clearly separated.
+</p>
+
+</div>
+
+
+
+<div class="standards-grid">
+
+
+<div>
+
+<strong>
+Research Use Only
+</strong>
+
+<span>
+Scientific and analytical context only.
+</span>
+
+</div>
+
+
+
+<div>
+
+<strong>
+No Human or Animal Use
+</strong>
+
+<span>
+No administration or clinical-use guidance.
+</span>
+
+</div>
+
+
+
+<div>
+
+<strong>
+Documentation First
+</strong>
+
+<span>
+COAs organized by lot or batch.
+</span>
+
+</div>
+
+
+
+<div>
+
+<strong>
+21+ Access
+</strong>
+
+<span>
+Entry certification required before access.
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
 </main>
 
 
+
 <footer>
-  <div class="shell footer-grid">
-    <div>© 2026 Platinum Cellular Health Labs. All rights reserved.</div>
-    <div>21+ · Research Use Only · Not for human or animal use</div>
-  </div>
+
+<div class="shell footer-grid">
+
+<div>
+
+<strong>
+Platinum Cellular Health Labs
+</strong>
+
+<div>
+Longevity at the Cellular Level
+</div>
+
+</div>
+
+
+<div>
+21+ · Research Use Only · Not for human or animal use
+</div>
+
+</div>
+
 </footer>
 
+
 <script src="script.js"></script>
+
 </body>
+
 </html>
