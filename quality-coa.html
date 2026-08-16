@@ -64,6 +64,11 @@ input {
   font-family: inherit;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .shell {
   width: min(
     1180px,
@@ -90,9 +95,7 @@ input {
 
 .site-header {
   position: sticky;
-
   top: 0;
-
   z-index: 1000;
 
   background:
@@ -102,54 +105,48 @@ input {
     blur(14px);
 
   border-bottom:
-    1px solid
-    rgba(255,255,255,.07);
+    1px solid rgba(255,255,255,.07);
 }
 
 
 .nav {
-  min-height: 76px;
+  min-height: 74px;
 
   display: flex;
-
   align-items: center;
+  justify-content: space-between;
 
-  justify-content:
-    space-between;
-
-  gap: 25px;
+  gap: 20px;
 }
 
 
 .brand {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
+
+  min-width: 0;
 }
 
 
 .brand img {
   width: 50px;
-
   height: 50px;
+
+  flex-shrink: 0;
 
   object-fit: cover;
 
   border-radius: 50%;
 
   border:
-    1px solid
-    rgba(213,173,85,.35);
+    1px solid rgba(213,173,85,.35);
 }
 
 
 .brand-title {
   font-size: 13px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
@@ -158,7 +155,6 @@ input {
   color: var(--gold);
 
   font-size: 8px;
-
   letter-spacing: 2px;
 
   margin-top: 2px;
@@ -167,15 +163,12 @@ input {
 
 .nav-links {
   display: flex;
-
   align-items: center;
-
   gap: 22px;
 
   color: #b7bdc2;
 
   font-size: 12px;
-
   font-weight: 700;
 }
 
@@ -185,15 +178,18 @@ input {
 }
 
 
+.mobile-contact {
+  display: none;
+}
+
+
 /* =========================================
    BUTTONS
 ========================================= */
 
 .btn {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
 
   min-height: 43px;
@@ -210,9 +206,7 @@ input {
   color: white;
 
   font-size: 11px;
-
   font-weight: 900;
-
   letter-spacing: .7px;
 
   cursor: pointer;
@@ -228,10 +222,14 @@ input {
   border-color:
     rgba(213,173,85,.45);
 
-  color: var(--gold2);
+  color: #111;
 
   background:
-    rgba(213,173,85,.05);
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
 }
 
 
@@ -241,8 +239,8 @@ input {
 
 .page-hero {
   padding:
-    85px 0
-    55px;
+    75px 0
+    50px;
 
   border-bottom:
     1px solid var(--border);
@@ -256,12 +254,10 @@ input {
   color: var(--gold);
 
   font-size: 11px;
-
   font-weight: 800;
-
   letter-spacing: .6px;
 
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 
@@ -269,9 +265,7 @@ input {
   color: var(--gold);
 
   font-size: 10px;
-
   font-weight: 900;
-
   letter-spacing: 2.3px;
 
   margin-bottom: 12px;
@@ -297,21 +291,18 @@ input {
 
 
 .page-hero p {
-  max-width: 720px;
+  max-width: 760px;
 
   color: var(--muted);
 
   font-size: 16px;
-
   line-height: 1.8;
 }
 
 
 .hero-tags {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 8px;
 
   margin-top: 25px;
@@ -331,19 +322,17 @@ input {
   color: #858c92;
 
   font-size: 9px;
-
   font-weight: 800;
-
   letter-spacing: 1px;
 }
 
 
 /* =========================================
-   OVERVIEW CARDS
+   OVERVIEW
 ========================================= */
 
 .overview {
-  padding: 55px 0;
+  padding: 48px 0;
 }
 
 
@@ -358,7 +347,7 @@ input {
 
 
 .info-card {
-  min-height: 230px;
+  min-height: 210px;
 
   padding: 24px;
 
@@ -379,16 +368,15 @@ input {
 .info-number {
   color: rgba(213,173,85,.18);
 
-  font-size: 46px;
-
+  font-size: 42px;
   font-weight: 900;
 
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 
 .info-card h2 {
-  font-size: 21px;
+  font-size: 20px;
 
   margin-bottom: 10px;
 }
@@ -408,7 +396,7 @@ input {
 ========================================= */
 
 .library {
-  padding: 35px 0 95px;
+  padding: 45px 0 90px;
 
   border-top:
     1px solid var(--border);
@@ -461,8 +449,7 @@ input {
   background: #0d1012;
 
   border:
-    1px solid
-    #2c3135;
+    1px solid #2c3135;
 
   border-radius: 12px;
 
@@ -485,7 +472,6 @@ input {
   min-height: 56px;
 
   border: 0;
-
   outline: none;
 
   background: transparent;
@@ -511,8 +497,241 @@ input {
 }
 
 
+/* =========================================
+   REAL COA CARD
+========================================= */
+
+.coa-card {
+  border:
+    1px solid var(--border);
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  overflow: hidden;
+}
+
+
+.coa-preview {
+  position: relative;
+
+  height: 320px;
+
+  overflow: hidden;
+
+  background: #f2f2f2;
+}
+
+
+.coa-preview img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: top;
+}
+
+
+.coa-preview::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 55%,
+      rgba(9,11,12,.92) 100%
+    );
+}
+
+
+.verified-badge {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  z-index: 2;
+
+  padding: 7px 10px;
+
+  border-radius: 100px;
+
+  background:
+    rgba(9,11,12,.9);
+
+  border:
+    1px solid rgba(213,173,85,.45);
+
+  color: var(--gold2);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+.coa-body {
+  padding: 25px;
+}
+
+
+.coa-type {
+  color: var(--gold);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 8px;
+}
+
+
+.coa-body h3 {
+  font-size: 26px;
+
+  margin-bottom: 18px;
+}
+
+
+.coa-details {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+}
+
+
+.detail {
+  padding: 12px;
+
+  border:
+    1px solid #23282c;
+
+  border-radius: 9px;
+
+  background: #0c0f11;
+}
+
+
+.detail-label {
+  display: block;
+
+  color: #70777c;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 3px;
+}
+
+
+.detail-value {
+  color: #e1e3e4;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+.result-panel {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 8px;
+
+  margin-top: 15px;
+}
+
+
+.result-box {
+  padding: 14px 10px;
+
+  border:
+    1px solid rgba(213,173,85,.20);
+
+  border-radius: 9px;
+
+  background:
+    rgba(213,173,85,.025);
+
+  text-align: center;
+}
+
+
+.result-box strong {
+  display: block;
+
+  color: var(--gold2);
+
+  font-size: 18px;
+
+  margin-bottom: 2px;
+}
+
+
+.result-box span {
+  color: #7d8489;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .8px;
+}
+
+
+.coa-note {
+  color: #797f84;
+
+  font-size: 10px;
+
+  line-height: 1.55;
+
+  margin-top: 17px;
+}
+
+
+.coa-actions {
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+  margin-top: 22px;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
 .document-card {
-  min-height: 265px;
+  min-height: 300px;
 
   padding: 24px;
 
@@ -621,179 +840,7 @@ input {
 
 
 /* =========================================
-   COA EXAMPLE
-========================================= */
-
-.example-section {
-  padding: 75px 0;
-
-  background: #090b0c;
-
-  border-top:
-    1px solid var(--border);
-
-  border-bottom:
-    1px solid var(--border);
-}
-
-
-.example-grid {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 70px;
-
-  align-items: center;
-}
-
-
-.example-copy h2 {
-  font-size:
-    clamp(
-      30px,
-      5vw,
-      48px
-    );
-
-  line-height: 1.05;
-
-  margin-bottom: 20px;
-}
-
-
-.example-copy p {
-  color: var(--muted);
-
-  margin-bottom: 25px;
-}
-
-
-.example-list {
-  display: grid;
-
-  gap: 10px;
-
-  color: #b6bbc0;
-
-  font-size: 13px;
-}
-
-
-.example-list div {
-  padding-bottom: 10px;
-
-  border-bottom:
-    1px solid #1e2225;
-}
-
-
-.coa-sheet {
-  min-height: 390px;
-
-  background: #f0f0ec;
-
-  color: #111;
-
-  padding: 30px;
-
-  border-radius: 6px;
-
-  transform: rotate(1deg);
-
-  box-shadow:
-    0 30px 70px
-    rgba(0,0,0,.45);
-}
-
-
-.coa-header {
-  display: flex;
-
-  justify-content:
-    space-between;
-
-  align-items: center;
-
-  padding-bottom: 18px;
-
-  border-bottom:
-    3px solid #151515;
-}
-
-
-.coa-header strong {
-  font-size: 30px;
-}
-
-
-.coa-header span {
-  font-size: 10px;
-
-  font-weight: 900;
-}
-
-
-.coa-line {
-  height: 8px;
-
-  width: 60%;
-
-  background: #c9c9c5;
-
-  margin-top: 15px;
-}
-
-
-.coa-line.wide {
-  width: 88%;
-}
-
-
-.coa-line.short {
-  width: 42%;
-}
-
-
-.coa-table {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 10px;
-
-  margin-top: 30px;
-}
-
-
-.coa-table div {
-  min-height: 62px;
-
-  border:
-    1px solid #aaa;
-}
-
-
-.coa-footer {
-  margin-top: 30px;
-
-  border-top:
-    1px solid #aaa;
-
-  padding-top: 15px;
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-
-/* =========================================
-   POLICY NOTE
+   DOCUMENT INTEGRITY
 ========================================= */
 
 .policy-section {
@@ -805,8 +852,7 @@ input {
   padding: 26px;
 
   border:
-    1px solid
-    rgba(213,173,85,.24);
+    1px solid rgba(213,173,85,.24);
 
   border-radius: 14px;
 
@@ -882,30 +928,77 @@ footer {
 
 @media(max-width:900px) {
 
+  .shell {
+    width: calc(100% - 30px);
+  }
+
+
   .nav {
-    min-height: 68px;
+    min-height: 70px;
+
+    gap: 10px;
+  }
+
+
+  .brand {
+    gap: 8px;
+
+    flex: 1;
   }
 
 
   .brand img {
-    width: 44px;
-
-    height: 44px;
+    width: 42px;
+    height: 42px;
   }
 
 
   .brand-title {
     font-size: 10px;
+
+    line-height: 1.2;
+
+    letter-spacing: .4px;
   }
 
 
   .brand-sub {
-    font-size: 7px;
+    font-size: 5.8px;
+
+    letter-spacing: 1.1px;
   }
 
 
   .nav-links {
     display: none;
+  }
+
+
+  .mobile-contact {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 0 12px;
+
+    border:
+      1px solid #34393d;
+
+    border-radius: 8px;
+
+    background: #101214;
+
+    color: #ddd;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: .7px;
   }
 
 
@@ -919,13 +1012,6 @@ footer {
   }
 
 
-  .example-grid {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
-  }
-
-
   .library-head {
     display: block;
   }
@@ -933,6 +1019,11 @@ footer {
 
   .library-head p {
     margin-top: 15px;
+  }
+
+
+  .coa-preview {
+    height: 285px;
   }
 
 }
@@ -948,7 +1039,7 @@ footer {
 
   .page-hero {
     padding:
-      60px 0
+      55px 0
       40px;
   }
 
@@ -970,14 +1061,37 @@ footer {
 
 
   .library {
-    padding-top: 20px;
+    padding-top: 30px;
   }
 
 
-  .coa-sheet {
-    padding: 22px;
+  .coa-preview {
+    height: 250px;
+  }
 
-    min-height: 330px;
+
+  .coa-body {
+    padding: 21px;
+  }
+
+
+  .coa-body h3 {
+    font-size: 23px;
+  }
+
+
+  .coa-details {
+    grid-template-columns: 1fr;
+  }
+
+
+  .result-panel {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
+  .result-box strong {
+    font-size: 15px;
   }
 
 
@@ -1058,6 +1172,14 @@ Contact
 </nav>
 
 
+<a
+  href="contact.html"
+  class="mobile-contact"
+>
+CONTACT
+</a>
+
+
 </div>
 
 </header>
@@ -1092,10 +1214,10 @@ Quality & COA
 
 
 <p>
-Platinum Cellular Health Labs organizes available analytical
-documentation so research materials can be matched with
-Certificates of Analysis, testing information, lot or batch
-references, and external laboratory verification where available.
+Review available analytical documentation,
+Certificates of Analysis, batch identifiers,
+testing dates, laboratory information,
+and laboratory-reported analytical results.
 </p>
 
 
@@ -1110,7 +1232,7 @@ LOT / BATCH REFERENCE
 </span>
 
 <span>
-LAB VERIFICATION
+LABORATORY RESULTS
 </span>
 
 </div>
@@ -1141,13 +1263,13 @@ LAB VERIFICATION
 </div>
 
 <h2>
-Uploaded COA Files
+Original Reports
 </h2>
 
 <p>
-Certificates that are available only as images or PDFs
-can be uploaded directly to the website and associated
-with the appropriate research material.
+Available Certificates of Analysis are displayed
+as laboratory-issued documentation associated
+with the identified research sample or batch.
 </p>
 
 </div>
@@ -1161,13 +1283,13 @@ with the appropriate research material.
 </div>
 
 <h2>
-External Verification
+Analytical Results
 </h2>
 
 <p>
-When a testing laboratory provides an online verification
-page, the matching documentation record can include a direct
-external verification link.
+Reported purity, content, identity, endotoxin,
+and other analytical results are presented
+as stated by the testing laboratory.
 </p>
 
 </div>
@@ -1181,13 +1303,13 @@ external verification link.
 </div>
 
 <h2>
-Lot & Batch Matching
+Batch Traceability
 </h2>
 
 <p>
-Available documentation should be associated with the correct
-product, lot, batch, sample identifier, and testing date whenever
-that information is provided by the laboratory.
+Documentation is organized with available
+batch, testing-date, sample, and laboratory
+information to assist with record matching.
 </p>
 
 </div>
@@ -1228,8 +1350,9 @@ Certificate records
 
 
 <p>
-This section is ready for your actual COA images, PDF reports,
-lot numbers, testing dates, and laboratory verification links.
+Search available documentation by compound,
+batch number, laboratory, analytical result,
+or other listed information.
 </p>
 
 
@@ -1246,7 +1369,7 @@ lot numbers, testing dates, and laboratory verification links.
 <input
   id="coaSearch"
   type="search"
-  placeholder="Search by product, lot, batch or laboratory..."
+  placeholder="Search product, batch or laboratory..."
 >
 
 </div>
@@ -1259,304 +1382,102 @@ lot numbers, testing dates, and laboratory verification links.
 >
 
 
-<!-- PLACEHOLDER 1 -->
+<!-- =========================================
+     CARTALAX 20MG
+========================================= -->
 
 <article
-  class="document-card"
-  data-search="research material coa placeholder lot batch"
+  class="coa-card searchable"
+  data-search="cartalax cart 20mg sterigenix cart-061424-20 99.31 purity 21.82 endotoxin pass 07/20/2026"
 >
 
-<div class="document-top">
 
-<div class="document-type">
+<div class="coa-preview">
+
+
+<img
+  src="cartalax-20mg-coa.jpg"
+  alt="Cartalax 20 mg Certificate of Analysis"
+>
+
+
+<div class="verified-badge">
+COA AVAILABLE
+</div>
+
+
+</div>
+
+
+
+<div class="coa-body">
+
+
+<div class="coa-type">
 CERTIFICATE OF ANALYSIS
 </div>
 
-<div class="document-status">
-DOCUMENT PENDING
-</div>
-
-</div>
 
 <h3>
-Research Material
+Cartalax 20 mg
 </h3>
 
-<div class="document-meta">
 
-<span>
-Lot / Batch: —
+
+<div class="coa-details">
+
+
+<div class="detail">
+
+<span class="detail-label">
+BATCH
 </span>
 
-<span>
-Testing Date: —
-</span>
-
-<span>
-Laboratory: —
-</span>
-
-</div>
-
-
-<div class="document-actions">
-
-<button
-  class="btn btn-gold"
-  type="button"
->
-COA FILE COMING SOON
-</button>
-
-</div>
-
-<div class="placeholder">
-IMAGE / PDF PLACEHOLDER
-</div>
-
-</article>
-
-
-
-<!-- PLACEHOLDER 2 -->
-
-<article
-  class="document-card"
-  data-search="research material external verification placeholder"
->
-
-<div class="document-top">
-
-<div class="document-type">
-LAB VERIFICATION
-</div>
-
-<div class="document-status">
-LINK PENDING
-</div>
-
-</div>
-
-<h3>
-External Laboratory Report
-</h3>
-
-<div class="document-meta">
-
-<span>
-Sample ID: —
-</span>
-
-<span>
-Testing Date: —
-</span>
-
-<span>
-Laboratory: —
+<span class="detail-value">
+CART-061424-20
 </span>
 
 </div>
 
 
-<div class="document-actions">
 
-<button
-  class="btn btn-gold"
-  type="button"
->
-VERIFICATION LINK COMING SOON
-</button>
+<div class="detail">
 
-</div>
-
-<div class="placeholder">
-EXTERNAL LINK PLACEHOLDER
-</div>
-
-</article>
-
-
-
-<!-- PLACEHOLDER 3 -->
-
-<article
-  class="document-card"
-  data-search="lot batch record documentation"
->
-
-<div class="document-top">
-
-<div class="document-type">
-LOT DOCUMENTATION
-</div>
-
-<div class="document-status">
-PENDING
-</div>
-
-</div>
-
-<h3>
-Lot / Batch Record
-</h3>
-
-<div class="document-meta">
-
-<span>
-Product: —
+<span class="detail-label">
+ANALYZED
 </span>
 
-<span>
-Lot / Batch: —
-</span>
-
-<span>
-Documentation Date: —
+<span class="detail-value">
+July 20, 2026
 </span>
 
 </div>
 
 
-<div class="document-actions">
 
-<button
-  class="btn"
-  type="button"
->
-RECORD COMING SOON
-</button>
+<div class="detail">
 
-</div>
-
-<div class="placeholder">
-TRACEABILITY PLACEHOLDER
-</div>
-
-</article>
-
-
-
-<!-- PLACEHOLDER 4 -->
-
-<article
-  class="document-card"
-  data-search="coa analytical report research documentation"
->
-
-<div class="document-top">
-
-<div class="document-type">
-ANALYTICAL REPORT
-</div>
-
-<div class="document-status">
-PENDING
-</div>
-
-</div>
-
-<h3>
-Analytical Documentation
-</h3>
-
-<div class="document-meta">
-
-<span>
-Report ID: —
+<span class="detail-label">
+LABORATORY
 </span>
 
-<span>
-Testing Date: —
-</span>
-
-<span>
-Method: —
+<span class="detail-value">
+SteriGenix
 </span>
 
 </div>
 
 
-<div class="document-actions">
 
-<button
-  class="btn"
-  type="button"
->
-REPORT COMING SOON
-</button>
+<div class="detail">
 
-</div>
+<span class="detail-label">
+FORM
+</span>
 
-<div class="placeholder">
-ANALYTICAL RECORD PLACEHOLDER
-</div>
-
-</article>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     HOW TO READ A COA
-========================================= -->
-
-<section class="example-section">
-
-<div class="shell example-grid">
-
-
-<div class="example-copy">
-
-
-<div class="eyebrow">
-DOCUMENT REVIEW
-</div>
-
-
-<h2>
-What to look for on a COA
-</h2>
-
-
-<p>
-A Certificate of Analysis should be reviewed as an analytical
-document. Important identifiers help determine which sample
-or lot the report actually represents.
-</p>
-
-
-<div class="example-list">
-
-<div>
-✓ Product or sample identification
-</div>
-
-<div>
-✓ Lot, batch, or sample number
-</div>
-
-<div>
-✓ Laboratory name
-</div>
-
-<div>
-✓ Testing date
-</div>
-
-<div>
-✓ Analytical method
-</div>
-
-<div>
-✓ Reported analytical results
-</div>
+<span class="detail-value">
+Lyophilized
+</span>
 
 </div>
 
@@ -1565,45 +1486,140 @@ or lot the report actually represents.
 
 
 
-<div class="coa-sheet">
+<div class="result-panel">
 
 
-<div class="coa-header">
+<div class="result-box">
 
 <strong>
-PCH
+99.31%
 </strong>
 
 <span>
-CERTIFICATE OF ANALYSIS
+REPORTED PURITY
 </span>
 
 </div>
 
 
-<div class="coa-line wide"></div>
 
-<div class="coa-line"></div>
+<div class="result-box">
 
-<div class="coa-line short"></div>
+<strong>
+21.82 mg
+</strong>
 
-
-<div class="coa-table">
-
-<div></div>
-
-<div></div>
-
-<div></div>
-
-<div></div>
+<span>
+REPORTED CONTENT
+</span>
 
 </div>
 
 
-<div class="coa-footer">
-PRODUCT · LOT · TEST DATE · LABORATORY · RESULT
+
+<div class="result-box">
+
+<strong>
+PASS
+</strong>
+
+<span>
+ENDOTOXIN
+</span>
+
 </div>
+
+
+</div>
+
+
+
+<p class="coa-note">
+Values above are transcribed from the laboratory report
+shown for this specific sample and batch. Refer to the
+original COA for complete test details, methods,
+reference standards, chromatogram, and laboratory notes.
+</p>
+
+
+
+<div class="coa-actions">
+
+
+<a
+  href="cartalax-20mg-coa.jpg"
+  target="_blank"
+  rel="noopener"
+  class="btn btn-gold"
+>
+VIEW FULL COA
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- =========================================
+     FUTURE COA PLACEHOLDER
+========================================= -->
+
+<article
+  class="document-card searchable"
+  data-search="future coa documentation pending"
+>
+
+<div class="document-top">
+
+<div class="document-type">
+CERTIFICATE OF ANALYSIS
+</div>
+
+<div class="document-status">
+MORE COMING
+</div>
+
+</div>
+
+
+<h3>
+Additional COA Records
+</h3>
+
+
+<div class="document-meta">
+
+<span>
+Additional product documentation will be added here.
+</span>
+
+</div>
+
+
+<div class="document-actions">
+
+<a
+  href="contact.html"
+  class="btn"
+>
+DOCUMENTATION INQUIRY
+</a>
+
+</div>
+
+
+<div class="placeholder">
+PCH DOCUMENT LIBRARY
+</div>
+
+
+</article>
 
 
 </div>
@@ -1616,7 +1632,7 @@ PRODUCT · LOT · TEST DATE · LABORATORY · RESULT
 
 
 <!-- =========================================
-     POLICY
+     DOCUMENTATION NOTICE
 ========================================= -->
 
 <section class="policy-section">
@@ -1631,11 +1647,12 @@ Documentation Integrity
 </strong>
 
 <p>
-Certificates of Analysis and laboratory reports should be
-displayed as issued by the testing laboratory. Analytical
-results should not be altered, and a report should not be
-represented as applying to a different product, sample, lot,
-or batch than the one identified in the original documentation.
+Certificates of Analysis and analytical results displayed
+on this website should be interpreted in connection with
+the specific sample, report, and batch identified in the
+original laboratory documentation. A laboratory result for
+one tested sample should not automatically be assumed to
+represent a different or future batch.
 </p>
 
 </div>
@@ -1681,7 +1698,7 @@ Longevity at the Cellular Level
 
 
 <!-- =========================================
-     SEARCH SCRIPT
+     SEARCH
 ========================================= -->
 
 <script>
@@ -1692,10 +1709,10 @@ const coaSearch =
   );
 
 
-const documents =
+const records =
   Array.from(
     document.querySelectorAll(
-      ".document-card"
+      ".searchable"
     )
   );
 
@@ -1711,36 +1728,26 @@ coaSearch.addEventListener(
         .trim();
 
 
-    documents.forEach(
-      documentCard => {
+    records.forEach(
+      record => {
 
-        const searchText =
+        const text =
           (
-            documentCard
-              .dataset
-              .search
+            record.dataset.search
             +
             " "
             +
-            documentCard
-              .innerText
+            record.innerText
           )
           .toLowerCase();
 
 
-        if (
-          searchText.includes(term)
-        ) {
-
-          documentCard.style.display =
-            "flex";
-
-        } else {
-
-          documentCard.style.display =
-            "none";
-
-        }
+        record.style.display =
+          text.includes(term)
+          ?
+          ""
+          :
+          "none";
 
       }
     );
