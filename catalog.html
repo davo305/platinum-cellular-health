@@ -529,7 +529,7 @@ span:nth-child(3) {
 
 
 /* =========================================
-   GENERAL MERCHANDISE CHECKOUT
+   CHECKOUT
 ========================================= */
 
 .checkout-section {
@@ -668,7 +668,7 @@ span:nth-child(3) {
   z-index: 100;
 
   padding:
-    15px 0;
+    15px 0 14px;
 
   background:
     rgba(5,6,7,.95);
@@ -738,6 +738,78 @@ span:nth-child(3) {
 .search-box input::placeholder {
   color: #666d72;
 }
+
+
+/* =========================================
+   CATEGORY FILTERS
+========================================= */
+
+.filter-bar {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0,1fr)
+    );
+
+  gap: 9px;
+
+  margin-top: 12px;
+}
+
+.filter-button {
+  min-height: 44px;
+
+  padding:
+    8px 12px;
+
+  border:
+    1px solid #2c3135;
+
+  border-radius: 9px;
+
+  background: #0d1012;
+
+  color: #969da2;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+
+  line-height: 1.35;
+
+  cursor: pointer;
+
+  transition: .2s ease;
+}
+
+.filter-button:hover {
+  color: var(--gold2);
+
+  border-color:
+    rgba(213,173,85,.55);
+}
+
+.filter-button.active {
+  border-color: var(--gold);
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #f0d48c
+    );
+
+  color: #080909;
+
+  box-shadow:
+    0 5px 18px
+    rgba(213,173,85,.15);
+}
+
 
 .catalog-count {
   margin:
@@ -1114,6 +1186,16 @@ footer {
 }
 
 
+@media(max-width:650px) {
+
+  .filter-bar {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+}
+
+
 @media(max-width:520px) {
 
   .brand {
@@ -1166,6 +1248,15 @@ footer {
     font-size: 15px;
   }
 
+  .filter-button {
+    min-height: 46px;
+
+    padding:
+      7px 8px;
+
+    font-size: 8px;
+  }
+
 }
 
 </style>
@@ -1209,8 +1300,6 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 </a>
 
-
-<!-- DESKTOP NAV -->
 
 <nav class="nav-links">
 
@@ -1268,8 +1357,6 @@ Contact
 
 
 
-<!-- MOBILE MENU -->
-
 <div
   class="mobile-menu"
   id="mobileMenu"
@@ -1314,8 +1401,6 @@ Contact
 </div>
 
 
-
-<!-- MOVING PROMO -->
 
 <div class="promo-banner">
 
@@ -1423,7 +1508,7 @@ COA LINKS WHERE AVAILABLE
 
 
 <!-- =========================================
-     GENERAL MERCHANDISE CHECKOUT
+     CHECKOUT
 ========================================= -->
 
 <section class="checkout-section">
@@ -1481,6 +1566,7 @@ Checkout opens in a new tab.
 
 <div class="search-wrap">
 
+
 <div class="search-box">
 
 <span class="search-icon">
@@ -1496,7 +1582,75 @@ Checkout opens in a new tab.
 
 </div>
 
+
+
+<!-- CATEGORY BUTTONS -->
+
+<div
+  class="filter-bar"
+  id="filterBar"
+>
+
+
+<button
+  class="filter-button active"
+  type="button"
+  data-filter="all"
+>
+ALL
+</button>
+
+
+<button
+  class="filter-button"
+  type="button"
+  data-filter="bac"
+>
+BAC WATER
+</button>
+
+
+<button
+  class="filter-button"
+  type="button"
+  data-filter="glp"
+>
+GLP / WEIGHT LOSS
+</button>
+
+
+<button
+  class="filter-button"
+  type="button"
+  data-filter="recovery"
+>
+RECOVERY / HEALING
+</button>
+
+
+<button
+  class="filter-button"
+  type="button"
+  data-filter="energy"
+>
+ENERGY / MITOCHONDRIA
+</button>
+
+
+<button
+  class="filter-button"
+  type="button"
+  data-filter="mind"
+>
+MIND / LONGEVITY / SLEEP
+</button>
+
+
 </div>
+
+
+</div>
+
 
 
 <div
@@ -1525,7 +1679,7 @@ No research material found.
 
 <br>
 
-Try another name, abbreviation, or amount.
+Try another name, abbreviation, amount, or category.
 
 </div>
 
@@ -1605,6 +1759,7 @@ const products = [
   category: "LAB SUPPLY",
   amount: "BAC WATER",
   price: 32,
+  groups: ["bac"],
   description:
     "Laboratory supply listing with associated documentation information where available."
 },
@@ -1614,6 +1769,7 @@ const products = [
   category: "LAB SUPPLY",
   amount: "BAC WATER",
   price: 16,
+  groups: ["bac"],
   description:
     "Laboratory supply listing with associated documentation information where available."
 },
@@ -1623,6 +1779,7 @@ const products = [
   category: "R SERIES",
   amount: "10 MG",
   price: 60,
+  groups: ["glp"],
   coa:
     "retatrutide-10mg-greencap-coa.jpg",
   description:
@@ -1634,6 +1791,7 @@ const products = [
   category: "R SERIES",
   amount: "20 MG",
   price: 80,
+  groups: ["glp"],
   description:
     "R-series research-material listing at 20 mg."
 },
@@ -1643,6 +1801,7 @@ const products = [
   category: "R SERIES",
   amount: "30 MG",
   price: 100,
+  groups: ["glp"],
   description:
     "R-series research-material listing at 30 mg."
 },
@@ -1652,6 +1811,7 @@ const products = [
   category: "T SERIES",
   amount: "10 MG",
   price: 50,
+  groups: ["glp"],
   description:
     "T-series research-material listing at 10 mg."
 },
@@ -1661,6 +1821,7 @@ const products = [
   category: "T SERIES",
   amount: "20 MG",
   price: 70,
+  groups: ["glp"],
   description:
     "T-series research-material listing at 20 mg."
 },
@@ -1670,6 +1831,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "50 MG",
   price: 25,
+  groups: ["recovery"],
   coa:
     "ghkcu-50mg-coa.png",
   description:
@@ -1681,6 +1843,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "100 MG",
   price: 45,
+  groups: ["recovery"],
   description:
     "GHK-Cu research-material listing at 100 mg."
 },
@@ -1690,6 +1853,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "20 MG",
   price: 50,
+  groups: ["recovery"],
   coa:
     "cartalax-20mg-coa.jpg",
   description:
@@ -1701,6 +1865,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 45,
+  groups: ["mind"],
   description:
     "Research catalog identification and analytical-documentation listing."
 },
@@ -1710,6 +1875,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 45,
+  groups: ["mind"],
   description:
     "Research catalog identification and analytical-documentation listing."
 },
@@ -1719,6 +1885,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 35,
+  groups: ["mind"],
   description:
     "Research-material catalog listing at 10 mg."
 },
@@ -1728,6 +1895,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 40,
+  groups: ["mind"],
   description:
     "Research catalog identification and analytical-documentation listing."
 },
@@ -1737,6 +1905,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 40,
+  groups: [],
   description:
     "Research-material catalog listing at 10 mg."
 },
@@ -1746,6 +1915,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "5 MG",
   price: 25,
+  groups: ["mind"],
   description:
     "DSIP research-material listing at 5 mg."
 },
@@ -1755,6 +1925,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 40,
+  groups: ["mind"],
   description:
     "DSIP research-material listing at 10 mg."
 },
@@ -1764,6 +1935,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 40,
+  groups: ["recovery"],
   description:
     "Research-material catalog listing at 10 mg."
 },
@@ -1773,6 +1945,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "50 MG",
   price: 90,
+  groups: ["recovery"],
   description:
     "Research-material catalog listing at 50 mg."
 },
@@ -1782,6 +1955,7 @@ const products = [
   category: "WOLVERINE",
   amount: "10 MG",
   price: 70,
+  groups: ["recovery"],
   description:
     "Wolverine research-material combination listed at 10 mg total."
 },
@@ -1791,6 +1965,7 @@ const products = [
   category: "WOLVERINE",
   amount: "20 MG",
   price: 110,
+  groups: ["recovery"],
   description:
     "Wolverine research-material combination listed at 20 mg total."
 },
@@ -1800,6 +1975,7 @@ const products = [
   category: "DEADPOOL",
   amount: "30 MG",
   price: 125,
+  groups: ["recovery"],
   description:
     "Deadpool research-material combination listed at 30 mg total."
 },
@@ -1809,6 +1985,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "80 MG",
   price: 115,
+  groups: ["recovery"],
   description:
     "KLOW research-material catalog listing at 80 mg."
 },
@@ -1818,6 +1995,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 40,
+  groups: ["recovery"],
   description:
     "KPV research-material catalog listing at 10 mg."
 },
@@ -1827,6 +2005,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "5 MG",
   price: 30,
+  groups: ["recovery"],
   description:
     "CJC research-material catalog listing at 5 mg."
 },
@@ -1836,6 +2015,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 50,
+  groups: ["recovery", "mind"],
   description:
     "Ipamorelin research-material listing at 10 mg."
 },
@@ -1845,6 +2025,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 60,
+  groups: ["recovery"],
   description:
     "Tesamorelin research-material listing at 10 mg."
 },
@@ -1854,6 +2035,7 @@ const products = [
   category: "RESEARCH COMBINATION",
   amount: "20 MG",
   price: 100,
+  groups: ["recovery", "mind"],
   description:
     "Research-material combination listed at 20 mg total."
 },
@@ -1863,6 +2045,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "10 MG",
   price: 45,
+  groups: ["energy"],
   coa:
     "motsc-10mg-greencaps-coa.png",
   description:
@@ -1874,6 +2057,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "50 MG",
   price: 100,
+  groups: ["energy"],
   description:
     "SS-31 research-material catalog listing at 50 mg."
 },
@@ -1883,6 +2067,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "500 MG",
   price: 70,
+  groups: ["energy"],
   description:
     "5-Amino-1MQ research-material listing at 500 mg."
 },
@@ -1892,6 +2077,7 @@ const products = [
   category: "RESEARCH MATERIAL",
   amount: "1000 MG",
   price: 40,
+  groups: ["energy"],
   description:
     "Buffered NAD+ research-material catalog listing."
 }
@@ -1900,7 +2086,7 @@ const products = [
 
 
 /* =========================================
-   BUILD PRODUCT CARDS
+   ELEMENTS
 ========================================= */
 
 const catalogGrid =
@@ -1908,6 +2094,36 @@ const catalogGrid =
     "catalogGrid"
   );
 
+const search =
+  document.getElementById(
+    "catalogSearch"
+  );
+
+const count =
+  document.getElementById(
+    "catalogCount"
+  );
+
+const noResults =
+  document.getElementById(
+    "noResults"
+  );
+
+const filterButtons =
+  Array.from(
+    document.querySelectorAll(
+      ".filter-button"
+    )
+  );
+
+
+let activeFilter =
+  "all";
+
+
+/* =========================================
+   BUILD PRODUCT CARDS
+========================================= */
 
 function buildCatalog(list) {
 
@@ -2036,90 +2252,141 @@ function buildCatalog(list) {
 
 
 /* =========================================
-   SEARCH
+   FILTER CATALOG
 ========================================= */
 
-const search =
-  document.getElementById(
-    "catalogSearch"
-  );
+function updateCatalog() {
 
-const count =
-  document.getElementById(
-    "catalogCount"
-  );
-
-const noResults =
-  document.getElementById(
-    "noResults"
-  );
+  const term =
+    search
+      .value
+      .toLowerCase()
+      .trim();
 
 
-search.addEventListener(
-  "input",
-  function() {
+  const filtered =
+    products.filter(
+      function(product) {
 
-    const term =
-      search
-        .value
-        .toLowerCase()
-        .trim();
-
-
-    const filtered =
-      products.filter(
-        function(product) {
-
-          const text =
-            (
-              product.name
-              +
-              " "
-              +
-              product.category
-              +
-              " "
-              +
-              product.amount
-              +
-              " "
-              +
-              product.price
-            )
-            .toLowerCase();
+        const matchesCategory =
+          activeFilter === "all"
+          ||
+          product.groups.includes(
+            activeFilter
+          );
 
 
-          return text.includes(
+        const searchableText =
+          (
+            product.name
+            +
+            " "
+            +
+            product.category
+            +
+            " "
+            +
+            product.amount
+            +
+            " "
+            +
+            product.price
+            +
+            " "
+            +
+            product.description
+          )
+          .toLowerCase();
+
+
+        const matchesSearch =
+          searchableText.includes(
             term
           );
 
-        }
-      );
 
+        return (
+          matchesCategory
+          &&
+          matchesSearch
+        );
 
-    buildCatalog(
-      filtered
+      }
     );
 
 
-    count.textContent =
-      filtered.length
-      +
-      (
-        filtered.length === 1
-        ?
-        " RESEARCH LISTING"
-        :
-        " RESEARCH LISTINGS"
-      );
+  buildCatalog(
+    filtered
+  );
 
 
-    noResults.style.display =
-      filtered.length === 0
+  count.textContent =
+    filtered.length
+    +
+    (
+      filtered.length === 1
       ?
-      "block"
+      " RESEARCH LISTING"
       :
-      "none";
+      " RESEARCH LISTINGS"
+    );
+
+
+  noResults.style.display =
+    filtered.length === 0
+    ?
+    "block"
+    :
+    "none";
+
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+search.addEventListener(
+  "input",
+  updateCatalog
+);
+
+
+/* =========================================
+   CATEGORY BUTTONS
+========================================= */
+
+filterButtons.forEach(
+  function(button) {
+
+    button.addEventListener(
+      "click",
+      function() {
+
+        activeFilter =
+          button.dataset.filter;
+
+
+        filterButtons.forEach(
+          function(btn) {
+
+            btn.classList.remove(
+              "active"
+            );
+
+          }
+        );
+
+
+        button.classList.add(
+          "active"
+        );
+
+
+        updateCatalog();
+
+      }
+    );
 
   }
 );
