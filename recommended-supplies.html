@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta name="theme-color" content="#050607">
+
+<title>
+Recommended Supplies | Platinum Cellular Health Labs
+</title>
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(198,160,70,.07),
+      transparent 30%
+    ),
+    #050607;
+
+  color: #f4f4f4;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height: 1.6;
+
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+:root {
+
+  --black: #050607;
+
+  --panel: #0d0f11;
+
+  --panel2: #111417;
+
+  --border: #252a2e;
+
+  --gold: #d5ad55;
+
+  --gold2: #f0d48c;
+
+  --text: #f5f5f5;
+
+  --muted: #9da3a8;
+}
+
+.shell {
+
+  width:
+    min(
+      1180px,
+      calc(100% - 36px)
+    );
+
+  margin: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background:
+    rgba(5,6,7,.96);
+
+  backdrop-filter:
+    blur(15px);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.08);
+}
+
+.nav {
+
+  min-height: 78px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 25px;
+}
+
+.brand {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.brand img {
+
+  width: 52px;
+
+  height: 52px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(213,173,85,.35);
+}
+
+.brand-title {
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.brand-sub {
+
+  margin-top: 2px;
+
+  color: var(--gold);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.nav-links {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  color: #b9bdc0;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.nav-links a {
+
+  transition: .2s ease;
+}
+
+.nav-links a:hover {
+
+  color: var(--gold2);
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu-button {
+
+  display: none;
+
+  width: 44px;
+
+  height: 44px;
+
+  min-width: 44px;
+
+  padding: 10px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 9px;
+
+  background: #0d1012;
+
+  cursor: pointer;
+}
+
+.mobile-menu-button span {
+
+  display: block;
+
+  width: 100%;
+
+  height: 2px;
+
+  margin: 5px 0;
+
+  border-radius: 10px;
+
+  background: var(--gold2);
+
+  transition: .25s ease;
+}
+
+.mobile-menu-button.active
+span:nth-child(1) {
+
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.active
+span:nth-child(2) {
+
+  opacity: 0;
+}
+
+.mobile-menu-button.active
+span:nth-child(3) {
+
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+.mobile-menu {
+
+  display: none;
+
+  background: #060708;
+
+  border-top:
+    1px solid #202428;
+
+  border-bottom:
+    1px solid #252a2e;
+}
+
+.mobile-menu.open {
+
+  display: block;
+}
+
+.mobile-menu-inner {
+
+  display: grid;
+
+  padding:
+    8px 0 18px;
+}
+
+.mobile-menu-inner a {
+
+  padding:
+    14px 3px;
+
+  border-bottom:
+    1px solid #1f2326;
+
+  color: #c6cacc;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.page-hero {
+
+  padding:
+    85px 0 55px;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.back-link {
+
+  display: inline-block;
+
+  margin-bottom: 30px;
+
+  color: var(--gold2);
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.eyebrow {
+
+  margin-bottom: 13px;
+
+  color: var(--gold);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.page-hero h1 {
+
+  max-width: 850px;
+
+  margin-bottom: 20px;
+
+  font-size:
+    clamp(
+      42px,
+      7vw,
+      70px
+    );
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+.page-hero p {
+
+  max-width: 760px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   AMAZON DISCLOSURE
+========================================= */
+
+.affiliate-disclosure {
+
+  padding:
+    22px 0;
+
+  border-bottom:
+    1px solid var(--border);
+
+  background:
+    rgba(213,173,85,.035);
+}
+
+.disclosure-box {
+
+  padding:
+    18px 20px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.25);
+
+  border-radius: 12px;
+
+  background: #0b0d0f;
+}
+
+.disclosure-box strong {
+
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--gold2);
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+.disclosure-box p {
+
+  color: #8e959a;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.supplies-section {
+
+  padding:
+    45px 0 100px;
+}
+
+.search-wrap {
+
+  position: sticky;
+
+  top: 78px;
+
+  z-index: 100;
+
+  padding:
+    15px 0;
+
+  background:
+    rgba(5,6,7,.95);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+.search-box {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding:
+    0 17px;
+
+  border:
+    1px solid #2c3135;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #0a0c0d
+    );
+}
+
+.search-box:focus-within {
+
+  border-color:
+    rgba(213,173,85,.65);
+}
+
+.search-icon {
+
+  color: var(--gold);
+
+  font-size: 21px;
+}
+
+.search-box input {
+
+  width: 100%;
+
+  min-height: 60px;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #fff;
+
+  font-size: 16px;
+}
+
+.search-box input::placeholder {
+
+  color: #666d72;
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+.category-section {
+
+  margin-top: 45px;
+}
+
+.category-heading {
+
+  margin-bottom: 20px;
+
+  padding-bottom: 12px;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.category-heading span {
+
+  color: var(--gold);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.category-heading h2 {
+
+  margin-top: 5px;
+
+  font-size:
+    clamp(
+      26px,
+      4vw,
+      36px
+    );
+}
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.product-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0,1fr)
+    );
+
+  gap: 17px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card {
+
+  min-height: 280px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 24px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  transition:
+    transform .22s ease,
+    border-color .22s ease;
+}
+
+.product-card:hover {
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(213,173,85,.42);
+}
+
+.amazon-label {
+
+  color: var(--gold);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+.product-card h3 {
+
+  margin:
+    28px 0 10px;
+
+  font-size: 21px;
+
+  line-height: 1.3;
+}
+
+.product-card p {
+
+  margin-bottom: 22px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.amazon-button {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 48px;
+
+  margin-top: auto;
+
+  padding:
+    0 16px;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #f0d48c
+    );
+
+  color: #080909;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: .8px;
+
+  box-shadow:
+    0 7px 20px
+    rgba(213,173,85,.12);
+
+  transition: .2s ease;
+}
+
+.amazon-button:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(213,173,85,.22);
+}
+
+.amazon-note {
+
+  margin-top: 10px;
+
+  color: #62696e;
+
+  text-align: center;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: .5px;
+}
+
+
+/* =========================================
+   NO RESULTS
+========================================= */
+
+.no-results {
+
+  display: none;
+
+  margin-top: 35px;
+
+  padding: 40px 20px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 14px;
+
+  background: #0d1012;
+
+  color: var(--muted);
+
+  text-align: center;
+}
+
+.no-results strong {
+
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--gold2);
+
+  font-size: 18px;
+}
+
+
+/* =========================================
+   BOTTOM NOTICE
+========================================= */
+
+.bottom-notice {
+
+  margin-top: 55px;
+
+  padding: 24px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 14px;
+
+  background: #0b0d0f;
+}
+
+.bottom-notice strong {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--gold2);
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+.bottom-notice p {
+
+  color: #7f868b;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+  padding:
+    40px 0;
+
+  border-top:
+    1px solid var(--border);
+
+  background: #030404;
+}
+
+.footer-grid {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 30px;
+
+  color: #777d82;
+
+  font-size: 11px;
+}
+
+.footer-grid strong {
+
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #c7c9ca;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:950px) {
+
+  .product-grid {
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0,1fr)
+      );
+  }
+
+}
+
+
+@media(max-width:900px) {
+
+  .shell {
+
+    width:
+      min(
+        calc(100% - 28px),
+        1180px
+      );
+  }
+
+  .nav {
+
+    min-height: 68px;
+  }
+
+  .brand img {
+
+    width: 45px;
+
+    height: 45px;
+  }
+
+  .brand-title {
+
+    font-size: 11px;
+  }
+
+  .brand-sub {
+
+    font-size: 7px;
+  }
+
+  .nav-links {
+
+    display: none;
+  }
+
+  .mobile-menu-button {
+
+    display: block;
+  }
+
+  .search-wrap {
+
+    top: 68px;
+  }
+
+  .page-hero {
+
+    padding:
+      55px 0 45px;
+  }
+
+  .footer-grid {
+
+    flex-direction: column;
+  }
+
+}
+
+
+@media(max-width:600px) {
+
+  .product-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+
+    min-height: 250px;
+  }
+
+}
+
+
+@media(max-width:480px) {
+
+  .brand {
+
+    gap: 8px;
+  }
+
+  .brand img {
+
+    width: 41px;
+
+    height: 41px;
+  }
+
+  .brand-title {
+
+    font-size: 9px;
+
+    letter-spacing: .6px;
+  }
+
+  .brand-sub {
+
+    font-size: 5.8px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .page-hero h1 {
+
+    font-size: 39px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+<div class="shell nav">
+
+
+<a
+  href="index.html"
+  class="brand"
+>
+
+<img
+  src="pch-logo.jpg"
+  alt="PCH Labs"
+>
+
+<div>
+
+<div class="brand-title">
+PLATINUM CELLULAR HEALTH LABS
+</div>
+
+<div class="brand-sub">
+LONGEVITY AT THE CELLULAR LEVEL
+</div>
+
+</div>
+
+</a>
+
+
+<nav class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research
+</a>
+
+<a href="catalog.html">
+Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="recommended-supplies.html">
+Supplies
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</nav>
+
+
+<button
+  class="mobile-menu-button"
+  id="mobileMenuButton"
+  type="button"
+  aria-label="Open menu"
+  aria-expanded="false"
+>
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+</div>
+
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+<div class="shell mobile-menu-inner">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research Information
+</a>
+
+<a href="catalog.html">
+Research Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="recommended-supplies.html">
+Recommended Supplies
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+</div>
+
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="page-hero">
+
+<div class="shell">
+
+
+<a
+  href="index.html"
+  class="back-link"
+>
+← BACK TO PCH LABS
+</a>
+
+
+<div class="eyebrow">
+PCH RECOMMENDED PRODUCTS
+</div>
+
+
+<h1>
+Recommended supplies.
+</h1>
+
+
+<p>
+A collection of laboratory supplies,
+storage accessories, travel products,
+and fitness essentials available through
+Amazon.
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     AFFILIATE DISCLOSURE
+========================================= -->
+
+<section class="affiliate-disclosure">
+
+<div class="shell">
+
+<div class="disclosure-box">
+
+<strong>
+AFFILIATE DISCLOSURE
+</strong>
+
+<p>
+As an Amazon Associate, PCH Labs may earn
+from qualifying purchases. Purchasing through
+these links may result in PCH Labs receiving
+a commission at no additional cost to you.
+Amazon controls product pricing, availability,
+shipping, and fulfillment.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     PRODUCTS
+========================================= -->
+
+<section class="supplies-section">
+
+<div class="shell">
+
+
+<!-- SEARCH -->
+
+<div class="search-wrap">
+
+<div class="search-box">
+
+<span class="search-icon">
+⌕
+</span>
+
+<input
+  id="supplySearch"
+  type="search"
+  autocomplete="off"
+  placeholder="Search recommended supplies..."
+>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     LAB & RESEARCH SUPPLIES
+========================================= -->
+
+<div
+  class="category-section supply-category"
+>
+
+<div class="category-heading">
+
+<span>
+RECOMMENDED PRODUCTS
+</span>
+
+<h2>
+Lab & Research Supplies
+</h2>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<article
+  class="product-card searchable"
+  data-search="alcohol prep pads wipes cleaning"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Alcohol Prep Pads
+</h3>
+
+<p>
+Convenient disposable alcohol preparation
+pads for general cleaning and laboratory
+supply use.
+</p>
+
+<a
+  href="https://amzn.to/3SzzLos"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="0.5ml syringe needle 31g 0.5cc 5/16 8mm"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+0.5 mL Syringe with Needle
+</h3>
+
+<p>
+31G · 0.5 cc · 5/16 inch
+(8 mm) syringe and needle product listing.
+</p>
+
+<a
+  href="https://amzn.to/3S9WuY6"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="100 pack u100 u-100 1cc 31 gauge 5/16 syringe needle"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+100-Pack U-100 1 cc Syringes
+</h3>
+
+<p>
+31-gauge, 5/16-inch syringe and needle
+product listing in a 100-count package.
+</p>
+
+<a
+  href="https://amzn.to/4wA1enU"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="3ml luer lock syringes 23g needle"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+3 mL Luer Lock Syringes
+</h3>
+
+<p>
+3 mL Luer-lock syringe product listing
+with 23G needle.
+</p>
+
+<a
+  href="https://amzn.to/4x6nbfw"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="syringe filter filtration"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Syringe Filter
+</h3>
+
+<p>
+Disposable syringe filtration product
+for appropriate laboratory applications.
+</p>
+
+<a
+  href="https://amzn.to/468yqba"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="5ml sterile vial empty vials"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+5 mL Sterile Vials
+</h3>
+
+<p>
+Sterile 5 mL vial product listing for
+appropriate laboratory and storage applications.
+</p>
+
+<a
+  href="https://amzn.to/45rsIkH"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="3ml sterile vial empty vials"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+3 mL Sterile Vials
+</h3>
+
+<p>
+Sterile 3 mL vial product listing for
+appropriate laboratory and storage applications.
+</p>
+
+<a
+  href="https://amzn.to/4wAywDw"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="syringe filters filtration second filter"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Syringe Filters
+</h3>
+
+<p>
+Additional syringe-filter option for
+appropriate laboratory filtration applications.
+</p>
+
+<a
+  href="https://amzn.to/4x2xYqS"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     STORAGE & TRAVEL
+========================================= -->
+
+<div
+  class="category-section supply-category"
+>
+
+<div class="category-heading">
+
+<span>
+ORGANIZATION
+</span>
+
+<h2>
+Storage & Travel
+</h2>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<article
+  class="product-card searchable"
+  data-search="travel case storage portable"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Travel Case
+</h3>
+
+<p>
+Portable organization and travel case
+for keeping compatible supplies together.
+</p>
+
+<a
+  href="https://amzn.to/3U2TAov"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="pill organizer storage organization"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Pill Organizer
+</h3>
+
+<p>
+Compact organizer for storing and
+separating compatible everyday items.
+</p>
+
+<a
+  href="https://amzn.to/3TUFGVz"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="storage containers organization container"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Storage Containers
+</h3>
+
+<p>
+General-purpose storage containers
+for organizing compatible supplies.
+</p>
+
+<a
+  href="https://amzn.to/3UBQgAQ"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="vial inserts storage organizer inserts"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Vial Inserts
+</h3>
+
+<p>
+Organization inserts designed for
+compatible vial-storage containers.
+</p>
+
+<a
+  href="https://amzn.to/4x9xS0Y"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     NUTRITION & TRAINING
+========================================= -->
+
+<div
+  class="category-section supply-category"
+>
+
+<div class="category-heading">
+
+<span>
+FITNESS ESSENTIALS
+</span>
+
+<h2>
+Nutrition & Training
+</h2>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<article
+  class="product-card searchable"
+  data-search="protein powder fitness nutrition protein"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Protein Powder
+</h3>
+
+<p>
+Protein supplement option for
+nutrition and fitness routines.
+</p>
+
+<a
+  href="https://amzn.to/4gzeQef"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="creatine powder fitness supplement creatine"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Creatine Powder
+</h3>
+
+<p>
+Creatine supplement option for
+fitness and training routines.
+</p>
+
+<a
+  href="https://amzn.to/4wxhlmb"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="beetroot beet root powder fitness nutrition"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Beetroot Powder
+</h3>
+
+<p>
+Beetroot powder option for nutrition
+and fitness routines.
+</p>
+
+<a
+  href="https://amzn.to/4csAhv9"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="fiber powder nutrition supplement fiber"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Fiber Powder
+</h3>
+
+<p>
+Fiber supplement option for
+nutrition and everyday dietary routines.
+</p>
+
+<a
+  href="https://amzn.to/4g58Zfe"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+
+<article
+  class="product-card searchable"
+  data-search="electrolytes electrolyte powder hydration fitness nutrition"
+>
+
+<div class="amazon-label">
+AMAZON RECOMMENDATION
+</div>
+
+<h3>
+Electrolyte Powder
+</h3>
+
+<p>
+Electrolyte powder option for
+hydration, fitness, and nutrition routines.
+</p>
+
+<a
+  href="https://amzn.to/4g596ra"
+  target="_blank"
+  rel="noopener sponsored"
+  class="amazon-button"
+>
+VIEW ON AMAZON ↗
+</a>
+
+<div class="amazon-note">
+AFFILIATE LINK
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     NO RESULTS
+========================================= -->
+
+<div
+  class="no-results"
+  id="noResults"
+>
+
+<strong>
+No recommended product found.
+</strong>
+
+Try another search term.
+
+</div>
+
+
+
+<!-- =========================================
+     BOTTOM NOTICE
+========================================= -->
+
+<div class="bottom-notice">
+
+<strong>
+AMAZON PRODUCT NOTICE
+</strong>
+
+<p>
+Products displayed on this page are linked
+to third-party Amazon listings. PCH Labs does
+not control Amazon pricing, inventory, shipping,
+seller information, product specifications,
+or fulfillment. Review the Amazon product
+listing before purchasing. As an Amazon
+Associate, PCH Labs may earn from qualifying
+purchases.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+<div class="shell footer-grid">
+
+
+<div>
+
+<strong>
+Platinum Cellular Health Labs
+</strong>
+
+Longevity at the Cellular Level
+
+</div>
+
+
+<div>
+
+Affiliate links may generate a commission.
+
+<br>
+
+© 2026 Platinum Cellular Health Labs.
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================
+   SEARCH
+========================================= */
+
+const searchInput =
+  document.getElementById(
+    "supplySearch"
+  );
+
+const cards =
+  Array.from(
+    document.querySelectorAll(
+      ".searchable"
+    )
+  );
+
+const categories =
+  Array.from(
+    document.querySelectorAll(
+      ".supply-category"
+    )
+  );
+
+const noResults =
+  document.getElementById(
+    "noResults"
+  );
+
+
+function filterSupplies() {
+
+  const term =
+    searchInput
+      .value
+      .toLowerCase()
+      .trim();
+
+
+  let totalVisible = 0;
+
+
+  cards.forEach(
+    function(card) {
+
+      const text =
+        (
+          card.innerText
+          +
+          " "
+          +
+          card.dataset.search
+        )
+        .toLowerCase();
+
+
+      const match =
+        text.includes(
+          term
+        );
+
+
+      card.style.display =
+        match
+        ?
+        ""
+        :
+        "none";
+
+
+      if(match) {
+
+        totalVisible++;
+
+      }
+
+    }
+  );
+
+
+  categories.forEach(
+    function(category) {
+
+      const categoryCards =
+        Array.from(
+          category.querySelectorAll(
+            ".product-card"
+          )
+        );
+
+
+      const hasVisible =
+        categoryCards.some(
+          function(card) {
+
+            return (
+              card.style.display
+              !==
+              "none"
+            );
+
+          }
+        );
+
+
+      category.style.display =
+        hasVisible
+        ?
+        ""
+        :
+        "none";
+
+    }
+  );
+
+
+  noResults.style.display =
+    totalVisible === 0
+    ?
+    "block"
+    :
+    "none";
+
+}
+
+
+searchInput.addEventListener(
+  "input",
+  filterSupplies
+);
+
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const menuButton =
+  document.getElementById(
+    "mobileMenuButton"
+  );
+
+const menu =
+  document.getElementById(
+    "mobileMenu"
+  );
+
+
+menuButton.addEventListener(
+  "click",
+  function() {
+
+    const open =
+      menu.classList.toggle(
+        "open"
+      );
+
+
+    menuButton.classList.toggle(
+      "active",
+      open
+    );
+
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      open
+    );
+
+  }
+);
+
+
+menu
+  .querySelectorAll("a")
+  .forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          menu.classList.remove(
+            "open"
+          );
+
+
+          menuButton.classList.remove(
+            "active"
+          );
+
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    }
+  );
+
+</script>
+
+
+</body>
+
+</html>
