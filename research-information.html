@@ -34,8 +34,6 @@ html {
 }
 
 body {
-  min-height: 100vh;
-
   background:
     radial-gradient(
       circle at 50% 0%,
@@ -62,11 +60,11 @@ a {
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
-input {
+button {
   font-family: inherit;
 }
 
@@ -98,13 +96,12 @@ input {
 
 .site-header {
   position: sticky;
-
   top: 0;
 
   z-index: 1000;
 
   background:
-    rgba(5,6,7,.95);
+    rgba(5,6,7,.96);
 
   backdrop-filter:
     blur(15px);
@@ -118,18 +115,14 @@ input {
   min-height: 78px;
 
   display: flex;
-
   align-items: center;
-
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
   gap: 25px;
 }
 
 .brand {
   display: flex;
-
   align-items: center;
 
   gap: 12px;
@@ -172,10 +165,9 @@ input {
 
 .nav-links {
   display: flex;
-
   align-items: center;
 
-  gap: 22px;
+  gap: 20px;
 
   color: #b9bdc0;
 
@@ -190,6 +182,135 @@ input {
 
 
 /* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  padding: 10px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 9px;
+
+  background: #0d1012;
+
+  cursor: pointer;
+}
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  margin: 5px 0;
+
+  border-radius: 10px;
+
+  background: var(--gold2);
+
+  transition: .25s ease;
+}
+
+.mobile-menu {
+  display: none;
+
+  background:
+    rgba(6,7,8,.99);
+
+  border-top:
+    1px solid #202428;
+
+  border-bottom:
+    1px solid #252a2e;
+
+  box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.4);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu-inner {
+  display: grid;
+
+  padding-top: 10px;
+  padding-bottom: 18px;
+}
+
+.mobile-menu-inner > a {
+  padding:
+    15px 3px;
+
+  border-bottom:
+    1px solid #1f2326;
+
+  color: #c6cacc;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+}
+
+.mobile-menu-inner > a:hover {
+  color: var(--gold2);
+}
+
+.mobile-menu-inner
+.mobile-contact-button {
+  margin-top: 15px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+
+  text-align: center;
+}
+
+.mobile-menu-button.active
+span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.active
+span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.active
+span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* =========================================
    BUTTONS
 ========================================= */
 
@@ -197,12 +318,12 @@ input {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-height: 46px;
 
-  padding: 0 20px;
+  padding:
+    0 20px;
 
   border-radius: 8px;
 
@@ -250,21 +371,27 @@ input {
 
 .page-hero {
   padding:
-    90px 0 65px;
+    100px 0 80px;
 
   border-bottom:
-    1px solid
-    var(--border);
+    1px solid var(--border);
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(213,173,85,.08),
+      transparent 30%
+    );
 }
 
 .back-link {
   display: inline-block;
 
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 
   color: var(--gold2);
 
-  font-size: 11px;
+  font-size: 12px;
 
   font-weight: 900;
 
@@ -301,7 +428,7 @@ input {
 }
 
 .page-hero p {
-  max-width: 760px;
+  max-width: 780px;
 
   color: var(--muted);
 
@@ -317,11 +444,12 @@ input {
 
   gap: 9px;
 
-  margin-top: 25px;
+  margin-top: 28px;
 }
 
 .hero-meta span {
-  padding: 7px 10px;
+  padding:
+    7px 10px;
 
   border:
     1px solid #292e32;
@@ -341,216 +469,40 @@ input {
 
 
 /* =========================================
-   SEARCH
+   IMPORTANT NOTICE
 ========================================= */
 
-.library {
+.notice-section {
   padding:
-    55px 0 90px;
+    55px 0 0;
 }
 
-.library-head {
-  display: flex;
-
-  justify-content:
-    space-between;
-
-  align-items:
-    end;
-
-  gap: 35px;
-
-  margin-bottom: 28px;
-}
-
-.library-head h2 {
-  font-size:
-    clamp(
-      30px,
-      4vw,
-      48px
-    );
-
-  line-height: 1.08;
-}
-
-.library-head p {
-  max-width: 520px;
-
-  color: var(--muted);
-
-  font-size: 14px;
-
-  line-height: 1.8;
-}
-
-.search-box {
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  width: 100%;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111416,
-      #0a0c0d
-    );
-
-  border:
-    1px solid #2c3135;
-
-  border-radius: 14px;
-
-  padding:
-    0 17px;
-
-  margin-bottom: 28px;
-
-  transition: .2s ease;
-}
-
-.search-box:focus-within {
-  border-color:
-    rgba(213,173,85,.65);
-
-  box-shadow:
-    0 0 0 3px
-    rgba(213,173,85,.05);
-}
-
-.search-icon {
-  color: var(--gold);
-
-  font-size: 21px;
-
-  flex-shrink: 0;
-}
-
-.search-box input {
-  width: 100%;
-
-  min-height: 60px;
-
-  border: 0;
-
-  outline: none;
-
-  background: transparent;
-
-  color: #f4f4f4;
-
-  font-size: 16px;
-}
-
-.search-box input::placeholder {
-  color: #666d72;
-}
-
-.search-status {
-  display: none;
-
-  color: #747b80;
-
-  font-size: 11px;
-
-  margin:
-    -15px 0
-    25px;
-}
-
-
-/* =========================================
-   TOPIC GRID
-========================================= */
-
-.topic-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      3,
-      minmax(0,1fr)
-    );
-
-  gap: 18px;
-}
-
-.topic-card {
-  position: relative;
-
-  min-height: 295px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  padding: 26px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c
-    );
+.notice {
+  padding: 25px;
 
   border:
     1px solid
-    var(--border);
+    rgba(213,173,85,.28);
 
-  border-radius: 16px;
+  border-radius: 14px;
 
-  transition:
-    .25s ease;
+  background:
+    rgba(213,173,85,.04);
 }
 
-.topic-card:hover {
-  transform:
-    translateY(-4px);
+.notice strong {
+  display: block;
 
-  border-color:
-    rgba(213,173,85,.43);
+  color: var(--gold2);
+
+  font-size: 12px;
+
+  letter-spacing: 1.2px;
+
+  margin-bottom: 8px;
 }
 
-.topic-number {
-  position: absolute;
-
-  top: 14px;
-
-  right: 20px;
-
-  color:
-    rgba(213,173,85,.14);
-
-  font-size: 48px;
-
-  font-weight: 900;
-}
-
-.topic-label {
-  color: var(--gold);
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: 1.7px;
-
-  margin-bottom: 46px;
-}
-
-.topic-card h3 {
-  font-size: 23px;
-
-  line-height: 1.2;
-
-  margin-bottom: 11px;
-}
-
-.topic-card p {
+.notice p {
   color: var(--muted);
 
   font-size: 13px;
@@ -558,42 +510,37 @@ input {
   line-height: 1.8;
 }
 
-.topic-link {
-  margin-top: auto;
-
-  padding-top: 22px;
-
-  color: var(--gold2);
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
 
 /* =========================================
-   SECTION SHARED
+   RESEARCH SECTIONS
 ========================================= */
 
-.section {
+.research-section {
   padding:
     80px 0;
-
-  border-top:
-    1px solid
-    var(--border);
 }
 
-.section.alt {
+.research-section.alt {
   background: #090b0c;
+
+  border-top:
+    1px solid var(--border);
+
+  border-bottom:
+    1px solid var(--border);
 }
 
 .section-head {
-  max-width: 760px;
+  display: grid;
 
-  margin-bottom: 35px;
+  grid-template-columns:
+    .8fr 1.2fr;
+
+  gap: 60px;
+
+  align-items: end;
+
+  margin-bottom: 40px;
 }
 
 .section-head h2 {
@@ -604,93 +551,122 @@ input {
       48px
     );
 
-  line-height: 1.08;
+  line-height: 1.05;
 
-  margin-bottom: 15px;
+  letter-spacing: -1.3px;
 }
 
 .section-head p {
   color: var(--muted);
-
-  font-size: 14px;
 
   line-height: 1.8;
 }
 
 
 /* =========================================
-   TERMINOLOGY
+   INFORMATION CARDS
 ========================================= */
 
-.definition-grid {
+.info-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(
-      2,
-      minmax(0,1fr)
-    );
+    repeat(3,1fr);
 
-  gap: 14px;
+  gap: 18px;
 }
 
-.definition-card {
-  padding: 21px;
+.info-card {
+  position: relative;
+
+  min-height: 290px;
+
+  padding: 27px;
 
   border:
-    1px solid
-    var(--border);
+    1px solid var(--border);
 
-  border-radius: 12px;
+  border-radius: 14px;
 
-  background: #0d1012;
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  transition: .25s ease;
 }
 
-.definition-card strong {
-  display: block;
+.info-card:hover {
+  transform:
+    translateY(-4px);
 
-  color: var(--gold2);
-
-  font-size: 14px;
-
-  margin-bottom: 7px;
+  border-color:
+    rgba(213,173,85,.42);
 }
 
-.definition-card p {
+.card-number {
+  color:
+    rgba(213,173,85,.17);
+
+  position: absolute;
+
+  right: 22px;
+  top: 13px;
+
+  font-size: 48px;
+
+  font-weight: 900;
+}
+
+.card-label {
+  color: var(--gold);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+
+  margin-bottom: 40px;
+}
+
+.info-card h3 {
+  font-size: 23px;
+
+  margin-bottom: 12px;
+}
+
+.info-card p {
   color: var(--muted);
 
-  font-size: 12px;
+  font-size: 13px;
 
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 
 /* =========================================
-   ANALYTICAL TESTING
+   RESEARCH MATERIALS
 ========================================= */
 
-.analysis-grid {
+.material-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(
-      4,
-      minmax(0,1fr)
-    );
+    repeat(2,1fr);
 
-  gap: 14px;
+  gap: 18px;
 }
 
-.analysis-card {
-  min-height: 220px;
-
-  padding: 22px;
+.material-card {
+  padding: 28px;
 
   border:
-    1px solid
-    var(--border);
+    1px solid var(--border);
 
-  border-radius: 13px;
+  border-radius: 14px;
 
   background:
     linear-gradient(
@@ -700,83 +676,340 @@ input {
     );
 }
 
-.analysis-code {
+.material-card .category {
   color: var(--gold);
 
   font-size: 9px;
 
   font-weight: 900;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.6px;
 
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
-.analysis-card h3 {
-  font-size: 18px;
+.material-card h3 {
+  font-size: 23px;
+
+  margin-bottom: 12px;
+}
+
+.material-card p {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.material-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 20px;
+}
+
+.material-tags span {
+  padding:
+    6px 9px;
+
+  border:
+    1px solid #2b3034;
+
+  border-radius: 100px;
+
+  background: #0c0e10;
+
+  color: #858c91;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .8px;
+}
+
+
+/* =========================================
+   COA EXPLANATION
+========================================= */
+
+.coa-layout {
+  display: grid;
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap: 65px;
+
+  align-items: center;
+}
+
+.coa-copy h2 {
+  font-size:
+    clamp(
+      31px,
+      4vw,
+      48px
+    );
+
+  line-height: 1.05;
+
+  margin-bottom: 20px;
+}
+
+.coa-copy p {
+  color: var(--muted);
+
+  line-height: 1.8;
+
+  margin-bottom: 25px;
+}
+
+.coa-list {
+  display: grid;
+
+  gap: 0;
+
+  border-top:
+    1px solid #24282b;
+
+  margin-bottom: 28px;
+}
+
+.coa-list div {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    14px 0;
+
+  border-bottom:
+    1px solid #24282b;
+
+  color: #c6cacc;
+
+  font-size: 13px;
+}
+
+.coa-list span {
+  color: var(--gold2);
+
+  font-weight: 900;
+}
+
+
+/* =========================================
+   DOCUMENT MOCKUP
+========================================= */
+
+.document-card {
+  padding: 30px;
+
+  background: #efefeb;
+
+  color: #111;
+
+  border-radius: 7px;
+
+  box-shadow:
+    0 25px 60px
+    rgba(0,0,0,.45);
+
+  transform:
+    rotate(1deg);
+}
+
+.document-head {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 16px;
+
+  border-bottom:
+    3px solid #111;
+
+  margin-bottom: 25px;
+}
+
+.document-head strong {
+  font-size: 30px;
+}
+
+.document-head span {
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.doc-line {
+  height: 8px;
+
+  background: #c8c8c4;
+
+  margin-bottom: 10px;
+
+  width: 75%;
+}
+
+.doc-line.wide {
+  width: 100%;
+}
+
+.doc-line.short {
+  width: 45%;
+}
+
+.doc-data {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 10px;
+
+  margin-top: 28px;
+}
+
+.doc-data div {
+  min-height: 65px;
+
+  padding: 10px;
+
+  border:
+    1px solid #aaa;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  color: #555;
+}
+
+.document-foot {
+  margin-top: 25px;
+
+  padding-top: 12px;
+
+  border-top:
+    1px solid #999;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   STORAGE SECTION
+========================================= */
+
+.storage-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 18px;
+}
+
+.storage-card {
+  padding: 27px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 14px;
+
+  background: #0d1012;
+}
+
+.storage-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.3);
+
+  border-radius: 10px;
+
+  color: var(--gold2);
+
+  font-size: 20px;
+}
+
+.storage-card h3 {
+  font-size: 20px;
 
   margin-bottom: 9px;
 }
 
-.analysis-card p {
+.storage-card p {
   color: var(--muted);
 
-  font-size: 12px;
+  font-size: 13px;
 
   line-height: 1.75;
 }
 
 
 /* =========================================
-   COA GUIDE
+   TERMINOLOGY
 ========================================= */
 
-.coa-guide-grid {
+.term-grid {
   display: grid;
 
   grid-template-columns:
-    .9fr 1.1fr;
+    repeat(2,1fr);
 
-  gap: 45px;
-
-  align-items: start;
+  gap: 12px;
 }
 
-.coa-copy p {
-  color: var(--muted);
-
-  font-size: 14px;
-
-  line-height: 1.85;
-
-  margin-bottom: 15px;
-}
-
-.coa-list {
-  display: grid;
-
-  gap: 10px;
-}
-
-.coa-item {
-  padding: 16px 18px;
+.term {
+  padding: 20px;
 
   border:
-    1px solid
-    var(--border);
+    1px solid var(--border);
 
   border-radius: 10px;
 
   background: #0d1012;
 }
 
-.coa-item strong {
+.term strong {
+  display: block;
+
   color: var(--gold2);
 
-  font-size: 13px;
+  margin-bottom: 5px;
 }
 
-.coa-item span {
+.term span {
   color: var(--muted);
 
   font-size: 12px;
@@ -786,252 +1019,54 @@ input {
 
 
 /* =========================================
-   STORAGE
+   RESEARCH LINKS
 ========================================= */
 
-.storage-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      2,
-      minmax(0,1fr)
-    );
-
-  gap: 14px;
-}
-
-.storage-card {
-  padding: 20px;
-
-  border:
-    1px solid
-    var(--border);
-
-  border-radius: 12px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #101315,
-      #090b0c
-    );
-}
-
-.storage-card strong {
-  display: block;
-
-  color: var(--gold2);
-
-  font-size: 13px;
-
-  margin-bottom: 7px;
-}
-
-.storage-card p {
-  color: var(--muted);
-
-  font-size: 12px;
-
-  line-height: 1.75;
-}
-
-
-/* =========================================
-   COMPOUND RESEARCH
-========================================= */
-
-.compound-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      3,
-      minmax(0,1fr)
-    );
-
-  gap: 14px;
-}
-
-.compound-card {
-  min-height: 220px;
-
-  padding: 22px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  border:
-    1px solid
-    var(--border);
-
-  border-radius: 13px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c
-    );
-}
-
-.compound-card h3 {
-  font-size: 19px;
-
-  margin-bottom: 10px;
-}
-
-.compound-card p {
-  color: var(--muted);
-
-  font-size: 12px;
-
-  line-height: 1.75;
-}
-
-.compound-status {
-  margin-top: auto;
-
-  padding-top: 20px;
-
-  color: var(--gold);
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: 1.2px;
-}
-
-
-/* =========================================
-   REFERENCE PRINCIPLES
-========================================= */
-
-.reference-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      3,
-      minmax(0,1fr)
-    );
-
-  gap: 14px;
-}
-
-.reference-card {
-  padding: 22px;
-
-  border:
-    1px solid
-    var(--border);
-
-  border-radius: 13px;
-
-  background: #0d1012;
-}
-
-.reference-card strong {
-  display: block;
-
-  color: var(--gold2);
-
-  font-size: 14px;
-
-  margin-bottom: 8px;
-}
-
-.reference-card p {
-  color: var(--muted);
-
-  font-size: 12px;
-
-  line-height: 1.75;
-}
-
-
-/* =========================================
-   NOTICE
-========================================= */
-
-.notice-section {
-  padding:
-    60px 0;
-
-  border-top:
-    1px solid
-    var(--border);
-}
-
-.notice {
-  padding: 25px;
+.resource-box {
+  padding: 35px;
 
   border:
     1px solid
     rgba(213,173,85,.25);
 
-  border-radius: 14px;
+  border-radius: 16px;
 
   background:
-    rgba(213,173,85,.03);
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(213,173,85,.08),
+      transparent 35%
+    ),
+    #0d1012;
 }
 
-.notice strong {
-  display: block;
+.resource-box h2 {
+  font-size:
+    clamp(
+      30px,
+      4vw,
+      45px
+    );
 
-  color: var(--gold2);
-
-  font-size: 13px;
-
-  letter-spacing: 1px;
-
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
-.notice p {
+.resource-box p {
+  max-width: 760px;
+
   color: var(--muted);
-
-  font-size: 12px;
 
   line-height: 1.8;
+
+  margin-bottom: 25px;
 }
 
+.resource-actions {
+  display: flex;
 
-/* =========================================
-   NO RESULTS
-========================================= */
+  flex-wrap: wrap;
 
-.no-results {
-  display: none;
-
-  grid-column:
-    1 / -1;
-
-  padding: 45px 25px;
-
-  text-align: center;
-
-  border:
-    1px solid
-    var(--border);
-
-  border-radius: 14px;
-
-  background: #0d1012;
-
-  color: var(--muted);
-}
-
-.no-results strong {
-  display: block;
-
-  color: var(--gold2);
-
-  font-size: 19px;
-
-  margin-bottom: 5px;
+  gap: 10px;
 }
 
 
@@ -1040,20 +1075,19 @@ input {
 ========================================= */
 
 footer {
-  padding: 40px 0;
+  padding:
+    40px 0;
 
   background: #030404;
 
   border-top:
-    1px solid
-    var(--border);
+    1px solid var(--border);
 }
 
 .footer-grid {
   display: flex;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
   gap: 30px;
 
@@ -1075,8 +1109,7 @@ footer {
    MOBILE
 ========================================= */
 
-@media
-(max-width: 900px) {
+@media(max-width:900px) {
 
   .shell {
     width:
@@ -1103,14 +1136,17 @@ footer {
     font-size: 7px;
   }
 
-  .nav-links
-  a:not(.contact-link) {
+  .nav-links {
     display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
   }
 
   .page-hero {
     padding:
-      70px 0 50px;
+      70px 0 55px;
   }
 
   .page-hero h1 {
@@ -1121,107 +1157,86 @@ footer {
     font-size: 15px;
   }
 
-  .library-head {
-    display: block;
+  .section-head,
+  .coa-layout {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
   }
 
-  .library-head p {
-    margin-top: 14px;
+  .info-grid,
+  .storage-grid {
+    grid-template-columns: 1fr;
   }
 
-  .topic-grid {
-    grid-template-columns:
-      1fr 1fr;
+  .material-grid,
+  .term-grid {
+    grid-template-columns: 1fr;
   }
 
-  .analysis-grid {
-    grid-template-columns:
-      1fr 1fr;
+  .research-section {
+    padding:
+      65px 0;
   }
 
-  .coa-guide-grid {
-    grid-template-columns:
-      1fr;
-
-    gap: 28px;
-  }
-
-  .compound-grid {
-    grid-template-columns:
-      1fr 1fr;
-  }
-
-  .reference-grid {
-    grid-template-columns:
-      1fr 1fr;
+  .document-card {
+    transform: none;
   }
 
   .footer-grid {
-    flex-direction:
-      column;
+    flex-direction: column;
   }
 
 }
 
 
-/* =========================================
-   SMALL PHONES
-========================================= */
+@media(max-width:480px) {
 
-@media
-(max-width: 520px) {
+  .brand {
+    gap: 8px;
+  }
+
+  .brand img {
+    width: 41px;
+    height: 41px;
+  }
 
   .brand-title {
-    font-size: 10px;
+    font-size: 9px;
+
+    letter-spacing: .6px;
   }
 
   .brand-sub {
-    font-size: 6px;
+    font-size: 5.8px;
+
+    letter-spacing: 1.2px;
   }
 
   .page-hero h1 {
     font-size: 39px;
   }
 
-  .hero-meta {
+  .info-card,
+  .material-card,
+  .storage-card {
+    padding: 22px;
+  }
+
+  .resource-box {
+    padding: 25px;
+  }
+
+  .resource-actions {
     display: grid;
-
-    grid-template-columns:
-      1fr;
   }
 
-  .hero-meta span {
-    text-align: center;
+  .resource-actions .btn {
+    width: 100%;
   }
 
-  .search-box {
-    padding:
-      0 14px;
-  }
-
-  .search-box input {
-    min-height: 55px;
-
-    font-size: 15px;
-  }
-
-  .topic-grid,
-  .definition-grid,
-  .analysis-grid,
-  .storage-grid,
-  .compound-grid,
-  .reference-grid {
-    grid-template-columns:
-      1fr;
-  }
-
-  .topic-card {
-    min-height: 245px;
-  }
-
-  .section {
-    padding:
-      60px 0;
+  .doc-data {
+    grid-template-columns: 1fr;
   }
 
 }
@@ -1269,10 +1284,17 @@ LONGEVITY AT THE CELLULAR LEVEL
 </a>
 
 
+
+<!-- DESKTOP NAV -->
+
 <nav class="nav-links">
 
 <a href="index.html">
 Home
+</a>
+
+<a href="research-information.html">
+Research
 </a>
 
 <a href="catalog.html">
@@ -1287,9 +1309,13 @@ Quality & COA
 Policies
 </a>
 
+<a href="faq.html">
+FAQ
+</a>
+
 <a
   href="contact.html"
-  class="btn contact-link"
+  class="btn"
 >
 Contact
 </a>
@@ -1297,7 +1323,72 @@ Contact
 </nav>
 
 
+
+<!-- MOBILE MENU BUTTON -->
+
+<button
+  class="mobile-menu-button"
+  id="mobileMenuButton"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+>
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+
 </div>
+
+
+
+<!-- MOBILE MENU -->
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+<div class="shell mobile-menu-inner">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research Information
+</a>
+
+<a href="catalog.html">
+Research Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a
+  href="contact.html"
+  class="mobile-contact-button"
+>
+Contact PCH Labs
+</a>
+
+</div>
+
+</div>
+
 
 </header>
 
@@ -1324,7 +1415,7 @@ Contact
 
 
 <div class="eyebrow">
-SCIENTIFIC REFERENCE LIBRARY
+SCIENTIFIC · ANALYTICAL · EDUCATIONAL
 </div>
 
 
@@ -1334,18 +1425,21 @@ Research information.
 
 
 <p>
-A structured scientific-reference library covering
-laboratory terminology, analytical testing concepts,
-Certificate of Analysis interpretation, research-material
-classification, documentation principles, and general
-laboratory handling concepts.
+A centralized resource for understanding research
+materials, analytical documentation, laboratory
+terminology, storage principles, and scientific
+research references.
 </p>
 
 
 <div class="hero-meta">
 
 <span>
-SCIENTIFIC REFERENCE
+RESEARCH USE ONLY
+</span>
+
+<span>
+NO CLINICAL GUIDANCE
 </span>
 
 <span>
@@ -1353,1144 +1447,8 @@ ANALYTICAL INFORMATION
 </span>
 
 <span>
-DOCUMENTATION EDUCATION
+SCIENTIFIC REFERENCES
 </span>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     LIBRARY SEARCH
-========================================= -->
-
-<section class="library">
-
-<div class="shell">
-
-
-<div class="library-head">
-
-
-<div>
-
-<div class="eyebrow">
-RESEARCH LIBRARY
-</div>
-
-<h2>
-Browse scientific topics.
-</h2>
-
-</div>
-
-
-<p>
-Use the search field to quickly find terminology,
-analytical concepts, COA information, laboratory
-storage principles, or research-reference topics.
-</p>
-
-
-</div>
-
-
-
-<div class="search-box">
-
-<span class="search-icon">
-⌕
-</span>
-
-<input
-  id="researchSearch"
-  type="search"
-  autocomplete="off"
-  placeholder="Search research topics..."
->
-
-</div>
-
-
-<div
-  class="search-status"
-  id="searchStatus"
->
-</div>
-
-
-
-<div
-  class="topic-grid"
-  id="topicGrid"
->
-
-
-<!-- TOPIC 1 -->
-
-<a
-  href="#terminology"
-  class="topic-card searchable-topic"
-  data-search="
-    terminology
-    definitions
-    identity
-    purity
-    concentration
-    batch
-    lot
-    sample
-    reference standard
-  "
->
-
-<div class="topic-number">
-01
-</div>
-
-<div class="topic-label">
-FOUNDATIONS
-</div>
-
-<h3>
-Research Terminology
-</h3>
-
-<p>
-Review common laboratory terms used in
-analytical reports and scientific documentation.
-</p>
-
-<div class="topic-link">
-OPEN DEFINITIONS →
-</div>
-
-</a>
-
-
-
-<!-- TOPIC 2 -->
-
-<a
-  href="#analytical"
-  class="topic-card searchable-topic"
-  data-search="
-    analytical testing
-    hplc
-    lc ms
-    mass spectrometry
-    purity
-    identity
-    chromatographic
-    assay
-  "
->
-
-<div class="topic-number">
-02
-</div>
-
-<div class="topic-label">
-ANALYTICAL SCIENCE
-</div>
-
-<h3>
-Analytical Testing
-</h3>
-
-<p>
-Understand why different laboratory methods
-answer different scientific questions.
-</p>
-
-<div class="topic-link">
-EXPLORE TESTING →
-</div>
-
-</a>
-
-
-
-<!-- TOPIC 3 -->
-
-<a
-  href="#coa-guide"
-  class="topic-card searchable-topic"
-  data-search="
-    coa
-    certificate of analysis
-    batch
-    laboratory
-    purity
-    quantity
-    report
-    documentation
-  "
->
-
-<div class="topic-number">
-03
-</div>
-
-<div class="topic-label">
-DOCUMENTATION
-</div>
-
-<h3>
-Understanding a COA
-</h3>
-
-<p>
-Learn how to read common fields found on
-Certificates of Analysis and laboratory reports.
-</p>
-
-<div class="topic-link">
-READ COA GUIDE →
-</div>
-
-</a>
-
-
-
-<!-- TOPIC 4 -->
-
-<a
-  href="#storage"
-  class="topic-card searchable-topic"
-  data-search="
-    storage
-    handling
-    temperature
-    moisture
-    light
-    labeling
-    laboratory
-    traceability
-  "
->
-
-<div class="topic-number">
-04
-</div>
-
-<div class="topic-label">
-LAB PRACTICE
-</div>
-
-<h3>
-Storage & Handling Concepts
-</h3>
-
-<p>
-General laboratory principles involving
-environmental control, labeling, and traceability.
-</p>
-
-<div class="topic-link">
-VIEW LAB PRINCIPLES →
-</div>
-
-</a>
-
-
-
-<!-- TOPIC 5 -->
-
-<a
-  href="#compound-research"
-  class="topic-card searchable-topic"
-  data-search="
-    compound
-    research
-    peptide
-    materials
-    molecular
-    classification
-    literature
-  "
->
-
-<div class="topic-number">
-05
-</div>
-
-<div class="topic-label">
-COMPOUND REFERENCE
-</div>
-
-<h3>
-Compound Research Pages
-</h3>
-
-<p>
-A framework for future compound-specific
-scientific literature and reference pages.
-</p>
-
-<div class="topic-link">
-VIEW RESEARCH AREAS →
-</div>
-
-</a>
-
-
-
-<!-- TOPIC 6 -->
-
-<a
-  href="#references"
-  class="topic-card searchable-topic"
-  data-search="
-    published research
-    primary literature
-    peer reviewed
-    papers
-    references
-    scientific sources
-  "
->
-
-<div class="topic-number">
-06
-</div>
-
-<div class="topic-label">
-LITERATURE
-</div>
-
-<h3>
-Scientific References
-</h3>
-
-<p>
-Organize primary literature and scientific
-references around research topics and compounds.
-</p>
-
-<div class="topic-link">
-REFERENCE PRINCIPLES →
-</div>
-
-</a>
-
-
-
-<div
-  class="no-results"
-  id="noResults"
->
-
-<strong>
-No research topic found
-</strong>
-
-Try another scientific term
-or keyword.
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     TERMINOLOGY
-========================================= -->
-
-<section
-  class="section alt"
-  id="terminology"
->
-
-<div class="shell">
-
-
-<div class="section-head">
-
-<div class="eyebrow">
-RESEARCH FOUNDATIONS
-</div>
-
-<h2>
-Core laboratory terminology.
-</h2>
-
-<p>
-Understanding analytical language helps distinguish
-between the identity of a material, reported purity,
-quantity, batch information, and the specific sample
-that was actually tested.
-</p>
-
-</div>
-
-
-
-<div class="definition-grid">
-
-
-<div class="definition-card">
-
-<strong>
-Identity
-</strong>
-
-<p>
-Whether analytical evidence is consistent with the
-stated chemical or molecular identity of the sample.
-</p>
-
-</div>
-
-
-<div class="definition-card">
-
-<strong>
-Purity
-</strong>
-
-<p>
-A laboratory-reported measurement describing the
-relative proportion of a detected target component
-under the stated analytical method.
-</p>
-
-</div>
-
-
-<div class="definition-card">
-
-<strong>
-Quantity / Content
-</strong>
-
-<p>
-The amount of material reported by the analytical
-laboratory for the tested sample under its stated method.
-</p>
-
-</div>
-
-
-<div class="definition-card">
-
-<strong>
-Lot / Batch
-</strong>
-
-<p>
-An identifier used to connect a production or
-research batch with documentation and testing records.
-</p>
-
-</div>
-
-
-<div class="definition-card">
-
-<strong>
-Sample Identifier
-</strong>
-
-<p>
-A laboratory or submitter-assigned identifier used
-to distinguish one tested sample from another.
-</p>
-
-</div>
-
-
-<div class="definition-card">
-
-<strong>
-Reference Standard
-</strong>
-
-<p>
-A characterized material used by a laboratory as
-a comparison point during certain analytical procedures.
-</p>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     ANALYTICAL TESTING
-========================================= -->
-
-<section
-  class="section"
-  id="analytical"
->
-
-<div class="shell">
-
-
-<div class="section-head">
-
-<div class="eyebrow">
-ANALYTICAL SCIENCE
-</div>
-
-<h2>
-Different tests answer different questions.
-</h2>
-
-<p>
-A single analytical result does not necessarily
-describe every property of a research sample.
-Understanding the purpose of each method helps
-put laboratory results into the correct context.
-</p>
-
-</div>
-
-
-
-<div class="analysis-grid">
-
-
-<div class="analysis-card">
-
-<div class="analysis-code">
-IDENTITY
-</div>
-
-<h3>
-Identity Analysis
-</h3>
-
-<p>
-Used to evaluate whether analytical evidence
-is consistent with the stated target material.
-</p>
-
-</div>
-
-
-<div class="analysis-card">
-
-<div class="analysis-code">
-PURITY
-</div>
-
-<h3>
-Chromatographic Purity
-</h3>
-
-<p>
-Evaluates detected components under a stated
-chromatographic method and reporting system.
-</p>
-
-</div>
-
-
-<div class="analysis-card">
-
-<div class="analysis-code">
-QUANTITY
-</div>
-
-<h3>
-Content Analysis
-</h3>
-
-<p>
-Used to report the measured amount of material
-within the tested analytical sample.
-</p>
-
-</div>
-
-
-<div class="analysis-card">
-
-<div class="analysis-code">
-MICROBIOLOGY
-</div>
-
-<h3>
-Sterility / Endotoxin
-</h3>
-
-<p>
-Separate analytical or microbiological assessments
-that address questions different from identity or purity.
-</p>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     COA GUIDE
-========================================= -->
-
-<section
-  class="section alt"
-  id="coa-guide"
->
-
-<div class="shell">
-
-
-<div class="section-head">
-
-<div class="eyebrow">
-DOCUMENTATION
-</div>
-
-<h2>
-How to read a Certificate of Analysis.
-</h2>
-
-</div>
-
-
-
-<div class="coa-guide-grid">
-
-
-<div class="coa-copy">
-
-<p>
-A Certificate of Analysis is best understood as a
-report connected to a specific submitted sample,
-lot, batch, or laboratory identifier.
-</p>
-
-<p>
-Results should be interpreted together with the
-test method, report date, sample identity, and
-any laboratory notes or limitations included
-on the original document.
-</p>
-
-<a
-  href="quality-coa.html"
-  class="btn btn-gold"
->
-VIEW PCH COA LIBRARY
-</a>
-
-</div>
-
-
-
-<div class="coa-list">
-
-
-<div class="coa-item">
-
-<strong>
-Sample / Product Name
-</strong>
-
-<span>
-Identifies the material described in the report.
-</span>
-
-</div>
-
-
-<div class="coa-item">
-
-<strong>
-Batch or Lot Number
-</strong>
-
-<span>
-Connects the report to the batch or lot
-identified by the submitter or laboratory.
-</span>
-
-</div>
-
-
-<div class="coa-item">
-
-<strong>
-Laboratory / Task ID
-</strong>
-
-<span>
-Provides a report or sample reference that can
-help distinguish one analytical submission from another.
-</span>
-
-</div>
-
-
-<div class="coa-item">
-
-<strong>
-Reported Result
-</strong>
-
-<span>
-May include purity, quantity, identity,
-sterility, endotoxin, or other measurements.
-</span>
-
-</div>
-
-
-<div class="coa-item">
-
-<strong>
-Analysis / Report Date
-</strong>
-
-<span>
-Shows when testing or reporting occurred,
-depending on the laboratory's documentation format.
-</span>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     STORAGE
-========================================= -->
-
-<section
-  class="section"
-  id="storage"
->
-
-<div class="shell">
-
-
-<div class="section-head">
-
-<div class="eyebrow">
-LABORATORY PRACTICE
-</div>
-
-<h2>
-General storage and handling principles.
-</h2>
-
-<p>
-Specific storage requirements depend on the material
-and its applicable documentation. These are general
-laboratory concepts rather than product-specific instructions.
-</p>
-
-</div>
-
-
-
-<div class="storage-grid">
-
-
-<div class="storage-card">
-
-<strong>
-Temperature Control
-</strong>
-
-<p>
-Maintain environmental conditions appropriate to the
-specific material and the storage documentation that applies to it.
-</p>
-
-</div>
-
-
-<div class="storage-card">
-
-<strong>
-Light Exposure
-</strong>
-
-<p>
-Some laboratory materials may require protection
-from direct or prolonged light exposure.
-</p>
-
-</div>
-
-
-<div class="storage-card">
-
-<strong>
-Moisture Control
-</strong>
-
-<p>
-Control moisture exposure when required by
-the material's documented storage conditions.
-</p>
-
-</div>
-
-
-<div class="storage-card">
-
-<strong>
-Clear Labeling
-</strong>
-
-<p>
-Preserve sample identity, amount, lot or batch
-information, and relevant dates where applicable.
-</p>
-
-</div>
-
-
-<div class="storage-card">
-
-<strong>
-Traceability
-</strong>
-
-<p>
-Keep analytical reports and related records
-connected to the specific material they reference.
-</p>
-
-</div>
-
-
-<div class="storage-card">
-
-<strong>
-Original Documentation
-</strong>
-
-<p>
-When available, retain the original analytical
-report rather than relying only on summarized results.
-</p>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     COMPOUND RESEARCH
-========================================= -->
-
-<section
-  class="section alt"
-  id="compound-research"
->
-
-<div class="shell">
-
-
-<div class="section-head">
-
-<div class="eyebrow">
-COMPOUND RESEARCH
-</div>
-
-<h2>
-Compound-specific research library.
-</h2>
-
-<p>
-This area is structured so individual research
-materials can eventually have dedicated pages
-with scientific terminology, molecular information,
-published literature, and corresponding COA links.
-</p>
-
-</div>
-
-
-
-<div class="compound-grid">
-
-
-<div class="compound-card">
-
-<h3>
-R-Series Research
-</h3>
-
-<p>
-Future scientific-reference material for
-R-series research compounds.
-</p>
-
-<div class="compound-status">
-REFERENCE PAGE COMING LATER
-</div>
-
-</div>
-
-
-<div class="compound-card">
-
-<h3>
-T-Series Research
-</h3>
-
-<p>
-Future scientific-reference material for
-T-series research compounds.
-</p>
-
-<div class="compound-status">
-REFERENCE PAGE COMING LATER
-</div>
-
-</div>
-
-
-<div class="compound-card">
-
-<h3>
-GHK-Cu
-</h3>
-
-<p>
-Future reference area for GHK-Cu scientific
-literature and analytical documentation.
-</p>
-
-<div class="compound-status">
-REFERENCE PAGE COMING LATER
-</div>
-
-</div>
-
-
-<div class="compound-card">
-
-<h3>
-MOTS-C
-</h3>
-
-<p>
-Future reference area for MOTS-C scientific
-literature and analytical documentation.
-</p>
-
-<div class="compound-status">
-REFERENCE PAGE COMING LATER
-</div>
-
-</div>
-
-
-<div class="compound-card">
-
-<h3>
-Cartalax
-</h3>
-
-<p>
-Future reference area for Cartalax scientific
-literature and analytical documentation.
-</p>
-
-<div class="compound-status">
-REFERENCE PAGE COMING LATER
-</div>
-
-</div>
-
-
-<div class="compound-card">
-
-<h3>
-Additional Materials
-</h3>
-
-<p>
-More compound-specific pages can be added as
-the PCH research library expands.
-</p>
-
-<div class="compound-status">
-LIBRARY EXPANDING
-</div>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     REFERENCES
-========================================= -->
-
-<section
-  class="section"
-  id="references"
->
-
-<div class="shell">
-
-
-<div class="section-head">
-
-<div class="eyebrow">
-SCIENTIFIC LITERATURE
-</div>
-
-<h2>
-Reference quality matters.
-</h2>
-
-<p>
-As the research library expands, scientific
-references should be organized with an emphasis
-on source quality and clear separation between
-original research and secondary interpretation.
-</p>
-
-</div>
-
-
-
-<div class="reference-grid">
-
-
-<div class="reference-card">
-
-<strong>
-Primary Literature
-</strong>
-
-<p>
-Original research papers provide direct access
-to study methods, results, limitations, and conclusions.
-</p>
-
-</div>
-
-
-<div class="reference-card">
-
-<strong>
-Peer-Reviewed Sources
-</strong>
-
-<p>
-Peer-reviewed scientific publications can help
-provide context for laboratory and molecular research.
-</p>
-
-</div>
-
-
-<div class="reference-card">
-
-<strong>
-Methodology Matters
-</strong>
-
-<p>
-Study design, analytical methods, sample size,
-and experimental conditions affect interpretation.
-</p>
-
-</div>
-
-
-<div class="reference-card">
-
-<strong>
-Separate Evidence from Claims
-</strong>
-
-<p>
-Scientific findings should be distinguished from
-marketing language, speculation, and unsupported conclusions.
-</p>
-
-</div>
-
-
-<div class="reference-card">
-
-<strong>
-Date & Version Awareness
-</strong>
-
-<p>
-Scientific understanding can change as newer
-research and analytical methods become available.
-</p>
-
-</div>
-
-
-<div class="reference-card">
-
-<strong>
-Original Documents
-</strong>
-
-<p>
-Whenever practical, link directly to original
-research papers and laboratory documentation.
-</p>
-
-</div>
-
 
 </div>
 
@@ -2509,20 +1467,779 @@ research papers and laboratory documentation.
 
 <div class="shell">
 
-
 <div class="notice">
 
 <strong>
-RESEARCH & EDUCATIONAL INFORMATION ONLY
+IMPORTANT RESEARCH NOTICE
 </strong>
 
 <p>
-Information presented in this research library is intended
-for scientific, analytical, laboratory, and educational
-reference. It does not provide medical, veterinary,
-diagnostic, prescribing, treatment, dosing, administration,
-or other clinical-use guidance.
+Information on this page is provided for laboratory,
+analytical, scientific, and educational purposes only.
+It is not medical or veterinary advice and does not
+provide instructions for human or animal administration,
+dosing, treatment, diagnosis, or disease prevention.
 </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     RESEARCH BASICS
+========================================= -->
+
+<section class="research-section">
+
+<div class="shell">
+
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+RESEARCH FUNDAMENTALS
+</div>
+
+<h2>
+Understanding the research environment.
+</h2>
+
+</div>
+
+
+<p>
+Scientific research depends on clear material
+identification, documentation, controlled conditions,
+analytical testing, and reproducible methodology.
+These concepts help researchers evaluate materials
+and interpret laboratory information responsibly.
+</p>
+
+</div>
+
+
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<div class="card-number">
+01
+</div>
+
+<div class="card-label">
+IDENTIFICATION
+</div>
+
+<h3>
+Compound Identity
+</h3>
+
+<p>
+Research materials should be identified by their
+stated compound name, amount, lot or batch information,
+and any associated analytical documentation.
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<div class="card-number">
+02
+</div>
+
+<div class="card-label">
+ANALYTICAL DATA
+</div>
+
+<h3>
+Laboratory Testing
+</h3>
+
+<p>
+Analytical testing may evaluate characteristics such
+as identity, purity, quantity, concentration,
+or other properties depending on the test method
+and laboratory report.
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<div class="card-number">
+03
+</div>
+
+<div class="card-label">
+TRACEABILITY
+</div>
+
+<h3>
+Lot & Batch Records
+</h3>
+
+<p>
+Lot or batch identifiers help connect a research
+sample with its corresponding documentation and
+allow records to be organized more accurately.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     RESEARCH MATERIAL CATEGORIES
+========================================= -->
+
+<section class="research-section alt">
+
+<div class="shell">
+
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+RESEARCH MATERIALS
+</div>
+
+<h2>
+Categories represented in the catalog.
+</h2>
+
+</div>
+
+
+<p>
+The PCH catalog may include several categories
+of laboratory research materials. Classification
+on this website is for organizational purposes
+and does not imply approval for clinical,
+therapeutic, or veterinary use.
+</p>
+
+</div>
+
+
+
+<div class="material-grid">
+
+
+<div class="material-card">
+
+<div class="category">
+PEPTIDE RESEARCH
+</div>
+
+<h3>
+Peptide Materials
+</h3>
+
+<p>
+Peptides are short chains of amino acids studied
+across many areas of biochemical and molecular
+research. Individual compounds can differ greatly
+in structure, stability, and research application.
+</p>
+
+<div class="material-tags">
+
+<span>PEPTIDE</span>
+<span>SEQUENCE</span>
+<span>ANALYTICAL</span>
+
+</div>
+
+</div>
+
+
+
+<div class="material-card">
+
+<div class="category">
+BIOREGULATORY RESEARCH
+</div>
+
+<h3>
+Bioregulator Materials
+</h3>
+
+<p>
+Certain research materials are investigated in
+laboratory settings for their biochemical interactions
+and regulatory mechanisms. Published evidence varies
+substantially between compounds.
+</p>
+
+<div class="material-tags">
+
+<span>RESEARCH</span>
+<span>BIOCHEMISTRY</span>
+<span>REFERENCE</span>
+
+</div>
+
+</div>
+
+
+
+<div class="material-card">
+
+<div class="category">
+METABOLIC RESEARCH
+</div>
+
+<h3>
+Metabolic Research Materials
+</h3>
+
+<p>
+Some compounds are studied experimentally in areas
+related to metabolic pathways, cellular signaling,
+energy regulation, and biochemical mechanisms.
+</p>
+
+<div class="material-tags">
+
+<span>METABOLIC</span>
+<span>CELLULAR</span>
+<span>PATHWAY</span>
+
+</div>
+
+</div>
+
+
+
+<div class="material-card">
+
+<div class="category">
+LABORATORY SUPPLIES
+</div>
+
+<h3>
+Research Supplies
+</h3>
+
+<p>
+Laboratory-support materials are listed separately
+from research compounds so researchers can distinguish
+between experimental materials and general lab supplies.
+</p>
+
+<div class="material-tags">
+
+<span>LAB</span>
+<span>SUPPLY</span>
+<span>RESEARCH</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     COA EDUCATION
+========================================= -->
+
+<section class="research-section">
+
+<div class="shell coa-layout">
+
+
+<div class="coa-copy">
+
+
+<div class="eyebrow">
+CERTIFICATE OF ANALYSIS
+</div>
+
+
+<h2>
+How to read a COA.
+</h2>
+
+
+<p>
+A Certificate of Analysis is a laboratory document
+reporting information about the sample that was tested.
+The exact information provided depends on the laboratory,
+sample, and analytical methods used.
+</p>
+
+
+<div class="coa-list">
+
+<div>
+<strong>01</strong>
+<span>Compound / Sample Identity</span>
+</div>
+
+<div>
+<strong>02</strong>
+<span>Lot or Batch Reference</span>
+</div>
+
+<div>
+<strong>03</strong>
+<span>Laboratory / Report ID</span>
+</div>
+
+<div>
+<strong>04</strong>
+<span>Reported Test Result</span>
+</div>
+
+<div>
+<strong>05</strong>
+<span>Analysis or Report Date</span>
+</div>
+
+</div>
+
+
+<a
+  href="quality-coa.html"
+  class="btn btn-gold"
+>
+VIEW PCH COA LIBRARY
+</a>
+
+
+</div>
+
+
+
+<div class="document-card">
+
+
+<div class="document-head">
+
+<strong>
+COA
+</strong>
+
+<span>
+CERTIFICATE OF ANALYSIS
+</span>
+
+</div>
+
+
+<div class="doc-line wide"></div>
+
+<div class="doc-line"></div>
+
+<div class="doc-line short"></div>
+
+
+<div class="doc-data">
+
+<div>
+SAMPLE ID
+</div>
+
+<div>
+LOT / BATCH
+</div>
+
+<div>
+ANALYSIS
+</div>
+
+<div>
+RESULT
+</div>
+
+</div>
+
+
+<div class="document-foot">
+LABORATORY · SAMPLE · METHOD · RESULT · DATE
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     STORAGE
+========================================= -->
+
+<section class="research-section alt">
+
+<div class="shell">
+
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+LABORATORY HANDLING
+</div>
+
+<h2>
+Storage & handling principles.
+</h2>
+
+</div>
+
+
+<p>
+Storage requirements vary by compound and formulation.
+Researchers should rely on applicable manufacturer,
+laboratory, or validated protocol information for the
+specific material being studied.
+</p>
+
+</div>
+
+
+
+<div class="storage-grid">
+
+
+<div class="storage-card">
+
+<div class="storage-icon">
+◈
+</div>
+
+<h3>
+Temperature</h3>
+
+<p>
+Temperature can influence material stability.
+Researchers should follow documented storage
+conditions applicable to the specific research material.
+</p>
+
+</div>
+
+
+
+<div class="storage-card">
+
+<div class="storage-icon">
+◇
+</div>
+
+<h3>
+Light Exposure</h3>
+
+<p>
+Some laboratory materials can be sensitive to
+light. Appropriate containers and controlled
+storage conditions may be required depending
+on the material.
+</p>
+
+</div>
+
+
+
+<div class="storage-card">
+
+<div class="storage-icon">
+⬡
+</div>
+
+<h3>
+Documentation</h3>
+
+<p>
+Labeling materials with identifying information
+such as compound name, lot or batch, and relevant
+dates can support accurate laboratory recordkeeping.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     TERMINOLOGY
+========================================= -->
+
+<section class="research-section">
+
+<div class="shell">
+
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+LAB TERMINOLOGY
+</div>
+
+<h2>
+Common research terms.
+</h2>
+
+</div>
+
+
+<p>
+These terms appear frequently in analytical
+documentation and research catalogs.
+Understanding them makes laboratory reports
+easier to review.
+</p>
+
+</div>
+
+
+
+<div class="term-grid">
+
+
+<div class="term">
+
+<strong>
+COA
+</strong>
+
+<span>
+Certificate of Analysis — a report containing
+analytical information about a tested sample.
+</span>
+
+</div>
+
+
+
+<div class="term">
+
+<strong>
+Lot / Batch
+</strong>
+
+<span>
+An identifier used to distinguish a particular
+production or research-material group.
+</span>
+
+</div>
+
+
+
+<div class="term">
+
+<strong>
+Purity
+</strong>
+
+<span>
+A reported analytical measurement describing the
+proportion of the target substance relative to
+detected material under the stated test method.
+</span>
+
+</div>
+
+
+
+<div class="term">
+
+<strong>
+Content / Quantity
+</strong>
+
+<span>
+The amount of material reported by the laboratory
+using the analytical method described in the report.
+</span>
+
+</div>
+
+
+
+<div class="term">
+
+<strong>
+HPLC
+</strong>
+
+<span>
+High-performance liquid chromatography,
+an analytical technique commonly used to
+separate and evaluate chemical components.
+</span>
+
+</div>
+
+
+
+<div class="term">
+
+<strong>
+Mass Spectrometry
+</strong>
+
+<span>
+An analytical technique used to evaluate molecules
+based on their mass-to-charge characteristics.
+</span>
+
+</div>
+
+
+
+<div class="term">
+
+<strong>
+Research Use Only
+</strong>
+
+<span>
+A designation indicating that a material is intended
+for laboratory or scientific research rather than
+clinical, diagnostic, or therapeutic use.
+</span>
+
+</div>
+
+
+
+<div class="term">
+
+<strong>
+Analytical Result
+</strong>
+
+<span>
+A result reported by a laboratory for the specific
+sample and testing procedure identified in the report.
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     RESOURCE AREA
+========================================= -->
+
+<section class="research-section alt">
+
+<div class="shell">
+
+
+<div class="resource-box">
+
+
+<div class="eyebrow">
+CONTINUE RESEARCHING
+</div>
+
+
+<h2>
+Explore PCH research resources.
+</h2>
+
+
+<p>
+Browse available research materials, review
+Certificates of Analysis, read site policies,
+or visit the FAQ for additional information
+about Platinum Cellular Health Labs.
+</p>
+
+
+<div class="resource-actions">
+
+
+<a
+  href="catalog.html"
+  class="btn btn-gold"
+>
+RESEARCH CATALOG
+</a>
+
+
+<a
+  href="quality-coa.html"
+  class="btn"
+>
+QUALITY & COA
+</a>
+
+
+<a
+  href="faq.html"
+  class="btn"
+>
+FAQ
+</a>
+
+
+<a
+  href="policies.html"
+  class="btn"
+>
+POLICIES
+</a>
+
+
+</div>
+
 
 </div>
 
@@ -2559,6 +2276,8 @@ Longevity at the Cellular Level
 
 
 <div>
+contact@platinumcellularhealth.com
+<br>
 21+ · Research Use Only ·
 Not for human or animal use
 </div>
@@ -2571,121 +2290,82 @@ Not for human or animal use
 
 
 <!-- =========================================
-     SEARCH JAVASCRIPT
+     JAVASCRIPT
 ========================================= -->
 
 <script>
 
-const researchSearch =
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const mobileMenuButton =
   document.getElementById(
-    "researchSearch"
+    "mobileMenuButton"
   );
 
-const topics =
-  Array.from(
-    document.querySelectorAll(
-      ".searchable-topic"
-    )
-  );
 
-const noResults =
+const mobileMenu =
   document.getElementById(
-    "noResults"
-  );
-
-const searchStatus =
-  document.getElementById(
-    "searchStatus"
+    "mobileMenu"
   );
 
 
-researchSearch.addEventListener(
-  "input",
+mobileMenuButton.addEventListener(
+  "click",
   function() {
 
-    const term =
-      researchSearch
-        .value
-        .toLowerCase()
-        .trim();
-
-    let visible =
-      0;
+    const isOpen =
+      mobileMenu.classList.toggle(
+        "open"
+      );
 
 
-    topics.forEach(
-      function(topic) {
-
-        const text =
-          (
-            topic.innerText
-            +
-            " "
-            +
-            topic.dataset.search
-          )
-          .toLowerCase();
-
-        const match =
-          text.includes(
-            term
-          );
-
-
-        if (match) {
-
-          topic.style.display =
-            "";
-
-          visible++;
-
-        }
-
-        else {
-
-          topic.style.display =
-            "none";
-
-        }
-
-      }
+    mobileMenuButton.classList.toggle(
+      "active",
+      isOpen
     );
 
 
-    if (term === "") {
+    mobileMenuButton.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
 
-      searchStatus.style.display =
-        "none";
+  }
+);
 
-    }
 
-    else {
+const mobileLinks =
+  mobileMenu.querySelectorAll(
+    "a"
+  );
 
-      searchStatus.style.display =
-        "block";
 
-      searchStatus.textContent =
-        visible
-        +
-        (
-          visible === 1
-          ?
-          " research topic found"
-          :
-          " research topics found"
+mobileLinks.forEach(
+  function(link) {
+
+    link.addEventListener(
+      "click",
+      function() {
+
+        mobileMenu.classList.remove(
+          "open"
         );
 
-    }
+
+        mobileMenuButton.classList.remove(
+          "active"
+        );
 
 
-    noResults.style.display =
-      visible === 0
-      &&
-      term !== ""
-      ?
-      "block"
-      :
-      "none";
+        mobileMenuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+    );
 
   }
 );
