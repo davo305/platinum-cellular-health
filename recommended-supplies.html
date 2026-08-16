@@ -71,6 +71,10 @@ input {
   font-family: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
 :root {
 
   --black: #050607;
@@ -124,7 +128,7 @@ input {
   align-items: center;
   justify-content: space-between;
 
-  gap: 25px;
+  gap: 20px;
 }
 
 .brand {
@@ -175,16 +179,25 @@ input {
   letter-spacing: 2px;
 }
 
+.nav-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
 .nav-links {
 
   display: flex;
   align-items: center;
 
-  gap: 17px;
+  gap: 15px;
 
   color: #b9bdc0;
 
-  font-size: 12px;
+  font-size: 11px;
 
   font-weight: 700;
 }
@@ -197,6 +210,192 @@ input {
 .nav-links a:hover {
 
   color: var(--gold2);
+}
+
+
+/* =========================================
+   MEMBER HEADER
+========================================= */
+
+.member-area {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.member-login {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 39px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.4);
+
+  border-radius: 9px;
+
+  background:
+    rgba(213,173,85,.035);
+
+  color: var(--gold2);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+}
+
+.member-login:hover {
+
+  border-color: var(--gold);
+}
+
+.member-signed-in {
+
+  display: none;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.member-signed-in.visible {
+
+  display: flex;
+}
+
+.member-pill {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding:
+    7px 10px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.28);
+
+  border-radius: 9px;
+
+  background:
+    rgba(213,173,85,.025);
+}
+
+.member-dot {
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+
+  box-shadow:
+    0 0 10px
+    rgba(213,173,85,.45);
+}
+
+.member-info {
+
+  line-height: 1.15;
+}
+
+.member-label {
+
+  color: #767d82;
+
+  font-size: 6px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.member-name {
+
+  max-width: 90px;
+
+  overflow: hidden;
+
+  color: var(--gold2);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.member-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 36px;
+
+  padding:
+    0 10px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 8px;
+
+  background: #0d1012;
+
+  color: #b9bdc0;
+
+  font-size: 7px;
+
+  font-weight: 900;
+}
+
+.member-link.gold {
+
+  border: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+}
+
+.member-signout {
+
+  border: 0;
+
+  background: transparent;
+
+  color: #747b80;
+
+  font-size: 7px;
+
+  font-weight: 900;
 }
 
 
@@ -286,10 +485,10 @@ span:nth-child(3) {
   display: grid;
 
   padding:
-    8px 0 18px;
+    10px 0 18px;
 }
 
-.mobile-menu-inner a {
+.mobile-menu-inner > a {
 
   padding:
     14px 3px;
@@ -302,6 +501,147 @@ span:nth-child(3) {
   font-size: 12px;
 
   font-weight: 900;
+}
+
+
+/* =========================================
+   MOBILE MEMBER BOX
+========================================= */
+
+.mobile-member-box {
+
+  margin-bottom: 12px;
+
+  padding: 16px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.25);
+
+  border-radius: 12px;
+
+  background:
+    rgba(213,173,85,.025);
+}
+
+.mobile-member-login {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 48px;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+.mobile-member-signed-in {
+
+  display: none;
+}
+
+.mobile-member-signed-in.visible {
+
+  display: block;
+}
+
+.mobile-status {
+
+  color: var(--gold);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.mobile-member-name {
+
+  margin-top: 3px;
+
+  font-size: 18px;
+
+  font-weight: 900;
+}
+
+.mobile-member-email {
+
+  margin-top: 2px;
+
+  color: #777e83;
+
+  font-size: 9px;
+
+  word-break: break-word;
+}
+
+.mobile-member-actions {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 8px;
+
+  margin-top: 12px;
+}
+
+.mobile-member-actions a,
+.mobile-member-actions button {
+
+  min-height: 43px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 8px;
+
+  background: #0d1012;
+
+  color: #c5c9cc;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+.mobile-member-actions .gold {
+
+  border: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
 }
 
 
@@ -905,8 +1245,17 @@ footer {
 
 
 /* =========================================
-   MOBILE
+   RESPONSIVE
 ========================================= */
+
+@media(max-width:1100px) {
+
+  .member-area {
+    display: none;
+  }
+
+}
+
 
 @media(max-width:950px) {
 
@@ -1091,6 +1440,9 @@ LONGEVITY AT THE CELLULAR LEVEL
 </a>
 
 
+<div class="nav-right">
+
+
 <nav class="nav-links">
 
 <a href="index.html">
@@ -1128,6 +1480,83 @@ Contact
 </nav>
 
 
+
+<!-- DESKTOP MEMBER AREA -->
+
+<div class="member-area">
+
+
+<a
+  href="login.html"
+  class="member-login"
+  id="desktopLoginLink"
+>
+🔐 MEMBER LOGIN
+</a>
+
+
+<div
+  class="member-signed-in"
+  id="desktopMemberArea"
+>
+
+
+<div class="member-pill">
+
+<span class="member-dot"></span>
+
+
+<div class="member-info">
+
+<div class="member-label">
+SIGNED IN
+</div>
+
+<div
+  class="member-name"
+  id="desktopMemberName"
+>
+MEMBER
+</div>
+
+</div>
+
+
+</div>
+
+
+<a
+  href="login.html"
+  class="member-link"
+>
+ACCOUNT
+</a>
+
+
+<a
+  href="login.html"
+  class="member-link gold"
+>
+CHECKOUT
+</a>
+
+
+<button
+  type="button"
+  class="member-signout"
+  id="desktopSignout"
+>
+SIGN OUT
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
 <button
   class="mobile-menu-button"
   id="mobileMenuButton"
@@ -1142,8 +1571,16 @@ Contact
 
 </button>
 
+
 </div>
 
+</div>
+
+
+
+<!-- =========================================
+     MOBILE MENU
+========================================= -->
 
 <div
   class="mobile-menu"
@@ -1151,6 +1588,84 @@ Contact
 >
 
 <div class="shell mobile-menu-inner">
+
+
+<div class="mobile-member-box">
+
+
+<a
+  href="login.html"
+  class="mobile-member-login"
+  id="mobileLoginLink"
+>
+🔐 MEMBER LOGIN / CREATE ACCOUNT
+</a>
+
+
+<div
+  class="mobile-member-signed-in"
+  id="mobileMemberArea"
+>
+
+
+<div class="mobile-status">
+● SIGNED IN
+</div>
+
+
+<div
+  class="mobile-member-name"
+  id="mobileMemberName"
+>
+PCH Member
+</div>
+
+
+<div
+  class="mobile-member-email"
+  id="mobileMemberEmail"
+>
+</div>
+
+
+<div class="mobile-member-actions">
+
+
+<a href="login.html">
+MY ACCOUNT
+</a>
+
+
+<a
+  href="login.html"
+  class="gold"
+>
+CHECKOUT
+</a>
+
+
+<button
+  type="button"
+  id="mobileSignout"
+>
+SIGN OUT
+</button>
+
+
+<a href="catalog.html">
+CATALOG
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
 
 <a href="index.html">
 Home
@@ -1183,6 +1698,7 @@ FAQ
 <a href="contact.html">
 Contact
 </a>
+
 
 </div>
 
@@ -2148,7 +2664,303 @@ Affiliate links may generate a commission.
 
 
 
+<!-- =========================================
+     SUPABASE
+========================================= -->
+
+<script
+  src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+
 <script>
+
+/* =========================================
+   SUPABASE CONFIG
+========================================= */
+
+const SUPABASE_URL =
+  "https://rmjvhbfazakcunfeomao.supabase.co";
+
+
+const SUPABASE_PUBLISHABLE_KEY =
+  "sb_publishable_m0snLFFTsLnUfENmvWsUuw_bjPkhMER";
+
+
+const supabaseClient =
+  window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY,
+    {
+
+      auth: {
+
+        persistSession:
+          true,
+
+        autoRefreshToken:
+          true,
+
+        detectSessionInUrl:
+          true,
+
+        storage:
+          window.localStorage,
+
+        storageKey:
+          "pch-member-auth"
+
+      }
+
+    }
+  );
+
+
+/* =========================================
+   MEMBER ELEMENTS
+========================================= */
+
+const desktopLoginLink =
+  document.getElementById(
+    "desktopLoginLink"
+  );
+
+
+const desktopMemberArea =
+  document.getElementById(
+    "desktopMemberArea"
+  );
+
+
+const desktopMemberName =
+  document.getElementById(
+    "desktopMemberName"
+  );
+
+
+const desktopSignout =
+  document.getElementById(
+    "desktopSignout"
+  );
+
+
+const mobileLoginLink =
+  document.getElementById(
+    "mobileLoginLink"
+  );
+
+
+const mobileMemberArea =
+  document.getElementById(
+    "mobileMemberArea"
+  );
+
+
+const mobileMemberName =
+  document.getElementById(
+    "mobileMemberName"
+  );
+
+
+const mobileMemberEmail =
+  document.getElementById(
+    "mobileMemberEmail"
+  );
+
+
+const mobileSignout =
+  document.getElementById(
+    "mobileSignout"
+  );
+
+
+/* =========================================
+   LOGGED OUT
+========================================= */
+
+function showLoggedOutMemberState() {
+
+  desktopLoginLink.style.display =
+    "inline-flex";
+
+
+  desktopMemberArea.classList.remove(
+    "visible"
+  );
+
+
+  mobileLoginLink.style.display =
+    "flex";
+
+
+  mobileMemberArea.classList.remove(
+    "visible"
+  );
+
+}
+
+
+/* =========================================
+   LOGGED IN
+========================================= */
+
+function showLoggedInMemberState(
+  user
+) {
+
+  const username =
+    user.user_metadata
+    &&
+    user.user_metadata.username
+    ?
+    user.user_metadata.username
+    :
+    "PCH Member";
+
+
+  desktopLoginLink.style.display =
+    "none";
+
+
+  desktopMemberArea.classList.add(
+    "visible"
+  );
+
+
+  desktopMemberName.textContent =
+    username;
+
+
+  mobileLoginLink.style.display =
+    "none";
+
+
+  mobileMemberArea.classList.add(
+    "visible"
+  );
+
+
+  mobileMemberName.textContent =
+    username;
+
+
+  mobileMemberEmail.textContent =
+    user.email
+    ||
+    "";
+
+}
+
+
+/* =========================================
+   RESTORE MEMBER SESSION
+========================================= */
+
+async function restoreMemberSession() {
+
+  try {
+
+    const {
+      data
+    } =
+      await supabaseClient.auth
+        .getSession();
+
+
+    if (
+      data.session
+      &&
+      data.session.user
+    ) {
+
+      showLoggedInMemberState(
+        data.session.user
+      );
+
+    }
+
+    else {
+
+      showLoggedOutMemberState();
+
+    }
+
+  }
+
+  catch(error) {
+
+    console.error(
+      "PCH member session error:",
+      error
+    );
+
+
+    showLoggedOutMemberState();
+
+  }
+
+}
+
+
+/* =========================================
+   SIGN OUT
+========================================= */
+
+async function signOutMember() {
+
+  await supabaseClient.auth
+    .signOut();
+
+
+  showLoggedOutMemberState();
+
+}
+
+
+desktopSignout.addEventListener(
+  "click",
+  signOutMember
+);
+
+
+mobileSignout.addEventListener(
+  "click",
+  signOutMember
+);
+
+
+/* =========================================
+   AUTH STATE
+========================================= */
+
+supabaseClient.auth
+  .onAuthStateChange(
+    function(
+      event,
+      session
+    ) {
+
+      if (
+        session
+        &&
+        session.user
+      ) {
+
+        showLoggedInMemberState(
+          session.user
+        );
+
+      }
+
+      else {
+
+        showLoggedOutMemberState();
+
+      }
+
+    }
+  );
+
 
 /* =========================================
    SEARCH + CATEGORY FILTERS
@@ -2440,6 +3252,47 @@ menu
 
     }
   );
+
+
+/* =========================================
+   RESTORE WHEN RETURNING
+========================================= */
+
+window.addEventListener(
+  "pageshow",
+  function() {
+
+    restoreMemberSession();
+
+  }
+);
+
+
+document.addEventListener(
+  "visibilitychange",
+  function() {
+
+    if (
+      document.visibilityState
+      ===
+      "visible"
+    ) {
+
+      restoreMemberSession();
+
+    }
+
+  }
+);
+
+
+/* =========================================
+   START
+========================================= */
+
+restoreMemberSession();
+
+filterSupplies();
 
 </script>
 
