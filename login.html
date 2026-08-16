@@ -16,7 +16,12 @@
 PCH Account | Platinum Cellular Health Labs
 </title>
 
+
 <style>
+
+/* =========================================
+   RESET
+========================================= */
 
 * {
   box-sizing: border-box;
@@ -92,11 +97,15 @@ button {
 }
 
 
-/* HEADER */
+/* =========================================
+   HEADER
+========================================= */
 
 .site-header {
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
 
   background:
@@ -113,14 +122,18 @@ button {
   min-height: 76px;
 
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
+
+  justify-content:
+    space-between;
 
   gap: 20px;
 }
 
 .brand {
   display: flex;
+
   align-items: center;
 
   gap: 11px;
@@ -175,7 +188,9 @@ button {
 }
 
 
-/* HERO */
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
   padding:
@@ -242,7 +257,9 @@ button {
 }
 
 
-/* AUTH */
+/* =========================================
+   AUTH
+========================================= */
 
 .auth-section {
   padding:
@@ -256,7 +273,52 @@ button {
 }
 
 
-/* TABS */
+/* =========================================
+   LOADING
+========================================= */
+
+.loading-card {
+  display: none;
+
+  padding: 30px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  text-align: center;
+}
+
+.loading-card.visible {
+  display: block;
+}
+
+.loading-card strong {
+  display: block;
+
+  color: var(--gold2);
+
+  margin-bottom: 6px;
+}
+
+.loading-card span {
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
 
 .auth-tabs {
   display: grid;
@@ -267,6 +329,10 @@ button {
   gap: 8px;
 
   margin-bottom: 16px;
+}
+
+.auth-tabs.hidden {
+  display: none;
 }
 
 .tab-button {
@@ -302,7 +368,9 @@ button {
 }
 
 
-/* CARDS */
+/* =========================================
+   CARDS
+========================================= */
 
 .auth-card {
   padding: 30px;
@@ -344,7 +412,9 @@ button {
 }
 
 
-/* FORM */
+/* =========================================
+   FORM
+========================================= */
 
 .form-grid {
   display: grid;
@@ -403,7 +473,9 @@ button {
 }
 
 
-/* ACKNOWLEDGEMENT */
+/* =========================================
+   ACKNOWLEDGEMENT
+========================================= */
 
 .acknowledgement {
   display: flex;
@@ -451,7 +523,9 @@ button {
 }
 
 
-/* BUTTONS */
+/* =========================================
+   BUTTONS
+========================================= */
 
 .primary-button {
   width: 100%;
@@ -527,7 +601,9 @@ button {
 }
 
 
-/* STATUS */
+/* =========================================
+   STATUS
+========================================= */
 
 .status {
   display: none;
@@ -580,7 +656,9 @@ button {
 }
 
 
-/* ACCOUNT */
+/* =========================================
+   ACCOUNT
+========================================= */
 
 .account-card {
   display: none;
@@ -640,8 +718,39 @@ button {
   word-break: break-word;
 }
 
+.session-badge {
+  display: inline-flex;
 
-/* CHECKOUT */
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 12px;
+
+  padding:
+    6px 10px;
+
+  border:
+    1px solid rgba(134,215,154,.25);
+
+  border-radius: 100px;
+
+  color: #9edaaa;
+
+  background:
+    rgba(134,215,154,.04);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .8px;
+}
+
+
+/* =========================================
+   CHECKOUT
+========================================= */
 
 .checkout-gate {
   margin-top: 25px;
@@ -710,12 +819,39 @@ button {
   line-height: 1.6;
 }
 
+.catalog-button {
+  width: 100%;
+
+  min-height: 47px;
+
+  margin-top: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid #34393d;
+
+  border-radius: 9px;
+
+  background: #0d1012;
+
+  color: var(--gold2);
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
 .logout-button {
   width: 100%;
 
   min-height: 47px;
 
-  margin-top: 22px;
+  margin-top: 10px;
 
   border:
     1px solid #34393d;
@@ -732,7 +868,9 @@ button {
 }
 
 
-/* RESET */
+/* =========================================
+   RESET
+========================================= */
 
 .reset-card {
   display: none;
@@ -743,7 +881,9 @@ button {
 }
 
 
-/* SECURITY */
+/* =========================================
+   SECURITY
+========================================= */
 
 .security-notice {
   max-width: 650px;
@@ -780,7 +920,9 @@ button {
 }
 
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
   padding:
@@ -814,7 +956,9 @@ footer {
 }
 
 
-/* MOBILE */
+/* =========================================
+   MOBILE
+========================================= */
 
 @media(max-width:650px) {
 
@@ -853,7 +997,8 @@ footer {
   }
 
   .auth-card,
-  .account-card {
+  .account-card,
+  .loading-card {
     padding: 22px;
   }
 
@@ -871,6 +1016,10 @@ footer {
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="site-header">
 
@@ -917,6 +1066,10 @@ LONGEVITY AT THE CELLULAR LEVEL
 <main>
 
 
+<!-- =========================================
+     HERO
+========================================= -->
+
 <section class="hero">
 
 <div class="shell">
@@ -936,9 +1089,9 @@ Account & Checkout
 </h1>
 
 <p>
-Create a verified PCH account or sign in
-to access checkout. A research-use acknowledgment
-is required before checkout access.
+Sign in once and your PCH member session will remain
+active on this browser until you choose to sign out.
+Research-use acknowledgment is required before checkout.
 </p>
 
 </div>
@@ -947,18 +1100,40 @@ is required before checkout access.
 
 
 
+<!-- =========================================
+     AUTH AREA
+========================================= -->
+
 <section class="auth-section">
 
 <div class="shell">
 
+<div class="auth-container">
+
+
+<!-- SESSION LOADING -->
+
 <div
-  class="auth-container"
-  id="authContainer"
+  class="loading-card visible"
+  id="loadingCard"
 >
 
+<strong>
+CHECKING MEMBER SESSION...
+</strong>
+
+<span>
+Please wait a moment.
+</span>
+
+</div>
+
+
+
+<!-- AUTH TABS -->
 
 <div
-  class="auth-tabs"
+  class="auth-tabs hidden"
   id="authTabs"
 >
 
@@ -982,10 +1157,12 @@ CREATE ACCOUNT
 
 
 
-<!-- LOGIN -->
+<!-- =========================================
+     LOGIN
+========================================= -->
 
 <div
-  class="auth-card"
+  class="auth-card hidden"
   id="loginCard"
 >
 
@@ -998,13 +1175,17 @@ Sign in
 </h2>
 
 <p class="card-intro">
-Use the email address and password associated
-with your PCH account.
+Use your PCH account email address and password.
+You will stay signed in on this browser unless
+you choose Sign Out.
 </p>
+
 
 <form id="loginForm">
 
+
 <div class="form-grid">
+
 
 <div class="form-field">
 
@@ -1039,6 +1220,7 @@ PASSWORD
 
 </div>
 
+
 </div>
 
 
@@ -1065,13 +1247,16 @@ FORGOT PASSWORD?
   id="loginStatus"
 ></div>
 
+
 </form>
 
 </div>
 
 
 
-<!-- SIGNUP -->
+<!-- =========================================
+     CREATE ACCOUNT
+========================================= -->
 
 <div
   class="auth-card hidden"
@@ -1088,13 +1273,15 @@ Create account
 
 <p class="card-intro">
 Create your PCH username and secure account.
-Your email address must be verified before
-you can sign in.
+Your email must be verified before account access.
 </p>
+
 
 <form id="signupForm">
 
+
 <div class="form-grid">
+
 
 <div class="form-field">
 
@@ -1167,6 +1354,7 @@ CONFIRM PASSWORD
 
 </div>
 
+
 </div>
 
 
@@ -1222,13 +1410,16 @@ RESEND VERIFICATION EMAIL
   id="signupStatus"
 ></div>
 
+
 </form>
 
 </div>
 
 
 
-<!-- RESET PASSWORD -->
+<!-- =========================================
+     PASSWORD RESET
+========================================= -->
 
 <div
   class="auth-card reset-card"
@@ -1247,9 +1438,12 @@ Choose a new password
 Enter a new password for your PCH account.
 </p>
 
+
 <form id="resetForm">
 
+
 <div class="form-grid">
+
 
 <div class="form-field">
 
@@ -1284,6 +1478,7 @@ CONFIRM NEW PASSWORD
 
 </div>
 
+
 </div>
 
 
@@ -1300,13 +1495,16 @@ UPDATE PASSWORD
   id="resetStatus"
 ></div>
 
+
 </form>
 
 </div>
 
 
 
-<!-- LOGGED IN -->
+<!-- =========================================
+     LOGGED-IN ACCOUNT
+========================================= -->
 
 <div
   class="account-card"
@@ -1316,7 +1514,7 @@ UPDATE PASSWORD
 <div class="account-header">
 
 <div class="account-label">
-SIGNED IN
+PCH MEMBER ACCOUNT
 </div>
 
 <div
@@ -1331,11 +1529,16 @@ PCH Member
   id="accountEmail"
 ></div>
 
+<div class="session-badge">
+● SIGNED IN · SESSION ACTIVE
+</div>
+
 </div>
 
 
 
 <div class="checkout-gate">
+
 
 <div class="eyebrow">
 CHECKOUT ACCESS
@@ -1346,10 +1549,10 @@ Research-use confirmation
 </h3>
 
 <p>
-Before continuing to the PCH checkout,
-please review and acknowledge the research-use
-restriction again.
+Before continuing to checkout, confirm the
+research-use restriction below.
 </p>
+
 
 
 <label
@@ -1364,12 +1567,12 @@ restriction again.
 <span>
 
 <strong>
-I confirm that I understand the products identified
-as Research Use Only are not intended for human or
-animal consumption or administration.
+I confirm that I understand products identified
+as Research Use Only are not intended for human
+or animal consumption or administration.
 </strong>
 
-I am accessing the checkout for legitimate
+I am accessing checkout for legitimate
 research-related purposes and agree to comply
 with applicable product labeling and PCH policies.
 
@@ -1390,8 +1593,7 @@ with applicable product labeling and PCH policies.
 
 
 <div class="checkout-note">
-You must be signed in and complete the
-acknowledgment before continuing.
+Your PCH login remains active when you leave for checkout.
 </div>
 
 
@@ -1401,19 +1603,32 @@ acknowledgment before continuing.
 ></div>
 
 
+<a
+  href="catalog.html"
+  class="catalog-button"
+>
+← RETURN TO RESEARCH CATALOG
+</a>
+
+
 <button
   type="button"
   class="logout-button"
   id="logoutButton"
 >
-SIGN OUT
+SIGN OUT OF PCH
 </button>
 
-</div>
 
 </div>
 
+</div>
 
+
+
+<!-- =========================================
+     SECURITY
+========================================= -->
 
 <div class="security-notice">
 
@@ -1424,8 +1639,8 @@ ACCOUNT SECURITY
 <p>
 PCH Labs will never need your password,
 wallet seed phrase, private key, or authentication
-code to process an inquiry. Do not share account
-credentials with anyone.
+code to process an inquiry. Do not share your
+account credentials.
 </p>
 
 </div>
@@ -1441,6 +1656,10 @@ credentials with anyone.
 </main>
 
 
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
@@ -1472,15 +1691,20 @@ contact@platinumcellularhealth.com
 
 
 
+<!-- =========================================
+     SUPABASE
+========================================= -->
+
 <script
   src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
 ></script>
 
 
+
 <script>
 
 /* =========================================
-   CONFIG
+   CONFIGURATION
 ========================================= */
 
 const SUPABASE_URL =
@@ -1495,26 +1719,53 @@ const EZFORM_CHECKOUT_URL =
   "https://ezformz.net/f/-wkx35g";
 
 
+/*
+  IMPORTANT:
+
+  Explicit localStorage persistence is used
+  so the PCH session survives navigation away
+  from the website and restoration after returning.
+*/
+
 const supabaseClient =
   window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_PUBLISHABLE_KEY,
     {
+
       auth: {
-        persistSession: true,
-        autoRefreshToken: true,
-        detectSessionInUrl: true
+
+        persistSession:
+          true,
+
+        autoRefreshToken:
+          true,
+
+        detectSessionInUrl:
+          true,
+
+        storage:
+          window.localStorage,
+
+        storageKey:
+          "pch-member-auth"
+
       }
+
     }
   );
 
+
+/* =========================================
+   REDIRECT URL
+========================================= */
 
 function getRedirectUrl() {
 
   return (
     window.location.origin
     +
-    window.location.pathname
+    "/login.html"
   );
 
 }
@@ -1524,39 +1775,51 @@ function getRedirectUrl() {
    ELEMENTS
 ========================================= */
 
-const loginTab =
+const loadingCard =
   document.getElementById(
-    "loginTab"
+    "loadingCard"
   );
 
-const signupTab =
-  document.getElementById(
-    "signupTab"
-  );
 
 const authTabs =
   document.getElementById(
     "authTabs"
   );
 
+
+const loginTab =
+  document.getElementById(
+    "loginTab"
+  );
+
+
+const signupTab =
+  document.getElementById(
+    "signupTab"
+  );
+
+
 const loginCard =
   document.getElementById(
     "loginCard"
   );
+
 
 const signupCard =
   document.getElementById(
     "signupCard"
   );
 
-const accountCard =
-  document.getElementById(
-    "accountCard"
-  );
 
 const resetCard =
   document.getElementById(
     "resetCard"
+  );
+
+
+const accountCard =
+  document.getElementById(
+    "accountCard"
   );
 
 
@@ -1565,10 +1828,12 @@ const loginForm =
     "loginForm"
   );
 
+
 const signupForm =
   document.getElementById(
     "signupForm"
   );
+
 
 const resetForm =
   document.getElementById(
@@ -1581,15 +1846,18 @@ const loginStatus =
     "loginStatus"
   );
 
+
 const signupStatus =
   document.getElementById(
     "signupStatus"
   );
 
+
 const resetStatus =
   document.getElementById(
     "resetStatus"
   );
+
 
 const checkoutStatus =
   document.getElementById(
@@ -1601,6 +1869,7 @@ const checkoutAcknowledgement =
   document.getElementById(
     "checkoutAcknowledgement"
   );
+
 
 const checkoutButton =
   document.getElementById(
@@ -1623,6 +1892,7 @@ function showStatus(
     +
     type;
 
+
   element.textContent =
     message;
 
@@ -1636,6 +1906,7 @@ function clearStatus(
   element.className =
     "status";
 
+
   element.textContent =
     "";
 
@@ -1643,50 +1914,179 @@ function clearStatus(
 
 
 /* =========================================
-   TABS
+   PAGE STATE
 ========================================= */
 
-function showLogin() {
+function hideEverything() {
 
-  loginTab.classList.add(
-    "active"
+  loadingCard.classList.remove(
+    "visible"
   );
 
-  signupTab.classList.remove(
-    "active"
-  );
 
-  loginCard.classList.remove(
+  authTabs.classList.add(
     "hidden"
   );
 
-  signupCard.classList.add(
-    "hidden"
-  );
-
-}
-
-
-function showSignup() {
-
-  signupTab.classList.add(
-    "active"
-  );
-
-  loginTab.classList.remove(
-    "active"
-  );
-
-  signupCard.classList.remove(
-    "hidden"
-  );
 
   loginCard.classList.add(
     "hidden"
   );
 
+
+  signupCard.classList.add(
+    "hidden"
+  );
+
+
+  resetCard.classList.remove(
+    "visible"
+  );
+
+
+  accountCard.classList.remove(
+    "visible"
+  );
+
 }
 
+
+/* =========================================
+   LOGIN DISPLAY
+========================================= */
+
+function showLogin() {
+
+  hideEverything();
+
+
+  authTabs.classList.remove(
+    "hidden"
+  );
+
+
+  loginTab.classList.add(
+    "active"
+  );
+
+
+  signupTab.classList.remove(
+    "active"
+  );
+
+
+  loginCard.classList.remove(
+    "hidden"
+  );
+
+}
+
+
+/* =========================================
+   SIGNUP DISPLAY
+========================================= */
+
+function showSignup() {
+
+  hideEverything();
+
+
+  authTabs.classList.remove(
+    "hidden"
+  );
+
+
+  signupTab.classList.add(
+    "active"
+  );
+
+
+  loginTab.classList.remove(
+    "active"
+  );
+
+
+  signupCard.classList.remove(
+    "hidden"
+  );
+
+}
+
+
+/* =========================================
+   ACCOUNT DISPLAY
+========================================= */
+
+function showAccount(
+  user
+) {
+
+  if (!user) {
+    showLogin();
+    return;
+  }
+
+
+  hideEverything();
+
+
+  accountCard.classList.add(
+    "visible"
+  );
+
+
+  const username =
+    user.user_metadata
+    &&
+    user.user_metadata.username
+    ?
+    user.user_metadata.username
+    :
+    "PCH Member";
+
+
+  document
+    .getElementById(
+      "accountName"
+    )
+    .textContent =
+      username;
+
+
+  document
+    .getElementById(
+      "accountEmail"
+    )
+    .textContent =
+      user.email
+      ||
+      "";
+
+
+  /*
+    Require acknowledgment again each
+    time the checkout page is displayed.
+
+    This does NOT sign the user out.
+  */
+
+  checkoutAcknowledgement.checked =
+    false;
+
+
+  checkoutButton.disabled =
+    true;
+
+
+  checkoutButton.textContent =
+    "🛒 ACKNOWLEDGE TO UNLOCK CHECKOUT";
+
+}
+
+
+/* =========================================
+   TABS
+========================================= */
 
 loginTab.addEventListener(
   "click",
@@ -1701,7 +2101,7 @@ signupTab.addEventListener(
 
 
 /* =========================================
-   SIGNUP
+   CREATE ACCOUNT
 ========================================= */
 
 signupForm.addEventListener(
@@ -1709,6 +2109,7 @@ signupForm.addEventListener(
   async function(event) {
 
     event.preventDefault();
+
 
     clearStatus(
       signupStatus
@@ -1826,49 +2227,56 @@ signupForm.addEventListener(
     signupButton.disabled =
       true;
 
+
     signupButton.textContent =
       "CREATING ACCOUNT...";
 
 
     const {
+      data,
       error
     } =
-      await supabaseClient.auth.signUp(
-        {
-          email: email,
+      await supabaseClient.auth
+        .signUp(
+          {
 
-          password: password,
+            email:
+              email,
 
-          options: {
+            password:
+              password,
 
-            emailRedirectTo:
-              getRedirectUrl(),
+            options: {
 
-            data: {
+              emailRedirectTo:
+                getRedirectUrl(),
 
-              username:
-                username,
+              data: {
 
-              research_use_acknowledged:
-                true,
+                username:
+                  username,
 
-              research_use_acknowledged_at:
-                new Date()
-                  .toISOString(),
+                research_use_acknowledged:
+                  true,
 
-              acknowledgment_version:
-                "2026-08-16"
+                research_use_acknowledged_at:
+                  new Date()
+                    .toISOString(),
+
+                acknowledgment_version:
+                  "2026-08-16"
+
+              }
 
             }
 
           }
-
-        }
-      );
+        );
 
 
     signupButton.disabled =
       false;
+
 
     signupButton.textContent =
       "CREATE ACCOUNT";
@@ -1892,9 +2300,29 @@ signupForm.addEventListener(
     signupForm.reset();
 
 
+    /*
+      If email confirmation is enabled,
+      there normally will not be a session yet.
+    */
+
+    if (
+      data.session
+      &&
+      data.user
+    ) {
+
+      showAccount(
+        data.user
+      );
+
+      return;
+
+    }
+
+
     showStatus(
       signupStatus,
-      "Account created. Check your email and click the verification link before signing in.",
+      "Account created. Check your email and tap the verification link before signing in.",
       "success"
     );
 
@@ -1946,23 +2374,25 @@ document
       const {
         error
       } =
-        await supabaseClient.auth.resend(
-          {
-            type:
-              "signup",
+        await supabaseClient.auth
+          .resend(
+            {
 
-            email:
-              email,
+              type:
+                "signup",
 
-            options: {
+              email:
+                email,
 
-              emailRedirectTo:
-                getRedirectUrl()
+              options: {
+
+                emailRedirectTo:
+                  getRedirectUrl()
+
+              }
 
             }
-
-          }
-        );
+          );
 
 
       if (
@@ -1982,7 +2412,7 @@ document
 
       showStatus(
         signupStatus,
-        "Verification email sent again. Check your inbox and spam folder.",
+        "Verification email sent. Check your inbox and spam folder.",
         "success"
       );
 
@@ -1991,7 +2421,7 @@ document
 
 
 /* =========================================
-   LOGIN
+   SIGN IN
 ========================================= */
 
 loginForm.addEventListener(
@@ -1999,6 +2429,7 @@ loginForm.addEventListener(
   async function(event) {
 
     event.preventDefault();
+
 
     clearStatus(
       loginStatus
@@ -2031,6 +2462,7 @@ loginForm.addEventListener(
     loginButton.disabled =
       true;
 
+
     loginButton.textContent =
       "SIGNING IN...";
 
@@ -2042,17 +2474,20 @@ loginForm.addEventListener(
       await supabaseClient.auth
         .signInWithPassword(
           {
+
             email:
               email,
 
             password:
               password
+
           }
         );
 
 
     loginButton.disabled =
       false;
+
 
     loginButton.textContent =
       "SIGN IN";
@@ -2073,10 +2508,35 @@ loginForm.addEventListener(
     }
 
 
+    if (
+      !data.session
+      ||
+      !data.user
+    ) {
+
+      showStatus(
+        loginStatus,
+        "Unable to establish a PCH member session. Please try again.",
+        "error"
+      );
+
+      return;
+
+    }
+
+
+    /*
+      IMPORTANT:
+
+      Signing in does NOT redirect to EZForm.
+
+      The member stays on this PCH page.
+    */
+
     loginForm.reset();
 
 
-    await showAccount(
+    showAccount(
       data.user
     );
 
@@ -2132,8 +2592,10 @@ document
           .resetPasswordForEmail(
             email,
             {
+
               redirectTo:
                 getRedirectUrl()
+
             }
           );
 
@@ -2164,7 +2626,7 @@ document
 
 
 /* =========================================
-   RESET PASSWORD
+   PASSWORD RESET
 ========================================= */
 
 resetForm.addEventListener(
@@ -2172,6 +2634,7 @@ resetForm.addEventListener(
   async function(event) {
 
     event.preventDefault();
+
 
     clearStatus(
       resetStatus
@@ -2225,13 +2688,16 @@ resetForm.addEventListener(
 
 
     const {
+      data,
       error
     } =
       await supabaseClient.auth
         .updateUser(
           {
+
             password:
               password
+
           }
         );
 
@@ -2258,130 +2724,32 @@ resetForm.addEventListener(
     );
 
 
+    /*
+      Do NOT automatically sign out.
+      Keep the member session active.
+    */
+
     setTimeout(
-      async function() {
+      function() {
 
-        await supabaseClient.auth
-          .signOut();
+        if (
+          data
+          &&
+          data.user
+        ) {
 
-        resetCard.classList.remove(
-          "visible"
-        );
+          showAccount(
+            data.user
+          );
 
-        showAuth();
+        }
 
       },
-      1500
+      1200
     );
 
   }
 );
-
-
-/* =========================================
-   ACCOUNT DISPLAY
-========================================= */
-
-async function showAccount(
-  user
-) {
-
-  if (
-    !user
-  ) {
-    return;
-  }
-
-
-  authTabs.style.display =
-    "none";
-
-
-  loginCard.classList.add(
-    "hidden"
-  );
-
-
-  signupCard.classList.add(
-    "hidden"
-  );
-
-
-  resetCard.classList.remove(
-    "visible"
-  );
-
-
-  accountCard.classList.add(
-    "visible"
-  );
-
-
-  const username =
-    user.user_metadata
-    &&
-    user.user_metadata.username
-    ?
-    user.user_metadata.username
-    :
-    "PCH Member";
-
-
-  document
-    .getElementById(
-      "accountName"
-    )
-    .textContent =
-      username;
-
-
-  document
-    .getElementById(
-      "accountEmail"
-    )
-    .textContent =
-      user.email
-      ||
-      "";
-
-
-  checkoutAcknowledgement.checked =
-    false;
-
-
-  checkoutButton.disabled =
-    true;
-
-
-  checkoutButton.textContent =
-    "🛒 ACKNOWLEDGE TO UNLOCK CHECKOUT";
-
-}
-
-
-/* =========================================
-   SHOW AUTH
-========================================= */
-
-function showAuth() {
-
-  accountCard.classList.remove(
-    "visible"
-  );
-
-
-  resetCard.classList.remove(
-    "visible"
-  );
-
-
-  authTabs.style.display =
-    "grid";
-
-
-  showLogin();
-
-}
 
 
 /* =========================================
@@ -2408,8 +2776,7 @@ checkoutAcknowledgement.addEventListener(
 
 
 /* =========================================
-   OPEN CHECKOUT
-   MOBILE-SAFE VERSION
+   CHECKOUT
 ========================================= */
 
 checkoutButton.addEventListener(
@@ -2441,31 +2808,32 @@ checkoutButton.addEventListener(
 
 
     checkoutButton.textContent =
-      "VERIFYING...";
+      "VERIFYING MEMBER...";
 
 
     /*
-      Verify the signed-in user directly
-      with Supabase.
+      First restore/read the persisted session.
     */
 
     const {
-      data,
-      error
+      data: sessionData,
+      error: sessionError
     } =
       await supabaseClient.auth
-        .getUser();
+        .getSession();
 
 
     if (
-      error
+      sessionError
       ||
-      !data.user
+      !sessionData.session
+      ||
+      !sessionData.session.user
     ) {
 
       showStatus(
         checkoutStatus,
-        "Your login session could not be verified. Please sign in again.",
+        "Your member session could not be found. Please sign in again.",
         "error"
       );
 
@@ -2484,8 +2852,48 @@ checkoutButton.addEventListener(
 
 
     /*
-      Save acknowledgement before
-      redirecting to checkout.
+      Verify the user with Supabase.
+    */
+
+    const {
+      data: userData,
+      error: userError
+    } =
+      await supabaseClient.auth
+        .getUser();
+
+
+    if (
+      userError
+      ||
+      !userData.user
+    ) {
+
+      showStatus(
+        checkoutStatus,
+        "Your member session could not be verified. Please sign in again.",
+        "error"
+      );
+
+
+      checkoutButton.disabled =
+        false;
+
+
+      checkoutButton.textContent =
+        "🛒 OPEN PCH CHECKOUT";
+
+
+      return;
+
+    }
+
+
+    /*
+      Save acknowledgment.
+
+      This updates metadata only.
+      It does NOT sign the member out.
     */
 
     const {
@@ -2494,6 +2902,7 @@ checkoutButton.addEventListener(
       await supabaseClient.auth
         .updateUser(
           {
+
             data: {
 
               checkout_research_acknowledged:
@@ -2537,19 +2946,25 @@ checkoutButton.addEventListener(
 
 
     /*
-      SAME-TAB REDIRECT.
-      This avoids mobile popup blocking.
+      IMPORTANT:
+
+      We are NOT signing out.
+
+      Supabase session remains saved in localStorage.
+
+      Navigate to EZForm in the same tab.
     */
 
-    window.location.href =
-      EZFORM_CHECKOUT_URL;
+    window.location.assign(
+      EZFORM_CHECKOUT_URL
+    );
 
   }
 );
 
 
 /* =========================================
-   LOGOUT
+   MANUAL SIGN OUT ONLY
 ========================================= */
 
 document
@@ -2560,18 +2975,36 @@ document
     "click",
     async function() {
 
-      await supabaseClient.auth
-        .signOut();
+      const {
+        error
+      } =
+        await supabaseClient.auth
+          .signOut();
 
 
-      showAuth();
+      if (
+        error
+      ) {
 
-    }
-  );
+        showStatus(
+          checkoutStatus,
+          "Unable to sign out. Please try again.",
+          "error"
+        );
+
+        return;
+
+      }
+
+
+      showLogin();
+
+  }
+);
 
 
 /* =========================================
-   AUTH EVENTS
+   AUTH STATE CHANGES
 ========================================= */
 
 supabaseClient.auth
@@ -2581,28 +3014,16 @@ supabaseClient.auth
       session
     ) {
 
+      /*
+        Password recovery needs the reset screen.
+      */
+
       if (
         event ===
         "PASSWORD_RECOVERY"
       ) {
 
-        authTabs.style.display =
-          "none";
-
-
-        loginCard.classList.add(
-          "hidden"
-        );
-
-
-        signupCard.classList.add(
-          "hidden"
-        );
-
-
-        accountCard.classList.remove(
-          "visible"
-        );
+        hideEverything();
 
 
         resetCard.classList.add(
@@ -2615,12 +3036,39 @@ supabaseClient.auth
       }
 
 
+      /*
+        Only show logged out state if Supabase
+        explicitly says the user signed out.
+      */
+
       if (
         event ===
         "SIGNED_OUT"
       ) {
 
-        showAuth();
+        showLogin();
+
+
+        return;
+
+      }
+
+
+      /*
+        Restore/show member account for
+        sign-in, initialization, token refresh,
+        user metadata update, etc.
+      */
+
+      if (
+        session
+        &&
+        session.user
+      ) {
+
+        showAccount(
+          session.user
+        );
 
       }
 
@@ -2629,46 +3077,134 @@ supabaseClient.auth
 
 
 /* =========================================
-   INITIALIZE
+   RESTORE SESSION
 ========================================= */
 
-async function initializeAccount() {
+async function restoreMemberSession() {
 
   /*
-    getSession restores an existing browser
-    session. Supabase automatically persists
-    sessions because persistSession is enabled.
+    Do NOT immediately show the login page.
+
+    First allow Supabase to restore the session
+    from localStorage.
   */
 
-  const {
-    data
-  } =
-    await supabaseClient.auth
-      .getSession();
+  hideEverything();
 
 
-  if (
-    data.session
-    &&
-    data.session.user
-  ) {
+  loadingCard.classList.add(
+    "visible"
+  );
 
-    await showAccount(
+
+  try {
+
+    const {
+      data,
+      error
+    } =
+      await supabaseClient.auth
+        .getSession();
+
+
+    if (
+      error
+    ) {
+
+      console.error(
+        "PCH session restore error:",
+        error
+      );
+
+    }
+
+
+    if (
+      data
+      &&
+      data.session
+      &&
       data.session.user
-    );
+    ) {
+
+      showAccount(
+        data.session.user
+      );
+
+
+      return;
+
+    }
+
+
+    showLogin();
 
   }
 
-  else {
+  catch(error) {
 
-    showAuth();
+    console.error(
+      "PCH initialization error:",
+      error
+    );
+
+
+    showLogin();
 
   }
 
 }
 
 
-initializeAccount();
+/* =========================================
+   INITIAL START
+========================================= */
+
+restoreMemberSession();
+
+
+/* =========================================
+   RESTORE WHEN RETURNING FROM EZFORM
+========================================= */
+
+/*
+  Mobile browsers can restore a page from their
+  back/forward cache.
+
+  Run the session check again whenever the user
+  returns to this page.
+*/
+
+window.addEventListener(
+  "pageshow",
+  function() {
+
+    restoreMemberSession();
+
+  }
+);
+
+
+/*
+  Also check when the tab becomes visible again.
+*/
+
+document.addEventListener(
+  "visibilitychange",
+  function() {
+
+    if (
+      document.visibilityState
+      ===
+      "visible"
+    ) {
+
+      restoreMemberSession();
+
+    }
+
+  }
+);
 
 </script>
 
