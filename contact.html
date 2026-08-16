@@ -37,8 +37,8 @@ body {
 
   background:
     radial-gradient(
-      circle at 80% 5%,
-      rgba(213,173,85,.07),
+      circle at 50% 0%,
+      rgba(198,160,70,.07),
       transparent 30%
     ),
     #050607;
@@ -51,6 +51,8 @@ body {
     sans-serif;
 
   line-height: 1.6;
+
+  overflow-x: hidden;
 }
 
 a {
@@ -58,22 +60,30 @@ a {
   text-decoration: none;
 }
 
-.shell {
-  width: min(
-    1180px,
-    calc(100% - 36px)
-  );
-
-  margin: auto;
+img {
+  max-width: 100%;
+  display: block;
 }
 
 :root {
+  --black: #050607;
+  --panel: #0d0f11;
+  --panel2: #111417;
+  --border: #252a2e;
   --gold: #d5ad55;
   --gold2: #f0d48c;
-  --panel: #0d1012;
-  --panel2: #111416;
-  --border: #252a2e;
-  --muted: #979ea4;
+  --text: #f5f5f5;
+  --muted: #9da3a8;
+}
+
+.shell {
+  width:
+    min(
+      1180px,
+      calc(100% - 36px)
+    );
+
+  margin: auto;
 }
 
 
@@ -84,25 +94,27 @@ a {
 .site-header {
   position: sticky;
   top: 0;
+
   z-index: 1000;
 
   background:
-    rgba(5,6,7,.94);
+    rgba(5,6,7,.95);
 
-  backdrop-filter: blur(14px);
+  backdrop-filter:
+    blur(15px);
 
   border-bottom:
-    1px solid rgba(255,255,255,.07);
+    1px solid rgba(255,255,255,.08);
 }
 
 .nav {
-  min-height: 76px;
+  min-height: 78px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 25px;
 }
 
 .brand {
@@ -115,8 +127,8 @@ a {
 }
 
 .brand img {
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
 
   flex-shrink: 0;
 
@@ -137,9 +149,9 @@ a {
 }
 
 .brand-sub {
-  color: var(--gold);
-
   font-size: 8px;
+
+  color: var(--gold);
 
   letter-spacing: 2px;
 
@@ -148,13 +160,14 @@ a {
 
 .nav-links {
   display: flex;
+
   align-items: center;
 
   gap: 22px;
 
-  color: #b7bdc2;
+  color: #b9bdc0;
 
-  font-size: 12px;
+  font-size: 13px;
 
   font-weight: 700;
 }
@@ -163,24 +176,30 @@ a {
   color: var(--gold2);
 }
 
+
+/* =========================================
+   BUTTONS
+========================================= */
+
 .btn {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
-  min-height: 43px;
+  min-height: 46px;
 
-  padding: 0 16px;
+  padding: 0 20px;
+
+  border-radius: 8px;
 
   border:
     1px solid #34393d;
 
-  border-radius: 8px;
-
   background: #101214;
 
-  color: white;
+  color: #f4f4f4;
 
   font-size: 11px;
 
@@ -188,21 +207,26 @@ a {
 
   letter-spacing: .7px;
 
-  cursor: pointer;
+  transition: .2s ease;
 }
 
 .btn:hover {
+  transform: translateY(-2px);
+
   border-color: var(--gold);
 }
 
 .btn-gold {
-  border-color:
-    rgba(213,173,85,.48);
-
   background:
-    rgba(213,173,85,.06);
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
 
-  color: var(--gold2);
+  border: none;
+
+  color: #080909;
 }
 
 
@@ -212,37 +236,36 @@ a {
 
 .page-hero {
   padding:
-    85px 0
-    55px;
+    90px 0 65px;
 
   border-bottom:
     1px solid var(--border);
 }
 
-.back {
+.back-link {
   display: inline-block;
 
-  color: var(--gold);
+  margin-bottom: 32px;
+
+  color: var(--gold2);
 
   font-size: 11px;
 
-  font-weight: 800;
+  font-weight: 900;
 
-  letter-spacing: .6px;
-
-  margin-bottom: 35px;
+  letter-spacing: 1px;
 }
 
 .eyebrow {
   color: var(--gold);
 
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 900;
 
-  letter-spacing: 2.3px;
+  letter-spacing: 2.5px;
 
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .page-hero h1 {
@@ -250,143 +273,125 @@ a {
 
   font-size:
     clamp(
-      40px,
-      7vw,
-      68px
+      42px,
+      6vw,
+      70px
     );
 
   line-height: 1;
 
   letter-spacing: -2px;
 
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .page-hero p {
-  max-width: 730px;
+  max-width: 760px;
 
   color: var(--muted);
 
-  font-size: 16px;
+  font-size: 17px;
 
   line-height: 1.8;
 }
 
-.hero-tags {
+.hero-meta {
   display: flex;
 
   flex-wrap: wrap;
 
-  gap: 8px;
+  gap: 9px;
 
   margin-top: 25px;
 }
 
-.hero-tags span {
-  border:
-    1px solid var(--border);
+.hero-meta span {
+  padding: 7px 10px;
 
-  background: #0c0e10;
+  border:
+    1px solid #292e32;
 
   border-radius: 100px;
 
-  padding: 7px 10px;
+  background: #0c0e10;
 
-  color: #858c92;
+  color: #858c91;
 
   font-size: 9px;
 
-  font-weight: 800;
+  font-weight: 900;
 
   letter-spacing: 1px;
 }
 
 
 /* =========================================
-   CONTACT
+   CONTACT MAIN
 ========================================= */
 
 .contact-section {
   padding:
-    70px 0
-    95px;
+    75px 0 90px;
 }
 
 .contact-grid {
   display: grid;
 
   grid-template-columns:
-    .9fr 1.1fr;
+    .95fr 1.05fr;
 
   gap: 28px;
 
-  align-items: stretch;
+  align-items: start;
 }
 
-.contact-card {
-  padding: 30px;
+
+/* =========================================
+   PRIMARY CONTACT CARD
+========================================= */
+
+.contact-main {
+  padding: 32px;
 
   border:
-    1px solid var(--border);
+    1px solid rgba(213,173,85,.3);
 
   border-radius: 16px;
 
   background:
     linear-gradient(
       145deg,
-      #111416,
-      #090b0c
+      rgba(213,173,85,.05),
+      #0a0c0d
     );
 }
 
-.contact-icon {
-  width: 54px;
-  height: 54px;
+.contact-main h2 {
+  font-size: 31px;
 
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border:
-    1px solid rgba(213,173,85,.35);
-
-  border-radius: 12px;
-
-  color: var(--gold);
-
-  font-size: 24px;
-
-  margin-bottom: 25px;
-
-  background:
-    rgba(213,173,85,.04);
+  margin-bottom: 12px;
 }
 
-.contact-card h2 {
-  font-size: 28px;
-
-  margin-bottom: 10px;
-}
-
-.contact-card > p {
+.contact-main > p {
   color: var(--muted);
 
-  font-size: 13px;
+  font-size: 14px;
 
   line-height: 1.8;
 
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .email-label {
-  color: #737a80;
+  display: block;
+
+  color: #777e83;
 
   font-size: 9px;
 
   font-weight: 900;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
 
   margin-bottom: 7px;
 }
@@ -398,36 +403,32 @@ a {
 
   font-size:
     clamp(
-      15px,
-      3.5vw,
-      21px
+      18px,
+      3vw,
+      25px
     );
 
-  font-weight: 800;
+  font-weight: 900;
 
   word-break: break-word;
 
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 }
 
-.email-address:hover {
-  color: white;
-}
+.contact-actions {
+  display: flex;
 
-.email-button {
-  width: 100%;
+  flex-wrap: wrap;
 
-  min-height: 52px;
-
-  font-size: 11px;
+  gap: 10px;
 }
 
 
 /* =========================================
-   INFORMATION
+   SUPPORT CARDS
 ========================================= */
 
-.contact-info {
+.support-grid {
   display: grid;
 
   grid-template-columns:
@@ -436,40 +437,47 @@ a {
   gap: 14px;
 }
 
-.info-box {
-  padding: 24px;
+.support-card {
+  min-height: 220px;
+
+  padding: 23px;
+
+  display: flex;
+
+  flex-direction: column;
 
   border:
     1px solid var(--border);
 
-  border-radius: 14px;
+  border-radius: 13px;
 
   background:
     linear-gradient(
       145deg,
-      #101315,
+      #111416,
       #090b0c
     );
 }
 
-.info-number {
-  color:
-    rgba(213,173,85,.20);
+.support-label {
+  color: var(--gold);
 
-  font-size: 40px;
+  font-size: 9px;
 
   font-weight: 900;
 
-  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+
+  margin-bottom: 22px;
 }
 
-.info-box h3 {
-  font-size: 18px;
+.support-card h3 {
+  font-size: 19px;
 
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 }
 
-.info-box p {
+.support-card p {
   color: var(--muted);
 
   font-size: 12px;
@@ -477,33 +485,97 @@ a {
   line-height: 1.75;
 }
 
-.email-notice {
-  grid-column:
-    1 / -1;
+.support-card a {
+  margin-top: auto;
 
-  padding: 24px;
+  padding-top: 18px;
 
-  border:
-    1px solid rgba(213,173,85,.22);
+  color: var(--gold2);
 
-  border-radius: 14px;
+  font-size: 9px;
 
-  background:
-    rgba(213,173,85,.025);
+  font-weight: 900;
+
+  letter-spacing: .8px;
 }
 
-.email-notice strong {
+
+/* =========================================
+   SECURITY SECTION
+========================================= */
+
+.security-section {
+  padding:
+    70px 0;
+
+  background: #090b0c;
+
+  border-top:
+    1px solid var(--border);
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.security-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 28px;
+}
+
+.security-copy h2 {
+  font-size:
+    clamp(
+      30px,
+      4vw,
+      45px
+    );
+
+  line-height: 1.08;
+
+  margin-bottom: 15px;
+}
+
+.security-copy p {
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.warning-stack {
+  display: grid;
+
+  gap: 12px;
+}
+
+.warning-card {
+  padding: 20px;
+
+  border:
+    1px solid #2a2f33;
+
+  border-radius: 11px;
+
+  background: #0c0f11;
+}
+
+.warning-card strong {
   display: block;
 
   color: var(--gold2);
 
-  margin-bottom: 8px;
+  font-size: 13px;
 
-  font-size: 14px;
+  margin-bottom: 6px;
 }
 
-.email-notice p {
-  color: #8f969b;
+.warning-card p {
+  color: #8c9398;
 
   font-size: 12px;
 
@@ -512,42 +584,32 @@ a {
 
 
 /* =========================================
-   GUIDELINES
+   CONTACT GUIDANCE
 ========================================= */
 
-.guidelines-section {
+.guidance-section {
   padding:
     75px 0;
-
-  border-top:
-    1px solid var(--border);
-
-  border-bottom:
-    1px solid var(--border);
-
-  background: #090b0c;
 }
 
-.guidelines-head {
-  max-width: 720px;
+.guidance-head {
+  max-width: 760px;
 
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
-.guidelines-head h2 {
+.guidance-head h2 {
   font-size:
     clamp(
       30px,
-      5vw,
-      48px
+      4vw,
+      46px
     );
 
-  line-height: 1.05;
-
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
-.guidelines-head p {
+.guidance-head p {
   color: var(--muted);
 
   font-size: 14px;
@@ -555,16 +617,19 @@ a {
   line-height: 1.8;
 }
 
-.guidelines-grid {
+.guidance-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(3,1fr);
+    repeat(
+      3,
+      minmax(0,1fr)
+    );
 
   gap: 14px;
 }
 
-.guideline {
+.guidance-card {
   padding: 22px;
 
   border:
@@ -575,48 +640,44 @@ a {
   background: #0d1012;
 }
 
-.guideline strong {
+.guidance-card strong {
   display: block;
 
   color: var(--gold2);
 
   font-size: 13px;
 
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
-.guideline p {
+.guidance-card p {
   color: var(--muted);
 
   font-size: 12px;
 
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 
 /* =========================================
-   NOTICE
+   RESEARCH NOTICE
 ========================================= */
 
 .notice-section {
   padding:
-    70px 0;
+    0 0 70px;
 }
 
 .notice {
-  padding: 26px;
+  padding: 25px;
 
   border:
-    1px solid rgba(213,173,85,.25);
+    1px solid rgba(213,173,85,.26);
 
   border-radius: 14px;
 
   background:
-    linear-gradient(
-      145deg,
-      #101315,
-      #090b0c
-    );
+    rgba(213,173,85,.03);
 }
 
 .notice strong {
@@ -624,15 +685,19 @@ a {
 
   color: var(--gold2);
 
-  margin-bottom: 9px;
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 8px;
 }
 
 .notice p {
-  color: #90979d;
+  color: var(--muted);
 
-  font-size: 13px;
+  font-size: 12px;
 
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 
@@ -641,151 +706,92 @@ a {
 ========================================= */
 
 footer {
-  padding:
-    40px 0;
-
-  border-top:
-    1px solid var(--border);
+  padding: 40px 0;
 
   background: #030404;
 
-  color: #6f767b;
-
-  font-size: 11px;
+  border-top:
+    1px solid var(--border);
 }
 
 .footer-grid {
   display: flex;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
   gap: 30px;
+
+  color: #777d82;
+
+  font-size: 11px;
 }
 
 .footer-grid strong {
-  color: #bfc3c6;
-
   display: block;
 
-  margin-bottom: 3px;
+  color: #c7c9ca;
+
+  margin-bottom: 4px;
 }
 
 
 /* =========================================
-   TABLET / MOBILE HEADER
+   MOBILE
 ========================================= */
 
 @media(max-width:900px) {
 
+  .shell {
+    width:
+      min(
+        100% - 28px,
+        1180px
+      );
+  }
+
   .nav {
     min-height: 68px;
-
-    gap: 10px;
   }
 
   .brand img {
-    width: 44px;
-    height: 44px;
+    width: 45px;
+    height: 45px;
   }
 
   .brand-title {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .brand-sub {
     font-size: 7px;
   }
 
-  /*
-     Hide the normal navigation links
-     but KEEP the Contact button visible.
-  */
-
-  .nav-links {
-    display: flex;
-
-    margin-left: auto;
-
-    flex-shrink: 0;
-  }
-
-  .nav-links a {
+  .nav-links
+  a:not(.contact-link) {
     display: none;
-  }
-
-  .nav-links .mobile-contact {
-    display: inline-flex;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media(max-width:650px) {
-
-  .shell {
-    width:
-      calc(100% - 26px);
-  }
-
-  .brand-title {
-    font-size: 9px;
-
-    letter-spacing: .5px;
-  }
-
-  .brand-sub {
-    font-size: 6px;
-
-    letter-spacing: 1px;
-  }
-
-  .nav-links .mobile-contact {
-    min-height: 38px;
-
-    padding: 0 11px;
-
-    font-size: 9px;
   }
 
   .page-hero {
     padding:
-      60px 0
-      40px;
+      70px 0 50px;
   }
 
   .page-hero h1 {
-    font-size: 43px;
+    font-size: 45px;
   }
 
   .page-hero p {
-    font-size: 14px;
+    font-size: 15px;
   }
 
-  .contact-section {
-    padding:
-      40px 0
-      65px;
-  }
-
-  .contact-card {
-    padding: 23px;
-  }
-
-  .contact-info {
+  .contact-grid,
+  .security-grid {
     grid-template-columns: 1fr;
   }
 
-  .guidelines-grid {
-    grid-template-columns: 1fr;
+  .guidance-grid {
+    grid-template-columns:
+      1fr 1fr;
   }
 
   .footer-grid {
@@ -794,9 +800,54 @@ footer {
 
 }
 
+
+@media(max-width:520px) {
+
+  .brand-title {
+    font-size: 10px;
+  }
+
+  .brand-sub {
+    font-size: 6px;
+  }
+
+  .page-hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-meta {
+    display: grid;
+
+    grid-template-columns: 1fr;
+  }
+
+  .hero-meta span {
+    text-align: center;
+  }
+
+  .contact-main {
+    padding: 24px;
+  }
+
+  .support-grid,
+  .guidance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-actions {
+    display: grid;
+  }
+
+  .contact-actions .btn {
+    width: 100%;
+  }
+
+}
+
 </style>
 
 </head>
+
 
 
 <body>
@@ -818,7 +869,7 @@ footer {
 
 <img
   src="pch-logo.jpg"
-  alt="Platinum Cellular Health Labs"
+  alt="PCH Labs"
 >
 
 <div>
@@ -860,7 +911,7 @@ Policies
 
 <a
   href="contact.html"
-  class="btn mobile-contact"
+  class="btn contact-link"
 >
 Contact
 </a>
@@ -874,6 +925,9 @@ Contact
 
 
 
+<main>
+
+
 <!-- =========================================
      HERO
 ========================================= -->
@@ -884,42 +938,47 @@ Contact
 
 
 <a
-  class="back"
   href="index.html"
+  class="back-link"
 >
 ← BACK TO PCH LABS
 </a>
 
 
 <div class="eyebrow">
-PLATINUM CELLULAR HEALTH LABS
+CONTACT & SUPPORT
 </div>
 
 
 <h1>
-Contact PCH Labs
+Contact PCH Labs.
 </h1>
 
 
 <p>
-For general questions, research documentation,
-website inquiries, or other PCH Labs communications,
-contact us through our official email address.
+Contact Platinum Cellular Health Labs for
+general inquiries, order-related questions,
+shipping support, or analytical-documentation
+requests.
 </p>
 
 
-<div class="hero-tags">
+<div class="hero-meta">
 
 <span>
-OFFICIAL PCH CONTACT
+GENERAL INQUIRIES
 </span>
 
 <span>
-RESEARCH INQUIRIES
+ORDER SUPPORT
 </span>
 
 <span>
-DOCUMENTATION SUPPORT
+SHIPPING SUPPORT
+</span>
+
+<span>
+COA REQUESTS
 </span>
 
 </div>
@@ -937,15 +996,13 @@ DOCUMENTATION SUPPORT
 
 <section class="contact-section">
 
-<div class="shell contact-grid">
+<div class="shell">
 
 
-<div class="contact-card">
+<div class="contact-grid">
 
 
-<div class="contact-icon">
-✉
-</div>
+<div class="contact-main">
 
 
 <div class="eyebrow">
@@ -954,49 +1011,63 @@ OFFICIAL EMAIL
 
 
 <h2>
-Contact our team
+Get in touch.
 </h2>
 
 
 <p>
-Use our official PCH Labs email address for
-general communication, website questions,
-research-documentation inquiries, and support.
+For website, catalog, order, shipping,
+or documentation questions, contact PCH Labs
+through the official email address below.
 </p>
 
 
-<div class="email-label">
-EMAIL ADDRESS
-</div>
+<span class="email-label">
+OFFICIAL PCH LABS CONTACT
+</span>
 
 
 <a
-  class="email-address"
   href="mailto:contact@platinumcellularhealth.com"
+  class="email-address"
 >
 contact@platinumcellularhealth.com
 </a>
 
 
+<div class="contact-actions">
+
+
 <a
-  class="btn btn-gold email-button"
-  href="mailto:contact@platinumcellularhealth.com?subject=PCH%20Labs%20Inquiry"
+  href="mailto:contact@platinumcellularhealth.com"
+  class="btn btn-gold"
 >
 SEND EMAIL
+</a>
+
+
+<a
+  href="policies.html"
+  class="btn"
+>
+VIEW POLICIES
 </a>
 
 
 </div>
 
 
+</div>
 
-<div class="contact-info">
 
 
-<div class="info-box">
+<div class="support-grid">
 
-<div class="info-number">
-01
+
+<div class="support-card">
+
+<div class="support-label">
+GENERAL
 </div>
 
 <h3>
@@ -1004,19 +1075,75 @@ General Inquiries
 </h3>
 
 <p>
-Questions about Platinum Cellular Health Labs,
-the website, research catalog,
-or general information.
+Questions about the website, research catalog,
+available resources, or general PCH Labs information.
 </p>
+
+<a
+  href="mailto:contact@platinumcellularhealth.com?subject=General%20Inquiry"
+>
+EMAIL GENERAL INQUIRY →
+</a>
 
 </div>
 
 
 
-<div class="info-box">
+<div class="support-card">
 
-<div class="info-number">
-02
+<div class="support-label">
+ORDERS
+</div>
+
+<h3>
+Order Support
+</h3>
+
+<p>
+Questions concerning an order, payment confirmation,
+product listing, order details, or order status.
+</p>
+
+<a
+  href="mailto:contact@platinumcellularhealth.com?subject=Order%20Support"
+>
+EMAIL ORDER SUPPORT →
+</a>
+
+</div>
+
+
+
+<div class="support-card">
+
+<div class="support-label">
+SHIPPING
+</div>
+
+<h3>
+Shipping Support
+</h3>
+
+<p>
+Questions concerning shipping options,
+tracking information, processing, or optional
+shipping insurance.
+</p>
+
+<a
+  href="mailto:contact@platinumcellularhealth.com?subject=Shipping%20Support"
+>
+EMAIL SHIPPING SUPPORT →
+</a>
+
+</div>
+
+
+
+<div class="support-card">
+
+<div class="support-label">
+DOCUMENTATION
 </div>
 
 <h3>
@@ -1024,69 +1151,19 @@ COA & Documentation
 </h3>
 
 <p>
-Questions regarding available Certificates
-of Analysis, laboratory reports,
-lot references, or documentation.
+Questions concerning available Certificates
+of Analysis, laboratory reports, batch references,
+or analytical documentation.
 </p>
 
-</div>
-
-
-
-<div class="info-box">
-
-<div class="info-number">
-03
-</div>
-
-<h3>
-Research Information
-</h3>
-
-<p>
-Questions related to scientific-reference
-material and information presented
-within the PCH research library.
-</p>
+<a
+  href="mailto:contact@platinumcellularhealth.com?subject=COA%20Documentation%20Request"
+>
+EMAIL DOCUMENTATION REQUEST →
+</a>
 
 </div>
 
-
-
-<div class="info-box">
-
-<div class="info-number">
-04
-</div>
-
-<h3>
-Website Support
-</h3>
-
-<p>
-Report broken links, website errors,
-documentation issues, or other
-technical problems.
-</p>
-
-</div>
-
-
-
-<div class="email-notice">
-
-<strong>
-Official Communication
-</strong>
-
-<p>
-For your security, verify that PCH Labs email
-communication uses the official
-<strong>platinumcellularhealth.com</strong>
-domain. Do not send passwords, private keys,
-seed phrases, or other sensitive credentials
-by email.
-</p>
 
 </div>
 
@@ -1101,77 +1178,223 @@ by email.
 
 
 <!-- =========================================
-     GUIDELINES
+     SECURITY
 ========================================= -->
 
-<section class="guidelines-section">
+<section class="security-section">
 
 <div class="shell">
 
 
-<div class="guidelines-head">
+<div class="security-grid">
+
+
+<div class="security-copy">
+
 
 <div class="eyebrow">
-BEFORE CONTACTING US
+PAYMENT & ACCOUNT SECURITY
 </div>
+
 
 <h2>
-Help us understand your inquiry.
+Protect your wallet and account information.
 </h2>
 
+
 <p>
-Providing clear information in your message
-helps identify the correct documentation
-or website information associated with
-your question.
+PCH Labs accepts USDC on the Solana network
+or SOL. Cryptocurrency payments require careful
+verification because blockchain transactions may
+be irreversible after confirmation.
+</p>
+
+
+</div>
+
+
+
+<div class="warning-stack">
+
+
+<div class="warning-card">
+
+<strong>
+Never Send Your Seed Phrase
+</strong>
+
+<p>
+PCH Labs will never ask for your cryptocurrency
+wallet seed phrase, recovery phrase, or private key.
 </p>
 
 </div>
 
 
-<div class="guidelines-grid">
 
-
-<div class="guideline">
+<div class="warning-card">
 
 <strong>
-Documentation Questions
+Verify the Solana Network
 </strong>
 
 <p>
-Include the research-material name and,
-when applicable, the lot, batch,
-sample, or report identifier.
+When paying with USDC, confirm that the transaction
+is using the Solana network before sending payment.
 </p>
 
 </div>
 
 
-<div class="guideline">
+
+<div class="warning-card">
 
 <strong>
-Website Issues
+Verify the Wallet Address
 </strong>
 
 <p>
-Include the page where the issue occurred
-and a brief description of what
-you experienced.
+Confirm the recipient address and payment amount
+before transmitting cryptocurrency.
 </p>
 
 </div>
 
 
-<div class="guideline">
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     CONTACT GUIDANCE
+========================================= -->
+
+<section class="guidance-section">
+
+<div class="shell">
+
+
+<div class="guidance-head">
+
+
+<div class="eyebrow">
+BEFORE CONTACTING SUPPORT
+</div>
+
+
+<h2>
+Help us locate your request quickly.
+</h2>
+
+
+<p>
+Providing the relevant non-sensitive information
+in your first message can make it easier to understand
+and respond to your inquiry.
+</p>
+
+
+</div>
+
+
+
+<div class="guidance-grid">
+
+
+<div class="guidance-card">
 
 <strong>
-General Questions
+Order Questions
 </strong>
 
 <p>
-Use a clear subject line and provide
-enough information for the inquiry
-to be properly understood.
+Include your name, order reference if available,
+and a brief description of the question.
+Do not include wallet private keys or seed phrases.
+</p>
+
+</div>
+
+
+
+<div class="guidance-card">
+
+<strong>
+Shipping Questions
+</strong>
+
+<p>
+Include the order reference and tracking number,
+if one has already been provided.
+</p>
+
+</div>
+
+
+
+<div class="guidance-card">
+
+<strong>
+COA Questions
+</strong>
+
+<p>
+Include the research-material name, amount,
+and batch or lot information when available.
+</p>
+
+</div>
+
+
+
+<div class="guidance-card">
+
+<strong>
+Payment Questions
+</strong>
+
+<p>
+Include only the information needed to identify
+the transaction. Never provide wallet credentials.
+</p>
+
+</div>
+
+
+
+<div class="guidance-card">
+
+<strong>
+Catalog Questions
+</strong>
+
+<p>
+Reference the exact research-material name
+and listed amount shown in the catalog.
+</p>
+
+</div>
+
+
+
+<div class="guidance-card">
+
+<strong>
+Policy Questions
+</strong>
+
+<p>
+Review the Policies page for payment,
+shipping, final-sale, documentation,
+and research-use terms.
 </p>
 
 </div>
@@ -1197,18 +1420,22 @@ to be properly understood.
 
 <div class="notice">
 
+
 <strong>
-Research Use Notice
+RESEARCH USE COMMUNICATION NOTICE
 </strong>
 
+
 <p>
-Platinum Cellular Health Labs provides scientific,
-analytical, laboratory, and educational research
-information. PCH Labs does not provide medical,
-veterinary, diagnostic, prescribing, dosing,
-administration, or treatment advice through
-its contact channels.
+PCH Labs customer communications do not provide
+medical, veterinary, diagnostic, treatment,
+prescribing, administration, or dosing advice.
+Research Use Only materials and related information
+are presented for legitimate laboratory, analytical,
+scientific, and educational research purposes only
+and are not intended for human or animal use.
 </p>
+
 
 </div>
 
@@ -1216,6 +1443,9 @@ its contact channels.
 </div>
 
 </section>
+
+
+</main>
 
 
 
@@ -1242,6 +1472,8 @@ Longevity at the Cellular Level
 
 
 <div>
+contact@platinumcellularhealth.com
+<br>
 21+ · Research Use Only · Not for human or animal use
 </div>
 
