@@ -5,7 +5,7 @@
 
 <meta
   name="viewport"
-  content="width=device-width, initial-scale=1.0"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
 >
 
 <meta name="theme-color" content="#050607">
@@ -84,7 +84,9 @@ button {
 
 .gate {
   position: fixed;
+
   inset: 0;
+
   z-index: 99999;
 
   background:
@@ -96,7 +98,9 @@ button {
     rgba(2,3,4,.97);
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   padding: 20px;
@@ -110,6 +114,7 @@ button {
 
 .gate-panel {
   width: 100%;
+
   max-width: 620px;
 
   background:
@@ -119,7 +124,8 @@ button {
       rgba(8,9,10,.98)
     );
 
-  border: 1px solid rgba(213,173,85,.35);
+  border:
+    1px solid rgba(213,173,85,.35);
 
   border-radius: 22px;
 
@@ -140,7 +146,8 @@ button {
 
   margin: 0 auto 20px;
 
-  border: 1px solid rgba(213,173,85,.35);
+  border:
+    1px solid rgba(213,173,85,.35);
 }
 
 .gate-badge {
@@ -150,7 +157,8 @@ button {
 
   padding: 6px 12px;
 
-  border: 1px solid rgba(213,173,85,.35);
+  border:
+    1px solid rgba(213,173,85,.35);
 
   border-radius: 100px;
 
@@ -198,11 +206,13 @@ button {
 
   padding: 13px;
 
-  border: 1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius: 12px;
 
-  background: rgba(255,255,255,.025);
+  background:
+    rgba(255,255,255,.025);
 
   cursor: pointer;
 
@@ -210,7 +220,8 @@ button {
 }
 
 .gate-check:hover {
-  border-color: rgba(213,173,85,.45);
+  border-color:
+    rgba(213,173,85,.45);
 }
 
 .gate-check input {
@@ -306,15 +317,17 @@ button {
 
   z-index: 1000;
 
-  background: rgba(5,6,7,.94);
+  background:
+    rgba(5,6,7,.92);
 
   backdrop-filter: blur(15px);
 
-  border-bottom: 1px solid rgba(255,255,255,.07);
+  border-bottom:
+    1px solid rgba(255,255,255,.07);
 }
 
 .nav {
-  min-height: 74px;
+  min-height: 78px;
 
   display: flex;
 
@@ -322,7 +335,7 @@ button {
 
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 25px;
 }
 
 .brand {
@@ -331,21 +344,18 @@ button {
   align-items: center;
 
   gap: 12px;
-
-  min-width: 0;
 }
 
 .brand img {
-  width: 50px;
-  height: 50px;
-
-  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
 
   object-fit: cover;
 
   border-radius: 50%;
 
-  border: 1px solid rgba(213,173,85,.35);
+  border:
+    1px solid rgba(213,173,85,.35);
 }
 
 .brand-title {
@@ -384,8 +394,81 @@ button {
   color: var(--gold2);
 }
 
-.mobile-contact {
-  display: none;
+
+/* =========================================
+   MOVING PROMOTION BANNER
+========================================= */
+
+.promo-banner {
+  width: 100%;
+
+  overflow: hidden;
+
+  position: relative;
+
+  z-index: 900;
+
+  background:
+    linear-gradient(
+      90deg,
+      #8d6623,
+      #d5ad55,
+      #f0d48c,
+      #d5ad55,
+      #8d6623
+    );
+
+  color: #080909;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.12);
+
+  white-space: nowrap;
+}
+
+.promo-track {
+  display: flex;
+
+  width: max-content;
+
+  animation:
+    promoScroll 30s linear infinite;
+}
+
+.promo-content {
+  display: flex;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  padding: 10px 25px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+.promo-content span {
+  margin: 0 22px;
+
+  opacity: .65;
+}
+
+@keyframes promoScroll {
+
+  from {
+    transform:
+      translateX(0);
+  }
+
+  to {
+    transform:
+      translateX(-50%);
+  }
+
 }
 
 
@@ -444,13 +527,14 @@ button {
 ========================================= */
 
 .hero {
-  min-height: 700px;
+  min-height: 720px;
 
   display: flex;
 
   align-items: center;
 
-  border-bottom: 1px solid var(--border);
+  border-bottom:
+    1px solid var(--border);
 
   background:
     radial-gradient(
@@ -463,15 +547,16 @@ button {
 .hero-grid {
   display: grid;
 
-  grid-template-columns: 1.1fr .9fr;
+  grid-template-columns:
+    1.1fr .9fr;
 
   gap: 70px;
 
   align-items: center;
 
-  padding-top: 80px;
+  padding-top: 90px;
 
-  padding-bottom: 80px;
+  padding-bottom: 90px;
 }
 
 .eyebrow {
@@ -489,7 +574,12 @@ button {
 .hero h1 {
   max-width: 760px;
 
-  font-size: clamp(42px, 6vw, 72px);
+  font-size:
+    clamp(
+      42px,
+      6vw,
+      72px
+    );
 
   line-height: .98;
 
@@ -554,7 +644,7 @@ button {
 .hero-visual {
   position: relative;
 
-  min-height: 430px;
+  min-height: 480px;
 
   display: flex;
 
@@ -564,14 +654,15 @@ button {
 }
 
 .logo-frame {
-  width: 330px;
-  height: 330px;
+  width: 350px;
+  height: 350px;
 
   border-radius: 50%;
 
   padding: 18px;
 
-  border: 1px solid rgba(213,173,85,.25);
+  border:
+    1px solid rgba(213,173,85,.25);
 
   box-shadow:
     0 0 80px rgba(213,173,85,.08);
@@ -587,7 +678,8 @@ button {
 
   border-radius: 50%;
 
-  border: 1px solid rgba(213,173,85,.09);
+  border:
+    1px solid rgba(213,173,85,.09);
 }
 
 .logo-frame::before {
@@ -607,66 +699,16 @@ button {
   border-radius: 50%;
 }
 
-.molecule-card {
-  position: absolute;
-
-  right: 0;
-
-  bottom: 0;
-
-  width: 210px;
-
-  padding: 18px;
-
-  background: rgba(12,14,15,.96);
-
-  border: 1px solid #282d30;
-
-  border-radius: 14px;
-
-  box-shadow: 0 20px 60px rgba(0,0,0,.4);
-}
-
-.molecule-core {
-  width: 58px;
-  height: 58px;
-
-  display: grid;
-
-  place-items: center;
-
-  border-radius: 50%;
-
-  border: 1px solid var(--gold);
-
-  color: var(--gold);
-
-  font-weight: 900;
-
-  margin-bottom: 15px;
-}
-
-.molecule-copy {
-  display: grid;
-
-  gap: 5px;
-
-  color: #888e92;
-
-  font-size: 9px;
-
-  letter-spacing: 1.3px;
-}
-
 
 /* =========================================
    SECTIONS
 ========================================= */
 
 .section {
-  padding: 90px 0;
+  padding: 100px 0;
 
-  border-bottom: 1px solid var(--border);
+  border-bottom:
+    1px solid var(--border);
 }
 
 .section.alt {
@@ -676,7 +718,8 @@ button {
 .section-head {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap: 60px;
 
@@ -686,7 +729,12 @@ button {
 }
 
 .section h2 {
-  font-size: clamp(30px, 4vw, 48px);
+  font-size:
+    clamp(
+      30px,
+      4vw,
+      48px
+    );
 
   line-height: 1.05;
 
@@ -708,13 +756,14 @@ button {
 .feature-grid {
   display: grid;
 
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns:
+    repeat(3,1fr);
 
   gap: 18px;
 }
 
 .feature-card {
-  min-height: 330px;
+  min-height: 340px;
 
   padding: 28px;
 
@@ -725,7 +774,8 @@ button {
       #0a0c0d
     );
 
-  border: 1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius: 14px;
 
@@ -735,9 +785,11 @@ button {
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
+  transform:
+    translateY(-5px);
 
-  border-color: rgba(213,173,85,.45);
+  border-color:
+    rgba(213,173,85,.45);
 }
 
 .feature-card .num {
@@ -747,7 +799,8 @@ button {
 
   top: 18px;
 
-  color: rgba(213,173,85,.16);
+  color:
+    rgba(213,173,85,.16);
 
   font-size: 50px;
 
@@ -798,13 +851,14 @@ button {
 
 
 /* =========================================
-   SCIENCE SECTION
+   SCIENCE
 ========================================= */
 
 .science-grid {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap: 70px;
 
@@ -832,25 +886,28 @@ button {
 .science-list div {
   padding-bottom: 10px;
 
-  border-bottom: 1px solid #1d2124;
+  border-bottom:
+    1px solid #1d2124;
 }
 
 .lab-grid {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap: 12px;
 }
 
 .lab-stat {
-  min-height: 165px;
+  min-height: 180px;
 
   padding: 22px;
 
   background: #101315;
 
-  border: 1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius: 12px;
 
@@ -881,13 +938,14 @@ button {
 
 
 /* =========================================
-   QUALITY / COA
+   QUALITY
 ========================================= */
 
 .quality-wrap {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap: 70px;
 
@@ -899,7 +957,7 @@ button {
 }
 
 .coa-mock {
-  min-height: 350px;
+  min-height: 380px;
 
   background: #f1f1ed;
 
@@ -907,11 +965,12 @@ button {
 
   border-radius: 6px;
 
-  padding: 28px;
+  padding: 30px;
 
   transform: rotate(1deg);
 
-  box-shadow: 0 25px 70px rgba(0,0,0,.45);
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.45);
 }
 
 .coa-head {
@@ -929,11 +988,11 @@ button {
 }
 
 .coa-head strong {
-  font-size: 30px;
+  font-size: 32px;
 }
 
 .coa-head span {
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 900;
 }
@@ -959,21 +1018,22 @@ button {
 .coa-grid {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap: 10px;
 
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .coa-grid div {
-  height: 55px;
+  height: 60px;
 
   border: 1px solid #aaa;
 }
 
 .coa-foot {
-  margin-top: 25px;
+  margin-top: 30px;
 
   border-top: 1px solid #999;
 
@@ -994,27 +1054,21 @@ button {
 .standards-grid {
   display: grid;
 
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns:
+    repeat(4,1fr);
 
   gap: 12px;
 }
 
 .standards-grid > div {
-  min-height: 145px;
+  padding: 24px;
 
-  padding: 22px;
-
-  border: 1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   background: #0d1011;
 
   border-radius: 10px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
 }
 
 .standards-grid strong {
@@ -1037,7 +1091,7 @@ button {
 ========================================= */
 
 footer {
-  padding: 38px 0;
+  padding: 40px 0;
 
   background: #030404;
 }
@@ -1070,79 +1124,45 @@ footer {
 @media (max-width: 900px) {
 
   .shell {
-    width: calc(100% - 30px);
+    width:
+      min(
+        100% - 28px,
+        1180px
+      );
   }
-
-
-  /* HEADER */
 
   .nav {
-    min-height: 72px;
-
-    gap: 10px;
-  }
-
-  .brand {
-    gap: 8px;
-
-    flex: 1;
+    min-height: 68px;
   }
 
   .brand img {
-    width: 42px;
-    height: 42px;
+    width: 45px;
+    height: 45px;
   }
 
   .brand-title {
-    font-size: 10px;
-
-    line-height: 1.18;
-
-    letter-spacing: .45px;
+    font-size: 11px;
   }
 
   .brand-sub {
-    font-size: 5.8px;
-
-    letter-spacing: 1.15px;
-
-    margin-top: 3px;
+    font-size: 7px;
   }
 
   .nav-links {
     display: none;
   }
 
-  .mobile-contact {
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    flex-shrink: 0;
-
-    min-height: 40px;
-
-    padding: 0 12px;
-
-    border-radius: 8px;
-
-    border: 1px solid #34393d;
-
-    background: #101214;
-
-    color: #d4d6d8;
+  .promo-content {
+    padding: 9px 20px;
 
     font-size: 9px;
 
-    font-weight: 900;
-
-    letter-spacing: .7px;
+    letter-spacing: 1px;
   }
 
-
-  /* HERO */
+  .promo-track {
+    animation-duration: 25s;
+  }
 
   .hero {
     min-height: auto;
@@ -1151,15 +1171,15 @@ footer {
   .hero-grid {
     grid-template-columns: 1fr;
 
-    gap: 28px;
+    gap: 40px;
 
-    padding-top: 42px;
+    padding-top: 65px;
 
-    padding-bottom: 50px;
+    padding-bottom: 70px;
   }
 
   .hero h1 {
-    font-size: 42px;
+    font-size: 46px;
 
     letter-spacing: -1.8px;
   }
@@ -1176,64 +1196,17 @@ footer {
     width: 100%;
   }
 
-
-  /* BADGES */
-
-  .hero-meta {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 7px;
-
-    width: 100%;
-
-    margin-top: 20px;
-  }
-
-  .hero-meta span {
-    width: 100%;
-
-    text-align: center;
-
-    padding: 9px 8px;
-
-    font-size: 8.5px;
-
-    letter-spacing: 1.15px;
-  }
-
-
-  /* LOGO SECTION */
-
   .hero-visual {
-    min-height: 275px;
-
-    padding: 10px 0 5px;
+    min-height: 360px;
   }
 
   .logo-frame {
-    width: 220px;
-    height: 220px;
+    width: 260px;
+    height: 260px;
   }
-
-  .logo-frame::before {
-    inset: -20px;
-  }
-
-  .logo-frame::after {
-    inset: -38px;
-  }
-
-  .molecule-card {
-    display: none;
-  }
-
-
-  /* SECTIONS */
 
   .section {
-    padding: 58px 0;
+    padding: 70px 0;
   }
 
   .section-head,
@@ -1241,7 +1214,7 @@ footer {
   .quality-wrap {
     grid-template-columns: 1fr;
 
-    gap: 26px;
+    gap: 30px;
   }
 
   .feature-grid {
@@ -1249,125 +1222,30 @@ footer {
   }
 
   .feature-card {
-    min-height: 260px;
-
-    padding: 24px;
+    min-height: 300px;
   }
-
-  .feature-card .tag {
-    margin-bottom: 38px;
-  }
-
-  .feature-card > span {
-    left: 24px;
-
-    bottom: 22px;
-  }
-
-
-  /* SCIENCE STATS */
 
   .lab-grid {
-    grid-template-columns: 1fr 1fr;
-
-    gap: 10px;
+    grid-template-columns:
+      1fr 1fr;
   }
 
   .lab-stat {
-    min-height: 120px;
-
-    padding: 18px;
+    min-height: 145px;
   }
 
   .lab-stat strong {
-    font-size: 34px;
+    font-size: 36px;
   }
-
-  .lab-stat span {
-    font-size: 8px;
-
-    line-height: 1.35;
-  }
-
-
-  /* COA MOCKUP */
-
-  .coa-mock {
-    width: 92%;
-
-    min-height: 285px;
-
-    margin: 10px auto 0;
-
-    padding: 22px;
-
-    transform: rotate(.5deg);
-  }
-
-  .coa-head {
-    margin-bottom: 20px;
-  }
-
-  .coa-head strong {
-    font-size: 25px;
-  }
-
-  .coa-head span {
-    font-size: 8px;
-  }
-
-  .coa-grid {
-    margin-top: 22px;
-
-    gap: 8px;
-  }
-
-  .coa-grid div {
-    height: 42px;
-  }
-
-  .coa-foot {
-    margin-top: 20px;
-
-    font-size: 7.5px;
-  }
-
-
-  /* STANDARDS */
 
   .standards-grid {
-    grid-template-columns: 1fr 1fr;
-
-    gap: 10px;
+    grid-template-columns:
+      1fr 1fr;
   }
-
-  .standards-grid > div {
-    min-height: 118px;
-
-    padding: 18px;
-  }
-
-  .standards-grid strong {
-    font-size: 14px;
-  }
-
-  .standards-grid span {
-    font-size: 11px;
-
-    line-height: 1.45;
-  }
-
-
-  /* FOOTER */
 
   .footer-grid {
     flex-direction: column;
-
-    gap: 18px;
   }
-
-
-  /* ENTRY GATE */
 
   .gate {
     align-items: flex-start;
@@ -1385,7 +1263,6 @@ footer {
 
   .gate-logo {
     width: 82px;
-
     height: 82px;
   }
 
@@ -1408,108 +1285,23 @@ footer {
 }
 
 
-/* =========================================
-   SMALL PHONES
-========================================= */
-
 @media (max-width: 480px) {
 
-  .shell {
-    width: calc(100% - 26px);
-  }
-
-  .nav {
-    min-height: 68px;
-  }
-
-  .brand img {
-    width: 39px;
-    height: 39px;
-  }
-
-  .brand-title {
-    font-size: 8.8px;
-  }
-
-  .brand-sub {
-    font-size: 5px;
-  }
-
-  .mobile-contact {
-    min-height: 38px;
-
-    padding: 0 10px;
-
-    font-size: 8px;
-  }
-
-  .hero-grid {
-    padding-top: 36px;
-
-    padding-bottom: 42px;
-  }
-
   .hero h1 {
-    font-size: 38px;
-  }
-
-  .hero-copy > p {
-    font-size: 14px;
-  }
-
-  .eyebrow {
-    font-size: 9px;
-  }
-
-  .hero-visual {
-    min-height: 245px;
+    font-size: 39px;
   }
 
   .logo-frame {
-    width: 195px;
-    height: 195px;
+    width: 225px;
+    height: 225px;
   }
 
-  .logo-frame::before {
-    inset: -17px;
-  }
-
-  .logo-frame::after {
-    inset: -31px;
-  }
-
-  .section {
-    padding: 52px 0;
-  }
-
-  .feature-card {
-    min-height: 250px;
-  }
-
-  .lab-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .lab-stat {
-    min-height: 112px;
-
-    padding: 16px;
-  }
-
-  .coa-mock {
-    width: 94%;
-
-    min-height: 260px;
-
-    padding: 19px;
+  .hero-visual {
+    min-height: 310px;
   }
 
   .standards-grid {
     grid-template-columns: 1fr;
-  }
-
-  .standards-grid > div {
-    min-height: 95px;
   }
 
 }
@@ -1528,159 +1320,159 @@ footer {
 
 <div class="gate" id="gate">
 
-  <div class="gate-panel">
+<div class="gate-panel">
 
-    <img
-      src="pch-logo.jpg"
-      alt="Platinum Cellular Health Labs"
-      class="gate-logo"
-    >
+<img
+  src="pch-logo.jpg"
+  alt="Platinum Cellular Health Labs"
+  class="gate-logo"
+>
 
-    <div class="gate-badge">
-      21+ RESTRICTED ACCESS
-    </div>
+<div class="gate-badge">
+21+ RESTRICTED ACCESS
+</div>
 
-    <h1>
-      Research Use Certification
-    </h1>
+<h1>
+Research Use Certification
+</h1>
 
-    <p class="gate-intro">
-      Please review and confirm each requirement before accessing
-      Platinum Cellular Health Labs.
-    </p>
-
-
-    <div class="gate-checks">
+<p class="gate-intro">
+Please review and confirm each requirement before accessing
+Platinum Cellular Health Labs.
+</p>
 
 
-      <label class="gate-check">
-
-        <input
-          type="checkbox"
-          class="req"
-        >
-
-        <span>
-          <strong>
-            I certify that I am 21 years of age or older.
-          </strong>
-        </span>
-
-      </label>
+<div class="gate-checks">
 
 
-      <label class="gate-check">
+<label class="gate-check">
 
-        <input
-          type="checkbox"
-          class="req"
-        >
+<input
+  type="checkbox"
+  class="req"
+>
 
-        <span>
-          I understand that materials identified as
-          <strong>Research Use Only</strong>
-          are presented solely for legitimate laboratory,
-          analytical, scientific, and educational research.
-        </span>
+<span>
+<strong>
+I certify that I am 21 years of age or older.
+</strong>
+</span>
 
-      </label>
-
-
-      <label class="gate-check">
-
-        <input
-          type="checkbox"
-          class="req"
-        >
-
-        <span>
-          I understand that Research Use Only materials are
-          <strong>
-            not intended for human or animal consumption,
-            administration, treatment, diagnosis,
-            disease prevention, or clinical/veterinary use.
-          </strong>
-        </span>
-
-      </label>
+</label>
 
 
-      <label class="gate-check">
+<label class="gate-check">
 
-        <input
-          type="checkbox"
-          class="req"
-        >
+<input
+  type="checkbox"
+  class="req"
+>
 
-        <span>
-          I agree not to use information or materials from this
-          website for unlawful activity or in any manner
-          inconsistent with product labeling.
-        </span>
+<span>
+I understand that materials identified as
+<strong>Research Use Only</strong>
+are presented solely for legitimate laboratory,
+analytical, scientific, and educational research.
+</span>
 
-      </label>
-
-
-      <label class="gate-check">
-
-        <input
-          type="checkbox"
-          class="req"
-        >
-
-        <span>
-          I understand that website content is for research
-          and educational purposes and does not constitute
-          medical, veterinary, diagnostic, or treatment advice.
-        </span>
-
-      </label>
+</label>
 
 
-      <label class="gate-check">
+<label class="gate-check">
 
-        <input
-          type="checkbox"
-          class="req"
-        >
+<input
+  type="checkbox"
+  class="req"
+>
 
-        <span>
-          I understand that Platinum Cellular Health Labs
-          reserves the right to restrict access or refuse service
-          where misuse, unlawful conduct, or misrepresentation
-          is suspected.
-        </span>
+<span>
+I understand that Research Use Only materials are
+<strong>
+not intended for human or animal consumption,
+administration, treatment, diagnosis,
+disease prevention, or clinical/veterinary use.
+</strong>
+</span>
 
-      </label>
-
-
-    </div>
-
-
-    <button
-      id="enterButton"
-      class="gate-enter"
-      type="button"
-      disabled
-    >
-      CHECK ALL BOXES TO CONTINUE
-    </button>
+</label>
 
 
-    <button
-      class="gate-exit"
-      type="button"
-      onclick="leaveSite()"
-    >
-      I DO NOT AGREE
-    </button>
+<label class="gate-check">
+
+<input
+  type="checkbox"
+  class="req"
+>
+
+<span>
+I agree not to use information or materials from this
+website for unlawful activity or in any manner
+inconsistent with product labeling.
+</span>
+
+</label>
 
 
-    <div class="gate-footer">
-      21+ · RESEARCH USE ONLY · NOT FOR HUMAN OR ANIMAL USE
-    </div>
+<label class="gate-check">
 
-  </div>
+<input
+  type="checkbox"
+  class="req"
+>
+
+<span>
+I understand that website content is for research
+and educational purposes and does not constitute
+medical, veterinary, diagnostic, or treatment advice.
+</span>
+
+</label>
+
+
+<label class="gate-check">
+
+<input
+  type="checkbox"
+  class="req"
+>
+
+<span>
+I understand that Platinum Cellular Health Labs
+reserves the right to restrict access or refuse service
+where misuse, unlawful conduct, or misrepresentation
+is suspected.
+</span>
+
+</label>
+
+
+</div>
+
+
+<button
+  id="enterButton"
+  class="gate-enter"
+  type="button"
+  disabled
+>
+CHECK ALL BOXES TO CONTINUE
+</button>
+
+
+<button
+  class="gate-exit"
+  type="button"
+  onclick="leaveSite()"
+>
+I DO NOT AGREE
+</button>
+
+
+<div class="gate-footer">
+21+ · RESEARCH USE ONLY · NOT FOR HUMAN OR ANIMAL USE
+</div>
+
+</div>
 
 </div>
 
@@ -1692,73 +1484,125 @@ footer {
 
 <header class="site-header">
 
-  <div class="shell nav">
+<div class="shell nav">
 
 
-    <a
-      href="index.html"
-      class="brand"
-    >
+<a
+  href="index.html"
+  class="brand"
+>
 
-      <img
-        src="pch-logo.jpg"
-        alt="PCH Labs"
-      >
+<img
+  src="pch-logo.jpg"
+  alt="PCH Labs"
+>
 
-      <div>
+<div>
 
-        <div class="brand-title">
-          PLATINUM CELLULAR HEALTH LABS
-        </div>
+<div class="brand-title">
+PLATINUM CELLULAR HEALTH LABS
+</div>
 
-        <div class="brand-sub">
-          LONGEVITY AT THE CELLULAR LEVEL
-        </div>
+<div class="brand-sub">
+LONGEVITY AT THE CELLULAR LEVEL
+</div>
 
-      </div>
+</div>
 
-    </a>
-
-
-    <nav class="nav-links">
-
-      <a href="research-information.html">
-        Research
-      </a>
-
-      <a href="catalog.html">
-        Catalog
-      </a>
-
-      <a href="quality-coa.html">
-        Quality & COA
-      </a>
-
-      <a href="policies.html">
-        Policies
-      </a>
-
-      <a
-        href="contact.html"
-        class="btn"
-      >
-        Contact
-      </a>
-
-    </nav>
+</a>
 
 
-    <a
-      href="contact.html"
-      class="mobile-contact"
-    >
-      CONTACT
-    </a>
+<nav class="nav-links">
+
+<a href="research-information.html">
+Research
+</a>
+
+<a href="catalog.html">
+Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a
+  href="contact.html"
+  class="btn"
+>
+Contact
+</a>
+
+</nav>
 
 
-  </div>
+</div>
 
 </header>
+
+
+
+<!-- =========================================
+     $280 PROMOTION BANNER
+========================================= -->
+
+<div class="promo-banner">
+
+<div class="promo-track">
+
+
+<div class="promo-content">
+
+🔥 FREE STANDARD SHIPPING ON ORDERS OVER $280
+
+<span>◆</span>
+
+$15 SHIPPING OPTION INCLUDED
+
+<span>◆</span>
+
+PREMIUM SHIPPING AVAILABLE — PAY ONLY THE DIFFERENCE
+
+<span>◆</span>
+
+RESEARCH USE ONLY
+
+<span>◆</span>
+
+</div>
+
+
+<div
+  class="promo-content"
+  aria-hidden="true"
+>
+
+🔥 FREE STANDARD SHIPPING ON ORDERS OVER $280
+
+<span>◆</span>
+
+$15 SHIPPING OPTION INCLUDED
+
+<span>◆</span>
+
+PREMIUM SHIPPING AVAILABLE — PAY ONLY THE DIFFERENCE
+
+<span>◆</span>
+
+RESEARCH USE ONLY
+
+<span>◆</span>
+
+</div>
+
+
+</div>
+
+</div>
 
 
 
@@ -1773,115 +1617,89 @@ footer {
 
 <section class="hero">
 
-  <div class="shell hero-grid">
+<div class="shell hero-grid">
 
 
-    <div class="hero-copy">
+<div class="hero-copy">
 
 
-      <div class="eyebrow">
-        SCIENTIFIC RESEARCH · ANALYTICAL DOCUMENTATION
-      </div>
+<div class="eyebrow">
+SCIENTIFIC RESEARCH · ANALYTICAL DOCUMENTATION
+</div>
 
 
-      <h1>
-        Research built around transparency.
-      </h1>
+<h1>
+Research built around transparency.
+</h1>
 
 
-      <p>
-        Platinum Cellular Health Labs provides organized
-        research information, scientific reference material,
-        analytical documentation, and research-oriented
-        catalog resources in a professional laboratory-focused
-        environment.
-      </p>
+<p>
+Platinum Cellular Health Labs provides organized
+research information, scientific reference material,
+analytical documentation, and research-oriented
+catalog resources in a professional laboratory-focused
+environment.
+</p>
 
 
-      <div class="hero-actions">
+<div class="hero-actions">
 
-        <a
-          href="catalog.html"
-          class="btn btn-gold"
-        >
-          EXPLORE RESEARCH CATALOG
-        </a>
-
-
-        <a
-          href="research-information.html"
-          class="btn"
-        >
-          RESEARCH INFORMATION
-        </a>
-
-      </div>
+<a
+  href="catalog.html"
+  class="btn btn-gold"
+>
+EXPLORE RESEARCH CATALOG
+</a>
 
 
-      <div class="hero-meta">
+<a
+  href="research-information.html"
+  class="btn"
+>
+RESEARCH INFORMATION
+</a>
 
-        <span>
-          21+ ACCESS
-        </span>
-
-        <span>
-          RESEARCH USE ONLY
-        </span>
-
-        <span>
-          COA DOCUMENTATION
-        </span>
-
-      </div>
+</div>
 
 
-    </div>
+<div class="hero-meta">
+
+<span>
+21+ ACCESS
+</span>
+
+<span>
+RESEARCH USE ONLY
+</span>
+
+<span>
+COA DOCUMENTATION
+</span>
+
+</div>
+
+
+</div>
 
 
 
-    <div class="hero-visual">
+<div class="hero-visual">
 
 
-      <div class="logo-frame">
+<div class="logo-frame">
 
-        <img
-          src="pch-logo.jpg"
-          alt="Platinum Cellular Health Labs"
-        >
+<img
+  src="pch-logo.jpg"
+  alt="Platinum Cellular Health Labs"
+>
 
-      </div>
-
-
-      <div class="molecule-card">
-
-        <div class="molecule-core">
-          PCH
-        </div>
+</div>
 
 
-        <div class="molecule-copy">
-
-          <span>
-            SCIENTIFIC RESEARCH
-          </span>
-
-          <span>
-            DOCUMENTATION
-          </span>
-
-          <span>
-            TRACEABILITY
-          </span>
-
-        </div>
-
-      </div>
+</div>
 
 
-    </div>
-
-
-  </div>
+</div>
 
 </section>
 
@@ -1893,268 +1711,268 @@ footer {
 
 <section class="section">
 
-  <div class="shell">
+<div class="shell">
 
 
-    <div class="section-head">
+<div class="section-head">
 
 
-      <div>
+<div>
 
-        <div class="eyebrow">
-          RESEARCH HUB
-        </div>
+<div class="eyebrow">
+RESEARCH HUB
+</div>
 
-        <h2>
-          Organized scientific resources.
-        </h2>
+<h2>
+Organized scientific resources.
+</h2>
 
-      </div>
-
-
-      <p>
-        Research information, catalog listings,
-        analytical documentation, and policies are separated
-        into dedicated sections to make scientific information
-        easier to navigate and review.
-      </p>
+</div>
 
 
-    </div>
+<p>
+Research information, catalog listings,
+analytical documentation, and policies are separated
+into dedicated sections to make scientific information
+easier to navigate and review.
+</p>
 
 
-
-    <div class="feature-grid">
-
-
-      <a
-        href="research-information.html"
-        class="feature-card"
-      >
-
-        <div class="num">
-          01
-        </div>
-
-        <div class="tag">
-          SCIENTIFIC REFERENCE
-        </div>
-
-        <h3>
-          Research Information
-        </h3>
-
-        <p>
-          Explore scientific terminology, research compounds,
-          analytical concepts, storage principles,
-          and organized published research references.
-        </p>
-
-        <span>
-          OPEN RESEARCH LIBRARY →
-        </span>
-
-      </a>
+</div>
 
 
 
-      <a
-        href="catalog.html"
-        class="feature-card"
-      >
-
-        <div class="num">
-          02
-        </div>
-
-        <div class="tag">
-          RESEARCH CATALOG
-        </div>
-
-        <h3>
-          Research Materials
-        </h3>
-
-        <p>
-          Browse research materials by compound name
-          and listed amount through a clean,
-          organized scientific catalog.
-        </p>
-
-        <span>
-          BROWSE CATALOG →
-        </span>
-
-      </a>
+<div class="feature-grid">
 
 
+<a
+  href="research-information.html"
+  class="feature-card"
+>
 
-      <a
-        href="quality-coa.html"
-        class="feature-card"
-      >
+<div class="num">
+01
+</div>
 
-        <div class="num">
-          03
-        </div>
+<div class="tag">
+SCIENTIFIC REFERENCE
+</div>
 
-        <div class="tag">
-          ANALYTICAL DOCUMENTATION
-        </div>
+<h3>
+Research Information
+</h3>
 
-        <h3>
-          Quality & COA
-        </h3>
+<p>
+Explore scientific terminology, research compounds,
+analytical concepts, storage principles,
+and organized published research references.
+</p>
 
-        <p>
-          Review Certificates of Analysis,
-          lot and batch references,
-          testing dates,
-          and available laboratory verification information.
-        </p>
+<span>
+OPEN RESEARCH LIBRARY →
+</span>
 
-        <span>
-          VIEW DOCUMENTATION →
-        </span>
-
-      </a>
+</a>
 
 
-    </div>
+
+<a
+  href="catalog.html"
+  class="feature-card"
+>
+
+<div class="num">
+02
+</div>
+
+<div class="tag">
+RESEARCH CATALOG
+</div>
+
+<h3>
+Research Materials
+</h3>
+
+<p>
+Browse research materials by compound name
+and listed amount through a clean,
+organized scientific catalog.
+</p>
+
+<span>
+BROWSE CATALOG →
+</span>
+
+</a>
 
 
-  </div>
+
+<a
+  href="quality-coa.html"
+  class="feature-card"
+>
+
+<div class="num">
+03
+</div>
+
+<div class="tag">
+ANALYTICAL DOCUMENTATION
+</div>
+
+<h3>
+Quality & COA
+</h3>
+
+<p>
+Review Certificates of Analysis,
+lot and batch references,
+testing dates,
+and available laboratory verification information.
+</p>
+
+<span>
+VIEW DOCUMENTATION →
+</span>
+
+</a>
+
+
+</div>
+
+
+</div>
 
 </section>
 
 
 
 <!-- =========================================
-     SCIENTIFIC INFORMATION
+     SCIENCE
 ========================================= -->
 
 <section class="section alt">
 
-  <div class="shell science-grid">
+<div class="shell science-grid">
 
 
-    <div class="science-panel">
+<div class="science-panel">
 
 
-      <div class="eyebrow">
-        SCIENTIFIC INFORMATION
-      </div>
+<div class="eyebrow">
+SCIENTIFIC INFORMATION
+</div>
 
 
-      <h2>
-        Research information without clinical-use guidance.
-      </h2>
+<h2>
+Research information without clinical-use guidance.
+</h2>
 
 
-      <p>
-        Platinum Cellular Health Labs is structured around
-        laboratory, analytical, and educational research.
-        Research information is kept separate from
-        human-use or clinical guidance.
-      </p>
+<p>
+Platinum Cellular Health Labs is structured around
+laboratory, analytical, and educational research.
+Research information is kept separate from
+human-use or clinical guidance.
+</p>
 
 
-      <div class="science-list">
+<div class="science-list">
 
-        <div>
-          ✓ Research terminology and compound identity
-        </div>
+<div>
+✓ Research terminology and compound identity
+</div>
 
-        <div>
-          ✓ Analytical testing concepts
-        </div>
+<div>
+✓ Analytical testing concepts
+</div>
 
-        <div>
-          ✓ Certificate of Analysis interpretation
-        </div>
+<div>
+✓ Certificate of Analysis interpretation
+</div>
 
-        <div>
-          ✓ Lot and batch documentation
-        </div>
+<div>
+✓ Lot and batch documentation
+</div>
 
-        <div>
-          ✓ Published scientific research references
-        </div>
+<div>
+✓ Published scientific research references
+</div>
 
-      </div>
-
-
-      <a
-        href="research-information.html"
-        class="btn"
-      >
-        ENTER RESEARCH INFORMATION
-      </a>
+</div>
 
 
-    </div>
+<a
+  href="research-information.html"
+  class="btn"
+>
+ENTER RESEARCH INFORMATION
+</a>
+
+
+</div>
 
 
 
-    <div class="lab-grid">
+<div class="lab-grid">
 
 
-      <div class="lab-stat">
+<div class="lab-stat">
 
-        <strong>
-          RUO
-        </strong>
+<strong>
+RUO
+</strong>
 
-        <span>
-          RESEARCH USE ONLY
-        </span>
+<span>
+RESEARCH USE ONLY
+</span>
 
-      </div>
-
-
-      <div class="lab-stat">
-
-        <strong>
-          COA
-        </strong>
-
-        <span>
-          ANALYTICAL DOCUMENTATION
-        </span>
-
-      </div>
+</div>
 
 
-      <div class="lab-stat">
+<div class="lab-stat">
 
-        <strong>
-          LOT
-        </strong>
+<strong>
+COA
+</strong>
 
-        <span>
-          BATCH TRACEABILITY
-        </span>
+<span>
+ANALYTICAL DOCUMENTATION
+</span>
 
-      </div>
-
-
-      <div class="lab-stat">
-
-        <strong>
-          21+
-        </strong>
-
-        <span>
-          RESTRICTED ACCESS
-        </span>
-
-      </div>
+</div>
 
 
-    </div>
+<div class="lab-stat">
+
+<strong>
+LOT
+</strong>
+
+<span>
+BATCH TRACEABILITY
+</span>
+
+</div>
 
 
-  </div>
+<div class="lab-stat">
+
+<strong>
+21+
+</strong>
+
+<span>
+RESTRICTED ACCESS
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
 
 </section>
 
@@ -2166,86 +1984,83 @@ footer {
 
 <section class="section">
 
-  <div class="shell quality-wrap">
+<div class="shell quality-wrap">
 
 
-    <div>
+<div>
 
 
-      <div class="eyebrow">
-        QUALITY & TRANSPARENCY
-      </div>
+<div class="eyebrow">
+QUALITY & TRANSPARENCY
+</div>
 
 
-      <h2>
-        Analytical documentation made easier to review.
-      </h2>
+<h2>
+Analytical documentation made easier to review.
+</h2>
 
 
-      <p class="muted">
-        Available Certificates of Analysis can be organized
-        by research material, lot or batch number,
-        testing date, laboratory, and verification information.
-      </p>
+<p class="muted">
+Available Certificates of Analysis can be organized
+by research material, lot or batch number,
+testing date, laboratory, and verification information.
+</p>
 
 
-      <a
-        href="quality-coa.html"
-        class="btn btn-gold"
-      >
-        OPEN QUALITY & COA
-      </a>
+<a
+  href="quality-coa.html"
+  class="btn btn-gold"
+>
+OPEN QUALITY & COA
+</a>
 
 
-    </div>
+</div>
 
 
 
-    <div class="coa-mock">
+<div class="coa-mock">
 
 
-      <div class="coa-head">
+<div class="coa-head">
 
-        <strong>
-          PCH
-        </strong>
+<strong>
+PCH
+</strong>
 
-        <span>
-          CERTIFICATE OF ANALYSIS
-        </span>
+<span>
+CERTIFICATE OF ANALYSIS
+</span>
 
-      </div>
-
-
-      <div class="line wide"></div>
-
-      <div class="line"></div>
-
-      <div class="line short"></div>
+</div>
 
 
-      <div class="coa-grid">
+<div class="line wide"></div>
 
-        <div></div>
+<div class="line"></div>
 
-        <div></div>
-
-        <div></div>
-
-        <div></div>
-
-      </div>
+<div class="line short"></div>
 
 
-      <div class="coa-foot">
-        LOT · TEST DATE · LABORATORY · RESULT
-      </div>
+<div class="coa-grid">
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+</div>
 
 
-    </div>
+<div class="coa-foot">
+LOT · TEST DATE · LABORATORY · RESULT
+</div>
 
 
-  </div>
+</div>
+
+
+</div>
 
 </section>
 
@@ -2257,96 +2072,96 @@ footer {
 
 <section class="section alt">
 
-  <div class="shell">
+<div class="shell">
 
 
-    <div class="section-head">
+<div class="section-head">
 
 
-      <div>
+<div>
 
-        <div class="eyebrow">
-          PROFESSIONAL STANDARDS
-        </div>
+<div class="eyebrow">
+PROFESSIONAL STANDARDS
+</div>
 
-        <h2>
-          Research-focused by design.
-        </h2>
+<h2>
+Research-focused by design.
+</h2>
 
-      </div>
-
-
-      <p>
-        Platinum Cellular Health Labs maintains
-        a clear separation between scientific research,
-        analytical documentation,
-        and clinical-use information.
-      </p>
+</div>
 
 
-    </div>
+<p>
+Platinum Cellular Health Labs maintains
+a clear separation between scientific research,
+analytical documentation,
+and clinical-use information.
+</p>
+
+
+</div>
 
 
 
-    <div class="standards-grid">
+<div class="standards-grid">
 
 
-      <div>
+<div>
 
-        <strong>
-          Research Use Only
-        </strong>
+<strong>
+Research Use Only
+</strong>
 
-        <span>
-          Scientific and analytical context.
-        </span>
+<span>
+Scientific and analytical context.
+</span>
 
-      </div>
-
-
-      <div>
-
-        <strong>
-          No Human or Animal Use
-        </strong>
-
-        <span>
-          Research materials are not presented for administration.
-        </span>
-
-      </div>
+</div>
 
 
-      <div>
+<div>
 
-        <strong>
-          Documentation First
-        </strong>
+<strong>
+No Human or Animal Use
+</strong>
 
-        <span>
-          Available COAs organized by lot or batch.
-        </span>
+<span>
+Research materials are not presented for administration.
+</span>
 
-      </div>
-
-
-      <div>
-
-        <strong>
-          Restricted Access
-        </strong>
-
-        <span>
-          21+ certification required.
-        </span>
-
-      </div>
+</div>
 
 
-    </div>
+<div>
+
+<strong>
+Documentation First
+</strong>
+
+<span>
+Available COAs organized by lot or batch.
+</span>
+
+</div>
 
 
-  </div>
+<div>
+
+<strong>
+Restricted Access
+</strong>
+
+<span>
+21+ certification required.
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
 
 </section>
 
@@ -2361,28 +2176,28 @@ footer {
 
 <footer>
 
-  <div class="shell footer-grid">
+<div class="shell footer-grid">
 
 
-    <div>
+<div>
 
-      <strong>
-        Platinum Cellular Health Labs
-      </strong>
+<strong>
+Platinum Cellular Health Labs
+</strong>
 
-      <div>
-        Longevity at the Cellular Level
-      </div>
+<div>
+Longevity at the Cellular Level
+</div>
 
-    </div>
-
-
-    <div>
-      21+ · Research Use Only · Not for human or animal use
-    </div>
+</div>
 
 
-  </div>
+<div>
+21+ · Research Use Only · Not for human or animal use
+</div>
+
+
+</div>
 
 </footer>
 
@@ -2410,14 +2225,17 @@ function checkRequirements() {
     Array.from(checkboxes)
       .every(box => box.checked);
 
-  enterButton.disabled = !allChecked;
+  enterButton.disabled =
+    !allChecked;
 
   if (allChecked) {
 
     enterButton.textContent =
       "CERTIFY & ENTER";
 
-  } else {
+  }
+
+  else {
 
     enterButton.textContent =
       "CHECK ALL BOXES TO CONTINUE";
@@ -2456,7 +2274,8 @@ enterButton.addEventListener(
       "yes"
     );
 
-    document.body.style.overflow = "auto";
+    document.body.style.overflow =
+      "auto";
 
   }
 );
@@ -2485,7 +2304,8 @@ if (
   !== "yes"
 ) {
 
-  document.body.style.overflow = "hidden";
+  document.body.style.overflow =
+    "hidden";
 
 }
 
