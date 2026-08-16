@@ -65,6 +65,10 @@ img {
   display: block;
 }
 
+button {
+  font-family: inherit;
+}
+
 :root {
   --black: #050607;
   --panel: #0d0f11;
@@ -93,11 +97,13 @@ img {
 
 .site-header {
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
 
   background:
-    rgba(5,6,7,.95);
+    rgba(5,6,7,.96);
 
   backdrop-filter:
     blur(15px);
@@ -111,14 +117,18 @@ img {
   min-height: 78px;
 
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
+
+  justify-content:
+    space-between;
 
   gap: 25px;
 }
 
 .brand {
   display: flex;
+
   align-items: center;
 
   gap: 12px;
@@ -137,31 +147,39 @@ img {
   border-radius: 50%;
 
   border:
-    1px solid rgba(213,173,85,.35);
+    1px solid
+    rgba(213,173,85,.35);
 }
 
 .brand-title {
   font-size: 13px;
+
   font-weight: 900;
+
   letter-spacing: 1px;
 }
 
 .brand-sub {
   font-size: 8px;
+
   color: var(--gold);
+
   letter-spacing: 2px;
+
   margin-top: 2px;
 }
 
 .nav-links {
   display: flex;
+
   align-items: center;
 
-  gap: 22px;
+  gap: 20px;
 
   color: #b9bdc0;
 
   font-size: 13px;
+
   font-weight: 700;
 }
 
@@ -171,12 +189,144 @@ img {
 
 
 /* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  padding: 10px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 9px;
+
+  background: #0d1012;
+
+  cursor: pointer;
+}
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  margin: 5px 0;
+
+  border-radius: 10px;
+
+  background: var(--gold2);
+
+  transition: .25s ease;
+}
+
+.mobile-menu {
+  display: none;
+
+  background:
+    rgba(6,7,8,.99);
+
+  border-top:
+    1px solid #202428;
+
+  border-bottom:
+    1px solid #252a2e;
+
+  box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.4);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu-inner {
+  display: grid;
+
+  padding-top: 10px;
+
+  padding-bottom: 18px;
+}
+
+.mobile-menu-inner > a {
+  padding:
+    15px 3px;
+
+  border-bottom:
+    1px solid #1f2326;
+
+  color: #c6cacc;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+}
+
+.mobile-menu-inner > a:hover {
+  color: var(--gold2);
+}
+
+.mobile-menu-inner
+.mobile-contact-button {
+  margin-top: 15px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+
+  text-align: center;
+}
+
+.mobile-menu-button.active
+span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.active
+span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.active
+span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* =========================================
    BUTTON
 ========================================= */
 
 .btn {
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
   min-height: 46px;
@@ -193,6 +343,7 @@ img {
   color: #f4f4f4;
 
   font-size: 11px;
+
   font-weight: 900;
 
   letter-spacing: .7px;
@@ -219,6 +370,7 @@ img {
   color: var(--gold2);
 
   font-size: 11px;
+
   font-weight: 900;
 
   letter-spacing: 1px;
@@ -228,6 +380,7 @@ img {
   color: var(--gold);
 
   font-size: 11px;
+
   font-weight: 900;
 
   letter-spacing: 2.5px;
@@ -264,6 +417,7 @@ img {
 
 .hero-meta {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 9px;
@@ -272,7 +426,8 @@ img {
 }
 
 .hero-meta span {
-  padding: 7px 10px;
+  padding:
+    7px 10px;
 
   border:
     1px solid #292e32;
@@ -284,6 +439,7 @@ img {
   color: #858c91;
 
   font-size: 9px;
+
   font-weight: 900;
 
   letter-spacing: 1px;
@@ -295,7 +451,8 @@ img {
 ========================================= */
 
 .policy-nav {
-  padding: 32px 0;
+  padding:
+    32px 0;
 
   border-bottom:
     1px solid var(--border);
@@ -303,13 +460,15 @@ img {
 
 .policy-links {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 9px;
 }
 
 .policy-links a {
-  padding: 9px 12px;
+  padding:
+    9px 12px;
 
   border:
     1px solid #292e32;
@@ -321,6 +480,7 @@ img {
   color: #aab0b4;
 
   font-size: 10px;
+
   font-weight: 900;
 
   letter-spacing: .5px;
@@ -420,30 +580,10 @@ img {
   line-height: 1.8;
 }
 
-.policy-card ul {
-  padding-left: 18px;
-
-  margin-top: 12px;
-
-  color: var(--muted);
-
-  font-size: 13px;
-
-  line-height: 1.8;
-}
-
-.policy-card li {
-  margin-bottom: 7px;
-}
-
-
-/* =========================================
-   IMPORTANT
-========================================= */
-
 .important {
   border:
-    1px solid rgba(213,173,85,.35);
+    1px solid
+    rgba(213,173,85,.35);
 
   background:
     rgba(213,173,85,.03);
@@ -458,7 +598,8 @@ img {
   padding: 28px;
 
   border:
-    1px solid rgba(213,173,85,.32);
+    1px solid
+    rgba(213,173,85,.32);
 
   border-radius: 15px;
 
@@ -501,7 +642,8 @@ img {
   padding: 22px;
 
   border:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 
   border-radius: 12px;
 
@@ -514,6 +656,7 @@ img {
   color: #777e83;
 
   font-size: 9px;
+
   font-weight: 900;
 
   letter-spacing: 1px;
@@ -612,6 +755,7 @@ img {
   color: #777e83;
 
   font-size: 9px;
+
   font-weight: 900;
 
   letter-spacing: 1px;
@@ -650,7 +794,8 @@ img {
   padding: 25px;
 
   border:
-    1px solid rgba(213,173,85,.42);
+    1px solid
+    rgba(213,173,85,.42);
 
   border-radius: 14px;
 
@@ -668,6 +813,7 @@ img {
   color: var(--gold);
 
   font-size: 9px;
+
   font-weight: 900;
 
   letter-spacing: 1.4px;
@@ -747,7 +893,8 @@ img {
   padding: 26px;
 
   border:
-    1px solid rgba(213,173,85,.25);
+    1px solid
+    rgba(213,173,85,.25);
 
   border-radius: 14px;
 
@@ -781,7 +928,8 @@ img {
 ========================================= */
 
 footer {
-  padding: 40px 0;
+  padding:
+    40px 0;
 
   background: #030404;
 
@@ -842,9 +990,12 @@ footer {
     font-size: 7px;
   }
 
-  .nav-links
-  a:not(.contact-link) {
+  .nav-links {
     display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
   }
 
   .page-hero {
@@ -878,12 +1029,25 @@ footer {
 
 @media(max-width:520px) {
 
+  .brand {
+    gap: 8px;
+  }
+
+  .brand img {
+    width: 41px;
+    height: 41px;
+  }
+
   .brand-title {
-    font-size: 10px;
+    font-size: 9px;
+
+    letter-spacing: .6px;
   }
 
   .brand-sub {
-    font-size: 6px;
+    font-size: 5.8px;
+
+    letter-spacing: 1.2px;
   }
 
   .page-hero h1 {
@@ -913,8 +1077,7 @@ footer {
 
   .payment-grid,
   .shipping-summary {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
 }
@@ -947,6 +1110,7 @@ footer {
   alt="PCH Labs"
 >
 
+
 <div>
 
 <div class="brand-title">
@@ -961,6 +1125,9 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 </a>
 
+
+
+<!-- DESKTOP NAV -->
 
 <nav class="nav-links">
 
@@ -980,9 +1147,17 @@ Catalog
 Quality & COA
 </a>
 
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
 <a
   href="contact.html"
-  class="btn contact-link"
+  class="btn"
 >
 Contact
 </a>
@@ -990,7 +1165,72 @@ Contact
 </nav>
 
 
+
+<!-- MOBILE MENU BUTTON -->
+
+<button
+  class="mobile-menu-button"
+  id="mobileMenuButton"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+>
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+
 </div>
+
+
+
+<!-- MOBILE MENU -->
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+<div class="shell mobile-menu-inner">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research Information
+</a>
+
+<a href="catalog.html">
+Research Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a
+  href="contact.html"
+  class="mobile-contact-button"
+>
+Contact PCH Labs
+</a>
+
+</div>
+
+</div>
+
 
 </header>
 
@@ -1030,8 +1270,8 @@ Policies.
 These policies describe research-use restrictions,
 payment requirements, shipping and processing practices,
 final-sale terms, analytical-documentation limitations,
-pricing, privacy, and other conditions associated
-with Platinum Cellular Health Labs.
+pricing, privacy, and other conditions associated with
+Platinum Cellular Health Labs.
 </p>
 
 
@@ -1270,9 +1510,11 @@ USDC on the Solana network or SOL.
 Accepted Payment Methods
 </h3>
 
+
 <p>
-Customers must use one of the supported cryptocurrency
-payment methods shown below when completing an order.
+Customers must use one of the supported
+cryptocurrency payment methods shown below
+when completing an order.
 </p>
 
 
@@ -1330,8 +1572,8 @@ Customers are responsible for verifying the recipient
 wallet address, cryptocurrency type, network, and payment
 amount before transmitting funds. USDC payments must be
 sent using the Solana network. Cryptocurrency transactions
-may be irreversible after blockchain confirmation. Do not
-send funds using an unsupported cryptocurrency or network.
+may be irreversible after blockchain confirmation.
+Never provide a wallet seed phrase or private key.
 </p>
 
 </div>
@@ -1371,8 +1613,8 @@ All sales are final.
 <p>
 Customers should carefully review the research material,
 amount, quantity, price, payment information, shipping
-selection, insurance selection, and delivery address
-before completing payment.
+selection, optional insurance selection, and delivery
+address before completing payment.
 </p>
 
 </div>
@@ -1566,8 +1808,6 @@ $15 shipping option included
 </div>
 
 
-
-<!-- FREE SHIPPING PROMO -->
 
 <div class="promo-policy">
 
@@ -2338,6 +2578,8 @@ Longevity at the Cellular Level
 
 
 <div>
+contact@platinumcellularhealth.com
+<br>
 21+ · Research Use Only ·
 Not for human or animal use
 </div>
@@ -2346,6 +2588,91 @@ Not for human or animal use
 </div>
 
 </footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const mobileMenuButton =
+  document.getElementById(
+    "mobileMenuButton"
+  );
+
+
+const mobileMenu =
+  document.getElementById(
+    "mobileMenu"
+  );
+
+
+mobileMenuButton.addEventListener(
+  "click",
+  function() {
+
+    const isOpen =
+      mobileMenu.classList.toggle(
+        "open"
+      );
+
+
+    mobileMenuButton.classList.toggle(
+      "active",
+      isOpen
+    );
+
+
+    mobileMenuButton.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
+
+  }
+);
+
+
+const mobileLinks =
+  mobileMenu.querySelectorAll(
+    "a"
+  );
+
+
+mobileLinks.forEach(
+  function(link) {
+
+    link.addEventListener(
+      "click",
+      function() {
+
+        mobileMenu.classList.remove(
+          "open"
+        );
+
+
+        mobileMenuButton.classList.remove(
+          "active"
+        );
+
+
+        mobileMenuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+    );
+
+  }
+);
+
+</script>
 
 
 </body>
