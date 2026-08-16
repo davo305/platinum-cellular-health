@@ -1,1 +1,3604 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta name="theme-color" content="#050607">
+
+<title>
+Order Request | Platinum Cellular Health Labs
+</title>
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(198,160,70,.08),
+      transparent 32%
+    ),
+    #050607;
+
+  color: #f4f4f4;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height: 1.6;
+
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  --black: #050607;
+  --panel: #0d0f11;
+  --panel2: #111417;
+  --border: #252a2e;
+  --gold: #d5ad55;
+  --gold2: #f0d48c;
+  --text: #f5f5f5;
+  --muted: #9da3a8;
+  --green: #79c98d;
+}
+
+.shell {
+  width:
+    min(
+      1180px,
+      calc(100% - 36px)
+    );
+
+  margin: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background:
+    rgba(5,6,7,.96);
+
+  backdrop-filter:
+    blur(15px);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.08);
+}
+
+.nav {
+  min-height: 78px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 25px;
+}
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.brand img {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(213,173,85,.35);
+}
+
+.brand-title {
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.brand-sub {
+  font-size: 8px;
+
+  color: var(--gold);
+
+  letter-spacing: 2px;
+
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color: #b9bdc0;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: var(--gold2);
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  padding: 10px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 9px;
+
+  background: #0d1012;
+}
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  margin: 5px 0;
+
+  border-radius: 10px;
+
+  background: var(--gold2);
+
+  transition: .25s ease;
+}
+
+.mobile-menu {
+  display: none;
+
+  background:
+    rgba(6,7,8,.99);
+
+  border-top:
+    1px solid #202428;
+
+  border-bottom:
+    1px solid #252a2e;
+
+  box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.4);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu-inner {
+  display: grid;
+
+  padding-top: 10px;
+
+  padding-bottom: 18px;
+}
+
+.mobile-menu-inner > a {
+  padding:
+    15px 3px;
+
+  border-bottom:
+    1px solid #1f2326;
+
+  color: #c6cacc;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+}
+
+.mobile-menu-inner
+.mobile-contact-button {
+  margin-top: 15px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+
+  text-align: center;
+}
+
+.mobile-menu-button.active
+span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.active
+span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.active
+span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* =========================================
+   PROMO BANNER
+========================================= */
+
+.promo-banner {
+  width: 100%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      #8f681f,
+      #d5ad55,
+      #f0d48c,
+      #d5ad55,
+      #8f681f
+    );
+
+  color: #080909;
+}
+
+.promo-track {
+  display: flex;
+
+  width: max-content;
+
+  white-space: nowrap;
+
+  animation:
+    promoScroll 24s linear infinite;
+}
+
+.promo-track span {
+  display: inline-block;
+
+  padding:
+    9px 40px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+@keyframes promoScroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding:
+    0 20px;
+
+  border-radius: 8px;
+
+  border:
+    1px solid #34393d;
+
+  background: #101214;
+
+  color: #f4f4f4;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+
+  transition: .2s ease;
+}
+
+.btn:hover {
+  border-color: var(--gold);
+
+  transform:
+    translateY(-2px);
+}
+
+.btn-gold {
+  border: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.page-hero {
+  padding:
+    85px 0 60px;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.back-link {
+  display: inline-block;
+
+  margin-bottom: 30px;
+
+  color: var(--gold2);
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.eyebrow {
+  color: var(--gold);
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2.2px;
+
+  margin-bottom: 14px;
+}
+
+.page-hero h1 {
+  font-size:
+    clamp(
+      40px,
+      6vw,
+      68px
+    );
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 20px;
+}
+
+.page-hero p {
+  max-width: 780px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   CHECKOUT LAYOUT
+========================================= */
+
+.checkout-section {
+  padding:
+    60px 0 100px;
+}
+
+.checkout-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0,1.45fr)
+    minmax(320px,.55fr);
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   SECTION CARD
+========================================= */
+
+.section-card {
+  padding: 26px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  margin-bottom: 18px;
+}
+
+.section-card h2 {
+  font-size: 25px;
+
+  margin-bottom: 7px;
+}
+
+.section-card > p {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.75;
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================================
+   PRODUCT PICKER
+========================================= */
+
+.product-list {
+  display: grid;
+
+  gap: 10px;
+}
+
+.product-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    auto
+    auto;
+
+  gap: 15px;
+
+  align-items: center;
+
+  padding:
+    15px 16px;
+
+  border:
+    1px solid #24292d;
+
+  border-radius: 11px;
+
+  background: #0c0f11;
+}
+
+.product-name strong {
+  display: block;
+
+  font-size: 13px;
+}
+
+.product-name span {
+  display: block;
+
+  color: #737a7f;
+
+  font-size: 9px;
+
+  margin-top: 2px;
+
+  letter-spacing: .7px;
+}
+
+.product-price {
+  color: var(--gold2);
+
+  font-weight: 900;
+
+  min-width: 55px;
+
+  text-align: right;
+}
+
+
+/* =========================================
+   QUANTITY
+========================================= */
+
+.qty {
+  display: flex;
+
+  align-items: center;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  background: #07090a;
+}
+
+.qty button {
+  width: 34px;
+  height: 34px;
+
+  border: 0;
+
+  background: #111416;
+
+  color: var(--gold2);
+
+  font-size: 18px;
+}
+
+.qty input {
+  width: 36px;
+  height: 34px;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #fff;
+
+  text-align: center;
+
+  font-weight: 900;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 12px;
+}
+
+.form-field {
+  display: grid;
+
+  gap: 6px;
+}
+
+.form-field.full {
+  grid-column:
+    1 / -1;
+}
+
+.form-field label {
+  color: #8c9398;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #0a0c0e;
+
+  color: #f4f4f4;
+
+  padding:
+    13px 14px;
+
+  font-size: 14px;
+}
+
+.form-field textarea {
+  min-height: 90px;
+
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color:
+    rgba(213,173,85,.65);
+}
+
+
+/* =========================================
+   SHIPPING
+========================================= */
+
+.shipping-options {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 10px;
+}
+
+.shipping-option {
+  position: relative;
+}
+
+.shipping-option input {
+  position: absolute;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.shipping-option label {
+  display: block;
+
+  min-height: 85px;
+
+  padding: 15px;
+
+  border:
+    1px solid #2a2f33;
+
+  border-radius: 11px;
+
+  background: #0c0f11;
+
+  cursor: pointer;
+}
+
+.shipping-option label strong {
+  display: block;
+
+  color: #f1f1f1;
+
+  margin-bottom: 3px;
+}
+
+.shipping-option label span {
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+.shipping-option
+input:checked + label {
+  border-color: var(--gold);
+
+  box-shadow:
+    0 0 0 2px
+    rgba(213,173,85,.06);
+}
+
+.shipping-option
+input:checked + label strong {
+  color: var(--gold2);
+}
+
+
+/* =========================================
+   TOGGLES / AGREEMENTS
+========================================= */
+
+.check-row {
+  display: flex;
+
+  gap: 11px;
+
+  align-items: flex-start;
+
+  padding:
+    13px 0;
+
+  border-bottom:
+    1px solid #202428;
+}
+
+.check-row:last-child {
+  border-bottom: 0;
+}
+
+.check-row input {
+  width: 19px;
+  height: 19px;
+
+  min-width: 19px;
+
+  margin-top: 2px;
+
+  accent-color:
+    var(--gold);
+}
+
+.check-row span {
+  color: #b3b8bb;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+.check-row strong {
+  color: #eee;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.summary-column {
+  position: sticky;
+
+  top: 95px;
+}
+
+.summary-card {
+  padding: 26px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.28);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(213,173,85,.045),
+      #090b0c
+    );
+}
+
+.summary-card h2 {
+  font-size: 24px;
+
+  margin-bottom: 20px;
+}
+
+.cart-empty {
+  padding:
+    18px 0;
+
+  color: #777e83;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+.cart-items {
+  display: grid;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+}
+
+.cart-item {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 15px;
+
+  padding-bottom: 9px;
+
+  border-bottom:
+    1px solid #22272a;
+
+  font-size: 11px;
+}
+
+.cart-item span:first-child {
+  color: #c6cacc;
+}
+
+.cart-item span:last-child {
+  color: var(--gold2);
+
+  font-weight: 900;
+}
+
+
+/* =========================================
+   TOTALS
+========================================= */
+
+.totals {
+  display: grid;
+
+  gap: 10px;
+
+  padding-top: 15px;
+
+  border-top:
+    1px solid #33383c;
+}
+
+.total-line {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+
+  color: #8f969b;
+
+  font-size: 12px;
+}
+
+.total-line strong {
+  color: #e2e4e5;
+}
+
+.total-line.credit strong {
+  color: var(--green);
+}
+
+.grand-total {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  margin-top: 8px;
+
+  padding-top: 16px;
+
+  border-top:
+    1px solid #34393d;
+}
+
+.grand-total span {
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.grand-total strong {
+  color: var(--gold2);
+
+  font-size: 31px;
+}
+
+
+/* =========================================
+   PROMO STATUS
+========================================= */
+
+.promo-status {
+  margin-top: 18px;
+
+  padding: 13px;
+
+  border:
+    1px solid #2d3236;
+
+  border-radius: 9px;
+
+  background: #0b0d0f;
+
+  color: #8e959a;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.promo-status.qualified {
+  border-color:
+    rgba(121,201,141,.35);
+
+  color: #9bd7aa;
+}
+
+
+/* =========================================
+   CREATE ORDER
+========================================= */
+
+.create-order {
+  width: 100%;
+
+  margin-top: 20px;
+
+  min-height: 51px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+
+  font-weight: 900;
+
+  letter-spacing: .8px;
+}
+
+.create-order:disabled {
+  opacity: .35;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   GENERATED ORDER
+========================================= */
+
+.generated-order {
+  display: none;
+
+  margin-top: 25px;
+
+  padding: 25px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.35);
+
+  border-radius: 14px;
+
+  background: #090b0c;
+}
+
+.generated-order.show {
+  display: block;
+}
+
+.generated-order h3 {
+  color: var(--gold2);
+
+  margin-bottom: 12px;
+}
+
+.order-output {
+  width: 100%;
+
+  min-height: 340px;
+
+  padding: 15px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #050607;
+
+  color: #d8dbdd;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  resize: vertical;
+}
+
+.output-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.copy-status {
+  display: none;
+
+  margin-top: 9px;
+
+  color: var(--green);
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   NOTICE
+========================================= */
+
+.notice {
+  margin-top: 18px;
+
+  padding: 18px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.2);
+
+  border-radius: 11px;
+
+  background:
+    rgba(213,173,85,.025);
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  padding:
+    40px 0;
+
+  border-top:
+    1px solid var(--border);
+
+  background: #030404;
+}
+
+.footer-grid {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 30px;
+
+  color: #777d82;
+
+  font-size: 11px;
+}
+
+.footer-grid strong {
+  display: block;
+
+  color: #c7c9ca;
+
+  margin-bottom: 4px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:900px) {
+
+  .shell {
+    width:
+      min(
+        100% - 28px,
+        1180px
+      );
+  }
+
+  .nav {
+    min-height: 68px;
+  }
+
+  .brand img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brand-title {
+    font-size: 11px;
+  }
+
+  .brand-sub {
+    font-size: 7px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-column {
+    position: static;
+  }
+
+  .page-hero {
+    padding:
+      65px 0 50px;
+  }
+
+}
+
+
+@media(max-width:620px) {
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand img {
+    width: 41px;
+    height: 41px;
+  }
+
+  .brand-title {
+    font-size: 9px;
+
+    letter-spacing: .6px;
+  }
+
+  .brand-sub {
+    font-size: 5.8px;
+  }
+
+  .page-hero h1 {
+    font-size: 39px;
+  }
+
+  .section-card {
+    padding: 20px;
+  }
+
+  .product-row {
+    grid-template-columns:
+      1fr auto;
+
+    gap: 10px;
+  }
+
+  .product-price {
+    grid-column: 1;
+
+    grid-row: 2;
+
+    text-align: left;
+  }
+
+  .qty {
+    grid-column: 2;
+
+    grid-row:
+      1 / 3;
+  }
+
+  .form-grid,
+  .shipping-options {
+    grid-template-columns: 1fr;
+  }
+
+  .output-actions {
+    display: grid;
+  }
+
+  .output-actions .btn {
+    width: 100%;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+<div class="shell nav">
+
+
+<a
+  href="index.html"
+  class="brand"
+>
+
+<img
+  src="pch-logo.jpg"
+  alt="PCH Labs"
+>
+
+<div>
+
+<div class="brand-title">
+PLATINUM CELLULAR HEALTH LABS
+</div>
+
+<div class="brand-sub">
+LONGEVITY AT THE CELLULAR LEVEL
+</div>
+
+</div>
+
+</a>
+
+
+<nav class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research
+</a>
+
+<a href="catalog.html">
+Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</nav>
+
+
+<button
+  class="mobile-menu-button"
+  id="mobileMenuButton"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+>
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+
+</div>
+
+
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+<div class="shell mobile-menu-inner">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research Information
+</a>
+
+<a href="catalog.html">
+Research Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a
+  href="contact.html"
+  class="mobile-contact-button"
+>
+Contact PCH Labs
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="promo-banner">
+
+<div class="promo-track">
+
+<span>
+✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+</span>
+
+<span>
+$15 STANDARD SHIPPING CREDIT · PREMIUM SHIPPING AVAILABLE
+</span>
+
+<span>
+✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+</span>
+
+<span>
+OPTIONAL SHIPPING INSURANCE AVAILABLE
+</span>
+
+<span>
+✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+</span>
+
+<span>
+$15 STANDARD SHIPPING CREDIT · PREMIUM SHIPPING AVAILABLE
+</span>
+
+<span>
+✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+</span>
+
+<span>
+OPTIONAL SHIPPING INSURANCE AVAILABLE
+</span>
+
+</div>
+
+</div>
+
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="page-hero">
+
+<div class="shell">
+
+
+<a
+  href="catalog.html"
+  class="back-link"
+>
+← BACK TO RESEARCH CATALOG
+</a>
+
+
+<div class="eyebrow">
+PCH LABS ORDER REQUEST
+</div>
+
+
+<h1>
+Build your order.
+</h1>
+
+
+<p>
+Select research materials and quantities,
+choose a shipping option, add optional shipping
+insurance, and generate your complete order request.
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     CHECKOUT
+========================================= -->
+
+<section class="checkout-section">
+
+<div class="shell checkout-grid">
+
+
+<!-- =========================================
+     LEFT SIDE
+========================================= -->
+
+<div>
+
+
+<!-- PRODUCTS -->
+
+<div class="section-card">
+
+<div class="eyebrow">
+STEP 01
+</div>
+
+<h2>
+Select research materials
+</h2>
+
+<p>
+Use the + and − buttons to choose quantities.
+Your order subtotal updates automatically.
+</p>
+
+
+<div
+  class="product-list"
+  id="productList"
+>
+</div>
+
+
+</div>
+
+
+
+<!-- CUSTOMER INFORMATION -->
+
+<div class="section-card">
+
+<div class="eyebrow">
+STEP 02
+</div>
+
+<h2>
+Customer information
+</h2>
+
+<p>
+Enter the information needed to identify
+and prepare your order request.
+</p>
+
+
+<div class="form-grid">
+
+
+<div class="form-field">
+
+<label for="customerName">
+FULL NAME
+</label>
+
+<input
+  id="customerName"
+  type="text"
+  autocomplete="name"
+  placeholder="Full name"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label for="customerEmail">
+EMAIL
+</label>
+
+<input
+  id="customerEmail"
+  type="email"
+  autocomplete="email"
+  placeholder="Email address"
+>
+
+</div>
+
+
+<div class="form-field full">
+
+<label for="address1">
+SHIPPING ADDRESS
+</label>
+
+<input
+  id="address1"
+  type="text"
+  autocomplete="street-address"
+  placeholder="Street address"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label for="city">
+CITY
+</label>
+
+<input
+  id="city"
+  type="text"
+  autocomplete="address-level2"
+  placeholder="City"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label for="state">
+STATE
+</label>
+
+<input
+  id="state"
+  type="text"
+  autocomplete="address-level1"
+  placeholder="State"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label for="zip">
+ZIP CODE
+</label>
+
+<input
+  id="zip"
+  type="text"
+  autocomplete="postal-code"
+  placeholder="ZIP code"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label for="country">
+COUNTRY
+</label>
+
+<input
+  id="country"
+  type="text"
+  value="United States"
+  autocomplete="country-name"
+>
+
+</div>
+
+
+<div class="form-field full">
+
+<label for="notes">
+ORDER NOTES — OPTIONAL
+</label>
+
+<textarea
+  id="notes"
+  placeholder="Optional order notes..."
+></textarea>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- SHIPPING -->
+
+<div class="section-card">
+
+<div class="eyebrow">
+STEP 03
+</div>
+
+<h2>
+Choose shipping
+</h2>
+
+<p>
+Orders with a merchandise subtotal greater than
+$280 automatically receive a $15 shipping credit.
+</p>
+
+
+<div class="shipping-options">
+
+
+<div class="shipping-option">
+
+<input
+  type="radio"
+  name="shipping"
+  id="ship15"
+  value="15"
+  checked
+>
+
+<label for="ship15">
+
+<strong>
+Standard — $15
+</strong>
+
+<span>
+Standard shipping option
+</span>
+
+</label>
+
+</div>
+
+
+
+<div class="shipping-option">
+
+<input
+  type="radio"
+  name="shipping"
+  id="ship30"
+  value="30"
+>
+
+<label for="ship30">
+
+<strong>
+Shipping — $30
+</strong>
+
+<span>
+Upgraded shipping option
+</span>
+
+</label>
+
+</div>
+
+
+
+<div class="shipping-option">
+
+<input
+  type="radio"
+  name="shipping"
+  id="ship45"
+  value="45"
+>
+
+<label for="ship45">
+
+<strong>
+Shipping — $45
+</strong>
+
+<span>
+Premium shipping option
+</span>
+
+</label>
+
+</div>
+
+
+
+<div class="shipping-option">
+
+<input
+  type="radio"
+  name="shipping"
+  id="ship60"
+  value="60"
+>
+
+<label for="ship60">
+
+<strong>
+Shipping — $60
+</strong>
+
+<span>
+Premium shipping option
+</span>
+
+</label>
+
+</div>
+
+
+</div>
+
+
+
+<div
+  class="check-row"
+  style="margin-top:18px;"
+>
+
+<input
+  type="checkbox"
+  id="insurance"
+>
+
+<span>
+
+<strong>
+Add optional shipping insurance.
+</strong>
+
+Insurance is calculated at $1 for every started
+$100 of merchandise value. For example,
+a $250 merchandise subtotal receives a $3
+insurance charge.
+
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<!-- PAYMENT -->
+
+<div class="section-card">
+
+<div class="eyebrow">
+STEP 04
+</div>
+
+<h2>
+Preferred payment method
+</h2>
+
+<p>
+PCH Labs currently accepts USDC on the Solana
+network or SOL.
+</p>
+
+
+<div class="shipping-options">
+
+
+<div class="shipping-option">
+
+<input
+  type="radio"
+  name="payment"
+  id="payUsdc"
+  value="USDC — Solana Network"
+  checked
+>
+
+<label for="payUsdc">
+
+<strong>
+USDC
+</strong>
+
+<span>
+Solana Network Only
+</span>
+
+</label>
+
+</div>
+
+
+
+<div class="shipping-option">
+
+<input
+  type="radio"
+  name="payment"
+  id="paySol"
+  value="SOL"
+>
+
+<label for="paySol">
+
+<strong>
+SOL
+</strong>
+
+<span>
+Solana
+</span>
+
+</label>
+
+</div>
+
+
+</div>
+
+
+<div class="notice">
+
+Never provide your wallet seed phrase,
+recovery phrase, private key, password,
+or authentication code to PCH Labs.
+Payment instructions should only require
+the payment token, network, amount,
+and destination wallet address.
+
+</div>
+
+
+</div>
+
+
+
+<!-- AGREEMENTS -->
+
+<div class="section-card">
+
+<div class="eyebrow">
+STEP 05
+</div>
+
+<h2>
+Order certification
+</h2>
+
+<p>
+All required confirmations must be selected
+before an order request can be generated.
+</p>
+
+
+<label class="check-row">
+
+<input
+  type="checkbox"
+  class="required-check"
+>
+
+<span>
+
+<strong>
+I certify that I am at least 21 years old.
+</strong>
+
+</span>
+
+</label>
+
+
+
+<label class="check-row">
+
+<input
+  type="checkbox"
+  class="required-check"
+>
+
+<span>
+
+I understand that listed research materials are
+<strong>Research Use Only</strong> and are not
+intended for human or animal consumption,
+administration, diagnosis, treatment,
+or clinical/veterinary use.
+
+</span>
+
+</label>
+
+
+
+<label class="check-row">
+
+<input
+  type="checkbox"
+  class="required-check"
+>
+
+<span>
+
+I have reviewed and agree to the
+<a
+  href="policies.html"
+  target="_blank"
+  style="color:var(--gold2);"
+>
+PCH Labs Policies
+</a>,
+including the all-sales-final policy.
+
+</span>
+
+</label>
+
+
+
+<label class="check-row">
+
+<input
+  type="checkbox"
+  class="required-check"
+>
+
+<span>
+
+I have reviewed my selected research materials,
+quantities, shipping option, shipping address,
+and payment preference for accuracy.
+
+</span>
+
+</label>
+
+
+</div>
+
+
+
+<!-- GENERATED ORDER -->
+
+<div
+  class="generated-order"
+  id="generatedOrder"
+>
+
+<h3>
+Your order request is ready.
+</h3>
+
+<textarea
+  class="order-output"
+  id="orderOutput"
+  readonly
+></textarea>
+
+
+<div class="output-actions">
+
+
+<button
+  class="btn btn-gold"
+  type="button"
+  id="copyOrder"
+>
+COPY ORDER REQUEST
+</button>
+
+
+<a
+  href="mailto:contact@platinumcellularhealth.com?subject=PCH%20Labs%20Order%20Request"
+  class="btn"
+>
+OPEN EMAIL
+</a>
+
+
+</div>
+
+
+<div
+  class="copy-status"
+  id="copyStatus"
+>
+Order request copied.
+</div>
+
+
+<div class="notice">
+
+For privacy, this page does not automatically transmit
+your shipping information anywhere. Copy the generated
+order request and send it to the official PCH Labs contact
+channel. We can connect this page to your preferred secure
+order-form backend next.
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================================
+     ORDER SUMMARY
+========================================= -->
+
+<aside class="summary-column">
+
+
+<div class="summary-card">
+
+
+<div class="eyebrow">
+LIVE CART
+</div>
+
+
+<h2>
+Order summary
+</h2>
+
+
+<div
+  class="cart-empty"
+  id="cartEmpty"
+>
+No products selected yet.
+</div>
+
+
+<div
+  class="cart-items"
+  id="cartItems"
+>
+</div>
+
+
+
+<div class="totals">
+
+
+<div class="total-line">
+
+<span>
+Merchandise subtotal
+</span>
+
+<strong id="subtotal">
+$0.00
+</strong>
+
+</div>
+
+
+
+<div class="total-line">
+
+<span>
+Shipping
+</span>
+
+<strong id="shippingCost">
+$15.00
+</strong>
+
+</div>
+
+
+
+<div
+  class="total-line credit"
+  id="shippingCreditRow"
+  style="display:none;"
+>
+
+<span>
+Shipping promotion
+</span>
+
+<strong>
+− $15.00
+</strong>
+
+</div>
+
+
+
+<div class="total-line">
+
+<span>
+Optional insurance
+</span>
+
+<strong id="insuranceCost">
+$0.00
+</strong>
+
+</div>
+
+
+</div>
+
+
+
+<div class="grand-total">
+
+<span>
+TOTAL
+</span>
+
+<strong id="grandTotal">
+$15.00
+</strong>
+
+</div>
+
+
+
+<div
+  class="promo-status"
+  id="promoStatus"
+>
+
+Add more than $280 in merchandise to receive
+the $15 standard-shipping credit.
+
+</div>
+
+
+
+<button
+  class="create-order"
+  id="createOrder"
+  type="button"
+  disabled
+>
+SELECT PRODUCTS TO CONTINUE
+</button>
+
+
+</div>
+
+
+</aside>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+<div class="shell footer-grid">
+
+
+<div>
+
+<strong>
+Platinum Cellular Health Labs
+</strong>
+
+<div>
+Longevity at the Cellular Level
+</div>
+
+</div>
+
+
+<div>
+contact@platinumcellularhealth.com
+<br>
+21+ · Research Use Only ·
+Not for human or animal use
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================
+   PRODUCT DATA
+========================================= */
+
+const products = [
+
+  {
+    name: "Hospira BAC Water",
+    amount: "BAC WATER",
+    price: 32
+  },
+
+  {
+    name: "EBAC BAC Water",
+    amount: "BAC WATER",
+    price: 16
+  },
+
+  {
+    name: "R10",
+    amount: "10 MG",
+    price: 60
+  },
+
+  {
+    name: "R20",
+    amount: "20 MG",
+    price: 80
+  },
+
+  {
+    name: "R30",
+    amount: "30 MG",
+    price: 100
+  },
+
+  {
+    name: "T10",
+    amount: "10 MG",
+    price: 50
+  },
+
+  {
+    name: "T20",
+    amount: "20 MG",
+    price: 70
+  },
+
+  {
+    name: "GHK-Cu",
+    amount: "50 MG",
+    price: 25
+  },
+
+  {
+    name: "GHK-Cu",
+    amount: "100 MG",
+    price: 45
+  },
+
+  {
+    name: "Cartalax",
+    amount: "20 MG",
+    price: 50
+  },
+
+  {
+    name: "N-Acetyl Semax (Amidate)",
+    amount: "10 MG",
+    price: 45
+  },
+
+  {
+    name: "N-Acetyl Selank (Amidate)",
+    amount: "10 MG",
+    price: 45
+  },
+
+  {
+    name: "PT-141",
+    amount: "10 MG",
+    price: 35
+  },
+
+  {
+    name: "Epithalon / Epitalon (Amidate)",
+    amount: "10 MG",
+    price: 40
+  },
+
+  {
+    name: "Pinealon",
+    amount: "10 MG",
+    price: 40
+  },
+
+  {
+    name: "DSIP",
+    amount: "5 MG",
+    price: 25
+  },
+
+  {
+    name: "DSIP",
+    amount: "10 MG",
+    price: 40
+  },
+
+  {
+    name: "ARA-290 (Cibinetide)",
+    amount: "10 MG",
+    price: 40
+  },
+
+  {
+    name: "ARA-290",
+    amount: "50 MG",
+    price: 90
+  },
+
+  {
+    name: "BPC-157 / TB-500 (Wolverine)",
+    amount: "10 MG",
+    price: 70
+  },
+
+  {
+    name: "BPC-157 / TB-4 (Wolverine)",
+    amount: "20 MG",
+    price: 110
+  },
+
+  {
+    name: "BPC-157 / TB-4 / Cartalax (Deadpool)",
+    amount: "30 MG",
+    price: 125
+  },
+
+  {
+    name: "KLOW",
+    amount: "80 MG",
+    price: 115
+  },
+
+  {
+    name: "KPV",
+    amount: "10 MG",
+    price: 40
+  },
+
+  {
+    name: "CJC",
+    amount: "5 MG",
+    price: 30
+  },
+
+  {
+    name: "Ipamorelin",
+    amount: "10 MG",
+    price: 50
+  },
+
+  {
+    name: "Tesamorelin",
+    amount: "10 MG",
+    price: 60
+  },
+
+  {
+    name: "CJC / Ipamorelin",
+    amount: "20 MG",
+    price: 100
+  },
+
+  {
+    name: "MOTS-C",
+    amount: "10 MG",
+    price: 45
+  },
+
+  {
+    name: "SS-31",
+    amount: "50 MG",
+    price: 100
+  },
+
+  {
+    name: "5-Amino-1MQ",
+    amount: "500 MG",
+    price: 70
+  },
+
+  {
+    name: "NAD+ (Buffered)",
+    amount: "1000 MG",
+    price: 40
+  }
+
+];
+
+
+/* =========================================
+   CART STATE
+========================================= */
+
+const quantities =
+  new Array(
+    products.length
+  ).fill(0);
+
+
+/* =========================================
+   ELEMENTS
+========================================= */
+
+const productList =
+  document.getElementById(
+    "productList"
+  );
+
+const cartItems =
+  document.getElementById(
+    "cartItems"
+  );
+
+const cartEmpty =
+  document.getElementById(
+    "cartEmpty"
+  );
+
+const subtotalElement =
+  document.getElementById(
+    "subtotal"
+  );
+
+const shippingCostElement =
+  document.getElementById(
+    "shippingCost"
+  );
+
+const shippingCreditRow =
+  document.getElementById(
+    "shippingCreditRow"
+  );
+
+const insuranceCostElement =
+  document.getElementById(
+    "insuranceCost"
+  );
+
+const grandTotalElement =
+  document.getElementById(
+    "grandTotal"
+  );
+
+const promoStatus =
+  document.getElementById(
+    "promoStatus"
+  );
+
+const insuranceCheckbox =
+  document.getElementById(
+    "insurance"
+  );
+
+const createOrderButton =
+  document.getElementById(
+    "createOrder"
+  );
+
+const generatedOrder =
+  document.getElementById(
+    "generatedOrder"
+  );
+
+const orderOutput =
+  document.getElementById(
+    "orderOutput"
+  );
+
+
+/* =========================================
+   MONEY FORMAT
+========================================= */
+
+function money(value) {
+
+  return (
+    "$"
+    +
+    value.toFixed(2)
+  );
+
+}
+
+
+/* =========================================
+   CREATE PRODUCT LIST
+========================================= */
+
+function buildProducts() {
+
+  products.forEach(
+    function(product, index) {
+
+      const row =
+        document.createElement(
+          "div"
+        );
+
+      row.className =
+        "product-row";
+
+
+      row.innerHTML = `
+
+        <div class="product-name">
+
+          <strong>
+            ${product.name}
+          </strong>
+
+          <span>
+            ${product.amount}
+          </span>
+
+        </div>
+
+
+        <div class="product-price">
+          $${product.price}
+        </div>
+
+
+        <div class="qty">
+
+          <button
+            type="button"
+            data-action="minus"
+            data-index="${index}"
+            aria-label="Decrease quantity"
+          >
+            −
+          </button>
+
+          <input
+            type="text"
+            value="0"
+            readonly
+            id="qty-${index}"
+          >
+
+          <button
+            type="button"
+            data-action="plus"
+            data-index="${index}"
+            aria-label="Increase quantity"
+          >
+            +
+          </button>
+
+        </div>
+
+      `;
+
+
+      productList.appendChild(
+        row
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   QUANTITY BUTTONS
+========================================= */
+
+productList.addEventListener(
+  "click",
+  function(event) {
+
+    const button =
+      event.target.closest(
+        "button[data-action]"
+      );
+
+
+    if (!button) {
+      return;
+    }
+
+
+    const index =
+      Number(
+        button.dataset.index
+      );
+
+
+    if (
+      button.dataset.action
+      ===
+      "plus"
+    ) {
+
+      quantities[index]++;
+
+    }
+
+
+    if (
+      button.dataset.action
+      ===
+      "minus"
+      &&
+      quantities[index] > 0
+    ) {
+
+      quantities[index]--;
+
+    }
+
+
+    document.getElementById(
+      "qty-" + index
+    ).value =
+      quantities[index];
+
+
+    updateCart();
+
+  }
+);
+
+
+/* =========================================
+   CALCULATE SUBTOTAL
+========================================= */
+
+function getSubtotal() {
+
+  let subtotal = 0;
+
+
+  products.forEach(
+    function(product, index) {
+
+      subtotal +=
+        product.price
+        *
+        quantities[index];
+
+    }
+  );
+
+
+  return subtotal;
+
+}
+
+
+/* =========================================
+   SHIPPING
+========================================= */
+
+function getSelectedShipping() {
+
+  const selected =
+    document.querySelector(
+      'input[name="shipping"]:checked'
+    );
+
+
+  return selected
+    ?
+    Number(selected.value)
+    :
+    15;
+
+}
+
+
+/* =========================================
+   INSURANCE
+
+   $1 for EVERY STARTED $100.
+
+   $1-$100 = $1
+   $101-$200 = $2
+   $201-$300 = $3
+
+========================================= */
+
+function getInsurance(
+  subtotal
+) {
+
+  if (
+    !insuranceCheckbox.checked
+    ||
+    subtotal <= 0
+  ) {
+
+    return 0;
+
+  }
+
+
+  return Math.ceil(
+    subtotal / 100
+  );
+
+}
+
+
+/* =========================================
+   UPDATE CART
+========================================= */
+
+function updateCart() {
+
+  const subtotal =
+    getSubtotal();
+
+
+  const shipping =
+    getSelectedShipping();
+
+
+  const qualifies =
+    subtotal > 280;
+
+
+  const shippingCredit =
+    qualifies
+    ?
+    Math.min(
+      15,
+      shipping
+    )
+    :
+    0;
+
+
+  const insurance =
+    getInsurance(
+      subtotal
+    );
+
+
+  const total =
+    subtotal
+    +
+    shipping
+    -
+    shippingCredit
+    +
+    insurance;
+
+
+  cartItems.innerHTML =
+    "";
+
+
+  let selectedCount =
+    0;
+
+
+  products.forEach(
+    function(product, index) {
+
+      const qty =
+        quantities[index];
+
+
+      if (qty <= 0) {
+        return;
+      }
+
+
+      selectedCount++;
+
+
+      const item =
+        document.createElement(
+          "div"
+        );
+
+
+      item.className =
+        "cart-item";
+
+
+      item.innerHTML = `
+
+        <span>
+          ${qty} ×
+          ${product.name}
+          ${product.amount}
+        </span>
+
+        <span>
+          ${money(
+            qty * product.price
+          )}
+        </span>
+
+      `;
+
+
+      cartItems.appendChild(
+        item
+      );
+
+    }
+  );
+
+
+  cartEmpty.style.display =
+    selectedCount === 0
+    ?
+    "block"
+    :
+    "none";
+
+
+  subtotalElement.textContent =
+    money(
+      subtotal
+    );
+
+
+  shippingCostElement.textContent =
+    money(
+      shipping
+    );
+
+
+  insuranceCostElement.textContent =
+    money(
+      insurance
+    );
+
+
+  grandTotalElement.textContent =
+    money(
+      total
+    );
+
+
+  shippingCreditRow.style.display =
+    qualifies
+    ?
+    "flex"
+    :
+    "none";
+
+
+  if (qualifies) {
+
+    promoStatus.classList.add(
+      "qualified"
+    );
+
+
+    promoStatus.textContent =
+      "✓ Free-standard-shipping promotion applied. "
+      +
+      "$15 has been credited toward shipping.";
+
+  }
+
+  else {
+
+    promoStatus.classList.remove(
+      "qualified"
+    );
+
+
+    const remaining =
+      280
+      -
+      subtotal;
+
+
+    promoStatus.textContent =
+      subtotal <= 280
+      ?
+      "Add more than "
+      +
+      money(
+        Math.max(
+          0,
+          remaining
+        )
+      )
+      +
+      " in merchandise to qualify for the $15 shipping credit."
+      :
+      "";
+
+  }
+
+
+  validateOrder();
+
+}
+
+
+/* =========================================
+   REQUIRED CHECKS
+========================================= */
+
+const requiredChecks =
+  document.querySelectorAll(
+    ".required-check"
+  );
+
+
+requiredChecks.forEach(
+  function(check) {
+
+    check.addEventListener(
+      "change",
+      validateOrder
+    );
+
+  }
+);
+
+
+/* =========================================
+   CUSTOMER FIELDS
+========================================= */
+
+const customerFields = [
+
+  "customerName",
+  "customerEmail",
+  "address1",
+  "city",
+  "state",
+  "zip",
+  "country"
+
+];
+
+
+customerFields.forEach(
+  function(id) {
+
+    document
+      .getElementById(id)
+      .addEventListener(
+        "input",
+        validateOrder
+      );
+
+  }
+);
+
+
+/* =========================================
+   VALIDATE ORDER
+========================================= */
+
+function validateOrder() {
+
+  const subtotal =
+    getSubtotal();
+
+
+  const allChecks =
+    Array.from(
+      requiredChecks
+    )
+    .every(
+      checkbox =>
+        checkbox.checked
+    );
+
+
+  const allFields =
+    customerFields.every(
+      function(id) {
+
+        return (
+          document
+            .getElementById(id)
+            .value
+            .trim()
+            !==
+            ""
+        );
+
+      }
+    );
+
+
+  const email =
+    document
+      .getElementById(
+        "customerEmail"
+      )
+      .value
+      .trim();
+
+
+  const emailLooksValid =
+    email.includes("@")
+    &&
+    email.includes(".");
+
+
+  const ready =
+    subtotal > 0
+    &&
+    allChecks
+    &&
+    allFields
+    &&
+    emailLooksValid;
+
+
+  createOrderButton.disabled =
+    !ready;
+
+
+  if (subtotal <= 0) {
+
+    createOrderButton.textContent =
+      "SELECT PRODUCTS TO CONTINUE";
+
+  }
+
+  else if (!allFields) {
+
+    createOrderButton.textContent =
+      "COMPLETE CUSTOMER INFORMATION";
+
+  }
+
+  else if (!emailLooksValid) {
+
+    createOrderButton.textContent =
+      "ENTER A VALID EMAIL";
+
+  }
+
+  else if (!allChecks) {
+
+    createOrderButton.textContent =
+      "COMPLETE ORDER CERTIFICATION";
+
+  }
+
+  else {
+
+    createOrderButton.textContent =
+      "GENERATE ORDER REQUEST";
+
+  }
+
+}
+
+
+/* =========================================
+   SHIPPING / INSURANCE EVENTS
+========================================= */
+
+document
+  .querySelectorAll(
+    'input[name="shipping"]'
+  )
+  .forEach(
+    function(option) {
+
+      option.addEventListener(
+        "change",
+        updateCart
+      );
+
+    }
+  );
+
+
+insuranceCheckbox.addEventListener(
+  "change",
+  updateCart
+);
+
+
+/* =========================================
+   GENERATE ORDER
+========================================= */
+
+createOrderButton.addEventListener(
+  "click",
+  function() {
+
+    if (
+      createOrderButton.disabled
+    ) {
+
+      return;
+
+    }
+
+
+    const subtotal =
+      getSubtotal();
+
+
+    const shipping =
+      getSelectedShipping();
+
+
+    const qualifies =
+      subtotal > 280;
+
+
+    const shippingCredit =
+      qualifies
+      ?
+      Math.min(
+        15,
+        shipping
+      )
+      :
+      0;
+
+
+    const insurance =
+      getInsurance(
+        subtotal
+      );
+
+
+    const total =
+      subtotal
+      +
+      shipping
+      -
+      shippingCredit
+      +
+      insurance;
+
+
+    const payment =
+      document.querySelector(
+        'input[name="payment"]:checked'
+      ).value;
+
+
+    let productLines =
+      "";
+
+
+    products.forEach(
+      function(product, index) {
+
+        const qty =
+          quantities[index];
+
+
+        if (qty <= 0) {
+          return;
+        }
+
+
+        productLines +=
+          qty
+          +
+          " x "
+          +
+          product.name
+          +
+          " "
+          +
+          product.amount
+          +
+          " @ $"
+          +
+          product.price
+          +
+          " = "
+          +
+          money(
+            qty * product.price
+          )
+          +
+          "\n";
+
+      }
+    );
+
+
+    const orderNumber =
+      "PCH-"
+      +
+      Date.now()
+        .toString()
+        .slice(-8);
+
+
+    const notes =
+      document
+        .getElementById(
+          "notes"
+        )
+        .value
+        .trim();
+
+
+    const output =
+
+`PLATINUM CELLULAR HEALTH LABS
+ORDER REQUEST
+
+ORDER REFERENCE:
+${orderNumber}
+
+CUSTOMER
+Name: ${document.getElementById("customerName").value.trim()}
+Email: ${document.getElementById("customerEmail").value.trim()}
+
+SHIPPING ADDRESS
+${document.getElementById("address1").value.trim()}
+${document.getElementById("city").value.trim()}, ${document.getElementById("state").value.trim()} ${document.getElementById("zip").value.trim()}
+${document.getElementById("country").value.trim()}
+
+RESEARCH MATERIALS
+${productLines}
+MERCHANDISE SUBTOTAL:
+${money(subtotal)}
+
+SHIPPING OPTION:
+${money(shipping)}
+
+FREE SHIPPING CREDIT:
+${qualifies ? "- " + money(shippingCredit) : "Not Qualified"}
+
+OPTIONAL SHIPPING INSURANCE:
+${insurance > 0 ? money(insurance) : "Declined"}
+
+TOTAL:
+${money(total)}
+
+PREFERRED PAYMENT:
+${payment}
+
+ORDER NOTES:
+${notes || "None"}
+
+CERTIFICATION:
+21+ confirmed
+Research Use Only terms confirmed
+Policies reviewed
+All-sales-final policy acknowledged
+Order details reviewed
+
+IMPORTANT:
+This is an order request and does not contain a cryptocurrency wallet address.
+Payment instructions should be verified separately with PCH Labs.
+
+Research Use Only.
+Not for human or animal use.`;
+
+
+    orderOutput.value =
+      output;
+
+
+    generatedOrder.classList.add(
+      "show"
+    );
+
+
+    generatedOrder.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  }
+);
+
+
+/* =========================================
+   COPY ORDER
+========================================= */
+
+const copyOrderButton =
+  document.getElementById(
+    "copyOrder"
+  );
+
+
+const copyStatus =
+  document.getElementById(
+    "copyStatus"
+  );
+
+
+copyOrderButton.addEventListener(
+  "click",
+  async function() {
+
+    try {
+
+      await navigator
+        .clipboard
+        .writeText(
+          orderOutput.value
+        );
+
+
+      copyStatus.style.display =
+        "block";
+
+
+      setTimeout(
+        function() {
+
+          copyStatus.style.display =
+            "none";
+
+        },
+        2500
+      );
+
+    }
+
+    catch (error) {
+
+      orderOutput.select();
+
+      document.execCommand(
+        "copy"
+      );
+
+
+      copyStatus.style.display =
+        "block";
+
+    }
+
+  }
+);
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const mobileMenuButton =
+  document.getElementById(
+    "mobileMenuButton"
+  );
+
+
+const mobileMenu =
+  document.getElementById(
+    "mobileMenu"
+  );
+
+
+mobileMenuButton.addEventListener(
+  "click",
+  function() {
+
+    const isOpen =
+      mobileMenu.classList.toggle(
+        "open"
+      );
+
+
+    mobileMenuButton.classList.toggle(
+      "active",
+      isOpen
+    );
+
+
+    mobileMenuButton.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
+
+  }
+);
+
+
+mobileMenu
+  .querySelectorAll("a")
+  .forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          mobileMenu.classList.remove(
+            "open"
+          );
+
+
+          mobileMenuButton.classList.remove(
+            "active"
+          );
+
+
+          mobileMenuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    }
+  );
+
+
+/* =========================================
+   START
+========================================= */
+
+buildProducts();
+
+updateCart();
+
+</script>
+
+
+</body>
+
+</html>
