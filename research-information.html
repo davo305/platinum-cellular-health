@@ -16,7 +16,6 @@
 Research Information | Platinum Cellular Health Labs
 </title>
 
-
 <style>
 
 /* =========================================
@@ -116,7 +115,9 @@ button {
   min-height: 78px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: 20px;
@@ -124,6 +125,7 @@ button {
 
 .brand {
   display: flex;
+
   align-items: center;
 
   gap: 12px;
@@ -174,6 +176,7 @@ button {
 
 .nav-links {
   display: flex;
+
   align-items: center;
 
   gap: 15px;
@@ -191,7 +194,7 @@ button {
 
 
 /* =========================================
-   MEMBER HEADER
+   DESKTOP MEMBER HEADER
 ========================================= */
 
 .member-area {
@@ -215,7 +218,8 @@ button {
     0 13px;
 
   border:
-    1px solid rgba(213,173,85,.4);
+    1px solid
+    rgba(213,173,85,.4);
 
   border-radius: 9px;
 
@@ -258,7 +262,8 @@ button {
     7px 10px;
 
   border:
-    1px solid rgba(213,173,85,.28);
+    1px solid
+    rgba(213,173,85,.28);
 
   border-radius: 9px;
 
@@ -275,7 +280,8 @@ button {
   background: var(--gold);
 
   box-shadow:
-    0 0 10px rgba(213,173,85,.45);
+    0 0 10px
+    rgba(213,173,85,.45);
 }
 
 .member-info {
@@ -361,6 +367,182 @@ button {
 
 
 /* =========================================
+   MOBILE VISIBLE MEMBER BAR
+========================================= */
+
+.mobile-member-status-bar {
+  display: none;
+
+  border-top:
+    1px solid #202428;
+
+  background:
+    #080a0b;
+}
+
+.mobile-member-status-inner {
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+.mobile-status-login {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 40px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.35);
+
+  border-radius: 8px;
+
+  color: var(--gold2);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: .5px;
+
+  background:
+    rgba(213,173,85,.03);
+}
+
+.mobile-status-member {
+  display: none;
+
+  width: 100%;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.mobile-status-member.visible {
+  display: flex;
+}
+
+.mobile-status-identity {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.mobile-status-dot {
+  width: 7px;
+  height: 7px;
+
+  min-width: 7px;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+
+  box-shadow:
+    0 0 9px
+    rgba(213,173,85,.55);
+}
+
+.mobile-status-copy {
+  min-width: 0;
+
+  line-height: 1.1;
+}
+
+.mobile-status-label {
+  color: #777e83;
+
+  font-size: 6px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.mobile-status-name {
+  max-width: 130px;
+
+  overflow: hidden;
+
+  color: var(--gold2);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.mobile-status-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.mobile-status-actions a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding:
+    0 9px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 7px;
+
+  background: #0d1012;
+
+  color: #c6cacc;
+
+  font-size: 7px;
+
+  font-weight: 900;
+}
+
+.mobile-status-actions a.gold {
+  border: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+}
+
+
+/* =========================================
    MOBILE MENU
 ========================================= */
 
@@ -399,6 +581,25 @@ button {
   transition: .25s ease;
 }
 
+.mobile-menu-button.active
+span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.active
+span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.active
+span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
 .mobile-menu {
   display: none;
 
@@ -423,8 +624,8 @@ button {
 .mobile-menu-inner {
   display: grid;
 
-  padding-top: 10px;
-  padding-bottom: 18px;
+  padding:
+    10px 0 18px;
 }
 
 .mobile-menu-inner > a {
@@ -447,47 +648,6 @@ button {
   color: var(--gold2);
 }
 
-.mobile-menu-inner
-.mobile-contact-button {
-  margin-top: 15px;
-
-  padding: 14px;
-
-  border: none;
-
-  border-radius: 9px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
-  color: #080909;
-
-  text-align: center;
-}
-
-.mobile-menu-button.active
-span:nth-child(1) {
-  transform:
-    translateY(7px)
-    rotate(45deg);
-}
-
-.mobile-menu-button.active
-span:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu-button.active
-span:nth-child(3) {
-  transform:
-    translateY(-7px)
-    rotate(-45deg);
-}
-
 
 /* =========================================
    MOBILE MEMBER BOX
@@ -499,7 +659,8 @@ span:nth-child(3) {
   padding: 16px;
 
   border:
-    1px solid rgba(213,173,85,.25);
+    1px solid
+    rgba(213,173,85,.25);
 
   border-radius: 12px;
 
@@ -627,6 +788,7 @@ span:nth-child(3) {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   min-height: 46px;
@@ -1396,7 +1558,8 @@ footer {
 .footer-grid {
   display: flex;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
   gap: 30px;
 
@@ -1422,6 +1585,10 @@ footer {
 
   .member-area {
     display: none;
+  }
+
+  .mobile-member-status-bar {
+    display: block;
   }
 
 }
@@ -1508,7 +1675,7 @@ footer {
 }
 
 
-@media(max-width:480px) {
+@media(max-width:520px) {
 
   .brand {
     gap: 8px;
@@ -1529,6 +1696,23 @@ footer {
     font-size: 5.8px;
 
     letter-spacing: 1.2px;
+  }
+
+  .mobile-member-status-inner {
+    min-height: 58px;
+  }
+
+  .mobile-status-name {
+    max-width: 95px;
+
+    font-size: 9px;
+  }
+
+  .mobile-status-actions a {
+    padding:
+      0 7px;
+
+    font-size: 6.5px;
   }
 
   .page-hero h1 {
@@ -1605,8 +1789,6 @@ LONGEVITY AT THE CELLULAR LEVEL
 <div class="nav-right">
 
 
-<!-- DESKTOP NAV -->
-
 <nav class="nav-links">
 
 <a href="index.html">
@@ -1645,8 +1827,6 @@ Contact
 
 
 
-<!-- DESKTOP MEMBER AREA -->
-
 <div class="member-area">
 
 
@@ -1669,7 +1849,6 @@ Contact
 
 <span class="member-dot"></span>
 
-
 <div class="member-info">
 
 <div class="member-label">
@@ -1684,7 +1863,6 @@ MEMBER
 </div>
 
 </div>
-
 
 </div>
 
@@ -1721,8 +1899,6 @@ SIGN OUT
 
 
 
-<!-- MOBILE MENU BUTTON -->
-
 <button
   class="mobile-menu-button"
   id="mobileMenuButton"
@@ -1744,7 +1920,80 @@ SIGN OUT
 
 
 
-<!-- MOBILE MENU -->
+<!-- =========================================
+     VISIBLE MOBILE MEMBER STATUS
+========================================= -->
+
+<div class="mobile-member-status-bar">
+
+<div class="shell mobile-member-status-inner">
+
+
+<a
+  href="login.html"
+  class="mobile-status-login"
+  id="visibleMobileLogin"
+>
+🔐 MEMBER LOGIN / CREATE ACCOUNT
+</a>
+
+
+<div
+  class="mobile-status-member"
+  id="visibleMobileMember"
+>
+
+
+<div class="mobile-status-identity">
+
+<span class="mobile-status-dot"></span>
+
+<div class="mobile-status-copy">
+
+<div class="mobile-status-label">
+SIGNED IN
+</div>
+
+<div
+  class="mobile-status-name"
+  id="visibleMobileMemberName"
+>
+PCH Member
+</div>
+
+</div>
+
+</div>
+
+
+<div class="mobile-status-actions">
+
+<a href="login.html">
+ACCOUNT
+</a>
+
+<a
+  href="login.html"
+  class="gold"
+>
+CHECKOUT
+</a>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     MOBILE MENU
+========================================= -->
 
 <div
   class="mobile-menu"
@@ -1788,17 +2037,14 @@ PCH Member
 <div
   class="mobile-member-email"
   id="mobileMemberEmail"
->
-</div>
+></div>
 
 
 <div class="mobile-member-actions">
 
-
 <a href="login.html">
 MY ACCOUNT
 </a>
-
 
 <a
   href="login.html"
@@ -1807,7 +2053,6 @@ MY ACCOUNT
 CHECKOUT
 </a>
 
-
 <button
   type="button"
   id="mobileSignout"
@@ -1815,11 +2060,9 @@ CHECKOUT
 SIGN OUT
 </button>
 
-
 <a href="catalog.html">
 CATALOG
 </a>
-
 
 </div>
 
@@ -1859,11 +2102,8 @@ Policies
 FAQ
 </a>
 
-<a
-  href="contact.html"
-  class="mobile-contact-button"
->
-Contact PCH Labs
+<a href="contact.html">
+Contact
 </a>
 
 
@@ -2263,16 +2503,13 @@ between experimental materials and general lab supplies.
 
 <div class="coa-copy">
 
-
 <div class="eyebrow">
 CERTIFICATE OF ANALYSIS
 </div>
 
-
 <h2>
 How to read a COA.
 </h2>
-
 
 <p>
 A Certificate of Analysis is a laboratory document
@@ -2791,7 +3028,6 @@ Not for human or animal use
 ></script>
 
 
-
 <script>
 
 /* =========================================
@@ -2844,52 +3080,59 @@ const desktopLoginLink =
     "desktopLoginLink"
   );
 
-
 const desktopMemberArea =
   document.getElementById(
     "desktopMemberArea"
   );
-
 
 const desktopMemberName =
   document.getElementById(
     "desktopMemberName"
   );
 
-
 const desktopSignout =
   document.getElementById(
     "desktopSignout"
   );
-
 
 const mobileLoginLink =
   document.getElementById(
     "mobileLoginLink"
   );
 
-
 const mobileMemberArea =
   document.getElementById(
     "mobileMemberArea"
   );
-
 
 const mobileMemberName =
   document.getElementById(
     "mobileMemberName"
   );
 
-
 const mobileMemberEmail =
   document.getElementById(
     "mobileMemberEmail"
   );
 
-
 const mobileSignout =
   document.getElementById(
     "mobileSignout"
+  );
+
+const visibleMobileLogin =
+  document.getElementById(
+    "visibleMobileLogin"
+  );
+
+const visibleMobileMember =
+  document.getElementById(
+    "visibleMobileMember"
+  );
+
+const visibleMobileMemberName =
+  document.getElementById(
+    "visibleMobileMemberName"
   );
 
 
@@ -2913,6 +3156,15 @@ function showLoggedOutMemberState() {
 
 
   mobileMemberArea.classList.remove(
+    "visible"
+  );
+
+
+  visibleMobileLogin.style.display =
+    "flex";
+
+
+  visibleMobileMember.classList.remove(
     "visible"
   );
 
@@ -2967,6 +3219,19 @@ function showLoggedInMemberState(
     user.email
     ||
     "";
+
+
+  visibleMobileLogin.style.display =
+    "none";
+
+
+  visibleMobileMember.classList.add(
+    "visible"
+  );
+
+
+  visibleMobileMemberName.textContent =
+    username;
 
 }
 
@@ -3122,39 +3387,35 @@ mobileMenuButton.addEventListener(
 );
 
 
-const mobileLinks =
-  mobileMenu.querySelectorAll(
-    "a"
+mobileMenu
+  .querySelectorAll("a")
+  .forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          mobileMenu.classList.remove(
+            "open"
+          );
+
+
+          mobileMenuButton.classList.remove(
+            "active"
+          );
+
+
+          mobileMenuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    }
   );
-
-
-mobileLinks.forEach(
-  function(link) {
-
-    link.addEventListener(
-      "click",
-      function() {
-
-        mobileMenu.classList.remove(
-          "open"
-        );
-
-
-        mobileMenuButton.classList.remove(
-          "active"
-        );
-
-
-        mobileMenuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      }
-    );
-
-  }
-);
 
 
 /* =========================================
