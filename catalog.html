@@ -1,425 +1,1732 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#08090b">
 
-<title>Research Catalog | PCH Labs</title>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#050607">
+
+<title>
+Research Catalog | Platinum Cellular Health Labs
+</title>
 
 <style>
 
-/* CHECKOUT BUTTON */
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  min-height:100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(204,164,73,.07),
+      transparent 32%
+    ),
+    #050607;
+
+  color:#f5f5f5;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height:1.6;
+
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+button,
+input{
+  font-family:inherit;
+}
+
+:root{
+
+  --black:#050607;
+
+  --panel:#0d1012;
+
+  --panel2:#111416;
+
+  --border:#272c30;
+
+  --gold:#d6aa55;
+
+  --gold2:#f4d58a;
+
+  --text:#f5f5f5;
+
+  --muted:#969da2;
+
+}
+
+.shell{
+
+  width:min(
+    1180px,
+    calc(100% - 34px)
+  );
+
+  margin:auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+
+  background:
+    rgba(5,6,7,.96);
+
+  backdrop-filter:
+    blur(15px);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.08);
+}
+
+.nav{
+
+  min-height:78px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:24px;
+}
+
+.brand{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  min-width:0;
+}
+
+.brand img{
+
+  width:52px;
+  height:52px;
+
+  flex-shrink:0;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  border:
+    1px solid
+    rgba(214,170,85,.35);
+}
+
+.brand-title{
+
+  font-size:13px;
+
+  font-weight:900;
+
+  letter-spacing:1px;
+}
+
+.brand-sub{
+
+  margin-top:2px;
+
+  color:var(--gold);
+
+  font-size:8px;
+
+  font-weight:700;
+
+  letter-spacing:2px;
+}
+
+
+/* =====================================================
+   DESKTOP NAV
+===================================================== */
+
+.navlinks{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+
+  color:#b9bdc0;
+
+  font-size:12px;
+
+  font-weight:800;
+}
+
+.navlinks a{
+
+  transition:.2s ease;
+}
+
+.navlinks a:hover{
+
+  color:var(--gold2);
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  min-height:45px;
+
+  padding:0 18px;
+
+  border:
+    1px solid #34393d;
+
+  border-radius:8px;
+
+  background:#101214;
+
+  color:#f5f5f5;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  letter-spacing:.7px;
+}
+
+.btn:hover{
+
+  border-color:var(--gold);
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu-button{
+
+  display:none;
+
+  width:44px;
+  height:44px;
+
+  padding:10px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius:9px;
+
+  background:#0d1012;
+
+  cursor:pointer;
+}
+
+.mobile-menu-button span{
+
+  display:block;
+
+  width:100%;
+  height:2px;
+
+  margin:5px 0;
+
+  background:var(--gold2);
+
+  border-radius:5px;
+
+  transition:.25s ease;
+}
+
+.mobile-menu-button.active
+span:nth-child(1){
+
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.active
+span:nth-child(2){
+
+  opacity:0;
+}
+
+.mobile-menu-button.active
+span:nth-child(3){
+
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+.mobile-menu{
+
+  display:none;
+
+  background:#060708;
+
+  border-top:
+    1px solid #202428;
+
+  border-bottom:
+    1px solid #252a2e;
+}
+
+.mobile-menu.open{
+
+  display:block;
+}
+
+.mobile-menu-inner{
+
+  display:grid;
+
+  padding-top:8px;
+
+  padding-bottom:18px;
+}
+
+.mobile-menu-inner a{
+
+  padding:14px 3px;
+
+  border-bottom:
+    1px solid #1f2326;
+
+  color:#c6cacc;
+
+  font-size:12px;
+
+  font-weight:900;
+}
+
+.mobile-menu-inner a:hover{
+
+  color:var(--gold2);
+}
+
+
+/* =====================================================
+   PROMOTION BANNER
+===================================================== */
+
+.promo-banner{
+
+  width:100%;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      #8f681f,
+      #d6aa55,
+      #f4d58a,
+      #d6aa55,
+      #8f681f
+    );
+
+  color:#080909;
+}
+
+.promo-track{
+
+  display:flex;
+
+  width:max-content;
+
+  white-space:nowrap;
+
+  animation:
+    promoMove 24s linear infinite;
+}
+
+.promo-track span{
+
+  padding:9px 35px;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  letter-spacing:1px;
+}
+
+@keyframes promoMove{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.page-hero{
+
+  padding:
+    75px 0 55px;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.back{
+
+  display:inline-block;
+
+  margin-bottom:30px;
+
+  color:var(--gold2);
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:.8px;
+}
+
+.tag{
+
+  display:block;
+
+  margin-bottom:13px;
+
+  color:var(--gold);
+
+  font-size:10px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+}
+
+.page-hero h1{
+
+  max-width:800px;
+
+  margin-bottom:20px;
+
+  font-size:
+    clamp(
+      42px,
+      7vw,
+      70px
+    );
+
+  line-height:.98;
+
+  letter-spacing:-2px;
+}
+
+.page-hero > .shell > p{
+
+  max-width:760px;
+
+  color:var(--muted);
+
+  font-size:16px;
+
+  line-height:1.8;
+}
+
+
+/* =====================================================
+   CHECKOUT
+===================================================== */
+
 .checkout-area{
+
   text-align:center;
-  margin:25px auto 35px;
+
+  margin:
+    30px auto 10px;
 }
 
 .checkout-btn{
-  display:inline-block;
-  background:linear-gradient(135deg,#d6aa55,#f4d58a);
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  min-height:54px;
+
+  padding:
+    0 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d6aa55,
+      #f4d58a
+    );
+
   color:#070707;
-  padding:16px 30px;
+
   border-radius:12px;
-  font-size:17px;
-  font-weight:800;
-  text-decoration:none;
+
+  font-size:15px;
+
+  font-weight:900;
+
   letter-spacing:.4px;
-  box-shadow:0 8px 25px rgba(214,170,85,.25);
+
+  box-shadow:
+    0 8px 25px
+    rgba(214,170,85,.22);
+
   transition:.2s ease;
 }
 
 .checkout-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 12px 30px rgba(214,170,85,.35);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(214,170,85,.30);
 }
 
 .checkout-note{
+
   margin-top:10px;
-  opacity:.72;
+
+  color:#777e83;
+
+  font-size:11px;
+}
+
+
+/* =====================================================
+   CATALOG SECTION
+===================================================== */
+
+.catalog-section{
+
+  padding:
+    45px 0 110px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.catalog-tools{
+
+  position:sticky;
+
+  top:78px;
+
+  z-index:100;
+
+  padding:
+    15px 0;
+
+  background:
+    rgba(5,6,7,.95);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+.search{
+
+  width:100%;
+
+  min-height:62px;
+
+  padding:
+    0 20px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius:14px;
+
+  outline:none;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #0a0c0d
+    );
+
+  color:#f5f5f5;
+
+  font-size:16px;
+
+  transition:.2s ease;
+}
+
+.search::placeholder{
+
+  color:#686f74;
+}
+
+.search:focus{
+
+  border-color:
+    rgba(214,170,85,.7);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(214,170,85,.05);
+}
+
+
+/* =====================================================
+   CATALOG COUNT
+===================================================== */
+
+.catalog-count{
+
+  margin:
+    27px 0 20px;
+
+  color:#787f84;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  letter-spacing:.7px;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0,1fr)
+    );
+
+  gap:18px;
+}
+
+
+/* =====================================================
+   CATALOG CARDS
+===================================================== */
+
+.card{
+
+  position:relative;
+
+  min-height:315px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  padding:28px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.12);
+
+  transition:
+    transform .23s ease,
+    border-color .23s ease,
+    box-shadow .23s ease;
+}
+
+.card:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(214,170,85,.42);
+
+  box-shadow:
+    0 17px 40px
+    rgba(0,0,0,.22);
+}
+
+.card .tag{
+
+  margin-bottom:35px;
+}
+
+.card h3{
+
+  margin-bottom:8px;
+
+  color:#f5f5f5;
+
+  font-size:27px;
+
+  line-height:1.15;
+}
+
+.meta{
+
+  width:max-content;
+
+  margin-bottom:18px;
+
+  padding:
+    6px 10px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius:7px;
+
+  background:#0b0e10;
+
+  color:var(--gold2);
+
+  font-size:10px;
+
+  font-weight:900;
+
+  letter-spacing:.8px;
+}
+
+.card p{
+
+  color:var(--muted);
+
+  font-size:13px;
+
+  line-height:1.8;
+
+  margin-bottom:25px;
+}
+
+.ruo{
+
+  margin-top:auto;
+
+  padding-top:18px;
+
+  border-top:
+    1px solid #24282b;
+
+  color:#696f74;
+
+  font-size:9px;
+
+  font-weight:900;
+
+  letter-spacing:.8px;
+
+  text-transform:uppercase;
+}
+
+
+/* =====================================================
+   NO RESULTS
+===================================================== */
+
+.no-results{
+
+  display:none;
+
+  margin-top:20px;
+
+  padding:40px;
+
+  text-align:center;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:14px;
+
+  background:#0d1012;
+
+  color:var(--muted);
+}
+
+
+/* =====================================================
+   BOTTOM CHECKOUT
+===================================================== */
+
+.bottom-checkout{
+
+  margin-top:50px;
+
+  padding:35px 25px;
+
+  border:
+    1px solid
+    rgba(214,170,85,.32);
+
+  border-radius:16px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(214,170,85,.08),
+      transparent 65%
+    ),
+    #0b0e10;
+
+  text-align:center;
+}
+
+.bottom-checkout h2{
+
+  margin-bottom:8px;
+
+  font-size:30px;
+}
+
+.bottom-checkout p{
+
+  margin-bottom:20px;
+
+  color:var(--muted);
+
   font-size:13px;
 }
 
-/* FLOATING MOBILE CHECKOUT */
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+  padding:
+    40px 0 105px;
+
+  border-top:
+    1px solid var(--border);
+
+  background:#030404;
+}
+
+.footer-grid{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  color:#777d82;
+
+  font-size:11px;
+}
+
+
+/* =====================================================
+   MOBILE STICKY CHECKOUT
+===================================================== */
 
 .mobile-checkout{
+
   position:fixed;
+
   bottom:18px;
+
   left:50%;
-  transform:translateX(-50%);
+
+  transform:
+    translateX(-50%);
+
   z-index:999;
-  width:calc(100% - 32px);
+
+  width:
+    calc(100% - 32px);
+
   max-width:480px;
 }
 
 .mobile-checkout a{
+
   display:block;
-  text-align:center;
-  background:linear-gradient(135deg,#d6aa55,#f4d58a);
-  color:#070707;
-  text-decoration:none;
-  font-weight:900;
-  padding:15px 20px;
+
+  padding:
+    15px 20px;
+
   border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,.55);
+
+  background:
+    linear-gradient(
+      135deg,
+      #d6aa55,
+      #f4d58a
+    );
+
+  color:#070707;
+
+  text-align:center;
+
+  font-weight:900;
+
+  letter-spacing:.5px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.55);
 }
 
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
 @media(min-width:800px){
+
   .mobile-checkout{
     display:none;
   }
+
+}
+
+
+@media(max-width:900px){
+
+  .shell{
+
+    width:
+      min(
+        calc(100% - 28px),
+        1180px
+      );
+  }
+
+  .nav{
+
+    min-height:68px;
+  }
+
+  .brand img{
+
+    width:45px;
+    height:45px;
+  }
+
+  .brand-title{
+
+    font-size:11px;
+  }
+
+  .brand-sub{
+
+    font-size:7px;
+  }
+
+  .navlinks{
+
+    display:none;
+  }
+
+  .mobile-menu-button{
+
+    display:block;
+  }
+
+  .catalog-tools{
+
+    top:68px;
+  }
+
+  .grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .page-hero{
+
+    padding:
+      55px 0 45px;
+  }
+
+  .page-hero h1{
+
+    font-size:44px;
+  }
+
+  .footer-grid{
+
+    flex-direction:column;
+  }
+
+}
+
+
+@media(max-width:520px){
+
+  .brand{
+
+    gap:8px;
+  }
+
+  .brand img{
+
+    width:41px;
+    height:41px;
+  }
+
+  .brand-title{
+
+    font-size:9px;
+
+    letter-spacing:.6px;
+  }
+
+  .brand-sub{
+
+    font-size:5.8px;
+
+    letter-spacing:1.2px;
+  }
+
+  .page-hero h1{
+
+    font-size:39px;
+  }
+
+  .page-hero > .shell > p{
+
+    font-size:14px;
+  }
+
+  .card{
+
+    min-height:290px;
+
+    padding:23px;
+  }
+
+  .card h3{
+
+    font-size:24px;
+  }
+
+  .card .tag{
+
+    margin-bottom:28px;
+  }
+
+  .search{
+
+    min-height:56px;
+
+    font-size:15px;
+  }
+
+  .checkout-btn{
+
+    width:100%;
+
+    padding:
+      0 18px;
+
+    font-size:14px;
+  }
+
 }
 
 </style>
+
 </head>
+
+
 
 <body>
 
 
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header>
-  <div class="shell nav">
 
-    <a class="brand" href="index.html">
-      <img src="pch-logo.jpg" alt="PCH Labs">
+<div class="shell nav">
 
-      <div>
-        <div class="brand-title">
-          PLATINUM CELLULAR HEALTH LABS
-        </div>
 
-        <div class="brand-sub">
-          LONGEVITY AT THE CELLULAR LEVEL
-        </div>
-      </div>
-    </a>
+<a
+  class="brand"
+  href="index.html"
+>
 
-    <nav class="navlinks">
-      <a href="research-information.html">Research</a>
-      <a href="catalog.html">Catalog</a>
-      <a href="quality-coa.html">Quality & COA</a>
-      <a href="policies.html">Policies</a>
-      <a class="btn keep" href="contact.html">Contact</a>
-    </nav>
+<img
+  src="pch-logo.jpg"
+  alt="PCH Labs"
+>
 
-  </div>
+
+<div>
+
+<div class="brand-title">
+PLATINUM CELLULAR HEALTH LABS
+</div>
+
+<div class="brand-sub">
+LONGEVITY AT THE CELLULAR LEVEL
+</div>
+
+</div>
+
+</a>
+
+
+
+<nav class="navlinks">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research
+</a>
+
+<a href="catalog.html">
+Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a
+  class="btn"
+  href="contact.html"
+>
+Contact
+</a>
+
+</nav>
+
+
+
+<button
+  class="mobile-menu-button"
+  id="mobileMenuButton"
+  type="button"
+  aria-label="Open menu"
+  aria-expanded="false"
+>
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+
+</div>
+
+
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+<div class="shell mobile-menu-inner">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research Information
+</a>
+
+<a href="catalog.html">
+Research Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- PROMO -->
+
+<div class="promo-banner">
+
+<div class="promo-track">
+
+<span>
+✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+</span>
+
+<span>
+$15 SHIPPING OPTION INCLUDED · PREMIUM SHIPPING AVAILABLE
+</span>
+
+<span>
+✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+</span>
+
+<span>
+OPTIONAL SHIPPING INSURANCE AVAILABLE
+</span>
+
+<span>
+✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+</span>
+
+<span>
+$15 SHIPPING OPTION INCLUDED · PREMIUM SHIPPING AVAILABLE
+</span>
+
+<span>
+✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+</span>
+
+<span>
+OPTIONAL SHIPPING INSURANCE AVAILABLE
+</span>
+
+</div>
+
+</div>
+
+
 </header>
+
 
 
 <main>
 
 
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <section class="page-hero">
+
 <div class="shell">
 
-  <a class="back" href="index.html">
-    ← Back to Platinum Cellular Health Labs
-  </a>
 
-  <span class="tag">Research Catalog</span>
-
-  <h1>Research Materials</h1>
-
-  <p>
-    Search the informational catalog by product name or listed amount.
-    Research products and supplies are intended for laboratory and research purposes only.
-  </p>
+<a
+  class="back"
+  href="index.html"
+>
+← Back to Platinum Cellular Health Labs
+</a>
 
 
-  <!-- NEW EZFORMZ CHECKOUT -->
+<span class="tag">
+Research Catalog
+</span>
 
-  <div class="checkout-area">
 
-    <a
-      class="checkout-btn"
-      href="https://ezformz.net/f/-wkx35g"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      🛒 ORDER / CHECKOUT
-    </a>
+<h1>
+Research Materials
+</h1>
 
-    <div class="checkout-note">
-      Opens the secure PCH order form
-    </div>
 
-  </div>
+<p>
+Search the informational catalog by product name
+or listed amount. Research products and supplies
+are intended for laboratory and research purposes only.
+</p>
+
+
+
+<div class="checkout-area">
+
+<a
+  class="checkout-btn"
+  href="https://ezformz.net/f/-wkx35g"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+🛒 ORDER / CHECKOUT
+</a>
+
+<div class="checkout-note">
+Opens the secure PCH order form
+</div>
 
 </div>
+
+
+</div>
+
 </section>
 
 
 
-<section>
+<!-- =====================================================
+     CATALOG
+===================================================== -->
+
+<section class="catalog-section">
+
 <div class="shell">
 
-  <div class="catalog-tools">
 
-    <input
-      class="search"
-      id="catalogSearch"
-      type="search"
-      placeholder="Search the research catalog..."
-      aria-label="Search catalog"
-    >
+<div class="catalog-tools">
 
-  </div>
+<input
+  class="search"
+  id="catalogSearch"
+  type="search"
+  placeholder="Search the research catalog..."
+  aria-label="Search catalog"
+>
 
+</div>
 
-  <div class="grid">
 
 
-    <!-- HOSPIRA -->
+<div
+  class="catalog-count"
+  id="catalogCount"
+>
+8 CATALOG LISTINGS
+</div>
 
-    <article
-      class="card catalog-card"
-      data-search="Hospira BAC Water Research supply"
-    >
 
-      <span class="tag">Research Catalog</span>
 
-      <h3>Hospira BAC Water</h3>
+<div class="grid">
 
-      <div class="meta">
-        Research Supply
-      </div>
 
-      <p>
-        Research documentation and product information
-        can be attached to this listing as available.
-      </p>
+<!-- =====================================================
+     HOSPIRA
+===================================================== -->
 
-      <div class="ruo">
-        Research Use Only · Not for human or animal use
-      </div>
+<article
+  class="card catalog-card"
+  data-search="Hospira BAC Water Research supply"
+>
 
-    </article>
+<span class="tag">
+Research Catalog
+</span>
 
+<h3>
+Hospira BAC Water
+</h3>
 
+<div class="meta">
+Research Supply
+</div>
 
-    <!-- EBAC -->
+<p>
+Research documentation and product information
+can be attached to this listing as available.
+</p>
 
-    <article
-      class="card catalog-card"
-      data-search="EBAC BAC Water Research supply"
-    >
+<div class="ruo">
+Research Use Only · Not for human or animal use
+</div>
 
-      <span class="tag">Research Catalog</span>
+</article>
 
-      <h3>EBAC BAC Water</h3>
 
-      <div class="meta">
-        Research Supply
-      </div>
 
-      <p>
-        Research documentation and product information
-        can be attached to this listing as available.
-      </p>
+<!-- =====================================================
+     EBAC
+===================================================== -->
 
-      <div class="ruo">
-        Research Use Only · Not for human or animal use
-      </div>
+<article
+  class="card catalog-card"
+  data-search="EBAC BAC Water Research supply"
+>
 
-    </article>
+<span class="tag">
+Research Catalog
+</span>
 
+<h3>
+EBAC BAC Water
+</h3>
 
+<div class="meta">
+Research Supply
+</div>
 
-    <!-- RAIN 10 -->
+<p>
+Research documentation and product information
+can be attached to this listing as available.
+</p>
 
-    <article
-      class="card catalog-card"
-      data-search="Rain 10"
-    >
+<div class="ruo">
+Research Use Only · Not for human or animal use
+</div>
 
-      <span class="tag">Research Catalog</span>
+</article>
 
-      <h3>Rain 10</h3>
 
-      <div class="meta">
-        10
-      </div>
 
-      <p>
-        Research documentation and product information
-        can be attached to this listing as available.
-      </p>
+<!-- =====================================================
+     RAIN 10
+===================================================== -->
 
-      <div class="ruo">
-        Research Use Only · Not for human or animal use
-      </div>
+<article
+  class="card catalog-card"
+  data-search="Rain 10"
+>
 
-    </article>
+<span class="tag">
+Research Catalog
+</span>
 
+<h3>
+Rain 10
+</h3>
 
+<div class="meta">
+10
+</div>
 
-    <!-- RAIN 20 -->
+<p>
+Research documentation and product information
+can be attached to this listing as available.
+</p>
 
-    <article
-      class="card catalog-card"
-      data-search="Rain 20"
-    >
+<div class="ruo">
+Research Use Only · Not for human or animal use
+</div>
 
-      <span class="tag">Research Catalog</span>
+</article>
 
-      <h3>Rain 20</h3>
 
-      <div class="meta">
-        20
-      </div>
 
-      <p>
-        Research documentation and product information
-        can be attached to this listing as available.
-      </p>
+<!-- =====================================================
+     RAIN 20
+===================================================== -->
 
-      <div class="ruo">
-        Research Use Only · Not for human or animal use
-      </div>
+<article
+  class="card catalog-card"
+  data-search="Rain 20"
+>
 
-    </article>
+<span class="tag">
+Research Catalog
+</span>
 
+<h3>
+Rain 20
+</h3>
 
+<div class="meta">
+20
+</div>
 
-    <!-- RAIN 30 -->
+<p>
+Research documentation and product information
+can be attached to this listing as available.
+</p>
 
-    <article
-      class="card catalog-card"
-      data-search="Rain 30"
-    >
+<div class="ruo">
+Research Use Only · Not for human or animal use
+</div>
 
-      <span class="tag">Research Catalog</span>
+</article>
 
-      <h3>Rain 30</h3>
 
-      <div class="meta">
-        30
-      </div>
 
-      <p>
-        Research documentation and product information
-        can be attached to this listing as available.
-      </p>
+<!-- =====================================================
+     RAIN 30
+===================================================== -->
 
-      <div class="ruo">
-        Research Use Only · Not for human or animal use
-      </div>
+<article
+  class="card catalog-card"
+  data-search="Rain 30"
+>
 
-    </article>
+<span class="tag">
+Research Catalog
+</span>
 
+<h3>
+Rain 30
+</h3>
 
+<div class="meta">
+30
+</div>
 
-    <!-- THUNDER 10 -->
+<p>
+Research documentation and product information
+can be attached to this listing as available.
+</p>
 
-    <article
-      class="card catalog-card"
-      data-search="Thunder 10"
-    >
+<div class="ruo">
+Research Use Only · Not for human or animal use
+</div>
 
-      <span class="tag">Research Catalog</span>
+</article>
 
-      <h3>Thunder 10</h3>
 
-      <div class="meta">
-        10
-      </div>
 
-      <p>
-        Research documentation and product information
-        can be attached to this listing as available.
-      </p>
+<!-- =====================================================
+     THUNDER 10
+===================================================== -->
 
-      <div class="ruo">
-        Research Use Only · Not for human or animal use
-      </div>
+<article
+  class="card catalog-card"
+  data-search="Thunder 10"
+>
 
-    </article>
+<span class="tag">
+Research Catalog
+</span>
 
+<h3>
+Thunder 10
+</h3>
 
+<div class="meta">
+10
+</div>
 
-    <!-- THUNDER 20 -->
+<p>
+Research documentation and product information
+can be attached to this listing as available.
+</p>
 
-    <article
-      class="card catalog-card"
-      data-search="Thunder 20"
-    >
+<div class="ruo">
+Research Use Only · Not for human or animal use
+</div>
 
-      <span class="tag">Research Catalog</span>
+</article>
 
-      <h3>Thunder 20</h3>
 
-      <div class="meta">
-        20
-      </div>
 
-      <p>
-        Research documentation and product information
-        can be attached to this listing as available.
-      </p>
+<!-- =====================================================
+     THUNDER 20
+===================================================== -->
 
-      <div class="ruo">
-        Research Use Only · Not for human or animal use
-      </div>
+<article
+  class="card catalog-card"
+  data-search="Thunder 20"
+>
 
-    </article>
+<span class="tag">
+Research Catalog
+</span>
 
+<h3>
+Thunder 20
+</h3>
 
+<div class="meta">
+20
+</div>
 
-    <!-- PET ENGINE -->
+<p>
+Research documentation and product information
+can be attached to this listing as available.
+</p>
 
-    <article
-      class="card catalog-card"
-      data-search="Pet Engine"
-    >
+<div class="ruo">
+Research Use Only · Not for human or animal use
+</div>
 
-      <span class="tag">Research Catalog</span>
+</article>
 
-      <h3>Pet Engine</h3>
 
-      <div class="meta">
-        Research Material
-      </div>
 
-      <p>
-        Research documentation and product information
-        can be attached to this listing as available.
-      </p>
+<!-- =====================================================
+     PET ENGINE
+===================================================== -->
 
-      <div class="ruo">
-        Research Use Only · Not for human or animal use
-      </div>
+<article
+  class="card catalog-card"
+  data-search="Pet Engine"
+>
 
-    </article>
+<span class="tag">
+Research Catalog
+</span>
 
+<h3>
+Pet Engine
+</h3>
 
-  </div>
+<div class="meta">
+Research Material
+</div>
 
+<p>
+Research documentation and product information
+can be attached to this listing as available.
+</p>
 
+<div class="ruo">
+Research Use Only · Not for human or animal use
+</div>
 
-  <!-- BOTTOM CHECKOUT -->
-
-  <div class="checkout-area" style="margin-top:45px;">
-
-    <h2>Ready to Place an Order?</h2>
-
-    <p>
-      Continue to the PCH order and checkout form.
-    </p>
-
-    <a
-      class="checkout-btn"
-      href="https://ezformz.net/f/-wkx35g"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      🛒 CONTINUE TO CHECKOUT
-    </a>
-
-  </div>
+</article>
 
 
 </div>
+
+
+
+<!-- NO RESULTS -->
+
+<div
+  class="no-results"
+  id="noResults"
+>
+
+<strong>
+No catalog listing found.
+</strong>
+
+<br>
+
+Try another product name or amount.
+
+</div>
+
+
+
+<!-- =====================================================
+     BOTTOM CHECKOUT
+===================================================== -->
+
+<div class="bottom-checkout">
+
+<span class="tag">
+PCH ORDER FORM
+</span>
+
+<h2>
+Ready to Place an Order?
+</h2>
+
+<p>
+Continue to the PCH order and checkout form.
+</p>
+
+<a
+  class="checkout-btn"
+  href="https://ezformz.net/f/-wkx35g"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+🛒 CONTINUE TO CHECKOUT
+</a>
+
+</div>
+
+
+</div>
+
 </section>
 
 
@@ -427,83 +1734,250 @@
 
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
-  <div class="shell footer-grid">
+<div class="shell footer-grid">
 
-    <div>
-      © 2026 Platinum Cellular Health Labs.
-      All rights reserved.
-    </div>
+<div>
 
-    <div>
-      21+ · Research Use Only · Not for human or animal use
-    </div>
+<strong>
+Platinum Cellular Health Labs
+</strong>
 
-  </div>
+<br>
+
+© 2026 Platinum Cellular Health Labs.
+All rights reserved.
+
+</div>
+
+<div>
+21+ · Research Use Only ·
+Not for human or animal use
+</div>
+
+</div>
 
 </footer>
 
 
 
-<!-- MOBILE STICKY CHECKOUT -->
+<!-- =====================================================
+     MOBILE STICKY CHECKOUT
+===================================================== -->
 
 <div class="mobile-checkout">
 
-  <a
-    href="https://ezformz.net/f/-wkx35g"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🛒 ORDER / CHECKOUT
-  </a>
+<a
+  href="https://ezformz.net/f/-wkx35g"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+🛒 ORDER / CHECKOUT
+</a>
 
 </div>
 
 
 
-<script src="script.js"></script>
-
-
 <script>
 
-/* CATALOG SEARCH */
+/* =====================================================
+   CATALOG SEARCH
+===================================================== */
 
 const search =
-document.getElementById("catalogSearch");
+  document.getElementById(
+    "catalogSearch"
+  );
 
 const cards =
-document.querySelectorAll(".catalog-card");
+  Array.from(
+    document.querySelectorAll(
+      ".catalog-card"
+    )
+  );
 
-if(search){
+const catalogCount =
+  document.getElementById(
+    "catalogCount"
+  );
 
-  search.addEventListener("input",function(){
+const noResults =
+  document.getElementById(
+    "noResults"
+  );
 
-    const value =
-    this.value.toLowerCase().trim();
 
-    cards.forEach(card=>{
+function filterCatalog(){
+
+  const value =
+    search
+      .value
+      .toLowerCase()
+      .trim();
+
+
+  let visible =
+    0;
+
+
+  cards.forEach(
+    function(card){
 
       const text =
-      (
-        card.dataset.search +
-        " " +
-        card.innerText
-      ).toLowerCase();
+        (
+          card.dataset.search
+          +
+          " "
+          +
+          card.innerText
+        )
+        .toLowerCase();
 
-      card.style.display =
-      text.includes(value)
-      ? ""
-      : "none";
 
-    });
+      const match =
+        text.includes(
+          value
+        );
 
-  });
+
+      if(match){
+
+        card.style.display =
+          "";
+
+        visible++;
+
+      }
+
+      else{
+
+        card.style.display =
+          "none";
+
+      }
+
+    }
+  );
+
+
+  catalogCount.textContent =
+    visible
+    +
+    (
+      visible === 1
+      ?
+      " CATALOG LISTING"
+      :
+      " CATALOG LISTINGS"
+    );
+
+
+  noResults.style.display =
+    visible === 0
+    ?
+    "block"
+    :
+    "none";
 
 }
+
+
+search.addEventListener(
+  "input",
+  filterCatalog
+);
+
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const mobileMenuButton =
+  document.getElementById(
+    "mobileMenuButton"
+  );
+
+const mobileMenu =
+  document.getElementById(
+    "mobileMenu"
+  );
+
+
+mobileMenuButton.addEventListener(
+  "click",
+  function(){
+
+    const open =
+      mobileMenu
+        .classList
+        .toggle(
+          "open"
+        );
+
+
+    mobileMenuButton
+      .classList
+      .toggle(
+        "active",
+        open
+      );
+
+
+    mobileMenuButton
+      .setAttribute(
+        "aria-expanded",
+        open
+      );
+
+  }
+);
+
+
+mobileMenu
+  .querySelectorAll("a")
+  .forEach(
+    function(link){
+
+      link.addEventListener(
+        "click",
+        function(){
+
+          mobileMenu
+            .classList
+            .remove(
+              "open"
+            );
+
+
+          mobileMenuButton
+            .classList
+            .remove(
+              "active"
+            );
+
+
+          mobileMenuButton
+            .setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+        }
+      );
+
+    }
+  );
 
 </script>
 
 
 </body>
+
 </html>
