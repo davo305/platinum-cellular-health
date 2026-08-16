@@ -1,62 +1,1756 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#08090b">
-<title>Quality & COA | PCH Labs</title>
-<link rel="stylesheet" href="styles.css">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta name="theme-color" content="#050607">
+
+<title>
+Quality & COA | Platinum Cellular Health Labs
+</title>
+
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 75% 5%,
+      rgba(213,173,85,.07),
+      transparent 30%
+    ),
+    #050607;
+
+  color: #f4f4f4;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.shell {
+  width: min(
+    1180px,
+    calc(100% - 36px)
+  );
+
+  margin: auto;
+}
+
+
+:root {
+  --gold: #d5ad55;
+  --gold2: #f0d48c;
+  --panel: #0d1012;
+  --panel2: #111416;
+  --border: #252a2e;
+  --muted: #979ea4;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background:
+    rgba(5,6,7,.94);
+
+  backdrop-filter:
+    blur(14px);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.07);
+}
+
+
+.nav {
+  min-height: 76px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 25px;
+}
+
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.brand img {
+  width: 50px;
+
+  height: 50px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(213,173,85,.35);
+}
+
+
+.brand-title {
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+.brand-sub {
+  color: var(--gold);
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  margin-top: 2px;
+}
+
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  color: #b7bdc2;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+.nav-links a:hover {
+  color: var(--gold2);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 43px;
+
+  padding: 0 16px;
+
+  border:
+    1px solid #34393d;
+
+  border-radius: 8px;
+
+  background: #101214;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+
+  cursor: pointer;
+}
+
+
+.btn:hover {
+  border-color: var(--gold);
+}
+
+
+.btn-gold {
+  border-color:
+    rgba(213,173,85,.45);
+
+  color: var(--gold2);
+
+  background:
+    rgba(213,173,85,.05);
+}
+
+
+/* =========================================
+   PAGE HERO
+========================================= */
+
+.page-hero {
+  padding:
+    85px 0
+    55px;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+
+.back {
+  display:
+    inline-block;
+
+  color: var(--gold);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: .6px;
+
+  margin-bottom: 35px;
+}
+
+
+.eyebrow {
+  color: var(--gold);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2.3px;
+
+  margin-bottom: 12px;
+}
+
+
+.page-hero h1 {
+  max-width: 800px;
+
+  font-size:
+    clamp(
+      40px,
+      7vw,
+      68px
+    );
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 18px;
+}
+
+
+.page-hero p {
+  max-width: 720px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+.hero-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 25px;
+}
+
+
+.hero-tags span {
+  border:
+    1px solid var(--border);
+
+  background: #0c0e10;
+
+  border-radius: 100px;
+
+  padding: 7px 10px;
+
+  color: #858c92;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   OVERVIEW CARDS
+========================================= */
+
+.overview {
+  padding: 55px 0;
+}
+
+
+.overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 16px;
+}
+
+
+.info-card {
+  min-height: 230px;
+
+  padding: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 14px;
+}
+
+
+.info-number {
+  color: rgba(213,173,85,.18);
+
+  font-size: 46px;
+
+  font-weight: 900;
+
+  margin-bottom: 18px;
+}
+
+
+.info-card h2 {
+  font-size: 21px;
+
+  margin-bottom: 10px;
+}
+
+
+.info-card p {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   DOCUMENTATION LIBRARY
+========================================= */
+
+.library {
+  padding: 35px 0 95px;
+
+  border-top:
+    1px solid var(--border);
+}
+
+
+.library-head {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    end;
+
+  gap: 35px;
+
+  margin-bottom: 30px;
+}
+
+
+.library-head h2 {
+  font-size:
+    clamp(
+      30px,
+      5vw,
+      48px
+    );
+
+  line-height: 1.05;
+}
+
+
+.library-head p {
+  max-width: 520px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+
+.search-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background: #0d1012;
+
+  border:
+    1px solid
+    #2c3135;
+
+  border-radius: 12px;
+
+  padding: 0 16px;
+
+  margin-bottom: 25px;
+}
+
+
+.search-icon {
+  color: var(--gold);
+
+  font-size: 18px;
+}
+
+
+.search-box input {
+  width: 100%;
+
+  min-height: 56px;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 15px;
+}
+
+
+.search-box input::placeholder {
+  color: #686f74;
+}
+
+
+.document-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap: 16px;
+}
+
+
+.document-card {
+  min-height: 265px;
+
+  padding: 24px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.document-top {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    flex-start;
+
+  gap: 15px;
+}
+
+
+.document-type {
+  color: var(--gold);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.4px;
+}
+
+
+.document-status {
+  border:
+    1px solid #33383c;
+
+  border-radius: 100px;
+
+  padding: 5px 8px;
+
+  color: #8f969c;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+.document-card h3 {
+  font-size: 22px;
+
+  margin:
+    22px 0
+    10px;
+}
+
+
+.document-meta {
+  display: grid;
+
+  gap: 4px;
+
+  color: #8e959a;
+
+  font-size: 12px;
+}
+
+
+.document-actions {
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+  margin-top: auto;
+
+  padding-top: 24px;
+}
+
+
+.placeholder {
+  color: #686f74;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .7px;
+
+  margin-top: 12px;
+}
+
+
+/* =========================================
+   COA EXAMPLE
+========================================= */
+
+.example-section {
+  padding: 75px 0;
+
+  background: #090b0c;
+
+  border-top:
+    1px solid var(--border);
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+
+.example-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+.example-copy h2 {
+  font-size:
+    clamp(
+      30px,
+      5vw,
+      48px
+    );
+
+  line-height: 1.05;
+
+  margin-bottom: 20px;
+}
+
+
+.example-copy p {
+  color: var(--muted);
+
+  margin-bottom: 25px;
+}
+
+
+.example-list {
+  display: grid;
+
+  gap: 10px;
+
+  color: #b6bbc0;
+
+  font-size: 13px;
+}
+
+
+.example-list div {
+  padding-bottom: 10px;
+
+  border-bottom:
+    1px solid #1e2225;
+}
+
+
+.coa-sheet {
+  min-height: 390px;
+
+  background: #f0f0ec;
+
+  color: #111;
+
+  padding: 30px;
+
+  border-radius: 6px;
+
+  transform: rotate(1deg);
+
+  box-shadow:
+    0 30px 70px
+    rgba(0,0,0,.45);
+}
+
+
+.coa-header {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  padding-bottom: 18px;
+
+  border-bottom:
+    3px solid #151515;
+}
+
+
+.coa-header strong {
+  font-size: 30px;
+}
+
+
+.coa-header span {
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+
+.coa-line {
+  height: 8px;
+
+  width: 60%;
+
+  background: #c9c9c5;
+
+  margin-top: 15px;
+}
+
+
+.coa-line.wide {
+  width: 88%;
+}
+
+
+.coa-line.short {
+  width: 42%;
+}
+
+
+.coa-table {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+
+.coa-table div {
+  min-height: 62px;
+
+  border:
+    1px solid #aaa;
+}
+
+
+.coa-footer {
+  margin-top: 30px;
+
+  border-top:
+    1px solid #aaa;
+
+  padding-top: 15px;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   POLICY NOTE
+========================================= */
+
+.policy-section {
+  padding: 70px 0;
+}
+
+
+.policy-box {
+  padding: 26px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.24);
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101315,
+      #090b0c
+    );
+}
+
+
+.policy-box strong {
+  display: block;
+
+  color: var(--gold2);
+
+  margin-bottom: 9px;
+
+  font-size: 15px;
+}
+
+
+.policy-box p {
+  color: #90979d;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  padding: 40px 0;
+
+  border-top:
+    1px solid var(--border);
+
+  background: #030404;
+
+  color: #6f767b;
+
+  font-size: 11px;
+}
+
+
+.footer-grid {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 30px;
+}
+
+
+.footer-grid strong {
+  color: #bfc3c6;
+
+  display: block;
+
+  margin-bottom: 3px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:900px) {
+
+  .nav {
+    min-height: 68px;
+  }
+
+
+  .brand img {
+    width: 44px;
+
+    height: 44px;
+  }
+
+
+  .brand-title {
+    font-size: 10px;
+  }
+
+
+  .brand-sub {
+    font-size: 7px;
+  }
+
+
+  .nav-links {
+    display: none;
+  }
+
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .document-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .example-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .library-head {
+    display: block;
+  }
+
+
+  .library-head p {
+    margin-top: 15px;
+  }
+
+}
+
+
+@media(max-width:650px) {
+
+  .shell {
+    width:
+      calc(100% - 26px);
+  }
+
+
+  .page-hero {
+    padding:
+      60px 0
+      40px;
+  }
+
+
+  .page-hero h1 {
+    font-size: 43px;
+  }
+
+
+  .page-hero p {
+    font-size: 14px;
+  }
+
+
+  .overview {
+    padding:
+      35px 0;
+  }
+
+
+  .library {
+    padding-top: 20px;
+  }
+
+
+  .coa-sheet {
+    padding: 22px;
+
+    min-height: 330px;
+  }
+
+
+  .footer-grid {
+    flex-direction: column;
+  }
+
+}
+
+</style>
+
 </head>
+
+
 <body>
 
 
-<header>
-  <div class="shell nav">
-    <a class="brand" href="index.html">
-      <img src="pch-logo.jpg" alt="PCH Labs">
-      <div>
-        <div class="brand-title">PLATINUM CELLULAR HEALTH LABS</div>
-        <div class="brand-sub">LONGEVITY AT THE CELLULAR LEVEL</div>
-      </div>
-    </a>
-    <nav class="navlinks">
-      <a href="research-information.html">Research</a>
-      <a href="catalog.html">Catalog</a>
-      <a href="quality-coa.html">Quality & COA</a>
-      <a href="policies.html">Policies</a>
-      <a class="btn keep" href="contact.html">Contact</a>
-    </nav>
-  </div>
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+<div class="shell nav">
+
+
+<a
+  href="index.html"
+  class="brand"
+>
+
+<img
+  src="pch-logo.jpg"
+  alt="Platinum Cellular Health Labs"
+>
+
+
+<div>
+
+<div class="brand-title">
+PLATINUM CELLULAR HEALTH LABS
+</div>
+
+<div class="brand-sub">
+LONGEVITY AT THE CELLULAR LEVEL
+</div>
+
+</div>
+
+</a>
+
+
+<nav class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research
+</a>
+
+<a href="catalog.html">
+Catalog
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a
+  href="contact.html"
+  class="btn"
+>
+Contact
+</a>
+
+</nav>
+
+
+</div>
+
 </header>
 
 
-<main>
-<section class="page-hero"><div class="shell">
-  <a class="back" href="index.html">← Back to Platinum Cellular Health Labs</a>
-  <span class="tag">Analytical Documentation</span>
-  <h1>Quality & Certificates of Analysis</h1>
-  <p>This page will become the central documentation library for uploaded COA images/PDFs and external laboratory verification links.</p>
-</div></section>
-<section><div class="shell">
-  <div class="grid">
-    <div class="card"><span class="tag">Uploaded COA</span><h3>COA Images & PDFs</h3><p>Reports you only have as images or PDFs can be displayed directly on the site and labeled with product, lot/batch, and testing date.</p></div>
-    <div class="card"><span class="tag">Verification</span><h3>External Lab Links</h3><p>When a testing laboratory provides a verification URL, the matching listing can include a direct verification link.</p></div>
-    <div class="card"><span class="tag">Traceability</span><h3>Lot & Batch Matching</h3><p>Each report should be associated with the correct product lot or batch whenever that information is available.</p></div>
-  </div>
-</div></section>
-<section><div class="shell">
-  <div class="notice">COAs should be displayed exactly as issued by the testing laboratory. The website should not alter analytical results or imply that a report applies to a different lot or batch.</div>
-</div></section>
-</main>
 
+<!-- =========================================
+     PAGE HERO
+========================================= -->
+
+<section class="page-hero">
+
+<div class="shell">
+
+
+<a
+  class="back"
+  href="index.html"
+>
+← BACK TO PCH LABS
+</a>
+
+
+<div class="eyebrow">
+ANALYTICAL DOCUMENTATION
+</div>
+
+
+<h1>
+Quality & COA
+</h1>
+
+
+<p>
+Platinum Cellular Health Labs organizes available analytical
+documentation so research materials can be matched with
+Certificates of Analysis, testing information, lot or batch
+references, and external laboratory verification where available.
+</p>
+
+
+<div class="hero-tags">
+
+<span>
+COA DOCUMENTATION
+</span>
+
+<span>
+LOT / BATCH REFERENCE
+</span>
+
+<span>
+LAB VERIFICATION
+</span>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     OVERVIEW
+========================================= -->
+
+<section class="overview">
+
+<div class="shell">
+
+
+<div class="overview-grid">
+
+
+<div class="info-card">
+
+<div class="info-number">
+01
+</div>
+
+<h2>
+Uploaded COA Files
+</h2>
+
+<p>
+Certificates that are available only as images or PDFs
+can be uploaded directly to the website and associated
+with the appropriate research material.
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<div class="info-number">
+02
+</div>
+
+<h2>
+External Verification
+</h2>
+
+<p>
+When a testing laboratory provides an online verification
+page, the matching documentation record can include a direct
+external verification link.
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<div class="info-number">
+03
+</div>
+
+<h2>
+Lot & Batch Matching
+</h2>
+
+<p>
+Available documentation should be associated with the correct
+product, lot, batch, sample identifier, and testing date whenever
+that information is provided by the laboratory.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     DOCUMENTATION LIBRARY
+========================================= -->
+
+<section class="library">
+
+<div class="shell">
+
+
+<div class="library-head">
+
+
+<div>
+
+<div class="eyebrow">
+DOCUMENTATION LIBRARY
+</div>
+
+<h2>
+Certificate records
+</h2>
+
+</div>
+
+
+<p>
+This section is ready for your actual COA images, PDF reports,
+lot numbers, testing dates, and laboratory verification links.
+</p>
+
+
+</div>
+
+
+
+<div class="search-box">
+
+<span class="search-icon">
+⌕
+</span>
+
+<input
+  id="coaSearch"
+  type="search"
+  placeholder="Search by product, lot, batch or laboratory..."
+>
+
+</div>
+
+
+
+<div
+  class="document-grid"
+  id="documentGrid"
+>
+
+
+<!-- PLACEHOLDER 1 -->
+
+<article
+  class="document-card"
+  data-search="research material coa placeholder lot batch"
+>
+
+<div class="document-top">
+
+<div class="document-type">
+CERTIFICATE OF ANALYSIS
+</div>
+
+<div class="document-status">
+DOCUMENT PENDING
+</div>
+
+</div>
+
+<h3>
+Research Material
+</h3>
+
+<div class="document-meta">
+
+<span>
+Lot / Batch: —
+</span>
+
+<span>
+Testing Date: —
+</span>
+
+<span>
+Laboratory: —
+</span>
+
+</div>
+
+
+<div class="document-actions">
+
+<button
+  class="btn btn-gold"
+  type="button"
+>
+COA FILE COMING SOON
+</button>
+
+</div>
+
+<div class="placeholder">
+IMAGE / PDF PLACEHOLDER
+</div>
+
+</article>
+
+
+
+<!-- PLACEHOLDER 2 -->
+
+<article
+  class="document-card"
+  data-search="research material external verification placeholder"
+>
+
+<div class="document-top">
+
+<div class="document-type">
+LAB VERIFICATION
+</div>
+
+<div class="document-status">
+LINK PENDING
+</div>
+
+</div>
+
+<h3>
+External Laboratory Report
+</h3>
+
+<div class="document-meta">
+
+<span>
+Sample ID: —
+</span>
+
+<span>
+Testing Date: —
+</span>
+
+<span>
+Laboratory: —
+</span>
+
+</div>
+
+
+<div class="document-actions">
+
+<button
+  class="btn btn-gold"
+  type="button"
+>
+VERIFICATION LINK COMING SOON
+</button>
+
+</div>
+
+<div class="placeholder">
+EXTERNAL LINK PLACEHOLDER
+</div>
+
+</article>
+
+
+
+<!-- PLACEHOLDER 3 -->
+
+<article
+  class="document-card"
+  data-search="lot batch record documentation"
+>
+
+<div class="document-top">
+
+<div class="document-type">
+LOT DOCUMENTATION
+</div>
+
+<div class="document-status">
+PENDING
+</div>
+
+</div>
+
+<h3>
+Lot / Batch Record
+</h3>
+
+<div class="document-meta">
+
+<span>
+Product: —
+</span>
+
+<span>
+Lot / Batch: —
+</span>
+
+<span>
+Documentation Date: —
+</span>
+
+</div>
+
+
+<div class="document-actions">
+
+<button
+  class="btn"
+  type="button"
+>
+RECORD COMING SOON
+</button>
+
+</div>
+
+<div class="placeholder">
+TRACEABILITY PLACEHOLDER
+</div>
+
+</article>
+
+
+
+<!-- PLACEHOLDER 4 -->
+
+<article
+  class="document-card"
+  data-search="coa analytical report research documentation"
+>
+
+<div class="document-top">
+
+<div class="document-type">
+ANALYTICAL REPORT
+</div>
+
+<div class="document-status">
+PENDING
+</div>
+
+</div>
+
+<h3>
+Analytical Documentation
+</h3>
+
+<div class="document-meta">
+
+<span>
+Report ID: —
+</span>
+
+<span>
+Testing Date: —
+</span>
+
+<span>
+Method: —
+</span>
+
+</div>
+
+
+<div class="document-actions">
+
+<button
+  class="btn"
+  type="button"
+>
+REPORT COMING SOON
+</button>
+
+</div>
+
+<div class="placeholder">
+ANALYTICAL RECORD PLACEHOLDER
+</div>
+
+</article>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     HOW TO READ A COA
+========================================= -->
+
+<section class="example-section">
+
+<div class="shell example-grid">
+
+
+<div class="example-copy">
+
+
+<div class="eyebrow">
+DOCUMENT REVIEW
+</div>
+
+
+<h2>
+What to look for on a COA
+</h2>
+
+
+<p>
+A Certificate of Analysis should be reviewed as an analytical
+document. Important identifiers help determine which sample
+or lot the report actually represents.
+</p>
+
+
+<div class="example-list">
+
+<div>
+✓ Product or sample identification
+</div>
+
+<div>
+✓ Lot, batch, or sample number
+</div>
+
+<div>
+✓ Laboratory name
+</div>
+
+<div>
+✓ Testing date
+</div>
+
+<div>
+✓ Analytical method
+</div>
+
+<div>
+✓ Reported analytical results
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="coa-sheet">
+
+
+<div class="coa-header">
+
+<strong>
+PCH
+</strong>
+
+<span>
+CERTIFICATE OF ANALYSIS
+</span>
+
+</div>
+
+
+<div class="coa-line wide"></div>
+
+<div class="coa-line"></div>
+
+<div class="coa-line short"></div>
+
+
+<div class="coa-table">
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+</div>
+
+
+<div class="coa-footer">
+PRODUCT · LOT · TEST DATE · LABORATORY · RESULT
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     POLICY
+========================================= -->
+
+<section class="policy-section">
+
+<div class="shell">
+
+
+<div class="policy-box">
+
+<strong>
+Documentation Integrity
+</strong>
+
+<p>
+Certificates of Analysis and laboratory reports should be
+displayed as issued by the testing laboratory. Analytical
+results should not be altered, and a report should not be
+represented as applying to a different product, sample, lot,
+or batch than the one identified in the original documentation.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
-  <div class="shell footer-grid">
-    <div>© 2026 Platinum Cellular Health Labs. All rights reserved.</div>
-    <div>21+ · Research Use Only · Not for human or animal use</div>
-  </div>
+
+<div class="shell footer-grid">
+
+
+<div>
+
+<strong>
+Platinum Cellular Health Labs
+</strong>
+
+<div>
+Longevity at the Cellular Level
+</div>
+
+</div>
+
+
+<div>
+21+ · Research Use Only · Not for human or animal use
+</div>
+
+
+</div>
+
 </footer>
 
-<script src="script.js"></script>
+
+
+<!-- =========================================
+     SEARCH SCRIPT
+========================================= -->
+
+<script>
+
+const coaSearch =
+  document.getElementById(
+    "coaSearch"
+  );
+
+
+const documents =
+  Array.from(
+    document.querySelectorAll(
+      ".document-card"
+    )
+  );
+
+
+coaSearch.addEventListener(
+  "input",
+  function() {
+
+    const term =
+      coaSearch
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    documents.forEach(
+      documentCard => {
+
+        const searchText =
+          (
+            documentCard
+              .dataset
+              .search
+            +
+            " "
+            +
+            documentCard
+              .innerText
+          )
+          .toLowerCase();
+
+
+        if (
+          searchText.includes(term)
+        ) {
+
+          documentCard.style.display =
+            "flex";
+
+        } else {
+
+          documentCard.style.display =
+            "none";
+
+        }
+
+      }
+    );
+
+  }
+);
+
+</script>
+
+
 </body>
+
 </html>
