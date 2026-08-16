@@ -448,7 +448,7 @@ span:nth-child(3) {
   z-index: 100;
 
   padding:
-    15px 0;
+    15px 0 14px;
 
   background:
     rgba(5,6,7,.95);
@@ -460,6 +460,7 @@ span:nth-child(3) {
 .search-box {
 
   display: flex;
+
   align-items: center;
 
   gap: 12px;
@@ -513,6 +514,77 @@ span:nth-child(3) {
 .search-box input::placeholder {
 
   color: #666d72;
+}
+
+
+/* =========================================
+   CATEGORY FILTERS
+========================================= */
+
+.filter-bar {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 12px;
+}
+
+.filter-button {
+
+  flex: 1 1 auto;
+
+  min-height: 42px;
+
+  padding:
+    0 14px;
+
+  border:
+    1px solid #2c3135;
+
+  border-radius: 9px;
+
+  background: #0d1012;
+
+  color: #9da3a8;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: .8px;
+
+  cursor: pointer;
+
+  transition: .2s ease;
+}
+
+.filter-button:hover {
+
+  border-color:
+    rgba(213,173,85,.55);
+
+  color: var(--gold2);
+}
+
+.filter-button.active {
+
+  border-color: var(--gold);
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #f0d48c
+    );
+
+  color: #080909;
+
+  box-shadow:
+    0 5px 18px
+    rgba(213,173,85,.15);
 }
 
 
@@ -654,6 +726,7 @@ span:nth-child(3) {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   width: 100%;
@@ -923,6 +996,21 @@ footer {
     min-height: 250px;
   }
 
+  .filter-bar {
+
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .filter-button {
+
+    width: 100%;
+
+    min-height: 44px;
+  }
+
 }
 
 
@@ -968,6 +1056,10 @@ footer {
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="site-header">
 
@@ -1104,6 +1196,10 @@ Contact
 <main>
 
 
+<!-- =========================================
+     HERO
+========================================= -->
+
 <section class="page-hero">
 
 <div class="shell">
@@ -1139,6 +1235,10 @@ Amazon.
 
 
 
+<!-- =========================================
+     AFFILIATE DISCLOSURE
+========================================= -->
+
 <section class="affiliate-disclosure">
 
 <div class="shell">
@@ -1166,10 +1266,16 @@ shipping, and fulfillment.
 
 
 
+<!-- =========================================
+     PRODUCTS
+========================================= -->
+
 <section class="supplies-section">
 
 <div class="shell">
 
+
+<!-- SEARCH + FILTERS -->
 
 <div class="search-wrap">
 
@@ -1188,14 +1294,57 @@ shipping, and fulfillment.
 
 </div>
 
+
+<div
+  class="filter-bar"
+  id="filterBar"
+>
+
+<button
+  type="button"
+  class="filter-button active"
+  data-filter="all"
+>
+ALL
+</button>
+
+<button
+  type="button"
+  class="filter-button"
+  data-filter="lab"
+>
+LAB SUPPLIES
+</button>
+
+<button
+  type="button"
+  class="filter-button"
+  data-filter="storage"
+>
+STORAGE & TRAVEL
+</button>
+
+<button
+  type="button"
+  class="filter-button"
+  data-filter="nutrition"
+>
+NUTRITION & TRAINING
+</button>
+
+</div>
+
 </div>
 
 
 
-<!-- LAB & RESEARCH SUPPLIES -->
+<!-- =========================================
+     LAB & RESEARCH SUPPLIES
+========================================= -->
 
 <div
   class="category-section supply-category"
+  data-category="lab"
 >
 
 <div class="category-heading">
@@ -1460,8 +1609,6 @@ AFFILIATE LINK
 
 
 
-<!-- NEW NASAL SPRAY BOTTLES -->
-
 <article
   class="product-card searchable"
   data-search="empty sterile nasal spray bottles nasal bottle spray"
@@ -1537,10 +1684,13 @@ AFFILIATE LINK
 
 
 
-<!-- STORAGE & TRAVEL -->
+<!-- =========================================
+     STORAGE & TRAVEL
+========================================= -->
 
 <div
   class="category-section supply-category"
+  data-category="storage"
 >
 
 <div class="category-heading">
@@ -1704,10 +1854,13 @@ AFFILIATE LINK
 
 
 
-<!-- NUTRITION & TRAINING -->
+<!-- =========================================
+     NUTRITION & TRAINING
+========================================= -->
 
 <div
   class="category-section supply-category"
+  data-category="nutrition"
 >
 
 <div class="category-heading">
@@ -1906,6 +2059,10 @@ AFFILIATE LINK
 
 
 
+<!-- =========================================
+     NO RESULTS
+========================================= -->
+
 <div
   class="no-results"
   id="noResults"
@@ -1915,11 +2072,15 @@ AFFILIATE LINK
 No recommended product found.
 </strong>
 
-Try another search term.
+Try another search term or category.
 
 </div>
 
 
+
+<!-- =========================================
+     BOTTOM NOTICE
+========================================= -->
 
 <div class="bottom-notice">
 
@@ -1949,6 +2110,10 @@ purchases.
 </main>
 
 
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
@@ -1985,7 +2150,9 @@ Affiliate links may generate a commission.
 
 <script>
 
-/* SEARCH */
+/* =========================================
+   SEARCH + CATEGORY FILTERS
+========================================= */
 
 const searchInput =
   document.getElementById(
@@ -2006,10 +2173,21 @@ const categories =
     )
   );
 
+const filterButtons =
+  Array.from(
+    document.querySelectorAll(
+      ".filter-button"
+    )
+  );
+
 const noResults =
   document.getElementById(
     "noResults"
   );
+
+
+let activeFilter =
+  "all";
 
 
 function filterSupplies() {
@@ -2021,49 +2199,22 @@ function filterSupplies() {
       .trim();
 
 
-  let totalVisible = 0;
-
-
-  cards.forEach(
-    function(card) {
-
-      const text =
-        (
-          card.innerText
-          +
-          " "
-          +
-          card.dataset.search
-        )
-        .toLowerCase();
-
-
-      const match =
-        text.includes(
-          term
-        );
-
-
-      card.style.display =
-        match
-        ?
-        ""
-        :
-        "none";
-
-
-      if(match) {
-
-        totalVisible++;
-
-      }
-
-    }
-  );
+  let totalVisible =
+    0;
 
 
   categories.forEach(
     function(category) {
+
+      const categoryName =
+        category.dataset.category;
+
+
+      const categoryAllowed =
+        activeFilter === "all"
+        ||
+        activeFilter === categoryName;
+
 
       const categoryCards =
         Array.from(
@@ -2073,22 +2224,58 @@ function filterSupplies() {
         );
 
 
-      const hasVisible =
-        categoryCards.some(
-          function(card) {
+      let visibleInCategory =
+        0;
 
-            return (
-              card.style.display
-              !==
-              "none"
+
+      categoryCards.forEach(
+        function(card) {
+
+          const text =
+            (
+              card.innerText
+              +
+              " "
+              +
+              card.dataset.search
+            )
+            .toLowerCase();
+
+
+          const matchesSearch =
+            text.includes(
+              term
             );
 
+
+          const showCard =
+            categoryAllowed
+            &&
+            matchesSearch;
+
+
+          card.style.display =
+            showCard
+            ?
+            ""
+            :
+            "none";
+
+
+          if(showCard) {
+
+            visibleInCategory++;
+
+            totalVisible++;
+
           }
-        );
+
+        }
+      );
 
 
       category.style.display =
-        hasVisible
+        visibleInCategory > 0
         ?
         ""
         :
@@ -2114,8 +2301,79 @@ searchInput.addEventListener(
 );
 
 
+filterButtons.forEach(
+  function(button) {
 
-/* MOBILE MENU */
+    button.addEventListener(
+      "click",
+      function() {
+
+        activeFilter =
+          button.dataset.filter;
+
+
+        filterButtons.forEach(
+          function(btn) {
+
+            btn.classList.remove(
+              "active"
+            );
+
+          }
+        );
+
+
+        button.classList.add(
+          "active"
+        );
+
+
+        filterSupplies();
+
+
+        const visibleSection =
+          categories.find(
+            function(category) {
+
+              return (
+                category.style.display
+                !==
+                "none"
+              );
+
+            }
+          );
+
+
+        if(visibleSection) {
+
+          const offset =
+            visibleSection
+              .getBoundingClientRect()
+              .top
+            +
+            window.pageYOffset
+            -
+            190;
+
+
+          window.scrollTo({
+            top: offset,
+            behavior: "smooth"
+          });
+
+        }
+
+      }
+    );
+
+  }
+);
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
 
 const menuButton =
   document.getElementById(
