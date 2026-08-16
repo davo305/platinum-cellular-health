@@ -211,7 +211,7 @@ button {
 
 
 /* =========================================
-   MEMBER HEADER
+   DESKTOP MEMBER HEADER
 ========================================= */
 
 .member-area {
@@ -397,6 +397,196 @@ button {
 
 
 /* =========================================
+   MOBILE VISIBLE MEMBER BAR
+========================================= */
+
+.mobile-member-status-bar {
+
+  display: none;
+
+  border-top:
+    1px solid #202428;
+
+  background:
+    #080a0b;
+}
+
+.mobile-member-status-inner {
+
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 12px;
+}
+
+.mobile-status-login {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 40px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.35);
+
+  border-radius: 8px;
+
+  color: var(--gold2);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: .5px;
+
+  background:
+    rgba(213,173,85,.03);
+}
+
+.mobile-status-member {
+
+  display: none;
+
+  width: 100%;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.mobile-status-member.visible {
+
+  display: flex;
+}
+
+.mobile-status-identity {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.mobile-status-dot {
+
+  width: 7px;
+  height: 7px;
+
+  min-width: 7px;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+
+  box-shadow:
+    0 0 9px
+    rgba(213,173,85,.55);
+}
+
+.mobile-status-copy {
+
+  min-width: 0;
+
+  line-height: 1.1;
+}
+
+.mobile-status-label {
+
+  color: #777e83;
+
+  font-size: 6px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.mobile-status-name {
+
+  max-width: 130px;
+
+  overflow: hidden;
+
+  color: var(--gold2);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.mobile-status-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.mobile-status-actions a {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding:
+    0 9px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 7px;
+
+  background: #0d1012;
+
+  color: #c6cacc;
+
+  font-size: 7px;
+
+  font-weight: 900;
+}
+
+.mobile-status-actions a.gold {
+
+  border: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+}
+
+
+/* =========================================
    MOBILE MENU
 ========================================= */
 
@@ -503,8 +693,6 @@ span:nth-child(3) {
   font-size: 12px;
 
   font-weight: 900;
-
-  letter-spacing: .5px;
 }
 
 .mobile-menu-inner > a:hover {
@@ -704,13 +892,11 @@ span:nth-child(3) {
 @keyframes promoScroll {
 
   from {
-
     transform:
       translateX(0);
   }
 
   to {
-
     transform:
       translateX(-50%);
   }
@@ -1320,8 +1506,11 @@ footer {
 @media(max-width:1100px) {
 
   .member-area {
-
     display: none;
+  }
+
+  .mobile-member-status-bar {
+    display: block;
   }
 
 }
@@ -1425,6 +1614,26 @@ footer {
     letter-spacing: 1.2px;
   }
 
+  .mobile-member-status-inner {
+
+    min-height: 58px;
+  }
+
+  .mobile-status-name {
+
+    max-width: 95px;
+
+    font-size: 9px;
+  }
+
+  .mobile-status-actions a {
+
+    padding:
+      0 7px;
+
+    font-size: 6.5px;
+  }
+
   .page-hero {
 
     padding:
@@ -1506,11 +1715,8 @@ LONGEVITY AT THE CELLULAR LEVEL
 </a>
 
 
-
 <div class="nav-right">
 
-
-<!-- DESKTOP NAVIGATION -->
 
 <nav class="nav-links">
 
@@ -1559,8 +1765,6 @@ Contact
 
 
 
-<!-- DESKTOP MEMBER AREA -->
-
 <div class="member-area">
 
 
@@ -1583,7 +1787,6 @@ Contact
 
 <span class="member-dot"></span>
 
-
 <div class="member-info">
 
 <div class="member-label">
@@ -1598,7 +1801,6 @@ MEMBER
 </div>
 
 </div>
-
 
 </div>
 
@@ -1635,8 +1837,6 @@ SIGN OUT
 
 
 
-<!-- MOBILE MENU BUTTON -->
-
 <button
   class="mobile-menu-button"
   id="mobileMenuButton"
@@ -1650,6 +1850,80 @@ SIGN OUT
 <span></span>
 
 </button>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     VISIBLE MOBILE MEMBER STATUS
+========================================= -->
+
+<div class="mobile-member-status-bar">
+
+<div class="shell mobile-member-status-inner">
+
+
+<a
+  href="login.html"
+  class="mobile-status-login"
+  id="visibleMobileLogin"
+>
+🔐 MEMBER LOGIN / CREATE ACCOUNT
+</a>
+
+
+<div
+  class="mobile-status-member"
+  id="visibleMobileMember"
+>
+
+
+<div class="mobile-status-identity">
+
+<span class="mobile-status-dot"></span>
+
+
+<div class="mobile-status-copy">
+
+<div class="mobile-status-label">
+SIGNED IN
+</div>
+
+<div
+  class="mobile-status-name"
+  id="visibleMobileMemberName"
+>
+PCH Member
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="mobile-status-actions">
+
+<a href="login.html">
+ACCOUNT
+</a>
+
+<a
+  href="login.html"
+  class="gold"
+>
+CHECKOUT
+</a>
+
+</div>
+
+
+</div>
 
 
 </div>
@@ -1704,8 +1978,7 @@ PCH Member
 <div
   class="mobile-member-email"
   id="mobileMemberEmail"
->
-</div>
+></div>
 
 
 <div class="mobile-member-actions">
@@ -1744,7 +2017,6 @@ CATALOG
 
 
 </div>
-
 
 
 <a href="index.html">
@@ -2076,8 +2348,6 @@ research catalog.
 <div class="coa-library">
 
 
-<!-- R10 -->
-
 <div class="coa-item">
 
 
@@ -2116,8 +2386,6 @@ VIEW COA
 </div>
 
 
-
-<!-- GHK-CU -->
 
 <div class="coa-item">
 
@@ -2158,8 +2426,6 @@ VIEW COA
 
 
 
-<!-- CARTALAX -->
-
 <div class="coa-item">
 
 
@@ -2198,8 +2464,6 @@ VIEW COA
 </div>
 
 
-
-<!-- MOTS-C -->
 
 <div class="coa-item">
 
@@ -2486,7 +2750,6 @@ Not for human or animal use
 ></script>
 
 
-
 <script>
 
 /* =========================================
@@ -2588,11 +2851,30 @@ const mobileSignout =
   );
 
 
+const visibleMobileLogin =
+  document.getElementById(
+    "visibleMobileLogin"
+  );
+
+
+const visibleMobileMember =
+  document.getElementById(
+    "visibleMobileMember"
+  );
+
+
+const visibleMobileMemberName =
+  document.getElementById(
+    "visibleMobileMemberName"
+  );
+
+
 /* =========================================
    LOGGED OUT STATE
 ========================================= */
 
 function showLoggedOutMemberState() {
+
 
   desktopLoginLink.style.display =
     "inline-flex";
@@ -2611,6 +2893,16 @@ function showLoggedOutMemberState() {
     "visible"
   );
 
+
+  visibleMobileLogin.style.display =
+    "flex";
+
+
+  visibleMobileMember.classList.remove(
+    "visible"
+  );
+
+
 }
 
 
@@ -2621,6 +2913,7 @@ function showLoggedOutMemberState() {
 function showLoggedInMemberState(
   user
 ) {
+
 
   const username =
     user.user_metadata
@@ -2663,16 +2956,32 @@ function showLoggedInMemberState(
     ||
     "";
 
+
+  visibleMobileLogin.style.display =
+    "none";
+
+
+  visibleMobileMember.classList.add(
+    "visible"
+  );
+
+
+  visibleMobileMemberName.textContent =
+    username;
+
+
 }
 
 
 /* =========================================
-   RESTORE SESSION
+   RESTORE MEMBER SESSION
 ========================================= */
 
 async function restoreMemberSession() {
 
+
   try {
+
 
     const {
       data
@@ -2687,21 +2996,27 @@ async function restoreMemberSession() {
       data.session.user
     ) {
 
+
       showLoggedInMemberState(
         data.session.user
       );
+
 
     }
 
     else {
 
+
       showLoggedOutMemberState();
 
+
     }
+
 
   }
 
   catch(error) {
+
 
     console.error(
       "PCH member session error:",
@@ -2711,7 +3026,9 @@ async function restoreMemberSession() {
 
     showLoggedOutMemberState();
 
+
   }
+
 
 }
 
@@ -2722,11 +3039,13 @@ async function restoreMemberSession() {
 
 async function signOutMember() {
 
+
   await supabaseClient.auth
     .signOut();
 
 
   showLoggedOutMemberState();
+
 
 }
 
@@ -2754,23 +3073,29 @@ supabaseClient.auth
       session
     ) {
 
+
       if (
         session
         &&
         session.user
       ) {
 
+
         showLoggedInMemberState(
           session.user
         );
+
 
       }
 
       else {
 
+
         showLoggedOutMemberState();
 
+
       }
+
 
     }
   );
@@ -2796,6 +3121,7 @@ mobileMenuButton.addEventListener(
   "click",
   function() {
 
+
     const isOpen =
       mobileMenu.classList.toggle(
         "open"
@@ -2813,6 +3139,7 @@ mobileMenuButton.addEventListener(
       isOpen
     );
 
+
   }
 );
 
@@ -2822,9 +3149,11 @@ mobileMenu
   .forEach(
     function(link) {
 
+
       link.addEventListener(
         "click",
         function() {
+
 
           mobileMenu.classList.remove(
             "open"
@@ -2841,8 +3170,10 @@ mobileMenu
             "false"
           );
 
+
         }
       );
+
 
     }
   );
@@ -2856,7 +3187,9 @@ window.addEventListener(
   "pageshow",
   function() {
 
+
     restoreMemberSession();
+
 
   }
 );
@@ -2866,15 +3199,19 @@ document.addEventListener(
   "visibilitychange",
   function() {
 
+
     if (
       document.visibilityState
       ===
       "visible"
     ) {
 
+
       restoreMemberSession();
 
+
     }
+
 
   }
 );
