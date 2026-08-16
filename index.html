@@ -1004,6 +1004,150 @@ span:nth-child(3) {
 
 
 /* =========================================
+   RECOMMENDED SUPPLIES PROMO
+========================================= */
+
+.supplies-promo {
+  padding:
+    75px 0;
+
+  border-bottom:
+    1px solid var(--border);
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(213,173,85,.10),
+      transparent 32%
+    ),
+    #07090a;
+}
+
+.supplies-promo-box {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr .9fr;
+
+  gap: 45px;
+
+  align-items: center;
+
+  padding: 38px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.32);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(213,173,85,.055),
+      #0a0c0d
+    );
+
+  box-shadow:
+    0 20px 55px
+    rgba(0,0,0,.28);
+}
+
+.supplies-promo-copy h2 {
+  margin-bottom: 16px;
+
+  font-size:
+    clamp(
+      31px,
+      5vw,
+      50px
+    );
+
+  line-height: 1.03;
+
+  letter-spacing: -1.4px;
+}
+
+.supplies-promo-copy p {
+  max-width: 680px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.supplies-promo-actions {
+  display: flex;
+
+  gap: 11px;
+
+  flex-wrap: wrap;
+
+  margin-top: 26px;
+}
+
+.supplies-badges {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 12px;
+}
+
+.supplies-badge {
+  min-height: 135px;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 12px;
+
+  background: #0d1012;
+}
+
+.supplies-badge strong {
+  color: var(--gold2);
+
+  font-size: 25px;
+
+  line-height: 1.1;
+}
+
+.supplies-badge span {
+  color: #777e83;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.1px;
+
+  line-height: 1.5;
+}
+
+.affiliate-mini {
+  margin-top: 14px;
+
+  color: #737a7f;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
    SCIENCE
 ========================================= */
 
@@ -1370,7 +1514,8 @@ footer {
 
   .section-head,
   .science-grid,
-  .quality-wrap {
+  .quality-wrap,
+  .supplies-promo-box {
     grid-template-columns: 1fr;
 
     gap: 30px;
@@ -1382,6 +1527,23 @@ footer {
 
   .feature-card {
     min-height: 300px;
+  }
+
+  .supplies-promo {
+    padding:
+      60px 0;
+  }
+
+  .supplies-promo-box {
+    padding: 28px;
+  }
+
+  .supplies-promo-actions {
+    display: grid;
+  }
+
+  .supplies-promo-actions .btn {
+    width: 100%;
   }
 
   .lab-grid {
@@ -1488,6 +1650,18 @@ footer {
 
   .hero-visual {
     min-height: 300px;
+  }
+
+  .supplies-promo-box {
+    padding: 23px;
+  }
+
+  .supplies-badges {
+    grid-template-columns: 1fr;
+  }
+
+  .supplies-badge {
+    min-height: 115px;
   }
 
   .standards-grid {
@@ -1736,8 +1910,6 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 
 
-<!-- DESKTOP NAVIGATION -->
-
 <nav class="nav-links">
 
 
@@ -1783,8 +1955,6 @@ Contact
 
 
 
-<!-- MOBILE BUTTON -->
-
 <button
   class="mobile-menu-button"
   id="mobileMenuButton"
@@ -1805,8 +1975,6 @@ Contact
 </div>
 
 
-
-<!-- MOBILE MENU -->
 
 <div
   class="mobile-menu"
@@ -1867,10 +2035,6 @@ Contact PCH Labs
 
 
 
-<!-- =========================================
-     MOVING PROMOTION
-========================================= -->
-
 <div class="promo-banner">
 
 <div class="promo-track">
@@ -1915,10 +2079,6 @@ $15 SHIPPING OPTION INCLUDED · PREMIUM SHIPPING AVAILABLE
 </header>
 
 
-
-<!-- =========================================
-     MAIN
-========================================= -->
 
 <main>
 
@@ -2148,6 +2308,138 @@ VIEW DOCUMENTATION →
 </span>
 
 </a>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     RECOMMENDED SUPPLIES
+========================================= -->
+
+<section class="supplies-promo">
+
+<div class="shell">
+
+
+<div class="supplies-promo-box">
+
+
+<div class="supplies-promo-copy">
+
+
+<div class="eyebrow">
+PCH RECOMMENDED PRODUCTS
+</div>
+
+
+<h2>
+Supplies we recommend.
+</h2>
+
+
+<p>
+Browse PCH Labs recommended laboratory accessories,
+storage products, travel organizers, and fitness
+essentials available through Amazon. Use category
+filters and search to quickly find the products
+you need.
+</p>
+
+
+<div class="supplies-promo-actions">
+
+
+<a
+  href="recommended-supplies.html"
+  class="btn btn-gold"
+>
+BROWSE RECOMMENDED SUPPLIES
+</a>
+
+
+<a
+  href="recommended-supplies.html"
+  class="btn"
+>
+VIEW ALL PRODUCTS →
+</a>
+
+
+</div>
+
+
+<div class="affiliate-mini">
+As an Amazon Associate, PCH Labs may earn from qualifying purchases at no additional cost to you.
+</div>
+
+
+</div>
+
+
+
+<div class="supplies-badges">
+
+
+<div class="supplies-badge">
+
+<strong>
+LAB
+</strong>
+
+<span>
+LAB & RESEARCH SUPPLIES
+</span>
+
+</div>
+
+
+<div class="supplies-badge">
+
+<strong>
+STORE
+</strong>
+
+<span>
+STORAGE & TRAVEL
+</span>
+
+</div>
+
+
+<div class="supplies-badge">
+
+<strong>
+FIT
+</strong>
+
+<span>
+NUTRITION & TRAINING
+</span>
+
+</div>
+
+
+<div class="supplies-badge">
+
+<strong>
+SHOP
+</strong>
+
+<span>
+AMAZON AFFILIATE LINKS
+</span>
+
+</div>
+
+
+</div>
 
 
 </div>
@@ -2485,10 +2777,6 @@ Restricted Access
 
 
 
-<!-- =========================================
-     FOOTER
-========================================= -->
-
 <footer>
 
 <div class="shell footer-grid">
@@ -2519,10 +2807,6 @@ contact@platinumcellularhealth.com
 </footer>
 
 
-
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
 
 <script>
 
