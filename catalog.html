@@ -16,7 +16,6 @@
 Research Catalog | Platinum Cellular Health Labs
 </title>
 
-
 <style>
 
 /* =========================================
@@ -116,14 +115,18 @@ input {
   min-height: 78px;
 
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
+
+  justify-content:
+    space-between;
 
   gap: 25px;
 }
 
 .brand {
   display: flex;
+
   align-items: center;
 
   gap: 12px;
@@ -166,9 +169,10 @@ input {
 
 .nav-links {
   display: flex;
+
   align-items: center;
 
-  gap: 20px;
+  gap: 18px;
 
   color: #b9bdc0;
 
@@ -179,6 +183,101 @@ input {
 
 .nav-links a:hover {
   color: var(--gold2);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding:
+    0 20px;
+
+  border-radius: 8px;
+
+  border:
+    1px solid #34393d;
+
+  background: #101214;
+
+  color: #f4f4f4;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+
+  transition: .2s ease;
+}
+
+.btn:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    var(--gold);
+}
+
+.btn-gold {
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  border: none;
+
+  color: #080909;
+}
+
+.btn-coa {
+  border:
+    1px solid
+    rgba(213,173,85,.48);
+
+  color: var(--gold2);
+
+  background:
+    rgba(213,173,85,.03);
+}
+
+.btn-unavailable {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding:
+    0 16px;
+
+  border-radius: 8px;
+
+  border:
+    1px solid #252a2e;
+
+  background: #0b0d0f;
+
+  color: #656b70;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
 }
 
 
@@ -270,26 +369,37 @@ input {
   color: var(--gold2);
 }
 
-.mobile-menu-inner
+.mobile-contact-button,
+.mobile-checkout-button {
+  margin-top: 15px !important;
+
+  padding: 14px !important;
+
+  border: none !important;
+
+  border-radius: 9px !important;
+
+  text-align: center;
+}
+
 .mobile-contact-button {
-  margin-top: 15px;
+  background: #101214;
 
-  padding: 14px;
+  color: #f4f4f4 !important;
 
-  border: none;
+  border:
+    1px solid #30353a !important;
+}
 
-  border-radius: 9px;
-
+.mobile-checkout-button {
   background:
     linear-gradient(
       135deg,
       #b98a32,
       #e2c16e
-    );
+    ) !important;
 
-  color: #080909;
-
-  text-align: center;
+  color: #080909 !important;
 }
 
 .mobile-menu-button.active
@@ -332,10 +442,6 @@ span:nth-child(3) {
     );
 
   color: #080909;
-
-  border-bottom:
-    1px solid
-    rgba(255,255,255,.12);
 }
 
 .promo-track {
@@ -374,90 +480,6 @@ span:nth-child(3) {
       translateX(-50%);
   }
 
-}
-
-
-/* =========================================
-   BUTTONS
-========================================= */
-
-.btn {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 46px;
-
-  padding:
-    0 20px;
-
-  border-radius: 8px;
-
-  border:
-    1px solid #34393d;
-
-  background: #101214;
-
-  color: #f4f4f4;
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: .7px;
-
-  transition: .2s ease;
-}
-
-.btn:hover {
-  transform:
-    translateY(-2px);
-
-  border-color:
-    var(--gold);
-}
-
-.btn-coa {
-  border:
-    1px solid
-    rgba(213,173,85,.48);
-
-  color: var(--gold2);
-
-  background:
-    rgba(213,173,85,.03);
-}
-
-.btn-unavailable {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 46px;
-
-  padding:
-    0 16px;
-
-  border-radius: 8px;
-
-  border:
-    1px solid #252a2e;
-
-  background: #0b0d0f;
-
-  color: #656b70;
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: .7px;
-
-  cursor: default;
 }
 
 
@@ -559,6 +581,77 @@ span:nth-child(3) {
 
 
 /* =========================================
+   MERCHANDISE CHECKOUT
+========================================= */
+
+.merch-checkout {
+  padding:
+    42px 0;
+
+  border-bottom:
+    1px solid
+    var(--border);
+
+  background: #090b0c;
+}
+
+.merch-checkout-box {
+  display: grid;
+
+  grid-template-columns:
+    1fr auto;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 28px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.32);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(213,173,85,.06),
+      #0b0d0f
+    );
+}
+
+.merch-checkout-box h2 {
+  font-size:
+    clamp(
+      24px,
+      4vw,
+      36px
+    );
+
+  margin-bottom: 8px;
+}
+
+.merch-checkout-box p {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.75;
+
+  max-width: 720px;
+}
+
+.checkout-note {
+  margin-top: 10px;
+
+  color: #747b80;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
    CATALOG / SEARCH
 ========================================= */
 
@@ -608,8 +701,7 @@ span:nth-child(3) {
   padding:
     0 17px;
 
-  transition:
-    .2s ease;
+  transition: .2s ease;
 }
 
 .search-box:focus-within {
@@ -810,11 +902,6 @@ span:nth-child(3) {
   margin-bottom: 20px;
 }
 
-
-/* =========================================
-   PRICE
-========================================= */
-
 .price-row {
   display: flex;
 
@@ -885,11 +972,6 @@ span:nth-child(3) {
   letter-spacing: 1px;
 }
 
-
-/* =========================================
-   ACTIVE COA
-========================================= */
-
 .has-coa {
   box-shadow:
     inset 0 0 0 1px
@@ -925,7 +1007,7 @@ span:nth-child(3) {
 
 
 /* =========================================
-   CATALOG NOTICE
+   NOTICE
 ========================================= */
 
 .catalog-notice {
@@ -1061,6 +1143,14 @@ footer {
     font-size: 15px;
   }
 
+  .merch-checkout-box {
+    grid-template-columns: 1fr;
+  }
+
+  .merch-checkout-box .btn {
+    width: 100%;
+  }
+
   .footer-grid {
     flex-direction: column;
   }
@@ -1129,7 +1219,6 @@ footer {
 </head>
 
 
-
 <body>
 
 
@@ -1194,10 +1283,7 @@ Policies
 FAQ
 </a>
 
-<a
-  href="contact.html"
-  class="btn"
->
+<a href="contact.html">
 Contact
 </a>
 
@@ -1262,15 +1348,20 @@ FAQ
 Contact PCH Labs
 </a>
 
-</div>
+<a
+  href="https://ezformz.net/f/-n3vz40"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="mobile-checkout-button"
+>
+GENERAL MERCHANDISE CHECKOUT
+</a>
 
 </div>
 
+</div>
 
 
-<!-- =========================================
-     MOVING PROMOTION
-========================================= -->
 
 <div class="promo-banner">
 
@@ -1382,6 +1473,61 @@ FREE STANDARD SHIPPING OVER $280
 
 
 <!-- =========================================
+     GENERAL MERCHANDISE CHECKOUT
+========================================= -->
+
+<section class="merch-checkout">
+
+<div class="shell">
+
+
+<div class="merch-checkout-box">
+
+
+<div>
+
+<div class="eyebrow">
+GENERAL MERCHANDISE
+</div>
+
+<h2>
+Need the merchandise checkout?
+</h2>
+
+<p>
+Use the external EZFormz checkout for eligible
+ordinary merchandise and non-regulated products.
+Research-material listings below remain separate
+from this checkout.
+</p>
+
+<div class="checkout-note">
+Checkout opens securely in a new tab.
+</div>
+
+</div>
+
+
+<a
+  href="https://ezformz.net/f/-n3vz40"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="btn btn-gold"
+>
+OPEN MERCHANDISE CHECKOUT
+</a>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
      CATALOG
 ========================================= -->
 
@@ -1425,17 +1571,28 @@ FREE STANDARD SHIPPING OVER $280
 >
 
 
+<!-- 1 -->
+
 <article
   class="product-card searchable"
   data-search="hospira bac water bacteriostatic water 32"
 >
 
 <div class="card-top">
-<div class="category">LAB SUPPLY</div>
-<div class="amount-badge">BAC WATER</div>
+
+<div class="category">
+LAB SUPPLY
 </div>
 
-<h2>Hospira BAC Water</h2>
+<div class="amount-badge">
+BAC WATER
+</div>
+
+</div>
+
+<h2>
+Hospira BAC Water
+</h2>
 
 <p class="product-description">
 Laboratory supply listing with associated
@@ -1443,24 +1600,38 @@ documentation information where available.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$32</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$32
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH / LABORATORY CONTEXT
 </span>
+
 </div>
 
 </article>
 
 
+
+<!-- 2 -->
 
 <article
   class="product-card searchable"
@@ -1468,11 +1639,20 @@ RESEARCH / LABORATORY CONTEXT
 >
 
 <div class="card-top">
-<div class="category">LAB SUPPLY</div>
-<div class="amount-badge">BAC WATER</div>
+
+<div class="category">
+LAB SUPPLY
 </div>
 
-<h2>EBAC BAC Water</h2>
+<div class="amount-badge">
+BAC WATER
+</div>
+
+</div>
+
+<h2>
+EBAC BAC Water
+</h2>
 
 <p class="product-description">
 Laboratory supply listing with associated
@@ -1480,51 +1660,86 @@ documentation information where available.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$16</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$16
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH / LABORATORY CONTEXT
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 3 -->
+
 <article
   class="product-card searchable has-coa"
-  data-search="r10 reta retatrutide glp3 glp-3 10mg 60 vanguard coa"
+  data-search="r10 10mg 60 coa"
 >
 
 <div class="card-top">
-<div class="category">R SERIES</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+R SERIES
 </div>
 
-<h2>R10</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+R10
+</h2>
 
 <p class="product-description">
-R-series research material listed at 10 mg.
+R-series research-material listing at 10 mg.
 </p>
 
 <div class="coa-indicator">
+
 <span class="coa-dot"></span>
+
 COA AVAILABLE
+
 </div>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$60</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$60
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
@@ -1548,176 +1763,291 @@ RESEARCH USE ONLY
 
 
 
+<!-- 4 -->
+
 <article
   class="product-card searchable"
-  data-search="r20 reta retatrutide 20mg 80"
+  data-search="r20 20mg 80"
 >
 
 <div class="card-top">
-<div class="category">R SERIES</div>
-<div class="amount-badge">20 MG</div>
+
+<div class="category">
+R SERIES
 </div>
 
-<h2>R20</h2>
+<div class="amount-badge">
+20 MG
+</div>
+
+</div>
+
+<h2>
+R20
+</h2>
 
 <p class="product-description">
-R-series research material listed at 20 mg.
+R-series research-material listing at 20 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$80</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$80
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 5 -->
+
 <article
   class="product-card searchable"
-  data-search="r30 reta retatrutide 30mg 100"
+  data-search="r30 30mg 100"
 >
 
 <div class="card-top">
-<div class="category">R SERIES</div>
-<div class="amount-badge">30 MG</div>
+
+<div class="category">
+R SERIES
 </div>
 
-<h2>R30</h2>
+<div class="amount-badge">
+30 MG
+</div>
+
+</div>
+
+<h2>
+R30
+</h2>
 
 <p class="product-description">
-R-series research material listed at 30 mg.
+R-series research-material listing at 30 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$100</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$100
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 6 -->
+
 <article
   class="product-card searchable"
-  data-search="t10 tirz tirzepatide 10mg 50"
+  data-search="t10 10mg 50"
 >
 
 <div class="card-top">
-<div class="category">T SERIES</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+T SERIES
 </div>
 
-<h2>T10</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+T10
+</h2>
 
 <p class="product-description">
-T-series research material listed at 10 mg.
+T-series research-material listing at 10 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$50</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$50
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 7 -->
+
 <article
   class="product-card searchable"
-  data-search="t20 tirz tirzepatide 20mg 70"
+  data-search="t20 20mg 70"
 >
 
 <div class="card-top">
-<div class="category">T SERIES</div>
-<div class="amount-badge">20 MG</div>
+
+<div class="category">
+T SERIES
 </div>
 
-<h2>T20</h2>
+<div class="amount-badge">
+20 MG
+</div>
+
+</div>
+
+<h2>
+T20
+</h2>
 
 <p class="product-description">
-T-series research material listed at 20 mg.
+T-series research-material listing at 20 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$70</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$70
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
+
+<!-- 8 -->
 
 <article
   class="product-card searchable has-coa"
-  data-search="ghkcu ghk-cu ghk cu 50mg 25 janoshik coa copper peptide"
+  data-search="ghkcu ghk-cu 50mg 25 coa"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">50 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>GHK-Cu</h2>
+<div class="amount-badge">
+50 MG
+</div>
+
+</div>
+
+<h2>
+GHK-Cu
+</h2>
 
 <p class="product-description">
 GHK-Cu research-material listing at 50 mg.
 </p>
 
 <div class="coa-indicator">
+
 <span class="coa-dot"></span>
+
 COA AVAILABLE
+
 </div>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$25</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$25
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
@@ -1741,68 +2071,114 @@ RESEARCH USE ONLY
 
 
 
+<!-- 9 -->
+
 <article
   class="product-card searchable"
-  data-search="ghkcu ghk-cu ghk cu 100mg 45 copper peptide"
+  data-search="ghkcu ghk-cu 100mg 45"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">100 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>GHK-Cu</h2>
+<div class="amount-badge">
+100 MG
+</div>
+
+</div>
+
+<h2>
+GHK-Cu
+</h2>
 
 <p class="product-description">
 GHK-Cu research-material listing at 100 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$45</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$45
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 10 -->
+
 <article
   class="product-card searchable has-coa"
-  data-search="cartalax cart 20mg 50 sterigenix coa"
+  data-search="cartalax 20mg 50 coa"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">20 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>Cartalax</h2>
+<div class="amount-badge">
+20 MG
+</div>
+
+</div>
+
+<h2>
+Cartalax
+</h2>
 
 <p class="product-description">
 Cartalax research-material listing at 20 mg.
 </p>
 
 <div class="coa-indicator">
+
 <span class="coa-dot"></span>
+
 COA AVAILABLE
+
 </div>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$50</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$50
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
@@ -1826,17 +2202,28 @@ RESEARCH USE ONLY
 
 
 
+<!-- 11 -->
+
 <article
   class="product-card searchable"
-  data-search="n acetyl semax amidate semax 10mg 45"
+  data-search="n acetyl semax amidate 10mg 45"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>N-Acetyl Semax (Amidate)</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+N-Acetyl Semax (Amidate)
+</h2>
 
 <p class="product-description">
 Research catalog identification and
@@ -1844,36 +2231,59 @@ analytical-documentation listing.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$45</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$45
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 12 -->
+
 <article
   class="product-card searchable"
-  data-search="n acetyl selank amidate selank 10mg 45"
+  data-search="n acetyl selank amidate 10mg 45"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>N-Acetyl Selank (Amidate)</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+N-Acetyl Selank (Amidate)
+</h2>
 
 <p class="product-description">
 Research catalog identification and
@@ -1881,60 +2291,97 @@ analytical-documentation listing.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$45</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$45
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 13 -->
+
 <article
   class="product-card searchable"
-  data-search="pt141 pt-141 10mg 35"
+  data-search="pt-141 pt141 10mg 35"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>PT-141</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+PT-141
+</h2>
 
 <p class="product-description">
 Research-material catalog listing at 10 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$35</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$35
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
+
+<!-- 14 -->
 
 <article
   class="product-card searchable"
@@ -1942,11 +2389,20 @@ RESEARCH USE ONLY
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>Epithalon / Epitalon (Amidate)</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+Epithalon / Epitalon (Amidate)
+</h2>
 
 <p class="product-description">
 Research catalog identification and
@@ -1954,24 +2410,38 @@ analytical-documentation listing.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$40</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$40
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
+
+<!-- 15 -->
 
 <article
   class="product-card searchable"
@@ -1979,35 +2449,58 @@ RESEARCH USE ONLY
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>Pinealon</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+Pinealon
+</h2>
 
 <p class="product-description">
 Research-material catalog listing at 10 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$40</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$40
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
+
+<!-- 16 -->
 
 <article
   class="product-card searchable"
@@ -2015,35 +2508,58 @@ RESEARCH USE ONLY
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">5 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>DSIP</h2>
+<div class="amount-badge">
+5 MG
+</div>
+
+</div>
+
+<h2>
+DSIP
+</h2>
 
 <p class="product-description">
 DSIP research-material listing at 5 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$25</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$25
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
+
+<!-- 17 -->
 
 <article
   class="product-card searchable"
@@ -2051,35 +2567,58 @@ RESEARCH USE ONLY
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>DSIP</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+DSIP
+</h2>
 
 <p class="product-description">
 DSIP research-material listing at 10 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$40</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$40
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
+
+<!-- 18 -->
 
 <article
   class="product-card searchable"
@@ -2087,83 +2626,138 @@ RESEARCH USE ONLY
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>ARA-290 (Cibinetide)</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+ARA-290 (Cibinetide)
+</h2>
 
 <p class="product-description">
 Research-material catalog listing at 10 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$40</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$40
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 19 -->
+
 <article
   class="product-card searchable"
-  data-search="ara290 ara-290 cibinetide 50mg 90"
+  data-search="ara290 ara-290 50mg 90"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">50 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>ARA-290</h2>
+<div class="amount-badge">
+50 MG
+</div>
+
+</div>
+
+<h2>
+ARA-290
+</h2>
 
 <p class="product-description">
 Research-material catalog listing at 50 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$90</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$90
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 20 -->
+
 <article
   class="product-card searchable"
-  data-search="bpc157 tb500 bpc-157 tb-500 wolverine 10mg 70"
+  data-search="bpc157 tb500 wolverine 10mg 70"
 >
 
 <div class="card-top">
-<div class="category">WOLVERINE</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+WOLVERINE
 </div>
 
-<h2>BPC-157 / TB-500</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+BPC-157 / TB-500
+</h2>
 
 <p class="product-description">
 Wolverine research-material combination
@@ -2171,36 +2765,59 @@ listed at 10 mg total.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$70</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$70
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 21 -->
+
 <article
   class="product-card searchable"
-  data-search="bpc157 tb4 bpc-157 tb-4 wolverine 20mg 110"
+  data-search="bpc157 tb4 wolverine 20mg 110"
 >
 
 <div class="card-top">
-<div class="category">WOLVERINE</div>
-<div class="amount-badge">20 MG</div>
+
+<div class="category">
+WOLVERINE
 </div>
 
-<h2>BPC-157 / TB-4</h2>
+<div class="amount-badge">
+20 MG
+</div>
+
+</div>
+
+<h2>
+BPC-157 / TB-4
+</h2>
 
 <p class="product-description">
 Wolverine research-material combination
@@ -2208,36 +2825,59 @@ listed at 20 mg total.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$110</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$110
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 22 -->
+
 <article
   class="product-card searchable"
-  data-search="bpc157 tb4 cartalax bpc-157 tb-4 deadpool 30mg 125"
+  data-search="bpc157 tb4 cartalax deadpool 30mg 125"
 >
 
 <div class="card-top">
-<div class="category">DEADPOOL</div>
-<div class="amount-badge">30 MG</div>
+
+<div class="category">
+DEADPOOL
 </div>
 
-<h2>BPC-157 / TB-4 / Cartalax</h2>
+<div class="amount-badge">
+30 MG
+</div>
+
+</div>
+
+<h2>
+BPC-157 / TB-4 / Cartalax
+</h2>
 
 <p class="product-description">
 Deadpool research-material combination
@@ -2245,24 +2885,38 @@ listed at 30 mg total.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$125</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$125
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
+
+<!-- 23 -->
 
 <article
   class="product-card searchable"
@@ -2270,35 +2924,58 @@ RESEARCH USE ONLY
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">80 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>KLOW</h2>
+<div class="amount-badge">
+80 MG
+</div>
+
+</div>
+
+<h2>
+KLOW
+</h2>
 
 <p class="product-description">
 KLOW research-material catalog listing at 80 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$115</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$115
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
+
+<!-- 24 -->
 
 <article
   class="product-card searchable"
@@ -2306,206 +2983,342 @@ RESEARCH USE ONLY
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>KPV</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+KPV
+</h2>
 
 <p class="product-description">
 KPV research-material catalog listing at 10 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$40</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$40
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 25 -->
+
 <article
   class="product-card searchable"
-  data-search="cjc cjc1295 cjc-1295 5mg 30"
+  data-search="cjc 5mg 30"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">5 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>CJC</h2>
+<div class="amount-badge">
+5 MG
+</div>
+
+</div>
+
+<h2>
+CJC
+</h2>
 
 <p class="product-description">
 CJC research-material catalog listing at 5 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$30</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$30
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 26 -->
+
 <article
   class="product-card searchable"
-  data-search="ipamorelin ipa 10mg 50"
+  data-search="ipamorelin 10mg 50"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>Ipamorelin</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+Ipamorelin
+</h2>
 
 <p class="product-description">
 Ipamorelin research-material listing at 10 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$50</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$50
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 27 -->
+
 <article
   class="product-card searchable"
-  data-search="tesamorelin tesa 10mg 60"
+  data-search="tesamorelin 10mg 60"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>Tesamorelin</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+Tesamorelin
+</h2>
 
 <p class="product-description">
 Tesamorelin research-material listing at 10 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$60</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$60
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 28 -->
+
 <article
   class="product-card searchable"
-  data-search="cjc ipamorelin cjc ipa cjc/ipamorelin 20mg 100"
+  data-search="cjc ipamorelin 20mg 100"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH COMBINATION</div>
-<div class="amount-badge">20 MG</div>
+
+<div class="category">
+RESEARCH COMBINATION
 </div>
 
-<h2>CJC / Ipamorelin</h2>
+<div class="amount-badge">
+20 MG
+</div>
+
+</div>
+
+<h2>
+CJC / Ipamorelin
+</h2>
 
 <p class="product-description">
 Research-material combination listed at 20 mg total.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$100</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$100
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 29 -->
+
 <article
   class="product-card searchable has-coa"
-  data-search="mots-c mots c motsc 10mg 45 janoshik coa"
+  data-search="mots-c motsc mots c 10mg 45 coa"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">10 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>MOTS-C</h2>
+<div class="amount-badge">
+10 MG
+</div>
+
+</div>
+
+<h2>
+MOTS-C
+</h2>
 
 <p class="product-description">
 MOTS-C research-material catalog listing at 10 mg.
 </p>
 
 <div class="coa-indicator">
+
 <span class="coa-dot"></span>
+
 COA AVAILABLE
+
 </div>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$45</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$45
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
@@ -2529,108 +3342,177 @@ RESEARCH USE ONLY
 
 
 
+<!-- 30 -->
+
 <article
   class="product-card searchable"
   data-search="ss31 ss-31 50mg 100"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">50 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>SS-31</h2>
+<div class="amount-badge">
+50 MG
+</div>
+
+</div>
+
+<h2>
+SS-31
+</h2>
 
 <p class="product-description">
 SS-31 research-material catalog listing at 50 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$100</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$100
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 31 -->
+
 <article
   class="product-card searchable"
-  data-search="5 amino 1mq 5-amino-1mq 500mg 70"
+  data-search="5-amino-1mq 500mg 70"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">500 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>5-Amino-1MQ</h2>
+<div class="amount-badge">
+500 MG
+</div>
+
+</div>
+
+<h2>
+5-Amino-1MQ
+</h2>
 
 <p class="product-description">
 5-Amino-1MQ research-material listing at 500 mg.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$70</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$70
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
 
 
 
+<!-- 32 -->
+
 <article
   class="product-card searchable"
-  data-search="nad nad+ buffered 1000mg 40"
+  data-search="nad+ buffered 1000mg 40"
 >
 
 <div class="card-top">
-<div class="category">RESEARCH MATERIAL</div>
-<div class="amount-badge">1000 MG</div>
+
+<div class="category">
+RESEARCH MATERIAL
 </div>
 
-<h2>NAD+ (Buffered)</h2>
+<div class="amount-badge">
+1000 MG
+</div>
+
+</div>
+
+<h2>
+NAD+ (Buffered)
+</h2>
 
 <p class="product-description">
 Buffered NAD+ research-material catalog listing.
 </p>
 
 <div class="price-row">
+
 <div>
-<span class="price-label">PRICE</span>
-<div class="price">$40</div>
+
+<span class="price-label">
+PRICE
+</span>
+
+<div class="price">
+$40
 </div>
+
+</div>
+
 </div>
 
 <div class="card-actions">
+
 <span class="btn-unavailable">
 COA NOT YET UPLOADED
 </span>
+
 <span class="research-note">
 RESEARCH USE ONLY
 </span>
+
 </div>
 
 </article>
@@ -2664,10 +3546,6 @@ CATALOG & DOCUMENTATION NOTICE
 
 <p>
 Catalog pricing and availability may change.
-Orders with a merchandise subtotal over $280
-qualify for the standard $15 shipping option
-at no charge. Customers selecting a higher-cost
-shipping option are responsible for the difference.
 Certificates of Analysis are linked only where
 corresponding documentation has been added to
 the website. Each COA should be reviewed in its
@@ -2690,10 +3568,6 @@ or animal administration.
 </main>
 
 
-
-<!-- =========================================
-     FOOTER
-========================================= -->
 
 <footer>
 
@@ -2727,14 +3601,10 @@ Not for human or animal use
 
 
 
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
-
 <script>
 
 /* =========================================
-   CATALOG SEARCH
+   SEARCH
 ========================================= */
 
 const searchInput =
@@ -2768,6 +3638,7 @@ function updateCatalog() {
       .toLowerCase()
       .trim();
 
+
   let visible = 0;
 
 
@@ -2783,6 +3654,7 @@ function updateCatalog() {
           card.dataset.search
         )
         .toLowerCase();
+
 
       const match =
         text.includes(
@@ -2847,6 +3719,7 @@ const mobileMenuButton =
     "mobileMenuButton"
   );
 
+
 const mobileMenu =
   document.getElementById(
     "mobileMenu"
@@ -2878,39 +3751,35 @@ mobileMenuButton.addEventListener(
 );
 
 
-const mobileLinks =
-  mobileMenu.querySelectorAll(
-    "a"
+mobileMenu
+  .querySelectorAll("a")
+  .forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          mobileMenu.classList.remove(
+            "open"
+          );
+
+
+          mobileMenuButton.classList.remove(
+            "active"
+          );
+
+
+          mobileMenuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    }
   );
-
-
-mobileLinks.forEach(
-  function(link) {
-
-    link.addEventListener(
-      "click",
-      function() {
-
-        mobileMenu.classList.remove(
-          "open"
-        );
-
-
-        mobileMenuButton.classList.remove(
-          "active"
-        );
-
-
-        mobileMenuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      }
-    );
-
-  }
-);
 
 </script>
 
