@@ -14,10 +14,6 @@
 
 <style>
 
-/* =========================================
-   RESET
-========================================= */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -57,11 +53,6 @@ button {
   margin: auto;
 }
 
-
-/* =========================================
-   COLORS
-========================================= */
-
 :root {
   --black: #050607;
   --panel: #0d0f11;
@@ -96,7 +87,6 @@ button {
   justify-content: center;
 
   padding: 20px;
-
   overflow-y: auto;
 }
 
@@ -116,9 +106,7 @@ button {
     );
 
   border: 1px solid rgba(213,173,85,.35);
-
   border-radius: 22px;
-
   padding: 32px;
 
   box-shadow:
@@ -132,7 +120,6 @@ button {
   object-fit: cover;
 
   border-radius: 50%;
-
   margin: 0 auto 20px;
 
   border: 1px solid rgba(213,173,85,.35);
@@ -140,41 +127,29 @@ button {
 
 .gate-badge {
   width: fit-content;
-
   margin: 0 auto 15px;
-
   padding: 6px 12px;
 
   border: 1px solid rgba(213,173,85,.35);
-
   border-radius: 100px;
 
   color: var(--gold2);
-
   font-size: 11px;
-
   font-weight: 800;
-
   letter-spacing: 1.5px;
 }
 
 .gate-panel h1 {
   text-align: center;
-
   font-size: clamp(26px, 7vw, 40px);
-
   line-height: 1.1;
-
   margin-bottom: 12px;
 }
 
 .gate-intro {
   text-align: center;
-
   color: var(--muted);
-
   font-size: 14px;
-
   margin-bottom: 24px;
 }
 
@@ -185,21 +160,16 @@ button {
 
 .gate-check {
   display: flex;
-
   gap: 12px;
-
   align-items: flex-start;
 
   padding: 13px;
 
   border: 1px solid var(--border);
-
   border-radius: 12px;
 
   background: rgba(255,255,255,.025);
-
   cursor: pointer;
-
   transition: .2s ease;
 }
 
@@ -210,19 +180,14 @@ button {
 .gate-check input {
   width: 20px;
   height: 20px;
-
   min-width: 20px;
-
   margin-top: 2px;
-
   accent-color: var(--gold);
 }
 
 .gate-check span {
   color: #c5c9cc;
-
   font-size: 13px;
-
   line-height: 1.45;
 }
 
@@ -233,21 +198,15 @@ button {
 .gate-enter,
 .gate-exit {
   width: 100%;
-
   border-radius: 10px;
-
   padding: 15px;
-
   font-weight: 900;
-
   letter-spacing: .7px;
-
   cursor: pointer;
 }
 
 .gate-enter {
   margin-top: 20px;
-
   border: none;
 
   background:
@@ -262,29 +221,21 @@ button {
 
 .gate-enter:disabled {
   opacity: .35;
-
   cursor: not-allowed;
 }
 
 .gate-exit {
   margin-top: 9px;
-
   background: transparent;
-
   border: 1px solid #33383d;
-
   color: #aeb3b7;
 }
 
 .gate-footer {
   margin-top: 18px;
-
   text-align: center;
-
   color: #777d82;
-
   font-size: 10px;
-
   letter-spacing: 1.3px;
 }
 
@@ -295,13 +246,10 @@ button {
 
 .site-header {
   position: sticky;
-
   top: 0;
-
   z-index: 1000;
 
   background: rgba(5,6,7,.92);
-
   backdrop-filter: blur(15px);
 
   border-bottom: 1px solid rgba(255,255,255,.07);
@@ -311,9 +259,7 @@ button {
   min-height: 78px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   gap: 25px;
@@ -321,18 +267,19 @@ button {
 
 .brand {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
+
+  min-width: 0;
 }
 
 .brand img {
   width: 52px;
   height: 52px;
 
-  object-fit: cover;
+  flex-shrink: 0;
 
+  object-fit: cover;
   border-radius: 50%;
 
   border: 1px solid rgba(213,173,85,.35);
@@ -340,33 +287,24 @@ button {
 
 .brand-title {
   font-size: 13px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
 .brand-sub {
   font-size: 8px;
-
   color: var(--gold);
-
   letter-spacing: 2px;
-
   margin-top: 2px;
 }
 
 .nav-links {
   display: flex;
-
   align-items: center;
-
   gap: 22px;
 
   color: #b9bdc0;
-
   font-size: 13px;
-
   font-weight: 700;
 }
 
@@ -381,25 +319,19 @@ button {
 
 .btn {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
 
   min-height: 46px;
-
   padding: 0 20px;
 
   border-radius: 8px;
-
   border: 1px solid #34393d;
 
   background: #101214;
 
   font-size: 12px;
-
   font-weight: 900;
-
   letter-spacing: .7px;
 
   transition: .2s ease;
@@ -407,7 +339,6 @@ button {
 
 .btn:hover {
   transform: translateY(-2px);
-
   border-color: var(--gold);
 }
 
@@ -420,7 +351,6 @@ button {
     );
 
   border: none;
-
   color: #080909;
 }
 
@@ -433,7 +363,6 @@ button {
   min-height: 720px;
 
   display: flex;
-
   align-items: center;
 
   border-bottom: 1px solid var(--border);
@@ -448,27 +377,20 @@ button {
 
 .hero-grid {
   display: grid;
-
   grid-template-columns: 1.1fr .9fr;
 
   gap: 70px;
-
   align-items: center;
 
   padding-top: 90px;
-
   padding-bottom: 90px;
 }
 
 .eyebrow {
   color: var(--gold);
-
   font-size: 11px;
-
   font-weight: 900;
-
   letter-spacing: 2.5px;
-
   margin-bottom: 14px;
 }
 
@@ -476,9 +398,7 @@ button {
   max-width: 760px;
 
   font-size: clamp(42px, 6vw, 72px);
-
   line-height: .98;
-
   letter-spacing: -2.5px;
 
   margin-bottom: 25px;
@@ -486,49 +406,35 @@ button {
 
 .hero-copy > p {
   max-width: 650px;
-
   color: var(--muted);
-
   font-size: 17px;
-
   line-height: 1.8;
 }
 
 .hero-actions {
   display: flex;
-
   gap: 12px;
-
   flex-wrap: wrap;
-
   margin-top: 32px;
 }
 
 .hero-meta {
   display: flex;
-
   gap: 10px;
-
   flex-wrap: wrap;
-
   margin-top: 28px;
 }
 
 .hero-meta span {
   border: 1px solid #282d31;
-
   background: #0c0e10;
-
   color: #8e9499;
 
   padding: 7px 10px;
-
   border-radius: 5px;
 
   font-size: 9px;
-
   font-weight: 800;
-
   letter-spacing: 1px;
 }
 
@@ -539,13 +445,10 @@ button {
 
 .hero-visual {
   position: relative;
-
   min-height: 480px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 }
 
@@ -554,7 +457,6 @@ button {
   height: 350px;
 
   border-radius: 50%;
-
   padding: 18px;
 
   border: 1px solid rgba(213,173,85,.25);
@@ -568,11 +470,8 @@ button {
 .logo-frame::before,
 .logo-frame::after {
   content: "";
-
   position: absolute;
-
   border-radius: 50%;
-
   border: 1px solid rgba(213,173,85,.09);
 }
 
@@ -589,25 +488,20 @@ button {
   height: 100%;
 
   object-fit: cover;
-
   border-radius: 50%;
 }
 
 .molecule-card {
   position: absolute;
-
   right: 0;
-
   bottom: 0;
 
   width: 220px;
-
   padding: 18px;
 
   background: rgba(12,14,15,.92);
 
   border: 1px solid #282d30;
-
   border-radius: 14px;
 
   box-shadow: 0 20px 60px rgba(0,0,0,.4);
@@ -618,15 +512,12 @@ button {
   height: 58px;
 
   display: grid;
-
   place-items: center;
 
   border-radius: 50%;
-
   border: 1px solid var(--gold);
 
   color: var(--gold);
-
   font-weight: 900;
 
   margin-bottom: 15px;
@@ -634,13 +525,11 @@ button {
 
 .molecule-copy {
   display: grid;
-
   gap: 5px;
 
   color: #888e92;
 
   font-size: 9px;
-
   letter-spacing: 1.3px;
 }
 
@@ -651,7 +540,6 @@ button {
 
 .section {
   padding: 100px 0;
-
   border-bottom: 1px solid var(--border);
 }
 
@@ -661,11 +549,9 @@ button {
 
 .section-head {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
 
   gap: 60px;
-
   align-items: end;
 
   margin-bottom: 45px;
@@ -673,16 +559,13 @@ button {
 
 .section h2 {
   font-size: clamp(30px, 4vw, 48px);
-
   line-height: 1.05;
-
   letter-spacing: -1.4px;
 }
 
 .section-head > p,
 .muted {
   color: var(--muted);
-
   line-height: 1.8;
 }
 
@@ -693,15 +576,12 @@ button {
 
 .feature-grid {
   display: grid;
-
   grid-template-columns: repeat(3,1fr);
-
   gap: 18px;
 }
 
 .feature-card {
   min-height: 340px;
-
   padding: 28px;
 
   background:
@@ -712,31 +592,25 @@ button {
     );
 
   border: 1px solid var(--border);
-
   border-radius: 14px;
 
   position: relative;
-
   transition: .25s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-
   border-color: rgba(213,173,85,.45);
 }
 
 .feature-card .num {
   position: absolute;
-
   right: 24px;
-
   top: 18px;
 
   color: rgba(213,173,85,.16);
 
   font-size: 50px;
-
   font-weight: 900;
 }
 
@@ -744,9 +618,7 @@ button {
   color: var(--gold);
 
   font-size: 9px;
-
   font-weight: 900;
-
   letter-spacing: 1.6px;
 
   margin-bottom: 55px;
@@ -754,31 +626,24 @@ button {
 
 .feature-card h3 {
   font-size: 24px;
-
   margin-bottom: 13px;
 }
 
 .feature-card p {
   color: var(--muted);
-
   font-size: 14px;
-
   line-height: 1.8;
 }
 
 .feature-card > span {
   position: absolute;
-
   left: 28px;
-
   bottom: 26px;
 
   color: var(--gold2);
 
   font-size: 10px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
@@ -789,61 +654,49 @@ button {
 
 .science-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
 
   gap: 70px;
-
   align-items: center;
 }
 
 .science-panel p {
   color: var(--muted);
-
   margin: 22px 0;
 }
 
 .science-list {
   display: grid;
-
   gap: 10px;
 
   margin: 25px 0 30px;
 
   color: #c3c7ca;
-
   font-size: 14px;
 }
 
 .science-list div {
   padding-bottom: 10px;
-
   border-bottom: 1px solid #1d2124;
 }
 
 .lab-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 12px;
 }
 
 .lab-stat {
   min-height: 180px;
-
   padding: 22px;
 
   background: #101315;
 
   border: 1px solid var(--border);
-
   border-radius: 12px;
 
   display: flex;
-
   flex-direction: column;
-
   justify-content: space-between;
 }
 
@@ -851,7 +704,6 @@ button {
   color: var(--gold2);
 
   font-size: 45px;
-
   letter-spacing: -2px;
 }
 
@@ -859,9 +711,7 @@ button {
   color: #777e83;
 
   font-size: 9px;
-
   font-weight: 900;
-
   letter-spacing: 1.4px;
 }
 
@@ -872,11 +722,9 @@ button {
 
 .quality-wrap {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
 
   gap: 70px;
-
   align-items: center;
 }
 
@@ -888,7 +736,6 @@ button {
   min-height: 380px;
 
   background: #f1f1ed;
-
   color: #101010;
 
   border-radius: 6px;
@@ -902,15 +749,12 @@ button {
 
 .coa-head {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
 
   border-bottom: 3px solid #111;
 
   padding-bottom: 15px;
-
   margin-bottom: 30px;
 }
 
@@ -920,13 +764,11 @@ button {
 
 .coa-head span {
   font-size: 11px;
-
   font-weight: 900;
 }
 
 .line {
   height: 8px;
-
   width: 60%;
 
   background: #c8c8c4;
@@ -944,17 +786,14 @@ button {
 
 .coa-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
 
   gap: 10px;
-
   margin-top: 35px;
 }
 
 .coa-grid div {
   height: 60px;
-
   border: 1px solid #aaa;
 }
 
@@ -966,9 +805,7 @@ button {
   padding-top: 15px;
 
   font-size: 9px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
@@ -979,9 +816,7 @@ button {
 
 .standards-grid {
   display: grid;
-
   grid-template-columns: repeat(4,1fr);
-
   gap: 12px;
 }
 
@@ -1005,7 +840,6 @@ button {
 
 .standards-grid span {
   color: #7e858a;
-
   font-size: 12px;
 }
 
@@ -1016,13 +850,11 @@ button {
 
 footer {
   padding: 40px 0;
-
   background: #030404;
 }
 
 .footer-grid {
   display: flex;
-
   justify-content: space-between;
 
   gap: 30px;
@@ -1034,9 +866,7 @@ footer {
 
 .footer-grid strong {
   color: #c7c9ca;
-
   display: block;
-
   margin-bottom: 4px;
 }
 
@@ -1053,6 +883,12 @@ footer {
 
   .nav {
     min-height: 68px;
+    gap: 10px;
+  }
+
+  .brand {
+    min-width: 0;
+    flex: 1;
   }
 
   .brand img {
@@ -1061,16 +897,39 @@ footer {
   }
 
   .brand-title {
-    font-size: 11px;
+    font-size: 10px;
+    letter-spacing: .5px;
   }
 
   .brand-sub {
     font-size: 7px;
   }
 
+
+  /*
+     MOBILE NAVIGATION FIX
+     Hide normal links but KEEP Contact visible.
+  */
+
   .nav-links {
+    display: flex;
+    margin-left: auto;
+    flex-shrink: 0;
+    gap: 0;
+  }
+
+  .nav-links a {
     display: none;
   }
+
+  .nav-links .mobile-contact {
+    display: inline-flex;
+    min-height: 40px;
+    padding: 0 13px;
+    font-size: 9px;
+    letter-spacing: .7px;
+  }
+
 
   .hero {
     min-height: auto;
@@ -1082,13 +941,11 @@ footer {
     gap: 40px;
 
     padding-top: 65px;
-
     padding-bottom: 70px;
   }
 
   .hero h1 {
     font-size: 46px;
-
     letter-spacing: -1.8px;
   }
 
@@ -1125,7 +982,6 @@ footer {
   .science-grid,
   .quality-wrap {
     grid-template-columns: 1fr;
-
     gap: 30px;
   }
 
@@ -1159,15 +1015,12 @@ footer {
 
   .gate {
     align-items: flex-start;
-
     padding: 12px;
   }
 
   .gate-panel {
     margin: 12px 0;
-
     padding: 22px 16px;
-
     border-radius: 16px;
   }
 
@@ -1201,6 +1054,21 @@ footer {
 
 @media (max-width: 480px) {
 
+  .brand-title {
+    font-size: 9px;
+  }
+
+  .brand-sub {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .nav-links .mobile-contact {
+    min-height: 38px;
+    padding: 0 10px;
+    font-size: 8px;
+  }
+
   .hero h1 {
     font-size: 39px;
   }
@@ -1220,7 +1088,6 @@ footer {
 
   .molecule-card {
     width: 160px;
-
     padding: 14px;
   }
 
@@ -1271,7 +1138,6 @@ footer {
 
 
     <div class="gate-checks">
-
 
       <label class="gate-check">
 
@@ -1373,7 +1239,6 @@ footer {
 
       </label>
 
-
     </div>
 
 
@@ -1413,7 +1278,6 @@ footer {
 <header class="site-header">
 
   <div class="shell nav">
-
 
     <a
       href="index.html"
@@ -1460,23 +1324,18 @@ footer {
 
       <a
         href="contact.html"
-        class="btn"
+        class="btn mobile-contact"
       >
         Contact
       </a>
 
     </nav>
 
-
   </div>
 
 </header>
 
 
-
-<!-- =========================================
-     MAIN
-========================================= -->
 
 <main>
 
@@ -1490,16 +1349,13 @@ footer {
 
     <div class="hero-copy">
 
-
       <div class="eyebrow">
         SCIENTIFIC RESEARCH · ANALYTICAL DOCUMENTATION
       </div>
 
-
       <h1>
         Research built around transparency.
       </h1>
-
 
       <p>
         Platinum Cellular Health Labs provides organized
@@ -1518,7 +1374,6 @@ footer {
         >
           EXPLORE RESEARCH CATALOG
         </a>
-
 
         <a
           href="research-information.html"
@@ -1546,13 +1401,11 @@ footer {
 
       </div>
 
-
     </div>
 
 
 
     <div class="hero-visual">
-
 
       <div class="logo-frame">
 
@@ -1569,7 +1422,6 @@ footer {
         <div class="molecule-core">
           PCH
         </div>
-
 
         <div class="molecule-copy">
 
@@ -1589,9 +1441,7 @@ footer {
 
       </div>
 
-
     </div>
-
 
   </div>
 
@@ -1607,7 +1457,6 @@ footer {
 
 
     <div class="section-head">
-
 
       <div>
 
@@ -1628,7 +1477,6 @@ footer {
         into dedicated sections to make scientific information
         easier to navigate and review.
       </p>
-
 
     </div>
 
@@ -1729,9 +1577,7 @@ footer {
 
       </a>
 
-
     </div>
-
 
   </div>
 
@@ -1748,16 +1594,13 @@ footer {
 
     <div class="science-panel">
 
-
       <div class="eyebrow">
         SCIENTIFIC INFORMATION
       </div>
 
-
       <h2>
         Research information without clinical-use guidance.
       </h2>
-
 
       <p>
         Platinum Cellular Health Labs is structured around
@@ -1798,7 +1641,6 @@ footer {
       >
         ENTER RESEARCH INFORMATION
       </a>
-
 
     </div>
 
@@ -1858,9 +1700,7 @@ footer {
 
       </div>
 
-
     </div>
-
 
   </div>
 
@@ -1877,16 +1717,13 @@ footer {
 
     <div>
 
-
       <div class="eyebrow">
         QUALITY & TRANSPARENCY
       </div>
 
-
       <h2>
         Analytical documentation made easier to review.
       </h2>
-
 
       <p class="muted">
         Available Certificates of Analysis can be organized
@@ -1894,14 +1731,12 @@ footer {
         testing date, laboratory, and verification information.
       </p>
 
-
       <a
         href="quality-coa.html"
         class="btn btn-gold"
       >
         OPEN QUALITY & COA
       </a>
-
 
     </div>
 
@@ -1933,11 +1768,8 @@ footer {
       <div class="coa-grid">
 
         <div></div>
-
         <div></div>
-
         <div></div>
-
         <div></div>
 
       </div>
@@ -1947,9 +1779,7 @@ footer {
         LOT · TEST DATE · LABORATORY · RESULT
       </div>
 
-
     </div>
-
 
   </div>
 
@@ -1965,7 +1795,6 @@ footer {
 
 
     <div class="section-head">
-
 
       <div>
 
@@ -1986,7 +1815,6 @@ footer {
         analytical documentation,
         and clinical-use information.
       </p>
-
 
     </div>
 
@@ -2046,9 +1874,7 @@ footer {
 
       </div>
 
-
     </div>
-
 
   </div>
 
@@ -2085,7 +1911,6 @@ footer {
       21+ · Research Use Only · Not for human or animal use
     </div>
 
-
   </div>
 
 </footer>
@@ -2106,11 +1931,6 @@ const checkboxes =
 const enterButton =
   document.getElementById("enterButton");
 
-
-/*
-  Check whether every certification box
-  has been selected.
-*/
 
 function checkRequirements() {
 
@@ -2137,10 +1957,6 @@ function checkRequirements() {
 }
 
 
-/*
-  Watch every checkbox.
-*/
-
 checkboxes.forEach(box => {
 
   box.addEventListener(
@@ -2150,10 +1966,6 @@ checkboxes.forEach(box => {
 
 });
 
-
-/*
-  Enter website.
-*/
 
 enterButton.addEventListener(
   "click",
@@ -2172,11 +1984,6 @@ enterButton.addEventListener(
     gate.classList.add("hidden");
 
 
-    /*
-      Remember certification during
-      the current browser session.
-    */
-
     sessionStorage.setItem(
       "pchCertified",
       "yes"
@@ -2189,11 +1996,6 @@ enterButton.addEventListener(
 );
 
 
-/*
-  If visitor already certified during
-  this browser session, don't show gate again.
-*/
-
 if (
   sessionStorage.getItem("pchCertified")
   === "yes"
@@ -2204,10 +2006,6 @@ if (
 }
 
 
-/*
-  Leave website.
-*/
-
 function leaveSite() {
 
   window.location.href =
@@ -2215,10 +2013,6 @@ function leaveSite() {
 
 }
 
-
-/*
-  Prevent page behind gate from scrolling.
-*/
 
 if (
   sessionStorage.getItem("pchCertified")
