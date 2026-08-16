@@ -16,7 +16,12 @@
 Quality & COA | Platinum Cellular Health Labs
 </title>
 
+
 <style>
+
+/* =========================================
+   RESET
+========================================= */
 
 * {
   box-sizing: border-box;
@@ -73,6 +78,7 @@ img {
   margin: auto;
 }
 
+
 :root {
   --gold: #d5ad55;
   --gold2: #f0d48c;
@@ -102,6 +108,7 @@ img {
     1px solid rgba(255,255,255,.07);
 }
 
+
 .nav {
   min-height: 74px;
 
@@ -112,6 +119,7 @@ img {
   gap: 20px;
 }
 
+
 .brand {
   display: flex;
   align-items: center;
@@ -119,6 +127,7 @@ img {
 
   min-width: 0;
 }
+
 
 .brand img {
   width: 50px;
@@ -134,11 +143,13 @@ img {
     1px solid rgba(213,173,85,.35);
 }
 
+
 .brand-title {
   font-size: 13px;
   font-weight: 900;
   letter-spacing: 1px;
 }
+
 
 .brand-sub {
   color: var(--gold);
@@ -148,6 +159,7 @@ img {
 
   margin-top: 2px;
 }
+
 
 .nav-links {
   display: flex;
@@ -160,9 +172,11 @@ img {
   font-weight: 700;
 }
 
+
 .nav-links a:hover {
   color: var(--gold2);
 }
+
 
 .mobile-contact {
   display: none;
@@ -196,11 +210,16 @@ img {
   letter-spacing: .7px;
 
   cursor: pointer;
+
+  transition: .2s ease;
 }
+
 
 .btn:hover {
   border-color: var(--gold);
+  transform: translateY(-1px);
 }
+
 
 .btn-gold {
   border-color:
@@ -230,6 +249,7 @@ img {
     1px solid var(--border);
 }
 
+
 .back {
   display:
     inline-block;
@@ -243,6 +263,7 @@ img {
   margin-bottom: 30px;
 }
 
+
 .eyebrow {
   color: var(--gold);
 
@@ -252,6 +273,7 @@ img {
 
   margin-bottom: 12px;
 }
+
 
 .page-hero h1 {
   max-width: 800px;
@@ -270,6 +292,7 @@ img {
   margin-bottom: 18px;
 }
 
+
 .page-hero p {
   max-width: 760px;
 
@@ -279,6 +302,7 @@ img {
   line-height: 1.8;
 }
 
+
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
@@ -286,6 +310,7 @@ img {
 
   margin-top: 25px;
 }
+
 
 .hero-tags span {
   border:
@@ -313,6 +338,7 @@ img {
   padding: 48px 0;
 }
 
+
 .overview-grid {
   display: grid;
 
@@ -321,6 +347,7 @@ img {
 
   gap: 16px;
 }
+
 
 .info-card {
   min-height: 210px;
@@ -340,6 +367,7 @@ img {
   border-radius: 14px;
 }
 
+
 .info-number {
   color: rgba(213,173,85,.18);
 
@@ -349,11 +377,13 @@ img {
   margin-bottom: 16px;
 }
 
+
 .info-card h2 {
   font-size: 20px;
 
   margin-bottom: 10px;
 }
+
 
 .info-card p {
   color: var(--muted);
@@ -375,6 +405,7 @@ img {
     1px solid var(--border);
 }
 
+
 .library-head {
   display: flex;
 
@@ -389,6 +420,7 @@ img {
   margin-bottom: 30px;
 }
 
+
 .library-head h2 {
   font-size:
     clamp(
@@ -400,6 +432,7 @@ img {
   line-height: 1.05;
 }
 
+
 .library-head p {
   max-width: 520px;
 
@@ -407,6 +440,7 @@ img {
 
   font-size: 14px;
 }
+
 
 .search-box {
   display: flex;
@@ -427,11 +461,13 @@ img {
   margin-bottom: 25px;
 }
 
+
 .search-icon {
   color: var(--gold);
 
   font-size: 18px;
 }
+
 
 .search-box input {
   width: 100%;
@@ -448,9 +484,11 @@ img {
   font-size: 15px;
 }
 
+
 .search-box input::placeholder {
   color: #686f74;
 }
+
 
 .document-grid {
   display: grid;
@@ -463,7 +501,7 @@ img {
 
 
 /* =========================================
-   COA CARD
+   COA CARDS
 ========================================= */
 
 .coa-card {
@@ -482,6 +520,7 @@ img {
   overflow: hidden;
 }
 
+
 .coa-preview {
   position: relative;
 
@@ -492,6 +531,7 @@ img {
   background: #f2f2f2;
 }
 
+
 .coa-preview img {
   width: 100%;
   height: 100%;
@@ -500,6 +540,7 @@ img {
 
   object-position: top;
 }
+
 
 .coa-preview::after {
   content: "";
@@ -514,6 +555,7 @@ img {
       rgba(9,11,12,.92) 100%
     );
 }
+
 
 .verified-badge {
   position: absolute;
@@ -542,9 +584,11 @@ img {
   letter-spacing: 1px;
 }
 
+
 .coa-body {
   padding: 25px;
 }
+
 
 .coa-type {
   color: var(--gold);
@@ -558,11 +602,13 @@ img {
   margin-bottom: 8px;
 }
 
+
 .coa-body h3 {
   font-size: 26px;
 
   margin-bottom: 18px;
 }
+
 
 .coa-details {
   display: grid;
@@ -575,6 +621,7 @@ img {
   margin-bottom: 18px;
 }
 
+
 .detail {
   padding: 12px;
 
@@ -585,6 +632,7 @@ img {
 
   background: #0c0f11;
 }
+
 
 .detail-label {
   display: block;
@@ -600,13 +648,17 @@ img {
   margin-bottom: 3px;
 }
 
+
 .detail-value {
   color: #e1e3e4;
 
   font-size: 12px;
 
   font-weight: 800;
+
+  word-break: break-word;
 }
+
 
 .result-panel {
   display: grid;
@@ -619,8 +671,9 @@ img {
   margin-top: 15px;
 }
 
+
 .result-box {
-  padding: 14px 10px;
+  padding: 14px 8px;
 
   border:
     1px solid rgba(213,173,85,.20);
@@ -633,6 +686,7 @@ img {
   text-align: center;
 }
 
+
 .result-box strong {
   display: block;
 
@@ -642,6 +696,7 @@ img {
 
   margin-bottom: 2px;
 }
+
 
 .result-box span {
   color: #7d8489;
@@ -653,6 +708,7 @@ img {
   letter-spacing: .8px;
 }
 
+
 .coa-note {
   color: #797f84;
 
@@ -662,6 +718,7 @@ img {
 
   margin-top: 17px;
 }
+
 
 .coa-actions {
   display: flex;
@@ -675,12 +732,13 @@ img {
 
 
 /* =========================================
-   NOTICE
+   DOCUMENT NOTICE
 ========================================= */
 
 .policy-section {
   padding: 70px 0;
 }
+
 
 .policy-box {
   padding: 26px;
@@ -698,6 +756,7 @@ img {
     );
 }
 
+
 .policy-box strong {
   display: block;
 
@@ -707,6 +766,7 @@ img {
 
   font-size: 15px;
 }
+
 
 .policy-box p {
   color: #90979d;
@@ -734,6 +794,7 @@ footer {
   font-size: 11px;
 }
 
+
 .footer-grid {
   display: flex;
 
@@ -742,6 +803,7 @@ footer {
 
   gap: 30px;
 }
+
 
 .footer-grid strong {
   color: #bfc3c6;
@@ -762,11 +824,13 @@ footer {
     width: calc(100% - 30px);
   }
 
+
   .nav {
     min-height: 70px;
 
     gap: 10px;
   }
+
 
   .brand {
     gap: 8px;
@@ -774,10 +838,12 @@ footer {
     flex: 1;
   }
 
+
   .brand img {
     width: 42px;
     height: 42px;
   }
+
 
   .brand-title {
     font-size: 10px;
@@ -787,15 +853,18 @@ footer {
     letter-spacing: .4px;
   }
 
+
   .brand-sub {
     font-size: 5.8px;
 
     letter-spacing: 1.1px;
   }
 
+
   .nav-links {
     display: none;
   }
+
 
   .mobile-contact {
     display: inline-flex;
@@ -824,27 +893,33 @@ footer {
     letter-spacing: .7px;
   }
 
+
   .overview-grid {
     grid-template-columns: 1fr;
   }
+
 
   .document-grid {
     grid-template-columns: 1fr;
   }
 
+
   .library-head {
     display: block;
   }
 
+
   .library-head p {
     margin-top: 15px;
   }
+
 
   .coa-preview {
     height: 285px;
   }
 
 }
+
 
 @media(max-width:650px) {
 
@@ -853,52 +928,75 @@ footer {
       calc(100% - 26px);
   }
 
+
   .page-hero {
     padding:
       55px 0
       40px;
   }
 
+
   .page-hero h1 {
     font-size: 43px;
   }
 
+
   .page-hero p {
     font-size: 14px;
   }
+
 
   .overview {
     padding:
       35px 0;
   }
 
+
   .library {
     padding-top: 30px;
   }
+
 
   .coa-preview {
     height: 250px;
   }
 
+
   .coa-body {
     padding: 21px;
   }
+
 
   .coa-body h3 {
     font-size: 23px;
   }
 
+
   .coa-details {
     grid-template-columns: 1fr;
   }
 
+
   .result-panel {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:
+      1fr 1fr 1fr;
   }
 
-  .result-box strong {
-    font-size: 15px;
+
+  .result-box {
+    padding: 12px 4px;
   }
+
+
+  .result-box strong {
+    font-size: 14px;
+  }
+
+
+  .result-box span {
+    font-size: 6.8px;
+  }
+
 
   .footer-grid {
     flex-direction: column;
@@ -914,11 +1012,14 @@ footer {
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="site-header">
 
 <div class="shell nav">
+
 
 <a
   href="index.html"
@@ -980,17 +1081,21 @@ Contact
 CONTACT
 </a>
 
+
 </div>
 
 </header>
 
 
 
-<!-- HERO -->
+<!-- =========================================
+     HERO
+========================================= -->
 
 <section class="page-hero">
 
 <div class="shell">
+
 
 <a
   class="back"
@@ -999,13 +1104,16 @@ CONTACT
 ← BACK TO PCH LABS
 </a>
 
+
 <div class="eyebrow">
 ANALYTICAL DOCUMENTATION
 </div>
 
+
 <h1>
 Quality & COA
 </h1>
+
 
 <p>
 Review available analytical documentation,
@@ -1013,6 +1121,7 @@ Certificates of Analysis, batch identifiers,
 testing dates, laboratory information,
 and laboratory-reported analytical results.
 </p>
+
 
 <div class="hero-tags">
 
@@ -1030,17 +1139,21 @@ LABORATORY RESULTS
 
 </div>
 
+
 </div>
 
 </section>
 
 
 
-<!-- OVERVIEW -->
+<!-- =========================================
+     OVERVIEW
+========================================= -->
 
 <section class="overview">
 
 <div class="shell">
+
 
 <div class="overview-grid">
 
@@ -1064,6 +1177,7 @@ with the identified research sample or batch.
 </div>
 
 
+
 <div class="info-card">
 
 <div class="info-number">
@@ -1081,6 +1195,7 @@ as stated by the testing laboratory.
 </p>
 
 </div>
+
 
 
 <div class="info-card">
@@ -1104,13 +1219,16 @@ information to assist with record matching.
 
 </div>
 
+
 </div>
 
 </section>
 
 
 
-<!-- LIBRARY -->
+<!-- =========================================
+     DOCUMENTATION LIBRARY
+========================================= -->
 
 <section class="library">
 
@@ -1118,6 +1236,7 @@ information to assist with record matching.
 
 
 <div class="library-head">
+
 
 <div>
 
@@ -1131,11 +1250,13 @@ Certificate records
 
 </div>
 
+
 <p>
 Search available documentation by compound,
 batch number, laboratory, analytical result,
 or other listed information.
 </p>
+
 
 </div>
 
@@ -1164,12 +1285,12 @@ or other listed information.
 
 
 <!-- =========================================
-     CARTALAX
+     1. CARTALAX 20MG
 ========================================= -->
 
 <article
   class="coa-card searchable"
-  data-search="cartalax cart 20mg sterigenix cart-061424-20 99.31 purity 21.82 endotoxin pass 07/20/2026"
+  data-search="cartalax cart 20mg sterigenix cart-061424-20 99.31 purity 21.82 endotoxin pass july 20 2026"
 >
 
 
@@ -1193,6 +1314,7 @@ COA AVAILABLE
 <div class="coa-type">
 CERTIFICATE OF ANALYSIS
 </div>
+
 
 <h3>
 Cartalax 20 mg
@@ -1305,7 +1427,8 @@ ENDOTOXIN
 <p class="coa-note">
 Values above are transcribed from the laboratory report
 shown for this specific sample and batch. Refer to the
-original COA for complete test details and laboratory notes.
+original COA for complete test details, methods,
+and laboratory notes.
 </p>
 
 
@@ -1330,12 +1453,12 @@ VIEW FULL COA
 
 
 <!-- =========================================
-     RETATRUTIDE 10MG GREEN CAP
+     2. RETATRUTIDE 10MG GREEN CAP
 ========================================= -->
 
 <article
   class="coa-card searchable"
-  data-search="retatrutide glp-3 10mg green cap vanguard laboratory changsha-r10-0726 v260717-17 001 99.77 10.80 endotoxin 5.54 sterility pass 08/03/2026"
+  data-search="retatrutide reta glp-3 10mg green cap vanguard laboratory changsha-r10-0726 v260717-17 001 99.77 10.80 endotoxin sterility pass august 3 2026"
 >
 
 
@@ -1359,6 +1482,7 @@ COA AVAILABLE
 <div class="coa-type">
 CERTIFICATE OF ANALYSIS
 </div>
+
 
 <h3>
 Retatrutide 10 mg
@@ -1500,8 +1624,7 @@ The report lists chromatographic purity as
 identity as matching the reference standard,
 endotoxins as pass at 5.54 EU/mg,
 and sterility as pass with negative growth.
-Refer to the original COA for the laboratory's
-complete wording, methods, and notes.
+Refer to the original COA for complete laboratory details.
 </p>
 
 
@@ -1509,6 +1632,396 @@ complete wording, methods, and notes.
 
 <a
   href="retatrutide-10mg-greencap-coa.jpg"
+  target="_blank"
+  rel="noopener"
+  class="btn btn-gold"
+>
+VIEW FULL COA
+</a>
+
+</div>
+
+
+</div>
+
+</article>
+
+
+
+<!-- =========================================
+     3. MOTS-C 10MG GREEN CAPS
+========================================= -->
+
+<article
+  class="coa-card searchable"
+  data-search="mots-c motsc 10mg green caps janoshik task 114503 pgb-mots-3 12.14 12.08 12.17 99.602 99.517 99.467 march 16 2026"
+>
+
+
+<div class="coa-preview">
+
+<img
+  src="motsc-10mg-greencaps-coa.jpg"
+  alt="MOTS-C 10 mg Green Caps Certificate of Analysis"
+>
+
+<div class="verified-badge">
+COA AVAILABLE
+</div>
+
+</div>
+
+
+<div class="coa-body">
+
+
+<div class="coa-type">
+CERTIFICATE OF ANALYSIS
+</div>
+
+
+<h3>
+MOTS-C 10 mg
+</h3>
+
+
+<div class="coa-details">
+
+
+<div class="detail">
+
+<span class="detail-label">
+BATCH
+</span>
+
+<span class="detail-value">
+PGB-MOTS-3
+</span>
+
+</div>
+
+
+<div class="detail">
+
+<span class="detail-label">
+ANALYZED
+</span>
+
+<span class="detail-value">
+March 16, 2026
+</span>
+
+</div>
+
+
+<div class="detail">
+
+<span class="detail-label">
+LABORATORY
+</span>
+
+<span class="detail-value">
+Janoshik
+</span>
+
+</div>
+
+
+<div class="detail">
+
+<span class="detail-label">
+TASK #
+</span>
+
+<span class="detail-value">
+114503
+</span>
+
+</div>
+
+
+<div class="detail">
+
+<span class="detail-label">
+CAP
+</span>
+
+<span class="detail-value">
+Green
+</span>
+
+</div>
+
+
+<div class="detail">
+
+<span class="detail-label">
+TESTED SAMPLES
+</span>
+
+<span class="detail-value">
+3
+</span>
+
+</div>
+
+
+</div>
+
+
+<div class="result-panel">
+
+
+<div class="result-box">
+
+<strong>
+99.602%
+</strong>
+
+<span>
+PURITY #1
+</span>
+
+</div>
+
+
+<div class="result-box">
+
+<strong>
+99.517%
+</strong>
+
+<span>
+PURITY #2
+</span>
+
+</div>
+
+
+<div class="result-box">
+
+<strong>
+99.467%
+</strong>
+
+<span>
+PURITY #3
+</span>
+
+</div>
+
+
+</div>
+
+
+<p class="coa-note">
+The laboratory report lists three tested samples with
+reported contents of 12.14 mg, 12.08 mg, and 12.17 mg,
+and reported purities of 99.602%, 99.517%, and 99.467%.
+Refer to the original COA for complete laboratory
+methodology, chromatograms, and report details.
+</p>
+
+
+<div class="coa-actions">
+
+<a
+  href="motsc-10mg-greencaps-coa.jpg"
+  target="_blank"
+  rel="noopener"
+  class="btn btn-gold"
+>
+VIEW FULL COA
+</a>
+
+</div>
+
+
+</div>
+
+</article>
+
+
+
+<!-- =========================================
+     4. GHK-CU 50MG
+========================================= -->
+
+<article
+  class="coa-card searchable"
+  data-search="ghk-cu ghkcu ghk cu 50mg janoshik task 99380 pgb-ghk50-3 61.26 62.90 63.57 99.612 99.627 99.620 january 16 2026"
+>
+
+
+<div class="coa-preview">
+
+<img
+  src="ghkcu-50mg-coa.jpg"
+  alt="GHK-Cu 50 mg Certificate of Analysis"
+>
+
+<div class="verified-badge">
+COA AVAILABLE
+</div>
+
+</div>
+
+
+<div class="coa-body">
+
+
+<div class="coa-type">
+CERTIFICATE OF ANALYSIS
+</div>
+
+
+<h3>
+GHK-Cu 50 mg
+</h3>
+
+
+<div class="coa-details">
+
+
+<div class="detail">
+
+<span class="detail-label">
+BATCH
+</span>
+
+<span class="detail-value">
+PGB-GHK50-3
+</span>
+
+</div>
+
+
+<div class="detail">
+
+<span class="detail-label">
+ANALYZED
+</span>
+
+<span class="detail-value">
+January 16, 2026
+</span>
+
+</div>
+
+
+<div class="detail">
+
+<span class="detail-label">
+LABORATORY
+</span>
+
+<span class="detail-value">
+Janoshik
+</span>
+
+</div>
+
+
+<div class="detail">
+
+<span class="detail-label">
+TASK #
+</span>
+
+<span class="detail-value">
+99380
+</span>
+
+</div>
+
+
+<div class="detail">
+
+<span class="detail-label">
+SAMPLE
+</span>
+
+<span class="detail-value">
+GHK-Cu 50 mg
+</span>
+
+</div>
+
+
+<div class="detail">
+
+<span class="detail-label">
+TESTED SAMPLES
+</span>
+
+<span class="detail-value">
+3
+</span>
+
+</div>
+
+
+</div>
+
+
+<div class="result-panel">
+
+
+<div class="result-box">
+
+<strong>
+99.612%
+</strong>
+
+<span>
+PURITY #1
+</span>
+
+</div>
+
+
+<div class="result-box">
+
+<strong>
+99.627%
+</strong>
+
+<span>
+PURITY #2
+</span>
+
+</div>
+
+
+<div class="result-box">
+
+<strong>
+99.620%
+</strong>
+
+<span>
+PURITY #3
+</span>
+
+</div>
+
+
+</div>
+
+
+<p class="coa-note">
+The laboratory report lists three tested samples with
+reported contents of 61.26 mg, 62.90 mg, and 63.57 mg,
+and reported purities of 99.612%, 99.627%, and 99.620%.
+Refer to the original COA for complete laboratory
+methodology, chromatograms, and report details.
+</p>
+
+
+<div class="coa-actions">
+
+<a
+  href="ghkcu-50mg-coa.jpg"
   target="_blank"
   rel="noopener"
   class="btn btn-gold"
@@ -1533,11 +2046,14 @@ VIEW FULL COA
 
 
 
-<!-- DOCUMENTATION NOTICE -->
+<!-- =========================================
+     DOCUMENTATION NOTICE
+========================================= -->
 
 <section class="policy-section">
 
 <div class="shell">
+
 
 <div class="policy-box">
 
@@ -1556,17 +2072,21 @@ to represent another or future batch.
 
 </div>
 
+
 </div>
 
 </section>
 
 
 
-<!-- FOOTER -->
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
 <div class="shell footer-grid">
+
 
 <div>
 
@@ -1580,9 +2100,11 @@ Longevity at the Cellular Level
 
 </div>
 
+
 <div>
 21+ · Research Use Only · Not for human or animal use
 </div>
+
 
 </div>
 
@@ -1590,7 +2112,9 @@ Longevity at the Cellular Level
 
 
 
-<!-- SEARCH -->
+<!-- =========================================
+     SEARCH FUNCTION
+========================================= -->
 
 <script>
 
@@ -1599,12 +2123,14 @@ const coaSearch =
     "coaSearch"
   );
 
+
 const records =
   Array.from(
     document.querySelectorAll(
       ".searchable"
     )
   );
+
 
 coaSearch.addEventListener(
   "input",
@@ -1615,6 +2141,7 @@ coaSearch.addEventListener(
         .value
         .toLowerCase()
         .trim();
+
 
     records.forEach(
       record => {
@@ -1628,6 +2155,7 @@ coaSearch.addEventListener(
             record.innerText
           )
           .toLowerCase();
+
 
         record.style.display =
           text.includes(term)
