@@ -61,8 +61,12 @@ img {
   display: block;
 }
 
-button {
+button,
+input {
   font-family: inherit;
+}
+
+button {
   cursor: pointer;
 }
 
@@ -90,6 +94,8 @@ button {
   --gold2: #f0d48c;
   --text: #f5f5f5;
   --muted: #a7adb2;
+  --success: #7bc88c;
+  --error: #e07b7b;
 }
 
 
@@ -598,13 +604,11 @@ button {
   font-size: 8px;
 
   font-weight: 900;
-
-  cursor: pointer;
 }
 
 
 /* =========================================
-   VISIBLE MOBILE MEMBER BAR
+   MOBILE MEMBER BAR
 ========================================= */
 
 .mobile-member-status-bar {
@@ -796,8 +800,6 @@ button {
   border-radius: 9px;
 
   background: #0d1012;
-
-  cursor: pointer;
 }
 
 .mobile-menu-button span {
@@ -813,6 +815,25 @@ button {
   background: var(--gold2);
 
   transition: .25s ease;
+}
+
+.mobile-menu-button.active
+span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.active
+span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.active
+span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
 }
 
 .mobile-menu {
@@ -838,9 +859,8 @@ button {
 .mobile-menu-inner {
   display: grid;
 
-  padding-top: 10px;
-
-  padding-bottom: 18px;
+  padding:
+    10px 0 18px;
 }
 
 .mobile-menu-inner > a {
@@ -857,10 +877,6 @@ button {
   font-weight: 900;
 
   letter-spacing: .7px;
-}
-
-.mobile-menu-inner > a:hover {
-  color: var(--gold2);
 }
 
 
@@ -995,34 +1011,6 @@ button {
   color: #080909;
 }
 
-.mobile-member-actions button {
-  cursor: pointer;
-}
-
-
-/* =========================================
-   MENU BUTTON ANIMATION
-========================================= */
-
-.mobile-menu-button.active
-span:nth-child(1) {
-  transform:
-    translateY(7px)
-    rotate(45deg);
-}
-
-.mobile-menu-button.active
-span:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu-button.active
-span:nth-child(3) {
-  transform:
-    translateY(-7px)
-    rotate(-45deg);
-}
-
 
 /* =========================================
    PROMOTION BANNER
@@ -1076,13 +1064,11 @@ span:nth-child(3) {
 @keyframes promoScroll {
 
   from {
-    transform:
-      translateX(0);
+    transform: translateX(0);
   }
 
   to {
-    transform:
-      translateX(-50%);
+    transform: translateX(-50%);
   }
 
 }
@@ -1121,8 +1107,7 @@ span:nth-child(3) {
 }
 
 .btn:hover {
-  transform:
-    translateY(-2px);
+  transform: translateY(-2px);
 
   border-color: var(--gold);
 }
@@ -1407,8 +1392,7 @@ span:nth-child(3) {
 }
 
 .feature-card:hover {
-  transform:
-    translateY(-5px);
+  transform: translateY(-5px);
 
   border-color:
     rgba(213,173,85,.45);
@@ -1597,15 +1581,13 @@ span:nth-child(3) {
     rotate(1deg);
 
   box-shadow:
-    0 25px 70px
-    rgba(0,0,0,.45);
+    0 25px 70px rgba(0,0,0,.45);
 }
 
 .coa-head {
   display: flex;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
   align-items: center;
 
@@ -1720,6 +1702,333 @@ span:nth-child(3) {
 
 
 /* =========================================
+   PROMO SIGNUP
+========================================= */
+
+.updates-section {
+  padding:
+    95px 0;
+
+  border-bottom:
+    1px solid var(--border);
+
+  background:
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(213,173,85,.10),
+      transparent 32%
+    ),
+    #060809;
+}
+
+.updates-box {
+  display: grid;
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap: 55px;
+
+  align-items: center;
+
+  padding: 42px;
+
+  border:
+    1px solid rgba(213,173,85,.32);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(213,173,85,.055),
+      #0a0d0f
+    );
+
+  box-shadow:
+    0 24px 60px rgba(0,0,0,.28);
+}
+
+.updates-copy h2 {
+  font-size:
+    clamp(
+      32px,
+      5vw,
+      52px
+    );
+
+  line-height: 1;
+
+  letter-spacing: -1.6px;
+
+  margin-bottom: 18px;
+}
+
+.updates-copy p {
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.updates-benefits {
+  display: grid;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.updates-benefit {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #c6cacc;
+
+  font-size: 12px;
+}
+
+.updates-benefit span {
+  width: 26px;
+  height: 26px;
+
+  min-width: 26px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid rgba(213,173,85,.32);
+
+  border-radius: 50%;
+
+  color: var(--gold2);
+
+  font-size: 10px;
+}
+
+.updates-form {
+  padding: 27px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+}
+
+.updates-form-title {
+  font-size: 20px;
+
+  font-weight: 900;
+
+  margin-bottom: 18px;
+}
+
+.updates-fields {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 12px;
+}
+
+.updates-field {
+  display: grid;
+
+  gap: 7px;
+}
+
+.updates-field label {
+  color: #858c91;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.updates-field input {
+  width: 100%;
+
+  min-height: 50px;
+
+  padding:
+    0 14px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #090b0d;
+
+  color: #f4f4f4;
+
+  font-size: 14px;
+}
+
+.updates-field input::placeholder {
+  color: #62696e;
+}
+
+.updates-field input:focus {
+  border-color:
+    rgba(213,173,85,.65);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(213,173,85,.05);
+}
+
+.consent-list {
+  display: grid;
+
+  gap: 9px;
+
+  margin-top: 16px;
+}
+
+.consent-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 13px;
+
+  border:
+    1px solid #292e32;
+
+  border-radius: 10px;
+
+  background: #0b0e10;
+}
+
+.consent-item input {
+  width: 18px;
+  height: 18px;
+
+  min-width: 18px;
+
+  margin-top: 2px;
+
+  accent-color: var(--gold);
+}
+
+.consent-item span {
+  color: #a8aeb2;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+.consent-item strong {
+  color: #e4e6e7;
+}
+
+.updates-submit {
+  width: 100%;
+
+  min-height: 52px;
+
+  margin-top: 17px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #f0d48c
+    );
+
+  color: #080909;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: .8px;
+}
+
+.updates-submit:disabled {
+  opacity: .5;
+
+  cursor: not-allowed;
+}
+
+.updates-small {
+  margin-top: 12px;
+
+  color: #676e73;
+
+  font-size: 8px;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+.updates-status {
+  display: none;
+
+  margin-top: 14px;
+
+  padding: 13px;
+
+  border-radius: 9px;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.updates-status.success {
+  display: block;
+
+  border:
+    1px solid rgba(123,200,140,.35);
+
+  background:
+    rgba(123,200,140,.06);
+
+  color: #a7dcb1;
+}
+
+.updates-status.error {
+  display: block;
+
+  border:
+    1px solid rgba(224,123,123,.35);
+
+  background:
+    rgba(224,123,123,.06);
+
+  color: #e6abab;
+}
+
+
+/* =========================================
    FOOTER
 ========================================= */
 
@@ -1820,12 +2129,6 @@ footer {
 
   .hero h1 {
     font-size: 46px;
-
-    letter-spacing: -1.8px;
-  }
-
-  .hero-copy > p {
-    font-size: 15px;
   }
 
   .hero-actions {
@@ -1866,22 +2169,17 @@ footer {
     min-height: 300px;
   }
 
-  .lab-grid {
-    grid-template-columns:
-      1fr 1fr;
-  }
-
-  .lab-stat {
-    min-height: 145px;
-  }
-
-  .lab-stat strong {
-    font-size: 36px;
-  }
-
   .standards-grid {
     grid-template-columns:
       1fr 1fr;
+  }
+
+  .updates-box {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 30px;
   }
 
   .footer-grid {
@@ -1904,35 +2202,10 @@ footer {
     border-radius: 16px;
   }
 
-  .gate-logo {
-    width: 82px;
-    height: 82px;
-  }
-
-  .gate-panel h1 {
-    font-size: 28px;
-  }
-
-  .gate-intro {
-    font-size: 12px;
-  }
-
-  .gate-check {
-    padding: 11px;
-  }
-
-  .gate-check span {
-    font-size: 12px;
-  }
-
 }
 
 
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media(max-width:480px) {
+@media(max-width:520px) {
 
   .brand {
     gap: 8px;
@@ -1945,14 +2218,10 @@ footer {
 
   .brand-title {
     font-size: 9px;
-
-    letter-spacing: .6px;
   }
 
   .brand-sub {
     font-size: 5.8px;
-
-    letter-spacing: 1.2px;
   }
 
   .mobile-member-status-inner {
@@ -1976,26 +2245,30 @@ footer {
     font-size: 39px;
   }
 
-  .hero-meta span {
-    font-size: 8px;
-  }
-
   .logo-frame {
     width: 225px;
     height: 225px;
-  }
-
-  .hero-visual {
-    min-height: 300px;
   }
 
   .standards-grid {
     grid-template-columns: 1fr;
   }
 
-  .lab-grid {
-    grid-template-columns:
-      1fr 1fr;
+  .updates-section {
+    padding:
+      65px 0;
+  }
+
+  .updates-box {
+    padding: 22px;
+  }
+
+  .updates-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .updates-form {
+    padding: 20px;
   }
 
 }
@@ -2042,120 +2315,63 @@ accessing Platinum Cellular Health Labs.
 <div class="gate-checks">
 
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
-<strong>
-I certify that I am 21 years of age or older.
-</strong>
-
+<strong>I certify that I am 21 years of age or older.</strong>
 </span>
-
 </label>
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
 I understand that materials identified as
 <strong>Research Use Only</strong>
 are presented solely for legitimate laboratory,
 analytical, scientific, and educational research.
-
 </span>
-
 </label>
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
 I understand that Research Use Only materials are
-
 <strong>
 not intended for human or animal consumption,
 administration, treatment, diagnosis,
 disease prevention, or clinical/veterinary use.
 </strong>
-
 </span>
-
 </label>
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
 I agree not to use information or materials from
 this website for unlawful activity or in any manner
 inconsistent with product labeling.
-
 </span>
-
 </label>
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
 I understand that website content is for research
 and educational purposes and does not constitute
 medical, veterinary, diagnostic, or treatment advice.
-
 </span>
-
 </label>
 
-
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-
 I understand that Platinum Cellular Health Labs
 reserves the right to restrict access or refuse service
 where misuse, unlawful conduct, or misrepresentation
 is suspected.
-
 </span>
-
 </label>
 
 </div>
-
 
 <button
   id="enterButton"
@@ -2166,7 +2382,6 @@ is suspected.
 CHECK ALL BOXES TO CONTINUE
 </button>
 
-
 <button
   class="gate-exit"
   type="button"
@@ -2174,7 +2389,6 @@ CHECK ALL BOXES TO CONTINUE
 >
 I DO NOT AGREE
 </button>
-
 
 <div class="gate-footer">
 21+ · RESEARCH USE ONLY · NOT FOR HUMAN OR ANIMAL USE
@@ -2193,7 +2407,6 @@ I DO NOT AGREE
 <header class="site-header">
 
 <div class="shell nav">
-
 
 <a
   href="index.html"
@@ -2220,50 +2433,22 @@ LONGEVITY AT THE CELLULAR LEVEL
 </a>
 
 
-
 <div class="nav-right">
-
 
 <nav class="nav-links">
 
-<a href="research-information.html">
-Research
-</a>
-
-<a href="catalog.html">
-Catalog
-</a>
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-<a href="recommended-supplies.html">
-Supplies
-</a>
-
-<a href="policies.html">
-Policies
-</a>
-
-<a href="faq.html">
-FAQ
-</a>
-
-<a href="contact.html">
-Contact
-</a>
+<a href="research-information.html">Research</a>
+<a href="catalog.html">Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
 
 </nav>
 
 
-
-<!-- =========================================
-     DESKTOP MEMBER AREA
-========================================= -->
-
 <div class="member-area">
-
 
 <a
   href="login.html"
@@ -2273,12 +2458,10 @@ Contact
 🔐 MEMBER LOGIN
 </a>
 
-
 <div
   class="member-signed-in"
   id="desktopMemberArea"
 >
-
 
 <div class="member-pill">
 
@@ -2301,7 +2484,6 @@ MEMBER
 
 </div>
 
-
 <a
   href="login.html"
   class="member-link"
@@ -2309,14 +2491,12 @@ MEMBER
 ACCOUNT
 </a>
 
-
 <a
   href="login.html"
   class="member-link gold"
 >
 CHECKOUT
 </a>
-
 
 <button
   type="button"
@@ -2326,12 +2506,9 @@ CHECKOUT
 SIGN OUT
 </button>
 
-
 </div>
 
-
 </div>
-
 
 
 <button
@@ -2341,29 +2518,19 @@ SIGN OUT
   aria-label="Open navigation menu"
   aria-expanded="false"
 >
-
 <span></span>
 <span></span>
 <span></span>
-
 </button>
 
+</div>
 
 </div>
 
-
-</div>
-
-
-
-<!-- =========================================
-     VISIBLE MOBILE MEMBER BAR
-========================================= -->
 
 <div class="mobile-member-status-bar">
 
 <div class="shell mobile-member-status-inner">
-
 
 <a
   href="login.html"
@@ -2373,24 +2540,20 @@ SIGN OUT
 🔐 MEMBER LOGIN / CREATE ACCOUNT
 </a>
 
-
 <div
   class="mobile-status-member"
   id="visibleMobileMember"
 >
 
-
 <div class="mobile-status-identity">
 
 <span class="mobile-status-dot"></span>
-
 
 <div class="mobile-status-copy">
 
 <div class="mobile-status-label">
 SIGNED IN
 </div>
-
 
 <div
   class="mobile-status-name"
@@ -2401,16 +2564,13 @@ PCH Member
 
 </div>
 
-
 </div>
-
 
 <div class="mobile-status-actions">
 
 <a href="login.html">
 ACCOUNT
 </a>
-
 
 <a
   href="login.html"
@@ -2421,19 +2581,12 @@ CHECKOUT
 
 </div>
 
-
-</div>
-
-
 </div>
 
 </div>
 
+</div>
 
-
-<!-- =========================================
-     MOBILE MENU
-========================================= -->
 
 <div
   class="mobile-menu"
@@ -2442,9 +2595,7 @@ CHECKOUT
 
 <div class="shell mobile-menu-inner">
 
-
 <div class="mobile-member-box">
-
 
 <a
   href="login.html"
@@ -2454,17 +2605,14 @@ CHECKOUT
 🔐 MEMBER LOGIN / CREATE ACCOUNT
 </a>
 
-
 <div
   class="mobile-member-signed-in"
   id="mobileMemberArea"
 >
 
-
 <div class="mobile-status">
 ● SIGNED IN
 </div>
-
 
 <div
   class="mobile-member-name"
@@ -2473,23 +2621,16 @@ CHECKOUT
 PCH Member
 </div>
 
-
 <div
   class="mobile-member-email"
   id="mobileMemberEmail"
->
-</div>
-
+></div>
 
 <div class="mobile-member-actions">
 
-
-<a
-  href="login.html"
->
+<a href="login.html">
 MY ACCOUNT
 </a>
-
 
 <a
   href="login.html"
@@ -2498,7 +2639,6 @@ MY ACCOUNT
 CHECKOUT
 </a>
 
-
 <button
   type="button"
   id="mobileSignout"
@@ -2506,66 +2646,29 @@ CHECKOUT
 SIGN OUT
 </button>
 
-
-<a
-  href="catalog.html"
->
+<a href="catalog.html">
 CATALOG
 </a>
 
-
 </div>
-
-
-</div>
-
-
-</div>
-
-
-
-<a href="index.html">
-Home
-</a>
-
-<a href="research-information.html">
-Research Information
-</a>
-
-<a href="catalog.html">
-Research Catalog
-</a>
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-<a href="recommended-supplies.html">
-Recommended Supplies
-</a>
-
-<a href="policies.html">
-Policies
-</a>
-
-<a href="faq.html">
-FAQ
-</a>
-
-<a href="contact.html">
-Contact PCH Labs
-</a>
-
 
 </div>
 
 </div>
 
+<a href="index.html">Home</a>
+<a href="research-information.html">Research Information</a>
+<a href="catalog.html">Research Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Recommended Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact PCH Labs</a>
 
+</div>
 
-<!-- =========================================
-     PROMOTION
-========================================= -->
+</div>
+
 
 <div class="promo-banner">
 
@@ -2607,14 +2710,9 @@ $15 SHIPPING OPTION INCLUDED · PREMIUM SHIPPING AVAILABLE
 
 </div>
 
-
 </header>
 
 
-
-<!-- =========================================
-     MAIN
-========================================= -->
 
 <main>
 
@@ -2626,7 +2724,6 @@ $15 SHIPPING OPTION INCLUDED · PREMIUM SHIPPING AVAILABLE
 <section class="hero">
 
 <div class="shell hero-grid">
-
 
 <div class="hero-copy">
 
@@ -2646,7 +2743,6 @@ catalog resources in a professional laboratory-focused
 environment.
 </p>
 
-
 <div class="hero-actions">
 
 <a
@@ -2665,25 +2761,15 @@ RESEARCH INFORMATION
 
 </div>
 
-
 <div class="hero-meta">
 
-<span>
-21+ ACCESS
-</span>
-
-<span>
-RESEARCH USE ONLY
-</span>
-
-<span>
-COA DOCUMENTATION
-</span>
+<span>21+ ACCESS</span>
+<span>RESEARCH USE ONLY</span>
+<span>COA DOCUMENTATION</span>
 
 </div>
 
 </div>
-
 
 
 <div class="hero-visual">
@@ -2699,7 +2785,6 @@ COA DOCUMENTATION
 
 </div>
 
-
 </div>
 
 </section>
@@ -2713,7 +2798,6 @@ COA DOCUMENTATION
 <section class="section">
 
 <div class="shell">
-
 
 <div class="section-head">
 
@@ -2729,7 +2813,6 @@ Organized scientific resources.
 
 </div>
 
-
 <p>
 Research information, catalog listings,
 analytical documentation, and policies are separated
@@ -2740,9 +2823,7 @@ easier to navigate and review.
 </div>
 
 
-
 <div class="feature-grid">
-
 
 <a
   href="research-information.html"
@@ -2772,7 +2853,6 @@ OPEN RESEARCH LIBRARY →
 </span>
 
 </a>
-
 
 
 <a
@@ -2805,7 +2885,6 @@ BROWSE CATALOG →
 </a>
 
 
-
 <a
   href="quality-coa.html"
   class="feature-card"
@@ -2836,9 +2915,7 @@ VIEW DOCUMENTATION →
 
 </a>
 
-
 </div>
-
 
 </div>
 
@@ -2853,7 +2930,6 @@ VIEW DOCUMENTATION →
 <section class="section alt">
 
 <div class="shell science-grid">
-
 
 <div class="science-panel">
 
@@ -2871,7 +2947,6 @@ laboratory, analytical, and educational research.
 Research information is kept separate from
 human-use or clinical guidance.
 </p>
-
 
 <div class="science-list">
 
@@ -2897,7 +2972,6 @@ human-use or clinical guidance.
 
 </div>
 
-
 <a
   href="research-information.html"
   class="btn"
@@ -2908,14 +2982,11 @@ ENTER RESEARCH INFORMATION
 </div>
 
 
-
 <div class="lab-grid">
 
 <div class="lab-stat">
 
-<strong>
-RUO
-</strong>
+<strong>RUO</strong>
 
 <span>
 RESEARCH USE ONLY
@@ -2923,12 +2994,9 @@ RESEARCH USE ONLY
 
 </div>
 
-
 <div class="lab-stat">
 
-<strong>
-COA
-</strong>
+<strong>COA</strong>
 
 <span>
 ANALYTICAL DOCUMENTATION
@@ -2936,12 +3004,9 @@ ANALYTICAL DOCUMENTATION
 
 </div>
 
-
 <div class="lab-stat">
 
-<strong>
-LOT
-</strong>
+<strong>LOT</strong>
 
 <span>
 BATCH TRACEABILITY
@@ -2949,12 +3014,9 @@ BATCH TRACEABILITY
 
 </div>
 
-
 <div class="lab-stat">
 
-<strong>
-21+
-</strong>
+<strong>21+</strong>
 
 <span>
 RESTRICTED ACCESS
@@ -2963,7 +3025,6 @@ RESTRICTED ACCESS
 </div>
 
 </div>
-
 
 </div>
 
@@ -2978,7 +3039,6 @@ RESTRICTED ACCESS
 <section class="section">
 
 <div class="shell quality-wrap">
-
 
 <div>
 
@@ -3006,14 +3066,11 @@ OPEN QUALITY & COA
 </div>
 
 
-
 <div class="coa-mock">
 
 <div class="coa-head">
 
-<strong>
-PCH
-</strong>
+<strong>PCH</strong>
 
 <span>
 CERTIFICATE OF ANALYSIS
@@ -3021,13 +3078,11 @@ CERTIFICATE OF ANALYSIS
 
 </div>
 
-
 <div class="line wide"></div>
 
 <div class="line"></div>
 
 <div class="line short"></div>
-
 
 <div class="coa-grid">
 
@@ -3038,13 +3093,11 @@ CERTIFICATE OF ANALYSIS
 
 </div>
 
-
 <div class="coa-foot">
 LOT · TEST DATE · LABORATORY · RESULT
 </div>
 
 </div>
-
 
 </div>
 
@@ -3060,7 +3113,6 @@ LOT · TEST DATE · LABORATORY · RESULT
 
 <div class="shell">
 
-
 <div class="section-head">
 
 <div>
@@ -3075,7 +3127,6 @@ Research-focused by design.
 
 </div>
 
-
 <p>
 Platinum Cellular Health Labs maintains
 a clear separation between scientific research,
@@ -3084,7 +3135,6 @@ and clinical-use information.
 </p>
 
 </div>
-
 
 
 <div class="standards-grid">
@@ -3101,7 +3151,6 @@ Scientific and analytical context.
 
 </div>
 
-
 <div>
 
 <strong>
@@ -3114,7 +3163,6 @@ Research materials are not presented for administration.
 
 </div>
 
-
 <div>
 
 <strong>
@@ -3126,7 +3174,6 @@ Available COAs organized by lot or batch.
 </span>
 
 </div>
-
 
 <div>
 
@@ -3142,6 +3189,239 @@ Restricted Access
 
 </div>
 
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     OFFERS & PROMO SIGNUP
+========================================= -->
+
+<section class="updates-section">
+
+<div class="shell">
+
+<div class="updates-box">
+
+
+<div class="updates-copy">
+
+<div class="eyebrow">
+PCH MEMBER UPDATES
+</div>
+
+<h2>
+Get offers & promo codes.
+</h2>
+
+<p>
+Join the PCH Labs notification list for occasional
+offers, promo codes, catalog updates, shipping
+promotions, and other PCH announcements.
+</p>
+
+
+<div class="updates-benefits">
+
+<div class="updates-benefit">
+
+<span>✦</span>
+
+Promo codes & special offers
+
+</div>
+
+
+<div class="updates-benefit">
+
+<span>✦</span>
+
+New catalog announcements
+
+</div>
+
+
+<div class="updates-benefit">
+
+<span>✦</span>
+
+Shipping promotions
+
+</div>
+
+
+<div class="updates-benefit">
+
+<span>✦</span>
+
+Choose email, text, or both
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<form
+  class="updates-form"
+  id="updatesForm"
+  action="https://formspree.io/f/mvkpbbdz"
+  method="POST"
+>
+
+
+<input
+  type="hidden"
+  name="_subject"
+  value="New PCH Offers & Promo Subscriber"
+>
+
+
+<input
+  type="hidden"
+  name="signup_source"
+  value="PCH Labs Homepage"
+>
+
+
+<div class="updates-form-title">
+Join PCH Updates
+</div>
+
+
+<div class="updates-fields">
+
+
+<div class="updates-field">
+
+<label for="promoEmail">
+EMAIL ADDRESS
+</label>
+
+<input
+  type="email"
+  id="promoEmail"
+  name="email"
+  autocomplete="email"
+  placeholder="you@example.com"
+>
+
+</div>
+
+
+<div class="updates-field">
+
+<label for="promoPhone">
+MOBILE NUMBER
+</label>
+
+<input
+  type="tel"
+  id="promoPhone"
+  name="phone"
+  autocomplete="tel"
+  inputmode="tel"
+  placeholder="(555) 555-5555"
+>
+
+</div>
+
+
+</div>
+
+
+
+<div class="consent-list">
+
+
+<label class="consent-item">
+
+<input
+  type="checkbox"
+  id="emailConsent"
+  name="email_marketing_consent"
+  value="YES"
+>
+
+<span>
+
+<strong>
+Email consent.
+</strong>
+
+Send me occasional PCH Labs promotional emails,
+special offers, catalog updates, and promo codes.
+I can unsubscribe from marketing emails.
+
+</span>
+
+</label>
+
+
+
+<label class="consent-item">
+
+<input
+  type="checkbox"
+  id="smsConsent"
+  name="sms_marketing_consent"
+  value="YES"
+>
+
+<span>
+
+<strong>
+SMS consent.
+</strong>
+
+I agree to receive promotional text messages from
+PCH Labs at the mobile number provided. Message
+frequency varies. Message and data rates may apply.
+Reply STOP to opt out.
+
+</span>
+
+</label>
+
+
+</div>
+
+
+
+<button
+  type="submit"
+  class="updates-submit"
+  id="updatesSubmit"
+>
+JOIN PCH UPDATES
+</button>
+
+
+<div class="updates-small">
+
+Providing a phone number does not automatically enroll
+you in SMS marketing. SMS consent must be selected separately.
+
+</div>
+
+
+<div
+  class="updates-status"
+  id="updatesStatus"
+  role="status"
+  aria-live="polite"
+>
+</div>
+
+
+</form>
+
+
+</div>
 
 </div>
 
@@ -3172,7 +3452,6 @@ Longevity at the Cellular Level
 
 </div>
 
-
 <div>
 
 contact@platinumcellularhealth.com
@@ -3196,7 +3475,6 @@ contact@platinumcellularhealth.com
 <script
   src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
 ></script>
-
 
 
 <script>
@@ -3271,8 +3549,11 @@ function checkRequirements() {
       checkboxes
     )
     .every(
-      box =>
-        box.checked
+      function(box) {
+
+        return box.checked;
+
+      }
     );
 
 
@@ -3311,8 +3592,11 @@ enterButton.addEventListener(
         checkboxes
       )
       .every(
-        box =>
-          box.checked
+        function(box) {
+
+          return box.checked;
+
+        }
       );
 
 
@@ -3454,8 +3738,14 @@ const visibleMobileMemberName =
   );
 
 
+const promoEmail =
+  document.getElementById(
+    "promoEmail"
+  );
+
+
 /* =========================================
-   LOGGED OUT STATE
+   LOGGED OUT
 ========================================= */
 
 function showLoggedOutMemberState() {
@@ -3490,7 +3780,7 @@ function showLoggedOutMemberState() {
 
 
 /* =========================================
-   LOGGED IN STATE
+   LOGGED IN
 ========================================= */
 
 function showLoggedInMemberState(
@@ -3550,6 +3840,20 @@ function showLoggedInMemberState(
 
   visibleMobileMemberName.textContent =
     username;
+
+
+  if (
+    user.email
+    &&
+    promoEmail
+    &&
+    promoEmail.value.trim() === ""
+  ) {
+
+    promoEmail.value =
+      user.email;
+
+  }
 
 }
 
@@ -3645,7 +3949,7 @@ mobileSignout.addEventListener(
 
 
 /* =========================================
-   AUTH STATE CHANGES
+   AUTH STATE
 ========================================= */
 
 supabaseClient.auth
@@ -3718,43 +4022,342 @@ mobileMenuButton.addEventListener(
 );
 
 
-const mobileLinks =
-  mobileMenu.querySelectorAll(
-    "a"
+mobileMenu
+  .querySelectorAll("a")
+  .forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          mobileMenu.classList.remove(
+            "open"
+          );
+
+
+          mobileMenuButton.classList.remove(
+            "active"
+          );
+
+
+          mobileMenuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    }
   );
 
 
-mobileLinks.forEach(
-  function(link) {
+/* =========================================
+   PROMO / OFFERS FORM
+========================================= */
 
-    link.addEventListener(
-      "click",
-      function() {
+const updatesForm =
+  document.getElementById(
+    "updatesForm"
+  );
 
-        mobileMenu.classList.remove(
-          "open"
+
+const promoPhone =
+  document.getElementById(
+    "promoPhone"
+  );
+
+
+const emailConsent =
+  document.getElementById(
+    "emailConsent"
+  );
+
+
+const smsConsent =
+  document.getElementById(
+    "smsConsent"
+  );
+
+
+const updatesSubmit =
+  document.getElementById(
+    "updatesSubmit"
+  );
+
+
+const updatesStatus =
+  document.getElementById(
+    "updatesStatus"
+  );
+
+
+function showUpdatesError(
+  message
+) {
+
+  updatesStatus.className =
+    "updates-status error";
+
+
+  updatesStatus.textContent =
+    message;
+
+}
+
+
+updatesForm.addEventListener(
+  "submit",
+  async function(event) {
+
+    event.preventDefault();
+
+
+    const email =
+      promoEmail.value.trim();
+
+
+    const phone =
+      promoPhone.value.trim();
+
+
+    updatesStatus.className =
+      "updates-status";
+
+
+    updatesStatus.textContent =
+      "";
+
+
+    if (
+      email === ""
+      &&
+      phone === ""
+    ) {
+
+      showUpdatesError(
+        "Please enter an email address, mobile number, or both."
+      );
+
+      return;
+
+    }
+
+
+    if (
+      email !== ""
+      &&
+      !emailConsent.checked
+    ) {
+
+      showUpdatesError(
+        "Please select email consent if you would like to receive promotional emails."
+      );
+
+      return;
+
+    }
+
+
+    if (
+      phone !== ""
+      &&
+      !smsConsent.checked
+    ) {
+
+      showUpdatesError(
+        "Please select SMS consent if you would like to receive promotional text messages."
+      );
+
+      return;
+
+    }
+
+
+    if (
+      email === ""
+      &&
+      emailConsent.checked
+    ) {
+
+      showUpdatesError(
+        "Enter an email address to enroll in email updates."
+      );
+
+      return;
+
+    }
+
+
+    if (
+      phone === ""
+      &&
+      smsConsent.checked
+    ) {
+
+      showUpdatesError(
+        "Enter a mobile number to enroll in text updates."
+      );
+
+      return;
+
+    }
+
+
+    updatesSubmit.disabled =
+      true;
+
+
+    updatesSubmit.textContent =
+      "JOINING...";
+
+
+    try {
+
+      const formData =
+        new FormData(
+          updatesForm
         );
 
 
-        mobileMenuButton.classList.remove(
-          "active"
+      formData.append(
+        "email_consent_recorded",
+        emailConsent.checked
+        ?
+        "YES"
+        :
+        "NO"
+      );
+
+
+      formData.append(
+        "sms_consent_recorded",
+        smsConsent.checked
+        ?
+        "YES"
+        :
+        "NO"
+      );
+
+
+      formData.append(
+        "consent_timestamp",
+        new Date().toISOString()
+      );
+
+
+      const response =
+        await fetch(
+          updatesForm.action,
+          {
+
+            method:
+              "POST",
+
+            body:
+              formData,
+
+            headers: {
+
+              "Accept":
+                "application/json"
+
+            }
+
+          }
         );
 
 
-        mobileMenuButton.setAttribute(
-          "aria-expanded",
-          "false"
+      if (!response.ok) {
+
+        throw new Error(
+          "Signup submission failed."
         );
 
       }
-    );
+
+
+      updatesStatus.className =
+        "updates-status success";
+
+
+      updatesStatus.textContent =
+        "✓ You're on the PCH Updates list. Watch for upcoming offers and promo codes.";
+
+
+      const {
+        data
+      } =
+        await supabaseClient.auth
+          .getSession();
+
+
+      updatesForm.reset();
+
+
+      if (
+        data.session
+        &&
+        data.session.user
+        &&
+        data.session.user.email
+      ) {
+
+        promoEmail.value =
+          data.session.user.email;
+
+      }
+
+
+      updatesSubmit.textContent =
+        "YOU'RE SIGNED UP";
+
+
+      setTimeout(
+        function() {
+
+          updatesSubmit.textContent =
+            "JOIN PCH UPDATES";
+
+
+          updatesSubmit.disabled =
+            false;
+
+        },
+        3000
+      );
+
+    }
+
+    catch(error) {
+
+      console.error(
+        "PCH updates signup error:",
+        error
+      );
+
+
+      showUpdatesError(
+        "We couldn't save your signup. Please try again."
+      );
+
+
+      updatesSubmit.textContent =
+        "JOIN PCH UPDATES";
+
+
+      updatesSubmit.disabled =
+        false;
+
+    }
 
   }
 );
 
 
 /* =========================================
-   RESTORE SESSION WHEN RETURNING
+   RESTORE SESSION
 ========================================= */
 
 window.addEventListener(
@@ -3796,4 +4399,4 @@ restoreMemberSession();
 
 </body>
 
-</html>
+  </html>
