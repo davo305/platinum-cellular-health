@@ -16,7 +16,6 @@
 Policies | Platinum Cellular Health Labs
 </title>
 
-
 <style>
 
 /* =========================================
@@ -38,8 +37,8 @@ body {
 
   background:
     radial-gradient(
-      circle at 80% 5%,
-      rgba(213,173,85,.07),
+      circle at 50% 0%,
+      rgba(198,160,70,.07),
       transparent 30%
     ),
     #050607;
@@ -52,6 +51,8 @@ body {
     sans-serif;
 
   line-height: 1.6;
+
+  overflow-x: hidden;
 }
 
 a {
@@ -59,22 +60,30 @@ a {
   text-decoration: none;
 }
 
-.shell {
-  width: min(
-    1180px,
-    calc(100% - 36px)
-  );
-
-  margin: auto;
+img {
+  max-width: 100%;
+  display: block;
 }
 
 :root {
+  --black: #050607;
+  --panel: #0d0f11;
+  --panel2: #111417;
+  --border: #252a2e;
   --gold: #d5ad55;
   --gold2: #f0d48c;
-  --panel: #0d1012;
-  --panel2: #111416;
-  --border: #252a2e;
-  --muted: #979ea4;
+  --text: #f5f5f5;
+  --muted: #9da3a8;
+}
+
+.shell {
+  width:
+    min(
+      1180px,
+      calc(100% - 36px)
+    );
+
+  margin: auto;
 }
 
 
@@ -84,57 +93,73 @@ a {
 
 .site-header {
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
 
   background:
-    rgba(5,6,7,.94);
+    rgba(5,6,7,.95);
 
   backdrop-filter:
-    blur(14px);
+    blur(15px);
 
   border-bottom:
-    1px solid rgba(255,255,255,.07);
+    1px solid
+    rgba(255,255,255,.08);
 }
 
 .nav {
-  min-height: 76px;
+  min-height: 78px;
 
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
+
+  justify-content:
+    space-between;
 
   gap: 25px;
 }
 
 .brand {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
+
+  min-width: 0;
 }
 
 .brand img {
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
 
   object-fit: cover;
 
   border-radius: 50%;
 
   border:
-    1px solid rgba(213,173,85,.35);
+    1px solid
+    rgba(213,173,85,.35);
 }
 
 .brand-title {
   font-size: 13px;
+
   font-weight: 900;
+
   letter-spacing: 1px;
 }
 
 .brand-sub {
+  font-size: 8px;
+
   color: var(--gold);
 
-  font-size: 8px;
   letter-spacing: 2px;
 
   margin-top: 2px;
@@ -142,12 +167,15 @@ a {
 
 .nav-links {
   display: flex;
+
   align-items: center;
+
   gap: 22px;
 
-  color: #b7bdc2;
+  color: #b9bdc0;
 
-  font-size: 12px;
+  font-size: 13px;
+
   font-weight: 700;
 }
 
@@ -155,26 +183,35 @@ a {
   color: var(--gold2);
 }
 
+
+/* =========================================
+   BUTTON
+========================================= */
+
 .btn {
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
-  min-height: 43px;
+  min-height: 46px;
 
-  padding: 0 16px;
+  padding: 0 20px;
+
+  border-radius: 8px;
 
   border:
     1px solid #34393d;
 
-  border-radius: 8px;
-
   background: #101214;
 
-  color: white;
+  color: #f4f4f4;
 
   font-size: 11px;
+
   font-weight: 900;
+
   letter-spacing: .7px;
 }
 
@@ -185,33 +222,37 @@ a {
 
 .page-hero {
   padding:
-    85px 0
-    55px;
+    90px 0 65px;
 
   border-bottom:
-    1px solid var(--border);
+    1px solid
+    var(--border);
 }
 
-.back {
+.back-link {
   display: inline-block;
 
-  color: var(--gold);
+  margin-bottom: 32px;
+
+  color: var(--gold2);
 
   font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .6px;
 
-  margin-bottom: 35px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
 }
 
 .eyebrow {
   color: var(--gold);
 
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 2.3px;
+  font-size: 11px;
 
-  margin-bottom: 12px;
+  font-weight: 900;
+
+  letter-spacing: 2.5px;
+
+  margin-bottom: 15px;
 }
 
 .page-hero h1 {
@@ -219,49 +260,54 @@ a {
 
   font-size:
     clamp(
-      40px,
-      7vw,
-      68px
+      42px,
+      6vw,
+      70px
     );
 
   line-height: 1;
 
   letter-spacing: -2px;
 
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .page-hero p {
-  max-width: 760px;
+  max-width: 780px;
 
   color: var(--muted);
 
-  font-size: 16px;
+  font-size: 17px;
+
   line-height: 1.8;
 }
 
-.hero-tags {
+.hero-meta {
   display: flex;
+
   flex-wrap: wrap;
-  gap: 8px;
+
+  gap: 9px;
 
   margin-top: 25px;
 }
 
-.hero-tags span {
-  border:
-    1px solid var(--border);
+.hero-meta span {
+  padding: 7px 10px;
 
-  background: #0c0e10;
+  border:
+    1px solid #292e32;
 
   border-radius: 100px;
 
-  padding: 7px 10px;
+  background: #0c0e10;
 
-  color: #858c92;
+  color: #858c91;
 
   font-size: 9px;
-  font-weight: 800;
+
+  font-weight: 900;
+
   letter-spacing: 1px;
 }
 
@@ -270,124 +316,112 @@ a {
    POLICY NAV
 ========================================= */
 
-.policy-nav-section {
+.policy-nav {
   padding: 32px 0;
 
   border-bottom:
-    1px solid var(--border);
-
-  background: #080a0b;
+    1px solid
+    var(--border);
 }
 
-.policy-nav {
+.policy-links {
   display: flex;
+
   flex-wrap: wrap;
-  gap: 10px;
+
+  gap: 9px;
 }
 
-.policy-nav a {
+.policy-links a {
   padding: 9px 12px;
 
   border:
-    1px solid var(--border);
+    1px solid #292e32;
 
-  border-radius: 100px;
-
-  color: #a0a7ac;
+  border-radius: 8px;
 
   background: #0d1012;
 
+  color: #aab0b4;
+
   font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .7px;
+
+  font-weight: 900;
+
+  letter-spacing: .5px;
 }
 
-.policy-nav a:hover {
+.policy-links a:hover {
+  border-color: var(--gold);
+
   color: var(--gold2);
-  border-color:
-    rgba(213,173,85,.38);
 }
 
 
 /* =========================================
-   POLICY CONTENT
+   POLICY SECTIONS
 ========================================= */
 
 .policy-section {
-  padding: 70px 0 95px;
+  padding:
+    72px 0;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+.policy-section.alt {
+  background: #090b0c;
+}
+
+.policy-head {
+  max-width: 780px;
+
+  margin-bottom: 32px;
+}
+
+.policy-head h2 {
+  font-size:
+    clamp(
+      30px,
+      4vw,
+      48px
+    );
+
+  line-height: 1.08;
+
+  margin-bottom: 14px;
+}
+
+.policy-head p {
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.8;
 }
 
 .policy-grid {
   display: grid;
 
   grid-template-columns:
-    290px 1fr;
-
-  gap: 55px;
-
-  align-items: start;
-}
-
-.policy-aside {
-  position: sticky;
-  top: 100px;
-
-  padding: 22px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c
+    repeat(
+      2,
+      minmax(0,1fr)
     );
 
-  border:
-    1px solid var(--border);
-
-  border-radius: 14px;
-}
-
-.policy-aside strong {
-  display: block;
-
-  color: var(--gold2);
-
-  font-size: 13px;
-
-  margin-bottom: 8px;
-}
-
-.policy-aside p {
-  color: var(--muted);
-
-  font-size: 12px;
-  line-height: 1.7;
-
-  margin-bottom: 18px;
-}
-
-.policy-aside div {
-  padding: 10px 0;
-
-  border-top:
-    1px solid #1d2124;
-
-  color: #838a90;
-
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .7px;
-}
-
-.policy-content {
-  display: grid;
-  gap: 18px;
+  gap: 14px;
 }
 
 .policy-card {
-  scroll-margin-top: 110px;
+  padding: 24px;
 
-  padding: 28px;
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 13px;
 
   background:
     linear-gradient(
@@ -395,107 +429,330 @@ a {
       #111416,
       #090b0c
     );
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 14px;
 }
 
-.policy-number {
-  color:
-    rgba(213,173,85,.18);
+.policy-card h3 {
+  color: var(--gold2);
 
-  font-size: 44px;
-  font-weight: 900;
+  font-size: 17px;
 
   margin-bottom: 10px;
-}
-
-.policy-card h2 {
-  font-size: 25px;
-
-  margin-bottom: 14px;
 }
 
 .policy-card p {
   color: var(--muted);
 
   font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.policy-card ul {
+  padding-left: 18px;
+
+  margin-top: 12px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.policy-card li {
+  margin-bottom: 7px;
+}
+
+
+/* =========================================
+   IMPORTANT CARDS
+========================================= */
+
+.important {
+  border:
+    1px solid
+    rgba(213,173,85,.35);
+
+  background:
+    rgba(213,173,85,.03);
+}
+
+
+/* =========================================
+   PAYMENT
+========================================= */
+
+.payment-panel {
+  padding: 28px;
+
+  border:
+    1px solid
+    rgba(213,173,85,.32);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(213,173,85,.055),
+      #090b0c
+    );
+}
+
+.payment-panel h3 {
+  color: var(--gold2);
+
+  font-size: 24px;
+
+  margin-bottom: 8px;
+}
+
+.payment-panel > p {
+  color: var(--muted);
+
+  font-size: 13px;
+
   line-height: 1.8;
 
-  margin-bottom: 12px;
+  margin-bottom: 22px;
 }
 
-.policy-card p:last-child {
-  margin-bottom: 0;
-}
-
-.policy-list {
+.payment-grid {
   display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 12px;
+}
+
+.payment-method {
+  padding: 22px;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 12px;
+
+  background: #0c0f11;
+}
+
+.payment-method span {
+  display: block;
+
+  color: #777e83;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 5px;
+}
+
+.payment-method strong {
+  display: block;
+
+  color: var(--gold2);
+
+  font-size: 22px;
+}
+
+.network {
+  margin-top: 5px;
+
+  color: #8c9398;
+
+  font-size: 11px;
+}
+
+.crypto-warning {
+  margin-top: 18px;
+
+  padding: 20px;
+
+  border:
+    1px solid #34393d;
+
+  border-radius: 11px;
+
+  background: #0b0d0f;
+}
+
+.crypto-warning strong {
+  display: block;
+
+  color: #d6d9db;
+
+  font-size: 12px;
+
+  margin-bottom: 7px;
+}
+
+.crypto-warning p {
+  color: #858c91;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   SHIPPING
+========================================= */
+
+.shipping-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0,1fr)
+    );
+
+  gap: 14px;
+
+  margin-bottom: 25px;
+}
+
+.shipping-box {
+  min-height: 145px;
+
+  padding: 24px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 12px;
+
+  background: #0d1012;
+}
+
+.shipping-box span {
+  display: block;
+
+  color: #777e83;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 6px;
+}
+
+.shipping-box strong {
+  color: var(--gold2);
+
+  font-size: 28px;
+
+  line-height: 1.15;
+}
+
+.shipping-box small {
+  display: block;
+
+  color: #7d8489;
+
+  font-size: 10px;
+
+  margin-top: 6px;
+}
+
+
+/* =========================================
+   DOCUMENTATION
+========================================= */
+
+.document-list {
+  display: grid;
+
   gap: 10px;
 
   margin-top: 15px;
 }
 
-.policy-list div {
-  padding: 13px 15px;
-
-  background: #0c0f11;
+.document-item {
+  padding: 16px;
 
   border:
-    1px solid #202529;
+    1px solid #262b2f;
 
   border-radius: 9px;
 
-  color: #b8bec3;
-
-  font-size: 12px;
-  line-height: 1.7;
+  background: #0d1012;
 }
 
-.policy-list strong {
-  color: #f1f2f3;
+.document-item strong {
+  display: block;
+
+  color: #d5d8da;
+
+  font-size: 12px;
+
+  margin-bottom: 4px;
+}
+
+.document-item p {
+  color: #848b90;
+
+  font-size: 11px;
+
+  line-height: 1.7;
 }
 
 
 /* =========================================
-   IMPORTANT NOTICE
+   LEGAL NOTE
 ========================================= */
 
-.notice-section {
-  padding: 0 0 85px;
+.legal-note {
+  padding:
+    60px 0;
 }
 
-.notice {
+.legal-box {
   padding: 26px;
 
   border:
-    1px solid rgba(213,173,85,.28);
+    1px solid
+    rgba(213,173,85,.25);
 
   border-radius: 14px;
 
   background:
-    linear-gradient(
-      145deg,
-      #101315,
-      #090b0c
-    );
+    rgba(213,173,85,.03);
 }
 
-.notice strong {
+.legal-box strong {
   display: block;
 
   color: var(--gold2);
 
-  margin-bottom: 8px;
-}
-
-.notice p {
-  color: #90979d;
+  margin-bottom: 9px;
 
   font-size: 13px;
-  line-height: 1.75;
+
+  letter-spacing: 1px;
+}
+
+.legal-box p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.8;
 }
 
 
@@ -506,29 +763,32 @@ a {
 footer {
   padding: 40px 0;
 
-  border-top:
-    1px solid var(--border);
-
   background: #030404;
 
-  color: #6f767b;
-
-  font-size: 11px;
+  border-top:
+    1px solid
+    var(--border);
 }
 
 .footer-grid {
   display: flex;
-  justify-content: space-between;
+
+  justify-content:
+    space-between;
 
   gap: 30px;
+
+  color: #777d82;
+
+  font-size: 11px;
 }
 
 .footer-grid strong {
-  color: #bfc3c6;
+  color: #c7c9ca;
 
   display: block;
 
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 
@@ -538,61 +798,57 @@ footer {
 
 @media(max-width:900px) {
 
+  .shell {
+    width:
+      min(
+        100% - 28px,
+        1180px
+      );
+  }
+
   .nav {
     min-height: 68px;
   }
 
   .brand img {
-    width: 44px;
-    height: 44px;
+    width: 45px;
+    height: 45px;
   }
 
   .brand-title {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .brand-sub {
     font-size: 7px;
   }
 
-  .nav-links {
+  .nav-links
+  a:not(.contact-link) {
     display: none;
-  }
-
-  .policy-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .policy-aside {
-    position: static;
-  }
-
-}
-
-@media(max-width:650px) {
-
-  .shell {
-    width:
-      calc(100% - 26px);
   }
 
   .page-hero {
     padding:
-      60px 0
-      40px;
+      70px 0 50px;
   }
 
   .page-hero h1 {
-    font-size: 43px;
+    font-size: 45px;
   }
 
   .page-hero p {
-    font-size: 14px;
+    font-size: 15px;
   }
 
-  .policy-card {
-    padding: 22px;
+  .policy-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .shipping-summary {
+    grid-template-columns:
+      1fr;
   }
 
   .footer-grid {
@@ -601,9 +857,53 @@ footer {
 
 }
 
+
+@media(max-width:520px) {
+
+  .brand-title {
+    font-size: 10px;
+  }
+
+  .brand-sub {
+    font-size: 6px;
+  }
+
+  .page-hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-meta {
+    display: grid;
+
+    grid-template-columns: 1fr;
+  }
+
+  .hero-meta span {
+    text-align: center;
+  }
+
+  .policy-links {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .policy-links a {
+    text-align: center;
+  }
+
+  .payment-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
 </style>
 
 </head>
+
 
 
 <body>
@@ -617,6 +917,7 @@ footer {
 
 <div class="shell nav">
 
+
 <a
   href="index.html"
   class="brand"
@@ -624,7 +925,7 @@ footer {
 
 <img
   src="pch-logo.jpg"
-  alt="Platinum Cellular Health Labs"
+  alt="PCH Labs"
 >
 
 <div>
@@ -662,17 +963,21 @@ Quality & COA
 
 <a
   href="contact.html"
-  class="btn"
+  class="btn contact-link"
 >
 Contact
 </a>
 
 </nav>
 
+
 </div>
 
 </header>
 
+
+
+<main>
 
 
 <!-- =========================================
@@ -683,46 +988,58 @@ Contact
 
 <div class="shell">
 
+
 <a
-  class="back"
   href="index.html"
+  class="back-link"
 >
 ← BACK TO PCH LABS
 </a>
 
+
 <div class="eyebrow">
-WEBSITE & RESEARCH POLICIES
+PCH LABS TERMS & POLICIES
 </div>
 
+
 <h1>
-Policies & Use Requirements
+Policies.
 </h1>
 
+
 <p>
-These policies establish the standards for accessing,
-using, and reviewing information presented by
-Platinum Cellular Health Labs.
+These policies describe research-use restrictions,
+payment requirements, shipping and processing practices,
+final-sale terms, analytical-documentation limitations,
+and other conditions associated with Platinum Cellular
+Health Labs.
 </p>
 
-<div class="hero-tags">
+
+<div class="hero-meta">
 
 <span>
 21+ ACCESS
 </span>
 
 <span>
+CRYPTO PAYMENTS
+</span>
+
+<span>
+ALL SALES FINAL
+</span>
+
+<span>
+24-HOUR PROCESSING TARGET
+</span>
+
+<span>
 RESEARCH USE ONLY
 </span>
 
-<span>
-LAWFUL USE
-</span>
-
-<span>
-DOCUMENTATION INTEGRITY
-</span>
-
 </div>
+
 
 </div>
 
@@ -734,470 +1051,1204 @@ DOCUMENTATION INTEGRITY
      QUICK NAV
 ========================================= -->
 
-<section class="policy-nav-section">
-
-<div class="shell policy-nav">
-
-<a href="#age">
-21+ ACCESS
-</a>
-
-<a href="#ruo">
-RESEARCH USE ONLY
-</a>
-
-<a href="#prohibited">
-PROHIBITED USE
-</a>
-
-<a href="#information">
-INFORMATION POLICY
-</a>
-
-<a href="#documentation">
-COA DOCUMENTATION
-</a>
-
-<a href="#refusal">
-RIGHT TO REFUSE
-</a>
-
-<a href="#privacy">
-PRIVACY
-</a>
-
-<a href="#changes">
-POLICY UPDATES
-</a>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     POLICIES
-========================================= -->
-
-<section class="policy-section">
-
-<div class="shell policy-grid">
-
-
-<!-- LEFT SIDE -->
-
-<aside class="policy-aside">
-
-<strong>
-PCH Policy Standard
-</strong>
-
-<p>
-Platinum Cellular Health Labs is structured around
-scientific, analytical, laboratory, and educational
-research information.
-</p>
-
-<div>
-21+ ACCESS REQUIRED
-</div>
-
-<div>
-RESEARCH USE ONLY
-</div>
-
-<div>
-NO HUMAN OR ANIMAL USE
-</div>
-
-<div>
-LAWFUL ACTIVITY ONLY
-</div>
-
-<div>
-DOCUMENTATION TRANSPARENCY
-</div>
-
-</aside>
-
-
-
-<!-- RIGHT SIDE -->
-
-<div class="policy-content">
-
-
-<!-- 1 -->
-
-<article
-  class="policy-card"
-  id="age"
->
-
-<div class="policy-number">
-01
-</div>
-
-<h2>
-21+ Access Requirement
-</h2>
-
-<p>
-Access to Platinum Cellular Health Labs is intended only
-for individuals who certify that they are at least
-21 years of age.
-</p>
-
-<p>
-Visitors are required to complete the website entry
-certification before accessing the main website.
-</p>
-
-</article>
-
-
-
-<!-- 2 -->
-
-<article
-  class="policy-card"
-  id="ruo"
->
-
-<div class="policy-number">
-02
-</div>
-
-<h2>
-Research Use Only
-</h2>
-
-<p>
-Materials, catalog listings, documents, and information
-identified as Research Use Only are presented solely
-for legitimate scientific, analytical, laboratory,
-and educational research purposes.
-</p>
-
-<div class="policy-list">
-
-<div>
-<strong>Not for human consumption.</strong>
-Research Use Only materials are not presented for ingestion
-or consumption.
-</div>
-
-<div>
-<strong>Not for animal consumption.</strong>
-Research Use Only materials are not presented for veterinary
-or animal-use purposes.
-</div>
-
-<div>
-<strong>Not for administration.</strong>
-Website content does not provide administration,
-dosing, injection, prescribing, or treatment instructions.
-</div>
-
-<div>
-<strong>Not for clinical use.</strong>
-Research materials are not presented for diagnosis,
-treatment, prevention, or cure of disease.
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- 3 -->
-
-<article
-  class="policy-card"
-  id="prohibited"
->
-
-<div class="policy-number">
-03
-</div>
-
-<h2>
-Prohibited & Unlawful Use
-</h2>
-
-<p>
-Platinum Cellular Health Labs does not support,
-encourage, endorse, or assist unlawful activity.
-</p>
-
-<p>
-Users must not use this website, its information,
-documentation, or research materials in a manner
-that violates applicable laws, regulations,
-institutional requirements, or product labeling.
-</p>
-
-<div class="policy-list">
-
-<div>
-No use for unlawful activity.
-</div>
-
-<div>
-No misrepresentation of intended research purpose.
-</div>
-
-<div>
-No use inconsistent with Research Use Only labeling.
-</div>
-
-<div>
-No attempt to obtain information or materials
-through false or misleading representations.
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- 4 -->
-
-<article
-  class="policy-card"
-  id="information"
->
-
-<div class="policy-number">
-04
-</div>
-
-<h2>
-Scientific & Educational Information
-</h2>
-
-<p>
-Information provided on this website is intended
-for research, laboratory, analytical,
-and educational reference purposes.
-</p>
-
-<p>
-Website content does not constitute medical,
-veterinary, diagnostic, prescribing, treatment,
-or other professional healthcare advice.
-</p>
-
-<p>
-Scientific information may evolve as new research,
-analytical methods, and published literature become available.
-</p>
-
-</article>
-
-
-
-<!-- 5 -->
-
-<article
-  class="policy-card"
-  id="documentation"
->
-
-<div class="policy-number">
-05
-</div>
-
-<h2>
-Certificates of Analysis & Documentation
-</h2>
-
-<p>
-Platinum Cellular Health Labs may display
-Certificates of Analysis, analytical reports,
-laboratory verification links, lot information,
-batch references, or other supporting documentation.
-</p>
-
-<div class="policy-list">
-
-<div>
-<strong>Original reporting:</strong>
-Laboratory reports should be displayed
-without altering the reported analytical results.
-</div>
-
-<div>
-<strong>Lot matching:</strong>
-A report should only be represented as applying
-to the sample, product, lot, or batch identified
-by the available documentation.
-</div>
-
-<div>
-<strong>External verification:</strong>
-Where a testing laboratory provides an online
-verification page, an external link may be provided.
-</div>
-
-<div>
-<strong>Historical documentation:</strong>
-Testing records may relate to a particular
-sample or batch and should not automatically
-be assumed to represent every future batch.
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- 6 -->
-
-<article
-  class="policy-card"
-  id="refusal"
->
-
-<div class="policy-number">
-06
-</div>
-
-<h2>
-Right to Restrict or Refuse Service
-</h2>
-
-<p>
-Platinum Cellular Health Labs reserves the right
-to restrict website access, decline service,
-cancel activity, or refuse a transaction
-where appropriate.
-</p>
-
-<p>
-This may include circumstances involving suspected
-misuse, unlawful activity, misrepresentation,
-fraud, abuse, or use inconsistent with
-Research Use Only labeling.
-</p>
-
-</article>
-
-
-
-<!-- 7 -->
-
-<article
-  class="policy-card"
-  id="privacy"
->
-
-<div class="policy-number">
-07
-</div>
-
-<h2>
-Privacy & Information Collection
-</h2>
-
-<p>
-Platinum Cellular Health Labs should collect
-only information reasonably necessary for
-website administration, communication,
-security, documentation, and other legitimate
-site functions.
-</p>
-
-<p>
-Sensitive information should not be displayed
-publicly unless there is a legitimate reason
-and appropriate protection.
-</p>
-
-<p>
-A more detailed Privacy Policy can be added
-when account registration, email collection,
-forms, or other data-processing features
-are activated.
-</p>
-
-</article>
-
-
-
-<!-- 8 -->
-
-<article
-  class="policy-card"
-  id="changes"
->
-
-<div class="policy-number">
-08
-</div>
-
-<h2>
-Policy Updates
-</h2>
-
-<p>
-Website policies may be revised as the website,
-research library, documentation system,
-or applicable requirements change.
-</p>
-
-<p>
-Continued use of the website after updated
-policies are published may be treated as
-acceptance of the revised terms where permitted
-by applicable law.
-</p>
-
-</article>
-
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     NOTICE
-========================================= -->
-
-<section class="notice-section">
+<section class="policy-nav">
 
 <div class="shell">
 
-<div class="notice">
 
-<strong>
-Important Notice
-</strong>
+<div class="policy-links">
 
-<p>
-These website policies are intended to clearly communicate
-the research-only purpose and operating standards of
-Platinum Cellular Health Labs. They are not a substitute
-for legal advice, regulatory review, or professional
-compliance guidance. Applicable requirements may vary
-depending on the specific material, jurisdiction,
-business activity, and circumstances involved.
-</p>
+<a href="#research-use">
+Research Use
+</a>
+
+<a href="#payment">
+Payment
+</a>
+
+<a href="#sales">
+Final Sales
+</a>
+
+<a href="#shipping">
+Shipping
+</a>
+
+<a href="#coa">
+COA Policy
+</a>
+
+<a href="#pricing">
+Pricing
+</a>
+
+<a href="#misuse">
+Access
+</a>
+
+<a href="#privacy">
+Privacy
+</a>
 
 </div>
+
 
 </div>
 
 </section>
+
+
+
+<!-- =========================================
+     RESEARCH USE
+========================================= -->
+
+<section
+  class="policy-section alt"
+  id="research-use"
+>
+
+<div class="shell">
+
+
+<div class="policy-head">
+
+<div class="eyebrow">
+RESEARCH USE POLICY
+</div>
+
+<h2>
+Laboratory and research context only.
+</h2>
+
+<p>
+PCH Labs materials and website information are
+presented solely for legitimate laboratory,
+analytical, scientific, and educational research.
+</p>
+
+</div>
+
+
+
+<div class="policy-grid">
+
+
+<div class="policy-card">
+
+<h3>
+21+ Access
+</h3>
+
+<p>
+Website access and purchasing are restricted
+to individuals who certify that they are
+at least 21 years of age.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+No Human or Animal Use
+</h3>
+
+<p>
+Research Use Only materials are not presented
+for human or animal consumption, administration,
+treatment, diagnosis, disease prevention,
+clinical use, or veterinary use.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+No Medical Advice
+</h3>
+
+<p>
+Website information, customer communication,
+catalog listings, and analytical documentation
+do not constitute medical, veterinary, diagnostic,
+prescribing, treatment, administration, or dosing advice.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Purchaser Responsibility
+</h3>
+
+<p>
+Purchasers are responsible for ensuring that
+their possession, handling, research activities,
+and use of materials comply with applicable law,
+institutional requirements, and product labeling.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     PAYMENT POLICY
+========================================= -->
+
+<section
+  class="policy-section"
+  id="payment"
+>
+
+<div class="shell">
+
+
+<div class="policy-head">
+
+<div class="eyebrow">
+PAYMENT POLICY
+</div>
+
+<h2>
+Cryptocurrency payments only.
+</h2>
+
+<p>
+PCH Labs currently accepts payment only through
+supported cryptocurrency transactions on the
+Solana network.
+</p>
+
+</div>
+
+
+
+<div class="payment-panel">
+
+
+<h3>
+Accepted Payment Methods
+</h3>
+
+
+<p>
+Customers must use one of the supported payment
+methods shown below when completing an order.
+</p>
+
+
+
+<div class="payment-grid">
+
+
+<div class="payment-method">
+
+<span>
+ACCEPTED METHOD
+</span>
+
+<strong>
+USDC
+</strong>
+
+<div class="network">
+Solana Network
+</div>
+
+</div>
+
+
+
+<div class="payment-method">
+
+<span>
+ACCEPTED METHOD
+</span>
+
+<strong>
+SOL
+</strong>
+
+<div class="network">
+Solana
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="crypto-warning">
+
+<strong>
+IMPORTANT — VERIFY THE NETWORK AND ADDRESS
+</strong>
+
+<p>
+Customers are responsible for verifying the
+recipient wallet address, cryptocurrency type,
+network, and payment amount before transmitting
+funds. USDC payments must be transmitted using
+the Solana network. Cryptocurrency transactions
+may be irreversible once confirmed on the blockchain.
+Do not send funds to an address or network that
+has not been provided or confirmed for the order.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL SALES
+========================================= -->
+
+<section
+  class="policy-section alt"
+  id="sales"
+>
+
+<div class="shell">
+
+
+<div class="policy-head">
+
+<div class="eyebrow">
+SALES POLICY
+</div>
+
+<h2>
+All sales are final.
+</h2>
+
+<p>
+Customers should carefully review the material,
+amount, quantity, price, payment information,
+shipping selection, insurance selection,
+and delivery address before completing payment.
+</p>
+
+</div>
+
+
+
+<div class="policy-grid">
+
+
+<div class="policy-card important">
+
+<h3>
+No Returns
+</h3>
+
+<p>
+PCH Labs does not accept returns after a completed
+sale except where a return or other remedy is
+required by applicable law.
+</p>
+
+</div>
+
+
+
+<div class="policy-card important">
+
+<h3>
+No Exchanges
+</h3>
+
+<p>
+Completed purchases are not eligible for exchanges
+because of customer preference, ordering error,
+change of mind, or a request to substitute another
+catalog item.
+</p>
+
+</div>
+
+
+
+<div class="policy-card important">
+
+<h3>
+No Voluntary Refunds
+</h3>
+
+<p>
+All sales are final. PCH Labs does not provide
+voluntary refunds after a completed sale except
+where a refund is required by applicable law.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Order Verification
+</h3>
+
+<p>
+Customers are responsible for verifying their
+order information before transmitting cryptocurrency.
+Once an order and payment have been accepted,
+changes may not be available.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     SHIPPING
+========================================= -->
+
+<section
+  class="policy-section"
+  id="shipping"
+>
+
+<div class="shell">
+
+
+<div class="policy-head">
+
+<div class="eyebrow">
+SHIPPING & PROCESSING POLICY
+</div>
+
+<h2>
+Customer-selected shipping with fast processing.
+</h2>
+
+<p>
+Orders are normally prepared for shipment within
+24 hours after the order is placed and payment
+has been confirmed. Shipping cost depends on the
+delivery option selected by the customer.
+</p>
+
+</div>
+
+
+
+<div class="shipping-summary">
+
+
+<div class="shipping-box">
+
+<span>
+NORMAL PROCESSING TARGET
+</span>
+
+<strong>
+Within 24 Hours
+</strong>
+
+<small>
+After order placement and payment confirmation
+</small>
+
+</div>
+
+
+
+<div class="shipping-box">
+
+<span>
+SHIPPING RANGE
+</span>
+
+<strong>
+$15–$60
+</strong>
+
+<small>
+Depending on the option selected
+</small>
+
+</div>
+
+
+
+<div class="shipping-box">
+
+<span>
+OPTIONAL INSURANCE
+</span>
+
+<strong>
+$1 / $100
+</strong>
+
+<small>
+Based on order value
+</small>
+
+</div>
+
+
+</div>
+
+
+
+<div class="policy-grid">
+
+
+<div class="policy-card important">
+
+<h3>
+Normal Processing Time
+</h3>
+
+<p>
+Orders are normally prepared for shipment within
+24 hours after the order is placed and payment is
+confirmed. This is a normal processing target rather
+than an absolute guarantee.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Processing Exceptions
+</h3>
+
+<p>
+Processing may occasionally take longer because
+of weekends, holidays, inventory verification,
+carrier availability, severe weather, operational
+interruptions, or other circumstances.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Shipping Charges
+</h3>
+
+<p>
+Shipping generally ranges from approximately
+$15 to $60 depending on the shipping method
+selected by the customer, destination, carrier,
+and available delivery service.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Customer Selects Shipping
+</h3>
+
+<p>
+Customers may select from the shipping options
+made available for the order. Faster, premium,
+or specialized shipping services may carry
+higher charges.
+</p>
+
+</div>
+
+
+
+<div class="policy-card important">
+
+<h3>
+Optional Shipping Insurance
+</h3>
+
+<p>
+Customers may choose to add shipping insurance
+for an additional charge of $1 per $100 of order
+value. Insurance is optional and should be selected
+before the shipment is processed.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Insurance Example
+</h3>
+
+<p>
+A $100 order may carry a $1 optional insurance
+charge, a $300 order may carry a $3 charge,
+and a $500 order may carry a $5 charge.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Insurance Coverage
+</h3>
+
+<p>
+Where insurance is selected, coverage, exclusions,
+claim procedures, documentation requirements,
+and reimbursement are subject to the terms
+applicable to the carrier or insurance provider.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Final Shipping Cost
+</h3>
+
+<p>
+The applicable shipping charge and any selected
+insurance charge should be disclosed before payment
+is completed.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Delivery Information
+</h3>
+
+<p>
+Customers are responsible for supplying an accurate
+and deliverable shipping address and should carefully
+review all address information before completing
+the order.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Tracking
+</h3>
+
+<p>
+When tracking information is available for the
+selected shipping service, it may be provided
+after the shipment has been processed.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Carrier Delays
+</h3>
+
+<p>
+Weather, holidays, carrier disruptions,
+transportation conditions, and other circumstances
+outside PCH Labs' direct control may affect delivery
+after a shipment has been transferred to the carrier.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Unshipped Orders
+</h3>
+
+<p>
+Where applicable law requires cancellation,
+delay consent, or a refund because merchandise
+cannot be shipped within the required or promised
+time, PCH Labs will handle the order in accordance
+with those requirements.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     COA POLICY
+========================================= -->
+
+<section
+  class="policy-section alt"
+  id="coa"
+>
+
+<div class="shell">
+
+
+<div class="policy-head">
+
+<div class="eyebrow">
+ANALYTICAL DOCUMENTATION
+</div>
+
+<h2>
+Certificate of Analysis policy.
+</h2>
+
+<p>
+Available analytical documentation is provided
+to assist with research recordkeeping and
+sample or batch identification.
+</p>
+
+</div>
+
+
+
+<div class="policy-grid">
+
+
+<div class="policy-card">
+
+<h3>
+Batch-Specific Results
+</h3>
+
+<p>
+A Certificate of Analysis applies to the sample,
+lot, batch, or laboratory submission identified
+within the original analytical report.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+No Universal Representation
+</h3>
+
+<p>
+A laboratory result for one tested sample should
+not automatically be interpreted as a result for
+another batch, lot, future production run, or
+different research material.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Original Report Controls
+</h3>
+
+<p>
+Website summaries are provided for convenience.
+If there is a difference between a website summary
+and an original laboratory report, researchers
+should rely on the original report.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Independent Laboratories
+</h3>
+
+<p>
+Where reports were issued by independent analytical
+laboratories, the laboratory is responsible for
+its own testing methods, measurements, reporting,
+and statements contained in the report.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<div class="document-list">
+
+
+<div class="document-item">
+
+<strong>
+Purity does not equal every quality attribute.
+</strong>
+
+<p>
+Identity, chromatographic purity, quantity,
+sterility, endotoxin, and other analytical
+measurements address different scientific questions.
+</p>
+
+</div>
+
+
+
+<div class="document-item">
+
+<strong>
+Always review the full report.
+</strong>
+
+<p>
+Test methodology, identifiers, dates, laboratory
+notes, and reported limitations can provide
+important context for analytical results.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     PRICING
+========================================= -->
+
+<section
+  class="policy-section"
+  id="pricing"
+>
+
+<div class="shell">
+
+
+<div class="policy-head">
+
+<div class="eyebrow">
+CATALOG POLICY
+</div>
+
+<h2>
+Pricing and availability.
+</h2>
+
+<p>
+The website catalog provides current research-material
+listings and pricing information but does not guarantee
+permanent pricing or continuous availability.
+</p>
+
+</div>
+
+
+
+<div class="policy-grid">
+
+
+<div class="policy-card">
+
+<h3>
+Pricing May Change
+</h3>
+
+<p>
+Catalog prices may be modified without prior notice.
+The applicable price is the price confirmed for the
+order before payment is transmitted.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Availability May Change
+</h3>
+
+<p>
+Research-material availability may change based on
+inventory, documentation, operational considerations,
+or other business factors.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Listing Errors
+</h3>
+
+<p>
+PCH Labs may correct typographical, pricing,
+description, or catalog errors discovered before
+an order is accepted.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Order Acceptance
+</h3>
+
+<p>
+Submission of an order request does not necessarily
+guarantee acceptance or availability. PCH Labs
+reserves the right to decline an order where lawful
+and appropriate.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     ACCESS
+========================================= -->
+
+<section
+  class="policy-section alt"
+  id="misuse"
+>
+
+<div class="shell">
+
+
+<div class="policy-head">
+
+<div class="eyebrow">
+ACCESS & COMPLIANCE
+</div>
+
+<h2>
+Misuse may result in refusal of service.
+</h2>
+
+<p>
+PCH Labs may restrict access or decline service
+where misuse, unlawful activity, misrepresentation,
+fraud, or activity inconsistent with research-use
+labeling is reasonably suspected.
+</p>
+
+</div>
+
+
+
+<div class="policy-grid">
+
+
+<div class="policy-card">
+
+<h3>
+False Information
+</h3>
+
+<p>
+Customers must not intentionally provide materially
+false age, identity, shipping, payment, or order
+information.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Unlawful Activity
+</h3>
+
+<p>
+The website and catalog may not be used to facilitate
+activity that violates applicable law.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Research-Use Restrictions
+</h3>
+
+<p>
+Statements indicating an intent to use Research
+Use Only materials contrary to their labeling may
+result in an order being declined or access restricted.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Fraud Prevention
+</h3>
+
+<p>
+PCH Labs may review, hold, reject, or request
+additional information concerning activity reasonably
+suspected to involve fraud or payment manipulation.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     PRIVACY
+========================================= -->
+
+<section
+  class="policy-section"
+  id="privacy"
+>
+
+<div class="shell">
+
+
+<div class="policy-head">
+
+<div class="eyebrow">
+PRIVACY & COMMUNICATION
+</div>
+
+<h2>
+Use only the information necessary.
+</h2>
+
+<p>
+Customers should avoid sending unnecessary sensitive
+information through email or other communication channels.
+</p>
+
+</div>
+
+
+
+<div class="policy-grid">
+
+
+<div class="policy-card">
+
+<h3>
+Order Information
+</h3>
+
+<p>
+Information reasonably necessary to process
+communications, orders, payment confirmation,
+and shipping may be used for those operational purposes.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Do Not Send Credentials
+</h3>
+
+<p>
+Never send passwords, wallet seed phrases,
+private keys, authentication codes, or other
+account-security credentials to PCH Labs.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Official Contact
+</h3>
+
+<p>
+Official website inquiries may be directed to
+contact@platinumcellularhealth.com.
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Crypto Security
+</h3>
+
+<p>
+PCH Labs will never require a customer's wallet
+seed phrase or private key in order to receive
+or verify a payment.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     LEGAL NOTICE
+========================================= -->
+
+<section class="legal-note">
+
+<div class="shell">
+
+
+<div class="legal-box">
+
+
+<strong>
+POLICY NOTICE
+</strong>
+
+
+<p>
+These website policies describe PCH Labs' current
+business practices and are not a substitute for
+legal advice. No website policy is intended to waive,
+restrict, or eliminate rights or obligations that
+cannot lawfully be waived under applicable law.
+If a conflict exists between these policies and
+a mandatory legal requirement, the applicable
+legal requirement controls.
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</main>
 
 
 
@@ -1208,6 +2259,7 @@ business activity, and circumstances involved.
 <footer>
 
 <div class="shell footer-grid">
+
 
 <div>
 
@@ -1221,9 +2273,12 @@ Longevity at the Cellular Level
 
 </div>
 
+
 <div>
-21+ · Research Use Only · Not for human or animal use
+21+ · Research Use Only ·
+Not for human or animal use
 </div>
+
 
 </div>
 
