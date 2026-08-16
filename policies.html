@@ -1,71 +1,1235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#08090b">
-<title>Policies | PCH Labs</title>
-<link rel="stylesheet" href="styles.css">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta name="theme-color" content="#050607">
+
+<title>
+Policies | Platinum Cellular Health Labs
+</title>
+
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 80% 5%,
+      rgba(213,173,85,.07),
+      transparent 30%
+    ),
+    #050607;
+
+  color: #f4f4f4;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shell {
+  width: min(
+    1180px,
+    calc(100% - 36px)
+  );
+
+  margin: auto;
+}
+
+:root {
+  --gold: #d5ad55;
+  --gold2: #f0d48c;
+  --panel: #0d1012;
+  --panel2: #111416;
+  --border: #252a2e;
+  --muted: #979ea4;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background:
+    rgba(5,6,7,.94);
+
+  backdrop-filter:
+    blur(14px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.07);
+}
+
+.nav {
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 50px;
+  height: 50px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(213,173,85,.35);
+}
+
+.brand-title {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.brand-sub {
+  color: var(--gold);
+
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  color: #b7bdc2;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: var(--gold2);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 43px;
+
+  padding: 0 16px;
+
+  border:
+    1px solid #34393d;
+
+  border-radius: 8px;
+
+  background: #101214;
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .7px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.page-hero {
+  padding:
+    85px 0
+    55px;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.back {
+  display: inline-block;
+
+  color: var(--gold);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .6px;
+
+  margin-bottom: 35px;
+}
+
+.eyebrow {
+  color: var(--gold);
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.3px;
+
+  margin-bottom: 12px;
+}
+
+.page-hero h1 {
+  max-width: 850px;
+
+  font-size:
+    clamp(
+      40px,
+      7vw,
+      68px
+    );
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 18px;
+}
+
+.page-hero p {
+  max-width: 760px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 25px;
+}
+
+.hero-tags span {
+  border:
+    1px solid var(--border);
+
+  background: #0c0e10;
+
+  border-radius: 100px;
+
+  padding: 7px 10px;
+
+  color: #858c92;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   POLICY NAV
+========================================= */
+
+.policy-nav-section {
+  padding: 32px 0;
+
+  border-bottom:
+    1px solid var(--border);
+
+  background: #080a0b;
+}
+
+.policy-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.policy-nav a {
+  padding: 9px 12px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 100px;
+
+  color: #a0a7ac;
+
+  background: #0d1012;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .7px;
+}
+
+.policy-nav a:hover {
+  color: var(--gold2);
+  border-color:
+    rgba(213,173,85,.38);
+}
+
+
+/* =========================================
+   POLICY CONTENT
+========================================= */
+
+.policy-section {
+  padding: 70px 0 95px;
+}
+
+.policy-grid {
+  display: grid;
+
+  grid-template-columns:
+    290px 1fr;
+
+  gap: 55px;
+
+  align-items: start;
+}
+
+.policy-aside {
+  position: sticky;
+  top: 100px;
+
+  padding: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 14px;
+}
+
+.policy-aside strong {
+  display: block;
+
+  color: var(--gold2);
+
+  font-size: 13px;
+
+  margin-bottom: 8px;
+}
+
+.policy-aside p {
+  color: var(--muted);
+
+  font-size: 12px;
+  line-height: 1.7;
+
+  margin-bottom: 18px;
+}
+
+.policy-aside div {
+  padding: 10px 0;
+
+  border-top:
+    1px solid #1d2124;
+
+  color: #838a90;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .7px;
+}
+
+.policy-content {
+  display: grid;
+  gap: 18px;
+}
+
+.policy-card {
+  scroll-margin-top: 110px;
+
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #090b0c
+    );
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 14px;
+}
+
+.policy-number {
+  color:
+    rgba(213,173,85,.18);
+
+  font-size: 44px;
+  font-weight: 900;
+
+  margin-bottom: 10px;
+}
+
+.policy-card h2 {
+  font-size: 25px;
+
+  margin-bottom: 14px;
+}
+
+.policy-card p {
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.8;
+
+  margin-bottom: 12px;
+}
+
+.policy-card p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-list {
+  display: grid;
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+.policy-list div {
+  padding: 13px 15px;
+
+  background: #0c0f11;
+
+  border:
+    1px solid #202529;
+
+  border-radius: 9px;
+
+  color: #b8bec3;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.policy-list strong {
+  color: #f1f2f3;
+}
+
+
+/* =========================================
+   IMPORTANT NOTICE
+========================================= */
+
+.notice-section {
+  padding: 0 0 85px;
+}
+
+.notice {
+  padding: 26px;
+
+  border:
+    1px solid rgba(213,173,85,.28);
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101315,
+      #090b0c
+    );
+}
+
+.notice strong {
+  display: block;
+
+  color: var(--gold2);
+
+  margin-bottom: 8px;
+}
+
+.notice p {
+  color: #90979d;
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  padding: 40px 0;
+
+  border-top:
+    1px solid var(--border);
+
+  background: #030404;
+
+  color: #6f767b;
+
+  font-size: 11px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.footer-grid strong {
+  color: #bfc3c6;
+
+  display: block;
+
+  margin-bottom: 3px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:900px) {
+
+  .nav {
+    min-height: 68px;
+  }
+
+  .brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-title {
+    font-size: 10px;
+  }
+
+  .brand-sub {
+    font-size: 7px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .policy-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .policy-aside {
+    position: static;
+  }
+
+}
+
+@media(max-width:650px) {
+
+  .shell {
+    width:
+      calc(100% - 26px);
+  }
+
+  .page-hero {
+    padding:
+      60px 0
+      40px;
+  }
+
+  .page-hero h1 {
+    font-size: 43px;
+  }
+
+  .page-hero p {
+    font-size: 14px;
+  }
+
+  .policy-card {
+    padding: 22px;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+  }
+
+}
+
+</style>
+
 </head>
+
+
 <body>
 
 
-<header>
-  <div class="shell nav">
-    <a class="brand" href="index.html">
-      <img src="pch-logo.jpg" alt="PCH Labs">
-      <div>
-        <div class="brand-title">PLATINUM CELLULAR HEALTH LABS</div>
-        <div class="brand-sub">LONGEVITY AT THE CELLULAR LEVEL</div>
-      </div>
-    </a>
-    <nav class="navlinks">
-      <a href="research-information.html">Research</a>
-      <a href="catalog.html">Catalog</a>
-      <a href="quality-coa.html">Quality & COA</a>
-      <a href="policies.html">Policies</a>
-      <a class="btn keep" href="contact.html">Contact</a>
-    </nav>
-  </div>
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+<div class="shell nav">
+
+<a
+  href="index.html"
+  class="brand"
+>
+
+<img
+  src="pch-logo.jpg"
+  alt="Platinum Cellular Health Labs"
+>
+
+<div>
+
+<div class="brand-title">
+PLATINUM CELLULAR HEALTH LABS
+</div>
+
+<div class="brand-sub">
+LONGEVITY AT THE CELLULAR LEVEL
+</div>
+
+</div>
+
+</a>
+
+
+<nav class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research
+</a>
+
+<a href="catalog.html">
+Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a
+  href="contact.html"
+  class="btn"
+>
+Contact
+</a>
+
+</nav>
+
+</div>
+
 </header>
 
 
-<main>
-<section class="page-hero"><div class="shell">
-  <a class="back" href="index.html">← Back to Platinum Cellular Health Labs</a>
-  <span class="tag">Website Policies</span>
-  <h1>Research Use & Website Policies</h1>
-  <p>A clear public policy page supports the 21+ entrance certification and keeps the site's scientific purpose consistent.</p>
-</div></section>
-<section><div class="shell card policy">
-  <h3>21+ Access Requirement</h3>
-  <p>Access is intended for individuals who certify that they are at least 21 years of age.</p>
 
-  <h3>Research Use Only</h3>
-  <p>Materials identified as Research Use Only are presented solely for legitimate laboratory, analytical, scientific, and educational purposes and are not intended for human or animal consumption or administration.</p>
+<!-- =========================================
+     HERO
+========================================= -->
 
-  <h3>No Medical or Veterinary Advice</h3>
-  <p>Website content is not medical, veterinary, diagnostic, treatment, or prescribing advice.</p>
+<section class="page-hero">
 
-  <h3>Lawful Use</h3>
-  <p>Users are responsible for complying with applicable laws, regulations, institutional requirements, and product labeling.</p>
+<div class="shell">
 
-  <h3>Right to Restrict or Refuse</h3>
-  <p>Platinum Cellular Health Labs may restrict access, refuse service, or cancel activity where misuse, unlawful conduct, misrepresentation, or use inconsistent with product labeling is suspected.</p>
+<a
+  class="back"
+  href="index.html"
+>
+← BACK TO PCH LABS
+</a>
 
-  <h3>Analytical Documentation</h3>
-  <p>COAs and laboratory reports should be displayed without alteration and associated with the correct sample, product, lot, or batch when that information is available.</p>
-</div></section>
-</main>
+<div class="eyebrow">
+WEBSITE & RESEARCH POLICIES
+</div>
 
+<h1>
+Policies & Use Requirements
+</h1>
+
+<p>
+These policies establish the standards for accessing,
+using, and reviewing information presented by
+Platinum Cellular Health Labs.
+</p>
+
+<div class="hero-tags">
+
+<span>
+21+ ACCESS
+</span>
+
+<span>
+RESEARCH USE ONLY
+</span>
+
+<span>
+LAWFUL USE
+</span>
+
+<span>
+DOCUMENTATION INTEGRITY
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUICK NAV
+========================================= -->
+
+<section class="policy-nav-section">
+
+<div class="shell policy-nav">
+
+<a href="#age">
+21+ ACCESS
+</a>
+
+<a href="#ruo">
+RESEARCH USE ONLY
+</a>
+
+<a href="#prohibited">
+PROHIBITED USE
+</a>
+
+<a href="#information">
+INFORMATION POLICY
+</a>
+
+<a href="#documentation">
+COA DOCUMENTATION
+</a>
+
+<a href="#refusal">
+RIGHT TO REFUSE
+</a>
+
+<a href="#privacy">
+PRIVACY
+</a>
+
+<a href="#changes">
+POLICY UPDATES
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     POLICIES
+========================================= -->
+
+<section class="policy-section">
+
+<div class="shell policy-grid">
+
+
+<!-- LEFT SIDE -->
+
+<aside class="policy-aside">
+
+<strong>
+PCH Policy Standard
+</strong>
+
+<p>
+Platinum Cellular Health Labs is structured around
+scientific, analytical, laboratory, and educational
+research information.
+</p>
+
+<div>
+21+ ACCESS REQUIRED
+</div>
+
+<div>
+RESEARCH USE ONLY
+</div>
+
+<div>
+NO HUMAN OR ANIMAL USE
+</div>
+
+<div>
+LAWFUL ACTIVITY ONLY
+</div>
+
+<div>
+DOCUMENTATION TRANSPARENCY
+</div>
+
+</aside>
+
+
+
+<!-- RIGHT SIDE -->
+
+<div class="policy-content">
+
+
+<!-- 1 -->
+
+<article
+  class="policy-card"
+  id="age"
+>
+
+<div class="policy-number">
+01
+</div>
+
+<h2>
+21+ Access Requirement
+</h2>
+
+<p>
+Access to Platinum Cellular Health Labs is intended only
+for individuals who certify that they are at least
+21 years of age.
+</p>
+
+<p>
+Visitors are required to complete the website entry
+certification before accessing the main website.
+</p>
+
+</article>
+
+
+
+<!-- 2 -->
+
+<article
+  class="policy-card"
+  id="ruo"
+>
+
+<div class="policy-number">
+02
+</div>
+
+<h2>
+Research Use Only
+</h2>
+
+<p>
+Materials, catalog listings, documents, and information
+identified as Research Use Only are presented solely
+for legitimate scientific, analytical, laboratory,
+and educational research purposes.
+</p>
+
+<div class="policy-list">
+
+<div>
+<strong>Not for human consumption.</strong>
+Research Use Only materials are not presented for ingestion
+or consumption.
+</div>
+
+<div>
+<strong>Not for animal consumption.</strong>
+Research Use Only materials are not presented for veterinary
+or animal-use purposes.
+</div>
+
+<div>
+<strong>Not for administration.</strong>
+Website content does not provide administration,
+dosing, injection, prescribing, or treatment instructions.
+</div>
+
+<div>
+<strong>Not for clinical use.</strong>
+Research materials are not presented for diagnosis,
+treatment, prevention, or cure of disease.
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- 3 -->
+
+<article
+  class="policy-card"
+  id="prohibited"
+>
+
+<div class="policy-number">
+03
+</div>
+
+<h2>
+Prohibited & Unlawful Use
+</h2>
+
+<p>
+Platinum Cellular Health Labs does not support,
+encourage, endorse, or assist unlawful activity.
+</p>
+
+<p>
+Users must not use this website, its information,
+documentation, or research materials in a manner
+that violates applicable laws, regulations,
+institutional requirements, or product labeling.
+</p>
+
+<div class="policy-list">
+
+<div>
+No use for unlawful activity.
+</div>
+
+<div>
+No misrepresentation of intended research purpose.
+</div>
+
+<div>
+No use inconsistent with Research Use Only labeling.
+</div>
+
+<div>
+No attempt to obtain information or materials
+through false or misleading representations.
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- 4 -->
+
+<article
+  class="policy-card"
+  id="information"
+>
+
+<div class="policy-number">
+04
+</div>
+
+<h2>
+Scientific & Educational Information
+</h2>
+
+<p>
+Information provided on this website is intended
+for research, laboratory, analytical,
+and educational reference purposes.
+</p>
+
+<p>
+Website content does not constitute medical,
+veterinary, diagnostic, prescribing, treatment,
+or other professional healthcare advice.
+</p>
+
+<p>
+Scientific information may evolve as new research,
+analytical methods, and published literature become available.
+</p>
+
+</article>
+
+
+
+<!-- 5 -->
+
+<article
+  class="policy-card"
+  id="documentation"
+>
+
+<div class="policy-number">
+05
+</div>
+
+<h2>
+Certificates of Analysis & Documentation
+</h2>
+
+<p>
+Platinum Cellular Health Labs may display
+Certificates of Analysis, analytical reports,
+laboratory verification links, lot information,
+batch references, or other supporting documentation.
+</p>
+
+<div class="policy-list">
+
+<div>
+<strong>Original reporting:</strong>
+Laboratory reports should be displayed
+without altering the reported analytical results.
+</div>
+
+<div>
+<strong>Lot matching:</strong>
+A report should only be represented as applying
+to the sample, product, lot, or batch identified
+by the available documentation.
+</div>
+
+<div>
+<strong>External verification:</strong>
+Where a testing laboratory provides an online
+verification page, an external link may be provided.
+</div>
+
+<div>
+<strong>Historical documentation:</strong>
+Testing records may relate to a particular
+sample or batch and should not automatically
+be assumed to represent every future batch.
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- 6 -->
+
+<article
+  class="policy-card"
+  id="refusal"
+>
+
+<div class="policy-number">
+06
+</div>
+
+<h2>
+Right to Restrict or Refuse Service
+</h2>
+
+<p>
+Platinum Cellular Health Labs reserves the right
+to restrict website access, decline service,
+cancel activity, or refuse a transaction
+where appropriate.
+</p>
+
+<p>
+This may include circumstances involving suspected
+misuse, unlawful activity, misrepresentation,
+fraud, abuse, or use inconsistent with
+Research Use Only labeling.
+</p>
+
+</article>
+
+
+
+<!-- 7 -->
+
+<article
+  class="policy-card"
+  id="privacy"
+>
+
+<div class="policy-number">
+07
+</div>
+
+<h2>
+Privacy & Information Collection
+</h2>
+
+<p>
+Platinum Cellular Health Labs should collect
+only information reasonably necessary for
+website administration, communication,
+security, documentation, and other legitimate
+site functions.
+</p>
+
+<p>
+Sensitive information should not be displayed
+publicly unless there is a legitimate reason
+and appropriate protection.
+</p>
+
+<p>
+A more detailed Privacy Policy can be added
+when account registration, email collection,
+forms, or other data-processing features
+are activated.
+</p>
+
+</article>
+
+
+
+<!-- 8 -->
+
+<article
+  class="policy-card"
+  id="changes"
+>
+
+<div class="policy-number">
+08
+</div>
+
+<h2>
+Policy Updates
+</h2>
+
+<p>
+Website policies may be revised as the website,
+research library, documentation system,
+or applicable requirements change.
+</p>
+
+<p>
+Continued use of the website after updated
+policies are published may be treated as
+acceptance of the revised terms where permitted
+by applicable law.
+</p>
+
+</article>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     NOTICE
+========================================= -->
+
+<section class="notice-section">
+
+<div class="shell">
+
+<div class="notice">
+
+<strong>
+Important Notice
+</strong>
+
+<p>
+These website policies are intended to clearly communicate
+the research-only purpose and operating standards of
+Platinum Cellular Health Labs. They are not a substitute
+for legal advice, regulatory review, or professional
+compliance guidance. Applicable requirements may vary
+depending on the specific material, jurisdiction,
+business activity, and circumstances involved.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
-  <div class="shell footer-grid">
-    <div>© 2026 Platinum Cellular Health Labs. All rights reserved.</div>
-    <div>21+ · Research Use Only · Not for human or animal use</div>
-  </div>
+
+<div class="shell footer-grid">
+
+<div>
+
+<strong>
+Platinum Cellular Health Labs
+</strong>
+
+<div>
+Longevity at the Cellular Level
+</div>
+
+</div>
+
+<div>
+21+ · Research Use Only · Not for human or animal use
+</div>
+
+</div>
+
 </footer>
 
-<script src="script.js"></script>
+
 </body>
+
 </html>
