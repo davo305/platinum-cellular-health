@@ -64,6 +64,7 @@ img {
   max-width: 100%;
 }
 
+button,
 input {
   font-family: inherit;
 }
@@ -82,10 +83,11 @@ input {
 
 
 .shell {
-  width: min(
-    1180px,
-    calc(100% - 36px)
-  );
+  width:
+    min(
+      1180px,
+      calc(100% - 36px)
+    );
 
   margin: auto;
 }
@@ -97,13 +99,12 @@ input {
 
 .site-header {
   position: sticky;
-
   top: 0;
 
   z-index: 1000;
 
   background:
-    rgba(5,6,7,.95);
+    rgba(5,6,7,.96);
 
   backdrop-filter:
     blur(15px);
@@ -134,12 +135,16 @@ input {
   align-items: center;
 
   gap: 12px;
+
+  min-width: 0;
 }
 
 
 .brand img {
   width: 52px;
   height: 52px;
+
+  flex-shrink: 0;
 
   object-fit: cover;
 
@@ -176,7 +181,7 @@ input {
 
   align-items: center;
 
-  gap: 22px;
+  gap: 20px;
 
   color: #b9bdc0;
 
@@ -188,6 +193,146 @@ input {
 
 .nav-links a:hover {
   color: var(--gold2);
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  padding: 10px;
+
+  border:
+    1px solid #30353a;
+
+  border-radius: 9px;
+
+  background: #0d1012;
+
+  cursor: pointer;
+}
+
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  margin: 5px 0;
+
+  border-radius: 10px;
+
+  background: var(--gold2);
+
+  transition: .25s ease;
+}
+
+
+.mobile-menu {
+  display: none;
+
+  background:
+    rgba(6,7,8,.99);
+
+  border-top:
+    1px solid #202428;
+
+  border-bottom:
+    1px solid #252a2e;
+
+  box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.4);
+}
+
+
+.mobile-menu.open {
+  display: block;
+}
+
+
+.mobile-menu-inner {
+  display: grid;
+
+  padding-top: 10px;
+
+  padding-bottom: 18px;
+}
+
+
+.mobile-menu-inner > a {
+  padding:
+    15px 3px;
+
+  border-bottom:
+    1px solid #1f2326;
+
+  color: #c6cacc;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
+}
+
+
+.mobile-menu-inner > a:hover {
+  color: var(--gold2);
+}
+
+
+.mobile-menu-inner
+.mobile-contact-button {
+  margin-top: 15px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #e2c16e
+    );
+
+  color: #080909;
+
+  text-align: center;
+}
+
+
+.mobile-menu-button.active
+span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+
+.mobile-menu-button.active
+span:nth-child(2) {
+  opacity: 0;
+}
+
+
+.mobile-menu-button.active
+span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
 }
 
 
@@ -215,7 +360,7 @@ input {
 
   color: #f4f4f4;
 
-  font-size: 12px;
+  font-size: 11px;
 
   font-weight: 900;
 
@@ -401,7 +546,7 @@ input {
 
 
 /* =========================================
-   SEARCH BAR
+   SEARCH
 ========================================= */
 
 .search-box {
@@ -761,7 +906,7 @@ footer {
    MOBILE
 ========================================= */
 
-@media (max-width: 900px) {
+@media(max-width:900px) {
 
   .shell {
     width:
@@ -771,40 +916,35 @@ footer {
       );
   }
 
-
   .nav {
     min-height: 68px;
   }
 
-
   .brand img {
     width: 45px;
-
     height: 45px;
   }
-
 
   .brand-title {
     font-size: 11px;
   }
 
-
   .brand-sub {
     font-size: 7px;
   }
 
-
-  .nav-links
-  a:not(.contact-link) {
+  .nav-links {
     display: none;
   }
 
+  .mobile-menu-button {
+    display: block;
+  }
 
   .page-hero {
     padding:
       70px 0 55px;
   }
-
 
   .page-hero h1 {
     font-size: 45px;
@@ -813,23 +953,19 @@ footer {
       -1.5px;
   }
 
-
   .page-hero p {
     font-size: 15px;
   }
-
 
   .coa-grid {
     grid-template-columns:
       1fr;
   }
 
-
   .coa-section {
     padding:
       55px 0 75px;
   }
-
 
   .footer-grid {
     flex-direction:
@@ -839,26 +975,36 @@ footer {
 }
 
 
-/* =========================================
-   SMALL PHONES
-========================================= */
+@media(max-width:480px) {
 
-@media (max-width: 480px) {
-
-  .brand-title {
-    font-size: 10px;
+  .brand {
+    gap: 8px;
   }
 
+  .brand img {
+    width: 41px;
+    height: 41px;
+  }
+
+  .brand-title {
+    font-size: 9px;
+
+    letter-spacing: .6px;
+  }
+
+  .brand-sub {
+    font-size: 5.8px;
+
+    letter-spacing: 1.2px;
+  }
 
   .page-hero h1 {
     font-size: 39px;
   }
 
-
   .search-box {
     padding: 0 14px;
   }
-
 
   .search-box input {
     min-height: 54px;
@@ -866,16 +1012,13 @@ footer {
     font-size: 14px;
   }
 
-
   .coa-content {
     padding: 21px;
   }
 
-
   .coa-content h3 {
     font-size: 22px;
   }
-
 
   .data-row {
     flex-direction:
@@ -883,7 +1026,6 @@ footer {
 
     gap: 2px;
   }
-
 
   .data-row strong {
     text-align: left;
@@ -939,6 +1081,10 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 <nav class="nav-links">
 
+<a href="index.html">
+Home
+</a>
+
 <a href="research-information.html">
 Research
 </a>
@@ -955,9 +1101,13 @@ Quality & COA
 Policies
 </a>
 
+<a href="faq.html">
+FAQ
+</a>
+
 <a
   href="contact.html"
-  class="btn contact-link"
+  class="btn"
 >
 Contact
 </a>
@@ -965,22 +1115,78 @@ Contact
 </nav>
 
 
+
+<button
+  class="mobile-menu-button"
+  id="mobileMenuButton"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+>
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+
 </div>
+
+
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+<div class="shell mobile-menu-inner">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research Information
+</a>
+
+<a href="catalog.html">
+Research Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a
+  href="contact.html"
+  class="mobile-contact-button"
+>
+Contact PCH Labs
+</a>
+
+</div>
+
+</div>
+
 
 </header>
 
 
 
-<!-- =========================================
-     MAIN
-========================================= -->
-
 <main>
 
 
-
 <!-- =========================================
-     PAGE HERO
+     HERO
 ========================================= -->
 
 <section class="page-hero">
@@ -1089,16 +1295,14 @@ listed in the available reports.
 
 
 <!-- =========================================
-     SEARCH BAR
+     SEARCH
 ========================================= -->
 
 <div class="search-box">
 
-
 <span class="search-icon">
 ⌕
 </span>
-
 
 <input
   id="coaSearch"
@@ -1106,7 +1310,6 @@ listed in the available reports.
   autocomplete="off"
   placeholder="Search compound, lab, batch or task number..."
 >
-
 
 </div>
 
@@ -1127,7 +1330,7 @@ listed in the available reports.
 
 
 <!-- =========================================
-     CARTALAX 20MG
+     CARTALAX
 ========================================= -->
 
 <article
@@ -1255,7 +1458,7 @@ VIEW FULL COA
 
 
 <!-- =========================================
-     RETATRUTIDE / GLP-3 10MG
+     RETATRUTIDE / R10
 ========================================= -->
 
 <article
@@ -1263,6 +1466,7 @@ VIEW FULL COA
   data-search="
     retatrutide
     reta
+    r10
     glp3
     glp-3
     10mg
@@ -1387,8 +1591,7 @@ VIEW FULL COA
 
 
 <!-- =========================================
-     MOTS-C 10MG
-     PNG
+     MOTS-C
 ========================================= -->
 
 <article
@@ -1538,8 +1741,7 @@ VIEW FULL COA
 
 
 <!-- =========================================
-     GHK-CU 50MG
-     PNG
+     GHK-CU
 ========================================= -->
 
 <article
@@ -1762,21 +1964,20 @@ disease prevention, or clinical or veterinary use.
 
 <div>
 
-
 <strong>
 Platinum Cellular Health Labs
 </strong>
-
 
 <div>
 Longevity at the Cellular Level
 </div>
 
-
 </div>
 
 
 <div>
+contact@platinumcellularhealth.com
+<br>
 21+ · Research Use Only ·
 Not for human or animal use
 </div>
@@ -1789,10 +1990,14 @@ Not for human or animal use
 
 
 <!-- =========================================
-     SEARCH JAVASCRIPT
+     JAVASCRIPT
 ========================================= -->
 
 <script>
+
+/* =========================================
+   COA SEARCH
+========================================= */
 
 const searchInput =
   document.getElementById(
@@ -1824,7 +2029,6 @@ searchInput.addEventListener(
   "input",
   function() {
 
-
     const searchTerm =
       searchInput
         .value
@@ -1837,7 +2041,6 @@ searchInput.addEventListener(
 
     cards.forEach(
       function(card) {
-
 
         const cardText =
           (
@@ -1872,7 +2075,6 @@ searchInput.addEventListener(
 
         }
 
-
       }
     );
 
@@ -1889,7 +2091,6 @@ searchInput.addEventListener(
       searchResults.style.display =
         "block";
 
-
       searchResults.textContent =
         visibleCount
         +
@@ -1904,24 +2105,90 @@ searchInput.addEventListener(
     }
 
 
-    if (
+    noResults.style.display =
       visibleCount === 0
       &&
       searchTerm !== ""
-    ) {
+      ?
+      "block"
+      :
+      "none";
 
-      noResults.style.display =
-        "block";
+  }
+);
 
-    }
 
-    else {
+/* =========================================
+   MOBILE MENU
+========================================= */
 
-      noResults.style.display =
-        "none";
+const mobileMenuButton =
+  document.getElementById(
+    "mobileMenuButton"
+  );
 
-    }
 
+const mobileMenu =
+  document.getElementById(
+    "mobileMenu"
+  );
+
+
+mobileMenuButton.addEventListener(
+  "click",
+  function() {
+
+    const isOpen =
+      mobileMenu.classList.toggle(
+        "open"
+      );
+
+
+    mobileMenuButton.classList.toggle(
+      "active",
+      isOpen
+    );
+
+
+    mobileMenuButton.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
+
+  }
+);
+
+
+const mobileLinks =
+  mobileMenu.querySelectorAll(
+    "a"
+  );
+
+
+mobileLinks.forEach(
+  function(link) {
+
+    link.addEventListener(
+      "click",
+      function() {
+
+        mobileMenu.classList.remove(
+          "open"
+        );
+
+
+        mobileMenuButton.classList.remove(
+          "active"
+        );
+
+
+        mobileMenuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+    );
 
   }
 );
