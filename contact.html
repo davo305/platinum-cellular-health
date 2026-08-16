@@ -83,55 +83,49 @@ a {
 
 .site-header {
   position: sticky;
-
   top: 0;
-
   z-index: 1000;
 
   background:
     rgba(5,6,7,.94);
 
-  backdrop-filter:
-    blur(14px);
+  backdrop-filter: blur(14px);
 
   border-bottom:
-    1px solid
-    rgba(255,255,255,.07);
+    1px solid rgba(255,255,255,.07);
 }
 
 .nav {
   min-height: 76px;
 
   display: flex;
-
   align-items: center;
+  justify-content: space-between;
 
-  justify-content:
-    space-between;
-
-  gap: 25px;
+  gap: 20px;
 }
 
 .brand {
   display: flex;
-
   align-items: center;
 
   gap: 12px;
+
+  min-width: 0;
 }
 
 .brand img {
   width: 50px;
-
   height: 50px;
+
+  flex-shrink: 0;
 
   object-fit: cover;
 
   border-radius: 50%;
 
   border:
-    1px solid
-    rgba(213,173,85,.35);
+    1px solid rgba(213,173,85,.35);
 }
 
 .brand-title {
@@ -154,7 +148,6 @@ a {
 
 .nav-links {
   display: flex;
-
   align-items: center;
 
   gap: 22px;
@@ -174,7 +167,6 @@ a {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-height: 43px;
@@ -311,7 +303,7 @@ a {
 
 
 /* =========================================
-   CONTACT SECTION
+   CONTACT
 ========================================= */
 
 .contact-section {
@@ -331,11 +323,6 @@ a {
   align-items: stretch;
 }
 
-
-/* =========================================
-   CONTACT CARD
-========================================= */
-
 .contact-card {
   padding: 30px;
 
@@ -354,18 +341,15 @@ a {
 
 .contact-icon {
   width: 54px;
-
   height: 54px;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   border:
-    1px solid
-    rgba(213,173,85,.35);
+    1px solid rgba(213,173,85,.35);
 
   border-radius: 12px;
 
@@ -440,7 +424,7 @@ a {
 
 
 /* =========================================
-   INFORMATION SIDE
+   INFORMATION
 ========================================= */
 
 .contact-info {
@@ -493,11 +477,6 @@ a {
   line-height: 1.75;
 }
 
-
-/* =========================================
-   EMAIL NOTICE
-========================================= */
-
 .email-notice {
   grid-column:
     1 / -1;
@@ -505,8 +484,7 @@ a {
   padding: 24px;
 
   border:
-    1px solid
-    rgba(213,173,85,.22);
+    1px solid rgba(213,173,85,.22);
 
   border-radius: 14px;
 
@@ -534,7 +512,7 @@ a {
 
 
 /* =========================================
-   CONTACT GUIDELINES
+   GUIDELINES
 ========================================= */
 
 .guidelines-section {
@@ -617,7 +595,7 @@ a {
 
 
 /* =========================================
-   IMPORTANT NOTICE
+   NOTICE
 ========================================= */
 
 .notice-section {
@@ -629,8 +607,7 @@ a {
   padding: 26px;
 
   border:
-    1px solid
-    rgba(213,173,85,.25);
+    1px solid rgba(213,173,85,.25);
 
   border-radius: 14px;
 
@@ -696,18 +673,19 @@ footer {
 
 
 /* =========================================
-   MOBILE
+   TABLET / MOBILE HEADER
 ========================================= */
 
 @media(max-width:900px) {
 
   .nav {
     min-height: 68px;
+
+    gap: 10px;
   }
 
   .brand img {
     width: 44px;
-
     height: 44px;
   }
 
@@ -719,8 +697,25 @@ footer {
     font-size: 7px;
   }
 
+  /*
+     Hide the normal navigation links
+     but KEEP the Contact button visible.
+  */
+
   .nav-links {
+    display: flex;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+  }
+
+  .nav-links a {
     display: none;
+  }
+
+  .nav-links .mobile-contact {
+    display: inline-flex;
   }
 
   .contact-grid {
@@ -729,11 +724,36 @@ footer {
 
 }
 
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
 @media(max-width:650px) {
 
   .shell {
     width:
       calc(100% - 26px);
+  }
+
+  .brand-title {
+    font-size: 9px;
+
+    letter-spacing: .5px;
+  }
+
+  .brand-sub {
+    font-size: 6px;
+
+    letter-spacing: 1px;
+  }
+
+  .nav-links .mobile-contact {
+    min-height: 38px;
+
+    padding: 0 11px;
+
+    font-size: 9px;
   }
 
   .page-hero {
@@ -838,6 +858,13 @@ Quality & COA
 Policies
 </a>
 
+<a
+  href="contact.html"
+  class="btn mobile-contact"
+>
+Contact
+</a>
+
 </nav>
 
 
@@ -913,8 +940,6 @@ DOCUMENTATION SUPPORT
 <div class="shell contact-grid">
 
 
-<!-- MAIN EMAIL CARD -->
-
 <div class="contact-card">
 
 
@@ -964,8 +989,6 @@ SEND EMAIL
 </div>
 
 
-
-<!-- INFORMATION -->
 
 <div class="contact-info">
 
@@ -1078,7 +1101,7 @@ by email.
 
 
 <!-- =========================================
-     CONTACT GUIDELINES
+     GUIDELINES
 ========================================= -->
 
 <section class="guidelines-section">
