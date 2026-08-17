@@ -349,7 +349,7 @@ const products=[
 {name:"Hospira BAC Water",category:"LAB SUPPLY",amount:"BAC WATER",price:32,groups:["bac"],hideCoaStatus:true,keywords:["h","hospira","bac","water","bacteriostatic"],description:"Hospira bacteriostatic water laboratory-supply listing."},
 {name:"EBAC BAC Water",category:"LAB SUPPLY",amount:"BAC WATER",price:16,groups:["bac"],keywords:["e","ebac","bac","water","bacteriostatic"],coa:"coa-ebac-water-30ml-chromate.jpg",description:"Laboratory supply listing with analytical documentation available."},
 {name:"R10",category:"R SERIES",amount:"10 MG",price:60,groups:["glp"],keywords:["r","r10","reta","retatrutide","glp","10mg","10 mg"],coa:"retatrutide-10mg-greencap-coa.jpg",description:"R-series research-material listing at 10 mg."},
-{name:"R20",category:"R SERIES",amount:"20 MG",price:80,groups:["glp"],keywords:["r","r20","reta","retatrutide","glp","20mg","20 mg"],description:"R-series research-material listing at 20 mg."},
+{name:"R20",category:"R SERIES",amount:"20 MG",price:80,groups:["glp"],keywords:["r","r20","reta","retatrutide","glp","20mg","20 mg","195265","195266","endotoxin"],coas:[{file:"Test Report #195265.png",label:"VIEW PURITY COA"},{file:"Test Report #195266.png",label:"VIEW ENDOTOXIN"}],description:"R-series research-material listing at 20 mg with purity and endotoxin analytical documentation."},
 {name:"R30",category:"R SERIES",amount:"30 MG",price:100,groups:["glp"],keywords:["r","r30","reta","retatrutide","glp","30mg","30 mg"],coa:"coa-r30-freedom.jpg",description:"R-series research-material listing at 30 mg."},
 {name:"T10",category:"T SERIES",amount:"10 MG",price:50,groups:["glp"],keywords:["t","t10","tirz","tirzepatide","10mg","10 mg"],description:"T-series research-material listing at 10 mg."},
 {name:"T20",category:"T SERIES",amount:"20 MG",price:70,groups:["glp"],keywords:["t","t20","tirz","tirzepatide","20mg","20 mg"],description:"T-series research-material listing at 20 mg."},
@@ -494,7 +494,12 @@ function buildCatalog(list){
     let indicator="";
     let action="";
 
-    if(product.coa){
+    if(product.coas && product.coas.length){
+      indicator='<div class="coa-indicator"><span class="coa-dot"></span>COA AVAILABLE</div>';
+      action=product.coas.map(function(doc){
+        return `<a href="./${encodeURIComponent(doc.file)}" target="_blank" rel="noopener noreferrer" class="btn btn-coa">${escapeHTML(doc.label || "VIEW COA")}</a>`;
+      }).join("");
+    }else if(product.coa){
       indicator='<div class="coa-indicator"><span class="coa-dot"></span>COA AVAILABLE</div>';
       action=`<a href="./${encodeURIComponent(product.coa)}" target="_blank" rel="noopener noreferrer" class="btn btn-coa">VIEW COA</a>`;
     }else if(!product.hideCoaStatus){
