@@ -596,9 +596,7 @@ button {
 }
 
 .mobile-menu-button.active span:nth-child(1) {
-  transform:
-    translateY(7px)
-    rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 .mobile-menu-button.active span:nth-child(2) {
@@ -606,9 +604,7 @@ button {
 }
 
 .mobile-menu-button.active span:nth-child(3) {
-  transform:
-    translateY(-7px)
-    rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .mobile-menu {
@@ -756,9 +752,7 @@ button {
   display: flex;
   width: max-content;
   white-space: nowrap;
-
-  animation:
-    promoScroll 24s linear infinite;
+  animation: promoScroll 24s linear infinite;
 }
 
 .promo-track span {
@@ -1539,10 +1533,6 @@ footer {
 
 @media(max-width:520px) {
 
-  /* =========================================
-     COMPACT MOBILE RESEARCH GATE
-  ========================================= */
-
   .gate {
     padding: 8px;
     align-items: center;
@@ -1552,21 +1542,16 @@ footer {
   .gate-panel {
     width: 100%;
     max-width: 470px;
-
     padding: 16px 13px 14px;
-
     border-radius: 16px;
-
     max-height: calc(100dvh - 16px);
     overflow-y: auto;
-
     -webkit-overflow-scrolling: touch;
   }
 
   .gate-logo {
     width: 62px;
     height: 62px;
-
     margin: 0 auto 8px;
   }
 
@@ -1635,11 +1620,6 @@ footer {
     font-size: 6.5px;
     letter-spacing: .7px;
   }
-
-
-  /* =========================================
-     EXISTING MOBILE SITE STYLES
-  ========================================= */
 
   .brand img {
     width: 41px;
@@ -1838,10 +1818,7 @@ I DO NOT AGREE
 
 <a href="index.html" class="brand">
 
-<img
-  src="pch-logo.jpg"
-  alt="PCH Labs"
->
+<img src="pch-logo.jpg" alt="PCH Labs">
 
 <div>
 
@@ -2003,10 +1980,7 @@ CHECKOUT
 </div>
 
 
-<div
-  class="mobile-menu"
-  id="mobileMenu"
->
+<div class="mobile-menu" id="mobileMenu">
 
 <div class="shell mobile-menu-inner">
 
@@ -2182,7 +2156,9 @@ RESEARCH INFORMATION
 </section>
 
 
-<!-- OFFERS -->
+<!-- =========================================
+     FIRST-TIME BUYER COUPON SIGNUP
+========================================= -->
 
 <section
   class="offers-section"
@@ -2191,42 +2167,44 @@ RESEARCH INFORMATION
 
 <div class="shell offers-wrap">
 
+
 <div class="offers-copy">
 
 <div class="eyebrow">
-PCH LABS UPDATES
+NEW CUSTOMER OFFER
 </div>
 
 <h2>
-Get offers & promo codes.
+Sign up & receive a first-time buyer coupon.
 </h2>
 
 <p>
-Join the PCH Labs notification list for promotional
+Join the PCH Labs notification list and receive our
+first-time customer coupon, plus future promotional
 offers, discount codes, shipping promotions,
-catalog updates, and other announcements.
+catalog updates, and announcements.
 </p>
 
 <div class="offers-benefits">
 
 <div>
 <span class="offer-dot"></span>
-Exclusive promotional offers
+First-time buyer coupon
 </div>
 
 <div>
 <span class="offer-dot"></span>
-Discount and promo codes
+Free shipping offer on qualifying first order
 </div>
 
 <div>
 <span class="offer-dot"></span>
-Shipping promotions
+Exclusive promotional codes
 </div>
 
 <div>
 <span class="offer-dot"></span>
-Important catalog updates
+Future catalog and shipping updates
 </div>
 
 </div>
@@ -2239,19 +2217,22 @@ Important catalog updates
 <div class="offers-card-head">
 
 <div class="eyebrow">
-STAY CONNECTED
+FIRST-TIME BUYER OFFER
 </div>
 
 <h3>
-Choose how we contact you.
+Sign up & get your coupon.
 </h3>
 
 <p>
-Enter an email address, mobile number, or both.
-Then select the notifications you want to receive.
+Enter your email address, mobile number, or both.
+New customers receive coupon code
+<strong style="color:#f0d48c;">WELCOME305</strong>
+for free shipping on their first qualifying order of $150 or more.
 </p>
 
 </div>
+
 
 <form
   id="marketingForm"
@@ -2306,12 +2287,12 @@ MOBILE NUMBER
 <span>
 
 <strong>
-EMAIL OFFERS & PROMOTIONS
+EMAIL OFFERS & FIRST-TIME BUYER COUPON
 </strong>
 
-I agree to receive promotional emails,
-special offers, promo codes, and PCH Labs updates
-at the email address provided.
+I agree to receive my first-time buyer coupon,
+promotional emails, special offers, promo codes,
+and PCH Labs updates at the email address provided.
 
 </span>
 
@@ -2348,7 +2329,7 @@ may apply. Reply STOP to opt out.
   class="offer-submit"
   id="marketingSubmit"
 >
-SIGN UP FOR OFFERS
+SIGN UP & GET COUPON
 </button>
 
 
@@ -2362,6 +2343,11 @@ SIGN UP FOR OFFERS
 
 
 <div class="offer-fineprint">
+
+First-time buyer offer: use coupon code
+<strong style="color:#d5ad55;">WELCOME305</strong>
+for free shipping on your first qualifying order of
+$150 or more.
 
 Consent to promotional communications is voluntary
 and is not required to access the website or create
@@ -2800,8 +2786,6 @@ contact@platinumcellularhealth.com
 
 </footer>
 
-
-<!-- SUPABASE -->
 
 <script
   src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
@@ -3436,7 +3420,7 @@ function validEmail(
 
 
 /* =========================================
-   DIRECT BREVO EDGE FUNCTION CALL
+   BREVO
 ========================================= */
 
 async function sendToBrevo(
@@ -3525,30 +3509,10 @@ async function sendToBrevo(
   }
 
 
-  console.log(
-    "Brevo function response:",
-    response.status,
-    result
-  );
-
-
   if (
     !response.ok
-  ) {
-
-    throw new Error(
-      result.error
-      ||
-      "BREVO_SYNC_FAILED"
-    );
-
-  }
-
-
-  if (
-    result.success
-    !==
-    true
+    ||
+    result.success !== true
   ) {
 
     throw new Error(
@@ -3619,7 +3583,7 @@ marketingForm.addEventListener(
     ) {
 
       marketingError(
-        "Please enter your email address."
+        "Please enter your email address to receive your first-time buyer coupon."
       );
 
       return;
@@ -3682,7 +3646,7 @@ marketingForm.addEventListener(
 
 
     marketingSubmit.textContent =
-      "SIGNING YOU UP...";
+      "GETTING YOUR COUPON...";
 
 
     marketingStatus.className =
@@ -3698,11 +3662,6 @@ marketingForm.addEventListener(
 
 
     try {
-
-      /* =========================================
-         STEP 1
-         SAVE TO SUPABASE
-      ========================================= */
 
       const {
         error: databaseError
@@ -3755,11 +3714,6 @@ marketingForm.addEventListener(
         true;
 
 
-      /* =========================================
-         STEP 2
-         CALL BREVO FUNCTION DIRECTLY
-      ========================================= */
-
       if (
         wantsEmail
         &&
@@ -3776,12 +3730,8 @@ marketingForm.addEventListener(
       }
 
 
-      /* =========================================
-         SUCCESS
-      ========================================= */
-
       marketingSuccess(
-        "✓ You're subscribed! Your signup was saved and your email was added to the PCH Labs mailing list."
+        "✓ You're signed up! FIRST-TIME BUYER COUPON: WELCOME305 — Free shipping on your first qualifying order of $150 or more."
       );
 
 
@@ -3789,7 +3739,7 @@ marketingForm.addEventListener(
 
 
       marketingSubmit.textContent =
-        "YOU'RE SUBSCRIBED ✓";
+        "COUPON UNLOCKED ✓";
 
 
       setTimeout(
@@ -3800,10 +3750,10 @@ marketingForm.addEventListener(
 
 
           marketingSubmit.textContent =
-            "SIGN UP FOR OFFERS";
+            "SIGN UP & GET COUPON";
 
         },
-        3500
+        5000
       );
 
     }
@@ -3842,7 +3792,7 @@ marketingForm.addEventListener(
 
 
       marketingSubmit.textContent =
-        "SIGN UP FOR OFFERS";
+        "SIGN UP & GET COUPON";
 
     }
 
