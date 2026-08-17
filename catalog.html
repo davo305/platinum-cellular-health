@@ -18,6 +18,10 @@ Research Catalog | Platinum Cellular Health Labs
 
 <style>
 
+/* =========================================================
+   RESET / ROOT
+========================================================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -69,6 +73,10 @@ body {
   line-height: 1.6;
 
   overflow-x: hidden;
+}
+
+body.coa-open {
+  overflow: hidden;
 }
 
 a {
@@ -152,6 +160,9 @@ button {
 
   border:
     1px solid rgba(213,173,85,.38);
+
+  box-shadow:
+    0 0 20px rgba(213,173,85,.06);
 }
 
 .brand-title {
@@ -198,7 +209,7 @@ button {
 
 
 /* =========================================================
-   MEMBER
+   MEMBER AREA
 ========================================================= */
 
 .member-area {
@@ -230,6 +241,8 @@ button {
   font-size: 8px;
 
   font-weight: 900;
+
+  letter-spacing: .75px;
 }
 
 .member-signed-in {
@@ -267,6 +280,13 @@ button {
   border-radius: 50%;
 
   background: var(--gold);
+
+  box-shadow:
+    0 0 10px rgba(213,173,85,.45);
+}
+
+.member-info {
+  line-height: 1.15;
 }
 
 .member-label {
@@ -377,6 +397,8 @@ button {
   border-radius: 10px;
 
   background: var(--gold2);
+
+  transition: .25s ease;
 }
 
 .mobile-menu-button.active span:nth-child(1) {
@@ -406,6 +428,9 @@ button {
 
   border-bottom:
     1px solid #252a2e;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.45);
 }
 
 .mobile-menu.open {
@@ -430,6 +455,11 @@ button {
 
   font-weight: 900;
 }
+
+
+/* =========================================================
+   MOBILE MEMBER
+========================================================= */
 
 .mobile-member-box {
   margin-bottom: 12px;
@@ -484,6 +514,8 @@ button {
   font-size: 8px;
 
   font-weight: 900;
+
+  letter-spacing: 1px;
 }
 
 .mobile-member-name {
@@ -495,6 +527,8 @@ button {
 }
 
 .mobile-member-email {
+  margin-top: 2px;
+
   color: #777e83;
 
   font-size: 9px;
@@ -588,6 +622,8 @@ button {
   font-size: 9px;
 
   font-weight: 900;
+
+  letter-spacing: 1px;
 }
 
 @keyframes promoScroll {
@@ -624,6 +660,8 @@ button {
   font-size: 10px;
 
   font-weight: 900;
+
+  letter-spacing: 1px;
 }
 
 .eyebrow {
@@ -639,6 +677,8 @@ button {
 }
 
 .page-hero h1 {
+  max-width: 800px;
+
   margin-bottom: 17px;
 
   font-size:
@@ -649,6 +689,8 @@ button {
     );
 
   line-height: 1;
+
+  letter-spacing: -2px;
 }
 
 .page-hero p {
@@ -686,6 +728,8 @@ button {
   font-size: 8px;
 
   font-weight: 900;
+
+  letter-spacing: 1px;
 }
 
 
@@ -744,6 +788,8 @@ button {
   color: var(--muted);
 
   font-size: 13px;
+
+  line-height: 1.7;
 }
 
 .checkout-button {
@@ -770,6 +816,8 @@ button {
   font-size: 12px;
 
   font-weight: 900;
+
+  letter-spacing: .7px;
 }
 
 .checkout-small {
@@ -778,11 +826,13 @@ button {
   color: #737a7f;
 
   font-size: 8px;
+
+  font-weight: 700;
 }
 
 
 /* =========================================================
-   SEARCH / FILTER
+   CATALOG
 ========================================================= */
 
 .catalog-section {
@@ -803,9 +853,14 @@ button {
 
   backdrop-filter:
     blur(18px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.025);
 }
 
 .search-box {
+  position: relative;
+
   display: flex;
   align-items: center;
 
@@ -826,14 +881,21 @@ button {
       #111416,
       #090b0c
     );
+
+  transition: .2s ease;
 }
 
 .search-box:focus-within {
   border-color:
     rgba(213,173,85,.85);
+
+  box-shadow:
+    0 0 0 3px rgba(213,173,85,.07);
 }
 
 .search-icon {
+  flex-shrink: 0;
+
   color: var(--gold);
 
   font-size: 25px;
@@ -855,11 +917,20 @@ button {
   font-size: 16px;
 }
 
+.search-box input::placeholder {
+  color: #666d72;
+}
+
 .search-clear {
   display: none;
 
   width: 31px;
   height: 31px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
 
   border: 0;
 
@@ -868,14 +939,20 @@ button {
   background: #171a1d;
 
   color: #8b9297;
+
+  font-size: 16px;
+
+  font-weight: 900;
 }
 
 .search-clear.visible {
   display: flex;
-
-  align-items: center;
-  justify-content: center;
 }
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
 
 .filter-bar {
   display: grid;
@@ -913,6 +990,10 @@ button {
   font-size: 10px;
 
   font-weight: 900;
+
+  letter-spacing: .9px;
+
+  line-height: 1.25;
 }
 
 .filter-button.active {
@@ -927,6 +1008,10 @@ button {
     );
 
   color: #080909;
+
+  box-shadow:
+    0 8px 20px
+    rgba(213,173,85,.17);
 }
 
 
@@ -951,6 +1036,8 @@ button {
   font-size: 11px;
 
   font-weight: 900;
+
+  letter-spacing: .65px;
 }
 
 .catalog-checkout {
@@ -996,6 +1083,11 @@ button {
   gap: 20px;
 }
 
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
 .product-card {
   position: relative;
 
@@ -1025,6 +1117,10 @@ button {
       #111416,
       #090b0c 70%
     );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.025),
+    0 12px 32px rgba(0,0,0,.18);
 }
 
 .product-main {
@@ -1054,6 +1150,8 @@ button {
   font-size: 10px;
 
   font-weight: 900;
+
+  letter-spacing: 1.6px;
 }
 
 .amount-badge {
@@ -1071,11 +1169,16 @@ button {
 
   border-radius: 10px;
 
+  background:
+    rgba(255,255,255,.025);
+
   color: #e0e2e4;
 
   font-size: 9px;
 
   font-weight: 900;
+
+  letter-spacing: .8px;
 }
 
 .product-card h2 {
@@ -1084,9 +1187,13 @@ button {
   font-size: 32px;
 
   line-height: 1.08;
+
+  letter-spacing: -.5px;
 }
 
 .product-description {
+  max-width: 390px;
+
   color: #adb3b7;
 
   font-size: 14px;
@@ -1108,6 +1215,8 @@ button {
   font-size: 8px;
 
   font-weight: 900;
+
+  letter-spacing: 1.1px;
 }
 
 .coa-dot {
@@ -1117,6 +1226,9 @@ button {
   border-radius: 50%;
 
   background: var(--gold);
+
+  box-shadow:
+    0 0 10px rgba(213,173,85,.62);
 }
 
 
@@ -1160,7 +1272,8 @@ button {
   background:
     radial-gradient(
       ellipse,
-      rgba(213,173,85,.24),
+      rgba(213,173,85,.24) 0%,
+      rgba(213,173,85,.075) 45%,
       transparent 74%
     );
 
@@ -1185,10 +1298,21 @@ button {
   background:
     linear-gradient(
       90deg,
-      rgba(240,244,246,.17),
-      rgba(4,5,6,.27),
-      rgba(222,228,231,.19)
+      rgba(240,244,246,.17) 0%,
+      rgba(255,255,255,.08) 8%,
+      rgba(98,104,108,.055) 18%,
+      rgba(9,11,12,.15) 35%,
+      rgba(4,5,6,.27) 50%,
+      rgba(8,10,11,.16) 68%,
+      rgba(110,116,120,.055) 84%,
+      rgba(255,255,255,.12) 94%,
+      rgba(222,228,231,.19) 100%
     );
+
+  box-shadow:
+    0 17px 22px rgba(0,0,0,.68),
+    inset 4px 0 6px rgba(255,255,255,.11),
+    inset -4px 0 7px rgba(255,255,255,.055);
 }
 
 .vial::before {
@@ -1213,6 +1337,16 @@ button {
 
   border-right:
     1px solid rgba(213,219,222,.34);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.14),
+      rgba(16,18,19,.07) 24%,
+      rgba(4,5,6,.18) 50%,
+      rgba(16,18,19,.07) 75%,
+      rgba(255,255,255,.12)
+    );
 }
 
 .vial-cap {
@@ -1226,15 +1360,23 @@ button {
 
   z-index: 9;
 
+  border:
+    1px solid rgba(180,185,188,.9);
+
   border-radius:
     7px 7px 4px 4px;
 
   background:
     linear-gradient(
       90deg,
-      #5d6164,
-      #f2f2f2,
-      #656a6d
+      #5d6164 0%,
+      #bfc3c5 9%,
+      #f2f2f2 20%,
+      #a5aaad 35%,
+      #eeeeee 52%,
+      #a2a7aa 68%,
+      #e5e7e8 84%,
+      #656a6d 100%
     );
 }
 
@@ -1255,8 +1397,9 @@ button {
   background:
     linear-gradient(
       180deg,
-      #292b2d,
-      #030404
+      #292b2d 0%,
+      #0b0c0d 45%,
+      #030404 100%
     );
 }
 
@@ -1268,6 +1411,8 @@ button {
 
   width: 46px;
   height: 24px;
+
+  z-index: 3;
 
   border-left:
     1px solid rgba(228,232,234,.42);
@@ -1296,15 +1441,19 @@ button {
   padding:
     8px 4px 5px;
 
+  overflow: hidden;
+
   border:
     1px solid rgba(213,173,85,.68);
 
   background:
     linear-gradient(
       100deg,
-      #080909,
-      #050606,
-      #141516
+      #080909 0%,
+      #121314 18%,
+      #050606 47%,
+      #0b0c0d 74%,
+      #141516 100%
     );
 }
 
@@ -1317,6 +1466,9 @@ button {
   border-radius: 50%;
 
   object-fit: cover;
+
+  border:
+    1px solid rgba(213,173,85,.35);
 }
 
 .vial-brand {
@@ -1324,11 +1476,14 @@ button {
 
   font-family:
     Georgia,
+    "Times New Roman",
     serif;
 
   font-size: 6px;
 
   font-weight: 700;
+
+  letter-spacing: 1px;
 }
 
 .vial-labs {
@@ -1339,6 +1494,8 @@ button {
   font-size: 3.5px;
 
   font-weight: 900;
+
+  letter-spacing: .65px;
 }
 
 .vial-divider {
@@ -1348,7 +1505,13 @@ button {
   margin:
     6px 0 4px;
 
-  background: var(--gold);
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
 }
 
 .vial-product {
@@ -1361,15 +1524,23 @@ button {
   align-items: center;
   justify-content: center;
 
+  padding: 0 2px;
+
   color: #f5f5f5;
 
   font-size: 7px;
 
   font-weight: 900;
 
+  letter-spacing: .25px;
+
+  line-height: 1.1;
+
   text-align: center;
 
   text-transform: uppercase;
+
+  overflow-wrap: anywhere;
 }
 
 .vial-amount {
@@ -1380,6 +1551,8 @@ button {
   font-size: 9px;
 
   font-weight: 900;
+
+  letter-spacing: .8px;
 }
 
 .vial-research {
@@ -1396,11 +1569,13 @@ button {
   font-size: 3px;
 
   font-weight: 900;
+
+  letter-spacing: .35px;
 }
 
 
 /* =========================================================
-   PRICE / BUTTON
+   PRICE / ACTIONS
 ========================================================= */
 
 .product-bottom {
@@ -1431,6 +1606,8 @@ button {
   font-size: 8px;
 
   font-weight: 900;
+
+  letter-spacing: 1.2px;
 }
 
 .price {
@@ -1443,6 +1620,16 @@ button {
   line-height: 1;
 
   font-weight: 900;
+
+  letter-spacing: -1px;
+}
+
+.product-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
 }
 
 .btn {
@@ -1467,6 +1654,8 @@ button {
   font-size: 9px;
 
   font-weight: 900;
+
+  letter-spacing: .65px;
 }
 
 .btn-coa {
@@ -1474,6 +1663,13 @@ button {
 
   border-color:
     rgba(213,173,85,.55);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(213,173,85,.06),
+      rgba(213,173,85,.015)
+    );
 }
 
 .btn-unavailable {
@@ -1502,7 +1698,7 @@ button {
 
 
 /* =========================================================
-   NOTICE / FOOTER
+   EMPTY / NOTICE
 ========================================================= */
 
 .no-results {
@@ -1522,6 +1718,12 @@ button {
   color: var(--muted);
 
   text-align: center;
+}
+
+.no-results strong {
+  color: #d6d8da;
+
+  font-size: 19px;
 }
 
 .catalog-notice {
@@ -1544,13 +1746,85 @@ button {
   margin-bottom: 8px;
 
   color: var(--gold2);
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
 }
 
 .catalog-notice p {
   color: var(--muted);
 
   font-size: 12px;
+
+  line-height: 1.8;
 }
+
+
+/* =========================================================
+   MOBILE CHECKOUT
+========================================================= */
+
+.mobile-sticky-checkout {
+  display: none;
+
+  position: fixed;
+
+  left: 18px;
+  right: 18px;
+
+  bottom:
+    calc(
+      12px +
+      env(safe-area-inset-bottom)
+    );
+
+  z-index: 5000;
+
+  padding: 4px;
+
+  border:
+    1px solid rgba(213,173,85,.3);
+
+  border-radius: 14px;
+
+  background:
+    rgba(5,6,7,.95);
+
+  backdrop-filter:
+    blur(16px);
+}
+
+.mobile-sticky-checkout a {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 55px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #efd17e
+    );
+
+  color: #080909;
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
   padding: 42px 0;
@@ -1573,53 +1847,18 @@ footer {
   font-size: 11px;
 }
 
+.footer-grid strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #c7c9ca;
+}
+
 
 /* =========================================================
-   MOBILE
+   RESPONSIVE
 ========================================================= */
-
-.mobile-sticky-checkout {
-  display: none;
-
-  position: fixed;
-
-  left: 18px;
-  right: 18px;
-
-  bottom: 12px;
-
-  z-index: 5000;
-
-  padding: 4px;
-
-  background: #050607;
-
-  border-radius: 14px;
-}
-
-.mobile-sticky-checkout a {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-height: 55px;
-
-  border-radius: 10px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #efd17e
-    );
-
-  color: #080909;
-
-  font-size: 11px;
-
-  font-weight: 900;
-}
 
 @media(max-width:1100px) {
 
@@ -1629,14 +1868,36 @@ footer {
 
 }
 
+
 @media(max-width:900px) {
 
   body {
     padding-bottom: 84px;
   }
 
+  .shell {
+    width:
+      min(
+        calc(100% - 28px),
+        1220px
+      );
+  }
+
   .nav {
     min-height: 68px;
+  }
+
+  .brand img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brand-title {
+    font-size: 10px;
+  }
+
+  .brand-sub {
+    font-size: 6.5px;
   }
 
   .nav-links {
@@ -1663,9 +1924,20 @@ footer {
     display: block;
   }
 
+  .footer-grid {
+    flex-direction: column;
+  }
+
 }
 
+
 @media(max-width:650px) {
+
+  .promo-track span {
+    padding: 9px 29px;
+
+    font-size: 8.5px;
+  }
 
   .page-hero {
     padding: 34px 0 30px;
@@ -1675,12 +1947,62 @@ footer {
     font-size: 36px;
   }
 
+  .page-hero p {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+  .checkout-section {
+    padding: 19px 0;
+  }
+
+  .checkout-box {
+    padding: 21px 18px;
+  }
+
+  .checkout-button {
+    width: 100%;
+
+    min-height: 48px;
+
+    font-size: 9px;
+  }
+
+  .catalog-section {
+    padding-top: 16px;
+  }
+
+  .search-wrap {
+    padding: 10px 0 9px;
+  }
+
+  .search-box input {
+    min-height: 58px;
+
+    font-size: 16px;
+  }
+
   .filter-bar {
     display: flex;
 
-    overflow-x: auto;
+    width: 100%;
 
     gap: 11px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    margin-top: 12px;
+
+    padding:
+      2px 2px 10px;
+
+    scrollbar-width: none;
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none;
   }
 
   .filter-button {
@@ -1692,6 +2014,10 @@ footer {
       0 23px;
 
     border-radius: 100px;
+
+    white-space: nowrap;
+
+    font-size: 9px;
   }
 
   .product-card {
@@ -1699,30 +2025,105 @@ footer {
 
     padding:
       25px 22px;
+
+    border-radius: 19px;
   }
 
   .product-main {
     width:
       calc(100% - 115px);
+
+    min-height: 250px;
   }
 
   .product-card h2 {
+    margin:
+      19px 0 9px;
+
     font-size: 29px;
   }
 
   .product-description {
     font-size: 13px;
+
+    line-height: 1.6;
   }
 
   .vial-area {
     top: 61px;
     right: 11px;
 
+    width: 106px;
+    height: 215px;
+
     transform:
       scale(.88);
 
     transform-origin:
       center right;
+  }
+
+  .price {
+    font-size: 34px;
+  }
+
+}
+
+
+@media(max-width:520px) {
+
+  .shell {
+    width:
+      calc(100% - 24px);
+  }
+
+  .product-card {
+    min-height: 364px;
+
+    padding:
+      23px 20px;
+  }
+
+  .product-main {
+    width:
+      calc(100% - 108px);
+  }
+
+  .product-card h2 {
+    font-size: 27px;
+  }
+
+  .product-description {
+    font-size: 12px;
+  }
+
+}
+
+
+@media(max-width:390px) {
+
+  .product-card {
+    padding:
+      21px 17px;
+
+    min-height: 350px;
+  }
+
+  .product-main {
+    width:
+      calc(100% - 100px);
+  }
+
+  .product-card h2 {
+    font-size: 24px;
+  }
+
+  .product-description {
+    font-size: 11.5px;
+  }
+
+  .price {
+    font-size: 31px;
   }
 
 }
@@ -1738,6 +2139,7 @@ footer {
 <header class="site-header">
 
 <div class="shell nav">
+
 
 <a
   href="index.html"
@@ -1766,16 +2168,40 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 <div class="nav-right">
 
+
 <nav class="nav-links">
 
-<a href="index.html">Home</a>
-<a href="research-information.html">Research</a>
-<a href="catalog.html">Catalog</a>
-<a href="quality-coa.html">Quality & COA</a>
-<a href="recommended-supplies.html">Supplies</a>
-<a href="policies.html">Policies</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">Contact</a>
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research
+</a>
+
+<a href="catalog.html">
+Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="recommended-supplies.html">
+Supplies
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a href="contact.html">
+Contact
+</a>
 
 </nav>
 
@@ -1800,7 +2226,7 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 <span class="member-dot"></span>
 
-<div>
+<div class="member-info">
 
 <div class="member-label">
 SIGNED IN
@@ -1817,6 +2243,7 @@ MEMBER
 
 </div>
 
+
 <a
   href="login.html"
   class="member-link"
@@ -1824,12 +2251,14 @@ MEMBER
 ACCOUNT
 </a>
 
+
 <a
   href="login.html"
   class="member-link gold"
 >
 CHECKOUT
 </a>
+
 
 <button
   type="button"
@@ -1848,6 +2277,8 @@ SIGN OUT
   class="mobile-menu-button"
   id="mobileMenuButton"
   type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
 >
 
 <span></span>
@@ -1867,6 +2298,7 @@ SIGN OUT
 >
 
 <div class="shell mobile-menu-inner">
+
 
 <div class="mobile-member-box">
 
@@ -1931,14 +2363,37 @@ CATALOG
 </div>
 
 
-<a href="index.html">Home</a>
-<a href="research-information.html">Research Information</a>
-<a href="catalog.html">Research Catalog</a>
-<a href="quality-coa.html">Quality & COA</a>
-<a href="recommended-supplies.html">Recommended Supplies</a>
-<a href="policies.html">Policies</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">Contact</a>
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research Information
+</a>
+
+<a href="catalog.html">
+Research Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="recommended-supplies.html">
+Recommended Supplies
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a href="contact.html">
+Contact
+</a>
 
 </div>
 
@@ -1949,15 +2404,37 @@ CATALOG
 
 <div class="promo-track">
 
-<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
-<span>$15 STANDARD SHIPPING VALUE</span>
-<span>✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦</span>
-<span>FREE STANDARD SHIPPING ON ORDERS OVER $280</span>
+<span>
+✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+</span>
 
-<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
-<span>$15 STANDARD SHIPPING VALUE</span>
-<span>✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦</span>
-<span>FREE STANDARD SHIPPING ON ORDERS OVER $280</span>
+<span>
+$15 STANDARD SHIPPING VALUE
+</span>
+
+<span>
+✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
+</span>
+
+<span>
+FREE STANDARD SHIPPING ON ORDERS OVER $280
+</span>
+
+<span>
+✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+</span>
+
+<span>
+$15 STANDARD SHIPPING VALUE
+</span>
+
+<span>
+✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
+</span>
+
+<span>
+FREE STANDARD SHIPPING ON ORDERS OVER $280
+</span>
 
 </div>
 
@@ -1980,19 +2457,23 @@ CATALOG
 ← BACK TO PCH LABS
 </a>
 
+
 <div class="eyebrow">
 RESEARCH MATERIAL CATALOG
 </div>
 
+
 <h1>
 Research catalog.
 </h1>
+
 
 <p>
 Browse currently listed research materials,
 amounts, pricing, and available analytical
 documentation.
 </p>
+
 
 <div class="hero-meta">
 
@@ -2025,13 +2506,17 @@ COA DOCUMENTATION WHERE AVAILABLE
 PCH MEMBER CHECKOUT
 </div>
 
+
 <h2 id="checkoutHeading">
 Ready to place an order?
 </h2>
 
+
 <p id="checkoutDescription">
-A verified PCH member account and research-use acknowledgment are required before checkout access.
+A verified PCH member account and research-use
+acknowledgment are required before checkout access.
 </p>
+
 
 <a
   href="login.html"
@@ -2040,6 +2525,7 @@ A verified PCH member account and research-use acknowledgment are required befor
 >
 🔐 LOGIN TO CHECKOUT
 </a>
+
 
 <div
   class="checkout-small"
@@ -2064,6 +2550,7 @@ Sign in or create a PCH account to continue.
 
 <div class="search-wrap">
 
+
 <div class="search-box">
 
 <span class="search-icon">
@@ -2074,13 +2561,16 @@ Sign in or create a PCH account to continue.
   id="catalogSearch"
   type="search"
   autocomplete="off"
-  placeholder="Search R, T, ARA, DSIP, Ipamorelin, 10 MG..."
+  autocapitalize="off"
+  spellcheck="false"
+  placeholder="Search R, T, GHK-Cu, ARA, Ipamorelin..."
 >
 
 <button
   type="button"
   class="search-clear"
   id="searchClear"
+  aria-label="Clear search"
 >
 ×
 </button>
@@ -2101,6 +2591,7 @@ Sign in or create a PCH account to continue.
 ALL
 </button>
 
+
 <button
   class="filter-button"
   type="button"
@@ -2108,6 +2599,7 @@ ALL
 >
 BAC WATER
 </button>
+
 
 <button
   class="filter-button"
@@ -2117,6 +2609,7 @@ BAC WATER
 GLP / WEIGHT LOSS
 </button>
 
+
 <button
   class="filter-button"
   type="button"
@@ -2125,6 +2618,7 @@ GLP / WEIGHT LOSS
 RECOVERY / HEALING
 </button>
 
+
 <button
   class="filter-button"
   type="button"
@@ -2132,6 +2626,7 @@ RECOVERY / HEALING
 >
 ENERGY / MITOCHONDRIA
 </button>
+
 
 <button
   class="filter-button"
@@ -2152,6 +2647,7 @@ MIND / LONGEVITY / SLEEP
   id="catalogCount"
   class="catalog-count"
 ></div>
+
 
 <a
   href="login.html"
@@ -2179,6 +2675,10 @@ MIND / LONGEVITY / SLEEP
 No research material found.
 </strong>
 
+<br>
+
+Try another name, abbreviation, amount, or category.
+
 </div>
 
 
@@ -2189,9 +2689,11 @@ CATALOG & DOCUMENTATION NOTICE
 </strong>
 
 <p>
-Each Certificate of Analysis applies only to the sample,
-lot, batch, or laboratory submission identified in the
-corresponding original report.
+Catalog pricing and availability may change.
+Certificates of Analysis are linked where corresponding
+documentation has been added. Each COA applies only to
+the sample, lot, batch, or laboratory submission
+identified in the original report.
 </p>
 
 </div>
@@ -2214,11 +2716,10 @@ corresponding original report.
 Platinum Cellular Health Labs
 </strong>
 
-<br>
-
 Longevity at the Cellular Level
 
 </div>
+
 
 <div>
 
@@ -2255,68 +2756,126 @@ Not for human or animal use
 
 <script>
 
+/* =========================================================
+   SUPABASE
+========================================================= */
+
 const SUPABASE_URL =
   "https://rmjvhbfazakcunfeomao.supabase.co";
 
+
 const SUPABASE_PUBLISHABLE_KEY =
   "sb_publishable_m0snLFFTsLnUfENmvWsUuw_bjPkhMER";
+
 
 const supabaseClient =
   window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_PUBLISHABLE_KEY,
     {
+
       auth: {
+
         persistSession: true,
+
         autoRefreshToken: true,
+
         detectSessionInUrl: true,
+
         storage: window.localStorage,
+
         storageKey:
           "pch-member-auth"
+
       }
+
     }
   );
 
 
+/* =========================================================
+   MEMBER ELEMENTS
+========================================================= */
+
 const desktopLoginLink =
-  document.getElementById("desktopLoginLink");
+  document.getElementById(
+    "desktopLoginLink"
+  );
 
 const desktopMemberArea =
-  document.getElementById("desktopMemberArea");
+  document.getElementById(
+    "desktopMemberArea"
+  );
 
 const desktopMemberName =
-  document.getElementById("desktopMemberName");
+  document.getElementById(
+    "desktopMemberName"
+  );
 
 const desktopSignout =
-  document.getElementById("desktopSignout");
+  document.getElementById(
+    "desktopSignout"
+  );
 
 const mobileLoginLink =
-  document.getElementById("mobileLoginLink");
+  document.getElementById(
+    "mobileLoginLink"
+  );
 
 const mobileMemberArea =
-  document.getElementById("mobileMemberArea");
+  document.getElementById(
+    "mobileMemberArea"
+  );
 
 const mobileMemberName =
-  document.getElementById("mobileMemberName");
+  document.getElementById(
+    "mobileMemberName"
+  );
 
 const mobileMemberEmail =
-  document.getElementById("mobileMemberEmail");
+  document.getElementById(
+    "mobileMemberEmail"
+  );
 
 const mobileSignout =
-  document.getElementById("mobileSignout");
+  document.getElementById(
+    "mobileSignout"
+  );
 
 const mainCheckoutButton =
-  document.getElementById("mainCheckoutButton");
+  document.getElementById(
+    "mainCheckoutButton"
+  );
 
 const toolbarCheckoutButton =
-  document.getElementById("toolbarCheckoutButton");
+  document.getElementById(
+    "toolbarCheckoutButton"
+  );
 
 const mobileCheckoutButton =
-  document.getElementById("mobileCheckoutButton");
+  document.getElementById(
+    "mobileCheckoutButton"
+  );
 
 const checkoutHeading =
-  document.getElementById("checkoutHeading");
+  document.getElementById(
+    "checkoutHeading"
+  );
 
+const checkoutDescription =
+  document.getElementById(
+    "checkoutDescription"
+  );
+
+const checkoutSmall =
+  document.getElementById(
+    "checkoutSmall"
+  );
+
+
+/* =========================================================
+   MEMBER STATE
+========================================================= */
 
 function showLoggedOutMemberState() {
 
@@ -2342,6 +2901,15 @@ function showLoggedOutMemberState() {
 
   mobileCheckoutButton.textContent =
     "🔐 LOGIN TO CHECKOUT";
+
+  checkoutHeading.textContent =
+    "Ready to place an order?";
+
+  checkoutDescription.textContent =
+    "A verified PCH member account and research-use acknowledgment are required before checkout access.";
+
+  checkoutSmall.textContent =
+    "Sign in or create a PCH account to continue.";
 
 }
 
@@ -2399,6 +2967,12 @@ function showLoggedInMemberState(
     +
     ".";
 
+  checkoutDescription.textContent =
+    "Your PCH member session is active. Continue to your account to complete the required research-use acknowledgment before checkout.";
+
+  checkoutSmall.textContent =
+    "Your member login is active on this browser.";
+
 }
 
 
@@ -2435,6 +3009,10 @@ async function restoreMemberSession() {
 
   catch(error) {
 
+    console.error(
+      error
+    );
+
     showLoggedOutMemberState();
 
   }
@@ -2457,9 +3035,45 @@ desktopSignout.addEventListener(
   signOutMember
 );
 
+
 mobileSignout.addEventListener(
   "click",
   signOutMember
+);
+
+
+supabaseClient.auth
+  .onAuthStateChange(
+    function(
+      event,
+      session
+    ) {
+
+      if (
+        session
+        &&
+        session.user
+      ) {
+
+        showLoggedInMemberState(
+          session.user
+        );
+
+      }
+
+      else {
+
+        showLoggedOutMemberState();
+
+      }
+
+    }
+  );
+
+
+window.addEventListener(
+  "pageshow",
+  restoreMemberSession
 );
 
 
@@ -2478,6 +3092,7 @@ const products = [
   hideCoaStatus: true,
   keywords:
     [
+      "h",
       "hospira",
       "bac",
       "water",
@@ -2495,12 +3110,16 @@ const products = [
   groups: ["bac"],
   keywords:
     [
+      "e",
       "ebac",
       "bac",
-      "water"
+      "water",
+      "bacteriostatic"
     ],
+  coa:
+    "coa-ebac-water-30ml-chromate.jpg",
   description:
-    "Laboratory supply listing with documentation where available."
+    "Laboratory supply listing with analytical documentation available."
 },
 
 {
@@ -2515,7 +3134,9 @@ const products = [
       "r10",
       "reta",
       "retatrutide",
-      "10mg"
+      "glp",
+      "10mg",
+      "10 mg"
     ],
   coa:
     "retatrutide-10mg-greencap-coa.jpg",
@@ -2535,7 +3156,9 @@ const products = [
       "r20",
       "reta",
       "retatrutide",
-      "20mg"
+      "glp",
+      "20mg",
+      "20 mg"
     ],
   description:
     "R-series research-material listing at 20 mg."
@@ -2553,7 +3176,9 @@ const products = [
       "r30",
       "reta",
       "retatrutide",
-      "30mg"
+      "glp",
+      "30mg",
+      "30 mg"
     ],
   coa:
     "coa-r30-freedom.jpg",
@@ -2573,7 +3198,8 @@ const products = [
       "t10",
       "tirz",
       "tirzepatide",
-      "10mg"
+      "10mg",
+      "10 mg"
     ],
   description:
     "T-series research-material listing at 10 mg."
@@ -2591,7 +3217,8 @@ const products = [
       "t20",
       "tirz",
       "tirzepatide",
-      "20mg"
+      "20mg",
+      "20 mg"
     ],
   description:
     "T-series research-material listing at 20 mg."
@@ -2609,7 +3236,9 @@ const products = [
       "ghk",
       "ghkcu",
       "ghk-cu",
-      "50mg"
+      "copper",
+      "50mg",
+      "50 mg"
     ],
   coa:
     "ghkcu-50mg-coa.png",
@@ -2628,7 +3257,10 @@ const products = [
       "g",
       "ghk",
       "ghkcu",
-      "100mg"
+      "ghk-cu",
+      "copper",
+      "100mg",
+      "100 mg"
     ],
   description:
     "GHK-Cu research-material listing at 100 mg."
@@ -2644,7 +3276,9 @@ const products = [
     [
       "c",
       "cartalax",
-      "20mg"
+      "cartilage",
+      "20mg",
+      "20 mg"
     ],
   coa:
     "cartalax-20mg-coa.jpg",
@@ -2660,8 +3294,13 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "n",
+      "s",
       "semax",
-      "10mg"
+      "n acetyl semax",
+      "amidate",
+      "10mg",
+      "10 mg"
     ],
   description:
     "N-Acetyl Semax Amidate research-material listing at 10 mg."
@@ -2675,8 +3314,13 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "n",
+      "s",
       "selank",
-      "10mg"
+      "n acetyl selank",
+      "amidate",
+      "10mg",
+      "10 mg"
     ],
   description:
     "N-Acetyl Selank Amidate research-material listing at 10 mg."
@@ -2690,12 +3334,14 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "p",
+      "pt",
       "pt141",
       "pt-141",
       "10mg"
     ],
   description:
-    "Research-material listing at 10 mg."
+    "Research-material catalog listing at 10 mg."
 },
 
 {
@@ -2706,12 +3352,14 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "e",
       "epithalon",
       "epitalon",
+      "amidate",
       "10mg"
     ],
   description:
-    "Research-material listing at 10 mg."
+    "Research-material catalog listing at 10 mg."
 },
 
 {
@@ -2722,11 +3370,12 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "p",
       "pinealon",
       "10mg"
     ],
   description:
-    "Pinealon research-material listing at 10 mg."
+    "Pinealon research-material catalog listing at 10 mg."
 },
 
 {
@@ -2737,8 +3386,11 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "d",
       "dsip",
-      "5mg"
+      "sleep",
+      "5mg",
+      "5 mg"
     ],
   description:
     "DSIP research-material listing at 5 mg."
@@ -2752,8 +3404,11 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "d",
       "dsip",
-      "10mg"
+      "sleep",
+      "10mg",
+      "10 mg"
     ],
   coa:
     "coa-dsip-10mg-ils.jpg",
@@ -2832,8 +3487,13 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "b",
+      "w",
       "bpc",
+      "bpc157",
+      "bpc-157",
       "tb500",
+      "tb-500",
       "wolverine",
       "10mg"
     ],
@@ -2851,8 +3511,12 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "b",
+      "w",
       "bpc",
+      "bpc157",
       "tb4",
+      "tb-4",
       "wolverine",
       "20mg"
     ],
@@ -2868,8 +3532,11 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "b",
+      "d",
       "deadpool",
       "bpc",
+      "bpc157",
       "tb4",
       "cartalax",
       "30mg"
@@ -2886,6 +3553,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "k",
       "klow",
       "80mg"
     ],
@@ -2903,6 +3571,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "k",
       "kpv",
       "10mg"
     ],
@@ -2918,7 +3587,12 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "c",
       "cjc",
+      "cjc1295",
+      "cjc-1295",
+      "no dac",
+      "nodac",
       "5mg",
       "5 mg"
     ],
@@ -2958,6 +3632,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "t",
       "tesamorelin",
       "tesa",
       "10mg"
@@ -2974,8 +3649,12 @@ const products = [
   groups: ["recovery", "mind"],
   keywords:
     [
+      "c",
+      "i",
       "cjc",
       "ipamorelin",
+      "ipa",
+      "cjc ipa",
       "20mg"
     ],
   description:
@@ -2990,10 +3669,12 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "m",
       "mots",
       "motsc",
       "mots-c",
-      "10mg"
+      "10mg",
+      "mitochondria"
     ],
   coa:
     "motsc-10mg-greencaps-coa.png",
@@ -3009,9 +3690,12 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "s",
+      "ss",
       "ss31",
       "ss-31",
-      "50mg"
+      "50mg",
+      "mitochondria"
     ],
   description:
     "SS-31 research-material catalog listing at 50 mg."
@@ -3025,8 +3709,11 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "5",
       "5 amino",
+      "5amino",
       "1mq",
+      "5-amino-1mq",
       "500mg"
     ],
   description:
@@ -3041,8 +3728,10 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "n",
       "nad",
       "nad+",
+      "buffered",
       "1000mg"
     ],
   description:
@@ -3086,6 +3775,11 @@ const noResults =
     "noResults"
   );
 
+const filterBar =
+  document.getElementById(
+    "filterBar"
+  );
+
 const filterButtons =
   Array.from(
     document.querySelectorAll(
@@ -3096,6 +3790,10 @@ const filterButtons =
 let activeFilter =
   "all";
 
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
 
 function escapeHTML(
   value
@@ -3127,6 +3825,10 @@ function escapeHTML(
 
 }
 
+
+/* =========================================================
+   VIAL NAME
+========================================================= */
 
 function createVialName(
   name
@@ -3161,6 +3863,10 @@ function createVialName(
 }
 
 
+/* =========================================================
+   NORMALIZE SEARCH
+========================================================= */
+
 function normalizeSearchText(
   value
 ) {
@@ -3169,6 +3875,10 @@ function normalizeSearchText(
     value || ""
   )
   .toLowerCase()
+  .replace(
+    /[\u2010-\u2015]/g,
+    "-"
+  )
   .replace(
     /[^a-z0-9+]+/g,
     " "
@@ -3182,7 +3892,203 @@ function normalizeSearchText(
 }
 
 
+/* =========================================================
+   SEARCH IDENTITIES
+========================================================= */
+
+function getIdentityValues(
+  product
+) {
+
+  const values = [
+
+    product.name,
+    product.category,
+    product.amount
+
+  ];
+
+
+  if (
+    Array.isArray(
+      product.keywords
+    )
+  ) {
+
+    values.push(
+      ...product.keywords
+    );
+
+  }
+
+
+  return values
+    .map(
+      normalizeSearchText
+    )
+    .filter(Boolean);
+
+}
+
+
+/* =========================================================
+   BROAD SEARCH
+========================================================= */
+
+function getBroadSearchText(
+  product
+) {
+
+  return normalizeSearchText(
+
+    product.name
+    +
+    " "
+    +
+    product.category
+    +
+    " "
+    +
+    product.amount
+    +
+    " "
+    +
+    product.price
+    +
+    " "
+    +
+    product.groups.join(" ")
+    +
+    " "
+    +
+    (
+      Array.isArray(
+        product.keywords
+      )
+      ?
+      product.keywords.join(" ")
+      :
+      ""
+    )
+    +
+    " "
+    +
+    product.description
+
+  );
+
+}
+
+
+/* =========================================================
+   INSTANT SEARCH MATCHING
+========================================================= */
+
 function productMatchesSearch(
+  product,
+  rawTerm
+) {
+
+  const term =
+    normalizeSearchText(
+      rawTerm
+    );
+
+
+  if (
+    term === ""
+  ) {
+
+    return true;
+
+  }
+
+
+  const identityValues =
+    getIdentityValues(
+      product
+    );
+
+
+  /*
+     SINGLE CHARACTER
+
+     Examples:
+     i -> Ipamorelin
+     r -> R10 / R20 / R30
+     g -> GHK-Cu
+     a -> ARA
+     t -> T10 / T20 / Tesamorelin
+     d -> DSIP
+  */
+
+  if (
+    term.length === 1
+  ) {
+
+    return identityValues.some(
+      function(value) {
+
+        const tokens =
+          value.split(" ");
+
+
+        return (
+          value === term
+          ||
+          value.startsWith(
+            term
+          )
+          ||
+          tokens.some(
+            function(token) {
+
+              return token.startsWith(
+                term
+              );
+
+            }
+          )
+        );
+
+      }
+    );
+
+  }
+
+
+  /*
+     MULTIPLE CHARACTERS
+  */
+
+  const searchableText =
+    getBroadSearchText(
+      product
+    );
+
+
+  const words =
+    term.split(" ");
+
+
+  return words.every(
+    function(word) {
+
+      return searchableText.includes(
+        word
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   SEARCH SCORE
+========================================================= */
+
+function getSearchScore(
   product,
   rawTerm
 ) {
@@ -3197,65 +4103,94 @@ function productMatchesSearch(
     !term
   ) {
 
-    return true;
+    return 0;
 
   }
 
 
-  const searchableText =
+  const normalizedName =
     normalizeSearchText(
-
       product.name
-      +
-      " "
-      +
-      product.category
-      +
-      " "
-      +
-      product.amount
-      +
-      " "
-      +
-      product.price
-      +
-      " "
-      +
-      product.groups.join(" ")
-      +
-      " "
-      +
-      (
-        product.keywords
-        ||
-        []
-      )
-      .join(" ")
-      +
-      " "
-      +
-      product.description
-
     );
 
 
-  return term
-    .split(" ")
-    .every(
-      function(word) {
+  const identityValues =
+    getIdentityValues(
+      product
+    );
 
-        return searchableText.includes(
-          word
-        );
+
+  let score =
+    0;
+
+
+  if (
+    normalizedName === term
+  ) {
+
+    score +=
+      1000;
+
+  }
+
+
+  if (
+    normalizedName.startsWith(
+      term
+    )
+  ) {
+
+    score +=
+      700;
+
+  }
+
+
+  identityValues.forEach(
+    function(value) {
+
+      if (
+        value === term
+      ) {
+
+        score +=
+          500;
 
       }
-    );
+
+      else if (
+        value.startsWith(
+          term
+        )
+      ) {
+
+        score +=
+          250;
+
+      }
+
+      else if (
+        value.includes(
+          term
+        )
+      ) {
+
+        score +=
+          80;
+
+      }
+
+    }
+  );
+
+
+  return score;
 
 }
 
 
 /* =========================================================
-   BUILD CARDS
+   BUILD CATALOG
 ========================================================= */
 
 function buildCatalog(
@@ -3374,6 +4309,7 @@ function buildCatalog(
 
         <div class="product-main">
 
+
           <div class="card-top">
 
             <div class="category">
@@ -3399,12 +4335,17 @@ function buildCatalog(
 
           ${indicator}
 
+
         </div>
 
 
-        <div class="vial-area">
+        <div
+          class="vial-area"
+          aria-hidden="true"
+        >
 
           <div class="vial-glow"></div>
+
 
           <div class="vial">
 
@@ -3486,7 +4427,7 @@ function buildCatalog(
 
 
 /* =========================================================
-   UPDATE
+   ACTIVE FILTER
 ========================================================= */
 
 function setActiveFilterUI(
@@ -3509,18 +4450,26 @@ function setActiveFilterUI(
 }
 
 
+/* =========================================================
+   UPDATE CATALOG
+========================================================= */
+
 function updateCatalog() {
 
   const rawTerm =
     search.value.trim();
 
 
-  const filtered =
+  const hasSearch =
+    rawTerm.length > 0;
+
+
+  let filtered =
     products.filter(
       function(product) {
 
         if (
-          rawTerm
+          hasSearch
         ) {
 
           return productMatchesSearch(
@@ -3541,6 +4490,54 @@ function updateCatalog() {
 
       }
     );
+
+
+  /*
+     Sort search results by relevance
+  */
+
+  if (
+    hasSearch
+  ) {
+
+    filtered =
+      filtered
+      .map(
+        function(product) {
+
+          return {
+
+            product:
+              product,
+
+            score:
+              getSearchScore(
+                product,
+                rawTerm
+              )
+
+          };
+
+        }
+      )
+      .sort(
+        function(a,b) {
+
+          return b.score
+            -
+            a.score;
+
+        }
+      )
+      .map(
+        function(item) {
+
+          return item.product;
+
+        }
+      );
+
+  }
 
 
   buildCatalog(
@@ -3570,21 +4567,21 @@ function updateCatalog() {
 
   searchClear.classList.toggle(
     "visible",
-    Boolean(
-      rawTerm
-    )
+    hasSearch
   );
 
 }
 
 
 /* =========================================================
-   EVENTS
+   LIVE SEARCH
 ========================================================= */
 
-search.addEventListener(
-  "input",
-  function() {
+function handleSearchInput() {
+
+  if (
+    search.value.length > 0
+  ) {
 
     activeFilter =
       "all";
@@ -3594,12 +4591,47 @@ search.addEventListener(
       "all"
     );
 
+  }
 
-    updateCatalog();
+
+  updateCatalog();
+
+}
+
+
+search.addEventListener(
+  "input",
+  handleSearchInput
+);
+
+
+search.addEventListener(
+  "search",
+  handleSearchInput
+);
+
+
+search.addEventListener(
+  "keyup",
+  function(event) {
+
+    if (
+      event.key
+      &&
+      event.key.length === 1
+    ) {
+
+      handleSearchInput();
+
+    }
 
   }
 );
 
+
+/* =========================================================
+   CLEAR SEARCH
+========================================================= */
 
 searchClear.addEventListener(
   "click",
@@ -3627,6 +4659,10 @@ searchClear.addEventListener(
 );
 
 
+/* =========================================================
+   FILTERS
+========================================================= */
+
 filterButtons.forEach(
   function(button) {
 
@@ -3648,6 +4684,48 @@ filterButtons.forEach(
 
 
         updateCatalog();
+
+      }
+    );
+
+  }
+);
+
+
+/* =========================================================
+   FILTER SCROLL
+========================================================= */
+
+filterBar.addEventListener(
+  "click",
+  function(event) {
+
+    const button =
+      event.target.closest(
+        ".filter-button"
+      );
+
+
+    if (
+      !button
+    ) {
+
+      return;
+
+    }
+
+
+    button.scrollIntoView(
+      {
+
+        behavior:
+          "smooth",
+
+        block:
+          "nearest",
+
+        inline:
+          "center"
 
       }
     );
@@ -3687,8 +4765,45 @@ menuButton.addEventListener(
       open
     );
 
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      open
+    );
+
   }
 );
+
+
+menu
+  .querySelectorAll("a")
+  .forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          menu.classList.remove(
+            "open"
+          );
+
+
+          menuButton.classList.remove(
+            "active"
+          );
+
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    }
+  );
 
 
 /* =========================================================
@@ -3701,10 +4816,26 @@ heroListingCount.textContent =
   " LISTINGS";
 
 
+activeFilter =
+  "all";
+
+
+setActiveFilterUI(
+  "all"
+);
+
+
 updateCatalog();
 
 
 restoreMemberSession();
+
+
+console.log(
+  "PCH catalog loaded:",
+  products.length,
+  "products"
+);
 
 </script>
 
