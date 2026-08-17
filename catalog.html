@@ -7,7 +7,7 @@
 
 <meta
   name="viewport"
-  content="width=device-width, initial-scale=1.0"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
 >
 
 <meta name="theme-color" content="#050607">
@@ -19,9 +19,9 @@ Research Catalog | Platinum Cellular Health Labs
 
 <style>
 
-/* =========================================
-   RESET
-========================================= */
+/* =========================================================
+   RESET / ROOT
+========================================================= */
 
 * {
   box-sizing: border-box;
@@ -33,18 +33,38 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --black: #050607;
+  --black2: #080a0b;
+  --panel: #0d0f11;
+  --panel2: #111417;
+  --panel3: #15181b;
+  --border: #272c30;
+
+  --gold: #d5ad55;
+  --gold2: #f0d48c;
+  --gold3: #b98931;
+
+  --text: #f5f5f5;
+  --muted: #a7adb2;
+  --muted2: #747b80;
+
+  --silver: #eceeef;
+  --silver2: #9da2a6;
+}
+
 body {
   min-height: 100vh;
 
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(198,160,70,.07),
+      rgba(213,173,85,.075),
       transparent 30%
     ),
     #050607;
 
-  color: #f4f4f4;
+  color: var(--text);
 
   font-family:
     Arial,
@@ -68,30 +88,17 @@ img {
 
 button,
 input {
-  font-family: inherit;
+  font: inherit;
 }
 
 button {
   cursor: pointer;
 }
 
-:root {
-  --black: #050607;
-  --panel: #0d0f11;
-  --panel2: #111417;
-  --border: #252a2e;
-  --gold: #d5ad55;
-  --gold2: #f0d48c;
-  --text: #f5f5f5;
-  --muted: #9da3a8;
-  --silver: #d9d9d9;
-  --silver2: #8d9296;
-}
-
 .shell {
   width:
     min(
-      1180px,
+      1220px,
       calc(100% - 36px)
     );
 
@@ -99,9 +106,9 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    HEADER
-========================================= */
+========================================================= */
 
 .site-header {
   position: sticky;
@@ -113,23 +120,22 @@ button {
     rgba(5,6,7,.97);
 
   backdrop-filter:
-    blur(15px);
+    blur(18px);
 
   border-bottom:
     1px solid rgba(255,255,255,.08);
 }
 
 .nav {
-  min-height: 78px;
+  min-height: 80px;
 
   display: flex;
 
   align-items: center;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
-  gap: 20px;
+  gap: 22px;
 }
 
 .brand {
@@ -137,14 +143,14 @@ button {
 
   align-items: center;
 
-  gap: 12px;
+  gap: 13px;
 
   min-width: 0;
 }
 
 .brand img {
-  width: 52px;
-  height: 52px;
+  width: 54px;
+  height: 54px;
 
   flex-shrink: 0;
 
@@ -153,7 +159,10 @@ button {
   border-radius: 50%;
 
   border:
-    1px solid rgba(213,173,85,.35);
+    1px solid rgba(213,173,85,.38);
+
+  box-shadow:
+    0 0 20px rgba(213,173,85,.06);
 }
 
 .brand-title {
@@ -161,7 +170,7 @@ button {
 
   font-weight: 900;
 
-  letter-spacing: 1px;
+  letter-spacing: 1.1px;
 }
 
 .brand-sub {
@@ -171,7 +180,7 @@ button {
 
   font-size: 8px;
 
-  letter-spacing: 2px;
+  letter-spacing: 2.1px;
 }
 
 .nav-right {
@@ -179,7 +188,7 @@ button {
 
   align-items: center;
 
-  gap: 14px;
+  gap: 15px;
 }
 
 .nav-links {
@@ -189,11 +198,15 @@ button {
 
   gap: 15px;
 
-  color: #b9bdc0;
+  color: #bdc1c4;
 
   font-size: 11px;
 
   font-weight: 700;
+}
+
+.nav-links a {
+  transition: .2s ease;
 }
 
 .nav-links a:hover {
@@ -201,9 +214,9 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    MEMBER AREA
-========================================= */
+========================================================= */
 
 .member-area {
   display: flex;
@@ -220,18 +233,17 @@ button {
 
   justify-content: center;
 
-  min-height: 39px;
+  min-height: 40px;
 
-  padding:
-    0 13px;
+  padding: 0 14px;
 
   border:
-    1px solid rgba(213,173,85,.4);
+    1px solid rgba(213,173,85,.42);
 
-  border-radius: 9px;
+  border-radius: 10px;
 
   background:
-    rgba(213,173,85,.035);
+    rgba(213,173,85,.04);
 
   color: var(--gold2);
 
@@ -239,7 +251,7 @@ button {
 
   font-weight: 900;
 
-  letter-spacing: .7px;
+  letter-spacing: .75px;
 }
 
 .member-signed-in {
@@ -261,8 +273,7 @@ button {
 
   gap: 8px;
 
-  padding:
-    7px 10px;
+  padding: 7px 10px;
 
   border:
     1px solid rgba(213,173,85,.28);
@@ -322,10 +333,9 @@ button {
 
   justify-content: center;
 
-  min-height: 36px;
+  min-height: 37px;
 
-  padding:
-    0 10px;
+  padding: 0 11px;
 
   border:
     1px solid #30353a;
@@ -367,24 +377,24 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE MENU BUTTON
-========================================= */
+========================================================= */
 
 .mobile-menu-button {
   display: none;
 
-  width: 44px;
-  height: 44px;
+  width: 45px;
+  height: 45px;
 
-  min-width: 44px;
+  min-width: 45px;
 
   padding: 10px;
 
   border:
     1px solid #30353a;
 
-  border-radius: 9px;
+  border-radius: 10px;
 
   background: #0d1012;
 }
@@ -421,15 +431,15 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE MENU
-========================================= */
+========================================================= */
 
 .mobile-menu {
   display: none;
 
   background:
-    rgba(6,7,8,.99);
+    rgba(6,7,8,.995);
 
   border-top:
     1px solid #202428;
@@ -438,7 +448,7 @@ button {
     1px solid #252a2e;
 
   box-shadow:
-    0 20px 40px rgba(0,0,0,.4);
+    0 20px 40px rgba(0,0,0,.45);
 }
 
 .mobile-menu.open {
@@ -448,13 +458,11 @@ button {
 .mobile-menu-inner {
   display: grid;
 
-  padding:
-    10px 0 18px;
+  padding: 10px 0 18px;
 }
 
 .mobile-menu-inner > a {
-  padding:
-    14px 3px;
+  padding: 14px 3px;
 
   border-bottom:
     1px solid #1f2326;
@@ -467,9 +475,9 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE MEMBER BOX
-========================================= */
+========================================================= */
 
 .mobile-member-box {
   margin-bottom: 12px;
@@ -479,7 +487,7 @@ button {
   border:
     1px solid rgba(213,173,85,.25);
 
-  border-radius: 12px;
+  border-radius: 13px;
 
   background:
     rgba(213,173,85,.025);
@@ -494,7 +502,7 @@ button {
 
   width: 100%;
 
-  min-height: 48px;
+  min-height: 49px;
 
   border-radius: 9px;
 
@@ -597,9 +605,9 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    PROMO
-========================================= */
+========================================================= */
 
 .promo-banner {
   width: 100%;
@@ -631,8 +639,7 @@ button {
 }
 
 .promo-track span {
-  padding:
-    8px 34px;
+  padding: 9px 36px;
 
   font-size: 9px;
 
@@ -654,13 +661,12 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    HERO
-========================================= */
+========================================================= */
 
 .page-hero {
-  padding:
-    70px 0 50px;
+  padding: 70px 0 50px;
 
   border-bottom:
     1px solid var(--border);
@@ -730,8 +736,7 @@ button {
 }
 
 .hero-meta span {
-  padding:
-    7px 12px;
+  padding: 7px 12px;
 
   border:
     1px solid #292e32;
@@ -750,13 +755,12 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    CHECKOUT AREA
-========================================= */
+========================================================= */
 
 .checkout-section {
-  padding:
-    30px 0;
+  padding: 30px 0;
 
   background: #080a0b;
 
@@ -765,17 +769,17 @@ button {
 }
 
 .checkout-box {
-  padding: 28px;
+  padding: 30px;
 
   border:
-    1px solid rgba(213,173,85,.28);
+    1px solid rgba(213,173,85,.29);
 
-  border-radius: 14px;
+  border-radius: 16px;
 
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(213,173,85,.07),
+      rgba(213,173,85,.075),
       transparent 65%
     ),
     #0c0f11;
@@ -784,7 +788,7 @@ button {
 }
 
 .checkout-content {
-  max-width: 650px;
+  max-width: 680px;
 
   margin: auto;
 }
@@ -794,9 +798,9 @@ button {
 
   font-size:
     clamp(
-      25px,
+      26px,
       5vw,
-      36px
+      38px
     );
 }
 
@@ -817,12 +821,11 @@ button {
 
   justify-content: center;
 
-  min-height: 50px;
+  min-height: 52px;
 
-  padding:
-    0 27px;
+  padding: 0 29px;
 
-  border-radius: 10px;
+  border-radius: 11px;
 
   background:
     linear-gradient(
@@ -841,7 +844,7 @@ button {
 }
 
 .checkout-small {
-  margin-top: 10px;
+  margin-top: 11px;
 
   color: #737a7f;
 
@@ -853,76 +856,83 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    CATALOG
-========================================= */
+========================================================= */
 
 .catalog-section {
-  padding:
-    30px 0 100px;
+  padding: 30px 0 100px;
 }
 
 .search-wrap {
   position: sticky;
 
-  top: 78px;
+  top: 80px;
 
   z-index: 100;
 
-  padding:
-    12px 0 10px;
+  padding: 13px 0 12px;
 
   background:
-    rgba(5,6,7,.96);
+    rgba(5,6,7,.975);
 
   backdrop-filter:
-    blur(15px);
+    blur(18px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.025);
 }
 
 .search-box {
+  position: relative;
+
   display: flex;
 
   align-items: center;
 
-  gap: 10px;
+  gap: 11px;
 
   width: 100%;
 
-  padding:
-    0 16px;
+  padding: 0 17px;
 
   border:
-    1px solid #2c3135;
+    1px solid #343a3f;
 
-  border-radius: 13px;
+  border-radius: 15px;
 
   background:
     linear-gradient(
       145deg,
-      #101315,
+      #111416,
       #090b0c
     );
+
+  transition: .2s ease;
 }
 
 .search-box:focus-within {
   border-color:
-    rgba(213,173,85,.7);
+    rgba(213,173,85,.85);
 
   box-shadow:
     0 0 0 3px
-    rgba(213,173,85,.06);
+    rgba(213,173,85,.07),
+    0 8px 26px rgba(0,0,0,.22);
 }
 
 .search-icon {
+  flex-shrink: 0;
+
   color: var(--gold);
 
-  font-size: 23px;
+  font-size: 25px;
 }
 
 .search-box input {
   width: 100%;
 
-  min-height: 56px;
+  min-height: 60px;
 
   border: 0;
 
@@ -932,17 +942,46 @@ button {
 
   color: #fff;
 
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .search-box input::placeholder {
   color: #666d72;
 }
 
+.search-clear {
+  display: none;
 
-/* =========================================
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #171a1d;
+
+  color: #8b9297;
+
+  font-size: 16px;
+
+  font-weight: 900;
+}
+
+.search-clear.visible {
+  display: flex;
+}
+
+
+/* =========================================================
    FILTER BUBBLES
-========================================= */
+========================================================= */
 
 .filter-bar {
   display: grid;
@@ -953,70 +992,77 @@ button {
       minmax(0,1fr)
     );
 
-  gap: 10px;
+  gap: 11px;
 
-  margin-top: 12px;
+  margin-top: 13px;
 }
 
 .filter-button {
-  min-height: 48px;
+  min-height: 55px;
 
-  padding:
-    9px 14px;
+  padding: 11px 16px;
 
   border:
-    1px solid #32373b;
+    1px solid #343a3f;
 
-  border-radius: 12px;
+  border-radius: 15px;
 
   background:
     linear-gradient(
       145deg,
-      #111416,
-      #0a0c0e
+      #121517,
+      #090b0d
     );
 
-  color: #b3b8bc;
+  color: #bec2c5;
 
-  font-size: 9px;
+  font-size: 10px;
 
   font-weight: 900;
 
-  letter-spacing: .8px;
+  letter-spacing: .9px;
 
-  line-height: 1.3;
+  line-height: 1.25;
 
-  transition: .2s ease;
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    color .2s ease,
+    background .2s ease;
 }
 
 .filter-button:hover {
+  transform:
+    translateY(-1px);
+
   color: var(--gold2);
 
   border-color:
-    rgba(213,173,85,.55);
+    rgba(213,173,85,.6);
 }
 
 .filter-button.active {
-  border-color: var(--gold);
+  border-color:
+    rgba(240,212,140,.9);
 
   background:
     linear-gradient(
       135deg,
       #b98a32,
-      #f0d48c
+      #efd17b
     );
 
   color: #080909;
 
   box-shadow:
-    0 7px 18px
-    rgba(213,173,85,.15);
+    0 8px 20px
+    rgba(213,173,85,.17);
 }
 
 
-/* =========================================
+/* =========================================================
    TOOLBAR
-========================================= */
+========================================================= */
 
 .catalog-toolbar {
   display: flex;
@@ -1027,18 +1073,17 @@ button {
 
   gap: 18px;
 
-  margin:
-    22px 0 18px;
+  margin: 26px 0 18px;
 }
 
 .catalog-count {
-  color: #777e83;
+  color: #8d9499;
 
-  font-size: 10px;
+  font-size: 11px;
 
-  font-weight: 800;
+  font-weight: 900;
 
-  letter-spacing: .5px;
+  letter-spacing: .65px;
 }
 
 .catalog-checkout {
@@ -1048,12 +1093,11 @@ button {
 
   justify-content: center;
 
-  min-height: 40px;
+  min-height: 42px;
 
-  padding:
-    0 16px;
+  padding: 0 17px;
 
-  border-radius: 8px;
+  border-radius: 9px;
 
   background:
     linear-gradient(
@@ -1070,9 +1114,9 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    PRODUCT GRID
-========================================= */
+========================================================= */
 
 .catalog-grid {
   display: grid;
@@ -1083,18 +1127,18 @@ button {
       minmax(0,1fr)
     );
 
-  gap: 18px;
+  gap: 20px;
 }
 
 
-/* =========================================
+/* =========================================================
    PRODUCT CARD
-========================================= */
+========================================================= */
 
 .product-card {
   position: relative;
 
-  min-height: 345px;
+  min-height: 420px;
 
   overflow: hidden;
 
@@ -1102,30 +1146,33 @@ button {
 
   flex-direction: column;
 
-  padding: 25px;
+  padding: 31px;
 
   border:
-    1px solid var(--border);
+    1px solid #292e32;
 
-  border-radius: 17px;
+  border-radius: 21px;
 
   background:
     radial-gradient(
-      circle at 87% 40%,
-      rgba(213,173,85,.09),
-      transparent 31%
+      circle at 84% 35%,
+      rgba(213,173,85,.075),
+      transparent 34%
     ),
     linear-gradient(
       145deg,
-      #101315,
-      #090b0c
+      #111416,
+      #090b0c 70%
     );
 
   box-shadow:
-    inset 0 1px 0
-    rgba(255,255,255,.02);
+    inset 0 1px 0 rgba(255,255,255,.025),
+    0 12px 32px rgba(0,0,0,.18);
 
-  transition: .25s ease;
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
 }
 
 .product-card:hover {
@@ -1133,7 +1180,11 @@ button {
     translateY(-3px);
 
   border-color:
-    rgba(213,173,85,.42);
+    rgba(213,173,85,.5);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 18px 40px rgba(0,0,0,.28);
 }
 
 .product-main {
@@ -1142,9 +1193,9 @@ button {
   z-index: 3;
 
   width:
-    calc(100% - 148px);
+    calc(100% - 160px);
 
-  min-height: 205px;
+  min-height: 265px;
 }
 
 .card-top {
@@ -1160,11 +1211,11 @@ button {
 .category {
   color: var(--gold);
 
-  font-size: 8px;
+  font-size: 10px;
 
   font-weight: 900;
 
-  letter-spacing: 1.4px;
+  letter-spacing: 1.6px;
 }
 
 .amount-badge {
@@ -1174,43 +1225,45 @@ button {
 
   justify-content: center;
 
-  min-height: 28px;
+  min-height: 33px;
 
-  padding:
-    0 10px;
+  padding: 0 12px;
 
   border:
-    1px solid #3b4044;
+    1px solid #42474b;
 
-  border-radius: 8px;
+  border-radius: 10px;
 
   background:
     rgba(255,255,255,.025);
 
-  color: #d8dadc;
+  color: #e0e2e4;
 
-  font-size: 8px;
+  font-size: 9px;
 
   font-weight: 900;
 
-  letter-spacing: .7px;
+  letter-spacing: .8px;
 }
 
 .product-card h2 {
-  margin:
-    20px 0 8px;
+  margin: 23px 0 12px;
 
-  font-size: 28px;
+  font-size: 32px;
 
   line-height: 1.08;
+
+  letter-spacing: -.5px;
 }
 
 .product-description {
-  color: var(--muted);
+  max-width: 390px;
 
-  font-size: 12px;
+  color: #adb3b7;
 
-  line-height: 1.65;
+  font-size: 14px;
+
+  line-height: 1.72;
 }
 
 .coa-indicator {
@@ -1218,45 +1271,44 @@ button {
 
   align-items: center;
 
-  gap: 6px;
+  gap: 8px;
 
-  margin-top: 12px;
+  margin-top: 17px;
 
   color: var(--gold2);
 
-  font-size: 7px;
+  font-size: 8px;
 
   font-weight: 900;
 
-  letter-spacing: 1px;
+  letter-spacing: 1.1px;
 }
 
 .coa-dot {
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 7px;
 
   border-radius: 50%;
 
   background: var(--gold);
 
   box-shadow:
-    0 0 8px
-    rgba(213,173,85,.5);
+    0 0 10px rgba(213,173,85,.62);
 }
 
 
-/* =========================================
-   PREMIUM PCH VIAL
-========================================= */
+/* =========================================================
+   NEW SLEEK GLASS VIAL
+========================================================= */
 
 .vial-area {
   position: absolute;
 
-  top: 38px;
-  right: 24px;
+  top: 52px;
+  right: 27px;
 
-  width: 125px;
-  height: 210px;
+  width: 135px;
+  height: 240px;
 
   display: flex;
 
@@ -1272,91 +1324,158 @@ button {
 
   bottom: -5px;
 
-  width: 145px;
-  height: 110px;
+  width: 135px;
+  height: 85px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       ellipse,
-      rgba(213,173,85,.28),
-      rgba(213,173,85,.09) 40%,
-      transparent 70%
+      rgba(213,173,85,.19),
+      rgba(213,173,85,.055) 45%,
+      transparent 73%
     );
 
-  filter: blur(13px);
+  filter: blur(15px);
+
+  opacity: .7;
 }
+
+
+/* actual glass bottle */
 
 .vial {
   position: relative;
 
-  width: 82px;
-  height: 142px;
+  width: 76px;
+  height: 158px;
 
   border-radius:
-    10px 10px 17px 17px;
+    18px 18px 21px 21px;
 
   background:
     linear-gradient(
       90deg,
-      #050607 0%,
-      #25282a 20%,
-      #0b0c0d 42%,
-      #030404 68%,
-      #202325 88%,
-      #08090a 100%
+      rgba(220,225,228,.16) 0%,
+      rgba(255,255,255,.07) 8%,
+      rgba(33,37,39,.18) 18%,
+      rgba(11,13,14,.72) 34%,
+      rgba(4,5,5,.95) 55%,
+      rgba(18,21,22,.62) 74%,
+      rgba(255,255,255,.08) 91%,
+      rgba(151,158,162,.14) 100%
     );
 
   border:
-    1px solid #4a4e51;
+    1px solid rgba(190,196,200,.44);
 
   box-shadow:
-    0 20px 32px
-    rgba(0,0,0,.8),
+    0 18px 34px rgba(0,0,0,.72),
+    inset 5px 0 8px rgba(255,255,255,.08),
+    inset -5px 0 10px rgba(255,255,255,.025),
+    inset 0 -8px 14px rgba(255,255,255,.025);
 
-    inset 7px 0 15px
-    rgba(255,255,255,.04),
-
-    inset -8px 0 16px
-    rgba(0,0,0,.58);
+  backdrop-filter:
+    blur(2px);
 }
 
 
-/* SILVER METAL CAP */
+/* glass shine */
+
+.vial::before {
+  content: "";
+
+  position: absolute;
+
+  top: 14px;
+  bottom: 13px;
+  left: 5px;
+
+  width: 7px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.28),
+      rgba(255,255,255,.04)
+    );
+
+  opacity: .48;
+
+  filter:
+    blur(.2px);
+}
+
+
+/* glass base */
+
+.vial::after {
+  content: "";
+
+  position: absolute;
+
+  left: 5px;
+  right: 5px;
+  bottom: 3px;
+
+  height: 10px;
+
+  border-radius:
+    0 0 16px 16px;
+
+  border-bottom:
+    1px solid rgba(232,235,237,.34);
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(255,255,255,.08)
+    );
+}
+
+
+/* =========================================================
+   VIAL CAP
+========================================================= */
 
 .vial-cap {
   position: absolute;
 
-  top: -28px;
-  left: 4px;
+  top: -31px;
+  left: 3px;
 
-  width: 72px;
-  height: 31px;
+  width: 68px;
+  height: 33px;
 
   border-radius:
-    9px 9px 5px 5px;
+    9px 9px 6px 6px;
 
   background:
     linear-gradient(
       90deg,
-      #676b6e,
-      #eeeeee 22%,
-      #9ca1a4 48%,
-      #eceeef 72%,
-      #666a6d
+      #74797c 0%,
+      #e7e8e9 14%,
+      #a3a7a9 30%,
+      #fafafa 49%,
+      #a2a6a8 68%,
+      #e7e8e9 84%,
+      #686d70 100%
     );
 
   border:
-    1px solid #8b8f92;
+    1px solid #92979a;
 
   box-shadow:
-    0 4px 8px
-    rgba(0,0,0,.7);
+    0 4px 8px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.85);
 }
 
 
-/* BLACK RUBBER TOP */
+/* black rubber top */
 
 .vial-cap::before {
   content: "";
@@ -1364,62 +1483,99 @@ button {
   position: absolute;
 
   top: -10px;
-  left: 4px;
+  left: 5px;
 
-  width: 62px;
+  width: 56px;
   height: 14px;
 
   border-radius:
-    10px 10px 4px 4px;
+    10px 10px 5px 5px;
 
   background:
     linear-gradient(
       180deg,
-      #252729,
+      #282a2c,
       #070809
     );
 
   border:
-    1px solid #333638;
+    1px solid #3b3e40;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08);
 }
 
 
-/* BLACK NECK */
+/* cap lower ring */
+
+.vial-cap::after {
+  content: "";
+
+  position: absolute;
+
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+
+  height: 5px;
+
+  border-radius: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.25),
+      rgba(255,255,255,.4),
+      rgba(0,0,0,.18)
+    );
+
+  opacity: .65;
+}
+
+
+/* glass neck */
 
 .vial-neck {
   position: absolute;
 
-  top: 0;
-  left: 10px;
+  top: -1px;
+  left: 11px;
 
-  width: 60px;
-  height: 14px;
+  width: 52px;
+  height: 18px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #1e2022,
-      #050607
-    );
+  border-left:
+    1px solid rgba(210,215,218,.35);
+
+  border-right:
+    1px solid rgba(210,215,218,.35);
 
   border-radius:
     0 0 7px 7px;
 
-  opacity: .9;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.11),
+      rgba(10,12,13,.8),
+      rgba(255,255,255,.07)
+    );
 }
 
 
-/* LABEL */
+/* =========================================================
+   VIAL LABEL
+========================================================= */
 
 .vial-label {
   position: absolute;
 
-  left: 7px;
-  right: 7px;
+  left: 6px;
+  right: 6px;
 
   top: 34px;
 
-  min-height: 92px;
+  min-height: 106px;
 
   display: flex;
 
@@ -1430,25 +1586,27 @@ button {
   justify-content: flex-start;
 
   padding:
-    5px 4px 5px;
+    7px 4px 6px;
 
   border:
-    1px solid rgba(213,173,85,.44);
+    1px solid rgba(213,173,85,.58);
+
+  border-radius: 2px;
 
   background:
     linear-gradient(
       145deg,
-      #101112,
-      #030404
+      rgba(17,18,19,.99),
+      rgba(2,3,3,.99)
     );
 
   text-align: center;
 
   overflow: hidden;
+
+  box-shadow:
+    0 0 12px rgba(0,0,0,.22);
 }
-
-
-/* FAINT HEX TEXTURE */
 
 .vial-label::before {
   content: "";
@@ -1457,15 +1615,15 @@ button {
 
   inset: 0;
 
-  opacity: .12;
+  opacity: .1;
 
   background:
     repeating-linear-gradient(
       60deg,
       transparent 0,
-      transparent 8px,
-      rgba(213,173,85,.11) 8px,
-      rgba(213,173,85,.11) 9px
+      transparent 9px,
+      rgba(213,173,85,.10) 9px,
+      rgba(213,173,85,.10) 10px
     );
 
   pointer-events: none;
@@ -1474,8 +1632,8 @@ button {
 .vial-logo {
   position: relative;
 
-  width: 29px;
-  height: 29px;
+  width: 28px;
+  height: 28px;
 
   border-radius: 50%;
 
@@ -1490,15 +1648,18 @@ button {
 .vial-brand {
   position: relative;
 
-  color: #e1e1e1;
+  color: #ededed;
 
-  font-family: Georgia, serif;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
-  font-size: 6.5px;
+  font-size: 6px;
 
   font-weight: 700;
 
-  letter-spacing: 1px;
+  letter-spacing: .95px;
 
   line-height: 1.1;
 }
@@ -1510,21 +1671,20 @@ button {
 
   color: var(--gold);
 
-  font-size: 4px;
+  font-size: 3.6px;
 
   font-weight: 900;
 
-  letter-spacing: .8px;
+  letter-spacing: .65px;
 }
 
 .vial-divider {
   position: relative;
 
-  width: 35px;
+  width: 38px;
   height: 1px;
 
-  margin:
-    4px 0 3px;
+  margin: 5px 0 4px;
 
   background:
     linear-gradient(
@@ -1540,15 +1700,17 @@ button {
 
   width: 100%;
 
-  color: #f1f1f1;
+  padding: 0 1px;
 
-  font-size: 7px;
+  color: #f6f6f6;
+
+  font-size: 6.8px;
 
   font-weight: 900;
 
-  letter-spacing: .35px;
+  letter-spacing: .3px;
 
-  line-height: 1.15;
+  line-height: 1.14;
 
   text-transform: uppercase;
 
@@ -1558,15 +1720,15 @@ button {
 .vial-amount {
   position: relative;
 
-  margin-top: 4px;
+  margin-top: 5px;
 
   color: var(--gold2);
 
-  font-size: 8px;
+  font-size: 8.3px;
 
   font-weight: 900;
 
-  letter-spacing: .7px;
+  letter-spacing: .8px;
 
   line-height: 1;
 }
@@ -1574,21 +1736,20 @@ button {
 .vial-research {
   position: relative;
 
-  margin-top: 4px;
+  margin-top: 5px;
 
-  padding:
-    2px 4px;
+  padding: 2px 4px;
 
   border:
-    1px solid rgba(213,173,85,.45);
+    1px solid rgba(213,173,85,.46);
 
   color: #d5ad55;
 
-  font-size: 3.4px;
+  font-size: 3px;
 
   font-weight: 900;
 
-  letter-spacing: .35px;
+  letter-spacing: .3px;
 
   line-height: 1;
 }
@@ -1596,26 +1757,26 @@ button {
 .vial-bottom-line {
   position: absolute;
 
-  left: 7px;
-  right: 7px;
+  left: 8px;
+  right: 8px;
 
-  bottom: 6px;
+  bottom: 7px;
 
-  height: 2px;
+  height: 1px;
 
   background:
     linear-gradient(
       90deg,
       transparent,
-      var(--gold),
+      rgba(240,212,140,.68),
       transparent
     );
 }
 
 
-/* =========================================
+/* =========================================================
    PRICE / ACTIONS
-========================================= */
+========================================================= */
 
 .product-bottom {
   position: relative;
@@ -1628,38 +1789,40 @@ button {
 
   justify-content: space-between;
 
-  gap: 15px;
+  gap: 18px;
 
   margin-top: auto;
 
-  padding-top: 16px;
+  padding-top: 20px;
 
   border-top:
-    1px solid #22272a;
+    1px solid #272c30;
 }
 
 .price-label {
   display: block;
 
-  color: #70777c;
+  color: #777e83;
 
-  font-size: 7px;
+  font-size: 8px;
 
   font-weight: 900;
 
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 
 .price {
-  margin-top: 2px;
+  margin-top: 3px;
 
   color: var(--gold2);
 
-  font-size: 31px;
+  font-size: 37px;
 
   line-height: 1;
 
   font-weight: 900;
+
+  letter-spacing: -1px;
 }
 
 .product-actions {
@@ -1667,7 +1830,7 @@ button {
 
   align-items: center;
 
-  gap: 8px;
+  gap: 9px;
 }
 
 .btn {
@@ -1677,35 +1840,38 @@ button {
 
   justify-content: center;
 
-  min-height: 40px;
+  min-height: 44px;
 
-  padding:
-    0 14px;
+  padding: 0 16px;
 
   border:
-    1px solid #34393d;
+    1px solid #3a4044;
 
-  border-radius: 8px;
+  border-radius: 10px;
 
   background: #101214;
 
   color: #f4f4f4;
 
-  font-size: 8px;
+  font-size: 9px;
 
   font-weight: 900;
 
-  letter-spacing: .6px;
+  letter-spacing: .65px;
 }
 
 .btn-coa {
   color: var(--gold2);
 
   border-color:
-    rgba(213,173,85,.48);
+    rgba(213,173,85,.55);
 
   background:
-    rgba(213,173,85,.03);
+    linear-gradient(
+      145deg,
+      rgba(213,173,85,.06),
+      rgba(213,173,85,.015)
+    );
 }
 
 .btn-unavailable {
@@ -1715,27 +1881,28 @@ button {
 
   justify-content: center;
 
-  min-height: 40px;
+  min-height: 44px;
 
-  padding:
-    0 12px;
+  padding: 0 14px;
 
   border:
-    1px solid #292e32;
+    1px solid #30353a;
 
-  border-radius: 8px;
+  border-radius: 10px;
 
   background: #0b0d0f;
 
-  color: #656b70;
+  color: #737a7f;
 
-  font-size: 7px;
+  font-size: 8px;
 
   font-weight: 900;
+
+  letter-spacing: .4px;
 }
 
 .research-note {
-  color: #666d72;
+  color: #6d7479;
 
   font-size: 6px;
 
@@ -1745,22 +1912,21 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    EMPTY RESULTS
-========================================= */
+========================================================= */
 
 .no-results {
   display: none;
 
   margin-top: 20px;
 
-  padding:
-    40px 20px;
+  padding: 44px 22px;
 
   border:
     1px solid var(--border);
 
-  border-radius: 14px;
+  border-radius: 15px;
 
   background: #0d1012;
 
@@ -1772,23 +1938,23 @@ button {
 .no-results strong {
   color: #d6d8da;
 
-  font-size: 18px;
+  font-size: 19px;
 }
 
 
-/* =========================================
+/* =========================================================
    NOTICE
-========================================= */
+========================================================= */
 
 .catalog-notice {
-  margin-top: 36px;
+  margin-top: 38px;
 
-  padding: 22px;
+  padding: 24px;
 
   border:
     1px solid rgba(213,173,85,.20);
 
-  border-radius: 13px;
+  border-radius: 14px;
 
   background:
     rgba(213,173,85,.025);
@@ -1797,11 +1963,11 @@ button {
 .catalog-notice strong {
   display: block;
 
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 
   color: var(--gold2);
 
-  font-size: 10px;
+  font-size: 11px;
 
   letter-spacing: 1px;
 }
@@ -1809,15 +1975,15 @@ button {
 .catalog-notice p {
   color: var(--muted);
 
-  font-size: 11px;
+  font-size: 12px;
 
   line-height: 1.8;
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE STICKY CHECKOUT
-========================================= */
+========================================================= */
 
 .mobile-sticky-checkout {
   display: none;
@@ -1838,19 +2004,18 @@ button {
   padding: 4px;
 
   border:
-    1px solid rgba(213,173,85,.28);
+    1px solid rgba(213,173,85,.3);
 
-  border-radius: 13px;
+  border-radius: 14px;
 
   background:
-    rgba(5,6,7,.94);
+    rgba(5,6,7,.95);
 
   backdrop-filter:
-    blur(14px);
+    blur(16px);
 
   box-shadow:
-    0 10px 32px
-    rgba(0,0,0,.6);
+    0 10px 32px rgba(0,0,0,.65);
 }
 
 .mobile-sticky-checkout a {
@@ -1862,9 +2027,9 @@ button {
 
   width: 100%;
 
-  min-height: 53px;
+  min-height: 55px;
 
-  border-radius: 9px;
+  border-radius: 10px;
 
   background:
     linear-gradient(
@@ -1883,13 +2048,12 @@ button {
 }
 
 
-/* =========================================
+/* =========================================================
    FOOTER
-========================================= */
+========================================================= */
 
 footer {
-  padding:
-    40px 0;
+  padding: 42px 0;
 
   border-top:
     1px solid var(--border);
@@ -1900,8 +2064,7 @@ footer {
 .footer-grid {
   display: flex;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
   gap: 30px;
 
@@ -1919,9 +2082,9 @@ footer {
 }
 
 
-/* =========================================
+/* =========================================================
    TABLET
-========================================= */
+========================================================= */
 
 @media(max-width:1100px) {
 
@@ -1935,24 +2098,24 @@ footer {
 @media(max-width:900px) {
 
   body {
-    padding-bottom: 82px;
+    padding-bottom: 84px;
   }
 
   .shell {
     width:
       min(
         calc(100% - 28px),
-        1180px
+        1220px
       );
   }
 
   .nav {
-    min-height: 66px;
+    min-height: 68px;
   }
 
   .brand img {
-    width: 44px;
-    height: 44px;
+    width: 45px;
+    height: 45px;
   }
 
   .brand-title {
@@ -1972,7 +2135,7 @@ footer {
   }
 
   .search-wrap {
-    top: 66px;
+    top: 68px;
   }
 
   .catalog-grid {
@@ -1994,15 +2157,14 @@ footer {
 }
 
 
-/* =========================================
-   MOBILE DESIGN
-========================================= */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media(max-width:650px) {
 
   .promo-track span {
-    padding:
-      8px 27px;
+    padding: 9px 29px;
 
     font-size: 8.5px;
   }
@@ -2011,64 +2173,60 @@ footer {
   /* HERO */
 
   .page-hero {
-    padding:
-      32px 0 28px;
+    padding: 34px 0 30px;
   }
 
   .back-link {
-    margin-bottom: 18px;
+    margin-bottom: 19px;
   }
 
   .page-hero h1 {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
 
-    font-size: 35px;
+    font-size: 36px;
   }
 
   .page-hero p {
-    font-size: 12px;
+    font-size: 13px;
 
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   .hero-meta {
-    margin-top: 15px;
+    margin-top: 16px;
   }
 
   .hero-meta span {
-    padding:
-      7px 10px;
+    padding: 7px 10px;
 
     font-size: 7px;
   }
 
 
-  /* CHECKOUT INTRO */
+  /* CHECKOUT */
 
   .checkout-section {
-    padding:
-      18px 0;
+    padding: 19px 0;
   }
 
   .checkout-box {
-    padding:
-      19px 17px;
+    padding: 21px 18px;
   }
 
   .checkout-box h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .checkout-box p {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 
-    font-size: 10.5px;
+    font-size: 11px;
   }
 
   .checkout-button {
     width: 100%;
 
-    min-height: 46px;
+    min-height: 48px;
 
     font-size: 9px;
   }
@@ -2081,47 +2239,41 @@ footer {
   }
 
   .search-wrap {
-    padding:
-      9px 0 7px;
+    padding: 10px 0 9px;
   }
 
   .search-box {
-    padding:
-      0 14px;
+    padding: 0 15px;
 
-    border-radius: 12px;
+    border-radius: 14px;
   }
 
   .search-box input {
-    min-height: 52px;
+    min-height: 58px;
 
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .search-icon {
-    font-size: 22px;
+    font-size: 24px;
   }
 
 
-  /* =========================================
-     BIGGER MOBILE FILTER BUBBLES
-  ========================================= */
+  /* FILTER BUBBLES */
 
   .filter-bar {
     display: flex;
 
     width: 100%;
 
-    gap: 9px;
+    gap: 11px;
 
     overflow-x: auto;
-
     overflow-y: hidden;
 
-    margin-top: 10px;
+    margin-top: 12px;
 
-    padding:
-      2px 2px 8px;
+    padding: 2px 2px 10px;
 
     scrollbar-width: none;
 
@@ -2133,181 +2285,179 @@ footer {
   }
 
   .filter-button {
-    flex:
-      0 0 auto;
+    flex: 0 0 auto;
 
-    min-height: 47px;
+    min-height: 58px;
 
-    padding:
-      0 18px;
+    padding: 0 23px;
 
     border-radius: 100px;
 
     white-space: nowrap;
 
-    font-size: 8px;
+    font-size: 9px;
 
-    letter-spacing: .75px;
+    letter-spacing: .8px;
   }
 
 
   /* TOOLBAR */
 
   .catalog-toolbar {
-    margin:
-      17px 0 13px;
+    margin: 19px 0 14px;
   }
 
   .catalog-count {
-    font-size: 8px;
+    font-size: 9px;
   }
 
 
   /* PRODUCT CARD */
 
   .catalog-grid {
-    gap: 14px;
+    gap: 17px;
   }
 
   .product-card {
-    min-height: 292px;
+    min-height: 365px;
 
-    padding:
-      20px;
+    padding: 25px 22px;
 
-    border-radius: 15px;
+    border-radius: 19px;
   }
 
   .product-main {
     width:
-      calc(100% - 118px);
+      calc(100% - 120px);
 
-    min-height: 180px;
+    min-height: 245px;
   }
 
   .card-top {
-    gap: 6px;
+    gap: 8px;
   }
 
   .category {
-    font-size: 7px;
+    font-size: 9px;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.25px;
   }
 
   .amount-badge {
-    min-height: 25px;
+    min-height: 30px;
 
-    padding:
-      0 8px;
+    padding: 0 10px;
 
-    font-size: 6.5px;
+    font-size: 8px;
   }
 
   .product-card h2 {
-    margin:
-      15px 0 6px;
+    margin: 19px 0 9px;
 
-    font-size: 23px;
+    font-size: 29px;
+
+    line-height: 1.08;
   }
 
   .product-description {
-    font-size: 10px;
+    font-size: 13px;
 
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   .coa-indicator {
-    margin-top: 8px;
+    margin-top: 13px;
 
-    font-size: 6px;
+    font-size: 7px;
   }
 
 
-  /* =========================================
-     LARGER PREMIUM MOBILE VIAL
-  ========================================= */
+  /* SLEEK MOBILE VIAL */
 
   .vial-area {
-    top: 47px;
-    right: 15px;
+    top: 67px;
+    right: 17px;
 
-    width: 98px;
-    height: 165px;
+    width: 100px;
+    height: 190px;
   }
 
   .vial-glow {
-    width: 110px;
-    height: 80px;
+    width: 104px;
+    height: 70px;
   }
 
   .vial {
-    width: 66px;
-    height: 116px;
+    width: 64px;
+    height: 134px;
 
     border-radius:
-      8px 8px 13px 13px;
+      15px 15px 18px 18px;
+  }
+
+  .vial::before {
+    left: 4px;
+
+    width: 6px;
   }
 
   .vial-cap {
-    top: -23px;
-    left: 3px;
+    top: -27px;
+    left: 2px;
 
     width: 58px;
-    height: 26px;
+    height: 29px;
   }
 
   .vial-cap::before {
-    top: -8px;
+    top: -9px;
     left: 4px;
 
     width: 48px;
-    height: 11px;
+    height: 13px;
   }
 
   .vial-neck {
-    left: 8px;
+    left: 9px;
 
-    width: 48px;
-    height: 11px;
+    width: 44px;
+    height: 15px;
   }
 
   .vial-label {
     left: 5px;
     right: 5px;
 
-    top: 27px;
+    top: 29px;
 
-    min-height: 78px;
+    min-height: 91px;
 
-    padding:
-      4px 3px;
+    padding: 5px 3px 5px;
   }
 
   .vial-logo {
-    width: 22px;
-    height: 22px;
+    width: 23px;
+    height: 23px;
 
     margin-bottom: 2px;
   }
 
   .vial-brand {
-    font-size: 5.1px;
+    font-size: 5px;
 
-    letter-spacing: .7px;
+    letter-spacing: .72px;
   }
 
   .vial-labs {
-    font-size: 3.3px;
+    font-size: 3px;
 
-    letter-spacing: .6px;
+    letter-spacing: .5px;
   }
 
   .vial-divider {
-    width: 28px;
+    width: 31px;
 
-    margin:
-      3px 0 2px;
+    margin: 4px 0 3px;
   }
 
   .vial-product {
@@ -2317,54 +2467,52 @@ footer {
   }
 
   .vial-amount {
-    margin-top: 3px;
+    margin-top: 4px;
 
-    font-size: 6.8px;
+    font-size: 7px;
   }
 
   .vial-research {
-    margin-top: 3px;
+    margin-top: 4px;
 
-    font-size: 2.7px;
+    font-size: 2.5px;
   }
 
 
-  /* CARD BOTTOM */
+  /* BOTTOM */
 
   .product-bottom {
-    gap: 8px;
+    gap: 9px;
 
-    padding-top: 12px;
+    padding-top: 16px;
   }
 
   .price-label {
-    font-size: 5.8px;
+    font-size: 7px;
   }
 
   .price {
-    font-size: 28px;
+    font-size: 34px;
   }
 
   .product-actions {
-    gap: 6px;
+    gap: 7px;
   }
 
   .btn {
-    min-height: 36px;
+    min-height: 42px;
 
-    padding:
-      0 11px;
+    padding: 0 14px;
 
-    font-size: 6.7px;
+    font-size: 8px;
   }
 
   .btn-unavailable {
-    min-height: 36px;
+    min-height: 42px;
 
-    padding:
-      0 10px;
+    padding: 0 12px;
 
-    font-size: 5.7px;
+    font-size: 7px;
   }
 
   .research-note {
@@ -2375,25 +2523,25 @@ footer {
   /* NOTICE */
 
   .catalog-notice {
-    margin-top: 26px;
+    margin-top: 28px;
 
-    padding: 18px;
+    padding: 19px;
   }
 
   .catalog-notice strong {
-    font-size: 8.5px;
+    font-size: 9px;
   }
 
   .catalog-notice p {
-    font-size: 9px;
+    font-size: 10px;
   }
 
 }
 
 
-/* =========================================
+/* =========================================================
    SMALL MOBILE
-========================================= */
+========================================================= */
 
 @media(max-width:520px) {
 
@@ -2403,86 +2551,115 @@ footer {
   }
 
   .nav {
-    min-height: 62px;
+    min-height: 64px;
   }
 
   .brand {
-    gap: 8px;
+    gap: 9px;
   }
 
   .brand img {
-    width: 39px;
-    height: 39px;
+    width: 40px;
+    height: 40px;
   }
 
   .brand-title {
-    font-size: 8.5px;
+    font-size: 8.8px;
 
-    letter-spacing: .55px;
+    letter-spacing: .6px;
   }
 
   .brand-sub {
-    font-size: 5.5px;
+    font-size: 5.7px;
 
     letter-spacing: 1.1px;
   }
 
   .mobile-menu-button {
-    width: 40px;
-    height: 40px;
+    width: 41px;
+    height: 41px;
 
-    min-width: 40px;
+    min-width: 41px;
 
     padding: 9px;
   }
 
   .search-wrap {
-    top: 62px;
+    top: 64px;
   }
 
   .mobile-sticky-checkout {
-    left: 15px;
-    right: 15px;
+    left: 14px;
+    right: 14px;
+  }
+
+  .product-card {
+    min-height: 350px;
+
+    padding:
+      23px 20px;
+  }
+
+  .product-main {
+    width:
+      calc(100% - 112px);
+  }
+
+  .product-card h2 {
+    font-size: 27px;
+  }
+
+  .product-description {
+    font-size: 12px;
+  }
+
+  .vial-area {
+    right: 13px;
   }
 
 }
 
 
-/* =========================================
+/* =========================================================
    VERY SMALL PHONES
-========================================= */
+========================================================= */
 
 @media(max-width:390px) {
 
   .product-card {
     padding:
-      17px;
+      21px 17px;
+
+    min-height: 340px;
   }
 
   .product-main {
     width:
-      calc(100% - 108px);
+      calc(100% - 103px);
   }
 
   .product-card h2 {
-    font-size: 20px;
+    font-size: 24px;
+  }
+
+  .product-description {
+    font-size: 11.5px;
   }
 
   .vial-area {
-    right: 10px;
+    right: 8px;
   }
 
   .price {
-    font-size: 25px;
+    font-size: 31px;
   }
 
   .filter-button {
-    min-height: 45px;
+    min-height: 55px;
 
-    padding:
-      0 16px;
+    padding: 0 20px;
 
-    font-size: 7.5px;
+    font-size: 8.5px;
   }
 
 }
@@ -2495,9 +2672,9 @@ footer {
 <body>
 
 
-<!-- =========================================
+<!-- =========================================================
      HEADER
-========================================= -->
+========================================================= -->
 
 <header class="site-header">
 
@@ -2660,9 +2837,9 @@ SIGN OUT
 </div>
 
 
-<!-- =========================================
+<!-- =========================================================
      MOBILE MENU
-========================================= -->
+========================================================= -->
 
 <div
   class="mobile-menu"
@@ -2779,9 +2956,9 @@ Contact
 </div>
 
 
-<!-- =========================================
+<!-- =========================================================
      PROMO
-========================================= -->
+========================================================= -->
 
 <div class="promo-banner">
 
@@ -2796,11 +2973,11 @@ $15 STANDARD SHIPPING VALUE
 </span>
 
 <span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
 </span>
 
 <span>
-OPTIONAL SHIPPING INSURANCE AVAILABLE
+FREE STANDARD SHIPPING ON ORDERS OVER $280
 </span>
 
 <span>
@@ -2812,11 +2989,11 @@ $15 STANDARD SHIPPING VALUE
 </span>
 
 <span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
+✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
 </span>
 
 <span>
-OPTIONAL SHIPPING INSURANCE AVAILABLE
+FREE STANDARD SHIPPING ON ORDERS OVER $280
 </span>
 
 </div>
@@ -2830,9 +3007,9 @@ OPTIONAL SHIPPING INSURANCE AVAILABLE
 <main>
 
 
-<!-- =========================================
+<!-- =========================================================
      HERO
-========================================= -->
+========================================================= -->
 
 <section class="page-hero">
 
@@ -2886,9 +3063,9 @@ COA LINKS WHERE AVAILABLE
 </section>
 
 
-<!-- =========================================
+<!-- =========================================================
      MEMBER CHECKOUT
-========================================= -->
+========================================================= -->
 
 <section class="checkout-section">
 
@@ -2940,9 +3117,9 @@ Sign in or create a PCH account to continue.
 </section>
 
 
-<!-- =========================================
+<!-- =========================================================
      CATALOG
-========================================= -->
+========================================================= -->
 
 <section class="catalog-section">
 
@@ -2962,8 +3139,19 @@ Sign in or create a PCH account to continue.
   id="catalogSearch"
   type="search"
   autocomplete="off"
+  autocapitalize="off"
+  spellcheck="false"
   placeholder="Search R, T, GHK-Cu, MOTS-C, 10 MG..."
 >
+
+<button
+  type="button"
+  class="search-clear"
+  id="searchClear"
+  aria-label="Clear search"
+>
+×
+</button>
 
 </div>
 
@@ -3105,9 +3293,9 @@ in the original report.
 </main>
 
 
-<!-- =========================================
+<!-- =========================================================
      FOOTER
-========================================= -->
+========================================================= -->
 
 <footer>
 
@@ -3140,9 +3328,9 @@ Not for human or animal use
 </footer>
 
 
-<!-- =========================================
+<!-- =========================================================
      MOBILE CHECKOUT BAR
-========================================= -->
+========================================================= -->
 
 <div class="mobile-sticky-checkout">
 
@@ -3156,9 +3344,9 @@ Not for human or animal use
 </div>
 
 
-<!-- =========================================
+<!-- =========================================================
      SUPABASE
-========================================= -->
+========================================================= -->
 
 <script
   src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
@@ -3167,9 +3355,9 @@ Not for human or animal use
 
 <script>
 
-/* =========================================
-   SUPABASE CONFIG
-========================================= */
+/* =========================================================
+   SUPABASE
+========================================================= */
 
 const SUPABASE_URL =
   "https://rmjvhbfazakcunfeomao.supabase.co";
@@ -3204,9 +3392,9 @@ const supabaseClient =
   );
 
 
-/* =========================================
+/* =========================================================
    MEMBER ELEMENTS
-========================================= */
+========================================================= */
 
 const desktopLoginLink =
   document.getElementById(
@@ -3298,9 +3486,9 @@ const checkoutSmall =
   );
 
 
-/* =========================================
+/* =========================================================
    LOGGED OUT
-========================================= */
+========================================================= */
 
 function showLoggedOutMemberState() {
 
@@ -3348,9 +3536,9 @@ function showLoggedOutMemberState() {
 }
 
 
-/* =========================================
+/* =========================================================
    LOGGED IN
-========================================= */
+========================================================= */
 
 function showLoggedInMemberState(
   user
@@ -3393,9 +3581,7 @@ function showLoggedInMemberState(
 
 
   mobileMemberEmail.textContent =
-    user.email
-    ||
-    "";
+    user.email || "";
 
 
   mainCheckoutButton.textContent =
@@ -3428,9 +3614,9 @@ function showLoggedInMemberState(
 }
 
 
-/* =========================================
+/* =========================================================
    SESSION
-========================================= */
+========================================================= */
 
 async function restoreMemberSession() {
 
@@ -3478,9 +3664,9 @@ async function restoreMemberSession() {
 }
 
 
-/* =========================================
+/* =========================================================
    SIGN OUT
-========================================= */
+========================================================= */
 
 async function signOutMember() {
 
@@ -3558,9 +3744,9 @@ document.addEventListener(
 );
 
 
-/* =========================================
+/* =========================================================
    PRODUCTS
-========================================= */
+========================================================= */
 
 const products = [
 
@@ -3708,6 +3894,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "g",
       "ghk",
       "ghkcu",
       "ghk-cu",
@@ -3729,6 +3916,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "g",
       "ghk",
       "ghkcu",
       "ghk-cu",
@@ -3748,6 +3936,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "c",
       "cartalax",
       "cartilage",
       "20mg",
@@ -3767,6 +3956,8 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "n",
+      "s",
       "semax",
       "n acetyl semax",
       "amidate",
@@ -3784,6 +3975,8 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "n",
+      "s",
       "selank",
       "n acetyl selank",
       "amidate",
@@ -3801,6 +3994,8 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "p",
+      "pt",
       "pt141",
       "pt-141",
       "10mg"
@@ -3817,6 +4012,7 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "e",
       "epithalon",
       "epitalon",
       "amidate",
@@ -3834,6 +4030,7 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "p",
       "pinealon",
       "10mg"
     ],
@@ -3849,6 +4046,7 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "d",
       "dsip",
       "sleep",
       "5mg"
@@ -3865,6 +4063,7 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "d",
       "dsip",
       "sleep",
       "10mg"
@@ -3881,6 +4080,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "a",
       "ara",
       "ara290",
       "ara-290",
@@ -3899,6 +4099,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "a",
       "ara",
       "ara290",
       "ara-290",
@@ -3917,6 +4118,8 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "b",
+      "w",
       "bpc",
       "bpc157",
       "bpc-157",
@@ -3937,6 +4140,8 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "b",
+      "w",
       "bpc",
       "bpc157",
       "bpc-157",
@@ -3957,6 +4162,8 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "b",
+      "d",
       "bpc",
       "bpc157",
       "bpc-157",
@@ -3978,6 +4185,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "k",
       "klow",
       "80mg"
     ],
@@ -3993,6 +4201,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "k",
       "kpv",
       "10mg"
     ],
@@ -4008,6 +4217,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "c",
       "cjc",
       "5mg"
     ],
@@ -4023,6 +4233,7 @@ const products = [
   groups: ["recovery", "mind"],
   keywords:
     [
+      "i",
       "ipamorelin",
       "ipa",
       "10mg"
@@ -4039,6 +4250,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "t",
       "tesamorelin",
       "tesa",
       "10mg"
@@ -4055,6 +4267,8 @@ const products = [
   groups: ["recovery", "mind"],
   keywords:
     [
+      "c",
+      "i",
       "cjc",
       "ipamorelin",
       "ipa",
@@ -4073,6 +4287,7 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "m",
       "mots",
       "motsc",
       "mots-c",
@@ -4093,6 +4308,8 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "s",
+      "ss",
       "ss31",
       "ss-31",
       "50mg",
@@ -4110,6 +4327,7 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "5",
       "5 amino",
       "5amino",
       "1mq",
@@ -4128,6 +4346,7 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "n",
       "nad",
       "nad+",
       "buffered",
@@ -4140,9 +4359,9 @@ const products = [
 ];
 
 
-/* =========================================
+/* =========================================================
    CATALOG ELEMENTS
-========================================= */
+========================================================= */
 
 const catalogGrid =
   document.getElementById(
@@ -4153,6 +4372,12 @@ const catalogGrid =
 const search =
   document.getElementById(
     "catalogSearch"
+  );
+
+
+const searchClear =
+  document.getElementById(
+    "searchClear"
   );
 
 
@@ -4174,6 +4399,12 @@ const noResults =
   );
 
 
+const filterBar =
+  document.getElementById(
+    "filterBar"
+  );
+
+
 const filterButtons =
   Array.from(
     document.querySelectorAll(
@@ -4186,31 +4417,68 @@ let activeFilter =
   "all";
 
 
-/* =========================================
-   DISPLAY NAME FOR VIAL
-========================================= */
+/* =========================================================
+   SAFE HTML
+========================================================= */
+
+function escapeHTML(
+  value
+) {
+
+  return String(
+    value ?? ""
+  )
+  .replace(
+    /&/g,
+    "&amp;"
+  )
+  .replace(
+    /</g,
+    "&lt;"
+  )
+  .replace(
+    />/g,
+    "&gt;"
+  )
+  .replace(
+    /"/g,
+    "&quot;"
+  )
+  .replace(
+    /'/g,
+    "&#039;"
+  );
+
+}
+
+
+/* =========================================================
+   VIAL DISPLAY NAME
+========================================================= */
 
 function createVialName(
   name
 ) {
 
   let cleanName =
-    name
-      .replace(
-        /\(.*?\)/g,
-        ""
-      )
-      .trim();
+    String(
+      name || ""
+    )
+    .replace(
+      /\(.*?\)/g,
+      ""
+    )
+    .trim();
 
 
   if (
-    cleanName.length > 19
+    cleanName.length > 21
   ) {
 
     cleanName =
       cleanName.substring(
         0,
-        19
+        21
       );
 
   }
@@ -4221,9 +4489,9 @@ function createVialName(
 }
 
 
-/* =========================================
-   NORMALIZE SEARCH TEXT
-========================================= */
+/* =========================================================
+   NORMALIZE
+========================================================= */
 
 function normalizeSearchText(
   value
@@ -4250,25 +4518,56 @@ function normalizeSearchText(
 }
 
 
-/* =========================================
-   BUILD PRODUCT SEARCH STRING
-========================================= */
+/* =========================================================
+   SEARCH DATA
 
-function getProductSearchText(
+   IMPORTANT:
+   We intentionally separate "identity" data
+   from description text.
+
+   Single-letter searches use ONLY identity
+   information, so typing T does NOT match
+   random words like "listing" or "material".
+========================================================= */
+
+function getIdentityValues(
   product
 ) {
 
-  const keywords =
+  const values = [
+
+    product.name,
+    product.category,
+    product.amount
+
+  ];
+
+
+  if (
     Array.isArray(
       product.keywords
     )
-    ?
-    product.keywords.join(
-      " "
-    )
-    :
-    "";
+  ) {
 
+    values.push(
+      ...product.keywords
+    );
+
+  }
+
+
+  return values
+    .map(
+      normalizeSearchText
+    )
+    .filter(Boolean);
+
+}
+
+
+function getBroadSearchText(
+  product
+) {
 
   return normalizeSearchText(
 
@@ -4292,7 +4591,15 @@ function getProductSearchText(
     +
     " "
     +
-    keywords
+    (
+      Array.isArray(
+        product.keywords
+      )
+      ?
+      product.keywords.join(" ")
+      :
+      ""
+    )
     +
     " "
     +
@@ -4303,9 +4610,17 @@ function getProductSearchText(
 }
 
 
-/* =========================================
+/* =========================================================
    SEARCH MATCH
-========================================= */
+
+   1 character:
+   "r" = things intentionally tagged R
+   "t" = things intentionally tagged T
+   "g" = GHK-Cu, etc.
+
+   2+ characters:
+   full intelligent catalog search.
+========================================================= */
 
 function productMatchesSearch(
   product,
@@ -4327,16 +4642,62 @@ function productMatchesSearch(
   }
 
 
+  const identityValues =
+    getIdentityValues(
+      product
+    );
+
+
+  /*
+    SINGLE CHARACTER SEARCH
+    Exact keyword OR beginning of a name/keyword.
+  */
+
+  if (
+    term.length === 1
+  ) {
+
+    return identityValues.some(
+      function(value) {
+
+        const tokens =
+          value.split(" ");
+
+
+        return (
+          value === term
+          ||
+          value.startsWith(term)
+          ||
+          tokens.some(
+            function(token) {
+
+              return token.startsWith(
+                term
+              );
+
+            }
+          )
+        );
+
+      }
+    );
+
+  }
+
+
+  /*
+    2+ CHARACTER SEARCH
+  */
+
   const searchableText =
-    getProductSearchText(
+    getBroadSearchText(
       product
     );
 
 
   const words =
-    term.split(
-      " "
-    );
+    term.split(" ");
 
 
   return words.every(
@@ -4352,9 +4713,110 @@ function productMatchesSearch(
 }
 
 
-/* =========================================
+/* =========================================================
+   SEARCH RELEVANCE SCORE
+
+   Exact/prefix matches come first.
+========================================================= */
+
+function getSearchScore(
+  product,
+  rawTerm
+) {
+
+  const term =
+    normalizeSearchText(
+      rawTerm
+    );
+
+
+  if (
+    !term
+  ) {
+
+    return 0;
+
+  }
+
+
+  const normalizedName =
+    normalizeSearchText(
+      product.name
+    );
+
+
+  const identityValues =
+    getIdentityValues(
+      product
+    );
+
+
+  let score = 0;
+
+
+  if (
+    normalizedName === term
+  ) {
+
+    score += 1000;
+
+  }
+
+
+  if (
+    normalizedName.startsWith(
+      term
+    )
+  ) {
+
+    score += 700;
+
+  }
+
+
+  identityValues.forEach(
+    function(value) {
+
+      if (
+        value === term
+      ) {
+
+        score += 500;
+
+      }
+
+      else if (
+        value.startsWith(
+          term
+        )
+      ) {
+
+        score += 250;
+
+      }
+
+      else if (
+        value.includes(
+          term
+        )
+      ) {
+
+        score += 80;
+
+      }
+
+    }
+  );
+
+
+  return score;
+
+}
+
+
+/* =========================================================
    BUILD CATALOG
-========================================= */
+========================================================= */
 
 function buildCatalog(
   list
@@ -4378,8 +4840,34 @@ function buildCatalog(
 
 
       const vialName =
-        createVialName(
+        escapeHTML(
+          createVialName(
+            product.name
+          )
+        );
+
+
+      const safeName =
+        escapeHTML(
           product.name
+        );
+
+
+      const safeCategory =
+        escapeHTML(
+          product.category
+        );
+
+
+      const safeAmount =
+        escapeHTML(
+          product.amount
+        );
+
+
+      const safeDescription =
+        escapeHTML(
+          product.description
         );
 
 
@@ -4407,7 +4895,7 @@ function buildCatalog(
         `
 
         <a
-          href="${product.coa}"
+          href="${escapeHTML(product.coa)}"
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-coa"
@@ -4435,23 +4923,23 @@ function buildCatalog(
           <div class="card-top">
 
             <div class="category">
-              ${product.category}
+              ${safeCategory}
             </div>
 
             <div class="amount-badge">
-              ${product.amount}
+              ${safeAmount}
             </div>
 
           </div>
 
 
           <h2>
-            ${product.name}
+            ${safeName}
           </h2>
 
 
           <p class="product-description">
-            ${product.description}
+            ${safeDescription}
           </p>
 
 
@@ -4461,9 +4949,13 @@ function buildCatalog(
         </div>
 
 
-        <div class="vial-area">
+        <div
+          class="vial-area"
+          aria-hidden="true"
+        >
 
           <div class="vial-glow"></div>
+
 
           <div class="vial">
 
@@ -4503,7 +4995,7 @@ function buildCatalog(
 
 
               <div class="vial-amount">
-                ${product.amount}
+                ${safeAmount}
               </div>
 
 
@@ -4566,15 +5058,31 @@ function buildCatalog(
 }
 
 
-/* =========================================
-   FILTER / SEARCH
+/* =========================================================
+   SET ACTIVE FILTER
+========================================================= */
 
-   IMPORTANT CHANGE:
-   When somebody types in the search bar,
-   the category filter no longer blocks the
-   results. Search automatically searches
-   the ENTIRE catalog.
-========================================= */
+function setActiveFilterUI(
+  filter
+) {
+
+  filterButtons.forEach(
+    function(button) {
+
+      button.classList.toggle(
+        "active",
+        button.dataset.filter === filter
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   UPDATE CATALOG
+========================================================= */
 
 function updateCatalog() {
 
@@ -4586,46 +5094,78 @@ function updateCatalog() {
     rawTerm.length > 0;
 
 
-  const filtered =
+  let filtered =
     products.filter(
       function(product) {
-
-        const matchesSearch =
-          productMatchesSearch(
-            product,
-            rawTerm
-          );
-
-
-        /*
-        If the user is typing something,
-        search all categories.
-
-        If the search box is empty,
-        use the selected category filter.
-        */
 
         if (
           hasSearch
         ) {
 
-          return matchesSearch;
+          return productMatchesSearch(
+            product,
+            rawTerm
+          );
 
         }
 
 
-        const matchesCategory =
+        return (
           activeFilter === "all"
           ||
           product.groups.includes(
             activeFilter
-          );
-
-
-        return matchesCategory;
+          )
+        );
 
       }
     );
+
+
+  /*
+    Search results are ranked so the
+    strongest match immediately appears first.
+  */
+
+  if (
+    hasSearch
+  ) {
+
+    filtered =
+      filtered
+      .map(
+        function(product) {
+
+          return {
+
+            product: product,
+
+            score:
+              getSearchScore(
+                product,
+                rawTerm
+              )
+
+          };
+
+        }
+      )
+      .sort(
+        function(a,b) {
+
+          return b.score - a.score;
+
+        }
+      )
+      .map(
+        function(item) {
+
+          return item.product;
+
+        }
+      );
+
+  }
 
 
   buildCatalog(
@@ -4652,60 +5192,113 @@ function updateCatalog() {
     :
     "none";
 
+
+  searchClear.classList.toggle(
+    "visible",
+    hasSearch
+  );
+
 }
 
 
-/* =========================================
+/* =========================================================
    SEARCH EVENT
 
-   When search begins:
-   visually return filter to ALL so the
-   user understands the whole catalog
-   is being searched.
-========================================= */
+   Typing even ONE character immediately:
+   - searches whole catalog
+   - switches category UI to ALL
+   - updates results
+========================================================= */
+
+function handleSearchInput() {
+
+  if (
+    search.value.length > 0
+  ) {
+
+    activeFilter =
+      "all";
+
+
+    setActiveFilterUI(
+      "all"
+    );
+
+  }
+
+
+  updateCatalog();
+
+}
+
 
 search.addEventListener(
   "input",
-  function() {
+  handleSearchInput
+);
 
-    const hasSearch =
-      search.value.trim().length > 0;
 
+search.addEventListener(
+  "search",
+  handleSearchInput
+);
+
+
+search.addEventListener(
+  "keyup",
+  function(event) {
+
+    /*
+      Extra mobile-browser fallback.
+    */
 
     if (
-      hasSearch
+      event.key
+      &&
+      event.key.length === 1
     ) {
 
-      activeFilter =
-        "all";
-
-
-      filterButtons.forEach(
-        function(button) {
-
-          button.classList.toggle(
-            "active",
-            button.dataset.filter === "all"
-          );
-
-        }
-      );
+      handleSearchInput();
 
     }
-
-
-    updateCatalog();
 
   }
 );
 
 
-/* =========================================
-   FILTER EVENTS
+/* =========================================================
+   CLEAR SEARCH
+========================================================= */
 
-   Pressing a category clears the current
-   search and shows that category normally.
-========================================= */
+searchClear.addEventListener(
+  "click",
+  function() {
+
+    search.value =
+      "";
+
+
+    activeFilter =
+      "all";
+
+
+    setActiveFilterUI(
+      "all"
+    );
+
+
+    updateCatalog();
+
+
+    search.focus();
+
+  }
+);
+
+
+/* =========================================================
+   FILTER BUTTONS
+========================================================= */
 
 filterButtons.forEach(
   function(button) {
@@ -4722,19 +5315,8 @@ filterButtons.forEach(
           "";
 
 
-        filterButtons.forEach(
-          function(btn) {
-
-            btn.classList.remove(
-              "active"
-            );
-
-          }
-        );
-
-
-        button.classList.add(
-          "active"
+        setActiveFilterUI(
+          activeFilter
         );
 
 
@@ -4747,9 +5329,50 @@ filterButtons.forEach(
 );
 
 
-/* =========================================
+/* =========================================================
+   MOBILE FILTER AUTO-SCROLL
+
+   Keeps the selected bubble visible.
+========================================================= */
+
+filterBar.addEventListener(
+  "click",
+  function(event) {
+
+    const button =
+      event.target.closest(
+        ".filter-button"
+      );
+
+
+    if (
+      !button
+    ) {
+
+      return;
+
+    }
+
+
+    button.scrollIntoView(
+      {
+
+        behavior: "smooth",
+
+        block: "nearest",
+
+        inline: "center"
+
+      }
+    );
+
+  }
+);
+
+
+/* =========================================================
    MOBILE MENU
-========================================= */
+========================================================= */
 
 const menuButton =
   document.getElementById(
@@ -4819,9 +5442,9 @@ menu
   );
 
 
-/* =========================================
+/* =========================================================
    START
-========================================= */
+========================================================= */
 
 heroListingCount.textContent =
   products.length
@@ -4829,9 +5452,21 @@ heroListingCount.textContent =
   " LISTINGS";
 
 
+activeFilter =
+  "all";
+
+
+setActiveFilterUI(
+  "all"
+);
+
+
 buildCatalog(
   products
 );
+
+
+updateCatalog();
 
 
 restoreMemberSession();
