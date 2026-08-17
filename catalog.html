@@ -16,7 +16,6 @@
 Research Catalog | Platinum Cellular Health Labs
 </title>
 
-
 <style>
 
 /* =========================================================
@@ -130,9 +129,7 @@ button {
   min-height: 80px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   gap: 22px;
@@ -140,7 +137,6 @@ button {
 
 .brand {
   display: flex;
-
   align-items: center;
 
   gap: 13px;
@@ -185,7 +181,6 @@ button {
 
 .nav-right {
   display: flex;
-
   align-items: center;
 
   gap: 15px;
@@ -193,7 +188,6 @@ button {
 
 .nav-links {
   display: flex;
-
   align-items: center;
 
   gap: 15px;
@@ -220,7 +214,6 @@ button {
 
 .member-area {
   display: flex;
-
   align-items: center;
 
   gap: 7px;
@@ -228,9 +221,7 @@ button {
 
 .member-login {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
 
   min-height: 40px;
@@ -256,7 +247,6 @@ button {
 
 .member-signed-in {
   display: none;
-
   align-items: center;
 
   gap: 7px;
@@ -268,7 +258,6 @@ button {
 
 .member-pill {
   display: flex;
-
   align-items: center;
 
   gap: 8px;
@@ -328,9 +317,7 @@ button {
 
 .member-link {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
 
   min-height: 37px;
@@ -495,9 +482,7 @@ button {
 
 .mobile-member-login {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   width: 100%;
@@ -572,9 +557,7 @@ button {
   min-height: 43px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   border:
@@ -818,7 +801,6 @@ button {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-height: 52px;
@@ -887,7 +869,6 @@ button {
   position: relative;
 
   display: flex;
-
   align-items: center;
 
   gap: 11px;
@@ -916,8 +897,7 @@ button {
     rgba(213,173,85,.85);
 
   box-shadow:
-    0 0 0 3px
-    rgba(213,173,85,.07),
+    0 0 0 3px rgba(213,173,85,.07),
     0 8px 26px rgba(0,0,0,.22);
 }
 
@@ -958,7 +938,6 @@ button {
   flex-shrink: 0;
 
   align-items: center;
-
   justify-content: center;
 
   border: 0;
@@ -1068,7 +1047,6 @@ button {
   display: flex;
 
   align-items: center;
-
   justify-content: space-between;
 
   gap: 18px;
@@ -1090,7 +1068,6 @@ button {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-height: 42px;
@@ -1155,7 +1132,7 @@ button {
 
   background:
     radial-gradient(
-      circle at 84% 35%,
+      circle at 84% 34%,
       rgba(213,173,85,.075),
       transparent 34%
     ),
@@ -1222,7 +1199,6 @@ button {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-height: 33px;
@@ -1298,119 +1274,153 @@ button {
 
 
 /* =========================================================
-   NEW SLEEK GLASS VIAL
+   PCH PREMIUM GLASS VIAL
+   TALL / NARROW / CLEAR LIKE REFERENCE
 ========================================================= */
 
 .vial-area {
   position: absolute;
 
-  top: 52px;
-  right: 27px;
+  top: 43px;
+  right: 30px;
 
-  width: 135px;
-  height: 240px;
+  width: 132px;
+  height: 258px;
+
+  z-index: 2;
 
   display: flex;
 
   align-items: flex-end;
-
   justify-content: center;
 
-  z-index: 2;
+  pointer-events: none;
 }
+
+
+/* soft floor glow */
 
 .vial-glow {
   position: absolute;
 
+  left: 50%;
   bottom: -5px;
 
-  width: 135px;
-  height: 85px;
+  width: 116px;
+  height: 34px;
+
+  transform:
+    translateX(-50%);
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       ellipse,
-      rgba(213,173,85,.19),
-      rgba(213,173,85,.055) 45%,
-      transparent 73%
+      rgba(213,173,85,.24) 0%,
+      rgba(213,173,85,.075) 45%,
+      transparent 74%
     );
 
-  filter: blur(15px);
+  filter:
+    blur(10px);
 
-  opacity: .7;
+  opacity: .9;
 }
 
 
-/* actual glass bottle */
+/* =========================================================
+   VIAL GLASS BODY
+========================================================= */
 
 .vial {
   position: relative;
 
-  width: 76px;
-  height: 158px;
+  width: 78px;
+  height: 174px;
+
+  margin-bottom: 9px;
 
   border-radius:
-    18px 18px 21px 21px;
+    20px 20px 17px 17px;
+
+  border:
+    1px solid rgba(216,221,224,.55);
 
   background:
     linear-gradient(
       90deg,
-      rgba(220,225,228,.16) 0%,
-      rgba(255,255,255,.07) 8%,
-      rgba(33,37,39,.18) 18%,
-      rgba(11,13,14,.72) 34%,
-      rgba(4,5,5,.95) 55%,
-      rgba(18,21,22,.62) 74%,
-      rgba(255,255,255,.08) 91%,
-      rgba(151,158,162,.14) 100%
+      rgba(240,244,246,.17) 0%,
+      rgba(255,255,255,.08) 8%,
+      rgba(98,104,108,.055) 18%,
+      rgba(9,11,12,.15) 35%,
+      rgba(4,5,6,.27) 50%,
+      rgba(8,10,11,.16) 68%,
+      rgba(110,116,120,.055) 84%,
+      rgba(255,255,255,.12) 94%,
+      rgba(222,228,231,.19) 100%
     );
 
-  border:
-    1px solid rgba(190,196,200,.44);
-
   box-shadow:
-    0 18px 34px rgba(0,0,0,.72),
-    inset 5px 0 8px rgba(255,255,255,.08),
-    inset -5px 0 10px rgba(255,255,255,.025),
-    inset 0 -8px 14px rgba(255,255,255,.025);
+    0 17px 22px rgba(0,0,0,.68),
 
-  backdrop-filter:
-    blur(2px);
+    inset 4px 0 6px rgba(255,255,255,.11),
+
+    inset -4px 0 7px rgba(255,255,255,.055),
+
+    inset 0 3px 4px rgba(255,255,255,.13),
+
+    inset 0 -8px 10px rgba(255,255,255,.07);
 }
 
 
-/* glass shine */
+/* =========================================================
+   GLASS SHOULDER
+========================================================= */
 
 .vial::before {
   content: "";
 
   position: absolute;
 
-  top: 14px;
-  bottom: 13px;
-  left: 5px;
+  top: -14px;
+  left: 8px;
+  right: 8px;
 
-  width: 7px;
+  height: 29px;
 
-  border-radius: 20px;
+  border-radius:
+    16px 16px 8px 8px;
+
+  border-top:
+    1px solid rgba(235,239,241,.57);
+
+  border-left:
+    1px solid rgba(213,219,222,.34);
+
+  border-right:
+    1px solid rgba(213,219,222,.34);
 
   background:
     linear-gradient(
-      180deg,
-      rgba(255,255,255,.28),
-      rgba(255,255,255,.04)
+      90deg,
+      rgba(255,255,255,.14),
+      rgba(16,18,19,.07) 24%,
+      rgba(4,5,6,.18) 50%,
+      rgba(16,18,19,.07) 75%,
+      rgba(255,255,255,.12)
     );
 
-  opacity: .48;
+  box-shadow:
+    inset 0 4px 6px rgba(255,255,255,.05);
 
-  filter:
-    blur(.2px);
+  z-index: 1;
 }
 
 
-/* glass base */
+/* =========================================================
+   HEAVY GLASS BASE
+========================================================= */
 
 .vial::after {
   content: "";
@@ -1421,161 +1431,184 @@ button {
   right: 5px;
   bottom: 3px;
 
-  height: 10px;
+  height: 13px;
 
   border-radius:
-    0 0 16px 16px;
+    3px 3px 13px 13px;
 
   border-bottom:
-    1px solid rgba(232,235,237,.34);
+    2px solid rgba(235,239,241,.46);
 
   background:
     linear-gradient(
       180deg,
       transparent,
-      rgba(255,255,255,.08)
+      rgba(219,225,228,.11)
     );
+
+  box-shadow:
+    inset 0 -2px 3px rgba(255,255,255,.07);
+
+  z-index: 5;
 }
 
 
 /* =========================================================
-   VIAL CAP
+   CAP
 ========================================================= */
 
 .vial-cap {
   position: absolute;
 
-  top: -31px;
+  top: -48px;
   left: 3px;
 
-  width: 68px;
-  height: 33px;
+  width: 70px;
+  height: 31px;
+
+  z-index: 9;
+
+  border:
+    1px solid rgba(180,185,188,.9);
 
   border-radius:
-    9px 9px 6px 6px;
+    7px 7px 4px 4px;
 
   background:
     linear-gradient(
       90deg,
-      #74797c 0%,
-      #e7e8e9 14%,
-      #a3a7a9 30%,
-      #fafafa 49%,
-      #a2a6a8 68%,
-      #e7e8e9 84%,
-      #686d70 100%
+      #5d6164 0%,
+      #bfc3c5 9%,
+      #f2f2f2 20%,
+      #a5aaad 35%,
+      #eeeeee 52%,
+      #a2a7aa 68%,
+      #e5e7e8 84%,
+      #656a6d 100%
     );
 
-  border:
-    1px solid #92979a;
-
   box-shadow:
-    0 4px 8px rgba(0,0,0,.55),
-    inset 0 1px 0 rgba(255,255,255,.85);
+    0 5px 8px rgba(0,0,0,.6),
+
+    inset 0 1px 0 rgba(255,255,255,.9),
+
+    inset 0 -4px 5px rgba(0,0,0,.16);
 }
 
 
-/* black rubber top */
+/* black stopper top */
 
 .vial-cap::before {
   content: "";
 
   position: absolute;
 
-  top: -10px;
-  left: 5px;
+  top: -13px;
+  left: 4px;
 
-  width: 56px;
-  height: 14px;
+  width: 60px;
+  height: 17px;
 
   border-radius:
-    10px 10px 5px 5px;
+    11px 11px 5px 5px;
+
+  border:
+    1px solid rgba(91,94,96,.75);
 
   background:
     linear-gradient(
       180deg,
-      #282a2c,
-      #070809
+      #292b2d 0%,
+      #0b0c0d 45%,
+      #030404 100%
     );
 
-  border:
-    1px solid #3b3e40;
-
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.08);
+    inset 0 2px 2px rgba(255,255,255,.08),
+    0 2px 4px rgba(0,0,0,.45);
 }
 
 
-/* cap lower ring */
+/* lower crimp edge */
 
 .vial-cap::after {
   content: "";
 
   position: absolute;
 
-  left: 2px;
-  right: 2px;
+  left: 1px;
+  right: 1px;
   bottom: 2px;
 
-  height: 5px;
+  height: 6px;
 
   border-radius: 2px;
 
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.25),
-      rgba(255,255,255,.4),
-      rgba(0,0,0,.18)
+      rgba(20,20,20,.25),
+      rgba(255,255,255,.35),
+      rgba(70,70,70,.08),
+      rgba(255,255,255,.3),
+      rgba(10,10,10,.24)
     );
 
-  opacity: .65;
-}
-
-
-/* glass neck */
-
-.vial-neck {
-  position: absolute;
-
-  top: -1px;
-  left: 11px;
-
-  width: 52px;
-  height: 18px;
-
-  border-left:
-    1px solid rgba(210,215,218,.35);
-
-  border-right:
-    1px solid rgba(210,215,218,.35);
-
-  border-radius:
-    0 0 7px 7px;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.11),
-      rgba(10,12,13,.8),
-      rgba(255,255,255,.07)
-    );
+  opacity: .85;
 }
 
 
 /* =========================================================
-   VIAL LABEL
+   GLASS NECK
+========================================================= */
+
+.vial-neck {
+  position: absolute;
+
+  top: -19px;
+  left: 15px;
+
+  width: 46px;
+  height: 24px;
+
+  z-index: 3;
+
+  border-left:
+    1px solid rgba(228,232,234,.42);
+
+  border-right:
+    1px solid rgba(228,232,234,.42);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.14),
+      rgba(12,14,15,.08) 23%,
+      rgba(3,4,4,.17) 50%,
+      rgba(12,14,15,.08) 76%,
+      rgba(255,255,255,.12)
+    );
+
+  box-shadow:
+    inset 3px 0 3px rgba(255,255,255,.06),
+    inset -3px 0 3px rgba(255,255,255,.04);
+}
+
+
+/* =========================================================
+   MAIN BLACK LABEL
 ========================================================= */
 
 .vial-label {
   position: absolute;
 
-  left: 6px;
-  right: 6px;
+  top: 33px;
+  left: 5px;
+  right: 5px;
 
-  top: 34px;
+  height: 119px;
 
-  min-height: 106px;
+  z-index: 6;
 
   display: flex;
 
@@ -1583,30 +1616,36 @@ button {
 
   align-items: center;
 
-  justify-content: flex-start;
-
   padding:
-    7px 4px 6px;
-
-  border:
-    1px solid rgba(213,173,85,.58);
-
-  border-radius: 2px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(17,18,19,.99),
-      rgba(2,3,3,.99)
-    );
-
-  text-align: center;
+    8px 4px 5px;
 
   overflow: hidden;
 
+  border:
+    1px solid rgba(213,173,85,.68);
+
+  border-radius: 1px;
+
+  background:
+    linear-gradient(
+      100deg,
+      #080909 0%,
+      #121314 18%,
+      #050606 47%,
+      #0b0c0d 74%,
+      #141516 100%
+    );
+
   box-shadow:
-    0 0 12px rgba(0,0,0,.22);
+    0 0 8px rgba(0,0,0,.38),
+
+    inset 4px 0 8px rgba(255,255,255,.018),
+
+    inset -4px 0 8px rgba(255,255,255,.012);
 }
+
+
+/* subtle premium label texture */
 
 .vial-label::before {
   content: "";
@@ -1615,40 +1654,75 @@ button {
 
   inset: 0;
 
-  opacity: .1;
+  opacity: .16;
 
   background:
     repeating-linear-gradient(
       60deg,
       transparent 0,
-      transparent 9px,
-      rgba(213,173,85,.10) 9px,
-      rgba(213,173,85,.10) 10px
+      transparent 8px,
+      rgba(213,173,85,.08) 8px,
+      rgba(213,173,85,.08) 9px
     );
 
   pointer-events: none;
 }
 
+
+/* subtle label shine */
+
+.vial-label::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 4px;
+
+  width: 8px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.06),
+      transparent
+    );
+
+  opacity: .6;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LABEL CONTENT
+========================================================= */
+
 .vial-logo {
   position: relative;
 
-  width: 28px;
-  height: 28px;
+  z-index: 2;
+
+  width: 27px;
+  height: 27px;
+
+  margin-bottom: 3px;
 
   border-radius: 50%;
 
   object-fit: cover;
 
-  margin-bottom: 3px;
-
   border:
-    1px solid rgba(213,173,85,.28);
+    1px solid rgba(213,173,85,.35);
 }
 
 .vial-brand {
   position: relative;
 
-  color: #ededed;
+  z-index: 2;
+
+  color: #f1f1f1;
 
   font-family:
     Georgia,
@@ -1659,32 +1733,39 @@ button {
 
   font-weight: 700;
 
-  letter-spacing: .95px;
+  letter-spacing: 1px;
 
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .vial-labs {
   position: relative;
 
-  margin-top: 1px;
+  z-index: 2;
+
+  margin-top: 2px;
 
   color: var(--gold);
 
-  font-size: 3.6px;
+  font-size: 3.5px;
 
   font-weight: 900;
 
   letter-spacing: .65px;
+
+  line-height: 1;
 }
 
 .vial-divider {
   position: relative;
 
-  width: 38px;
+  z-index: 2;
+
+  width: 39px;
   height: 1px;
 
-  margin: 5px 0 4px;
+  margin:
+    6px 0 4px;
 
   background:
     linear-gradient(
@@ -1698,19 +1779,30 @@ button {
 .vial-product {
   position: relative;
 
+  z-index: 2;
+
   width: 100%;
 
-  padding: 0 1px;
+  min-height: 18px;
 
-  color: #f6f6f6;
+  display: flex;
 
-  font-size: 6.8px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 2px;
+
+  color: #f5f5f5;
+
+  font-size: 7px;
 
   font-weight: 900;
 
-  letter-spacing: .3px;
+  letter-spacing: .25px;
 
-  line-height: 1.14;
+  line-height: 1.1;
+
+  text-align: center;
 
   text-transform: uppercase;
 
@@ -1720,11 +1812,13 @@ button {
 .vial-amount {
   position: relative;
 
-  margin-top: 5px;
+  z-index: 2;
+
+  margin-top: 4px;
 
   color: var(--gold2);
 
-  font-size: 8.3px;
+  font-size: 9px;
 
   font-weight: 900;
 
@@ -1736,20 +1830,23 @@ button {
 .vial-research {
   position: relative;
 
-  margin-top: 5px;
+  z-index: 2;
 
-  padding: 2px 4px;
+  margin-top: 6px;
+
+  padding:
+    2px 4px;
 
   border:
-    1px solid rgba(213,173,85,.46);
+    1px solid rgba(213,173,85,.52);
 
-  color: #d5ad55;
+  color: var(--gold);
 
   font-size: 3px;
 
   font-weight: 900;
 
-  letter-spacing: .3px;
+  letter-spacing: .35px;
 
   line-height: 1;
 }
@@ -1759,18 +1856,75 @@ button {
 
   left: 8px;
   right: 8px;
-
-  bottom: 7px;
+  bottom: 8px;
 
   height: 1px;
+
+  z-index: 7;
 
   background:
     linear-gradient(
       90deg,
       transparent,
-      rgba(240,212,140,.68),
+      rgba(240,212,140,.78),
       transparent
     );
+}
+
+
+/* =========================================================
+   EXTRA GLASS HIGHLIGHTS
+========================================================= */
+
+.vial-shine {
+  position: absolute;
+
+  top: 18px;
+  left: 5px;
+
+  width: 6px;
+  height: 132px;
+
+  z-index: 8;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.36),
+      rgba(255,255,255,.12) 35%,
+      rgba(255,255,255,.025) 78%,
+      transparent
+    );
+
+  filter:
+    blur(.25px);
+
+  opacity: .67;
+}
+
+.vial-shine-right {
+  position: absolute;
+
+  top: 24px;
+  right: 5px;
+
+  width: 3px;
+  height: 113px;
+
+  z-index: 8;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.15),
+      transparent 72%
+    );
+
+  opacity: .42;
 }
 
 
@@ -1786,7 +1940,6 @@ button {
   display: flex;
 
   align-items: flex-end;
-
   justify-content: space-between;
 
   gap: 18px;
@@ -1837,7 +1990,6 @@ button {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-height: 44px;
@@ -1878,7 +2030,6 @@ button {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-height: 44px;
@@ -2022,7 +2173,6 @@ button {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   width: 100%;
@@ -2170,8 +2320,6 @@ footer {
   }
 
 
-  /* HERO */
-
   .page-hero {
     padding: 34px 0 30px;
   }
@@ -2203,8 +2351,6 @@ footer {
   }
 
 
-  /* CHECKOUT */
-
   .checkout-section {
     padding: 19px 0;
   }
@@ -2232,8 +2378,6 @@ footer {
   }
 
 
-  /* SEARCH */
-
   .catalog-section {
     padding-top: 16px;
   }
@@ -2259,7 +2403,7 @@ footer {
   }
 
 
-  /* FILTER BUBBLES */
+  /* larger filter bubbles */
 
   .filter-bar {
     display: flex;
@@ -2301,8 +2445,6 @@ footer {
   }
 
 
-  /* TOOLBAR */
-
   .catalog-toolbar {
     margin: 19px 0 14px;
   }
@@ -2312,25 +2454,28 @@ footer {
   }
 
 
-  /* PRODUCT CARD */
+  /* =========================================================
+     MOBILE PRODUCT CARD
+  ========================================================= */
 
   .catalog-grid {
     gap: 17px;
   }
 
   .product-card {
-    min-height: 365px;
+    min-height: 376px;
 
-    padding: 25px 22px;
+    padding:
+      25px 22px;
 
     border-radius: 19px;
   }
 
   .product-main {
     width:
-      calc(100% - 120px);
+      calc(100% - 115px);
 
-    min-height: 245px;
+    min-height: 250px;
   }
 
   .card-top {
@@ -2346,13 +2491,15 @@ footer {
   .amount-badge {
     min-height: 30px;
 
-    padding: 0 10px;
+    padding:
+      0 10px;
 
     font-size: 8px;
   }
 
   .product-card h2 {
-    margin: 19px 0 9px;
+    margin:
+      19px 0 9px;
 
     font-size: 29px;
 
@@ -2372,67 +2519,81 @@ footer {
   }
 
 
-  /* SLEEK MOBILE VIAL */
+  /* =========================================================
+     MOBILE PREMIUM VIAL
+  ========================================================= */
 
   .vial-area {
-    top: 67px;
-    right: 17px;
+    top: 61px;
+    right: 11px;
 
-    width: 100px;
-    height: 190px;
+    width: 106px;
+    height: 215px;
   }
 
   .vial-glow {
-    width: 104px;
-    height: 70px;
+    width: 91px;
+    height: 28px;
+
+    bottom: 0;
   }
 
   .vial {
     width: 64px;
-    height: 134px;
+    height: 148px;
+
+    margin-bottom: 8px;
 
     border-radius:
-      15px 15px 18px 18px;
+      17px 17px 15px 15px;
   }
 
   .vial::before {
-    left: 4px;
+    top: -12px;
+    left: 7px;
+    right: 7px;
 
-    width: 6px;
+    height: 24px;
+  }
+
+  .vial::after {
+    height: 11px;
   }
 
   .vial-cap {
-    top: -27px;
+    top: -42px;
     left: 2px;
 
     width: 58px;
-    height: 29px;
+    height: 27px;
   }
 
   .vial-cap::before {
-    top: -9px;
+    top: -11px;
     left: 4px;
 
     width: 48px;
-    height: 13px;
+    height: 14px;
   }
 
   .vial-neck {
-    left: 9px;
+    top: -17px;
+    left: 12px;
 
-    width: 44px;
-    height: 15px;
+    width: 38px;
+    height: 21px;
   }
 
   .vial-label {
-    left: 5px;
-    right: 5px;
+    top: 28px;
 
-    top: 29px;
+    left: 4px;
+    right: 4px;
 
-    min-height: 91px;
+    height: 103px;
 
-    padding: 5px 3px 5px;
+    padding:
+      6px 3px 4px;
   }
 
   .vial-logo {
@@ -2445,41 +2606,60 @@ footer {
   .vial-brand {
     font-size: 5px;
 
-    letter-spacing: .72px;
+    letter-spacing: .78px;
   }
 
   .vial-labs {
-    font-size: 3px;
+    font-size: 2.9px;
 
-    letter-spacing: .5px;
+    letter-spacing: .48px;
   }
 
   .vial-divider {
     width: 31px;
 
-    margin: 4px 0 3px;
+    margin:
+      4px 0 3px;
   }
 
   .vial-product {
+    min-height: 16px;
+
     font-size: 5.8px;
 
-    letter-spacing: .2px;
+    line-height: 1.08;
   }
 
   .vial-amount {
-    margin-top: 4px;
+    margin-top: 3px;
 
-    font-size: 7px;
+    font-size: 7.5px;
   }
 
   .vial-research {
     margin-top: 4px;
 
-    font-size: 2.5px;
+    font-size: 2.35px;
+
+    padding:
+      2px 3px;
   }
 
+  .vial-shine {
+    top: 16px;
+    left: 4px;
 
-  /* BOTTOM */
+    width: 5px;
+    height: 110px;
+  }
+
+  .vial-shine-right {
+    top: 19px;
+    right: 4px;
+
+    height: 95px;
+  }
+
 
   .product-bottom {
     gap: 9px;
@@ -2502,7 +2682,8 @@ footer {
   .btn {
     min-height: 42px;
 
-    padding: 0 14px;
+    padding:
+      0 14px;
 
     font-size: 8px;
   }
@@ -2510,7 +2691,8 @@ footer {
   .btn-unavailable {
     min-height: 42px;
 
-    padding: 0 12px;
+    padding:
+      0 12px;
 
     font-size: 7px;
   }
@@ -2519,8 +2701,6 @@ footer {
     display: none;
   }
 
-
-  /* NOTICE */
 
   .catalog-notice {
     margin-top: 28px;
@@ -2594,7 +2774,7 @@ footer {
   }
 
   .product-card {
-    min-height: 350px;
+    min-height: 364px;
 
     padding:
       23px 20px;
@@ -2602,7 +2782,7 @@ footer {
 
   .product-main {
     width:
-      calc(100% - 112px);
+      calc(100% - 108px);
   }
 
   .product-card h2 {
@@ -2614,7 +2794,7 @@ footer {
   }
 
   .vial-area {
-    right: 13px;
+    right: 8px;
   }
 
 }
@@ -2630,12 +2810,12 @@ footer {
     padding:
       21px 17px;
 
-    min-height: 340px;
+    min-height: 350px;
   }
 
   .product-main {
     width:
-      calc(100% - 103px);
+      calc(100% - 100px);
   }
 
   .product-card h2 {
@@ -2647,7 +2827,13 @@ footer {
   }
 
   .vial-area {
-    right: 8px;
+    right: 4px;
+
+    transform:
+      scale(.94);
+
+    transform-origin:
+      center right;
   }
 
   .price {
@@ -2657,7 +2843,8 @@ footer {
   .filter-button {
     min-height: 55px;
 
-    padding: 0 20px;
+    padding:
+      0 20px;
 
     font-size: 8.5px;
   }
@@ -2671,10 +2858,6 @@ footer {
 
 <body>
 
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
 
 <header class="site-header">
 
@@ -2837,10 +3020,6 @@ SIGN OUT
 </div>
 
 
-<!-- =========================================================
-     MOBILE MENU
-========================================================= -->
-
 <div
   class="mobile-menu"
   id="mobileMenu"
@@ -2956,10 +3135,6 @@ Contact
 </div>
 
 
-<!-- =========================================================
-     PROMO
-========================================================= -->
-
 <div class="promo-banner">
 
 <div class="promo-track">
@@ -3006,10 +3181,6 @@ FREE STANDARD SHIPPING ON ORDERS OVER $280
 
 <main>
 
-
-<!-- =========================================================
-     HERO
-========================================================= -->
 
 <section class="page-hero">
 
@@ -3063,10 +3234,6 @@ COA LINKS WHERE AVAILABLE
 </section>
 
 
-<!-- =========================================================
-     MEMBER CHECKOUT
-========================================================= -->
-
 <section class="checkout-section">
 
 <div class="shell">
@@ -3116,10 +3283,6 @@ Sign in or create a PCH account to continue.
 
 </section>
 
-
-<!-- =========================================================
-     CATALOG
-========================================================= -->
 
 <section class="catalog-section">
 
@@ -3293,10 +3456,6 @@ in the original report.
 </main>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
 <footer>
 
 <div class="shell footer-grid">
@@ -3328,10 +3487,6 @@ Not for human or animal use
 </footer>
 
 
-<!-- =========================================================
-     MOBILE CHECKOUT BAR
-========================================================= -->
-
 <div class="mobile-sticky-checkout">
 
 <a
@@ -3343,10 +3498,6 @@ Not for human or animal use
 
 </div>
 
-
-<!-- =========================================================
-     SUPABASE
-========================================================= -->
 
 <script
   src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
@@ -3401,84 +3552,70 @@ const desktopLoginLink =
     "desktopLoginLink"
   );
 
-
 const desktopMemberArea =
   document.getElementById(
     "desktopMemberArea"
   );
-
 
 const desktopMemberName =
   document.getElementById(
     "desktopMemberName"
   );
 
-
 const desktopSignout =
   document.getElementById(
     "desktopSignout"
   );
-
 
 const mobileLoginLink =
   document.getElementById(
     "mobileLoginLink"
   );
 
-
 const mobileMemberArea =
   document.getElementById(
     "mobileMemberArea"
   );
-
 
 const mobileMemberName =
   document.getElementById(
     "mobileMemberName"
   );
 
-
 const mobileMemberEmail =
   document.getElementById(
     "mobileMemberEmail"
   );
-
 
 const mobileSignout =
   document.getElementById(
     "mobileSignout"
   );
 
-
 const mainCheckoutButton =
   document.getElementById(
     "mainCheckoutButton"
   );
-
 
 const toolbarCheckoutButton =
   document.getElementById(
     "toolbarCheckoutButton"
   );
 
-
 const mobileCheckoutButton =
   document.getElementById(
     "mobileCheckoutButton"
   );
-
 
 const checkoutHeading =
   document.getElementById(
     "checkoutHeading"
   );
 
-
 const checkoutDescription =
   document.getElementById(
     "checkoutDescription"
   );
-
 
 const checkoutSmall =
   document.getElementById(
@@ -3495,40 +3632,31 @@ function showLoggedOutMemberState() {
   desktopLoginLink.style.display =
     "inline-flex";
 
-
   desktopMemberArea.classList.remove(
     "visible"
   );
 
-
   mobileLoginLink.style.display =
     "flex";
-
 
   mobileMemberArea.classList.remove(
     "visible"
   );
 
-
   mainCheckoutButton.textContent =
     "🔐 LOGIN TO CHECKOUT";
-
 
   toolbarCheckoutButton.textContent =
     "🔐 LOGIN TO CHECKOUT";
 
-
   mobileCheckoutButton.textContent =
     "🔐 LOGIN TO CHECKOUT";
-
 
   checkoutHeading.textContent =
     "Ready to place an order?";
 
-
   checkoutDescription.textContent =
     "A verified PCH member account and research-use acknowledgment are required before checkout access.";
-
 
   checkoutSmall.textContent =
     "Sign in or create a PCH account to continue.";
@@ -3557,44 +3685,34 @@ function showLoggedInMemberState(
   desktopLoginLink.style.display =
     "none";
 
-
   desktopMemberArea.classList.add(
     "visible"
   );
 
-
   desktopMemberName.textContent =
     username;
 
-
   mobileLoginLink.style.display =
     "none";
-
 
   mobileMemberArea.classList.add(
     "visible"
   );
 
-
   mobileMemberName.textContent =
     username;
-
 
   mobileMemberEmail.textContent =
     user.email || "";
 
-
   mainCheckoutButton.textContent =
     "🛒 OPEN MEMBER CHECKOUT";
-
 
   toolbarCheckoutButton.textContent =
     "🛒 OPEN MEMBER CHECKOUT";
 
-
   mobileCheckoutButton.textContent =
     "🛒 OPEN MEMBER CHECKOUT";
-
 
   checkoutHeading.textContent =
     "Welcome back, "
@@ -3603,10 +3721,8 @@ function showLoggedInMemberState(
     +
     ".";
 
-
   checkoutDescription.textContent =
     "Your PCH member session is active. Continue to your account to complete the required research-use acknowledgment before checkout.";
-
 
   checkoutSmall.textContent =
     "Your member login is active on this browser.";
@@ -3656,7 +3772,6 @@ async function restoreMemberSession() {
       error
     );
 
-
     showLoggedOutMemberState();
 
   }
@@ -3672,7 +3787,6 @@ async function signOutMember() {
 
   await supabaseClient.auth
     .signOut();
-
 
   showLoggedOutMemberState();
 
@@ -4360,7 +4474,7 @@ const products = [
 
 
 /* =========================================================
-   CATALOG ELEMENTS
+   ELEMENTS
 ========================================================= */
 
 const catalogGrid =
@@ -4368,42 +4482,35 @@ const catalogGrid =
     "catalogGrid"
   );
 
-
 const search =
   document.getElementById(
     "catalogSearch"
   );
-
 
 const searchClear =
   document.getElementById(
     "searchClear"
   );
 
-
 const count =
   document.getElementById(
     "catalogCount"
   );
-
 
 const heroListingCount =
   document.getElementById(
     "heroListingCount"
   );
 
-
 const noResults =
   document.getElementById(
     "noResults"
   );
 
-
 const filterBar =
   document.getElementById(
     "filterBar"
   );
-
 
 const filterButtons =
   Array.from(
@@ -4412,13 +4519,12 @@ const filterButtons =
     )
   );
 
-
 let activeFilter =
   "all";
 
 
 /* =========================================================
-   SAFE HTML
+   ESCAPE HTML
 ========================================================= */
 
 function escapeHTML(
@@ -4453,7 +4559,7 @@ function escapeHTML(
 
 
 /* =========================================================
-   VIAL DISPLAY NAME
+   SHORT VIAL NAME
 ========================================================= */
 
 function createVialName(
@@ -4490,7 +4596,7 @@ function createVialName(
 
 
 /* =========================================================
-   NORMALIZE
+   NORMALIZE SEARCH
 ========================================================= */
 
 function normalizeSearchText(
@@ -4519,15 +4625,7 @@ function normalizeSearchText(
 
 
 /* =========================================================
-   SEARCH DATA
-
-   IMPORTANT:
-   We intentionally separate "identity" data
-   from description text.
-
-   Single-letter searches use ONLY identity
-   information, so typing T does NOT match
-   random words like "listing" or "material".
+   SEARCH IDENTITY
 ========================================================= */
 
 function getIdentityValues(
@@ -4564,6 +4662,10 @@ function getIdentityValues(
 
 }
 
+
+/* =========================================================
+   BROAD SEARCH TEXT
+========================================================= */
 
 function getBroadSearchText(
   product
@@ -4612,14 +4714,6 @@ function getBroadSearchText(
 
 /* =========================================================
    SEARCH MATCH
-
-   1 character:
-   "r" = things intentionally tagged R
-   "t" = things intentionally tagged T
-   "g" = GHK-Cu, etc.
-
-   2+ characters:
-   full intelligent catalog search.
 ========================================================= */
 
 function productMatchesSearch(
@@ -4650,7 +4744,6 @@ function productMatchesSearch(
 
   /*
     SINGLE CHARACTER SEARCH
-    Exact keyword OR beginning of a name/keyword.
   */
 
   if (
@@ -4687,7 +4780,7 @@ function productMatchesSearch(
 
 
   /*
-    2+ CHARACTER SEARCH
+    MULTI CHARACTER SEARCH
   */
 
   const searchableText =
@@ -4714,9 +4807,7 @@ function productMatchesSearch(
 
 
 /* =========================================================
-   SEARCH RELEVANCE SCORE
-
-   Exact/prefix matches come first.
+   SEARCH SCORE
 ========================================================= */
 
 function getSearchScore(
@@ -4954,6 +5045,7 @@ function buildCatalog(
           aria-hidden="true"
         >
 
+
           <div class="vial-glow"></div>
 
 
@@ -4964,6 +5056,12 @@ function buildCatalog(
 
 
             <div class="vial-neck"></div>
+
+
+            <div class="vial-shine"></div>
+
+
+            <div class="vial-shine-right"></div>
 
 
             <div class="vial-label">
@@ -5012,6 +5110,7 @@ function buildCatalog(
 
           </div>
 
+
         </div>
 
 
@@ -5059,7 +5158,7 @@ function buildCatalog(
 
 
 /* =========================================================
-   SET ACTIVE FILTER
+   ACTIVE FILTER UI
 ========================================================= */
 
 function setActiveFilterUI(
@@ -5121,11 +5220,6 @@ function updateCatalog() {
       }
     );
 
-
-  /*
-    Search results are ranked so the
-    strongest match immediately appears first.
-  */
 
   if (
     hasSearch
@@ -5202,12 +5296,7 @@ function updateCatalog() {
 
 
 /* =========================================================
-   SEARCH EVENT
-
-   Typing even ONE character immediately:
-   - searches whole catalog
-   - switches category UI to ALL
-   - updates results
+   SEARCH
 ========================================================= */
 
 function handleSearchInput() {
@@ -5247,10 +5336,6 @@ search.addEventListener(
 search.addEventListener(
   "keyup",
   function(event) {
-
-    /*
-      Extra mobile-browser fallback.
-    */
 
     if (
       event.key
@@ -5297,7 +5382,7 @@ searchClear.addEventListener(
 
 
 /* =========================================================
-   FILTER BUTTONS
+   FILTERS
 ========================================================= */
 
 filterButtons.forEach(
@@ -5330,9 +5415,7 @@ filterButtons.forEach(
 
 
 /* =========================================================
-   MOBILE FILTER AUTO-SCROLL
-
-   Keeps the selected bubble visible.
+   FILTER SCROLL
 ========================================================= */
 
 filterBar.addEventListener(
@@ -5476,4 +5559,4 @@ restoreMemberSession();
 
 </body>
 
-</html>
+  </html>
