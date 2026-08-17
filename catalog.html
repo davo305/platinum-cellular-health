@@ -55,7 +55,6 @@ html {
 
 body {
   min-height: 100vh;
-
   background:
     radial-gradient(
       circle at 50% 0%,
@@ -63,16 +62,9 @@ body {
       transparent 30%
     ),
     #050607;
-
   color: var(--text);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-
   overflow-x: hidden;
 }
 
@@ -100,12 +92,7 @@ button {
 }
 
 .shell {
-  width:
-    min(
-      1220px,
-      calc(100% - 36px)
-    );
-
+  width: min(1220px, calc(100% - 36px));
   margin: auto;
 }
 
@@ -117,90 +104,62 @@ button {
 .site-header {
   position: sticky;
   top: 0;
-
   z-index: 1000;
-
-  background:
-    rgba(5,6,7,.97);
-
-  backdrop-filter:
-    blur(18px);
-
-  border-bottom:
-    1px solid rgba(255,255,255,.08);
+  background: rgba(5,6,7,.97);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .nav {
   min-height: 80px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 22px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-
   gap: 13px;
-
   min-width: 0;
 }
 
 .brand img {
   width: 54px;
   height: 54px;
-
   flex-shrink: 0;
-
   object-fit: cover;
-
   border-radius: 50%;
-
-  border:
-    1px solid rgba(213,173,85,.38);
-
-  box-shadow:
-    0 0 20px rgba(213,173,85,.06);
+  border: 1px solid rgba(213,173,85,.38);
+  box-shadow: 0 0 20px rgba(213,173,85,.06);
 }
 
 .brand-title {
   font-size: 13px;
-
   font-weight: 900;
-
   letter-spacing: 1.1px;
 }
 
 .brand-sub {
   margin-top: 2px;
-
   color: var(--gold);
-
   font-size: 8px;
-
   letter-spacing: 2.1px;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-
   gap: 15px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-
   gap: 15px;
-
   color: #bdc1c4;
-
   font-size: 11px;
-
   font-weight: 700;
 }
 
@@ -220,7 +179,6 @@ button {
 .member-area {
   display: flex;
   align-items: center;
-
   gap: 7px;
 }
 
@@ -228,32 +186,20 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 40px;
-
   padding: 0 14px;
-
-  border:
-    1px solid rgba(213,173,85,.42);
-
+  border: 1px solid rgba(213,173,85,.42);
   border-radius: 10px;
-
-  background:
-    rgba(213,173,85,.04);
-
+  background: rgba(213,173,85,.04);
   color: var(--gold2);
-
   font-size: 8px;
-
   font-weight: 900;
-
   letter-spacing: .75px;
 }
 
 .member-signed-in {
   display: none;
   align-items: center;
-
   gap: 7px;
 }
 
@@ -264,30 +210,19 @@ button {
 .member-pill {
   display: flex;
   align-items: center;
-
   gap: 8px;
-
   padding: 7px 10px;
-
-  border:
-    1px solid rgba(213,173,85,.28);
-
+  border: 1px solid rgba(213,173,85,.28);
   border-radius: 9px;
-
-  background:
-    rgba(213,173,85,.025);
+  background: rgba(213,173,85,.025);
 }
 
 .member-dot {
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: var(--gold);
-
-  box-shadow:
-    0 0 10px rgba(213,173,85,.45);
+  box-shadow: 0 0 10px rgba(213,173,85,.45);
 }
 
 .member-info {
@@ -296,27 +231,18 @@ button {
 
 .member-label {
   color: #767d82;
-
   font-size: 6px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
 .member-name {
   max-width: 90px;
-
   overflow: hidden;
-
   color: var(--gold2);
-
   font-size: 8px;
-
   font-weight: 900;
-
   white-space: nowrap;
-
   text-overflow: ellipsis;
 }
 
@@ -324,47 +250,27 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 37px;
-
   padding: 0 11px;
-
-  border:
-    1px solid #30353a;
-
+  border: 1px solid #30353a;
   border-radius: 8px;
-
   background: #0d1012;
-
   color: #b9bdc0;
-
   font-size: 7px;
-
   font-weight: 900;
 }
 
 .member-link.gold {
   border: none;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
+  background: linear-gradient(135deg, #b98a32, #e2c16e);
   color: #080909;
 }
 
 .member-signout {
   border: 0;
-
   background: transparent;
-
   color: #747b80;
-
   font-size: 7px;
-
   font-weight: 900;
 }
 
@@ -375,41 +281,27 @@ button {
 
 .mobile-menu-button {
   display: none;
-
   width: 45px;
   height: 45px;
-
   min-width: 45px;
-
   padding: 10px;
-
-  border:
-    1px solid #30353a;
-
+  border: 1px solid #30353a;
   border-radius: 10px;
-
   background: #0d1012;
 }
 
 .mobile-menu-button span {
   display: block;
-
   width: 100%;
   height: 2px;
-
   margin: 5px 0;
-
   border-radius: 10px;
-
   background: var(--gold2);
-
   transition: .25s ease;
 }
 
 .mobile-menu-button.active span:nth-child(1) {
-  transform:
-    translateY(7px)
-    rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 .mobile-menu-button.active span:nth-child(2) {
@@ -417,25 +309,15 @@ button {
 }
 
 .mobile-menu-button.active span:nth-child(3) {
-  transform:
-    translateY(-7px)
-    rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .mobile-menu {
   display: none;
-
-  background:
-    rgba(6,7,8,.995);
-
-  border-top:
-    1px solid #202428;
-
-  border-bottom:
-    1px solid #252a2e;
-
-  box-shadow:
-    0 20px 40px rgba(0,0,0,.45);
+  background: rgba(6,7,8,.995);
+  border-top: 1px solid #202428;
+  border-bottom: 1px solid #252a2e;
+  box-shadow: 0 20px 40px rgba(0,0,0,.45);
 }
 
 .mobile-menu.open {
@@ -444,59 +326,35 @@ button {
 
 .mobile-menu-inner {
   display: grid;
-
   padding: 10px 0 18px;
 }
 
 .mobile-menu-inner > a {
   padding: 14px 3px;
-
-  border-bottom:
-    1px solid #1f2326;
-
+  border-bottom: 1px solid #1f2326;
   color: #c6cacc;
-
   font-size: 12px;
-
   font-weight: 900;
 }
 
 .mobile-member-box {
   margin-bottom: 12px;
-
   padding: 16px;
-
-  border:
-    1px solid rgba(213,173,85,.25);
-
+  border: 1px solid rgba(213,173,85,.25);
   border-radius: 13px;
-
-  background:
-    rgba(213,173,85,.025);
+  background: rgba(213,173,85,.025);
 }
 
 .mobile-member-login {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 100%;
-
   min-height: 49px;
-
   border-radius: 9px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
+  background: linear-gradient(135deg, #b98a32, #e2c16e);
   color: #080909;
-
   font-size: 10px;
-
   font-weight: 900;
 }
 
@@ -510,75 +368,48 @@ button {
 
 .mobile-status {
   color: var(--gold);
-
   font-size: 8px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
 .mobile-member-name {
   margin-top: 3px;
-
   font-size: 18px;
-
   font-weight: 900;
 }
 
 .mobile-member-email {
   margin-top: 2px;
-
   color: #777e83;
-
   font-size: 9px;
-
   word-break: break-word;
 }
 
 .mobile-member-actions {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
-
   margin-top: 12px;
 }
 
 .mobile-member-actions a,
 .mobile-member-actions button {
   min-height: 43px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border:
-    1px solid #30353a;
-
+  border: 1px solid #30353a;
   border-radius: 8px;
-
   background: #0d1012;
-
   color: #c5c9cc;
-
   font-size: 9px;
-
   font-weight: 900;
 }
 
 .mobile-member-actions .gold {
   border: none;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
+  background: linear-gradient(135deg, #b98a32, #e2c16e);
   color: #080909;
 }
 
@@ -589,53 +420,35 @@ button {
 
 .promo-banner {
   width: 100%;
-
   overflow: hidden;
-
-  background:
-    linear-gradient(
-      90deg,
-      #956b1d,
-      #d5ad55,
-      #f0d48c,
-      #d5ad55,
-      #956b1d
-    );
-
+  background: linear-gradient(
+    90deg,
+    #956b1d,
+    #d5ad55,
+    #f0d48c,
+    #d5ad55,
+    #956b1d
+  );
   color: #080909;
 }
 
 .promo-track {
   display: flex;
-
   width: max-content;
-
   white-space: nowrap;
-
-  animation:
-    promoScroll 24s linear infinite;
+  animation: promoScroll 24s linear infinite;
 }
 
 .promo-track span {
   padding: 9px 36px;
-
   font-size: 9px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
 @keyframes promoScroll {
-
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 
@@ -645,90 +458,56 @@ button {
 
 .page-hero {
   padding: 70px 0 50px;
-
-  border-bottom:
-    1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .back-link {
   display: inline-block;
-
   margin-bottom: 26px;
-
   color: var(--gold2);
-
   font-size: 10px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
 .eyebrow {
   margin-bottom: 12px;
-
   color: var(--gold);
-
   font-size: 9px;
-
   font-weight: 900;
-
   letter-spacing: 2px;
 }
 
 .page-hero h1 {
   max-width: 800px;
-
   margin-bottom: 17px;
-
-  font-size:
-    clamp(
-      42px,
-      7vw,
-      68px
-    );
-
+  font-size: clamp(42px, 7vw, 68px);
   line-height: 1;
-
   letter-spacing: -2px;
 }
 
 .page-hero p {
   max-width: 750px;
-
   color: var(--muted);
-
   font-size: 15px;
-
   line-height: 1.8;
 }
 
 .hero-meta {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 8px;
-
   margin-top: 21px;
 }
 
 .hero-meta span {
   padding: 7px 12px;
-
-  border:
-    1px solid #292e32;
-
+  border: 1px solid #292e32;
   border-radius: 100px;
-
   background: #0c0e10;
-
   color: #858c91;
-
   font-size: 8px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
@@ -739,21 +518,14 @@ button {
 
 .checkout-section {
   padding: 30px 0;
-
   background: #080a0b;
-
-  border-bottom:
-    1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .checkout-box {
   padding: 30px;
-
-  border:
-    1px solid rgba(213,173,85,.29);
-
+  border: 1px solid rgba(213,173,85,.29);
   border-radius: 16px;
-
   background:
     radial-gradient(
       circle at 50% 0%,
@@ -761,74 +533,45 @@ button {
       transparent 65%
     ),
     #0c0f11;
-
   text-align: center;
 }
 
 .checkout-content {
   max-width: 680px;
-
   margin: auto;
 }
 
 .checkout-box h2 {
   margin-bottom: 8px;
-
-  font-size:
-    clamp(
-      26px,
-      5vw,
-      38px
-    );
+  font-size: clamp(26px, 5vw, 38px);
 }
 
 .checkout-box p {
   margin-bottom: 20px;
-
   color: var(--muted);
-
   font-size: 13px;
-
   line-height: 1.7;
 }
 
 .checkout-button {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 52px;
-
   padding: 0 29px;
-
   border-radius: 11px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #f0d48c
-    );
-
+  background: linear-gradient(135deg, #b98a32, #f0d48c);
   color: #080909;
-
   font-size: 12px;
-
   font-weight: 900;
-
   letter-spacing: .7px;
 }
 
 .checkout-small {
   margin-top: 11px;
-
   color: #737a7f;
-
   font-size: 8px;
-
   font-weight: 700;
-
   letter-spacing: .6px;
 }
 
@@ -843,52 +586,28 @@ button {
 
 .search-wrap {
   position: sticky;
-
   top: 80px;
-
   z-index: 100;
-
   padding: 13px 0 12px;
-
-  background:
-    rgba(5,6,7,.975);
-
-  backdrop-filter:
-    blur(18px);
-
-  border-bottom:
-    1px solid rgba(255,255,255,.025);
+  background: rgba(5,6,7,.975);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,.025);
 }
 
 .search-box {
   position: relative;
-
   display: flex;
   align-items: center;
-
   gap: 11px;
-
   width: 100%;
-
   padding: 0 17px;
-
-  border:
-    1px solid #343a3f;
-
+  border: 1px solid #343a3f;
   border-radius: 15px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c
-    );
+  background: linear-gradient(145deg, #111416, #090b0c);
 }
 
 .search-box:focus-within {
-  border-color:
-    rgba(213,173,85,.85);
-
+  border-color: rgba(213,173,85,.85);
   box-shadow:
     0 0 0 3px rgba(213,173,85,.07),
     0 8px 26px rgba(0,0,0,.22);
@@ -896,25 +615,17 @@ button {
 
 .search-icon {
   flex-shrink: 0;
-
   color: var(--gold);
-
   font-size: 25px;
 }
 
 .search-box input {
   width: 100%;
-
   min-height: 60px;
-
   border: 0;
-
   outline: none;
-
   background: transparent;
-
   color: #fff;
-
   font-size: 16px;
 }
 
@@ -924,25 +635,16 @@ button {
 
 .search-clear {
   display: none;
-
   width: 31px;
   height: 31px;
-
   flex-shrink: 0;
-
   align-items: center;
   justify-content: center;
-
   border: 0;
-
   border-radius: 50%;
-
   background: #171a1d;
-
   color: #8b9297;
-
   font-size: 16px;
-
   font-weight: 900;
 }
 
@@ -952,62 +654,29 @@ button {
 
 .filter-bar {
   display: grid;
-
-  grid-template-columns:
-    repeat(
-      3,
-      minmax(0,1fr)
-    );
-
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 11px;
-
   margin-top: 13px;
 }
 
 .filter-button {
   min-height: 55px;
-
   padding: 11px 16px;
-
-  border:
-    1px solid #343a3f;
-
+  border: 1px solid #343a3f;
   border-radius: 15px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #121517,
-      #090b0d
-    );
-
+  background: linear-gradient(145deg, #121517, #090b0d);
   color: #bec2c5;
-
   font-size: 10px;
-
   font-weight: 900;
-
   letter-spacing: .9px;
-
   line-height: 1.25;
 }
 
 .filter-button.active {
-  border-color:
-    rgba(240,212,140,.9);
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #efd17b
-    );
-
+  border-color: rgba(240,212,140,.9);
+  background: linear-gradient(135deg, #b98a32, #efd17b);
   color: #080909;
-
-  box-shadow:
-    0 8px 20px
-    rgba(213,173,85,.17);
+  box-shadow: 0 8px 20px rgba(213,173,85,.17);
 }
 
 
@@ -1017,48 +686,29 @@ button {
 
 .catalog-toolbar {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
-
   gap: 18px;
-
   margin: 26px 0 18px;
 }
 
 .catalog-count {
   color: #8d9499;
-
   font-size: 11px;
-
   font-weight: 900;
-
   letter-spacing: .65px;
 }
 
 .catalog-checkout {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 42px;
-
   padding: 0 17px;
-
   border-radius: 9px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #f0d48c
-    );
-
+  background: linear-gradient(135deg, #b98a32, #f0d48c);
   color: #080909;
-
   font-size: 8px;
-
   font-weight: 900;
 }
 
@@ -1069,46 +719,26 @@ button {
 
 .catalog-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(
-      2,
-      minmax(0,1fr)
-    );
-
+  grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 20px;
 }
 
 .product-card {
   position: relative;
-
   min-height: 420px;
-
   overflow: hidden;
-
   display: flex;
-
   flex-direction: column;
-
   padding: 31px;
-
-  border:
-    1px solid #292e32;
-
+  border: 1px solid #292e32;
   border-radius: 21px;
-
   background:
     radial-gradient(
       circle at 84% 34%,
       rgba(213,173,85,.075),
       transparent 34%
     ),
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c 70%
-    );
-
+    linear-gradient(145deg, #111416, #090b0c 70%);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.025),
     0 12px 32px rgba(0,0,0,.18);
@@ -1116,110 +746,71 @@ button {
 
 .product-main {
   position: relative;
-
   z-index: 3;
-
-  width:
-    calc(100% - 160px);
-
+  width: calc(100% - 160px);
   min-height: 265px;
 }
 
 .card-top {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
   flex-wrap: wrap;
 }
 
 .category {
   color: var(--gold);
-
   font-size: 10px;
-
   font-weight: 900;
-
   letter-spacing: 1.6px;
 }
 
 .amount-badge {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 33px;
-
   padding: 0 12px;
-
-  border:
-    1px solid #42474b;
-
+  border: 1px solid #42474b;
   border-radius: 10px;
-
-  background:
-    rgba(255,255,255,.025);
-
+  background: rgba(255,255,255,.025);
   color: #e0e2e4;
-
   font-size: 9px;
-
   font-weight: 900;
-
   letter-spacing: .8px;
 }
 
 .product-card h2 {
   margin: 23px 0 12px;
-
   font-size: 32px;
-
   line-height: 1.08;
-
   letter-spacing: -.5px;
 }
 
 .product-description {
   max-width: 390px;
-
   color: #adb3b7;
-
   font-size: 14px;
-
   line-height: 1.72;
 }
 
 .coa-indicator {
   display: inline-flex;
-
   align-items: center;
-
   gap: 8px;
-
   margin-top: 17px;
-
   color: var(--gold2);
-
   font-size: 8px;
-
   font-weight: 900;
-
   letter-spacing: 1.1px;
 }
 
 .coa-dot {
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: var(--gold);
-
-  box-shadow:
-    0 0 10px rgba(213,173,85,.62);
+  box-shadow: 0 0 10px rgba(213,173,85,.62);
 }
 
 
@@ -1229,37 +820,25 @@ button {
 
 .vial-area {
   position: absolute;
-
   top: 43px;
   right: 30px;
-
   width: 132px;
   height: 258px;
-
   z-index: 2;
-
   display: flex;
-
   align-items: flex-end;
   justify-content: center;
-
   pointer-events: none;
 }
 
 .vial-glow {
   position: absolute;
-
   left: 50%;
   bottom: -5px;
-
   width: 116px;
   height: 34px;
-
-  transform:
-    translateX(-50%);
-
+  transform: translateX(-50%);
   border-radius: 50%;
-
   background:
     radial-gradient(
       ellipse,
@@ -1267,25 +846,16 @@ button {
       rgba(213,173,85,.075) 45%,
       transparent 74%
     );
-
-  filter:
-    blur(10px);
+  filter: blur(10px);
 }
 
 .vial {
   position: relative;
-
   width: 78px;
   height: 174px;
-
   margin-bottom: 9px;
-
-  border-radius:
-    20px 20px 17px 17px;
-
-  border:
-    1px solid rgba(216,221,224,.55);
-
+  border-radius: 20px 20px 17px 17px;
+  border: 1px solid rgba(216,221,224,.55);
   background:
     linear-gradient(
       90deg,
@@ -1299,7 +869,6 @@ button {
       rgba(255,255,255,.12) 94%,
       rgba(222,228,231,.19) 100%
     );
-
   box-shadow:
     0 17px 22px rgba(0,0,0,.68),
     inset 4px 0 6px rgba(255,255,255,.11),
@@ -1310,27 +879,15 @@ button {
 
 .vial::before {
   content: "";
-
   position: absolute;
-
   top: -14px;
   left: 8px;
   right: 8px;
-
   height: 29px;
-
-  border-radius:
-    16px 16px 8px 8px;
-
-  border-top:
-    1px solid rgba(235,239,241,.57);
-
-  border-left:
-    1px solid rgba(213,219,222,.34);
-
-  border-right:
-    1px solid rgba(213,219,222,.34);
-
+  border-radius: 16px 16px 8px 8px;
+  border-top: 1px solid rgba(235,239,241,.57);
+  border-left: 1px solid rgba(213,219,222,.34);
+  border-right: 1px solid rgba(213,219,222,.34);
   background:
     linear-gradient(
       90deg,
@@ -1344,39 +901,24 @@ button {
 
 .vial::after {
   content: "";
-
   position: absolute;
-
   left: 5px;
   right: 5px;
   bottom: 3px;
-
   height: 13px;
-
-  border-radius:
-    3px 3px 13px 13px;
-
-  border-bottom:
-    2px solid rgba(235,239,241,.46);
+  border-radius: 3px 3px 13px 13px;
+  border-bottom: 2px solid rgba(235,239,241,.46);
 }
 
 .vial-cap {
   position: absolute;
-
   top: -48px;
   left: 3px;
-
   width: 70px;
   height: 31px;
-
   z-index: 9;
-
-  border:
-    1px solid rgba(180,185,188,.9);
-
-  border-radius:
-    7px 7px 4px 4px;
-
+  border: 1px solid rgba(180,185,188,.9);
+  border-radius: 7px 7px 4px 4px;
   background:
     linear-gradient(
       90deg,
@@ -1389,28 +931,18 @@ button {
       #e5e7e8 84%,
       #656a6d 100%
     );
-
-  box-shadow:
-    0 5px 8px rgba(0,0,0,.6);
+  box-shadow: 0 5px 8px rgba(0,0,0,.6);
 }
 
 .vial-cap::before {
   content: "";
-
   position: absolute;
-
   top: -13px;
   left: 4px;
-
   width: 60px;
   height: 17px;
-
-  border-radius:
-    11px 11px 5px 5px;
-
-  border:
-    1px solid rgba(91,94,96,.75);
-
+  border-radius: 11px 11px 5px 5px;
+  border: 1px solid rgba(91,94,96,.75);
   background:
     linear-gradient(
       180deg,
@@ -1422,47 +954,28 @@ button {
 
 .vial-neck {
   position: absolute;
-
   top: -19px;
   left: 15px;
-
   width: 46px;
   height: 24px;
-
   z-index: 3;
-
-  border-left:
-    1px solid rgba(228,232,234,.42);
-
-  border-right:
-    1px solid rgba(228,232,234,.42);
+  border-left: 1px solid rgba(228,232,234,.42);
+  border-right: 1px solid rgba(228,232,234,.42);
 }
 
 .vial-label {
   position: absolute;
-
   top: 33px;
   left: 5px;
   right: 5px;
-
   height: 119px;
-
   z-index: 6;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
-  padding:
-    8px 4px 5px;
-
+  padding: 8px 4px 5px;
   overflow: hidden;
-
-  border:
-    1px solid rgba(213,173,85,.68);
-
+  border: 1px solid rgba(213,173,85,.68);
   background:
     linear-gradient(
       100deg,
@@ -1476,123 +989,74 @@ button {
 
 .vial-logo {
   position: relative;
-
   z-index: 2;
-
   width: 27px;
   height: 27px;
-
   margin-bottom: 3px;
-
   border-radius: 50%;
-
   object-fit: cover;
-
-  border:
-    1px solid rgba(213,173,85,.35);
+  border: 1px solid rgba(213,173,85,.35);
 }
 
 .vial-brand {
   color: #f1f1f1;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 6px;
-
   font-weight: 700;
-
   letter-spacing: 1px;
 }
 
 .vial-labs {
   margin-top: 2px;
-
   color: var(--gold);
-
   font-size: 3.5px;
-
   font-weight: 900;
-
   letter-spacing: .65px;
 }
 
 .vial-divider {
   width: 39px;
   height: 1px;
-
-  margin:
-    6px 0 4px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--gold),
-      transparent
-    );
+  margin: 6px 0 4px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
 .vial-product {
   width: 100%;
-
   min-height: 18px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   color: #f5f5f5;
-
   font-size: 7px;
-
   font-weight: 900;
-
   line-height: 1.1;
-
   text-align: center;
-
   text-transform: uppercase;
 }
 
 .vial-amount {
   margin-top: 4px;
-
   color: var(--gold2);
-
   font-size: 9px;
-
   font-weight: 900;
 }
 
 .vial-research {
   margin-top: 6px;
-
-  padding:
-    2px 4px;
-
-  border:
-    1px solid rgba(213,173,85,.52);
-
+  padding: 2px 4px;
+  border: 1px solid rgba(213,173,85,.52);
   color: var(--gold);
-
   font-size: 3px;
-
   font-weight: 900;
 }
 
 .vial-bottom-line {
   position: absolute;
-
   left: 8px;
   right: 8px;
   bottom: 8px;
-
   height: 1px;
-
   background:
     linear-gradient(
       90deg,
@@ -1604,17 +1068,12 @@ button {
 
 .vial-shine {
   position: absolute;
-
   top: 18px;
   left: 5px;
-
   width: 6px;
   height: 132px;
-
   z-index: 8;
-
   border-radius: 12px;
-
   background:
     linear-gradient(
       180deg,
@@ -1622,23 +1081,17 @@ button {
       rgba(255,255,255,.12) 35%,
       transparent
     );
-
   opacity: .67;
 }
 
 .vial-shine-right {
   position: absolute;
-
   top: 24px;
   right: 5px;
-
   width: 3px;
   height: 113px;
-
   z-index: 8;
-
   border-radius: 10px;
-
   background:
     linear-gradient(
       180deg,
@@ -1654,116 +1107,74 @@ button {
 
 .product-bottom {
   position: relative;
-
   z-index: 4;
-
   display: flex;
-
   align-items: flex-end;
   justify-content: space-between;
-
   gap: 18px;
-
   margin-top: auto;
-
   padding-top: 20px;
-
-  border-top:
-    1px solid #272c30;
+  border-top: 1px solid #272c30;
 }
 
 .price-label {
   display: block;
-
   color: #777e83;
-
   font-size: 8px;
-
   font-weight: 900;
-
   letter-spacing: 1.2px;
 }
 
 .price {
   margin-top: 3px;
-
   color: var(--gold2);
-
   font-size: 37px;
-
   line-height: 1;
-
   font-weight: 900;
 }
 
 .product-actions {
   display: flex;
-
   align-items: center;
-
   gap: 9px;
 }
 
 .btn {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 44px;
-
   padding: 0 16px;
-
-  border:
-    1px solid #3a4044;
-
+  border: 1px solid #3a4044;
   border-radius: 10px;
-
   background: #101214;
-
   color: #f4f4f4;
-
   font-size: 9px;
-
   font-weight: 900;
 }
 
 .btn-coa {
   color: var(--gold2);
-
-  border-color:
-    rgba(213,173,85,.55);
+  border-color: rgba(213,173,85,.55);
 }
 
 .btn-unavailable {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 44px;
-
   padding: 0 14px;
-
-  border:
-    1px solid #30353a;
-
+  border: 1px solid #30353a;
   border-radius: 10px;
-
   background: #0b0d0f;
-
   color: #737a7f;
-
   font-size: 8px;
-
   font-weight: 900;
 }
 
 .research-note {
   color: #6d7479;
-
   font-size: 6px;
-
   font-weight: 900;
 }
 
@@ -1774,23 +1185,14 @@ button {
 
 .coa-modal {
   display: none;
-
   position: fixed;
-
   inset: 0;
-
   z-index: 10000;
-
   align-items: center;
   justify-content: center;
-
   padding: 20px;
-
-  background:
-    rgba(0,0,0,.91);
-
-  backdrop-filter:
-    blur(14px);
+  background: rgba(0,0,0,.91);
+  backdrop-filter: blur(14px);
 }
 
 .coa-modal.visible {
@@ -1798,95 +1200,56 @@ button {
 }
 
 .coa-panel {
-  width:
-    min(
-      960px,
-      100%
-    );
-
-  max-height:
-    calc(
-      100vh - 40px
-    );
-
+  width: min(960px, 100%);
+  max-height: calc(100vh - 40px);
   display: flex;
-
   flex-direction: column;
-
   overflow: hidden;
-
-  border:
-    1px solid rgba(213,173,85,.42);
-
+  border: 1px solid rgba(213,173,85,.42);
   border-radius: 20px;
-
   background: #090b0d;
 }
 
 .coa-header {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
-
   gap: 16px;
-
   padding: 17px 20px;
-
-  border-bottom:
-    1px solid #292e32;
+  border-bottom: 1px solid #292e32;
 }
 
 .coa-heading-small {
   color: var(--gold);
-
   font-size: 7px;
-
   font-weight: 900;
-
   letter-spacing: 1.5px;
 }
 
 .coa-title {
   margin-top: 2px;
-
   color: #fff;
-
   font-size: 20px;
-
   font-weight: 900;
 }
 
 .coa-close {
   width: 42px;
   height: 42px;
-
   flex-shrink: 0;
-
-  border:
-    1px solid #353a3f;
-
+  border: 1px solid #353a3f;
   border-radius: 50%;
-
   background: #111416;
-
   color: #fff;
-
   font-size: 22px;
 }
 
 .coa-tabs {
   display: flex;
-
   gap: 9px;
-
   overflow-x: auto;
-
   padding: 12px 14px;
-
-  border-bottom:
-    1px solid #262b2f;
-
+  border-bottom: 1px solid #262b2f;
   scrollbar-width: none;
 }
 
@@ -1896,110 +1259,66 @@ button {
 
 .coa-tab {
   flex: 0 0 auto;
-
   min-height: 43px;
-
   padding: 0 16px;
-
-  border:
-    1px solid #343a3f;
-
+  border: 1px solid #343a3f;
   border-radius: 100px;
-
   background: #101315;
-
   color: #adb3b7;
-
   font-size: 8px;
-
   font-weight: 900;
-
   white-space: nowrap;
 }
 
 .coa-tab.active {
-  border-color:
-    rgba(240,212,140,.9);
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #efd17b
-    );
-
+  border-color: rgba(240,212,140,.9);
+  background: linear-gradient(135deg, #b98a32, #efd17b);
   color: #080909;
 }
 
 .coa-image-wrap {
   flex: 1;
-
   min-height: 0;
-
   overflow: auto;
-
   padding: 16px;
-
   background: #050607;
-
   -webkit-overflow-scrolling: touch;
 }
 
 .coa-image {
   width: auto;
-
   max-width: 100%;
-
   margin: auto;
-
   border-radius: 6px;
-
   background: #fff;
 }
 
 .coa-footer {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
-
   gap: 12px;
-
   padding: 12px 18px;
-
-  border-top:
-    1px solid #292e32;
+  border-top: 1px solid #292e32;
 }
 
 .coa-footer-note {
   color: #767d82;
-
   font-size: 8px;
-
   line-height: 1.5;
 }
 
 .coa-full {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 40px;
-
   padding: 0 14px;
-
   flex-shrink: 0;
-
-  border:
-    1px solid rgba(213,173,85,.5);
-
+  border: 1px solid rgba(213,173,85,.5);
   border-radius: 9px;
-
   color: var(--gold2);
-
   font-size: 8px;
-
   font-weight: 900;
 }
 
@@ -2010,132 +1329,78 @@ button {
 
 .no-results {
   display: none;
-
   margin-top: 20px;
-
   padding: 44px 22px;
-
-  border:
-    1px solid var(--border);
-
+  border: 1px solid var(--border);
   border-radius: 15px;
-
   background: #0d1012;
-
   color: var(--muted);
-
   text-align: center;
 }
 
 .no-results strong {
   color: #d6d8da;
-
   font-size: 19px;
 }
 
 .catalog-notice {
   margin-top: 38px;
-
   padding: 24px;
-
-  border:
-    1px solid rgba(213,173,85,.20);
-
+  border: 1px solid rgba(213,173,85,.20);
   border-radius: 14px;
-
-  background:
-    rgba(213,173,85,.025);
+  background: rgba(213,173,85,.025);
 }
 
 .catalog-notice strong {
   display: block;
-
   margin-bottom: 8px;
-
   color: var(--gold2);
-
   font-size: 11px;
 }
 
 .catalog-notice p {
   color: var(--muted);
-
   font-size: 12px;
-
   line-height: 1.8;
 }
 
 .mobile-sticky-checkout {
   display: none;
-
   position: fixed;
-
   left: 18px;
   right: 18px;
-
-  bottom:
-    calc(
-      12px +
-      env(safe-area-inset-bottom)
-    );
-
+  bottom: calc(12px + env(safe-area-inset-bottom));
   z-index: 5000;
-
   padding: 4px;
-
-  border:
-    1px solid rgba(213,173,85,.3);
-
+  border: 1px solid rgba(213,173,85,.3);
   border-radius: 14px;
-
-  background:
-    rgba(5,6,7,.95);
+  background: rgba(5,6,7,.95);
 }
 
 .mobile-sticky-checkout a {
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   width: 100%;
-
   min-height: 55px;
-
   border-radius: 10px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #efd17e
-    );
-
+  background: linear-gradient(135deg, #b98a32, #efd17e);
   color: #080909;
-
   font-size: 11px;
-
   font-weight: 900;
 }
 
 footer {
   padding: 42px 0;
-
-  border-top:
-    1px solid var(--border);
-
+  border-top: 1px solid var(--border);
   background: #030404;
 }
 
 .footer-grid {
   display: flex;
-
   justify-content: space-between;
-
   gap: 30px;
-
   color: #777d82;
-
   font-size: 11px;
 }
 
@@ -2145,15 +1410,12 @@ footer {
 ========================================================= */
 
 @media(max-width:1100px) {
-
   .member-area {
     display: none;
   }
-
 }
 
 @media(max-width:900px) {
-
   body {
     padding-bottom: 84px;
   }
@@ -2189,11 +1451,9 @@ footer {
   .footer-grid {
     flex-direction: column;
   }
-
 }
 
 @media(max-width:650px) {
-
   .page-hero {
     padding: 34px 0 30px;
   }
@@ -2220,16 +1480,10 @@ footer {
 
   .filter-bar {
     display: flex;
-
     gap: 11px;
-
     overflow-x: auto;
-
     margin-top: 12px;
-
-    padding:
-      2px 2px 10px;
-
+    padding: 2px 2px 10px;
     scrollbar-width: none;
   }
 
@@ -2238,30 +1492,20 @@ footer {
   }
 
   .filter-button {
-    flex:
-      0 0 auto;
-
+    flex: 0 0 auto;
     min-height: 58px;
-
-    padding:
-      0 23px;
-
+    padding: 0 23px;
     border-radius: 100px;
-
     white-space: nowrap;
   }
 
   .product-card {
     min-height: 376px;
-
-    padding:
-      25px 22px;
+    padding: 25px 22px;
   }
 
   .product-main {
-    width:
-      calc(100% - 115px);
-
+    width: calc(100% - 115px);
     min-height: 250px;
   }
 
@@ -2276,7 +1520,6 @@ footer {
   .vial-area {
     top: 61px;
     right: 11px;
-
     width: 106px;
     height: 215px;
   }
@@ -2289,20 +1532,17 @@ footer {
   .vial-cap {
     top: -42px;
     left: 2px;
-
     width: 58px;
     height: 27px;
   }
 
   .vial-cap::before {
     width: 48px;
-
     left: 4px;
   }
 
   .vial-label {
     top: 28px;
-
     height: 103px;
   }
 
@@ -2336,23 +1576,11 @@ footer {
   }
 
   .coa-modal {
-    padding:
-      8px
-      8px
-      calc(
-        8px +
-        env(safe-area-inset-bottom)
-      );
+    padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
   }
 
   .coa-panel {
-    max-height:
-      calc(
-        100vh -
-        16px -
-        env(safe-area-inset-bottom)
-      );
-
+    max-height: calc(100vh - 16px - env(safe-area-inset-bottom));
     border-radius: 15px;
   }
 
@@ -2366,10 +1594,7 @@ footer {
 
   .coa-tab {
     min-height: 42px;
-
-    padding:
-      0 14px;
-
+    padding: 0 14px;
     font-size: 7.5px;
   }
 
@@ -2384,14 +1609,11 @@ footer {
   .coa-footer {
     padding: 10px;
   }
-
 }
 
 @media(max-width:520px) {
-
   .shell {
-    width:
-      calc(100% - 24px);
+    width: calc(100% - 24px);
   }
 
   .nav {
@@ -2417,14 +1639,11 @@ footer {
 
   .product-card {
     min-height: 364px;
-
-    padding:
-      23px 20px;
+    padding: 23px 20px;
   }
 
   .product-main {
-    width:
-      calc(100% - 108px);
+    width: calc(100% - 108px);
   }
 
   .product-card h2 {
@@ -2438,19 +1657,15 @@ footer {
   .vial-area {
     right: 8px;
   }
-
 }
 
 @media(max-width:390px) {
-
   .product-card {
-    padding:
-      21px 17px;
+    padding: 21px 17px;
   }
 
   .product-main {
-    width:
-      calc(100% - 100px);
+    width: calc(100% - 100px);
   }
 
   .product-card h2 {
@@ -2459,14 +1674,9 @@ footer {
 
   .vial-area {
     right: 4px;
-
-    transform:
-      scale(.94);
-
-    transform-origin:
-      center right;
+    transform: scale(.94);
+    transform-origin: center right;
   }
-
 }
 
 </style>
@@ -2481,19 +1691,11 @@ footer {
 
 <div class="shell nav">
 
+<a href="index.html" class="brand">
 
-<a
-  href="index.html"
-  class="brand"
->
-
-<img
-  src="pch-logo.jpg"
-  alt="PCH Labs"
->
+<img src="pch-logo.jpg" alt="PCH Labs">
 
 <div>
-
 <div class="brand-title">
 PLATINUM CELLULAR HEALTH LABS
 </div>
@@ -2501,7 +1703,6 @@ PLATINUM CELLULAR HEALTH LABS
 <div class="brand-sub">
 LONGEVITY AT THE CELLULAR LEVEL
 </div>
-
 </div>
 
 </a>
@@ -2509,38 +1710,16 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 <div class="nav-right">
 
-
 <nav class="nav-links">
 
 <a href="index.html">Home</a>
-
-<a href="research-information.html">
-Research
-</a>
-
-<a href="catalog.html">
-Catalog
-</a>
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-<a href="recommended-supplies.html">
-Supplies
-</a>
-
-<a href="policies.html">
-Policies
-</a>
-
-<a href="faq.html">
-FAQ
-</a>
-
-<a href="contact.html">
-Contact
-</a>
+<a href="research-information.html">Research</a>
+<a href="catalog.html">Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
 
 </nav>
 
@@ -2583,21 +1762,13 @@ MEMBER
 </div>
 
 
-<a
-  href="login.html"
-  class="member-link"
->
+<a href="login.html" class="member-link">
 ACCOUNT
 </a>
 
-
-<a
-  href="login.html"
-  class="member-link gold"
->
+<a href="login.html" class="member-link gold">
 CHECKOUT
 </a>
-
 
 <button
   type="button"
@@ -2617,26 +1788,19 @@ SIGN OUT
   id="mobileMenuButton"
   type="button"
 >
-
 <span></span>
 <span></span>
 <span></span>
-
 </button>
 
-
 </div>
 
 </div>
 
 
-<div
-  class="mobile-menu"
-  id="mobileMenu"
->
+<div class="mobile-menu" id="mobileMenu">
 
 <div class="shell mobile-menu-inner">
-
 
 <div class="mobile-member-box">
 
@@ -2677,10 +1841,7 @@ PCH Member
 MY ACCOUNT
 </a>
 
-<a
-  href="login.html"
-  class="gold"
->
+<a href="login.html" class="gold">
 CHECKOUT
 </a>
 
@@ -2703,34 +1864,13 @@ CATALOG
 
 
 <a href="index.html">Home</a>
-
-<a href="research-information.html">
-Research Information
-</a>
-
-<a href="catalog.html">
-Research Catalog
-</a>
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-<a href="recommended-supplies.html">
-Recommended Supplies
-</a>
-
-<a href="policies.html">
-Policies
-</a>
-
-<a href="faq.html">
-FAQ
-</a>
-
-<a href="contact.html">
-Contact
-</a>
+<a href="research-information.html">Research Information</a>
+<a href="catalog.html">Research Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Recommended Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
 
 </div>
 
@@ -2741,37 +1881,15 @@ Contact
 
 <div class="promo-track">
 
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
+<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
+<span>$15 STANDARD SHIPPING VALUE</span>
+<span>✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦</span>
+<span>FREE STANDARD SHIPPING ON ORDERS OVER $280</span>
 
-<span>
-$15 STANDARD SHIPPING VALUE
-</span>
-
-<span>
-✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
-</span>
-
-<span>
-FREE STANDARD SHIPPING ON ORDERS OVER $280
-</span>
-
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
-
-<span>
-$15 STANDARD SHIPPING VALUE
-</span>
-
-<span>
-✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
-</span>
-
-<span>
-FREE STANDARD SHIPPING ON ORDERS OVER $280
-</span>
+<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
+<span>$15 STANDARD SHIPPING VALUE</span>
+<span>✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦</span>
+<span>FREE STANDARD SHIPPING ON ORDERS OVER $280</span>
 
 </div>
 
@@ -2787,30 +1905,23 @@ FREE STANDARD SHIPPING ON ORDERS OVER $280
 
 <div class="shell">
 
-<a
-  href="index.html"
-  class="back-link"
->
+<a href="index.html" class="back-link">
 ← BACK TO PCH LABS
 </a>
-
 
 <div class="eyebrow">
 RESEARCH MATERIAL CATALOG
 </div>
 
-
 <h1>
 Research catalog.
 </h1>
-
 
 <p>
 Browse currently listed research materials,
 amounts, pricing, and available analytical
 documentation.
 </p>
-
 
 <div class="hero-meta">
 
@@ -2909,56 +2020,29 @@ Sign in or create a PCH account to continue.
 </div>
 
 
-<div
-  class="filter-bar"
-  id="filterBar"
->
+<div class="filter-bar" id="filterBar">
 
-<button
-  class="filter-button active"
-  type="button"
-  data-filter="all"
->
+<button class="filter-button active" type="button" data-filter="all">
 ALL
 </button>
 
-<button
-  class="filter-button"
-  type="button"
-  data-filter="bac"
->
+<button class="filter-button" type="button" data-filter="bac">
 BAC WATER
 </button>
 
-<button
-  class="filter-button"
-  type="button"
-  data-filter="glp"
->
+<button class="filter-button" type="button" data-filter="glp">
 GLP / WEIGHT LOSS
 </button>
 
-<button
-  class="filter-button"
-  type="button"
-  data-filter="recovery"
->
+<button class="filter-button" type="button" data-filter="recovery">
 RECOVERY / HEALING
 </button>
 
-<button
-  class="filter-button"
-  type="button"
-  data-filter="energy"
->
+<button class="filter-button" type="button" data-filter="energy">
 ENERGY / MITOCHONDRIA
 </button>
 
-<button
-  class="filter-button"
-  type="button"
-  data-filter="mind"
->
+<button class="filter-button" type="button" data-filter="mind">
 MIND / LONGEVITY / SLEEP
 </button>
 
@@ -2969,10 +2053,7 @@ MIND / LONGEVITY / SLEEP
 
 <div class="catalog-toolbar">
 
-<div
-  id="catalogCount"
-  class="catalog-count"
-></div>
+<div id="catalogCount" class="catalog-count"></div>
 
 <a
   href="login.html"
@@ -3074,14 +2155,7 @@ Not for human or animal use
 </div>
 
 
-<!-- =========================================================
-     COA VIEWER
-========================================================= -->
-
-<div
-  class="coa-modal"
-  id="coaModal"
->
+<div class="coa-modal" id="coaModal">
 
 <div class="coa-panel">
 
@@ -3093,10 +2167,7 @@ Not for human or animal use
 ANALYTICAL DOCUMENTATION
 </div>
 
-<div
-  class="coa-title"
-  id="coaTitle"
->
+<div class="coa-title" id="coaTitle">
 Certificate of Analysis
 </div>
 
@@ -3114,10 +2185,7 @@ Certificate of Analysis
 </div>
 
 
-<div
-  class="coa-tabs"
-  id="coaTabs"
-></div>
+<div class="coa-tabs" id="coaTabs"></div>
 
 
 <div class="coa-image-wrap">
@@ -3157,9 +2225,7 @@ OPEN FULL SIZE
 </div>
 
 
-<script
-  src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
-></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 
 <script>
@@ -3184,8 +2250,7 @@ const supabaseClient =
         autoRefreshToken: true,
         detectSessionInUrl: true,
         storage: window.localStorage,
-        storageKey:
-          "pch-member-auth"
+        storageKey: "pch-member-auth"
       }
     }
   );
@@ -3196,96 +2261,58 @@ const supabaseClient =
 ========================================================= */
 
 const desktopLoginLink =
-  document.getElementById(
-    "desktopLoginLink"
-  );
+  document.getElementById("desktopLoginLink");
 
 const desktopMemberArea =
-  document.getElementById(
-    "desktopMemberArea"
-  );
+  document.getElementById("desktopMemberArea");
 
 const desktopMemberName =
-  document.getElementById(
-    "desktopMemberName"
-  );
+  document.getElementById("desktopMemberName");
 
 const desktopSignout =
-  document.getElementById(
-    "desktopSignout"
-  );
+  document.getElementById("desktopSignout");
 
 const mobileLoginLink =
-  document.getElementById(
-    "mobileLoginLink"
-  );
+  document.getElementById("mobileLoginLink");
 
 const mobileMemberArea =
-  document.getElementById(
-    "mobileMemberArea"
-  );
+  document.getElementById("mobileMemberArea");
 
 const mobileMemberName =
-  document.getElementById(
-    "mobileMemberName"
-  );
+  document.getElementById("mobileMemberName");
 
 const mobileMemberEmail =
-  document.getElementById(
-    "mobileMemberEmail"
-  );
+  document.getElementById("mobileMemberEmail");
 
 const mobileSignout =
-  document.getElementById(
-    "mobileSignout"
-  );
+  document.getElementById("mobileSignout");
 
 const mainCheckoutButton =
-  document.getElementById(
-    "mainCheckoutButton"
-  );
+  document.getElementById("mainCheckoutButton");
 
 const toolbarCheckoutButton =
-  document.getElementById(
-    "toolbarCheckoutButton"
-  );
+  document.getElementById("toolbarCheckoutButton");
 
 const mobileCheckoutButton =
-  document.getElementById(
-    "mobileCheckoutButton"
-  );
+  document.getElementById("mobileCheckoutButton");
 
 const checkoutHeading =
-  document.getElementById(
-    "checkoutHeading"
-  );
+  document.getElementById("checkoutHeading");
 
 const checkoutDescription =
-  document.getElementById(
-    "checkoutDescription"
-  );
+  document.getElementById("checkoutDescription");
 
 const checkoutSmall =
-  document.getElementById(
-    "checkoutSmall"
-  );
+  document.getElementById("checkoutSmall");
 
 
 function showLoggedOutMemberState() {
 
-  desktopLoginLink.style.display =
-    "inline-flex";
+  desktopLoginLink.style.display = "inline-flex";
+  desktopMemberArea.classList.remove("visible");
 
-  desktopMemberArea.classList.remove(
-    "visible"
-  );
-
-  mobileLoginLink.style.display =
-    "flex";
-
-  mobileMemberArea.classList.remove(
-    "visible"
-  );
+  mobileLoginLink.style.display = "flex";
+  mobileMemberArea.classList.remove("visible");
 
   mainCheckoutButton.textContent =
     "🔐 LOGIN TO CHECKOUT";
@@ -3304,45 +2331,26 @@ function showLoggedOutMemberState() {
 
   checkoutSmall.textContent =
     "Sign in or create a PCH account to continue.";
-
 }
 
 
-function showLoggedInMemberState(
-  user
-) {
+function showLoggedInMemberState(user) {
 
   const username =
-    user.user_metadata
-    &&
+    user.user_metadata &&
     user.user_metadata.username
-    ?
-    user.user_metadata.username
-    :
-    "PCH Member";
+      ? user.user_metadata.username
+      : "PCH Member";
 
-  desktopLoginLink.style.display =
-    "none";
+  desktopLoginLink.style.display = "none";
+  desktopMemberArea.classList.add("visible");
+  desktopMemberName.textContent = username;
 
-  desktopMemberArea.classList.add(
-    "visible"
-  );
+  mobileLoginLink.style.display = "none";
+  mobileMemberArea.classList.add("visible");
 
-  desktopMemberName.textContent =
-    username;
-
-  mobileLoginLink.style.display =
-    "none";
-
-  mobileMemberArea.classList.add(
-    "visible"
-  );
-
-  mobileMemberName.textContent =
-    username;
-
-  mobileMemberEmail.textContent =
-    user.email || "";
+  mobileMemberName.textContent = username;
+  mobileMemberEmail.textContent = user.email || "";
 
   mainCheckoutButton.textContent =
     "🛒 OPEN MEMBER CHECKOUT";
@@ -3354,18 +2362,13 @@ function showLoggedInMemberState(
     "🛒 OPEN MEMBER CHECKOUT";
 
   checkoutHeading.textContent =
-    "Welcome back, "
-    +
-    username
-    +
-    ".";
+    "Welcome back, " + username + ".";
 
   checkoutDescription.textContent =
     "Your PCH member session is active. Continue to your account to complete the required research-use acknowledgment before checkout.";
 
   checkoutSmall.textContent =
     "Your member login is active on this browser.";
-
 }
 
 
@@ -3373,15 +2376,11 @@ async function restoreMemberSession() {
 
   try {
 
-    const {
-      data
-    } =
-      await supabaseClient.auth
-        .getSession();
+    const { data } =
+      await supabaseClient.auth.getSession();
 
     if (
-      data.session
-      &&
+      data.session &&
       data.session.user
     ) {
 
@@ -3389,17 +2388,13 @@ async function restoreMemberSession() {
         data.session.user
       );
 
-    }
-
-    else {
+    } else {
 
       showLoggedOutMemberState();
 
     }
 
-  }
-
-  catch(error) {
+  } catch(error) {
 
     showLoggedOutMemberState();
 
@@ -3410,8 +2405,7 @@ async function restoreMemberSession() {
 
 async function signOutMember() {
 
-  await supabaseClient.auth
-    .signOut();
+  await supabaseClient.auth.signOut();
 
   showLoggedOutMemberState();
 
@@ -3429,33 +2423,26 @@ mobileSignout.addEventListener(
 );
 
 
-supabaseClient.auth
-  .onAuthStateChange(
-    function(
-      event,
-      session
+supabaseClient.auth.onAuthStateChange(
+  function(event, session) {
+
+    if (
+      session &&
+      session.user
     ) {
 
-      if (
-        session
-        &&
+      showLoggedInMemberState(
         session.user
-      ) {
+      );
 
-        showLoggedInMemberState(
-          session.user
-        );
+    } else {
 
-      }
-
-      else {
-
-        showLoggedOutMemberState();
-
-      }
+      showLoggedOutMemberState();
 
     }
-  );
+
+  }
+);
 
 
 /* =========================================================
@@ -3533,12 +2520,26 @@ const products = [
         "GREEN CAP · 10 MG COA",
       file:
         "retatrutide-10mg-greencap-coa.jpg"
+    },
+
+    {
+      label:
+        "BLUE CAP · 99.7% · 11.2 MG",
+      file:
+        "r10-finnrick-btl-99.7-11.2mg-coa.jpg"
+    },
+
+    {
+      label:
+        "ILS · 99.77% · 10.51 MG",
+      file:
+        "r10-ils-99.77-10.51mg-coa.jpg"
     }
 
   ],
 
   description:
-    "R-series research-material listing at 10 mg."
+    "R-series research-material listing at 10 mg with multiple analytical reports available."
 },
 
 {
@@ -3555,8 +2556,27 @@ const products = [
       "retatrutide",
       "20mg"
     ],
+
+  coas: [
+
+    {
+      label:
+        "BLUE CAP · 99.47% · 22.24 MG",
+      file:
+        "r20-freedom-99.47-22.24mg-coa.jpg"
+    },
+
+    {
+      label:
+        "JANOSHIK · 99.827% · 20.64 MG",
+      file:
+        "r20-janoshik-99.827-20.64mg-coa.jpg"
+    }
+
+  ],
+
   description:
-    "R-series research-material listing at 20 mg."
+    "R-series research-material listing at 20 mg with multiple analytical reports available."
 },
 
 {
@@ -3592,6 +2612,27 @@ const products = [
 
     {
       label:
+        "PURPLE CAP · 99.94% · 32.74 MG",
+      file:
+        "r30-freedom-purplecap-99.94-32.74mg-coa.jpg"
+    },
+
+    {
+      label:
+        "JANOSHIK · 99.85% · 31–32 MG",
+      file:
+        "r30-janoshik-99.85-31mg-triplicate-coa.jpg"
+    },
+
+    {
+      label:
+        "FINNRICK · 99.3% · 29.6 MG",
+      file:
+        "r30-finnrick-krause-99.3-29.6mg-endotoxin-metals-coa.jpg"
+    },
+
+    {
+      label:
         "ENDOTOXIN · <10 EU/VIAL",
       file:
         "coa-retatrutide-endotoxin-janoshik.jpg"
@@ -3617,8 +2658,27 @@ const products = [
       "tirzepatide",
       "10mg"
     ],
+
+  coas: [
+
+    {
+      label:
+        "ILS · 99.57% · 10.24 MG",
+      file:
+        "t10-ils-99.57-10.24mg-endotoxin-coa.jpg"
+    },
+
+    {
+      label:
+        "ENDOTOXIN · 0.056 EU/ML",
+      file:
+        "t10-ils-99.57-10.24mg-endotoxin-coa.jpg"
+    }
+
+  ],
+
   description:
-    "T-series research-material listing at 10 mg."
+    "T-series research-material listing at 10 mg with purity, content, and endotoxin documentation available."
 },
 
 {
@@ -4164,39 +3224,25 @@ const products = [
 ========================================================= */
 
 const catalogGrid =
-  document.getElementById(
-    "catalogGrid"
-  );
+  document.getElementById("catalogGrid");
 
 const search =
-  document.getElementById(
-    "catalogSearch"
-  );
+  document.getElementById("catalogSearch");
 
 const searchClear =
-  document.getElementById(
-    "searchClear"
-  );
+  document.getElementById("searchClear");
 
 const count =
-  document.getElementById(
-    "catalogCount"
-  );
+  document.getElementById("catalogCount");
 
 const heroListingCount =
-  document.getElementById(
-    "heroListingCount"
-  );
+  document.getElementById("heroListingCount");
 
 const noResults =
-  document.getElementById(
-    "noResults"
-  );
+  document.getElementById("noResults");
 
 const filterBar =
-  document.getElementById(
-    "filterBar"
-  );
+  document.getElementById("filterBar");
 
 const filterButtons =
   Array.from(
@@ -4206,120 +3252,65 @@ const filterButtons =
   );
 
 const coaModal =
-  document.getElementById(
-    "coaModal"
-  );
+  document.getElementById("coaModal");
 
 const coaTitle =
-  document.getElementById(
-    "coaTitle"
-  );
+  document.getElementById("coaTitle");
 
 const coaImage =
-  document.getElementById(
-    "coaImage"
-  );
+  document.getElementById("coaImage");
 
 const coaTabs =
-  document.getElementById(
-    "coaTabs"
-  );
+  document.getElementById("coaTabs");
 
 const coaClose =
-  document.getElementById(
-    "coaClose"
-  );
+  document.getElementById("coaClose");
 
 const coaFull =
-  document.getElementById(
-    "coaFull"
-  );
+  document.getElementById("coaFull");
 
-let activeFilter =
-  "all";
+let activeFilter = "all";
 
-let currentCoas =
-  [];
+let currentCoas = [];
 
 
 /* =========================================================
    HELPERS
 ========================================================= */
 
-function escapeHTML(
-  value
-) {
+function escapeHTML(value) {
 
-  return String(
-    value ?? ""
-  )
-  .replace(
-    /&/g,
-    "&amp;"
-  )
-  .replace(
-    /</g,
-    "&lt;"
-  )
-  .replace(
-    />/g,
-    "&gt;"
-  )
-  .replace(
-    /"/g,
-    "&quot;"
-  )
-  .replace(
-    /'/g,
-    "&#039;"
-  );
-
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 
-function createVialName(
-  name
-) {
+function createVialName(name) {
 
   let cleanName =
-    String(
-      name || ""
-    )
-    .replace(
-      /\(.*?\)/g,
-      ""
-    )
-    .trim();
+    String(name || "")
+      .replace(/\(.*?\)/g, "")
+      .trim();
 
-  if (
-    cleanName.length > 21
-  ) {
-
+  if (cleanName.length > 21) {
     cleanName =
-      cleanName.substring(
-        0,
-        21
-      );
-
+      cleanName.substring(0, 21);
   }
 
   return cleanName;
-
 }
 
 
-function getProductCoas(
-  product
-) {
+function getProductCoas(product) {
 
   return (
-    Array.isArray(
-      product.coas
-    )
-    ?
-    product.coas
-    :
-    []
+    Array.isArray(product.coas)
+      ? product.coas
+      : []
   );
 
 }
@@ -4329,21 +3320,13 @@ function getProductCoas(
    COA VIEWER
 ========================================================= */
 
-function showCoa(
-  index
-) {
+function showCoa(index) {
 
   const selected =
-    currentCoas[
-      index
-    ];
+    currentCoas[index];
 
-  if (
-    !selected
-  ) {
-
+  if (!selected) {
     return;
-
   }
 
   coaImage.src =
@@ -4356,9 +3339,7 @@ function showCoa(
     selected.file;
 
   coaTabs
-    .querySelectorAll(
-      ".coa-tab"
-    )
+    .querySelectorAll(".coa-tab")
     .forEach(
       function(button) {
 
@@ -4366,70 +3347,46 @@ function showCoa(
           "active",
           Number(
             button.dataset.index
-          )
-          ===
-          index
+          ) === index
         );
 
       }
     );
-
 }
 
 
-function openCoaViewer(
-  productIndex
-) {
+function openCoaViewer(productIndex) {
 
   const product =
-    products[
-      productIndex
-    ];
+    products[productIndex];
 
-  if (
-    !product
-  ) {
-
+  if (!product) {
     return;
-
   }
 
   currentCoas =
-    getProductCoas(
-      product
-    );
+    getProductCoas(product);
 
-  if (
-    currentCoas.length === 0
-  ) {
-
+  if (currentCoas.length === 0) {
     return;
-
   }
 
   coaTitle.textContent =
-    product.name
-    +
-    " · "
-    +
+    product.name +
+    " · " +
     product.amount;
 
-  coaTabs.innerHTML =
-    "";
+  coaTabs.innerHTML = "";
 
   currentCoas.forEach(
-    function(
-      coa,
-      index
-    ) {
+    function(coa, index) {
 
       const button =
         document.createElement(
           "button"
         );
 
-      button.type =
-        "button";
+      button.type = "button";
 
       button.className =
         "coa-tab";
@@ -4444,9 +3401,7 @@ function openCoaViewer(
         "click",
         function() {
 
-          showCoa(
-            index
-          );
+          showCoa(index);
 
         }
       );
@@ -4458,9 +3413,7 @@ function openCoaViewer(
     }
   );
 
-  showCoa(
-    0
-  );
+  showCoa(0);
 
   coaModal.classList.add(
     "visible"
@@ -4469,7 +3422,6 @@ function openCoaViewer(
   document.body.classList.add(
     "coa-open"
   );
-
 }
 
 
@@ -4483,12 +3435,9 @@ function closeCoaViewer() {
     "coa-open"
   );
 
-  coaImage.src =
-    "";
+  coaImage.src = "";
 
-  currentCoas =
-    [];
-
+  currentCoas = [];
 }
 
 
@@ -4502,12 +3451,8 @@ coaModal.addEventListener(
   "click",
   function(event) {
 
-    if (
-      event.target === coaModal
-    ) {
-
+    if (event.target === coaModal) {
       closeCoaViewer();
-
     }
 
   }
@@ -4518,12 +3463,8 @@ document.addEventListener(
   "keydown",
   function(event) {
 
-    if (
-      event.key === "Escape"
-    ) {
-
+    if (event.key === "Escape") {
       closeCoaViewer();
-
     }
 
   }
@@ -4534,51 +3475,31 @@ document.addEventListener(
    SEARCH
 ========================================================= */
 
-function normalizeSearchText(
-  value
-) {
+function normalizeSearchText(value) {
 
-  return String(
-    value || ""
-  )
-  .toLowerCase()
-  .replace(
-    /[^a-z0-9+]+/g,
-    " "
-  )
-  .replace(
-    /\s+/g,
-    " "
-  )
-  .trim();
-
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9+]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 
-function getIdentityValues(
-  product
-) {
+function getIdentityValues(product) {
 
   return [
 
     product.name,
-
     product.category,
-
     product.amount,
 
     ...(
-      product.keywords
-      ||
-      []
+      product.keywords || []
     )
 
   ]
-  .map(
-    normalizeSearchText
-  )
-  .filter(Boolean);
-
+    .map(normalizeSearchText)
+    .filter(Boolean);
 }
 
 
@@ -4592,12 +3513,8 @@ function productMatchesSearch(
       rawTerm
     );
 
-  if (
-    !term
-  ) {
-
+  if (!term) {
     return true;
-
   }
 
   const identities =
@@ -4605,9 +3522,7 @@ function productMatchesSearch(
       product
     );
 
-  if (
-    term.length === 1
-  ) {
+  if (term.length === 1) {
 
     return identities.some(
       function(value) {
@@ -4632,27 +3547,14 @@ function productMatchesSearch(
   const searchText =
     normalizeSearchText(
 
-      product.name
-      +
-      " "
-      +
-      product.category
-      +
-      " "
-      +
-      product.amount
-      +
-      " "
-      +
-      (
-        product.keywords
-        ||
-        []
-      )
-      .join(" ")
-      +
-      " "
-      +
+      product.name +
+      " " +
+      product.category +
+      " " +
+      product.amount +
+      " " +
+      (product.keywords || []).join(" ") +
+      " " +
       product.description
 
     );
@@ -4682,12 +3584,8 @@ function getSearchScore(
       rawTerm
     );
 
-  if (
-    !term
-  ) {
-
+  if (!term) {
     return 0;
-
   }
 
   const name =
@@ -4695,56 +3593,36 @@ function getSearchScore(
       product.name
     );
 
-  let score =
-    0;
+  let score = 0;
 
-  if (
-    name === term
-  ) {
-
+  if (name === term) {
     score += 1000;
-
   }
 
-  if (
-    name.startsWith(
-      term
-    )
-  ) {
-
+  if (name.startsWith(term)) {
     score += 700;
-
   }
 
-  getIdentityValues(
-    product
-  )
-  .forEach(
-    function(value) {
+  getIdentityValues(product)
+    .forEach(
+      function(value) {
 
-      if (
-        value === term
-      ) {
+        if (value === term) {
 
-        score += 500;
+          score += 500;
 
-      }
+        } else if (
+          value.startsWith(term)
+        ) {
 
-      else if (
-        value.startsWith(
-          term
-        )
-      ) {
+          score += 250;
 
-        score += 250;
+        }
 
       }
-
-    }
-  );
+    );
 
   return score;
-
 }
 
 
@@ -4752,12 +3630,9 @@ function getSearchScore(
    BUILD CATALOG
 ========================================================= */
 
-function buildCatalog(
-  list
-) {
+function buildCatalog(list) {
 
-  catalogGrid.innerHTML =
-    "";
+  catalogGrid.innerHTML = "";
 
   list.forEach(
     function(product) {
@@ -4821,8 +3696,7 @@ function buildCatalog(
             ?
             "ANALYTICAL REPORT AVAILABLE"
             :
-            coas.length
-            +
+            coas.length +
             " ANALYTICAL REPORTS AVAILABLE"
           }
 
@@ -4865,9 +3739,7 @@ function buildCatalog(
 
       card.innerHTML = `
 
-
         <div class="product-main">
-
 
           <div class="card-top">
 
@@ -4881,19 +3753,15 @@ function buildCatalog(
 
           </div>
 
-
           <h2>
             ${safeName}
           </h2>
-
 
           <p class="product-description">
             ${safeDescription}
           </p>
 
-
           ${coaIndicator}
-
 
         </div>
 
@@ -4903,24 +3771,16 @@ function buildCatalog(
           aria-hidden="true"
         >
 
-
           <div class="vial-glow"></div>
-
 
           <div class="vial">
 
-
             <div class="vial-cap"></div>
-
             <div class="vial-neck"></div>
-
             <div class="vial-shine"></div>
-
             <div class="vial-shine-right"></div>
 
-
             <div class="vial-label">
-
 
               <img
                 class="vial-logo"
@@ -4928,49 +3788,38 @@ function buildCatalog(
                 alt=""
               >
 
-
               <div class="vial-brand">
                 PLATINUM
               </div>
-
 
               <div class="vial-labs">
                 CELLULAR HEALTH LABS
               </div>
 
-
               <div class="vial-divider"></div>
-
 
               <div class="vial-product">
                 ${vialName}
               </div>
 
-
               <div class="vial-amount">
                 ${safeAmount}
               </div>
-
 
               <div class="vial-research">
                 RESEARCH USE ONLY
               </div>
 
-
             </div>
-
 
             <div class="vial-bottom-line"></div>
 
-
           </div>
-
 
         </div>
 
 
         <div class="product-bottom">
-
 
           <div>
 
@@ -4994,7 +3843,6 @@ function buildCatalog(
             </span>
 
           </div>
-
 
         </div>
 
@@ -5021,8 +3869,7 @@ function buildCatalog(
 
             openCoaViewer(
               Number(
-                button.dataset
-                  .coaIndex
+                button.dataset.coaIndex
               )
             );
 
@@ -5039,18 +3886,14 @@ function buildCatalog(
    FILTER / UPDATE
 ========================================================= */
 
-function setActiveFilterUI(
-  filter
-) {
+function setActiveFilterUI(filter) {
 
   filterButtons.forEach(
     function(button) {
 
       button.classList.toggle(
         "active",
-        button.dataset.filter
-        ===
-        filter
+        button.dataset.filter === filter
       );
 
     }
@@ -5071,9 +3914,7 @@ function updateCatalog() {
     products.filter(
       function(product) {
 
-        if (
-          hasSearch
-        ) {
+        if (hasSearch) {
 
           return productMatchesSearch(
             product,
@@ -5083,8 +3924,7 @@ function updateCatalog() {
         }
 
         return (
-          activeFilter === "all"
-          ||
+          activeFilter === "all" ||
           product.groups.includes(
             activeFilter
           )
@@ -5093,41 +3933,34 @@ function updateCatalog() {
       }
     );
 
-  if (
-    hasSearch
-  ) {
+  if (hasSearch) {
 
     filtered =
       filtered
-      .map(
-        function(product) {
+        .map(
+          function(product) {
 
-          return {
-            product:
-              product,
-            score:
-              getSearchScore(
-                product,
-                rawTerm
-              )
-          };
+            return {
+              product: product,
+              score:
+                getSearchScore(
+                  product,
+                  rawTerm
+                )
+            };
 
-        }
-      )
-      .sort(
-        function(a,b) {
-
-          return b.score - a.score;
-
-        }
-      )
-      .map(
-        function(item) {
-
-          return item.product;
-
-        }
-      );
+          }
+        )
+        .sort(
+          function(a,b) {
+            return b.score - a.score;
+          }
+        )
+        .map(
+          function(item) {
+            return item.product;
+          }
+        );
 
   }
 
@@ -5136,8 +3969,7 @@ function updateCatalog() {
   );
 
   count.textContent =
-    filtered.length
-    +
+    filtered.length +
     (
       filtered.length === 1
       ?
@@ -5148,10 +3980,8 @@ function updateCatalog() {
 
   noResults.style.display =
     filtered.length === 0
-    ?
-    "block"
-    :
-    "none";
+      ? "block"
+      : "none";
 
   searchClear.classList.toggle(
     "visible",
@@ -5165,12 +3995,9 @@ search.addEventListener(
   "input",
   function() {
 
-    if (
-      search.value.length
-    ) {
+    if (search.value.length) {
 
-      activeFilter =
-        "all";
+      activeFilter = "all";
 
       setActiveFilterUI(
         "all"
@@ -5188,11 +4015,9 @@ searchClear.addEventListener(
   "click",
   function() {
 
-    search.value =
-      "";
+    search.value = "";
 
-    activeFilter =
-      "all";
+    activeFilter = "all";
 
     setActiveFilterUI(
       "all"
@@ -5216,8 +4041,7 @@ filterButtons.forEach(
         activeFilter =
           button.dataset.filter;
 
-        search.value =
-          "";
+        search.value = "";
 
         setActiveFilterUI(
           activeFilter
@@ -5227,12 +4051,9 @@ filterButtons.forEach(
 
         button.scrollIntoView(
           {
-            behavior:
-              "smooth",
-            block:
-              "nearest",
-            inline:
-              "center"
+            behavior: "smooth",
+            block: "nearest",
+            inline: "center"
           }
         );
 
@@ -5305,8 +4126,7 @@ menu
 ========================================================= */
 
 heroListingCount.textContent =
-  products.length
-  +
+  products.length +
   " LISTINGS";
 
 setActiveFilterUI(
@@ -5322,4 +4142,4 @@ restoreMemberSession();
 
 </body>
 
-</html>
+  </html>
