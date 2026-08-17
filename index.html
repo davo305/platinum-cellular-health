@@ -16,10 +16,6 @@
 
 <style>
 
-/* =========================================
-   RESET
-========================================= */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,7 +43,6 @@ body {
     sans-serif;
 
   line-height: 1.6;
-
   overflow-x: hidden;
 }
 
@@ -80,11 +75,6 @@ button {
   margin: auto;
 }
 
-
-/* =========================================
-   COLORS
-========================================= */
-
 :root {
   --black: #050607;
   --panel: #0d0f11;
@@ -106,7 +96,6 @@ button {
 .gate {
   position: fixed;
   inset: 0;
-
   z-index: 99999;
 
   background:
@@ -118,12 +107,9 @@ button {
     rgba(2,3,4,.97);
 
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   padding: 20px;
-
   overflow-y: auto;
 }
 
@@ -133,7 +119,6 @@ button {
 
 .gate-panel {
   width: 100%;
-
   max-width: 620px;
 
   background:
@@ -147,7 +132,6 @@ button {
     1px solid rgba(213,173,85,.35);
 
   border-radius: 22px;
-
   padding: 32px;
 
   box-shadow:
@@ -158,13 +142,9 @@ button {
 .gate-logo {
   width: 110px;
   height: 110px;
-
   object-fit: cover;
-
   border-radius: 50%;
-
-  margin:
-    0 auto 20px;
+  margin: 0 auto 20px;
 
   border:
     1px solid rgba(213,173,85,.35);
@@ -172,24 +152,16 @@ button {
 
 .gate-badge {
   width: fit-content;
-
-  margin:
-    0 auto 15px;
-
-  padding:
-    6px 12px;
+  margin: 0 auto 15px;
+  padding: 6px 12px;
 
   border:
     1px solid rgba(213,173,85,.35);
 
   border-radius: 100px;
-
   color: var(--gold2);
-
   font-size: 11px;
-
   font-weight: 800;
-
   letter-spacing: 1.5px;
 }
 
@@ -204,33 +176,25 @@ button {
     );
 
   line-height: 1.1;
-
   margin-bottom: 12px;
 }
 
 .gate-intro {
   text-align: center;
-
   color: var(--muted);
-
   font-size: 14px;
-
   margin-bottom: 24px;
 }
 
 .gate-checks {
   display: grid;
-
   gap: 10px;
 }
 
 .gate-check {
   display: flex;
-
   gap: 12px;
-
   align-items: flex-start;
-
   padding: 13px;
 
   border:
@@ -245,19 +209,14 @@ button {
 .gate-check input {
   width: 20px;
   height: 20px;
-
   min-width: 20px;
-
   margin-top: 2px;
-
   accent-color: var(--gold);
 }
 
 .gate-check span {
   color: #c5c9cc;
-
   font-size: 13px;
-
   line-height: 1.45;
 }
 
@@ -268,19 +227,14 @@ button {
 .gate-enter,
 .gate-exit {
   width: 100%;
-
   border-radius: 10px;
-
   padding: 15px;
-
   font-weight: 900;
-
   letter-spacing: .7px;
 }
 
 .gate-enter {
   margin-top: 20px;
-
   border: none;
 
   background:
@@ -295,30 +249,21 @@ button {
 
 .gate-enter:disabled {
   opacity: .35;
-
   cursor: not-allowed;
 }
 
 .gate-exit {
   margin-top: 9px;
-
   background: transparent;
-
-  border:
-    1px solid #33383d;
-
+  border: 1px solid #33383d;
   color: #aeb3b7;
 }
 
 .gate-footer {
   margin-top: 18px;
-
   text-align: center;
-
   color: #777d82;
-
   font-size: 10px;
-
   letter-spacing: 1.3px;
 }
 
@@ -330,7 +275,6 @@ button {
 .site-header {
   position: sticky;
   top: 0;
-
   z-index: 1000;
 
   background:
@@ -345,35 +289,24 @@ button {
 
 .nav {
   min-height: 78px;
-
   display: flex;
-
   align-items: center;
-
-  justify-content:
-    space-between;
-
+  justify-content: space-between;
   gap: 20px;
 }
 
 .brand {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
-
   min-width: 0;
 }
 
 .brand img {
   width: 52px;
   height: 52px;
-
   object-fit: cover;
-
   flex-shrink: 0;
-
   border-radius: 50%;
 
   border:
@@ -382,41 +315,29 @@ button {
 
 .brand-title {
   font-size: 13px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
 .brand-sub {
   font-size: 8px;
-
   color: var(--gold);
-
   letter-spacing: 2px;
-
   margin-top: 2px;
 }
 
 .nav-right {
   display: flex;
-
   align-items: center;
-
   gap: 14px;
 }
 
 .nav-links {
   display: flex;
-
   align-items: center;
-
   gap: 15px;
-
   color: #b9bdc0;
-
   font-size: 11px;
-
   font-weight: 700;
 }
 
@@ -431,24 +352,16 @@ button {
 
 .member-area {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
 }
 
 .member-login {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   min-height: 40px;
-
-  padding:
-    0 14px;
-
+  padding: 0 14px;
   border-radius: 9px;
 
   border:
@@ -458,17 +371,13 @@ button {
     rgba(213,173,85,.035);
 
   color: var(--gold2);
-
   font-size: 9px;
-
   font-weight: 900;
 }
 
 .member-signed-in {
   display: none;
-
   align-items: center;
-
   gap: 8px;
 }
 
@@ -478,13 +387,9 @@ button {
 
 .member-pill {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
-
-  padding:
-    8px 11px;
+  padding: 8px 11px;
 
   border:
     1px solid rgba(213,173,85,.28);
@@ -498,9 +403,7 @@ button {
 .member-dot {
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: var(--gold);
 
   box-shadow:
@@ -509,53 +412,32 @@ button {
 
 .member-label {
   color: #767d82;
-
   font-size: 6.5px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
 .member-name {
   color: var(--gold2);
-
   font-size: 9px;
-
   font-weight: 900;
-
   max-width: 90px;
-
   overflow: hidden;
-
   white-space: nowrap;
-
   text-overflow: ellipsis;
 }
 
 .member-link {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   min-height: 37px;
-
-  padding:
-    0 11px;
-
-  border:
-    1px solid #30353a;
-
+  padding: 0 11px;
+  border: 1px solid #30353a;
   border-radius: 8px;
-
   background: #0d1012;
-
   color: #b9bdc0;
-
   font-size: 8px;
-
   font-weight: 900;
 }
 
@@ -574,13 +456,9 @@ button {
 
 .member-signout {
   border: 0;
-
   background: transparent;
-
   color: #777d82;
-
   font-size: 8px;
-
   font-weight: 900;
 }
 
@@ -591,45 +469,31 @@ button {
 
 .mobile-member-status-bar {
   display: none;
-
-  border-top:
-    1px solid #202428;
-
+  border-top: 1px solid #202428;
   background: #080a0b;
 }
 
 .mobile-member-status-inner {
   min-height: 52px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 12px;
 }
 
 .mobile-status-login {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   width: 100%;
-
   min-height: 40px;
 
   border:
     1px solid rgba(213,173,85,.35);
 
   border-radius: 8px;
-
   color: var(--gold2);
-
   font-size: 9px;
-
   font-weight: 900;
 
   background:
@@ -638,13 +502,9 @@ button {
 
 .mobile-status-member {
   display: none;
-
   width: 100%;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 10px;
 }
 
@@ -654,68 +514,47 @@ button {
 
 .mobile-status-identity {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
 }
 
 .mobile-status-dot {
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: var(--gold);
 
   box-shadow:
-    0 0 8px
-    rgba(213,173,85,.5);
+    0 0 8px rgba(213,173,85,.5);
 }
 
 .mobile-status-label {
   color: #777e83;
-
   font-size: 6px;
-
   font-weight: 900;
 }
 
 .mobile-status-name {
   color: var(--gold2);
-
   font-size: 10px;
-
   font-weight: 900;
 }
 
 .mobile-status-actions {
   display: flex;
-
   gap: 6px;
 }
 
 .mobile-status-actions a {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   min-height: 34px;
-
-  padding:
-    0 9px;
-
-  border:
-    1px solid #30353a;
-
+  padding: 0 9px;
+  border: 1px solid #30353a;
   border-radius: 7px;
-
   background: #0d1012;
-
   font-size: 7px;
-
   font-weight: 900;
 }
 
@@ -739,47 +578,34 @@ button {
 
 .mobile-menu-button {
   display: none;
-
   width: 44px;
   height: 44px;
-
   padding: 10px;
-
-  border:
-    1px solid #30353a;
-
+  border: 1px solid #30353a;
   border-radius: 9px;
-
   background: #0d1012;
 }
 
 .mobile-menu-button span {
   display: block;
-
   width: 100%;
   height: 2px;
-
   margin: 5px 0;
-
   background: var(--gold2);
-
   transition: .25s ease;
 }
 
-.mobile-menu-button.active
-span:nth-child(1) {
+.mobile-menu-button.active span:nth-child(1) {
   transform:
     translateY(7px)
     rotate(45deg);
 }
 
-.mobile-menu-button.active
-span:nth-child(2) {
+.mobile-menu-button.active span:nth-child(2) {
   opacity: 0;
 }
 
-.mobile-menu-button.active
-span:nth-child(3) {
+.mobile-menu-button.active span:nth-child(3) {
   transform:
     translateY(-7px)
     rotate(-45deg);
@@ -787,15 +613,9 @@ span:nth-child(3) {
 
 .mobile-menu {
   display: none;
-
-  background:
-    rgba(6,7,8,.99);
-
-  border-top:
-    1px solid #202428;
-
-  border-bottom:
-    1px solid #252a2e;
+  background: rgba(6,7,8,.99);
+  border-top: 1px solid #202428;
+  border-bottom: 1px solid #252a2e;
 }
 
 .mobile-menu.open {
@@ -804,28 +624,19 @@ span:nth-child(3) {
 
 .mobile-menu-inner {
   display: grid;
-
-  padding:
-    10px 0 18px;
+  padding: 10px 0 18px;
 }
 
 .mobile-menu-inner > a {
-  padding:
-    15px 3px;
-
-  border-bottom:
-    1px solid #1f2326;
-
+  padding: 15px 3px;
+  border-bottom: 1px solid #1f2326;
   color: #c6cacc;
-
   font-size: 12px;
-
   font-weight: 900;
 }
 
 .mobile-member-box {
   margin-bottom: 12px;
-
   padding: 16px;
 
   border:
@@ -839,15 +650,10 @@ span:nth-child(3) {
 
 .mobile-member-login {
   width: 100%;
-
   min-height: 48px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   border-radius: 9px;
 
   background:
@@ -858,9 +664,7 @@ span:nth-child(3) {
     );
 
   color: #080909;
-
   font-size: 10px;
-
   font-weight: 900;
 }
 
@@ -874,58 +678,39 @@ span:nth-child(3) {
 
 .mobile-status {
   color: var(--gold);
-
   font-size: 8px;
-
   font-weight: 900;
 }
 
 .mobile-member-name {
   margin-top: 3px;
-
   font-size: 18px;
-
   font-weight: 900;
 }
 
 .mobile-member-email {
   color: #777e83;
-
   font-size: 9px;
 }
 
 .mobile-member-actions {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
-
   margin-top: 12px;
 }
 
 .mobile-member-actions a,
 .mobile-member-actions button {
   min-height: 43px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  border:
-    1px solid #30353a;
-
+  border: 1px solid #30353a;
   border-radius: 8px;
-
   background: #0d1012;
-
   color: #c5c9cc;
-
   font-size: 9px;
-
   font-weight: 900;
 }
 
@@ -949,7 +734,6 @@ span:nth-child(3) {
 
 .promo-banner {
   width: 100%;
-
   overflow: hidden;
 
   background:
@@ -965,15 +749,12 @@ span:nth-child(3) {
   color: #080909;
 
   box-shadow:
-    0 8px 25px
-    rgba(213,173,85,.08);
+    0 8px 25px rgba(213,173,85,.08);
 }
 
 .promo-track {
   display: flex;
-
   width: max-content;
-
   white-space: nowrap;
 
   animation:
@@ -981,24 +762,19 @@ span:nth-child(3) {
 }
 
 .promo-track span {
-  padding:
-    9px 40px;
-
+  padding: 9px 40px;
   font-size: 10px;
-
   font-weight: 900;
 }
 
 @keyframes promoScroll {
 
   from {
-    transform:
-      translateX(0);
+    transform: translateX(0);
   }
 
   to {
-    transform:
-      translateX(-50%);
+    transform: translateX(-50%);
   }
 
 }
@@ -1010,38 +786,22 @@ span:nth-child(3) {
 
 .btn {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   min-height: 46px;
-
-  padding:
-    0 20px;
-
+  padding: 0 20px;
   border-radius: 8px;
-
-  border:
-    1px solid #34393d;
-
+  border: 1px solid #34393d;
   background: #101214;
-
   color: #f4f4f4;
-
   font-size: 12px;
-
   font-weight: 900;
-
   transition: .2s ease;
 }
 
 .btn:hover {
-  transform:
-    translateY(-2px);
-
-  border-color:
-    var(--gold);
+  transform: translateY(-2px);
+  border-color: var(--gold);
 }
 
 .btn-gold {
@@ -1064,13 +824,9 @@ span:nth-child(3) {
 
 .hero {
   min-height: 720px;
-
   display: flex;
-
   align-items: center;
-
-  border-bottom:
-    1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 
   background:
     radial-gradient(
@@ -1082,27 +838,17 @@ span:nth-child(3) {
 
 .hero-grid {
   display: grid;
-
-  grid-template-columns:
-    1.1fr .9fr;
-
+  grid-template-columns: 1.1fr .9fr;
   gap: 70px;
-
   align-items: center;
-
-  padding:
-    90px 0;
+  padding: 90px 0;
 }
 
 .eyebrow {
   color: var(--gold);
-
   font-size: 11px;
-
   font-weight: 900;
-
   letter-spacing: 2.5px;
-
   margin-bottom: 14px;
 }
 
@@ -1115,101 +861,74 @@ span:nth-child(3) {
     );
 
   line-height: .98;
-
   letter-spacing: -2.5px;
-
   margin-bottom: 25px;
 }
 
 .hero-copy > p {
   color: var(--muted);
-
   font-size: 17px;
-
   line-height: 1.8;
 }
 
 .hero-actions {
   display: flex;
-
   gap: 12px;
-
   flex-wrap: wrap;
-
   margin-top: 32px;
 }
 
 .hero-meta {
   display: flex;
-
   gap: 10px;
-
   flex-wrap: wrap;
-
   margin-top: 28px;
 }
 
 .hero-meta span {
-  border:
-    1px solid #282d31;
-
+  border: 1px solid #282d31;
   background: #0c0e10;
-
   color: #8e9499;
-
-  padding:
-    7px 10px;
-
+  padding: 7px 10px;
   font-size: 9px;
-
   font-weight: 800;
 }
 
 .hero-visual {
   min-height: 480px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 }
 
 .logo-frame {
   width: 350px;
   height: 350px;
-
   border-radius: 50%;
-
   padding: 18px;
 
   border:
     1px solid rgba(213,173,85,.25);
 
   box-shadow:
-    0 0 80px
-    rgba(213,173,85,.08);
+    0 0 80px rgba(213,173,85,.08);
 }
 
 .logo-frame img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   border-radius: 50%;
 }
 
 
 /* =========================================
-   OFFERS SIGNUP
+   OFFERS
 ========================================= */
 
 .offers-section {
   position: relative;
-
-  padding:
-    90px 0 88px;
+  padding: 90px 0 88px;
 
   border-top:
     1px solid rgba(213,173,85,.10);
@@ -1228,21 +947,18 @@ span:nth-child(3) {
 
 .offers-section::before {
   content: "";
-
   position: absolute;
-
   top: 26px;
   left: 50%;
 
-  width: min(
-    1120px,
-    calc(100% - 50px)
-  );
+  width:
+    min(
+      1120px,
+      calc(100% - 50px)
+    );
 
   height: 1px;
-
-  transform:
-    translateX(-50%);
+  transform: translateX(-50%);
 
   background:
     linear-gradient(
@@ -1255,18 +971,9 @@ span:nth-child(3) {
 
 .offers-wrap {
   display: grid;
-
-  grid-template-columns:
-    .82fr 1.18fr;
-
+  grid-template-columns: .82fr 1.18fr;
   gap: 65px;
-
   align-items: center;
-}
-
-.offers-copy {
-  padding:
-    10px 0;
 }
 
 .offers-copy h2 {
@@ -1278,46 +985,34 @@ span:nth-child(3) {
     );
 
   line-height: 1.02;
-
   margin-bottom: 18px;
 }
 
 .offers-copy > p {
   color: var(--muted);
-
   font-size: 15px;
-
   line-height: 1.8;
 }
 
 .offers-benefits {
   display: grid;
-
   gap: 11px;
-
   margin-top: 25px;
 }
 
 .offers-benefits div {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
   color: #c2c7ca;
-
   font-size: 13px;
 }
 
 .offer-dot {
   width: 7px;
   height: 7px;
-
   flex-shrink: 0;
-
   border-radius: 50%;
-
   background: var(--gold);
 
   box-shadow:
@@ -1354,68 +1049,47 @@ span:nth-child(3) {
 
 .offers-card-head h3 {
   font-size: 27px;
-
   margin-bottom: 6px;
 }
 
 .offers-card-head p {
   color: #858c91;
-
   font-size: 12px;
-
   line-height: 1.7;
 }
 
 .offer-fields {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
 .offer-field {
   display: grid;
-
   gap: 7px;
 }
 
 .offer-field label {
   color: #858c91;
-
   font-size: 8px;
-
   font-weight: 900;
-
   letter-spacing: 1.2px;
 }
 
 .offer-field input {
   width: 100%;
-
   min-height: 52px;
-
-  padding:
-    0 15px;
-
+  padding: 0 15px;
   outline: none;
-
-  border:
-    1px solid #30353a;
-
+  border: 1px solid #30353a;
   border-radius: 10px;
-
   background: #080a0c;
-
   color: #fff;
-
   font-size: 14px;
 }
 
 .offer-field input:focus {
-  border-color:
-    rgba(213,173,85,.65);
+  border-color: rgba(213,173,85,.65);
 
   box-shadow:
     0 0 0 3px rgba(213,173,85,.04);
@@ -1423,67 +1097,46 @@ span:nth-child(3) {
 
 .consent-area {
   display: grid;
-
   gap: 12px;
-
   margin-top: 20px;
 }
 
 .consent-option {
   display: flex;
-
   gap: 11px;
-
   align-items: flex-start;
-
   padding: 17px;
-
-  border:
-    1px solid #292e32;
-
+  border: 1px solid #292e32;
   border-radius: 11px;
-
   background: #0b0e10;
 }
 
 .consent-option input {
   width: 19px;
   height: 19px;
-
   min-width: 19px;
-
   margin-top: 2px;
-
   accent-color: var(--gold);
 }
 
 .consent-option strong {
   display: block;
-
   color: #e6e8e9;
-
   font-size: 11px;
-
   margin-bottom: 4px;
 }
 
 .consent-option span {
   color: #858c91;
-
   font-size: 10px;
-
   line-height: 1.65;
 }
 
 .offer-submit {
   width: 100%;
-
   min-height: 56px;
-
   margin-top: 22px;
-
   border: none;
-
   border-radius: 11px;
 
   background:
@@ -1494,48 +1147,29 @@ span:nth-child(3) {
     );
 
   color: #080909;
-
   font-size: 11px;
-
   font-weight: 900;
-
   letter-spacing: .9px;
 
   box-shadow:
     0 8px 25px rgba(213,173,85,.14);
 }
 
-.offer-submit:hover {
-  transform:
-    translateY(-2px);
-
-  box-shadow:
-    0 12px 30px rgba(213,173,85,.22);
-}
-
 .offer-submit:disabled {
   opacity: .5;
-
-  transform: none;
 }
 
 .offer-status {
   display: none;
-
   margin-top: 18px;
-
   padding: 16px;
-
   border-radius: 10px;
-
   font-size: 11px;
-
   line-height: 1.7;
 }
 
 .offer-status.success {
   display: block;
-
   color: var(--success);
 
   border:
@@ -1547,7 +1181,6 @@ span:nth-child(3) {
 
 .offer-status.error {
   display: block;
-
   color: var(--error);
 
   border:
@@ -1559,11 +1192,8 @@ span:nth-child(3) {
 
 .offer-fineprint {
   margin-top: 18px;
-
   color: #666d72;
-
   font-size: 8.5px;
-
   line-height: 1.75;
 }
 
@@ -1573,15 +1203,12 @@ span:nth-child(3) {
 
 
 /* =========================================
-   GENERAL SECTIONS
+   GENERAL
 ========================================= */
 
 .section {
-  padding:
-    100px 0;
-
-  border-bottom:
-    1px solid var(--border);
+  padding: 100px 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .section.alt {
@@ -1590,14 +1217,9 @@ span:nth-child(3) {
 
 .section-head {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 60px;
-
   align-items: end;
-
   margin-bottom: 45px;
 }
 
@@ -1615,27 +1237,17 @@ span:nth-child(3) {
 .section-head > p,
 .muted {
   color: var(--muted);
-
   line-height: 1.8;
 }
 
-
-/* =========================================
-   FEATURE CARDS
-========================================= */
-
 .feature-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
+  grid-template-columns: repeat(3,1fr);
   gap: 18px;
 }
 
 .feature-card {
   min-height: 340px;
-
   padding: 28px;
 
   background:
@@ -1645,188 +1257,106 @@ span:nth-child(3) {
       #0a0c0d
     );
 
-  border:
-    1px solid var(--border);
-
+  border: 1px solid var(--border);
   border-radius: 14px;
-
   position: relative;
-
-  transition: .25s ease;
-}
-
-.feature-card:hover {
-  transform:
-    translateY(-4px);
-
-  border-color:
-    rgba(213,173,85,.4);
 }
 
 .feature-card .num {
   position: absolute;
-
   right: 24px;
-
   top: 18px;
-
-  color:
-    rgba(213,173,85,.16);
-
+  color: rgba(213,173,85,.16);
   font-size: 50px;
-
   font-weight: 900;
 }
 
 .feature-card .tag {
   color: var(--gold);
-
   font-size: 9px;
-
   font-weight: 900;
-
   margin-bottom: 55px;
 }
 
 .feature-card h3 {
   font-size: 24px;
-
   margin-bottom: 13px;
 }
 
 .feature-card p {
   color: var(--muted);
-
   font-size: 14px;
 }
 
 .feature-card > span {
   position: absolute;
-
   left: 28px;
-
   bottom: 26px;
-
   color: var(--gold2);
-
   font-size: 10px;
-
   font-weight: 900;
 }
 
-
-/* =========================================
-   SCIENCE
-========================================= */
-
-.science-grid {
+.science-grid,
+.quality-wrap {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 70px;
-
   align-items: center;
 }
 
 .science-panel p {
   color: var(--muted);
-
-  margin:
-    22px 0;
+  margin: 22px 0;
 }
 
 .science-list {
   display: grid;
-
   gap: 10px;
-
-  margin:
-    25px 0 30px;
-
+  margin: 25px 0 30px;
   color: #c3c7ca;
-
   font-size: 14px;
 }
 
 .lab-grid {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
 .lab-stat {
   min-height: 180px;
-
   padding: 22px;
-
   background: #101315;
-
-  border:
-    1px solid var(--border);
-
+  border: 1px solid var(--border);
   border-radius: 12px;
-
   display: flex;
-
   flex-direction: column;
-
-  justify-content:
-    space-between;
+  justify-content: space-between;
 }
 
 .lab-stat strong {
   color: var(--gold2);
-
   font-size: 45px;
 }
 
 .lab-stat span {
   color: #777e83;
-
   font-size: 9px;
-
   font-weight: 900;
 }
 
-
-/* =========================================
-   QUALITY
-========================================= */
-
-.quality-wrap {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 70px;
-
-  align-items: center;
-}
-
 .quality-wrap .muted {
-  margin:
-    20px 0 30px;
+  margin: 20px 0 30px;
 }
 
 .coa-mock {
   min-height: 380px;
-
   background: #f1f1ed;
-
   color: #101010;
-
   border-radius: 6px;
-
   padding: 30px;
-
-  transform:
-    rotate(1deg);
+  transform: rotate(1deg);
 
   box-shadow:
     0 25px 70px rgba(0,0,0,.45);
@@ -1834,15 +1364,9 @@ span:nth-child(3) {
 
 .coa-head {
   display: flex;
-
-  justify-content:
-    space-between;
-
-  border-bottom:
-    3px solid #111;
-
+  justify-content: space-between;
+  border-bottom: 3px solid #111;
   padding-bottom: 15px;
-
   margin-bottom: 30px;
 }
 
@@ -1852,13 +1376,9 @@ span:nth-child(3) {
 
 .line {
   height: 8px;
-
   width: 60%;
-
   background: #c8c8c4;
-
-  margin:
-    12px 0;
+  margin: 12px 0;
 }
 
 .line.wide {
@@ -1871,100 +1391,62 @@ span:nth-child(3) {
 
 .coa-grid {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-
   margin-top: 35px;
 }
 
 .coa-grid div {
   height: 60px;
-
-  border:
-    1px solid #aaa;
+  border: 1px solid #aaa;
 }
 
 .coa-foot {
   margin-top: 30px;
-
-  border-top:
-    1px solid #999;
-
+  border-top: 1px solid #999;
   padding-top: 15px;
-
   font-size: 9px;
-
   font-weight: 900;
 }
 
-
-/* =========================================
-   STANDARDS
-========================================= */
-
 .standards-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
+  grid-template-columns: repeat(4,1fr);
   gap: 12px;
 }
 
 .standards-grid > div {
   padding: 24px;
-
-  border:
-    1px solid var(--border);
-
+  border: 1px solid var(--border);
   background: #0d1011;
-
   border-radius: 10px;
 }
 
 .standards-grid strong {
   display: block;
-
   margin-bottom: 8px;
 }
 
 .standards-grid span {
   color: #7e858a;
-
   font-size: 12px;
 }
 
-
-/* =========================================
-   FOOTER
-========================================= */
-
 footer {
-  padding:
-    40px 0;
-
+  padding: 40px 0;
   background: #030404;
 }
 
 .footer-grid {
   display: flex;
-
-  justify-content:
-    space-between;
-
+  justify-content: space-between;
   gap: 30px;
-
   color: #777d82;
-
   font-size: 11px;
 }
 
 .footer-grid strong {
   color: #c7c9ca;
-
   display: block;
 }
 
@@ -1985,7 +1467,6 @@ footer {
 
 }
 
-
 @media(max-width:900px) {
 
   .shell {
@@ -1994,23 +1475,6 @@ footer {
         calc(100% - 28px),
         1180px
       );
-  }
-
-  .nav {
-    min-height: 68px;
-  }
-
-  .brand img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .brand-title {
-    font-size: 11px;
-  }
-
-  .brand-sub {
-    font-size: 7px;
   }
 
   .nav-links {
@@ -2025,13 +1489,17 @@ footer {
     min-height: auto;
   }
 
-  .hero-grid {
+  .hero-grid,
+  .offers-wrap,
+  .section-head,
+  .science-grid,
+  .quality-wrap {
     grid-template-columns: 1fr;
+  }
 
+  .hero-grid {
     gap: 40px;
-
-    padding:
-      65px 0 70px;
+    padding: 65px 0 70px;
   }
 
   .hero h1 {
@@ -2055,36 +1523,12 @@ footer {
     height: 260px;
   }
 
-  .offers-wrap,
-  .section-head,
-  .science-grid,
-  .quality-wrap {
-    grid-template-columns: 1fr;
-
-    gap: 34px;
-  }
-
-  .offers-section {
-    padding:
-      95px 0 80px;
-  }
-
-  .offers-section::before {
-    top: 28px;
-  }
-
-  .section {
-    padding:
-      70px 0;
-  }
-
   .feature-grid {
     grid-template-columns: 1fr;
   }
 
   .standards-grid {
-    grid-template-columns:
-      1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .footer-grid {
@@ -2093,12 +1537,7 @@ footer {
 
 }
 
-
 @media(max-width:520px) {
-
-  .brand {
-    gap: 8px;
-  }
 
   .brand img {
     width: 41px;
@@ -2113,29 +1552,6 @@ footer {
     font-size: 5.8px;
   }
 
-  .mobile-member-status-inner {
-    min-height: 58px;
-  }
-
-  .mobile-status-name {
-    max-width: 95px;
-
-    overflow: hidden;
-
-    white-space: nowrap;
-
-    text-overflow: ellipsis;
-
-    font-size: 9px;
-  }
-
-  .mobile-status-actions a {
-    padding:
-      0 7px;
-
-    font-size: 6.5px;
-  }
-
   .hero h1 {
     font-size: 39px;
   }
@@ -2146,12 +1562,7 @@ footer {
   }
 
   .offers-section {
-    padding:
-      85px 0 72px;
-  }
-
-  .offers-wrap {
-    gap: 38px;
+    padding: 85px 0 72px;
   }
 
   .offer-fields {
@@ -2159,26 +1570,11 @@ footer {
   }
 
   .offers-card {
-    padding:
-      26px 20px;
+    padding: 26px 20px;
   }
 
   .offers-copy h2 {
     font-size: 38px;
-  }
-
-  .offers-benefits {
-    margin-top: 22px;
-  }
-
-  .consent-option {
-    padding: 15px;
-  }
-
-  .offer-submit {
-    min-height: 58px;
-
-    margin-top: 24px;
   }
 
   .standards-grid {
@@ -2193,10 +1589,10 @@ footer {
 
 <body>
 
-<div
-  class="gate"
-  id="gate"
->
+
+<!-- AGE GATE -->
+
+<div class="gate" id="gate">
 
 <div class="gate-panel">
 
@@ -2222,43 +1618,24 @@ accessing Platinum Cellular Health Labs.
 <div class="gate-checks">
 
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
-<strong>
-I certify that I am 21 years of age or older.
-</strong>
+<strong>I certify that I am 21 years of age or older.</strong>
 </span>
-
 </label>
 
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
 I understand that materials identified as
 <strong>Research Use Only</strong>
 are presented solely for legitimate laboratory,
 analytical, scientific, and educational research.
 </span>
-
 </label>
 
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
 I understand that Research Use Only materials are
 <strong>
@@ -2267,53 +1644,34 @@ administration, treatment, diagnosis,
 disease prevention, or clinical/veterinary use.
 </strong>
 </span>
-
 </label>
 
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
 I agree not to use information or materials from
 this website for unlawful activity or in any manner
 inconsistent with product labeling.
 </span>
-
 </label>
 
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
 I understand that website content is for research
 and educational purposes and does not constitute
 medical, veterinary, diagnostic, or treatment advice.
 </span>
-
 </label>
 
 <label class="gate-check">
-
-<input
-  type="checkbox"
-  class="req"
->
-
+<input type="checkbox" class="req">
 <span>
 I understand that Platinum Cellular Health Labs
 reserves the right to restrict access or refuse service
 where misuse, unlawful conduct, or misrepresentation
 is suspected.
 </span>
-
 </label>
 
 </div>
@@ -2343,14 +1701,14 @@ I DO NOT AGREE
 
 </div>
 
+
+<!-- HEADER -->
+
 <header class="site-header">
 
 <div class="shell nav">
 
-<a
-  href="index.html"
-  class="brand"
->
+<a href="index.html" class="brand">
 
 <img
   src="pch-logo.jpg"
@@ -2375,33 +1733,13 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 <nav class="nav-links">
 
-<a href="research-information.html">
-Research
-</a>
-
-<a href="catalog.html">
-Catalog
-</a>
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-<a href="recommended-supplies.html">
-Supplies
-</a>
-
-<a href="policies.html">
-Policies
-</a>
-
-<a href="faq.html">
-FAQ
-</a>
-
-<a href="contact.html">
-Contact
-</a>
+<a href="research-information.html">Research</a>
+<a href="catalog.html">Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
 
 </nav>
 
@@ -2441,17 +1779,11 @@ MEMBER
 
 </div>
 
-<a
-  href="login.html"
-  class="member-link"
->
+<a href="login.html" class="member-link">
 ACCOUNT
 </a>
 
-<a
-  href="login.html"
-  class="member-link gold"
->
+<a href="login.html" class="member-link gold">
 CHECKOUT
 </a>
 
@@ -2484,6 +1816,7 @@ SIGN OUT
 </div>
 
 </div>
+
 
 <div class="mobile-member-status-bar">
 
@@ -2529,10 +1862,7 @@ PCH Member
 ACCOUNT
 </a>
 
-<a
-  href="login.html"
-  class="gold"
->
+<a href="login.html" class="gold">
 CHECKOUT
 </a>
 
@@ -2543,6 +1873,7 @@ CHECKOUT
 </div>
 
 </div>
+
 
 <div
   class="mobile-menu"
@@ -2589,17 +1920,11 @@ PCH Member
 MY ACCOUNT
 </a>
 
-<a
-  href="login.html"
-  class="gold"
->
+<a href="login.html" class="gold">
 CHECKOUT
 </a>
 
-<button
-  type="button"
-  id="mobileSignout"
->
+<button type="button" id="mobileSignout">
 SIGN OUT
 </button>
 
@@ -2613,53 +1938,23 @@ CATALOG
 
 </div>
 
-<a href="index.html">
-Home
-</a>
-
-<a href="research-information.html">
-Research Information
-</a>
-
-<a href="catalog.html">
-Research Catalog
-</a>
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-<a href="recommended-supplies.html">
-Recommended Supplies
-</a>
-
-<a href="policies.html">
-Policies
-</a>
-
-<a href="faq.html">
-FAQ
-</a>
-
-<a href="contact.html">
-Contact PCH Labs
-</a>
+<a href="index.html">Home</a>
+<a href="research-information.html">Research Information</a>
+<a href="catalog.html">Research Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Recommended Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact PCH Labs</a>
 
 </div>
 
 </div>
+
 
 <div class="promo-banner">
 
 <div class="promo-track">
-
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
-
-<span>
-$15 SHIPPING OPTION INCLUDED · PREMIUM SHIPPING AVAILABLE
-</span>
 
 <span>
 ✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
@@ -2691,7 +1986,11 @@ $15 SHIPPING OPTION INCLUDED · PREMIUM SHIPPING AVAILABLE
 
 </header>
 
+
 <main>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -2717,17 +2016,11 @@ environment.
 
 <div class="hero-actions">
 
-<a
-  href="catalog.html"
-  class="btn btn-gold"
->
+<a href="catalog.html" class="btn btn-gold">
 EXPLORE RESEARCH CATALOG
 </a>
 
-<a
-  href="research-information.html"
-  class="btn"
->
+<a href="research-information.html" class="btn">
 RESEARCH INFORMATION
 </a>
 
@@ -2735,17 +2028,9 @@ RESEARCH INFORMATION
 
 <div class="hero-meta">
 
-<span>
-21+ ACCESS
-</span>
-
-<span>
-RESEARCH USE ONLY
-</span>
-
-<span>
-COA DOCUMENTATION
-</span>
+<span>21+ ACCESS</span>
+<span>RESEARCH USE ONLY</span>
+<span>COA DOCUMENTATION</span>
 
 </div>
 
@@ -2767,6 +2052,9 @@ COA DOCUMENTATION
 </div>
 
 </section>
+
+
+<!-- OFFERS -->
 
 <section
   class="offers-section"
@@ -2816,6 +2104,7 @@ Important catalog updates
 </div>
 
 </div>
+
 
 <div class="offers-card">
 
@@ -2876,6 +2165,7 @@ MOBILE NUMBER
 
 </div>
 
+
 <div class="consent-area">
 
 <label class="consent-option">
@@ -2898,6 +2188,7 @@ at the email address provided.
 </span>
 
 </label>
+
 
 <label class="consent-option">
 
@@ -2923,6 +2214,7 @@ may apply. Reply STOP to opt out.
 
 </div>
 
+
 <button
   type="submit"
   class="offer-submit"
@@ -2931,6 +2223,7 @@ may apply. Reply STOP to opt out.
 SIGN UP FOR OFFERS
 </button>
 
+
 <div
   class="offer-status"
   id="marketingStatus"
@@ -2938,6 +2231,7 @@ SIGN UP FOR OFFERS
   aria-live="polite"
 >
 </div>
+
 
 <div class="offer-fineprint">
 
@@ -2962,6 +2256,9 @@ for additional information.
 </div>
 
 </section>
+
+
+<!-- RESEARCH HUB -->
 
 <section class="section">
 
@@ -2997,9 +2294,7 @@ easier to navigate and review.
   class="feature-card"
 >
 
-<div class="num">
-01
-</div>
+<div class="num">01</div>
 
 <div class="tag">
 SCIENTIFIC REFERENCE
@@ -3021,14 +2316,13 @@ OPEN RESEARCH LIBRARY →
 
 </a>
 
+
 <a
   href="catalog.html"
   class="feature-card"
 >
 
-<div class="num">
-02
-</div>
+<div class="num">02</div>
 
 <div class="tag">
 RESEARCH CATALOG
@@ -3050,14 +2344,13 @@ BROWSE CATALOG →
 
 </a>
 
+
 <a
   href="quality-coa.html"
   class="feature-card"
 >
 
-<div class="num">
-03
-</div>
+<div class="num">03</div>
 
 <div class="tag">
 ANALYTICAL DOCUMENTATION
@@ -3085,6 +2378,9 @@ VIEW DOCUMENTATION →
 </div>
 
 </section>
+
+
+<!-- SCIENCE -->
 
 <section class="section alt">
 
@@ -3140,13 +2436,12 @@ ENTER RESEARCH INFORMATION
 
 </div>
 
+
 <div class="lab-grid">
 
 <div class="lab-stat">
 
-<strong>
-RUO
-</strong>
+<strong>RUO</strong>
 
 <span>
 RESEARCH USE ONLY
@@ -3156,9 +2451,7 @@ RESEARCH USE ONLY
 
 <div class="lab-stat">
 
-<strong>
-COA
-</strong>
+<strong>COA</strong>
 
 <span>
 ANALYTICAL DOCUMENTATION
@@ -3168,9 +2461,7 @@ ANALYTICAL DOCUMENTATION
 
 <div class="lab-stat">
 
-<strong>
-LOT
-</strong>
+<strong>LOT</strong>
 
 <span>
 BATCH TRACEABILITY
@@ -3180,9 +2471,7 @@ BATCH TRACEABILITY
 
 <div class="lab-stat">
 
-<strong>
-21+
-</strong>
+<strong>21+</strong>
 
 <span>
 RESTRICTED ACCESS
@@ -3195,6 +2484,9 @@ RESTRICTED ACCESS
 </div>
 
 </section>
+
+
+<!-- QUALITY -->
 
 <section class="section">
 
@@ -3225,13 +2517,12 @@ OPEN QUALITY & COA
 
 </div>
 
+
 <div class="coa-mock">
 
 <div class="coa-head">
 
-<strong>
-PCH
-</strong>
+<strong>PCH</strong>
 
 <span>
 CERTIFICATE OF ANALYSIS
@@ -3240,9 +2531,7 @@ CERTIFICATE OF ANALYSIS
 </div>
 
 <div class="line wide"></div>
-
 <div class="line"></div>
-
 <div class="line short"></div>
 
 <div class="coa-grid">
@@ -3263,6 +2552,9 @@ LOT · TEST DATE · LABORATORY · RESULT
 </div>
 
 </section>
+
+
+<!-- STANDARDS -->
 
 <section class="section alt">
 
@@ -3349,6 +2641,7 @@ Restricted Access
 
 </main>
 
+
 <footer>
 
 <div class="shell footer-grid">
@@ -3379,9 +2672,13 @@ contact@platinumcellularhealth.com
 
 </footer>
 
+
+<!-- SUPABASE -->
+
 <script
   src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
 ></script>
+
 
 <script>
 
@@ -3397,18 +2694,36 @@ const SUPABASE_PUBLISHABLE_KEY =
   "sb_publishable_m0snLFFTsLnUfENmvWsUuw_bjPkhMER";
 
 
+const BREVO_FUNCTION_URL =
+  SUPABASE_URL +
+  "/functions/v1/pch-brevo-sync";
+
+
 const supabaseClient =
   window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_PUBLISHABLE_KEY,
     {
+
       auth: {
-        persistSession: true,
-        autoRefreshToken: true,
-        detectSessionInUrl: true,
-        storage: window.localStorage,
-        storageKey: "pch-member-auth"
+
+        persistSession:
+          true,
+
+        autoRefreshToken:
+          true,
+
+        detectSessionInUrl:
+          true,
+
+        storage:
+          window.localStorage,
+
+        storageKey:
+          "pch-member-auth"
+
       }
+
     }
   );
 
@@ -3443,7 +2758,9 @@ function checkRequirements() {
     )
     .every(
       function(box) {
+
         return box.checked;
+
       }
     );
 
@@ -3454,10 +2771,10 @@ function checkRequirements() {
 
   enterButton.textContent =
     allChecked
-    ?
-    "CERTIFY & ENTER"
-    :
-    "CHECK ALL BOXES TO CONTINUE";
+      ?
+      "CERTIFY & ENTER"
+      :
+      "CHECK ALL BOXES TO CONTINUE";
 
 }
 
@@ -3484,13 +2801,17 @@ enterButton.addEventListener(
       )
       .every(
         function(box) {
+
           return box.checked;
+
         }
       );
 
 
     if (!allChecked) {
+
       return;
+
     }
 
 
@@ -3625,10 +2946,6 @@ const visibleMobileMemberName =
   );
 
 
-/* =========================================
-   LOGGED OUT
-========================================= */
-
 function showLoggedOutMemberState() {
 
   desktopLoginLink.style.display =
@@ -3660,10 +2977,6 @@ function showLoggedOutMemberState() {
 }
 
 
-/* =========================================
-   LOGGED IN
-========================================= */
-
 function showLoggedInMemberState(
   user
 ) {
@@ -3672,10 +2985,10 @@ function showLoggedInMemberState(
     user.user_metadata
     &&
     user.user_metadata.username
-    ?
-    user.user_metadata.username
-    :
-    "PCH Member";
+      ?
+      user.user_metadata.username
+      :
+      "PCH Member";
 
 
   desktopLoginLink.style.display =
@@ -3725,10 +3038,6 @@ function showLoggedInMemberState(
 }
 
 
-/* =========================================
-   RESTORE SESSION
-========================================= */
-
 async function restoreMemberSession() {
 
   try {
@@ -3775,10 +3084,6 @@ async function restoreMemberSession() {
 }
 
 
-/* =========================================
-   SIGN OUT
-========================================= */
-
 async function signOutMember() {
 
   try {
@@ -3814,10 +3119,6 @@ mobileSignout.addEventListener(
   signOutMember
 );
 
-
-/* =========================================
-   AUTH CHANGES
-========================================= */
 
 supabaseClient.auth
   .onAuthStateChange(
@@ -3922,7 +3223,6 @@ mobileMenu
 
 /* =========================================
    MARKETING FORM
-   SUPABASE + BREVO
 ========================================= */
 
 const marketingForm =
@@ -4006,6 +3306,140 @@ function validEmail(
 
 }
 
+
+/* =========================================
+   DIRECT BREVO EDGE FUNCTION CALL
+========================================= */
+
+async function sendToBrevo(
+  email,
+  phone,
+  wantsEmail,
+  wantsSms
+) {
+
+  const response =
+    await fetch(
+      BREVO_FUNCTION_URL,
+      {
+
+        method:
+          "POST",
+
+        headers: {
+
+          "Content-Type":
+            "application/json",
+
+          "apikey":
+            SUPABASE_PUBLISHABLE_KEY
+
+        },
+
+        body:
+          JSON.stringify(
+            {
+
+              email:
+                email,
+
+              phone:
+                phone
+                ||
+                null,
+
+              email_consent:
+                wantsEmail,
+
+              sms_consent:
+                wantsSms
+
+            }
+          )
+
+      }
+    );
+
+
+  const responseText =
+    await response.text();
+
+
+  let result =
+    null;
+
+
+  try {
+
+    result =
+      responseText
+        ?
+        JSON.parse(
+          responseText
+        )
+        :
+        {};
+
+  }
+
+  catch(error) {
+
+    console.error(
+      "Could not parse Brevo response:",
+      responseText
+    );
+
+
+    throw new Error(
+      "BREVO_INVALID_RESPONSE"
+    );
+
+  }
+
+
+  console.log(
+    "Brevo function response:",
+    response.status,
+    result
+  );
+
+
+  if (
+    !response.ok
+  ) {
+
+    throw new Error(
+      result.error
+      ||
+      "BREVO_SYNC_FAILED"
+    );
+
+  }
+
+
+  if (
+    result.success
+    !==
+    true
+  ) {
+
+    throw new Error(
+      result.error
+      ||
+      "BREVO_SYNC_FAILED"
+    );
+
+  }
+
+
+  return result;
+
+}
+
+
+/* =========================================
+   FORM SUBMIT
+========================================= */
 
 marketingForm.addEventListener(
   "submit",
@@ -4131,10 +3565,15 @@ marketingForm.addEventListener(
       "";
 
 
+    let databaseSaved =
+      false;
+
+
     try {
 
       /* =========================================
-         SAVE TO SUPABASE DATABASE
+         STEP 1
+         SAVE TO SUPABASE
       ========================================= */
 
       const {
@@ -4172,7 +3611,7 @@ marketingForm.addEventListener(
       ) {
 
         console.error(
-          "Subscriber database error:",
+          "Database error:",
           databaseError
         );
 
@@ -4184,8 +3623,13 @@ marketingForm.addEventListener(
       }
 
 
+      databaseSaved =
+        true;
+
+
       /* =========================================
-         SEND EMAIL SUBSCRIBER TO BREVO
+         STEP 2
+         CALL BREVO FUNCTION DIRECTLY
       ========================================= */
 
       if (
@@ -4194,74 +3638,12 @@ marketingForm.addEventListener(
         email
       ) {
 
-        const {
-          data: brevoData,
-          error: brevoError
-        } =
-          await supabaseClient
-            .functions
-            .invoke(
-              "pch-brevo-sync",
-              {
-
-                body: {
-
-                  email:
-                    email,
-
-                  phone:
-                    phone
-                    ||
-                    null,
-
-                  email_consent:
-                    wantsEmail,
-
-                  sms_consent:
-                    wantsSms
-
-                }
-
-              }
-            );
-
-
-        if (
-          brevoError
-        ) {
-
-          console.error(
-            "Brevo function error:",
-            brevoError
-          );
-
-
-          throw new Error(
-            "BREVO_SYNC_FAILED"
-          );
-
-        }
-
-
-        if (
-          !brevoData
-          ||
-          brevoData.success
-          !==
-          true
-        ) {
-
-          console.error(
-            "Brevo response:",
-            brevoData
-          );
-
-
-          throw new Error(
-            "BREVO_SYNC_FAILED"
-          );
-
-        }
+        await sendToBrevo(
+          email,
+          phone,
+          wantsEmail,
+          wantsSms
+        );
 
       }
 
@@ -4271,7 +3653,7 @@ marketingForm.addEventListener(
       ========================================= */
 
       marketingSuccess(
-        "✓ You're subscribed! Watch for future PCH Labs offers, promo codes, shipping promotions, and updates."
+        "✓ You're subscribed! Your signup was saved and your email was added to the PCH Labs mailing list."
       );
 
 
@@ -4307,13 +3689,13 @@ marketingForm.addEventListener(
 
 
       if (
-        error.message
+        databaseSaved
         ===
-        "BREVO_SYNC_FAILED"
+        true
       ) {
 
         marketingError(
-          "Your signup was saved, but your email could not be added to our mailing list. Please try again later."
+          "Your signup was saved, but the mailing-list connection failed. Please try again later."
         );
 
       }
@@ -4341,7 +3723,7 @@ marketingForm.addEventListener(
 
 
 /* =========================================
-   RESTORE WHEN RETURNING
+   RESTORE
 ========================================= */
 
 window.addEventListener(
@@ -4371,10 +3753,6 @@ document.addEventListener(
   }
 );
 
-
-/* =========================================
-   START
-========================================= */
 
 restoreMemberSession();
 
