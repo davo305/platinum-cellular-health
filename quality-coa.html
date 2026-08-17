@@ -1,3231 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050607">
-
-<title>
-Quality & COA | Platinum Cellular Health Labs
-</title>
+<title>Quality & COA | Platinum Cellular Health Labs</title>
 
 <style>
-
-/* =========================================
-   RESET
-========================================= */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-
-  min-height: 100vh;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(198,160,70,.07),
-      transparent 30%
-    ),
-    #050607;
-
-  color: #f4f4f4;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  line-height: 1.6;
-
-  overflow-x: hidden;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-:root {
-
-  --black: #050607;
-  --panel: #0d0f11;
-  --panel2: #111417;
-  --border: #252a2e;
-  --gold: #d5ad55;
-  --gold2: #f0d48c;
-  --text: #f5f5f5;
-  --muted: #9da3a8;
-
-}
-
-.shell {
-
-  width:
-    min(
-      1180px,
-      calc(100% - 36px)
-    );
-
-  margin: auto;
-}
-
-
-/* =========================================
-   HEADER
-========================================= */
-
-.site-header {
-
-  position: sticky;
-
-  top: 0;
-
-  z-index: 1000;
-
-  background:
-    rgba(5,6,7,.96);
-
-  backdrop-filter:
-    blur(15px);
-
-  border-bottom:
-    1px solid
-    rgba(255,255,255,.08);
-}
-
-.nav {
-
-  min-height: 78px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content:
-    space-between;
-
-  gap: 20px;
-}
-
-.brand {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  min-width: 0;
-}
-
-.brand img {
-
-  width: 52px;
-  height: 52px;
-
-  flex-shrink: 0;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  border:
-    1px solid
-    rgba(213,173,85,.35);
-}
-
-.brand-title {
-
-  font-size: 13px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-.brand-sub {
-
-  margin-top: 2px;
-
-  color: var(--gold);
-
-  font-size: 8px;
-
-  letter-spacing: 2px;
-}
-
-.nav-right {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 14px;
-}
-
-.nav-links {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 15px;
-
-  color: #b9bdc0;
-
-  font-size: 11px;
-
-  font-weight: 700;
-}
-
-.nav-links a:hover {
-
-  color: var(--gold2);
-}
-
-
-/* =========================================
-   DESKTOP MEMBER HEADER
-========================================= */
-
-.member-area {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
-}
-
-.member-login {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 39px;
-
-  padding:
-    0 13px;
-
-  border:
-    1px solid
-    rgba(213,173,85,.4);
-
-  border-radius: 9px;
-
-  background:
-    rgba(213,173,85,.035);
-
-  color: var(--gold2);
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: .7px;
-}
-
-.member-login:hover {
-
-  border-color: var(--gold);
-}
-
-.member-signed-in {
-
-  display: none;
-
-  align-items: center;
-
-  gap: 7px;
-}
-
-.member-signed-in.visible {
-
-  display: flex;
-}
-
-.member-pill {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  padding:
-    7px 10px;
-
-  border:
-    1px solid
-    rgba(213,173,85,.28);
-
-  border-radius: 9px;
-
-  background:
-    rgba(213,173,85,.025);
-}
-
-.member-dot {
-
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: var(--gold);
-
-  box-shadow:
-    0 0 10px
-    rgba(213,173,85,.45);
-}
-
-.member-info {
-
-  line-height: 1.15;
-}
-
-.member-label {
-
-  color: #767d82;
-
-  font-size: 6px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-.member-name {
-
-  max-width: 90px;
-
-  overflow: hidden;
-
-  color: var(--gold2);
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  white-space: nowrap;
-
-  text-overflow: ellipsis;
-}
-
-.member-link {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 36px;
-
-  padding:
-    0 10px;
-
-  border:
-    1px solid #30353a;
-
-  border-radius: 8px;
-
-  background: #0d1012;
-
-  color: #b9bdc0;
-
-  font-size: 7px;
-
-  font-weight: 900;
-}
-
-.member-link.gold {
-
-  border: none;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
-  color: #080909;
-}
-
-.member-signout {
-
-  border: 0;
-
-  background: transparent;
-
-  color: #747b80;
-
-  font-size: 7px;
-
-  font-weight: 900;
-}
-
-
-/* =========================================
-   MOBILE VISIBLE MEMBER BAR
-========================================= */
-
-.mobile-member-status-bar {
-
-  display: none;
-
-  border-top:
-    1px solid #202428;
-
-  background:
-    #080a0b;
-}
-
-.mobile-member-status-inner {
-
-  min-height: 52px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content:
-    space-between;
-
-  gap: 12px;
-}
-
-.mobile-status-login {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 100%;
-
-  min-height: 40px;
-
-  border:
-    1px solid
-    rgba(213,173,85,.35);
-
-  border-radius: 8px;
-
-  color: var(--gold2);
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: .5px;
-
-  background:
-    rgba(213,173,85,.03);
-}
-
-.mobile-status-member {
-
-  display: none;
-
-  width: 100%;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 10px;
-}
-
-.mobile-status-member.visible {
-
-  display: flex;
-}
-
-.mobile-status-identity {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  min-width: 0;
-}
-
-.mobile-status-dot {
-
-  width: 7px;
-  height: 7px;
-
-  min-width: 7px;
-
-  border-radius: 50%;
-
-  background: var(--gold);
-
-  box-shadow:
-    0 0 9px
-    rgba(213,173,85,.55);
-}
-
-.mobile-status-copy {
-
-  min-width: 0;
-
-  line-height: 1.1;
-}
-
-.mobile-status-label {
-
-  color: #777e83;
-
-  font-size: 6px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-.mobile-status-name {
-
-  max-width: 130px;
-
-  overflow: hidden;
-
-  color: var(--gold2);
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  white-space: nowrap;
-
-  text-overflow: ellipsis;
-}
-
-.mobile-status-actions {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 6px;
-}
-
-.mobile-status-actions a {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 34px;
-
-  padding:
-    0 9px;
-
-  border:
-    1px solid #30353a;
-
-  border-radius: 7px;
-
-  background: #0d1012;
-
-  color: #c6cacc;
-
-  font-size: 7px;
-
-  font-weight: 900;
-}
-
-.mobile-status-actions a.gold {
-
-  border: 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
-  color: #080909;
-}
-
-
-/* =========================================
-   MOBILE MENU
-========================================= */
-
-.mobile-menu-button {
-
-  display: none;
-
-  width: 44px;
-  height: 44px;
-
-  min-width: 44px;
-
-  padding: 10px;
-
-  border:
-    1px solid #30353a;
-
-  border-radius: 9px;
-
-  background: #0d1012;
-
-  cursor: pointer;
-}
-
-.mobile-menu-button span {
-
-  display: block;
-
-  width: 100%;
-  height: 2px;
-
-  margin: 5px 0;
-
-  border-radius: 10px;
-
-  background: var(--gold2);
-
-  transition: .25s ease;
-}
-
-.mobile-menu-button.active
-span:nth-child(1) {
-
-  transform:
-    translateY(7px)
-    rotate(45deg);
-}
-
-.mobile-menu-button.active
-span:nth-child(2) {
-
-  opacity: 0;
-}
-
-.mobile-menu-button.active
-span:nth-child(3) {
-
-  transform:
-    translateY(-7px)
-    rotate(-45deg);
-}
-
-.mobile-menu {
-
-  display: none;
-
-  background:
-    rgba(6,7,8,.99);
-
-  border-top:
-    1px solid #202428;
-
-  border-bottom:
-    1px solid #252a2e;
-
-  box-shadow:
-    0 20px 40px
-    rgba(0,0,0,.4);
-}
-
-.mobile-menu.open {
-
-  display: block;
-}
-
-.mobile-menu-inner {
-
-  display: grid;
-
-  padding:
-    10px 0 18px;
-}
-
-.mobile-menu-inner > a {
-
-  padding:
-    14px 3px;
-
-  border-bottom:
-    1px solid #1f2326;
-
-  color: #c6cacc;
-
-  font-size: 12px;
-
-  font-weight: 900;
-}
-
-.mobile-menu-inner > a:hover {
-
-  color: var(--gold2);
-}
-
-
-/* =========================================
-   MOBILE MEMBER BOX
-========================================= */
-
-.mobile-member-box {
-
-  margin-bottom: 12px;
-
-  padding: 16px;
-
-  border:
-    1px solid
-    rgba(213,173,85,.25);
-
-  border-radius: 12px;
-
-  background:
-    rgba(213,173,85,.025);
-}
-
-.mobile-member-login {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 100%;
-
-  min-height: 48px;
-
-  border-radius: 9px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
-  color: #080909;
-
-  font-size: 10px;
-
-  font-weight: 900;
-}
-
-.mobile-member-signed-in {
-
-  display: none;
-}
-
-.mobile-member-signed-in.visible {
-
-  display: block;
-}
-
-.mobile-status {
-
-  color: var(--gold);
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-.mobile-member-name {
-
-  margin-top: 3px;
-
-  font-size: 18px;
-
-  font-weight: 900;
-}
-
-.mobile-member-email {
-
-  margin-top: 2px;
-
-  color: #777e83;
-
-  font-size: 9px;
-
-  word-break: break-word;
-}
-
-.mobile-member-actions {
-
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 8px;
-
-  margin-top: 12px;
-}
-
-.mobile-member-actions a,
-.mobile-member-actions button {
-
-  min-height: 43px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border:
-    1px solid #30353a;
-
-  border-radius: 8px;
-
-  background: #0d1012;
-
-  color: #c5c9cc;
-
-  font-size: 9px;
-
-  font-weight: 900;
-}
-
-.mobile-member-actions .gold {
-
-  border: none;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
-  color: #080909;
-}
-
-
-/* =========================================
-   PROMO BANNER
-========================================= */
-
-.promo-banner {
-
-  width: 100%;
-
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      90deg,
-      #8f681f,
-      #d5ad55,
-      #f0d48c,
-      #d5ad55,
-      #8f681f
-    );
-
-  color: #080909;
-}
-
-.promo-track {
-
-  display: flex;
-
-  width: max-content;
-
-  white-space: nowrap;
-
-  animation:
-    promoScroll 24s linear infinite;
-}
-
-.promo-track span {
-
-  padding:
-    9px 40px;
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-@keyframes promoScroll {
-
-  from {
-    transform:
-      translateX(0);
-  }
-
-  to {
-    transform:
-      translateX(-50%);
-  }
-
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
-.page-hero {
-
-  padding:
-    85px 0 65px;
-
-  border-bottom:
-    1px solid
-    var(--border);
-}
-
-.back-link {
-
-  display: inline-block;
-
-  margin-bottom: 30px;
-
-  color: var(--gold2);
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-.eyebrow {
-
-  margin-bottom: 14px;
-
-  color: var(--gold);
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: 2.4px;
-}
-
-.page-hero h1 {
-
-  max-width: 850px;
-
-  margin-bottom: 22px;
-
-  font-size:
-    clamp(
-      42px,
-      7vw,
-      70px
-    );
-
-  line-height: 1;
-
-  letter-spacing: -2px;
-}
-
-.page-hero p {
-
-  max-width: 760px;
-
-  color: var(--muted);
-
-  font-size: 16px;
-
-  line-height: 1.8;
-}
-
-.hero-meta {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 8px;
-
-  margin-top: 25px;
-}
-
-.hero-meta span {
-
-  padding:
-    7px 10px;
-
-  border:
-    1px solid #292e32;
-
-  border-radius: 100px;
-
-  background: #0c0e10;
-
-  color: #858c91;
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-
-/* =========================================
-   SECTION
-========================================= */
-
-.section {
-
-  padding:
-    80px 0;
-}
-
-.section.alt {
-
-  background: #090b0c;
-
-  border-top:
-    1px solid var(--border);
-
-  border-bottom:
-    1px solid var(--border);
-}
-
-.section-head {
-
-  max-width: 760px;
-
-  margin-bottom: 40px;
-}
-
-.section-head h2 {
-
-  margin-bottom: 15px;
-
-  font-size:
-    clamp(
-      30px,
-      5vw,
-      46px
-    );
-
-  line-height: 1.1;
-}
-
-.section-head p {
-
-  color: var(--muted);
-
-  font-size: 14px;
-
-  line-height: 1.8;
-}
-
-
-/* =========================================
-   QUALITY CARDS
-========================================= */
-
-.quality-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      3,
-      minmax(0,1fr)
-    );
-
-  gap: 18px;
-}
-
-.quality-card {
-
-  min-height: 300px;
-
-  padding: 28px;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 15px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c
-    );
-
-  transition: .25s ease;
-}
-
-.quality-card:hover {
-
-  transform:
-    translateY(-4px);
-
-  border-color:
-    rgba(213,173,85,.42);
-}
-
-.card-number {
-
-  margin-bottom: 45px;
-
-  color:
-    rgba(213,173,85,.25);
-
-  font-size: 40px;
-
-  font-weight: 900;
-}
-
-.quality-card h3 {
-
-  margin-bottom: 12px;
-
-  font-size: 23px;
-}
-
-.quality-card p {
-
-  color: var(--muted);
-
-  font-size: 13px;
-
-  line-height: 1.8;
-}
-
-
-/* =========================================
-   COA LIBRARY
-========================================= */
-
-.coa-library {
-
-  display: grid;
-
-  gap: 16px;
-}
-
-.coa-item {
-
-  display: grid;
-
-  grid-template-columns:
-    1fr auto;
-
-  align-items: center;
-
-  gap: 25px;
-
-  padding: 25px;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 14px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c
-    );
-}
-
-.coa-info {
-
-  min-width: 0;
-}
-
-.coa-tag {
-
-  margin-bottom: 7px;
-
-  color: var(--gold);
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: 1.5px;
-}
-
-.coa-item h3 {
-
-  margin-bottom: 5px;
-
-  font-size: 21px;
-}
-
-.coa-meta {
-
-  color: #777e83;
-
-  font-size: 10px;
-
-  line-height: 1.6;
-}
-
-.coa-button {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 46px;
-
-  padding:
-    0 20px;
-
-  border:
-    1px solid
-    rgba(213,173,85,.45);
-
-  border-radius: 8px;
-
-  background:
-    rgba(213,173,85,.04);
-
-  color: var(--gold2);
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: .8px;
-
-  white-space: nowrap;
-
-  transition: .2s ease;
-}
-
-.coa-button:hover {
-
-  transform:
-    translateY(-2px);
-
-  background:
-    rgba(213,173,85,.08);
-}
-
-
-/* =========================================
-   DOCUMENT NOTICE
-========================================= */
-
-.document-notice {
-
-  margin-top: 35px;
-
-  padding: 25px;
-
-  border:
-    1px solid
-    rgba(213,173,85,.22);
-
-  border-radius: 14px;
-
-  background:
-    rgba(213,173,85,.03);
-}
-
-.document-notice strong {
-
-  display: block;
-
-  margin-bottom: 9px;
-
-  color: var(--gold2);
-
-  font-size: 11px;
-
-  letter-spacing: 1px;
-}
-
-.document-notice p {
-
-  color: var(--muted);
-
-  font-size: 12px;
-
-  line-height: 1.8;
-}
-
-
-/* =========================================
-   DOCUMENT GUIDE
-========================================= */
-
-.guide-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      4,
-      minmax(0,1fr)
-    );
-
-  gap: 12px;
-}
-
-.guide-item {
-
-  padding: 24px;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 12px;
-
-  background: #0d1012;
-}
-
-.guide-item strong {
-
-  display: block;
-
-  margin-bottom: 8px;
-
-  color: #eee;
-
-  font-size: 14px;
-}
-
-.guide-item span {
-
-  color: #7e858a;
-
-  font-size: 11px;
-
-  line-height: 1.6;
-}
-
-
-/* =========================================
-   BUTTON
-========================================= */
-
-.btn {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 46px;
-
-  padding:
-    0 20px;
-
-  border:
-    1px solid #34393d;
-
-  border-radius: 8px;
-
-  background: #101214;
-
-  color: #f4f4f4;
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: .7px;
-
-  transition: .2s ease;
-}
-
-.btn:hover {
-
-  transform:
-    translateY(-2px);
-
-  border-color:
-    var(--gold);
-}
-
-.btn-gold {
-
-  border: none;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
-  color: #080909;
-}
-
-
-/* =========================================
-   CTA
-========================================= */
-
-.cta-box {
-
-  display: grid;
-
-  grid-template-columns:
-    1fr auto;
-
-  align-items: center;
-
-  gap: 30px;
-
-  padding: 30px;
-
-  border:
-    1px solid
-    rgba(213,173,85,.28);
-
-  border-radius: 16px;
-
-  background:
-    radial-gradient(
-      circle at 20% 0%,
-      rgba(213,173,85,.08),
-      transparent 50%
-    ),
-    #0d1012;
-}
-
-.cta-box h2 {
-
-  margin-bottom: 7px;
-
-  font-size:
-    clamp(
-      25px,
-      4vw,
-      36px
-    );
-}
-
-.cta-box p {
-
-  max-width: 650px;
-
-  color: var(--muted);
-
-  font-size: 13px;
-
-  line-height: 1.7;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-
-  padding:
-    40px 0;
-
-  border-top:
-    1px solid var(--border);
-
-  background: #030404;
-}
-
-.footer-grid {
-
-  display: flex;
-
-  justify-content:
-    space-between;
-
-  gap: 30px;
-
-  color: #777d82;
-
-  font-size: 11px;
-}
-
-.footer-grid strong {
-
-  display: block;
-
-  margin-bottom: 4px;
-
-  color: #c7c9ca;
-}
-
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media(max-width:1100px) {
-
-  .member-area {
-    display: none;
-  }
-
-  .mobile-member-status-bar {
-    display: block;
-  }
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{--black:#050607;--panel:#0d0f11;--panel2:#111417;--border:#252a2e;--gold:#d5ad55;--gold2:#f0d48c;--text:#f5f5f5;--muted:#9da3a8}
+body{min-height:100vh;background:radial-gradient(circle at 50% 0%,rgba(198,160,70,.07),transparent 30%),#050607;color:#f4f4f4;font-family:Arial,Helvetica,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%} button{font-family:inherit;cursor:pointer}
+.shell{width:min(1180px,calc(100% - 36px));margin:auto}
+
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(5,6,7,.96);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand img{width:52px;height:52px;flex-shrink:0;object-fit:cover;border-radius:50%;border:1px solid rgba(213,173,85,.35)}
+.brand-title{font-size:13px;font-weight:900;letter-spacing:1px}
+.brand-sub{margin-top:2px;color:var(--gold);font-size:8px;letter-spacing:2px}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-links{display:flex;align-items:center;gap:15px;color:#b9bdc0;font-size:11px;font-weight:700}
+.nav-links a:hover{color:var(--gold2)}
+
+.member-area{display:flex;align-items:center;gap:7px}
+.member-login{display:inline-flex;align-items:center;justify-content:center;min-height:39px;padding:0 13px;border:1px solid rgba(213,173,85,.4);border-radius:9px;background:rgba(213,173,85,.035);color:var(--gold2);font-size:8px;font-weight:900;letter-spacing:.7px}
+.member-signed-in{display:none;align-items:center;gap:7px} .member-signed-in.visible{display:flex}
+.member-pill{display:flex;align-items:center;gap:8px;padding:7px 10px;border:1px solid rgba(213,173,85,.28);border-radius:9px;background:rgba(213,173,85,.025)}
+.member-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(213,173,85,.45)}
+.member-info{line-height:1.15} .member-label{color:#767d82;font-size:6px;font-weight:900;letter-spacing:1px}
+.member-name{max-width:90px;overflow:hidden;color:var(--gold2);font-size:8px;font-weight:900;white-space:nowrap;text-overflow:ellipsis}
+.member-link{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 10px;border:1px solid #30353a;border-radius:8px;background:#0d1012;color:#b9bdc0;font-size:7px;font-weight:900}
+.member-link.gold{border:none;background:linear-gradient(135deg,#b98a32,#e2c16e);color:#080909}
+.member-signout{border:0;background:transparent;color:#747b80;font-size:7px;font-weight:900}
+
+.mobile-member-status-bar{display:none;border-top:1px solid #202428;background:#080a0b}
+.mobile-member-status-inner{min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.mobile-status-login{display:flex;align-items:center;justify-content:center;width:100%;min-height:40px;border:1px solid rgba(213,173,85,.35);border-radius:8px;color:var(--gold2);font-size:9px;font-weight:900;letter-spacing:.5px;background:rgba(213,173,85,.03)}
+.mobile-status-member{display:none;width:100%;align-items:center;justify-content:space-between;gap:10px} .mobile-status-member.visible{display:flex}
+.mobile-status-identity{display:flex;align-items:center;gap:8px;min-width:0} .mobile-status-dot{width:7px;height:7px;min-width:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 9px rgba(213,173,85,.55)}
+.mobile-status-copy{min-width:0;line-height:1.1} .mobile-status-label{color:#777e83;font-size:6px;font-weight:900;letter-spacing:1px}
+.mobile-status-name{max-width:130px;overflow:hidden;color:var(--gold2);font-size:10px;font-weight:900;white-space:nowrap;text-overflow:ellipsis}
+.mobile-status-actions{display:flex;align-items:center;gap:6px}
+.mobile-status-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 9px;border:1px solid #30353a;border-radius:7px;background:#0d1012;color:#c6cacc;font-size:7px;font-weight:900}
+.mobile-status-actions a.gold{border:0;background:linear-gradient(135deg,#b98a32,#e2c16e);color:#080909}
+
+.mobile-menu-button{display:none;width:44px;height:44px;min-width:44px;padding:10px;border:1px solid #30353a;border-radius:9px;background:#0d1012}
+.mobile-menu-button span{display:block;width:100%;height:2px;margin:5px 0;border-radius:10px;background:var(--gold2);transition:.25s ease}
+.mobile-menu-button.active span:nth-child(1){transform:translateY(7px) rotate(45deg)} .mobile-menu-button.active span:nth-child(2){opacity:0} .mobile-menu-button.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;background:rgba(6,7,8,.99);border-top:1px solid #202428;border-bottom:1px solid #252a2e;box-shadow:0 20px 40px rgba(0,0,0,.4)} .mobile-menu.open{display:block}
+.mobile-menu-inner{display:grid;padding:10px 0 18px} .mobile-menu-inner>a{padding:14px 3px;border-bottom:1px solid #1f2326;color:#c6cacc;font-size:12px;font-weight:900}
+
+.mobile-member-box{margin-bottom:12px;padding:16px;border:1px solid rgba(213,173,85,.25);border-radius:12px;background:rgba(213,173,85,.025)}
+.mobile-member-login{display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;border-radius:9px;background:linear-gradient(135deg,#b98a32,#e2c16e);color:#080909;font-size:10px;font-weight:900}
+.mobile-member-signed-in{display:none} .mobile-member-signed-in.visible{display:block}
+.mobile-status{color:var(--gold);font-size:8px;font-weight:900;letter-spacing:1px} .mobile-member-name{margin-top:3px;font-size:18px;font-weight:900} .mobile-member-email{margin-top:2px;color:#777e83;font-size:9px;word-break:break-word}
+.mobile-member-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.mobile-member-actions a,.mobile-member-actions button{min-height:43px;display:flex;align-items:center;justify-content:center;border:1px solid #30353a;border-radius:8px;background:#0d1012;color:#c5c9cc;font-size:9px;font-weight:900}
+.mobile-member-actions .gold{border:none;background:linear-gradient(135deg,#b98a32,#e2c16e);color:#080909}
+
+.promo-banner{width:100%;overflow:hidden;background:linear-gradient(90deg,#8f681f,#d5ad55,#f0d48c,#d5ad55,#8f681f);color:#080909}
+.promo-track{display:flex;width:max-content;white-space:nowrap;animation:promoScroll 24s linear infinite} .promo-track span{padding:9px 40px;font-size:10px;font-weight:900;letter-spacing:1px}
+@keyframes promoScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.page-hero{padding:85px 0 65px;border-bottom:1px solid var(--border)} .back-link{display:inline-block;margin-bottom:30px;color:var(--gold2);font-size:11px;font-weight:900;letter-spacing:1px}
+.eyebrow{margin-bottom:14px;color:var(--gold);font-size:10px;font-weight:900;letter-spacing:2.4px}
+.page-hero h1{max-width:850px;margin-bottom:22px;font-size:clamp(42px,7vw,70px);line-height:1;letter-spacing:-2px}
+.page-hero p{max-width:760px;color:var(--muted);font-size:16px;line-height:1.8}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px} .hero-meta span{padding:7px 10px;border:1px solid #292e32;border-radius:100px;background:#0c0e10;color:#858c91;font-size:8px;font-weight:900;letter-spacing:1px}
+
+.section{padding:80px 0} .section.alt{background:#090b0c;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.section-head{max-width:760px;margin-bottom:40px} .section-head h2{margin-bottom:15px;font-size:clamp(30px,5vw,46px);line-height:1.1} .section-head p{color:var(--muted);font-size:14px;line-height:1.8}
+
+.quality-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.quality-card{min-height:300px;padding:28px;border:1px solid var(--border);border-radius:15px;background:linear-gradient(145deg,#111416,#090b0c);transition:.25s ease}
+.quality-card:hover{transform:translateY(-4px);border-color:rgba(213,173,85,.42)} .card-number{margin-bottom:45px;color:rgba(213,173,85,.25);font-size:40px;font-weight:900}
+.quality-card h3{margin-bottom:12px;font-size:23px} .quality-card p{color:var(--muted);font-size:13px;line-height:1.8}
+
+.coa-library{display:grid;gap:16px}
+.coa-item{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,auto);align-items:center;gap:25px;padding:25px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(145deg,#111416,#090b0c)}
+.coa-info{min-width:0} .coa-tag{margin-bottom:7px;color:var(--gold);font-size:8px;font-weight:900;letter-spacing:1.5px} .coa-item h3{margin-bottom:5px;font-size:21px} .coa-meta{color:#777e83;font-size:10px;line-height:1.6}
+.coa-actions{display:flex;flex-direction:column;gap:8px;min-width:230px}
+.coa-button{display:flex;align-items:center;justify-content:center;min-height:46px;padding:9px 16px;border:1px solid rgba(213,173,85,.45);border-radius:8px;background:rgba(213,173,85,.04);color:var(--gold2);font-size:8px;font-weight:900;letter-spacing:.55px;text-align:center;transition:.2s ease}
+.coa-button:hover{transform:translateY(-2px);background:rgba(213,173,85,.08)}
+
+.document-notice{margin-top:35px;padding:25px;border:1px solid rgba(213,173,85,.22);border-radius:14px;background:rgba(213,173,85,.03)}
+.document-notice strong{display:block;margin-bottom:9px;color:var(--gold2);font-size:11px;letter-spacing:1px} .document-notice p{color:var(--muted);font-size:12px;line-height:1.8}
+
+.guide-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px} .guide-item{padding:24px;border:1px solid var(--border);border-radius:12px;background:#0d1012}
+.guide-item strong{display:block;margin-bottom:8px;color:#eee;font-size:14px} .guide-item span{color:#7e858a;font-size:11px;line-height:1.6}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border:1px solid #34393d;border-radius:8px;background:#101214;color:#f4f4f4;font-size:10px;font-weight:900;letter-spacing:.7px;transition:.2s ease}
+.btn:hover{transform:translateY(-2px);border-color:var(--gold)} .btn-gold{border:none;background:linear-gradient(135deg,#b98a32,#e2c16e);color:#080909}
+
+.cta-box{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;padding:30px;border:1px solid rgba(213,173,85,.28);border-radius:16px;background:radial-gradient(circle at 20% 0%,rgba(213,173,85,.08),transparent 50%),#0d1012}
+.cta-box h2{margin-bottom:7px;font-size:clamp(25px,4vw,36px)} .cta-box p{max-width:650px;color:var(--muted);font-size:13px;line-height:1.7}
+
+footer{padding:40px 0;border-top:1px solid var(--border);background:#030404} .footer-grid{display:flex;justify-content:space-between;gap:30px;color:#777d82;font-size:11px} .footer-grid strong{display:block;margin-bottom:4px;color:#c7c9ca}
+
+@media(max-width:1100px){.member-area{display:none}.mobile-member-status-bar{display:block}}
+@media(max-width:900px){
+  .shell{width:min(calc(100% - 28px),1180px)} .nav{min-height:68px} .brand img{width:45px;height:45px} .brand-title{font-size:11px} .brand-sub{font-size:7px}
+  .nav-links{display:none} .mobile-menu-button{display:block} .quality-grid{grid-template-columns:1fr} .guide-grid{grid-template-columns:1fr 1fr} .cta-box{grid-template-columns:1fr} .cta-box .btn{width:100%} .footer-grid{flex-direction:column}
+}
+@media(max-width:520px){
+  .brand{gap:8px} .brand img{width:41px;height:41px} .brand-title{font-size:9px;letter-spacing:.6px} .brand-sub{font-size:5.8px;letter-spacing:1.2px}
+  .mobile-member-status-inner{min-height:58px} .mobile-status-name{max-width:95px;font-size:9px} .mobile-status-actions a{padding:0 7px;font-size:6.5px}
+  .page-hero{padding:55px 0 45px} .page-hero h1{font-size:38px} .quality-card{min-height:260px;padding:23px}
+  .coa-item{grid-template-columns:1fr;padding:22px} .coa-actions{min-width:0;width:100%} .coa-button{width:100%}
+  .guide-grid{grid-template-columns:1fr}
 }
-
-
-@media(max-width:900px) {
-
-  .shell {
-
-    width:
-      min(
-        calc(100% - 28px),
-        1180px
-      );
-  }
-
-  .nav {
-
-    min-height: 68px;
-  }
-
-  .brand img {
-
-    width: 45px;
-    height: 45px;
-  }
-
-  .brand-title {
-
-    font-size: 11px;
-  }
-
-  .brand-sub {
-
-    font-size: 7px;
-  }
-
-  .nav-links {
-
-    display: none;
-  }
-
-  .mobile-menu-button {
-
-    display: block;
-  }
-
-  .quality-grid {
-
-    grid-template-columns: 1fr;
-  }
-
-  .guide-grid {
-
-    grid-template-columns:
-      1fr 1fr;
-  }
-
-  .cta-box {
-
-    grid-template-columns: 1fr;
-  }
-
-  .cta-box .btn {
-
-    width: 100%;
-  }
-
-  .footer-grid {
-
-    flex-direction: column;
-  }
-
-}
-
-
-@media(max-width:520px) {
-
-  .brand {
-
-    gap: 8px;
-  }
-
-  .brand img {
-
-    width: 41px;
-    height: 41px;
-  }
-
-  .brand-title {
-
-    font-size: 9px;
-
-    letter-spacing: .6px;
-  }
-
-  .brand-sub {
-
-    font-size: 5.8px;
-
-    letter-spacing: 1.2px;
-  }
-
-  .mobile-member-status-inner {
-
-    min-height: 58px;
-  }
-
-  .mobile-status-name {
-
-    max-width: 95px;
-
-    font-size: 9px;
-  }
-
-  .mobile-status-actions a {
-
-    padding:
-      0 7px;
-
-    font-size: 6.5px;
-  }
-
-  .page-hero {
-
-    padding:
-      55px 0 45px;
-  }
-
-  .page-hero h1 {
-
-    font-size: 38px;
-  }
-
-  .quality-card {
-
-    min-height: 260px;
-
-    padding: 23px;
-  }
-
-  .coa-item {
-
-    grid-template-columns: 1fr;
-
-    padding: 22px;
-  }
-
-  .coa-button {
-
-    width: 100%;
-  }
-
-  .guide-grid {
-
-    grid-template-columns: 1fr;
-  }
-
-}
-
 </style>
-
 </head>
 
-
-
 <body>
-
-
-<!-- =========================================
-     HEADER
-========================================= -->
-
 <header class="site-header">
-
-
 <div class="shell nav">
-
-
-<a
-  href="index.html"
-  class="brand"
->
-
-<img
-  src="pch-logo.jpg"
-  alt="PCH Labs"
->
-
-<div>
-
-<div class="brand-title">
-PLATINUM CELLULAR HEALTH LABS
-</div>
-
-<div class="brand-sub">
-LONGEVITY AT THE CELLULAR LEVEL
-</div>
-
-</div>
-
+<a href="index.html" class="brand">
+<img src="pch-logo.jpg" alt="PCH Labs">
+<div><div class="brand-title">PLATINUM CELLULAR HEALTH LABS</div><div class="brand-sub">LONGEVITY AT THE CELLULAR LEVEL</div></div>
 </a>
-
 
 <div class="nav-right">
-
-
 <nav class="nav-links">
-
-
-<a href="index.html">
-Home
-</a>
-
-
-<a href="research-information.html">
-Research
-</a>
-
-
-<a href="catalog.html">
-Catalog
-</a>
-
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-
-<a href="recommended-supplies.html">
-Supplies
-</a>
-
-
-<a href="policies.html">
-Policies
-</a>
-
-
-<a href="faq.html">
-FAQ
-</a>
-
-
-<a href="contact.html">
-Contact
-</a>
-
-
+<a href="index.html">Home</a>
+<a href="research-information.html">Research</a>
+<a href="catalog.html">Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
 </nav>
 
-
-
 <div class="member-area">
-
-
-<a
-  href="login.html"
-  class="member-login"
-  id="desktopLoginLink"
->
-🔐 MEMBER LOGIN
-</a>
-
-
-<div
-  class="member-signed-in"
-  id="desktopMemberArea"
->
-
-
-<div class="member-pill">
-
-<span class="member-dot"></span>
-
-<div class="member-info">
-
-<div class="member-label">
-SIGNED IN
+<a href="login.html" class="member-login" id="desktopLoginLink">🔐 MEMBER LOGIN</a>
+<div class="member-signed-in" id="desktopMemberArea">
+<div class="member-pill"><span class="member-dot"></span><div class="member-info"><div class="member-label">SIGNED IN</div><div class="member-name" id="desktopMemberName">MEMBER</div></div></div>
+<a href="login.html" class="member-link">ACCOUNT</a>
+<a href="login.html" class="member-link gold">CHECKOUT</a>
+<button type="button" class="member-signout" id="desktopSignout">SIGN OUT</button>
+</div>
 </div>
 
-<div
-  class="member-name"
-  id="desktopMemberName"
->
-MEMBER
+<button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
-
 </div>
-
-</div>
-
-
-<a
-  href="login.html"
-  class="member-link"
->
-ACCOUNT
-</a>
-
-
-<a
-  href="login.html"
-  class="member-link gold"
->
-CHECKOUT
-</a>
-
-
-<button
-  type="button"
-  class="member-signout"
-  id="desktopSignout"
->
-SIGN OUT
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-<button
-  class="mobile-menu-button"
-  id="mobileMenuButton"
-  type="button"
-  aria-label="Open navigation menu"
-  aria-expanded="false"
->
-
-<span></span>
-<span></span>
-<span></span>
-
-</button>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =========================================
-     VISIBLE MOBILE MEMBER STATUS
-========================================= -->
 
 <div class="mobile-member-status-bar">
-
 <div class="shell mobile-member-status-inner">
-
-
-<a
-  href="login.html"
-  class="mobile-status-login"
-  id="visibleMobileLogin"
->
-🔐 MEMBER LOGIN / CREATE ACCOUNT
-</a>
-
-
-<div
-  class="mobile-status-member"
-  id="visibleMobileMember"
->
-
-
-<div class="mobile-status-identity">
-
-<span class="mobile-status-dot"></span>
-
-
-<div class="mobile-status-copy">
-
-<div class="mobile-status-label">
-SIGNED IN
+<a href="login.html" class="mobile-status-login" id="visibleMobileLogin">🔐 MEMBER LOGIN / CREATE ACCOUNT</a>
+<div class="mobile-status-member" id="visibleMobileMember">
+<div class="mobile-status-identity"><span class="mobile-status-dot"></span><div class="mobile-status-copy"><div class="mobile-status-label">SIGNED IN</div><div class="mobile-status-name" id="visibleMobileMemberName">PCH Member</div></div></div>
+<div class="mobile-status-actions"><a href="login.html">ACCOUNT</a><a href="login.html" class="gold">CHECKOUT</a></div>
+</div>
+</div>
 </div>
 
-<div
-  class="mobile-status-name"
-  id="visibleMobileMemberName"
->
-PCH Member
-</div>
-
-</div>
-
-
-</div>
-
-
-
-<div class="mobile-status-actions">
-
-<a href="login.html">
-ACCOUNT
-</a>
-
-<a
-  href="login.html"
-  class="gold"
->
-CHECKOUT
-</a>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =========================================
-     MOBILE MENU
-========================================= -->
-
-<div
-  class="mobile-menu"
-  id="mobileMenu"
->
-
+<div class="mobile-menu" id="mobileMenu">
 <div class="shell mobile-menu-inner">
-
-
 <div class="mobile-member-box">
-
-
-<a
-  href="login.html"
-  class="mobile-member-login"
-  id="mobileLoginLink"
->
-🔐 MEMBER LOGIN / CREATE ACCOUNT
-</a>
-
-
-<div
-  class="mobile-member-signed-in"
-  id="mobileMemberArea"
->
-
-
-<div class="mobile-status">
-● SIGNED IN
-</div>
-
-
-<div
-  class="mobile-member-name"
-  id="mobileMemberName"
->
-PCH Member
-</div>
-
-
-<div
-  class="mobile-member-email"
-  id="mobileMemberEmail"
-></div>
-
-
+<a href="login.html" class="mobile-member-login" id="mobileLoginLink">🔐 MEMBER LOGIN / CREATE ACCOUNT</a>
+<div class="mobile-member-signed-in" id="mobileMemberArea">
+<div class="mobile-status">● SIGNED IN</div>
+<div class="mobile-member-name" id="mobileMemberName">PCH Member</div>
+<div class="mobile-member-email" id="mobileMemberEmail"></div>
 <div class="mobile-member-actions">
-
-
-<a href="login.html">
-MY ACCOUNT
-</a>
-
-
-<a
-  href="login.html"
-  class="gold"
->
-CHECKOUT
-</a>
-
-
-<button
-  type="button"
-  id="mobileSignout"
->
-SIGN OUT
-</button>
-
-
-<a href="catalog.html">
-CATALOG
-</a>
-
-
+<a href="login.html">MY ACCOUNT</a><a href="login.html" class="gold">CHECKOUT</a><button type="button" id="mobileSignout">SIGN OUT</button><a href="catalog.html">CATALOG</a>
+</div>
+</div>
+</div>
+<a href="index.html">Home</a>
+<a href="research-information.html">Research Information</a>
+<a href="catalog.html">Research Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Recommended Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+</div>
 </div>
 
-
-</div>
-
-
-</div>
-
-
-<a href="index.html">
-Home
-</a>
-
-
-<a href="research-information.html">
-Research Information
-</a>
-
-
-<a href="catalog.html">
-Research Catalog
-</a>
-
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-
-<a href="recommended-supplies.html">
-Recommended Supplies
-</a>
-
-
-<a href="policies.html">
-Policies
-</a>
-
-
-<a href="faq.html">
-FAQ
-</a>
-
-
-<a href="contact.html">
-Contact
-</a>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =========================================
-     PROMOTION
-========================================= -->
-
-<div class="promo-banner">
-
-<div class="promo-track">
-
-
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
-
-
-<span>
-ANALYTICAL DOCUMENTATION · LOT & BATCH TRACEABILITY
-</span>
-
-
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
-
-
-<span>
-COA DOCUMENTATION WHERE AVAILABLE
-</span>
-
-
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
-
-
-<span>
-ANALYTICAL DOCUMENTATION · LOT & BATCH TRACEABILITY
-</span>
-
-
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
-
-
-<span>
-COA DOCUMENTATION WHERE AVAILABLE
-</span>
-
-
-</div>
-
-</div>
-
-
+<div class="promo-banner"><div class="promo-track">
+<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
+<span>ANALYTICAL DOCUMENTATION · LOT & BATCH TRACEABILITY</span>
+<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
+<span>COA DOCUMENTATION WHERE AVAILABLE</span>
+<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
+<span>ANALYTICAL DOCUMENTATION · LOT & BATCH TRACEABILITY</span>
+<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
+<span>COA DOCUMENTATION WHERE AVAILABLE</span>
+</div></div>
 </header>
 
-
-
 <main>
+<section class="page-hero"><div class="shell">
+<a href="index.html" class="back-link">← BACK TO PCH LABS</a>
+<div class="eyebrow">ANALYTICAL DOCUMENTATION</div>
+<h1>Quality & Certificates of Analysis</h1>
+<p>A central location for available Certificates of Analysis, analytical documentation, lot and batch references, testing information, and laboratory verification resources.</p>
+<div class="hero-meta"><span>17 DOCUMENTED LISTINGS</span><span>LOT / BATCH TRACEABILITY</span><span>ANALYTICAL TESTING</span><span>RESEARCH USE ONLY</span></div>
+</div></section>
 
-
-<!-- =========================================
-     HERO
-========================================= -->
-
-<section class="page-hero">
-
-<div class="shell">
-
-
-<a
-  href="index.html"
-  class="back-link"
->
-← BACK TO PCH LABS
-</a>
-
-
-<div class="eyebrow">
-ANALYTICAL DOCUMENTATION
-</div>
-
-
-<h1>
-Quality & Certificates of Analysis
-</h1>
-
-
-<p>
-A central location for available Certificates
-of Analysis, analytical documentation,
-lot and batch references, testing information,
-and laboratory verification resources.
-</p>
-
-
-<div class="hero-meta">
-
-
-<span>
-COA DOCUMENTATION
-</span>
-
-
-<span>
-LOT / BATCH TRACEABILITY
-</span>
-
-
-<span>
-ANALYTICAL TESTING
-</span>
-
-
-<span>
-RESEARCH USE ONLY
-</span>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     QUALITY SYSTEM
-========================================= -->
-
-<section class="section">
-
-<div class="shell">
-
-
-<div class="section-head">
-
-
-<div class="eyebrow">
-DOCUMENTATION SYSTEM
-</div>
-
-
-<h2>
-Research documentation organized for review.
-</h2>
-
-
-<p>
-Available analytical documents are organized
-so researchers can review the original report,
-identify the corresponding research material,
-and compare lot, batch, test-date, and laboratory
-information where provided.
-</p>
-
-
-</div>
-
-
-
+<section class="section"><div class="shell">
+<div class="section-head"><div class="eyebrow">DOCUMENTATION SYSTEM</div><h2>Research documentation organized for review.</h2><p>Available analytical documents are organized so researchers can review the original report, identify the corresponding research material, and compare lot, batch, test-date, and laboratory information where provided.</p></div>
 <div class="quality-grid">
-
-
-<div class="quality-card">
-
-
-<div class="card-number">
-01
+<div class="quality-card"><div class="card-number">01</div><h3>Uploaded COA</h3><p>Certificates of Analysis are made available when corresponding documentation has been uploaded to the PCH Labs website.</p></div>
+<div class="quality-card"><div class="card-number">02</div><h3>Verification</h3><p>Original analytical reports should be reviewed for laboratory identity, sample information, testing date, analytical method, and reported results.</p></div>
+<div class="quality-card"><div class="card-number">03</div><h3>Traceability</h3><p>COA documentation should always be matched to the correct product, lot, batch, sample, or submission identified in the report.</p></div>
 </div>
+</div></section>
 
-
-<h3>
-Uploaded COA
-</h3>
-
-
-<p>
-Certificates of Analysis are made available
-when corresponding documentation has been
-uploaded to the PCH Labs website.
-</p>
-
-
-</div>
-
-
-
-<div class="quality-card">
-
-
-<div class="card-number">
-02
-</div>
-
-
-<h3>
-Verification
-</h3>
-
-
-<p>
-Original analytical reports should be reviewed
-for laboratory identity, sample information,
-testing date, analytical method, and reported
-results.
-</p>
-
-
-</div>
-
-
-
-<div class="quality-card">
-
-
-<div class="card-number">
-03
-</div>
-
-
-<h3>
-Traceability
-</h3>
-
-
-<p>
-COA documentation should always be matched
-to the correct product, lot, batch, sample,
-or submission identified in the report.
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     COA LIBRARY
-========================================= -->
-
-<section class="section alt">
-
-<div class="shell">
-
-
-<div class="section-head">
-
-
-<div class="eyebrow">
-AVAILABLE DOCUMENTATION
-</div>
-
-
-<h2>
-COA Library
-</h2>
-
-
-<p>
-The following analytical documents are currently
-linked to corresponding listings in the PCH Labs
-research catalog.
-</p>
-
-
-</div>
-
-
+<section class="section alt"><div class="shell">
+<div class="section-head"><div class="eyebrow">AVAILABLE DOCUMENTATION</div><h2>COA Library</h2><p>The following analytical documents are currently linked to corresponding listings in the PCH Labs research catalog.</p></div>
 
 <div class="coa-library">
 
-
 <div class="coa-item">
-
-
-<div class="coa-info">
-
-
-<div class="coa-tag">
-CERTIFICATE OF ANALYSIS
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>R10 · 10 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="retatrutide-10mg-greencap-coa.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">GREEN CAP · VIEW COA</a>
+<a href="coa-retatrutide-endotoxin-janoshik.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">ENDOTOXIN · VIEW REPORT</a>
+  </div>
 </div>
-
-
-<h3>
-R10 · 10 MG
-</h3>
-
-
-<div class="coa-meta">
-Analytical documentation available for this
-research-material listing.
-</div>
-
-
-</div>
-
-
-<a
-  href="retatrutide-10mg-greencap-coa.jpg"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="coa-button"
->
-VIEW COA
-</a>
-
-
-</div>
-
 
 
 <div class="coa-item">
-
-
-<div class="coa-info">
-
-
-<div class="coa-tag">
-CERTIFICATE OF ANALYSIS
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>R20 · 20 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="Test%20Report%20%23195265.png" target="_blank" rel="noopener noreferrer" class="coa-button">21.11 / 20.42 / 20.40 MG · 99.718–99.834%</a>
+    <a href="Test%20Report%20%23195266.png" target="_blank" rel="noopener noreferrer" class="coa-button">ENDOTOXIN · VIEW REPORT</a>
+  </div>
 </div>
-
-
-<h3>
-GHK-Cu · 50 MG
-</h3>
-
-
-<div class="coa-meta">
-Analytical documentation available for this
-research-material listing.
-</div>
-
-
-</div>
-
-
-<a
-  href="ghkcu-50mg-coa.png"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="coa-button"
->
-VIEW COA
-</a>
-
-
-</div>
-
 
 
 <div class="coa-item">
-
-
-<div class="coa-info">
-
-
-<div class="coa-tag">
-CERTIFICATE OF ANALYSIS
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>R30 · 30 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="coa-r30-freedom.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">VIEW COA · FREEDOM</a>
+<a href="coa-r30-v3-freedom.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">VIEW COA · FREEDOM V3</a>
+  </div>
 </div>
-
-
-<h3>
-Cartalax · 20 MG
-</h3>
-
-
-<div class="coa-meta">
-Analytical documentation available for this
-research-material listing.
-</div>
-
-
-</div>
-
-
-<a
-  href="cartalax-20mg-coa.jpg"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="coa-button"
->
-VIEW COA
-</a>
-
-
-</div>
-
 
 
 <div class="coa-item">
-
-
-<div class="coa-info">
-
-
-<div class="coa-tag">
-CERTIFICATE OF ANALYSIS
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>GHK-Cu · 50 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="ghkcu-50mg-coa.png" target="_blank" rel="noopener noreferrer" class="coa-button">VIEW COA</a>
+  </div>
 </div>
 
 
-<h3>
-MOTS-C · 10 MG
-</h3>
-
-
-<div class="coa-meta">
-Analytical documentation available for this
-research-material listing.
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>Cartalax · 20 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="cartalax-20mg-coa.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">VIEW COA</a>
+  </div>
 </div>
 
 
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>MOTS-C · 10 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="motsc-10mg-greencaps-coa.png" target="_blank" rel="noopener noreferrer" class="coa-button">GREEN CAP · VIEW COA</a>
+<a href="coa-motsc-10mg-freedom.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">VIEW COA · FREEDOM</a>
+  </div>
 </div>
 
 
-<a
-  href="motsc-10mg-greencaps-coa.png"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="coa-button"
->
-VIEW COA
-</a>
-
-
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>N-Acetyl Semax (Amidate) · 10 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="Test%20Report%20%23196930.png" target="_blank" rel="noopener noreferrer" class="coa-button">10.52 / 11.56 / 11.29 MG · 99.029–99.181%</a>
+  </div>
 </div>
 
 
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>N-Acetyl Selank (Amidate) · 10 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="Test%20Report%20%23209069.png" target="_blank" rel="noopener noreferrer" class="coa-button">13.43 / 12.72 / 13.85 MG · 99.610–99.645%</a>
+  </div>
 </div>
 
 
-
-<div class="document-notice">
-
-
-<strong>
-IMPORTANT COA NOTICE
-</strong>
-
-
-<p>
-Certificates of Analysis should remain in their
-original form and should be reviewed as issued
-by the testing laboratory. A COA applies only
-to the sample, lot, batch, or submission identified
-in that specific analytical report. Documentation
-for one lot or sample should not automatically
-be interpreted as documentation for another.
-</p>
-
-
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>Epithalon / Epitalon (Amidate) · 10 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="Test%20Report%20%23196624.png" target="_blank" rel="noopener noreferrer" class="coa-button">10.55 / 10.72 / 10.70 MG · 98.987–99.007%</a>
+  </div>
 </div>
 
 
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     HOW TO REVIEW
-========================================= -->
-
-<section class="section">
-
-<div class="shell">
-
-
-<div class="section-head">
-
-
-<div class="eyebrow">
-DOCUMENT REVIEW
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>DSIP · 5 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="Test%20Report%20%23195227.png" target="_blank" rel="noopener noreferrer" class="coa-button">6.78 / 6.81 / 6.73 MG · 99.426–99.485%</a>
+  </div>
 </div>
 
 
-<h2>
-What to look for on a COA.
-</h2>
-
-
-<p>
-Analytical reports may contain different
-information depending on the laboratory
-and testing method. These are some of the
-most useful identifiers to review.
-</p>
-
-
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>DSIP · 10 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="coa-dsip-10mg-ils.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">VIEW COA · ILS</a>
+  </div>
 </div>
 
 
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>ARA-290 · 15 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="Test%20Report%20%23209071.png" target="_blank" rel="noopener noreferrer" class="coa-button">18.74 / 18.15 / 18.23 MG · 99.465–99.551%</a>
+  </div>
+</div>
 
+
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>BPC-157 / TB-500 · 10 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="coa-bpc157-tb500-10mg-freedom.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">VIEW COA · FREEDOM</a>
+  </div>
+</div>
+
+
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>KLOW · 80 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="coa-klow-80mg-freedom.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">VIEW COA · FREEDOM</a>
+<a href="coa-klow-80mg-endotoxin-freedom.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">ENDOTOXIN · VIEW REPORT</a>
+  </div>
+</div>
+
+
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>CJC · 5 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="coa-cjc-nodac-10mg-freedom.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">VIEW COA · NO DAC</a>
+  </div>
+</div>
+
+
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>Ipamorelin · 10 MG</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="IMG_20260817_115955_496.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">9.77 MG · 99.90% PURITY</a>
+  </div>
+</div>
+
+
+<div class="coa-item">
+  <div class="coa-info">
+    <div class="coa-tag">CERTIFICATE / ANALYTICAL DOCUMENTATION</div>
+    <h3>EBAC BAC Water</h3>
+    <div class="coa-meta">Original laboratory documentation linked to this research-material listing.</div>
+  </div>
+  <div class="coa-actions">
+    <a href="coa-ebac-water-30ml-chromate.jpg" target="_blank" rel="noopener noreferrer" class="coa-button">VIEW ANALYTICAL DOCUMENT</a>
+  </div>
+</div>
+
+</div>
+
+<div class="document-notice"><strong>IMPORTANT COA NOTICE</strong><p>Certificates of Analysis remain in their original form and apply only to the sample, lot, batch, or laboratory submission identified in the specific report. Multiple reports are kept separately where available. Endotoxin reports are displayed as separate analytical documentation.</p></div>
+</div></section>
+
+<section class="section"><div class="shell">
+<div class="section-head"><div class="eyebrow">DOCUMENT REVIEW</div><h2>What to look for on a COA.</h2><p>Analytical reports may contain different information depending on the laboratory and testing method. These are some of the most useful identifiers to review.</p></div>
 <div class="guide-grid">
-
-
-<div class="guide-item">
-
-<strong>
-Sample Identity
-</strong>
-
-<span>
-The name or identifier assigned to the submitted
-sample.
-</span>
-
+<div class="guide-item"><strong>Sample Identity</strong><span>The name or identifier assigned to the submitted sample.</span></div>
+<div class="guide-item"><strong>Lot / Batch</strong><span>Information used to associate documentation with the corresponding research material.</span></div>
+<div class="guide-item"><strong>Testing Date</strong><span>The date the sample was analyzed or the report was issued.</span></div>
+<div class="guide-item"><strong>Laboratory</strong><span>The analytical laboratory responsible for performing and reporting the test.</span></div>
 </div>
+</div></section>
 
-
-
-<div class="guide-item">
-
-<strong>
-Lot / Batch
-</strong>
-
-<span>
-Information used to associate documentation
-with the corresponding research material.
-</span>
-
-</div>
-
-
-
-<div class="guide-item">
-
-<strong>
-Testing Date
-</strong>
-
-<span>
-The date the sample was analyzed or the report
-was issued.
-</span>
-
-</div>
-
-
-
-<div class="guide-item">
-
-<strong>
-Laboratory
-</strong>
-
-<span>
-The analytical laboratory responsible for
-performing and reporting the test.
-</span>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================
-     CATALOG CTA
-========================================= -->
-
-<section class="section alt">
-
-<div class="shell">
-
-
-<div class="cta-box">
-
-
-<div>
-
-
-<div class="eyebrow">
-RESEARCH CATALOG
-</div>
-
-
-<h2>
-Match documentation with catalog listings.
-</h2>
-
-
-<p>
-Browse the PCH Labs research catalog to review
-listed research materials, amounts, pricing,
-and COA availability.
-</p>
-
-
-</div>
-
-
-<a
-  href="catalog.html"
-  class="btn btn-gold"
->
-OPEN RESEARCH CATALOG
-</a>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
+<section class="section alt"><div class="shell"><div class="cta-box">
+<div><div class="eyebrow">RESEARCH CATALOG</div><h2>Match documentation with catalog listings.</h2><p>Browse the PCH Labs research catalog to review listed research materials, amounts, pricing, and COA availability.</p></div>
+<a href="catalog.html" class="btn btn-gold">OPEN RESEARCH CATALOG</a>
+</div></div></section>
 </main>
 
+<footer><div class="shell footer-grid"><div><strong>Platinum Cellular Health Labs</strong><div>Longevity at the Cellular Level</div></div><div>contact@platinumcellularhealth.com<br>21+ · Research Use Only · Not for human or animal use</div></div></footer>
 
-
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer>
-
-
-<div class="shell footer-grid">
-
-
-<div>
-
-
-<strong>
-Platinum Cellular Health Labs
-</strong>
-
-
-<div>
-Longevity at the Cellular Level
-</div>
-
-
-</div>
-
-
-
-<div>
-
-contact@platinumcellularhealth.com
-
-<br>
-
-21+ · Research Use Only ·
-Not for human or animal use
-
-</div>
-
-
-</div>
-
-
-</footer>
-
-
-
-<!-- =========================================
-     SUPABASE
-========================================= -->
-
-<script
-  src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
-></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+const SUPABASE_URL="https://rmjvhbfazakcunfeomao.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY="sb_publishable_m0snLFFTsLnUfENmvWsUuw_bjPkhMER";
+const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storage:window.localStorage,storageKey:"pch-member-auth"}});
 
-/* =========================================
-   SUPABASE CONFIG
-========================================= */
+const desktopLoginLink=document.getElementById("desktopLoginLink");
+const desktopMemberArea=document.getElementById("desktopMemberArea");
+const desktopMemberName=document.getElementById("desktopMemberName");
+const desktopSignout=document.getElementById("desktopSignout");
+const mobileLoginLink=document.getElementById("mobileLoginLink");
+const mobileMemberArea=document.getElementById("mobileMemberArea");
+const mobileMemberName=document.getElementById("mobileMemberName");
+const mobileMemberEmail=document.getElementById("mobileMemberEmail");
+const mobileSignout=document.getElementById("mobileSignout");
+const visibleMobileLogin=document.getElementById("visibleMobileLogin");
+const visibleMobileMember=document.getElementById("visibleMobileMember");
+const visibleMobileMemberName=document.getElementById("visibleMobileMemberName");
 
-const SUPABASE_URL =
-  "https://rmjvhbfazakcunfeomao.supabase.co";
-
-
-const SUPABASE_PUBLISHABLE_KEY =
-  "sb_publishable_m0snLFFTsLnUfENmvWsUuw_bjPkhMER";
-
-
-const supabaseClient =
-  window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_PUBLISHABLE_KEY,
-    {
-
-      auth: {
-
-        persistSession:
-          true,
-
-        autoRefreshToken:
-          true,
-
-        detectSessionInUrl:
-          true,
-
-        storage:
-          window.localStorage,
-
-        storageKey:
-          "pch-member-auth"
-
-      }
-
-    }
-  );
-
-
-/* =========================================
-   MEMBER ELEMENTS
-========================================= */
-
-const desktopLoginLink =
-  document.getElementById(
-    "desktopLoginLink"
-  );
-
-
-const desktopMemberArea =
-  document.getElementById(
-    "desktopMemberArea"
-  );
-
-
-const desktopMemberName =
-  document.getElementById(
-    "desktopMemberName"
-  );
-
-
-const desktopSignout =
-  document.getElementById(
-    "desktopSignout"
-  );
-
-
-const mobileLoginLink =
-  document.getElementById(
-    "mobileLoginLink"
-  );
-
-
-const mobileMemberArea =
-  document.getElementById(
-    "mobileMemberArea"
-  );
-
-
-const mobileMemberName =
-  document.getElementById(
-    "mobileMemberName"
-  );
-
-
-const mobileMemberEmail =
-  document.getElementById(
-    "mobileMemberEmail"
-  );
-
-
-const mobileSignout =
-  document.getElementById(
-    "mobileSignout"
-  );
-
-
-const visibleMobileLogin =
-  document.getElementById(
-    "visibleMobileLogin"
-  );
-
-
-const visibleMobileMember =
-  document.getElementById(
-    "visibleMobileMember"
-  );
-
-
-const visibleMobileMemberName =
-  document.getElementById(
-    "visibleMobileMemberName"
-  );
-
-
-/* =========================================
-   LOGGED OUT STATE
-========================================= */
-
-function showLoggedOutMemberState() {
-
-
-  desktopLoginLink.style.display =
-    "inline-flex";
-
-
-  desktopMemberArea.classList.remove(
-    "visible"
-  );
-
-
-  mobileLoginLink.style.display =
-    "flex";
-
-
-  mobileMemberArea.classList.remove(
-    "visible"
-  );
-
-
-  visibleMobileLogin.style.display =
-    "flex";
-
-
-  visibleMobileMember.classList.remove(
-    "visible"
-  );
-
-
+function showLoggedOutMemberState(){
+  desktopLoginLink.style.display="inline-flex";
+  desktopMemberArea.classList.remove("visible");
+  mobileLoginLink.style.display="flex";
+  mobileMemberArea.classList.remove("visible");
+  visibleMobileLogin.style.display="flex";
+  visibleMobileMember.classList.remove("visible");
 }
 
-
-/* =========================================
-   LOGGED IN STATE
-========================================= */
-
-function showLoggedInMemberState(
-  user
-) {
-
-
-  const username =
-    user.user_metadata
-    &&
-    user.user_metadata.username
-    ?
-    user.user_metadata.username
-    :
-    "PCH Member";
-
-
-  desktopLoginLink.style.display =
-    "none";
-
-
-  desktopMemberArea.classList.add(
-    "visible"
-  );
-
-
-  desktopMemberName.textContent =
-    username;
-
-
-  mobileLoginLink.style.display =
-    "none";
-
-
-  mobileMemberArea.classList.add(
-    "visible"
-  );
-
-
-  mobileMemberName.textContent =
-    username;
-
-
-  mobileMemberEmail.textContent =
-    user.email
-    ||
-    "";
-
-
-  visibleMobileLogin.style.display =
-    "none";
-
-
-  visibleMobileMember.classList.add(
-    "visible"
-  );
-
-
-  visibleMobileMemberName.textContent =
-    username;
-
-
+function showLoggedInMemberState(user){
+  const username=user.user_metadata&&user.user_metadata.username?user.user_metadata.username:"PCH Member";
+  desktopLoginLink.style.display="none";
+  desktopMemberArea.classList.add("visible");
+  desktopMemberName.textContent=username;
+  mobileLoginLink.style.display="none";
+  mobileMemberArea.classList.add("visible");
+  mobileMemberName.textContent=username;
+  mobileMemberEmail.textContent=user.email||"";
+  visibleMobileLogin.style.display="none";
+  visibleMobileMember.classList.add("visible");
+  visibleMobileMemberName.textContent=username;
 }
 
-
-/* =========================================
-   RESTORE MEMBER SESSION
-========================================= */
-
-async function restoreMemberSession() {
-
-
-  try {
-
-
-    const {
-      data
-    } =
-      await supabaseClient.auth
-        .getSession();
-
-
-    if (
-      data.session
-      &&
-      data.session.user
-    ) {
-
-
-      showLoggedInMemberState(
-        data.session.user
-      );
-
-
-    }
-
-    else {
-
-
-      showLoggedOutMemberState();
-
-
-    }
-
-
-  }
-
-  catch(error) {
-
-
-    console.error(
-      "PCH member session error:",
-      error
-    );
-
-
+async function restoreMemberSession(){
+  try{
+    const {data}=await supabaseClient.auth.getSession();
+    if(data.session&&data.session.user) showLoggedInMemberState(data.session.user);
+    else showLoggedOutMemberState();
+  }catch(error){
+    console.error("PCH member session error:",error);
     showLoggedOutMemberState();
-
-
   }
-
-
 }
 
-
-/* =========================================
-   SIGN OUT
-========================================= */
-
-async function signOutMember() {
-
-
-  await supabaseClient.auth
-    .signOut();
-
-
-  showLoggedOutMemberState();
-
-
-}
-
-
-desktopSignout.addEventListener(
-  "click",
-  signOutMember
-);
-
-
-mobileSignout.addEventListener(
-  "click",
-  signOutMember
-);
-
-
-/* =========================================
-   AUTH STATE CHANGES
-========================================= */
-
-supabaseClient.auth
-  .onAuthStateChange(
-    function(
-      event,
-      session
-    ) {
-
-
-      if (
-        session
-        &&
-        session.user
-      ) {
-
-
-        showLoggedInMemberState(
-          session.user
-        );
-
-
-      }
-
-      else {
-
-
-        showLoggedOutMemberState();
-
-
-      }
-
-
-    }
-  );
-
-
-/* =========================================
-   MOBILE MENU
-========================================= */
-
-const mobileMenuButton =
-  document.getElementById(
-    "mobileMenuButton"
-  );
-
-
-const mobileMenu =
-  document.getElementById(
-    "mobileMenu"
-  );
-
-
-mobileMenuButton.addEventListener(
-  "click",
-  function() {
-
-
-    const isOpen =
-      mobileMenu.classList.toggle(
-        "open"
-      );
-
-
-    mobileMenuButton.classList.toggle(
-      "active",
-      isOpen
-    );
-
-
-    mobileMenuButton.setAttribute(
-      "aria-expanded",
-      isOpen
-    );
-
-
-  }
-);
-
-
-mobileMenu
-  .querySelectorAll("a")
-  .forEach(
-    function(link) {
-
-
-      link.addEventListener(
-        "click",
-        function() {
-
-
-          mobileMenu.classList.remove(
-            "open"
-          );
-
-
-          mobileMenuButton.classList.remove(
-            "active"
-          );
-
-
-          mobileMenuButton.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-
-        }
-      );
-
-
-    }
-  );
-
-
-/* =========================================
-   RESTORE WHEN RETURNING
-========================================= */
-
-window.addEventListener(
-  "pageshow",
-  function() {
-
-
-    restoreMemberSession();
-
-
-  }
-);
-
-
-document.addEventListener(
-  "visibilitychange",
-  function() {
-
-
-    if (
-      document.visibilityState
-      ===
-      "visible"
-    ) {
-
-
-      restoreMemberSession();
-
-
-    }
-
-
-  }
-);
-
-
-/* =========================================
-   START
-========================================= */
-
+async function signOutMember(){await supabaseClient.auth.signOut();showLoggedOutMemberState();}
+desktopSignout.addEventListener("click",signOutMember);
+mobileSignout.addEventListener("click",signOutMember);
+
+supabaseClient.auth.onAuthStateChange(function(event,session){
+  if(session&&session.user) showLoggedInMemberState(session.user);
+  else showLoggedOutMemberState();
+});
+
+const mobileMenuButton=document.getElementById("mobileMenuButton");
+const mobileMenu=document.getElementById("mobileMenu");
+mobileMenuButton.addEventListener("click",function(){
+  const isOpen=mobileMenu.classList.toggle("open");
+  mobileMenuButton.classList.toggle("active",isOpen);
+  mobileMenuButton.setAttribute("aria-expanded",isOpen);
+});
+mobileMenu.querySelectorAll("a").forEach(function(link){
+  link.addEventListener("click",function(){
+    mobileMenu.classList.remove("open");
+    mobileMenuButton.classList.remove("active");
+    mobileMenuButton.setAttribute("aria-expanded","false");
+  });
+});
+
+window.addEventListener("pageshow",restoreMemberSession);
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")restoreMemberSession();});
 restoreMemberSession();
-
 </script>
-
-
 </body>
-
 </html>
