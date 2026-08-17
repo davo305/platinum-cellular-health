@@ -160,6 +160,9 @@ button {
 
   border:
     1px solid rgba(213,173,85,.38);
+
+  box-shadow:
+    0 0 20px rgba(213,173,85,.06);
 }
 
 .brand-title {
@@ -264,12 +267,17 @@ button {
   border-radius: 50%;
 
   background: var(--gold);
+
+  box-shadow:
+    0 0 10px rgba(213,173,85,.45);
 }
 
 .member-label {
   color: #767d82;
+
   font-size: 6px;
   font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .member-name {
@@ -322,6 +330,7 @@ button {
 
 .member-signout {
   border: 0;
+
   background: transparent;
 
   color: #747b80;
@@ -361,7 +370,27 @@ button {
 
   margin: 5px 0;
 
+  border-radius: 10px;
+
   background: var(--gold2);
+
+  transition: .25s ease;
+}
+
+.mobile-menu-button.active span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.mobile-menu-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.active span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
 }
 
 .mobile-menu {
@@ -375,6 +404,9 @@ button {
 
   border-bottom:
     1px solid #252a2e;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.45);
 }
 
 .mobile-menu.open {
@@ -470,7 +502,9 @@ button {
 
 .mobile-member-actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
 
   gap: 8px;
 
@@ -550,6 +584,7 @@ button {
 
   font-size: 9px;
   font-weight: 900;
+  letter-spacing: 1px;
 }
 
 @keyframes promoScroll {
@@ -585,6 +620,7 @@ button {
 
   font-size: 10px;
   font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .eyebrow {
@@ -610,6 +646,8 @@ button {
     );
 
   line-height: 1;
+
+  letter-spacing: -2px;
 }
 
 .page-hero p {
@@ -644,6 +682,7 @@ button {
 
   font-size: 8px;
   font-weight: 900;
+  letter-spacing: 1px;
 }
 
 
@@ -685,17 +724,28 @@ button {
   margin: auto;
 }
 
+.checkout-box h2 {
+  margin-bottom: 8px;
+
+  font-size:
+    clamp(
+      26px,
+      5vw,
+      38px
+    );
+}
+
 .checkout-box p {
   margin-bottom: 20px;
 
   color: var(--muted);
 
   font-size: 13px;
+  line-height: 1.7;
 }
 
 .checkout-button {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
@@ -716,6 +766,7 @@ button {
 
   font-size: 12px;
   font-weight: 900;
+  letter-spacing: .7px;
 }
 
 .checkout-small {
@@ -724,6 +775,7 @@ button {
   color: #737a7f;
 
   font-size: 8px;
+  font-weight: 700;
 }
 
 
@@ -749,6 +801,9 @@ button {
 
   backdrop-filter:
     blur(18px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.025);
 }
 
 .search-box {
@@ -777,6 +832,9 @@ button {
 .search-box:focus-within {
   border-color:
     rgba(213,173,85,.85);
+
+  box-shadow:
+    0 0 0 3px rgba(213,173,85,.07);
 }
 
 .search-icon {
@@ -800,6 +858,10 @@ button {
   font-size: 16px;
 }
 
+.search-box input::placeholder {
+  color: #666d72;
+}
+
 .search-clear {
   display: none;
 
@@ -809,11 +871,15 @@ button {
   flex-shrink: 0;
 
   border: 0;
+
   border-radius: 50%;
 
   background: #171a1d;
 
   color: #8b9297;
+
+  font-size: 16px;
+  font-weight: 900;
 }
 
 .search-clear.visible {
@@ -860,9 +926,15 @@ button {
 
   font-size: 10px;
   font-weight: 900;
+  letter-spacing: .9px;
+
+  line-height: 1.25;
 }
 
 .filter-button.active {
+  border-color:
+    rgba(240,212,140,.9);
+
   background:
     linear-gradient(
       135deg,
@@ -894,10 +966,12 @@ button {
 
   font-size: 11px;
   font-weight: 900;
+  letter-spacing: .65px;
 }
 
 .catalog-checkout {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
@@ -939,7 +1013,7 @@ button {
 
 
 /* =========================================================
-   PRODUCT CARDS
+   PRODUCT CARD
 ========================================================= */
 
 .product-card {
@@ -970,6 +1044,10 @@ button {
       #111416,
       #090b0c 70%
     );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.025),
+    0 12px 32px rgba(0,0,0,.18);
 }
 
 .product-main {
@@ -997,6 +1075,7 @@ button {
 
   font-size: 10px;
   font-weight: 900;
+  letter-spacing: 1.6px;
 }
 
 .amount-badge {
@@ -1014,6 +1093,9 @@ button {
 
   border-radius: 10px;
 
+  background:
+    rgba(255,255,255,.025);
+
   color: #e0e2e4;
 
   font-size: 9px;
@@ -1024,7 +1106,10 @@ button {
   margin: 23px 0 12px;
 
   font-size: 32px;
+
   line-height: 1.08;
+
+  letter-spacing: -.5px;
 }
 
 .product-description {
@@ -1033,6 +1118,7 @@ button {
   color: #adb3b7;
 
   font-size: 14px;
+
   line-height: 1.72;
 }
 
@@ -1049,6 +1135,7 @@ button {
 
   font-size: 8px;
   font-weight: 900;
+  letter-spacing: 1.1px;
 }
 
 .coa-dot {
@@ -1058,11 +1145,14 @@ button {
   border-radius: 50%;
 
   background: var(--gold);
+
+  box-shadow:
+    0 0 10px rgba(213,173,85,.62);
 }
 
 
 /* =========================================================
-   VIAL
+   PREMIUM VIAL
 ========================================================= */
 
 .vial-area {
@@ -1101,7 +1191,8 @@ button {
   background:
     radial-gradient(
       ellipse,
-      rgba(213,173,85,.24),
+      rgba(213,173,85,.24) 0%,
+      rgba(213,173,85,.075) 45%,
       transparent 74%
     );
 
@@ -1126,13 +1217,23 @@ button {
   background:
     linear-gradient(
       90deg,
-      rgba(240,244,246,.17),
-      rgba(4,5,6,.27),
-      rgba(222,228,231,.19)
+      rgba(240,244,246,.17) 0%,
+      rgba(255,255,255,.08) 8%,
+      rgba(98,104,108,.055) 18%,
+      rgba(9,11,12,.15) 35%,
+      rgba(4,5,6,.27) 50%,
+      rgba(8,10,11,.16) 68%,
+      rgba(110,116,120,.055) 84%,
+      rgba(255,255,255,.12) 94%,
+      rgba(222,228,231,.19) 100%
     );
 
   box-shadow:
-    0 17px 22px rgba(0,0,0,.68);
+    0 17px 22px rgba(0,0,0,.68),
+    inset 4px 0 6px rgba(255,255,255,.11),
+    inset -4px 0 7px rgba(255,255,255,.055),
+    inset 0 3px 4px rgba(255,255,255,.13),
+    inset 0 -8px 10px rgba(255,255,255,.07);
 }
 
 .vial-cap {
@@ -1155,11 +1256,14 @@ button {
   background:
     linear-gradient(
       90deg,
-      #5d6164,
-      #f2f2f2,
-      #a5aaad,
-      #eeeeee,
-      #656a6d
+      #5d6164 0%,
+      #bfc3c5 9%,
+      #f2f2f2 20%,
+      #a5aaad 35%,
+      #eeeeee 52%,
+      #a2a7aa 68%,
+      #e5e7e8 84%,
+      #656a6d 100%
     );
 }
 
@@ -1180,8 +1284,9 @@ button {
   background:
     linear-gradient(
       180deg,
-      #292b2d,
-      #030404
+      #292b2d 0%,
+      #0b0c0d 45%,
+      #030404 100%
     );
 }
 
@@ -1210,17 +1315,31 @@ button {
 
   height: 119px;
 
+  z-index: 6;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 
   padding:
     8px 4px 5px;
 
+  overflow: hidden;
+
   border:
     1px solid rgba(213,173,85,.68);
 
-  background: #080909;
+  background:
+    linear-gradient(
+      100deg,
+      #080909 0%,
+      #121314 18%,
+      #050606 47%,
+      #0b0c0d 74%,
+      #141516 100%
+    );
 }
 
 .vial-logo {
@@ -1232,20 +1351,32 @@ button {
   border-radius: 50%;
 
   object-fit: cover;
+
+  border:
+    1px solid rgba(213,173,85,.35);
 }
 
 .vial-brand {
   color: #f1f1f1;
 
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
   font-size: 6px;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .vial-labs {
+  margin-top: 2px;
+
   color: var(--gold);
 
   font-size: 3.5px;
   font-weight: 900;
+  letter-spacing: .65px;
 }
 
 .vial-divider {
@@ -1255,7 +1386,13 @@ button {
   margin:
     6px 0 4px;
 
-  background: var(--gold);
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
 }
 
 .vial-product {
@@ -1264,15 +1401,24 @@ button {
   min-height: 18px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
+
+  padding: 0 2px;
 
   color: #f5f5f5;
 
   font-size: 7px;
   font-weight: 900;
 
+  line-height: 1.1;
+
   text-align: center;
+
+  text-transform: uppercase;
+
+  overflow-wrap: anywhere;
 }
 
 .vial-amount {
@@ -1301,7 +1447,7 @@ button {
 
 
 /* =========================================================
-   PRICE / BUTTON
+   PRICE / ACTIONS
 ========================================================= */
 
 .product-bottom {
@@ -1331,6 +1477,7 @@ button {
 
   font-size: 8px;
   font-weight: 900;
+  letter-spacing: 1.2px;
 }
 
 .price {
@@ -1339,12 +1486,15 @@ button {
   color: var(--gold2);
 
   font-size: 37px;
-  font-weight: 900;
+
   line-height: 1;
+
+  font-weight: 900;
 }
 
 .product-actions {
   display: flex;
+
   align-items: center;
 
   gap: 9px;
@@ -1378,6 +1528,13 @@ button {
 
   border-color:
     rgba(213,173,85,.55);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(213,173,85,.06),
+      rgba(213,173,85,.015)
+    );
 }
 
 .btn-unavailable {
@@ -1424,6 +1581,9 @@ button {
 
   background:
     rgba(0,0,0,.91);
+
+  backdrop-filter:
+    blur(14px);
 }
 
 .coa-modal.visible {
@@ -1443,6 +1603,7 @@ button {
     );
 
   display: flex;
+
   flex-direction: column;
 
   overflow: hidden;
@@ -1453,6 +1614,9 @@ button {
   border-radius: 20px;
 
   background: #090b0d;
+
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.8);
 }
 
 .coa-header {
@@ -1460,6 +1624,8 @@ button {
 
   align-items: center;
   justify-content: space-between;
+
+  gap: 16px;
 
   padding: 17px 20px;
 
@@ -1472,9 +1638,12 @@ button {
 
   font-size: 7px;
   font-weight: 900;
+  letter-spacing: 1.5px;
 }
 
 .coa-title {
+  margin-top: 2px;
+
   color: #fff;
 
   font-size: 20px;
@@ -1485,6 +1654,8 @@ button {
   width: 42px;
   height: 42px;
 
+  flex-shrink: 0;
+
   border:
     1px solid #353a3f;
 
@@ -1493,6 +1664,8 @@ button {
   background: #111416;
 
   color: #fff;
+
+  font-size: 22px;
 }
 
 .coa-tabs {
@@ -1506,6 +1679,12 @@ button {
 
   border-bottom:
     1px solid #262b2f;
+
+  scrollbar-width: none;
+}
+
+.coa-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .coa-tab {
@@ -1531,6 +1710,9 @@ button {
 }
 
 .coa-tab.active {
+  border-color:
+    rgba(240,212,140,.9);
+
   background:
     linear-gradient(
       135deg,
@@ -1551,6 +1733,8 @@ button {
   padding: 16px;
 
   background: #050607;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .coa-image {
@@ -1559,6 +1743,8 @@ button {
   max-width: 100%;
 
   margin: auto;
+
+  border-radius: 6px;
 
   background: #fff;
 }
@@ -1581,6 +1767,8 @@ button {
   color: #767d82;
 
   font-size: 8px;
+
+  line-height: 1.5;
 }
 
 .coa-full {
@@ -1592,6 +1780,8 @@ button {
   min-height: 40px;
 
   padding: 0 14px;
+
+  flex-shrink: 0;
 
   border:
     1px solid rgba(213,173,85,.5);
@@ -1606,13 +1796,22 @@ button {
 
 
 /* =========================================================
-   NOTICE / FOOTER
+   NOTICE / EMPTY
 ========================================================= */
 
 .no-results {
   display: none;
 
+  margin-top: 20px;
+
   padding: 44px 22px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 15px;
+
+  background: #0d1012;
 
   color: var(--muted);
 
@@ -1634,14 +1833,27 @@ button {
 }
 
 .catalog-notice strong {
+  display: block;
+
+  margin-bottom: 8px;
+
   color: var(--gold2);
+
+  font-size: 11px;
 }
 
 .catalog-notice p {
   color: var(--muted);
 
   font-size: 12px;
+
+  line-height: 1.8;
 }
+
+
+/* =========================================================
+   FOOTER / MOBILE CHECKOUT
+========================================================= */
 
 footer {
   padding: 42px 0;
@@ -1654,6 +1866,7 @@ footer {
 
 .footer-grid {
   display: flex;
+
   justify-content: space-between;
 
   gap: 30px;
@@ -1663,6 +1876,14 @@ footer {
   font-size: 11px;
 }
 
+.footer-grid strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #c7c9ca;
+}
+
 .mobile-sticky-checkout {
   display: none;
 
@@ -1670,13 +1891,27 @@ footer {
 
   left: 18px;
   right: 18px;
-  bottom: 12px;
+
+  bottom:
+    calc(
+      12px +
+      env(safe-area-inset-bottom)
+    );
 
   z-index: 5000;
 
   padding: 4px;
 
-  background: #050607;
+  border:
+    1px solid rgba(213,173,85,.3);
+
+  border-radius: 14px;
+
+  background:
+    rgba(5,6,7,.95);
+
+  backdrop-filter:
+    blur(16px);
 }
 
 .mobile-sticky-checkout a {
@@ -1684,6 +1919,8 @@ footer {
 
   align-items: center;
   justify-content: center;
+
+  width: 100%;
 
   min-height: 55px;
 
@@ -1715,10 +1952,19 @@ footer {
 
 }
 
+
 @media(max-width:900px) {
 
   body {
     padding-bottom: 84px;
+  }
+
+  .shell {
+    width:
+      min(
+        calc(100% - 28px),
+        1220px
+      );
   }
 
   .nav {
@@ -1755,6 +2001,7 @@ footer {
 
 }
 
+
 @media(max-width:650px) {
 
   .page-hero {
@@ -1765,12 +2012,50 @@ footer {
     font-size: 36px;
   }
 
+  .page-hero p {
+    font-size: 13px;
+  }
+
+  .checkout-section {
+    padding: 19px 0;
+  }
+
+  .checkout-box {
+    padding: 21px 18px;
+  }
+
+  .checkout-button {
+    width: 100%;
+  }
+
+  .catalog-section {
+    padding-top: 16px;
+  }
+
+  .search-wrap {
+    padding: 10px 0 9px;
+  }
+
   .filter-bar {
     display: flex;
 
-    overflow-x: auto;
+    width: 100%;
 
     gap: 11px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    margin-top: 12px;
+
+    padding:
+      2px 2px 10px;
+
+    scrollbar-width: none;
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none;
   }
 
   .filter-button {
@@ -1784,6 +2069,8 @@ footer {
     border-radius: 100px;
 
     white-space: nowrap;
+
+    font-size: 9px;
   }
 
   .product-card {
@@ -1796,6 +2083,8 @@ footer {
   .product-main {
     width:
       calc(100% - 115px);
+
+    min-height: 250px;
   }
 
   .product-card h2 {
@@ -1830,7 +2119,9 @@ footer {
 
   .coa-panel {
     max-height:
-      calc(100vh - 16px);
+      calc(
+        100vh - 16px
+      );
   }
 
   .coa-image {
@@ -1838,6 +2129,7 @@ footer {
   }
 
 }
+
 
 @media(max-width:520px) {
 
@@ -1848,6 +2140,29 @@ footer {
 
   .product-card h2 {
     font-size: 27px;
+  }
+
+}
+
+
+@media(max-width:390px) {
+
+  .product-card {
+    padding:
+      21px 17px;
+  }
+
+  .product-main {
+    width:
+      calc(100% - 100px);
+  }
+
+  .product-card h2 {
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 31px;
   }
 
 }
@@ -1891,6 +2206,7 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 
 <div class="nav-right">
+
 
 <nav class="nav-links">
 
@@ -1974,12 +2290,14 @@ MEMBER
 ACCOUNT
 </a>
 
+
 <a
   href="login.html"
   class="member-link gold"
 >
 CHECKOUT
 </a>
+
 
 <button
   type="button"
@@ -1998,6 +2316,8 @@ SIGN OUT
   class="mobile-menu-button"
   id="mobileMenuButton"
   type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
 >
 
 <span></span>
@@ -2147,6 +2467,14 @@ FREE STANDARD SHIPPING ON ORDERS OVER $280
 $15 STANDARD SHIPPING VALUE
 </span>
 
+<span>
+✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
+</span>
+
+<span>
+FREE STANDARD SHIPPING ON ORDERS OVER $280
+</span>
+
 </div>
 
 </div>
@@ -2263,13 +2591,16 @@ Sign in or create a PCH account to continue.
   id="catalogSearch"
   type="search"
   autocomplete="off"
-  placeholder="Search R, T, GHK-Cu, MOTS-C, ARA, 10 MG..."
+  autocapitalize="off"
+  spellcheck="false"
+  placeholder="Search R, T, GHK-Cu, MOTS-C, ARA, DSIP..."
 >
 
 <button
   type="button"
   class="search-clear"
   id="searchClear"
+  aria-label="Clear search"
 >
 ×
 </button>
@@ -2284,6 +2615,7 @@ Sign in or create a PCH account to continue.
 
 <button
   class="filter-button active"
+  type="button"
   data-filter="all"
 >
 ALL
@@ -2291,6 +2623,7 @@ ALL
 
 <button
   class="filter-button"
+  type="button"
   data-filter="bac"
 >
 BAC WATER
@@ -2298,6 +2631,7 @@ BAC WATER
 
 <button
   class="filter-button"
+  type="button"
   data-filter="glp"
 >
 GLP / WEIGHT LOSS
@@ -2305,6 +2639,7 @@ GLP / WEIGHT LOSS
 
 <button
   class="filter-button"
+  type="button"
   data-filter="recovery"
 >
 RECOVERY / HEALING
@@ -2312,6 +2647,7 @@ RECOVERY / HEALING
 
 <button
   class="filter-button"
+  type="button"
   data-filter="energy"
 >
 ENERGY / MITOCHONDRIA
@@ -2319,6 +2655,7 @@ ENERGY / MITOCHONDRIA
 
 <button
   class="filter-button"
+  type="button"
   data-filter="mind"
 >
 MIND / LONGEVITY / SLEEP
@@ -2362,6 +2699,10 @@ MIND / LONGEVITY / SLEEP
 No research material found.
 </strong>
 
+<br>
+
+Try another name, abbreviation, amount, or category.
+
 </div>
 
 
@@ -2399,8 +2740,6 @@ original report.
 Platinum Cellular Health Labs
 </strong>
 
-<br>
-
 Longevity at the Cellular Level
 
 </div>
@@ -2433,7 +2772,9 @@ Not for human or animal use
 </div>
 
 
-<!-- COA MODAL -->
+<!-- =========================================================
+     COA MODAL
+========================================================= -->
 
 <div
   class="coa-modal"
@@ -2460,9 +2801,10 @@ Certificate of Analysis
 </div>
 
 <button
+  type="button"
   class="coa-close"
   id="coaClose"
-  type="button"
+  aria-label="Close COA"
 >
 ×
 </button>
@@ -2491,7 +2833,8 @@ Certificate of Analysis
 <div class="coa-footer">
 
 <div class="coa-footer-note">
-Select a result above to view the corresponding report.
+Select a result above to view the corresponding
+laboratory report.
 </div>
 
 <a
@@ -2546,7 +2889,7 @@ const supabaseClient =
 
 
 /* =========================================================
-   MEMBER UI
+   MEMBER ELEMENTS
 ========================================================= */
 
 const desktopLoginLink =
@@ -2625,6 +2968,10 @@ const checkoutSmall =
   );
 
 
+/* =========================================================
+   MEMBER STATES
+========================================================= */
+
 function showLoggedOutMemberState() {
 
   desktopLoginLink.style.display =
@@ -2655,6 +3002,9 @@ function showLoggedOutMemberState() {
 
   checkoutDescription.textContent =
     "A verified PCH member account and research-use acknowledgment are required before checkout access.";
+
+  checkoutSmall.textContent =
+    "Sign in or create a PCH account to continue.";
 
 }
 
@@ -2711,6 +3061,12 @@ function showLoggedInMemberState(
     +
     ".";
 
+  checkoutDescription.textContent =
+    "Your PCH member session is active. Continue to your account to complete the required research-use acknowledgment before checkout.";
+
+  checkoutSmall.textContent =
+    "Your member login is active on this browser.";
+
 }
 
 
@@ -2746,6 +3102,11 @@ async function restoreMemberSession() {
 
   catch(error) {
 
+    console.error(
+      "Member session error:",
+      error
+    );
+
     showLoggedOutMemberState();
 
   }
@@ -2771,6 +3132,41 @@ desktopSignout.addEventListener(
 mobileSignout.addEventListener(
   "click",
   signOutMember
+);
+
+
+supabaseClient.auth
+  .onAuthStateChange(
+    function(
+      event,
+      session
+    ) {
+
+      if (
+        session
+        &&
+        session.user
+      ) {
+
+        showLoggedInMemberState(
+          session.user
+        );
+
+      }
+
+      else {
+
+        showLoggedOutMemberState();
+
+      }
+
+    }
+  );
+
+
+window.addEventListener(
+  "pageshow",
+  restoreMemberSession
 );
 
 
@@ -2809,7 +3205,9 @@ const products = [
       "ebac",
       "bac",
       "water",
-      "30ml"
+      "bacteriostatic",
+      "30ml",
+      "30 ml"
     ],
   coas: [
     {
@@ -2833,8 +3231,10 @@ const products = [
     [
       "r",
       "r10",
+      "reta",
       "retatrutide",
-      "10mg"
+      "10mg",
+      "10 mg"
     ],
   coas: [
     {
@@ -2858,8 +3258,10 @@ const products = [
     [
       "r",
       "r20",
+      "reta",
       "retatrutide",
-      "20mg"
+      "20mg",
+      "20 mg"
     ],
   description:
     "R-series research-material listing at 20 mg."
@@ -2875,8 +3277,10 @@ const products = [
     [
       "r",
       "r30",
+      "reta",
       "retatrutide",
-      "30mg"
+      "30mg",
+      "30 mg"
     ],
   coas: [
     {
@@ -2899,7 +3303,7 @@ const products = [
     }
   ],
   description:
-    "R-series research-material listing at 30 mg."
+    "R-series research-material listing at 30 mg with multiple analytical reports available."
 },
 
 {
@@ -2912,6 +3316,7 @@ const products = [
     [
       "t",
       "t10",
+      "tirz",
       "tirzepatide",
       "10mg"
     ],
@@ -2929,6 +3334,7 @@ const products = [
     [
       "t",
       "t20",
+      "tirz",
       "tirzepatide",
       "20mg"
     ],
@@ -2944,8 +3350,10 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "g",
       "ghk",
       "ghkcu",
+      "ghk-cu",
       "50mg"
     ],
   coas: [
@@ -2968,6 +3376,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "g",
       "ghk",
       "ghkcu",
       "100mg"
@@ -2984,6 +3393,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "c",
       "cartalax",
       "20mg"
     ],
@@ -3007,7 +3417,9 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "n",
       "semax",
+      "n acetyl semax",
       "amidate",
       "10mg"
     ],
@@ -3016,7 +3428,7 @@ const products = [
       label:
         "99.029–99.181% · 10.52–11.56 MG",
       file:
-        "Test Report #196930.png"
+        "./Test%20Report%20%23196930.png"
     }
   ],
   description:
@@ -3031,7 +3443,9 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "n",
       "selank",
+      "n acetyl selank",
       "amidate",
       "10mg"
     ],
@@ -3040,7 +3454,7 @@ const products = [
       label:
         "99.610–99.645% · 12.72–13.85 MG",
       file:
-        "Test Report #209069.png"
+        "./Test%20Report%20%23209069.png"
     }
   ],
   description:
@@ -3055,6 +3469,8 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "p",
+      "pt",
       "pt141",
       "pt-141",
       "10mg"
@@ -3071,8 +3487,10 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "e",
       "epithalon",
       "epitalon",
+      "amidate",
       "10mg"
     ],
   description:
@@ -3087,6 +3505,7 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "p",
       "pinealon",
       "10mg"
     ],
@@ -3102,16 +3521,18 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "d",
       "dsip",
       "sleep",
-      "5mg"
+      "5mg",
+      "5 mg"
     ],
   coas: [
     {
       label:
         "99.426–99.485% · 6.73–6.81 MG",
       file:
-        "Test Report #195227.png"
+        "./Test%20Report%20%23195227.png"
     }
   ],
   description:
@@ -3126,8 +3547,11 @@ const products = [
   groups: ["mind"],
   keywords:
     [
+      "d",
       "dsip",
-      "10mg"
+      "sleep",
+      "10mg",
+      "10 mg"
     ],
   coas: [
     {
@@ -3218,7 +3642,9 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "b",
       "bpc",
+      "bpc157",
       "tb500",
       "wolverine",
       "10mg"
@@ -3243,7 +3669,9 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "b",
       "bpc",
+      "bpc157",
       "tb4",
       "wolverine",
       "20mg"
@@ -3260,6 +3688,8 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "b",
+      "d",
       "bpc",
       "tb4",
       "cartalax",
@@ -3278,6 +3708,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "k",
       "klow",
       "80mg",
       "ghk",
@@ -3300,7 +3731,7 @@ const products = [
     }
   ],
   description:
-    "KLOW research-material listing at 80 mg."
+    "KLOW research-material catalog listing at 80 mg."
 },
 
 {
@@ -3311,11 +3742,12 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "k",
       "kpv",
       "10mg"
     ],
   description:
-    "KPV research-material listing at 10 mg."
+    "KPV research-material catalog listing at 10 mg."
 },
 
 {
@@ -3326,10 +3758,14 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "c",
       "cjc",
       "cjc1295",
+      "cjc-1295",
       "no dac",
-      "5mg"
+      "nodac",
+      "5mg",
+      "5 mg"
     ],
   coas: [
     {
@@ -3351,9 +3787,11 @@ const products = [
   groups: ["recovery", "mind"],
   keywords:
     [
+      "i",
       "ipamorelin",
       "ipa",
-      "10mg"
+      "10mg",
+      "10 mg"
     ],
   coas: [
     {
@@ -3364,7 +3802,7 @@ const products = [
     }
   ],
   description:
-    "Ipamorelin research-material listing at 10 mg."
+    "Ipamorelin research-material listing at 10 mg with analytical documentation available."
 },
 
 {
@@ -3375,6 +3813,7 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
+      "t",
       "tesamorelin",
       "tesa",
       "10mg"
@@ -3391,8 +3830,11 @@ const products = [
   groups: ["recovery", "mind"],
   keywords:
     [
+      "c",
+      "i",
       "cjc",
       "ipamorelin",
+      "ipa",
       "20mg"
     ],
   description:
@@ -3407,6 +3849,7 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "m",
       "mots",
       "motsc",
       "mots-c",
@@ -3439,9 +3882,12 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "s",
+      "ss",
       "ss31",
       "ss-31",
-      "50mg"
+      "50mg",
+      "mitochondria"
     ],
   description:
     "SS-31 research-material listing at 50 mg."
@@ -3455,7 +3901,9 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "5",
       "5-amino-1mq",
+      "5 amino",
       "1mq",
       "500mg"
     ],
@@ -3471,8 +3919,10 @@ const products = [
   groups: ["energy"],
   keywords:
     [
+      "n",
       "nad",
       "nad+",
+      "buffered",
       "1000mg"
     ],
   description:
@@ -3483,7 +3933,7 @@ const products = [
 
 
 /* =========================================================
-   CATALOG
+   ELEMENTS
 ========================================================= */
 
 const catalogGrid =
@@ -3564,6 +4014,68 @@ let currentCoas =
    HELPERS
 ========================================================= */
 
+function escapeHTML(
+  value
+) {
+
+  return String(
+    value ?? ""
+  )
+  .replace(
+    /&/g,
+    "&amp;"
+  )
+  .replace(
+    /</g,
+    "&lt;"
+  )
+  .replace(
+    />/g,
+    "&gt;"
+  )
+  .replace(
+    /"/g,
+    "&quot;"
+  )
+  .replace(
+    /'/g,
+    "&#039;"
+  );
+
+}
+
+
+function createVialName(
+  name
+) {
+
+  let cleanName =
+    String(
+      name || ""
+    )
+    .replace(
+      /\(.*?\)/g,
+      ""
+    )
+    .trim();
+
+  if (
+    cleanName.length > 21
+  ) {
+
+    cleanName =
+      cleanName.substring(
+        0,
+        21
+      );
+
+  }
+
+  return cleanName;
+
+}
+
+
 function normalizeSearchText(
   value
 ) {
@@ -3573,6 +4085,10 @@ function normalizeSearchText(
   )
   .toLowerCase()
   .replace(
+    /[\u2010-\u2015]/g,
+    "-"
+  )
+  .replace(
     /[^a-z0-9+]+/g,
     " "
   )
@@ -3581,6 +4097,48 @@ function normalizeSearchText(
     " "
   )
   .trim();
+
+}
+
+
+function getSearchText(
+  product
+) {
+
+  return normalizeSearchText(
+
+    product.name
+    +
+    " "
+    +
+    product.category
+    +
+    " "
+    +
+    product.amount
+    +
+    " "
+    +
+    product.price
+    +
+    " "
+    +
+    product.groups.join(" ")
+    +
+    " "
+    +
+    (
+      product.keywords
+      ||
+      []
+    )
+    .join(" ")
+    +
+    " "
+    +
+    product.description
+
+  );
 
 }
 
@@ -3603,32 +4161,9 @@ function productMatchesSearch(
 
   }
 
-  const text =
-    normalizeSearchText(
-
-      product.name
-      +
-      " "
-      +
-      product.category
-      +
-      " "
-      +
-      product.amount
-      +
-      " "
-      +
-      (
-        product.keywords
-        ||
-        []
-      )
-      .join(" ")
-      +
-      " "
-      +
-      product.description
-
+  const searchableText =
+    getSearchText(
+      product
     );
 
   return term
@@ -3636,7 +4171,7 @@ function productMatchesSearch(
     .every(
       function(word) {
 
-        return text.includes(
+        return searchableText.includes(
           word
         );
 
@@ -3670,6 +4205,9 @@ function showCoa(
   coaImage.src =
     selected.file;
 
+  coaImage.alt =
+    selected.label;
+
   coaFull.href =
     selected.file;
 
@@ -3696,13 +4234,21 @@ function showCoa(
 
 
 function openCoaViewer(
-  index
+  productIndex
 ) {
 
   const product =
     products[
-      index
+      productIndex
     ];
+
+  if (
+    !product
+  ) {
+
+    return;
+
+  }
 
   currentCoas =
     product.coas || [];
@@ -3728,7 +4274,7 @@ function openCoaViewer(
   currentCoas.forEach(
     function(
       coa,
-      coaIndex
+      index
     ) {
 
       const button =
@@ -3743,7 +4289,7 @@ function openCoaViewer(
         "coa-tab";
 
       button.dataset.index =
-        coaIndex;
+        index;
 
       button.textContent =
         coa.label;
@@ -3753,7 +4299,7 @@ function openCoaViewer(
         function() {
 
           showCoa(
-            coaIndex
+            index
           );
 
         }
@@ -3794,6 +4340,9 @@ function closeCoaViewer() {
   coaImage.src =
     "";
 
+  currentCoas =
+    [];
+
 }
 
 
@@ -3819,8 +4368,24 @@ coaModal.addEventListener(
 );
 
 
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (
+      event.key === "Escape"
+    ) {
+
+      closeCoaViewer();
+
+    }
+
+  }
+);
+
+
 /* =========================================================
-   BUILD
+   BUILD CATALOG
 ========================================================= */
 
 function buildCatalog(
@@ -3849,8 +4414,63 @@ function buildCatalog(
       const coas =
         product.coas || [];
 
+      const safeName =
+        escapeHTML(
+          product.name
+        );
+
+      const safeCategory =
+        escapeHTML(
+          product.category
+        );
+
+      const safeAmount =
+        escapeHTML(
+          product.amount
+        );
+
+      const safeDescription =
+        escapeHTML(
+          product.description
+        );
+
+      const vialName =
+        escapeHTML(
+          createVialName(
+            product.name
+          )
+        );
+
+
+      const indicator =
+        coas.length
+        ?
+        `
+
+        <div class="coa-indicator">
+
+          <span class="coa-dot"></span>
+
+          ${
+            coas.length > 1
+            ?
+            coas.length
+            +
+            " ANALYTICAL REPORTS AVAILABLE"
+            :
+            "ANALYTICAL REPORT AVAILABLE"
+          }
+
+        </div>
+
+        `
+        :
+        "";
+
+
       let actionHTML =
         "";
+
 
       if (
         coas.length
@@ -3865,13 +4485,13 @@ function buildCatalog(
             data-coa="${originalIndex}"
           >
 
-          ${
-            coas.length > 1
-            ?
-            "VIEW COAs"
-            :
-            "VIEW COA"
-          }
+            ${
+              coas.length > 1
+              ?
+              "VIEW COAs"
+              :
+              "VIEW COA"
+            }
 
           </button>
 
@@ -3887,138 +4507,118 @@ function buildCatalog(
           `
 
           <span class="btn-unavailable">
-          COA PENDING
+            COA PENDING
           </span>
 
           `;
 
       }
 
-      const indicator =
-        coas.length
-        ?
-        `
-
-        <div class="coa-indicator">
-
-        <span class="coa-dot"></span>
-
-        ${
-          coas.length > 1
-          ?
-          coas.length
-          +
-          " ANALYTICAL REPORTS AVAILABLE"
-          :
-          "ANALYTICAL REPORT AVAILABLE"
-        }
-
-        </div>
-
-        `
-        :
-        "";
 
       card.innerHTML =
         `
 
         <div class="product-main">
 
-        <div class="card-top">
+          <div class="card-top">
 
-        <div class="category">
-        ${product.category}
+            <div class="category">
+              ${safeCategory}
+            </div>
+
+            <div class="amount-badge">
+              ${safeAmount}
+            </div>
+
+          </div>
+
+          <h2>
+            ${safeName}
+          </h2>
+
+          <p class="product-description">
+            ${safeDescription}
+          </p>
+
+          ${indicator}
+
         </div>
 
-        <div class="amount-badge">
-        ${product.amount}
-        </div>
 
-        </div>
-
-        <h2>
-        ${product.name}
-        </h2>
-
-        <p class="product-description">
-        ${product.description}
-        </p>
-
-        ${indicator}
-
-        </div>
-
-
-        <div class="vial-area">
-
-        <div class="vial-glow"></div>
-
-        <div class="vial">
-
-        <div class="vial-cap"></div>
-
-        <div class="vial-neck"></div>
-
-        <div class="vial-label">
-
-        <img
-          src="pch-logo.jpg"
-          class="vial-logo"
-          alt=""
+        <div
+          class="vial-area"
+          aria-hidden="true"
         >
 
-        <div class="vial-brand">
-        PLATINUM
-        </div>
+          <div class="vial-glow"></div>
 
-        <div class="vial-labs">
-        CELLULAR HEALTH LABS
-        </div>
+          <div class="vial">
 
-        <div class="vial-divider"></div>
+            <div class="vial-cap"></div>
 
-        <div class="vial-product">
-        ${product.name}
-        </div>
+            <div class="vial-neck"></div>
 
-        <div class="vial-amount">
-        ${product.amount}
-        </div>
+            <div class="vial-label">
 
-        <div class="vial-research">
-        RESEARCH USE ONLY
-        </div>
+              <img
+                src="pch-logo.jpg"
+                class="vial-logo"
+                alt=""
+              >
 
-        </div>
+              <div class="vial-brand">
+                PLATINUM
+              </div>
 
-        </div>
+              <div class="vial-labs">
+                CELLULAR HEALTH LABS
+              </div>
+
+              <div class="vial-divider"></div>
+
+              <div class="vial-product">
+                ${vialName}
+              </div>
+
+              <div class="vial-amount">
+                ${safeAmount}
+              </div>
+
+              <div class="vial-research">
+                RESEARCH USE ONLY
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
 
         <div class="product-bottom">
 
-        <div>
+          <div>
 
-        <span class="price-label">
-        PRICE
-        </span>
+            <span class="price-label">
+              PRICE
+            </span>
 
-        <div class="price">
-        $${product.price}
-        </div>
+            <div class="price">
+              $${product.price}
+            </div>
 
-        </div>
+          </div>
 
-        <div class="product-actions">
+          <div class="product-actions">
 
-        ${actionHTML}
+            ${actionHTML}
 
-        </div>
+          </div>
 
         </div>
 
         `;
+
 
       catalogGrid.appendChild(
         card
@@ -4055,7 +4655,7 @@ function buildCatalog(
 
 
 /* =========================================================
-   UPDATE
+   UPDATE CATALOG
 ========================================================= */
 
 function updateCatalog() {
@@ -4122,7 +4722,7 @@ function updateCatalog() {
 
 
 /* =========================================================
-   SEARCH / FILTER
+   SEARCH
 ========================================================= */
 
 search.addEventListener(
@@ -4157,12 +4757,34 @@ search.addEventListener(
 );
 
 
+search.addEventListener(
+  "search",
+  updateCatalog
+);
+
+
 searchClear.addEventListener(
   "click",
   function() {
 
     search.value =
       "";
+
+    activeFilter =
+      "all";
+
+    filterButtons.forEach(
+      function(button) {
+
+        button.classList.toggle(
+          "active",
+          button.dataset.filter
+          ===
+          "all"
+        );
+
+      }
+    );
 
     updateCatalog();
 
@@ -4171,6 +4793,10 @@ searchClear.addEventListener(
   }
 );
 
+
+/* =========================================================
+   FILTERS
+========================================================= */
 
 filterButtons.forEach(
   function(button) {
@@ -4198,6 +4824,17 @@ filterButtons.forEach(
 
         updateCatalog();
 
+        button.scrollIntoView(
+          {
+            behavior:
+              "smooth",
+            block:
+              "nearest",
+            inline:
+              "center"
+          }
+        );
+
       }
     );
 
@@ -4219,16 +4856,57 @@ const mobileMenu =
     "mobileMenu"
   );
 
+
 menuButton.addEventListener(
   "click",
   function() {
 
-    mobileMenu.classList.toggle(
-      "open"
+    const open =
+      mobileMenu.classList.toggle(
+        "open"
+      );
+
+    menuButton.classList.toggle(
+      "active",
+      open
+    );
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      open
     );
 
   }
 );
+
+
+mobileMenu
+  .querySelectorAll("a")
+  .forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          mobileMenu.classList.remove(
+            "open"
+          );
+
+          menuButton.classList.remove(
+            "active"
+          );
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    }
+  );
 
 
 /* =========================================================
@@ -4240,7 +4918,13 @@ heroListingCount.textContent =
   +
   " LISTINGS";
 
+
+activeFilter =
+  "all";
+
+
 updateCatalog();
+
 
 restoreMemberSession();
 
