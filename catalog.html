@@ -370,7 +370,7 @@ button {
 
 
 /* =========================================================
-   MOBILE MENU BUTTON
+   MOBILE MENU
 ========================================================= */
 
 .mobile-menu-button {
@@ -422,11 +422,6 @@ button {
     rotate(-45deg);
 }
 
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
 .mobile-menu {
   display: none;
 
@@ -465,11 +460,6 @@ button {
 
   font-weight: 900;
 }
-
-
-/* =========================================================
-   MOBILE MEMBER BOX
-========================================================= */
 
 .mobile-member-box {
   margin-bottom: 12px;
@@ -744,7 +734,7 @@ button {
 
 
 /* =========================================================
-   CHECKOUT AREA
+   CHECKOUT
 ========================================================= */
 
 .checkout-section {
@@ -844,7 +834,7 @@ button {
 
 
 /* =========================================================
-   CATALOG
+   SEARCH / FILTER
 ========================================================= */
 
 .catalog-section {
@@ -893,8 +883,6 @@ button {
       #111416,
       #090b0c
     );
-
-  transition: .2s ease;
 }
 
 .search-box:focus-within {
@@ -962,11 +950,6 @@ button {
   display: flex;
 }
 
-
-/* =========================================================
-   FILTER BUBBLES
-========================================================= */
-
 .filter-bar {
   display: grid;
 
@@ -1007,22 +990,6 @@ button {
   letter-spacing: .9px;
 
   line-height: 1.25;
-
-  transition:
-    transform .2s ease,
-    border-color .2s ease,
-    color .2s ease,
-    background .2s ease;
-}
-
-.filter-button:hover {
-  transform:
-    translateY(-1px);
-
-  color: var(--gold2);
-
-  border-color:
-    rgba(213,173,85,.6);
 }
 
 .filter-button.active {
@@ -1097,7 +1064,7 @@ button {
 
 
 /* =========================================================
-   PRODUCT GRID
+   GRID / CARD
 ========================================================= */
 
 .catalog-grid {
@@ -1111,11 +1078,6 @@ button {
 
   gap: 20px;
 }
-
-
-/* =========================================================
-   PRODUCT CARD
-========================================================= */
 
 .product-card {
   position: relative;
@@ -1150,23 +1112,6 @@ button {
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.025),
     0 12px 32px rgba(0,0,0,.18);
-
-  transition:
-    transform .25s ease,
-    border-color .25s ease,
-    box-shadow .25s ease;
-}
-
-.product-card:hover {
-  transform:
-    translateY(-3px);
-
-  border-color:
-    rgba(213,173,85,.5);
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.035),
-    0 18px 40px rgba(0,0,0,.28);
 }
 
 .product-main {
@@ -1325,8 +1270,6 @@ button {
 
   filter:
     blur(10px);
-
-  opacity: .9;
 }
 
 .vial {
@@ -1359,13 +1302,9 @@ button {
 
   box-shadow:
     0 17px 22px rgba(0,0,0,.68),
-
     inset 4px 0 6px rgba(255,255,255,.11),
-
     inset -4px 0 7px rgba(255,255,255,.055),
-
     inset 0 3px 4px rgba(255,255,255,.13),
-
     inset 0 -8px 10px rgba(255,255,255,.07);
 }
 
@@ -1401,11 +1340,6 @@ button {
       rgba(16,18,19,.07) 75%,
       rgba(255,255,255,.12)
     );
-
-  box-shadow:
-    inset 0 4px 6px rgba(255,255,255,.05);
-
-  z-index: 1;
 }
 
 .vial::after {
@@ -1424,18 +1358,6 @@ button {
 
   border-bottom:
     2px solid rgba(235,239,241,.46);
-
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(219,225,228,.11)
-    );
-
-  box-shadow:
-    inset 0 -2px 3px rgba(255,255,255,.07);
-
-  z-index: 5;
 }
 
 .vial-cap {
@@ -1469,11 +1391,7 @@ button {
     );
 
   box-shadow:
-    0 5px 8px rgba(0,0,0,.6),
-
-    inset 0 1px 0 rgba(255,255,255,.9),
-
-    inset 0 -4px 5px rgba(0,0,0,.16);
+    0 5px 8px rgba(0,0,0,.6);
 }
 
 .vial-cap::before {
@@ -1500,36 +1418,6 @@ button {
       #0b0c0d 45%,
       #030404 100%
     );
-
-  box-shadow:
-    inset 0 2px 2px rgba(255,255,255,.08),
-    0 2px 4px rgba(0,0,0,.45);
-}
-
-.vial-cap::after {
-  content: "";
-
-  position: absolute;
-
-  left: 1px;
-  right: 1px;
-  bottom: 2px;
-
-  height: 6px;
-
-  border-radius: 2px;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(20,20,20,.25),
-      rgba(255,255,255,.35),
-      rgba(70,70,70,.08),
-      rgba(255,255,255,.3),
-      rgba(10,10,10,.24)
-    );
-
-  opacity: .85;
 }
 
 .vial-neck {
@@ -1548,20 +1436,6 @@ button {
 
   border-right:
     1px solid rgba(228,232,234,.42);
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.14),
-      rgba(12,14,15,.08) 23%,
-      rgba(3,4,4,.17) 50%,
-      rgba(12,14,15,.08) 76%,
-      rgba(255,255,255,.12)
-    );
-
-  box-shadow:
-    inset 3px 0 3px rgba(255,255,255,.06),
-    inset -3px 0 3px rgba(255,255,255,.04);
 }
 
 .vial-label {
@@ -1589,8 +1463,6 @@ button {
   border:
     1px solid rgba(213,173,85,.68);
 
-  border-radius: 1px;
-
   background:
     linear-gradient(
       100deg,
@@ -1600,57 +1472,6 @@ button {
       #0b0c0d 74%,
       #141516 100%
     );
-
-  box-shadow:
-    0 0 8px rgba(0,0,0,.38),
-
-    inset 4px 0 8px rgba(255,255,255,.018),
-
-    inset -4px 0 8px rgba(255,255,255,.012);
-}
-
-.vial-label::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  opacity: .16;
-
-  background:
-    repeating-linear-gradient(
-      60deg,
-      transparent 0,
-      transparent 8px,
-      rgba(213,173,85,.08) 8px,
-      rgba(213,173,85,.08) 9px
-    );
-
-  pointer-events: none;
-}
-
-.vial-label::after {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: 4px;
-
-  width: 8px;
-  height: 100%;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.06),
-      transparent
-    );
-
-  opacity: .6;
-
-  pointer-events: none;
 }
 
 .vial-logo {
@@ -1672,10 +1493,6 @@ button {
 }
 
 .vial-brand {
-  position: relative;
-
-  z-index: 2;
-
   color: #f1f1f1;
 
   font-family:
@@ -1688,15 +1505,9 @@ button {
   font-weight: 700;
 
   letter-spacing: 1px;
-
-  line-height: 1;
 }
 
 .vial-labs {
-  position: relative;
-
-  z-index: 2;
-
   margin-top: 2px;
 
   color: var(--gold);
@@ -1706,15 +1517,9 @@ button {
   font-weight: 900;
 
   letter-spacing: .65px;
-
-  line-height: 1;
 }
 
 .vial-divider {
-  position: relative;
-
-  z-index: 2;
-
   width: 39px;
   height: 1px;
 
@@ -1731,10 +1536,6 @@ button {
 }
 
 .vial-product {
-  position: relative;
-
-  z-index: 2;
-
   width: 100%;
 
   min-height: 18px;
@@ -1744,30 +1545,20 @@ button {
   align-items: center;
   justify-content: center;
 
-  padding: 0 2px;
-
   color: #f5f5f5;
 
   font-size: 7px;
 
   font-weight: 900;
 
-  letter-spacing: .25px;
-
   line-height: 1.1;
 
   text-align: center;
 
   text-transform: uppercase;
-
-  overflow-wrap: anywhere;
 }
 
 .vial-amount {
-  position: relative;
-
-  z-index: 2;
-
   margin-top: 4px;
 
   color: var(--gold2);
@@ -1775,17 +1566,9 @@ button {
   font-size: 9px;
 
   font-weight: 900;
-
-  letter-spacing: .8px;
-
-  line-height: 1;
 }
 
 .vial-research {
-  position: relative;
-
-  z-index: 2;
-
   margin-top: 6px;
 
   padding:
@@ -1799,10 +1582,6 @@ button {
   font-size: 3px;
 
   font-weight: 900;
-
-  letter-spacing: .35px;
-
-  line-height: 1;
 }
 
 .vial-bottom-line {
@@ -1813,8 +1592,6 @@ button {
   bottom: 8px;
 
   height: 1px;
-
-  z-index: 7;
 
   background:
     linear-gradient(
@@ -1843,12 +1620,8 @@ button {
       180deg,
       rgba(255,255,255,.36),
       rgba(255,255,255,.12) 35%,
-      rgba(255,255,255,.025) 78%,
       transparent
     );
-
-  filter:
-    blur(.25px);
 
   opacity: .67;
 }
@@ -1872,13 +1645,11 @@ button {
       rgba(255,255,255,.15),
       transparent 72%
     );
-
-  opacity: .42;
 }
 
 
 /* =========================================================
-   PRICE / ACTIONS
+   PRICE / BUTTONS
 ========================================================= */
 
 .product-bottom {
@@ -1923,8 +1694,6 @@ button {
   line-height: 1;
 
   font-weight: 900;
-
-  letter-spacing: -1px;
 }
 
 .product-actions {
@@ -1957,8 +1726,6 @@ button {
   font-size: 9px;
 
   font-weight: 900;
-
-  letter-spacing: .65px;
 }
 
 .btn-coa {
@@ -1966,13 +1733,6 @@ button {
 
   border-color:
     rgba(213,173,85,.55);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(213,173,85,.06),
-      rgba(213,173,85,.015)
-    );
 }
 
 .btn-unavailable {
@@ -1997,8 +1757,6 @@ button {
   font-size: 8px;
 
   font-weight: 900;
-
-  letter-spacing: .4px;
 }
 
 .research-note {
@@ -2007,13 +1765,11 @@ button {
   font-size: 6px;
 
   font-weight: 900;
-
-  letter-spacing: .8px;
 }
 
 
 /* =========================================================
-   COA MODAL
+   COA VIEWER
 ========================================================= */
 
 .coa-modal {
@@ -2044,7 +1800,7 @@ button {
 .coa-panel {
   width:
     min(
-      920px,
+      960px,
       100%
     );
 
@@ -2065,9 +1821,6 @@ button {
   border-radius: 20px;
 
   background: #090b0d;
-
-  box-shadow:
-    0 30px 90px rgba(0,0,0,.8);
 }
 
 .coa-header {
@@ -2082,13 +1835,6 @@ button {
 
   border-bottom:
     1px solid #292e32;
-
-  background:
-    linear-gradient(
-      145deg,
-      #121517,
-      #090b0d
-    );
 }
 
 .coa-heading-small {
@@ -2130,22 +1876,18 @@ button {
 }
 
 .coa-tabs {
-  display: none;
+  display: flex;
 
-  gap: 8px;
+  gap: 9px;
 
   overflow-x: auto;
 
-  padding: 11px 14px;
+  padding: 12px 14px;
 
   border-bottom:
     1px solid #262b2f;
 
   scrollbar-width: none;
-}
-
-.coa-tabs.visible {
-  display: flex;
 }
 
 .coa-tabs::-webkit-scrollbar {
@@ -2155,9 +1897,9 @@ button {
 .coa-tab {
   flex: 0 0 auto;
 
-  min-height: 40px;
+  min-height: 43px;
 
-  padding: 0 15px;
+  padding: 0 16px;
 
   border:
     1px solid #343a3f;
@@ -2171,6 +1913,8 @@ button {
   font-size: 8px;
 
   font-weight: 900;
+
+  white-space: nowrap;
 }
 
 .coa-tab.active {
@@ -2211,9 +1955,6 @@ button {
   border-radius: 6px;
 
   background: #fff;
-
-  box-shadow:
-    0 18px 50px rgba(0,0,0,.5);
 }
 
 .coa-footer {
@@ -2228,8 +1969,6 @@ button {
 
   border-top:
     1px solid #292e32;
-
-  background: #0b0d0f;
 }
 
 .coa-footer-note {
@@ -2266,7 +2005,7 @@ button {
 
 
 /* =========================================================
-   EMPTY RESULTS
+   OTHER
 ========================================================= */
 
 .no-results {
@@ -2294,11 +2033,6 @@ button {
   font-size: 19px;
 }
 
-
-/* =========================================================
-   NOTICE
-========================================================= */
-
 .catalog-notice {
   margin-top: 38px;
 
@@ -2321,8 +2055,6 @@ button {
   color: var(--gold2);
 
   font-size: 11px;
-
-  letter-spacing: 1px;
 }
 
 .catalog-notice p {
@@ -2332,11 +2064,6 @@ button {
 
   line-height: 1.8;
 }
-
-
-/* =========================================================
-   MOBILE STICKY CHECKOUT
-========================================================= */
 
 .mobile-sticky-checkout {
   display: none;
@@ -2363,12 +2090,6 @@ button {
 
   background:
     rgba(5,6,7,.95);
-
-  backdrop-filter:
-    blur(16px);
-
-  box-shadow:
-    0 10px 32px rgba(0,0,0,.65);
 }
 
 .mobile-sticky-checkout a {
@@ -2395,14 +2116,7 @@ button {
   font-size: 11px;
 
   font-weight: 900;
-
-  letter-spacing: .7px;
 }
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
 
 footer {
   padding: 42px 0;
@@ -2425,17 +2139,9 @@ footer {
   font-size: 11px;
 }
 
-.footer-grid strong {
-  display: block;
-
-  margin-bottom: 4px;
-
-  color: #c7c9ca;
-}
-
 
 /* =========================================================
-   TABLET
+   RESPONSIVE
 ========================================================= */
 
 @media(max-width:1100px) {
@@ -2446,36 +2152,14 @@ footer {
 
 }
 
-
 @media(max-width:900px) {
 
   body {
     padding-bottom: 84px;
   }
 
-  .shell {
-    width:
-      min(
-        calc(100% - 28px),
-        1220px
-      );
-  }
-
   .nav {
     min-height: 68px;
-  }
-
-  .brand img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .brand-title {
-    font-size: 10px;
-  }
-
-  .brand-sub {
-    font-size: 6.5px;
   }
 
   .nav-links {
@@ -2508,116 +2192,45 @@ footer {
 
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media(max-width:650px) {
-
-  .promo-track span {
-    padding: 9px 29px;
-
-    font-size: 8.5px;
-  }
 
   .page-hero {
     padding: 34px 0 30px;
   }
 
-  .back-link {
-    margin-bottom: 19px;
-  }
-
   .page-hero h1 {
-    margin-bottom: 12px;
-
     font-size: 36px;
   }
 
   .page-hero p {
     font-size: 13px;
-
-    line-height: 1.65;
-  }
-
-  .hero-meta {
-    margin-top: 16px;
-  }
-
-  .hero-meta span {
-    padding: 7px 10px;
-
-    font-size: 7px;
-  }
-
-  .checkout-section {
-    padding: 19px 0;
   }
 
   .checkout-box {
     padding: 21px 18px;
   }
 
-  .checkout-box h2 {
-    font-size: 24px;
-  }
-
-  .checkout-box p {
-    margin-bottom: 15px;
-
-    font-size: 11px;
-  }
-
   .checkout-button {
     width: 100%;
-
-    min-height: 48px;
-
-    font-size: 9px;
-  }
-
-  .catalog-section {
-    padding-top: 16px;
   }
 
   .search-wrap {
     padding: 10px 0 9px;
   }
 
-  .search-box {
-    padding: 0 15px;
-
-    border-radius: 14px;
-  }
-
-  .search-box input {
-    min-height: 58px;
-
-    font-size: 16px;
-  }
-
-  .search-icon {
-    font-size: 24px;
-  }
-
   .filter-bar {
     display: flex;
-
-    width: 100%;
 
     gap: 11px;
 
     overflow-x: auto;
-    overflow-y: hidden;
 
     margin-top: 12px;
 
-    padding: 2px 2px 10px;
+    padding:
+      2px 2px 10px;
 
     scrollbar-width: none;
-
-    -webkit-overflow-scrolling: touch;
   }
 
   .filter-bar::-webkit-scrollbar {
@@ -2625,31 +2238,17 @@ footer {
   }
 
   .filter-button {
-    flex: 0 0 auto;
+    flex:
+      0 0 auto;
 
     min-height: 58px;
 
-    padding: 0 23px;
+    padding:
+      0 23px;
 
     border-radius: 100px;
 
     white-space: nowrap;
-
-    font-size: 9px;
-
-    letter-spacing: .8px;
-  }
-
-  .catalog-toolbar {
-    margin: 19px 0 14px;
-  }
-
-  .catalog-count {
-    font-size: 9px;
-  }
-
-  .catalog-grid {
-    gap: 17px;
   }
 
   .product-card {
@@ -2657,8 +2256,6 @@ footer {
 
     padding:
       25px 22px;
-
-    border-radius: 19px;
   }
 
   .product-main {
@@ -2668,44 +2265,12 @@ footer {
     min-height: 250px;
   }
 
-  .card-top {
-    gap: 8px;
-  }
-
-  .category {
-    font-size: 9px;
-
-    letter-spacing: 1.25px;
-  }
-
-  .amount-badge {
-    min-height: 30px;
-
-    padding:
-      0 10px;
-
-    font-size: 8px;
-  }
-
   .product-card h2 {
-    margin:
-      19px 0 9px;
-
     font-size: 29px;
-
-    line-height: 1.08;
   }
 
   .product-description {
     font-size: 13px;
-
-    line-height: 1.6;
-  }
-
-  .coa-indicator {
-    margin-top: 13px;
-
-    font-size: 7px;
   }
 
   .vial-area {
@@ -2716,33 +2281,9 @@ footer {
     height: 215px;
   }
 
-  .vial-glow {
-    width: 91px;
-    height: 28px;
-
-    bottom: 0;
-  }
-
   .vial {
     width: 64px;
     height: 148px;
-
-    margin-bottom: 8px;
-
-    border-radius:
-      17px 17px 15px 15px;
-  }
-
-  .vial::before {
-    top: -12px;
-    left: 7px;
-    right: 7px;
-
-    height: 24px;
-  }
-
-  .vial::after {
-    height: 11px;
   }
 
   .vial-cap {
@@ -2754,154 +2295,50 @@ footer {
   }
 
   .vial-cap::before {
-    top: -11px;
-    left: 4px;
-
     width: 48px;
-    height: 14px;
-  }
 
-  .vial-neck {
-    top: -17px;
-    left: 12px;
-
-    width: 38px;
-    height: 21px;
+    left: 4px;
   }
 
   .vial-label {
     top: 28px;
 
-    left: 4px;
-    right: 4px;
-
     height: 103px;
-
-    padding:
-      6px 3px 4px;
   }
 
   .vial-logo {
     width: 23px;
     height: 23px;
-
-    margin-bottom: 2px;
   }
 
   .vial-brand {
     font-size: 5px;
-
-    letter-spacing: .78px;
   }
 
   .vial-labs {
     font-size: 2.9px;
-
-    letter-spacing: .48px;
-  }
-
-  .vial-divider {
-    width: 31px;
-
-    margin:
-      4px 0 3px;
   }
 
   .vial-product {
-    min-height: 16px;
-
     font-size: 5.8px;
-
-    line-height: 1.08;
   }
 
   .vial-amount {
-    margin-top: 3px;
-
     font-size: 7.5px;
-  }
-
-  .vial-research {
-    margin-top: 4px;
-
-    font-size: 2.35px;
-
-    padding:
-      2px 3px;
-  }
-
-  .vial-shine {
-    top: 16px;
-    left: 4px;
-
-    width: 5px;
-    height: 110px;
-  }
-
-  .vial-shine-right {
-    top: 19px;
-    right: 4px;
-
-    height: 95px;
-  }
-
-  .product-bottom {
-    gap: 9px;
-
-    padding-top: 16px;
-  }
-
-  .price-label {
-    font-size: 7px;
   }
 
   .price {
     font-size: 34px;
   }
 
-  .product-actions {
-    gap: 7px;
-  }
-
-  .btn {
-    min-height: 42px;
-
-    padding:
-      0 14px;
-
-    font-size: 8px;
-  }
-
-  .btn-unavailable {
-    min-height: 42px;
-
-    padding:
-      0 12px;
-
-    font-size: 7px;
-  }
-
   .research-note {
     display: none;
   }
 
-  .catalog-notice {
-    margin-top: 28px;
-
-    padding: 19px;
-  }
-
-  .catalog-notice strong {
-    font-size: 9px;
-  }
-
-  .catalog-notice p {
-    font-size: 10px;
-  }
-
   .coa-modal {
     padding:
-      8px 8px
+      8px
+      8px
       calc(
         8px +
         env(safe-area-inset-bottom)
@@ -2909,8 +2346,6 @@ footer {
   }
 
   .coa-panel {
-    width: 100%;
-
     max-height:
       calc(
         100vh -
@@ -2929,6 +2364,15 @@ footer {
     font-size: 16px;
   }
 
+  .coa-tab {
+    min-height: 42px;
+
+    padding:
+      0 14px;
+
+    font-size: 7.5px;
+  }
+
   .coa-image-wrap {
     padding: 8px;
   }
@@ -2941,24 +2385,7 @@ footer {
     padding: 10px;
   }
 
-  .coa-footer-note {
-    font-size: 7px;
-  }
-
-  .coa-full {
-    min-height: 37px;
-
-    padding: 0 10px;
-
-    font-size: 7px;
-  }
-
 }
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
 
 @media(max-width:520px) {
 
@@ -2971,10 +2398,6 @@ footer {
     min-height: 64px;
   }
 
-  .brand {
-    gap: 9px;
-  }
-
   .brand img {
     width: 40px;
     height: 40px;
@@ -2982,32 +2405,14 @@ footer {
 
   .brand-title {
     font-size: 8.8px;
-
-    letter-spacing: .6px;
   }
 
   .brand-sub {
     font-size: 5.7px;
-
-    letter-spacing: 1.1px;
-  }
-
-  .mobile-menu-button {
-    width: 41px;
-    height: 41px;
-
-    min-width: 41px;
-
-    padding: 9px;
   }
 
   .search-wrap {
     top: 64px;
-  }
-
-  .mobile-sticky-checkout {
-    left: 14px;
-    right: 14px;
   }
 
   .product-card {
@@ -3036,18 +2441,11 @@ footer {
 
 }
 
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
 @media(max-width:390px) {
 
   .product-card {
     padding:
       21px 17px;
-
-    min-height: 350px;
   }
 
   .product-main {
@@ -3059,10 +2457,6 @@ footer {
     font-size: 24px;
   }
 
-  .product-description {
-    font-size: 11.5px;
-  }
-
   .vial-area {
     right: 4px;
 
@@ -3071,19 +2465,6 @@ footer {
 
     transform-origin:
       center right;
-  }
-
-  .price {
-    font-size: 31px;
-  }
-
-  .filter-button {
-    min-height: 55px;
-
-    padding:
-      0 20px;
-
-    font-size: 8.5px;
   }
 
 }
@@ -3131,9 +2512,7 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 <nav class="nav-links">
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 
 <a href="research-information.html">
 Research
@@ -3168,7 +2547,6 @@ Contact
 
 <div class="member-area">
 
-
 <a
   href="login.html"
   class="member-login"
@@ -3182,7 +2560,6 @@ Contact
   class="member-signed-in"
   id="desktopMemberArea"
 >
-
 
 <div class="member-pill">
 
@@ -3230,9 +2607,7 @@ CHECKOUT
 SIGN OUT
 </button>
 
-
 </div>
-
 
 </div>
 
@@ -3241,8 +2616,6 @@ SIGN OUT
   class="mobile-menu-button"
   id="mobileMenuButton"
   type="button"
-  aria-label="Open navigation menu"
-  aria-expanded="false"
 >
 
 <span></span>
@@ -3267,7 +2640,6 @@ SIGN OUT
 
 <div class="mobile-member-box">
 
-
 <a
   href="login.html"
   class="mobile-member-login"
@@ -3282,11 +2654,9 @@ SIGN OUT
   id="mobileMemberArea"
 >
 
-
 <div class="mobile-status">
 ● SIGNED IN
 </div>
-
 
 <div
   class="mobile-member-name"
@@ -3294,7 +2664,6 @@ SIGN OUT
 >
 PCH Member
 </div>
-
 
 <div
   class="mobile-member-email"
@@ -3328,15 +2697,12 @@ CATALOG
 
 </div>
 
-
 </div>
 
 </div>
 
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 
 <a href="research-information.html">
 Research Information
@@ -3365,7 +2731,6 @@ FAQ
 <a href="contact.html">
 Contact
 </a>
-
 
 </div>
 
@@ -3412,7 +2777,6 @@ FREE STANDARD SHIPPING ON ORDERS OVER $280
 
 </div>
 
-
 </header>
 
 
@@ -3422,7 +2786,6 @@ FREE STANDARD SHIPPING ON ORDERS OVER $280
 <section class="page-hero">
 
 <div class="shell">
-
 
 <a
   href="index.html"
@@ -3451,20 +2814,17 @@ documentation.
 
 <div class="hero-meta">
 
-<span id="heroListingCount">
-32 LISTINGS
-</span>
+<span id="heroListingCount"></span>
 
 <span>
 RESEARCH USE ONLY
 </span>
 
 <span>
-COA LINKS WHERE AVAILABLE
+COA DOCUMENTATION WHERE AVAILABLE
 </span>
 
 </div>
-
 
 </div>
 
@@ -3483,17 +2843,14 @@ COA LINKS WHERE AVAILABLE
 PCH MEMBER CHECKOUT
 </div>
 
-
 <h2 id="checkoutHeading">
 Ready to place an order?
 </h2>
-
 
 <p id="checkoutDescription">
 A verified PCH member account and research-use
 acknowledgment are required before checkout access.
 </p>
-
 
 <a
   href="login.html"
@@ -3503,14 +2860,12 @@ acknowledgment are required before checkout access.
 🔐 LOGIN TO CHECKOUT
 </a>
 
-
 <div
   class="checkout-small"
   id="checkoutSmall"
 >
 Sign in or create a PCH account to continue.
 </div>
-
 
 </div>
 
@@ -3527,7 +2882,6 @@ Sign in or create a PCH account to continue.
 
 
 <div class="search-wrap">
-
 
 <div class="search-box">
 
@@ -3548,7 +2902,6 @@ Sign in or create a PCH account to continue.
   type="button"
   class="search-clear"
   id="searchClear"
-  aria-label="Clear search"
 >
 ×
 </button>
@@ -3561,7 +2914,6 @@ Sign in or create a PCH account to continue.
   id="filterBar"
 >
 
-
 <button
   class="filter-button active"
   type="button"
@@ -3569,7 +2921,6 @@ Sign in or create a PCH account to continue.
 >
 ALL
 </button>
-
 
 <button
   class="filter-button"
@@ -3579,7 +2930,6 @@ ALL
 BAC WATER
 </button>
 
-
 <button
   class="filter-button"
   type="button"
@@ -3587,7 +2937,6 @@ BAC WATER
 >
 GLP / WEIGHT LOSS
 </button>
-
 
 <button
   class="filter-button"
@@ -3597,7 +2946,6 @@ GLP / WEIGHT LOSS
 RECOVERY / HEALING
 </button>
 
-
 <button
   class="filter-button"
   type="button"
@@ -3605,7 +2953,6 @@ RECOVERY / HEALING
 >
 ENERGY / MITOCHONDRIA
 </button>
-
 
 <button
   class="filter-button"
@@ -3615,23 +2962,17 @@ ENERGY / MITOCHONDRIA
 MIND / LONGEVITY / SLEEP
 </button>
 
-
 </div>
-
 
 </div>
 
 
 <div class="catalog-toolbar">
 
-
 <div
   id="catalogCount"
   class="catalog-count"
->
-32 RESEARCH LISTINGS
-</div>
-
+></div>
 
 <a
   href="login.html"
@@ -3640,7 +2981,6 @@ MIND / LONGEVITY / SLEEP
 >
 🔐 LOGIN TO CHECKOUT
 </a>
-
 
 </div>
 
@@ -3674,16 +3014,14 @@ CATALOG & DOCUMENTATION NOTICE
 </strong>
 
 <p>
-Catalog pricing and availability may change.
-Certificates of Analysis are linked only where
-corresponding documentation has been added.
-Each COA applies only to the sample, lot,
-batch, or laboratory submission identified
-in the original report.
+Cap-color references are shown only to help identify
+the vial pictured in the corresponding laboratory
+report. Each COA applies only to the sample, lot,
+batch, or laboratory submission identified in the
+original report.
 </p>
 
 </div>
-
 
 </div>
 
@@ -3737,7 +3075,7 @@ Not for human or animal use
 
 
 <!-- =========================================================
-     COA MODAL
+     COA VIEWER
 ========================================================= -->
 
 <div
@@ -3747,20 +3085,19 @@ Not for human or animal use
 
 <div class="coa-panel">
 
-
 <div class="coa-header">
 
 <div>
 
 <div class="coa-heading-small">
-CERTIFICATE OF ANALYSIS
+ANALYTICAL DOCUMENTATION
 </div>
 
 <div
   class="coa-title"
   id="coaTitle"
 >
-Laboratory Documentation
+Certificate of Analysis
 </div>
 
 </div>
@@ -3770,7 +3107,6 @@ Laboratory Documentation
   type="button"
   class="coa-close"
   id="coaClose"
-  aria-label="Close COA"
 >
 ×
 </button>
@@ -3799,9 +3135,8 @@ Laboratory Documentation
 <div class="coa-footer">
 
 <div class="coa-footer-note">
-Original analytical documentation.
-Each report applies only to the sample,
-lot, batch, or laboratory submission identified.
+Select a result above to compare the corresponding
+laboratory report and vial/cap shown on that report.
 </div>
 
 
@@ -3816,7 +3151,6 @@ OPEN FULL SIZE
 </a>
 
 </div>
-
 
 </div>
 
@@ -3837,38 +3171,28 @@ OPEN FULL SIZE
 const SUPABASE_URL =
   "https://rmjvhbfazakcunfeomao.supabase.co";
 
-
 const SUPABASE_PUBLISHABLE_KEY =
   "sb_publishable_m0snLFFTsLnUfENmvWsUuw_bjPkhMER";
-
 
 const supabaseClient =
   window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_PUBLISHABLE_KEY,
     {
-
       auth: {
-
         persistSession: true,
-
         autoRefreshToken: true,
-
         detectSessionInUrl: true,
-
         storage: window.localStorage,
-
         storageKey:
           "pch-member-auth"
-
       }
-
     }
   );
 
 
 /* =========================================================
-   MEMBER ELEMENTS
+   MEMBER UI
 ========================================================= */
 
 const desktopLoginLink =
@@ -3947,10 +3271,6 @@ const checkoutSmall =
   );
 
 
-/* =========================================================
-   LOGGED OUT
-========================================================= */
-
 function showLoggedOutMemberState() {
 
   desktopLoginLink.style.display =
@@ -3988,10 +3308,6 @@ function showLoggedOutMemberState() {
 }
 
 
-/* =========================================================
-   LOGGED IN
-========================================================= */
-
 function showLoggedInMemberState(
   user
 ) {
@@ -4004,7 +3320,6 @@ function showLoggedInMemberState(
     user.user_metadata.username
     :
     "PCH Member";
-
 
   desktopLoginLink.style.display =
     "none";
@@ -4054,10 +3369,6 @@ function showLoggedInMemberState(
 }
 
 
-/* =========================================================
-   SESSION
-========================================================= */
-
 async function restoreMemberSession() {
 
   try {
@@ -4067,7 +3378,6 @@ async function restoreMemberSession() {
     } =
       await supabaseClient.auth
         .getSession();
-
 
     if (
       data.session
@@ -4091,21 +3401,12 @@ async function restoreMemberSession() {
 
   catch(error) {
 
-    console.error(
-      "Member session error:",
-      error
-    );
-
     showLoggedOutMemberState();
 
   }
 
 }
 
-
-/* =========================================================
-   SIGN OUT
-========================================================= */
 
 async function signOutMember() {
 
@@ -4121,7 +3422,6 @@ desktopSignout.addEventListener(
   "click",
   signOutMember
 );
-
 
 mobileSignout.addEventListener(
   "click",
@@ -4156,30 +3456,6 @@ supabaseClient.auth
 
     }
   );
-
-
-window.addEventListener(
-  "pageshow",
-  restoreMemberSession
-);
-
-
-document.addEventListener(
-  "visibilitychange",
-  function() {
-
-    if (
-      document.visibilityState
-      ===
-      "visible"
-    ) {
-
-      restoreMemberSession();
-
-    }
-
-  }
-);
 
 
 /* =========================================================
@@ -4217,19 +3493,22 @@ const products = [
       "bac",
       "water",
       "bacteriostatic",
-      "30ml",
-      "30 ml"
+      "30ml"
     ],
+
   coas: [
+
     {
       label:
-        "STERILITY / ENDOTOXIN",
+        "STERILITY PASS · <0.25 EU/ML",
       file:
         "coa-ebac-water-30ml-chromate.jpg"
     }
+
   ],
+
   description:
-    "Laboratory supply listing with available analytical documentation."
+    "Laboratory supply listing with sterility and endotoxin documentation available."
 },
 
 {
@@ -4244,14 +3523,20 @@ const products = [
       "r10",
       "reta",
       "retatrutide",
-      "glp",
-      "glp3",
-      "glp-3",
-      "10mg",
-      "10 mg"
+      "10mg"
     ],
-  coa:
-    "retatrutide-10mg-greencap-coa.jpg",
+
+  coas: [
+
+    {
+      label:
+        "GREEN CAP · 10 MG COA",
+      file:
+        "retatrutide-10mg-greencap-coa.jpg"
+    }
+
+  ],
+
   description:
     "R-series research-material listing at 10 mg."
 },
@@ -4268,11 +3553,7 @@ const products = [
       "r20",
       "reta",
       "retatrutide",
-      "glp",
-      "glp3",
-      "glp-3",
-      "20mg",
-      "20 mg"
+      "20mg"
     ],
   description:
     "R-series research-material listing at 20 mg."
@@ -4290,34 +3571,36 @@ const products = [
       "r30",
       "reta",
       "retatrutide",
-      "glp",
-      "glp3",
-      "glp-3",
-      "30mg",
-      "30 mg"
+      "30mg"
     ],
+
   coas: [
+
     {
       label:
-        "FREEDOM COA",
+        "TEAL CAP · 99.89% · 34.77 MG",
       file:
         "coa-r30-freedom.jpg"
     },
+
     {
       label:
-        "V3 FREEDOM COA",
+        "GREEN CAP · 99.85% · 35.15 MG",
       file:
         "coa-r30-v3-freedom.jpg"
     },
+
     {
       label:
-        "ENDOTOXIN",
+        "ENDOTOXIN · <10 EU/VIAL",
       file:
         "coa-retatrutide-endotoxin-janoshik.jpg"
     }
+
   ],
+
   description:
-    "R-series research-material listing at 30 mg."
+    "R-series research-material listing at 30 mg with multiple analytical reports available."
 },
 
 {
@@ -4332,11 +3615,7 @@ const products = [
       "t10",
       "tirz",
       "tirzepatide",
-      "glp",
-      "glp2",
-      "glp-2",
-      "10mg",
-      "10 mg"
+      "10mg"
     ],
   description:
     "T-series research-material listing at 10 mg."
@@ -4354,11 +3633,7 @@ const products = [
       "t20",
       "tirz",
       "tirzepatide",
-      "glp",
-      "glp2",
-      "glp-2",
-      "20mg",
-      "20 mg"
+      "20mg"
     ],
   description:
     "T-series research-material listing at 20 mg."
@@ -4376,12 +3651,20 @@ const products = [
       "ghk",
       "ghkcu",
       "ghk-cu",
-      "copper",
-      "50mg",
-      "50 mg"
+      "50mg"
     ],
-  coa:
-    "ghkcu-50mg-coa.png",
+
+  coas: [
+
+    {
+      label:
+        "50 MG COA",
+      file:
+        "ghkcu-50mg-coa.png"
+    }
+
+  ],
+
   description:
     "GHK-Cu research-material listing at 50 mg."
 },
@@ -4397,10 +3680,7 @@ const products = [
       "g",
       "ghk",
       "ghkcu",
-      "ghk-cu",
-      "copper",
-      "100mg",
-      "100 mg"
+      "100mg"
     ],
   description:
     "GHK-Cu research-material listing at 100 mg."
@@ -4416,12 +3696,20 @@ const products = [
     [
       "c",
       "cartalax",
-      "cartilage",
-      "20mg",
-      "20 mg"
+      "20mg"
     ],
-  coa:
-    "cartalax-20mg-coa.jpg",
+
+  coas: [
+
+    {
+      label:
+        "20 MG COA",
+      file:
+        "cartalax-20mg-coa.jpg"
+    }
+
+  ],
+
   description:
     "Cartalax research-material listing at 20 mg."
 },
@@ -4434,11 +3722,8 @@ const products = [
   groups: ["mind"],
   keywords:
     [
-      "n",
-      "s",
       "semax",
       "n acetyl semax",
-      "amidate",
       "10mg"
     ],
   description:
@@ -4453,11 +3738,8 @@ const products = [
   groups: ["mind"],
   keywords:
     [
-      "n",
-      "s",
       "selank",
       "n acetyl selank",
-      "amidate",
       "10mg"
     ],
   description:
@@ -4472,8 +3754,6 @@ const products = [
   groups: ["mind"],
   keywords:
     [
-      "p",
-      "pt",
       "pt141",
       "pt-141",
       "10mg"
@@ -4490,10 +3770,8 @@ const products = [
   groups: ["mind"],
   keywords:
     [
-      "e",
       "epithalon",
       "epitalon",
-      "amidate",
       "10mg"
     ],
   description:
@@ -4508,7 +3786,6 @@ const products = [
   groups: ["mind"],
   keywords:
     [
-      "p",
       "pinealon",
       "10mg"
     ],
@@ -4524,11 +3801,9 @@ const products = [
   groups: ["mind"],
   keywords:
     [
-      "d",
       "dsip",
       "sleep",
-      "5mg",
-      "5 mg"
+      "5mg"
     ],
   description:
     "DSIP research-material listing at 5 mg."
@@ -4542,20 +3817,22 @@ const products = [
   groups: ["mind"],
   keywords:
     [
-      "d",
       "dsip",
       "sleep",
-      "10mg",
-      "10 mg"
+      "10mg"
     ],
+
   coas: [
+
     {
       label:
-        "ILS LABS",
+        "96.58% · 10.2 MG",
       file:
         "coa-dsip-10mg-ils.jpg"
     }
+
   ],
+
   description:
     "DSIP research-material listing at 10 mg."
 },
@@ -4568,8 +3845,6 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
-      "a",
-      "ara",
       "ara290",
       "ara-290",
       "cibinetide",
@@ -4587,11 +3862,8 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
-      "a",
-      "ara",
       "ara290",
       "ara-290",
-      "cibinetide",
       "50mg"
     ],
   description:
@@ -4606,24 +3878,24 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
-      "b",
-      "w",
       "bpc",
       "bpc157",
-      "bpc-157",
       "tb500",
-      "tb-500",
       "wolverine",
       "10mg"
     ],
+
   coas: [
+
     {
       label:
-        "FREEDOM COA",
+        "BLUE CAP · 99.34% · 6.96 / 6.68 MG",
       file:
         "coa-bpc157-tb500-10mg-freedom.jpg"
     }
+
   ],
+
   description:
     "Wolverine research-material combination listed at 10 mg total."
 },
@@ -4636,13 +3908,9 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
-      "b",
-      "w",
       "bpc",
       "bpc157",
-      "bpc-157",
       "tb4",
-      "tb-4",
       "wolverine",
       "20mg"
     ],
@@ -4658,13 +3926,8 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
-      "b",
-      "d",
       "bpc",
-      "bpc157",
-      "bpc-157",
       "tb4",
-      "tb-4",
       "cartalax",
       "deadpool",
       "30mg"
@@ -4681,29 +3944,32 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
-      "k",
       "klow",
       "80mg",
-      "80 mg",
       "ghk",
       "kpv",
       "bpc",
       "tb4"
     ],
+
   coas: [
+
     {
       label:
-        "PURITY / IDENTITY",
+        "BLUE CAP · 99.75% · 80 MG BLEND",
       file:
         "coa-klow-80mg-freedom.jpg"
     },
+
     {
       label:
-        "ENDOTOXIN",
+        "ENDOTOXIN · PASS · ≤0.05 EU/ML",
       file:
         "coa-klow-80mg-endotoxin-freedom.jpg"
     }
+
   ],
+
   description:
     "KLOW research-material catalog listing at 80 mg."
 },
@@ -4716,7 +3982,6 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
-      "k",
       "kpv",
       "10mg"
     ],
@@ -4732,23 +3997,24 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
-      "c",
       "cjc",
       "cjc1295",
       "cjc-1295",
       "no dac",
-      "nodac",
-      "5mg",
-      "5 mg"
+      "5mg"
     ],
+
   coas: [
+
     {
       label:
-        "CJC 5 MG COA",
+        "WHITE CAP · 99.71% · 5.59 MG",
       file:
         "coa-cjc-nodac-10mg-freedom.jpg"
     }
+
   ],
+
   description:
     "CJC research-material catalog listing at 5 mg."
 },
@@ -4761,7 +4027,6 @@ const products = [
   groups: ["recovery", "mind"],
   keywords:
     [
-      "i",
       "ipamorelin",
       "ipa",
       "10mg"
@@ -4778,7 +4043,6 @@ const products = [
   groups: ["recovery"],
   keywords:
     [
-      "t",
       "tesamorelin",
       "tesa",
       "10mg"
@@ -4795,12 +4059,9 @@ const products = [
   groups: ["recovery", "mind"],
   keywords:
     [
-      "c",
-      "i",
       "cjc",
       "ipamorelin",
       "ipa",
-      "cjc ipa",
       "20mg"
     ],
   description:
@@ -4815,21 +4076,31 @@ const products = [
   groups: ["energy"],
   keywords:
     [
-      "m",
       "mots",
       "motsc",
       "mots-c",
       "10mg",
       "mitochondria"
     ],
+
   coas: [
+
     {
       label:
-        "FREEDOM COA",
+        "GREEN CAP · 10 MG COA",
+      file:
+        "motsc-10mg-greencaps-coa.png"
+    },
+
+    {
+      label:
+        "RED CAP · 99.57% · 11.77 MG",
       file:
         "coa-motsc-10mg-freedom.jpg"
     }
+
   ],
+
   description:
     "MOTS-C research-material catalog listing at 10 mg."
 },
@@ -4842,8 +4113,6 @@ const products = [
   groups: ["energy"],
   keywords:
     [
-      "s",
-      "ss",
       "ss31",
       "ss-31",
       "50mg",
@@ -4861,11 +4130,9 @@ const products = [
   groups: ["energy"],
   keywords:
     [
-      "5",
       "5 amino",
       "5amino",
       "1mq",
-      "5-amino-1mq",
       "500mg"
     ],
   description:
@@ -4880,7 +4147,6 @@ const products = [
   groups: ["energy"],
   keywords:
     [
-      "n",
       "nad",
       "nad+",
       "buffered",
@@ -4894,7 +4160,7 @@ const products = [
 
 
 /* =========================================================
-   ELEMENTS
+   CATALOG ELEMENTS
 ========================================================= */
 
 const catalogGrid =
@@ -4939,7 +4205,6 @@ const filterButtons =
     )
   );
 
-
 const coaModal =
   document.getElementById(
     "coaModal"
@@ -4970,7 +4235,6 @@ const coaFull =
     "coaFull"
   );
 
-
 let activeFilter =
   "all";
 
@@ -4979,7 +4243,7 @@ let currentCoas =
 
 
 /* =========================================================
-   ESCAPE HTML
+   HELPERS
 ========================================================= */
 
 function escapeHTML(
@@ -5013,10 +4277,6 @@ function escapeHTML(
 }
 
 
-/* =========================================================
-   SHORT VIAL NAME
-========================================================= */
-
 function createVialName(
   name
 ) {
@@ -5031,7 +4291,6 @@ function createVialName(
     )
     .trim();
 
-
   if (
     cleanName.length > 21
   ) {
@@ -5044,103 +4303,76 @@ function createVialName(
 
   }
 
-
   return cleanName;
 
 }
 
 
-/* =========================================================
-   COA HELPERS
-========================================================= */
-
 function getProductCoas(
   product
 ) {
 
-  if (
+  return (
     Array.isArray(
       product.coas
     )
-    &&
-    product.coas.length > 0
-  ) {
-
-    return product.coas;
-
-  }
-
-
-  if (
-    product.coa
-  ) {
-
-    return [
-      {
-        label:
-          "CERTIFICATE OF ANALYSIS",
-        file:
-          product.coa
-      }
-    ];
-
-  }
-
-
-  return [];
+    ?
+    product.coas
+    :
+    []
+  );
 
 }
 
+
+/* =========================================================
+   COA VIEWER
+========================================================= */
 
 function showCoa(
   index
 ) {
 
+  const selected =
+    currentCoas[
+      index
+    ];
+
   if (
-    !currentCoas[index]
+    !selected
   ) {
 
     return;
 
   }
 
-
-  const selected =
-    currentCoas[index];
-
-
   coaImage.src =
     selected.file;
-
 
   coaImage.alt =
     selected.label;
 
-
   coaFull.href =
     selected.file;
 
-
-  const buttons =
-    coaTabs.querySelectorAll(
+  coaTabs
+    .querySelectorAll(
       ".coa-tab"
+    )
+    .forEach(
+      function(button) {
+
+        button.classList.toggle(
+          "active",
+          Number(
+            button.dataset.index
+          )
+          ===
+          index
+        );
+
+      }
     );
-
-
-  buttons.forEach(
-    function(button) {
-
-      button.classList.toggle(
-        "active",
-        Number(
-          button.dataset.index
-        )
-        ===
-        index
-      );
-
-    }
-  );
 
 }
 
@@ -5154,7 +4386,6 @@ function openCoaViewer(
       productIndex
     ];
 
-
   if (
     !product
   ) {
@@ -5163,12 +4394,10 @@ function openCoaViewer(
 
   }
 
-
   currentCoas =
     getProductCoas(
       product
     );
-
 
   if (
     currentCoas.length === 0
@@ -5178,7 +4407,6 @@ function openCoaViewer(
 
   }
 
-
   coaTitle.textContent =
     product.name
     +
@@ -5186,10 +4414,8 @@ function openCoaViewer(
     +
     product.amount;
 
-
   coaTabs.innerHTML =
     "";
-
 
   currentCoas.forEach(
     function(
@@ -5202,22 +4428,17 @@ function openCoaViewer(
           "button"
         );
 
-
       button.type =
         "button";
-
 
       button.className =
         "coa-tab";
 
-
       button.dataset.index =
         index;
 
-
       button.textContent =
         coa.label;
-
 
       button.addEventListener(
         "click",
@@ -5230,7 +4451,6 @@ function openCoaViewer(
         }
       );
 
-
       coaTabs.appendChild(
         button
       );
@@ -5238,22 +4458,13 @@ function openCoaViewer(
     }
   );
 
-
-  coaTabs.classList.toggle(
-    "visible",
-    currentCoas.length > 1
-  );
-
-
   showCoa(
     0
   );
 
-
   coaModal.classList.add(
     "visible"
   );
-
 
   document.body.classList.add(
     "coa-open"
@@ -5268,15 +4479,12 @@ function closeCoaViewer() {
     "visible"
   );
 
-
   document.body.classList.remove(
     "coa-open"
   );
 
-
   coaImage.src =
     "";
-
 
   currentCoas =
     [];
@@ -5323,7 +4531,7 @@ document.addEventListener(
 
 
 /* =========================================================
-   NORMALIZE SEARCH
+   SEARCH
 ========================================================= */
 
 function normalizeSearchText(
@@ -5334,10 +4542,6 @@ function normalizeSearchText(
     value || ""
   )
   .toLowerCase()
-  .replace(
-    /[\u2010-\u2015]/g,
-    "-"
-  )
   .replace(
     /[^a-z0-9+]+/g,
     " "
@@ -5351,97 +4555,32 @@ function normalizeSearchText(
 }
 
 
-/* =========================================================
-   SEARCH IDENTITY
-========================================================= */
-
 function getIdentityValues(
   product
 ) {
 
-  const values = [
+  return [
 
     product.name,
+
     product.category,
-    product.amount
 
-  ];
+    product.amount,
 
-
-  if (
-    Array.isArray(
+    ...(
       product.keywords
+      ||
+      []
     )
-  ) {
 
-    values.push(
-      ...product.keywords
-    );
-
-  }
-
-
-  return values
-    .map(
-      normalizeSearchText
-    )
-    .filter(Boolean);
+  ]
+  .map(
+    normalizeSearchText
+  )
+  .filter(Boolean);
 
 }
 
-
-/* =========================================================
-   BROAD SEARCH TEXT
-========================================================= */
-
-function getBroadSearchText(
-  product
-) {
-
-  return normalizeSearchText(
-
-    product.name
-    +
-    " "
-    +
-    product.category
-    +
-    " "
-    +
-    product.amount
-    +
-    " "
-    +
-    product.price
-    +
-    " "
-    +
-    product.groups.join(" ")
-    +
-    " "
-    +
-    (
-      Array.isArray(
-        product.keywords
-      )
-      ?
-      product.keywords.join(" ")
-      :
-      ""
-    )
-    +
-    " "
-    +
-    product.description
-
-  );
-
-}
-
-
-/* =========================================================
-   SEARCH MATCH
-========================================================= */
 
 function productMatchesSearch(
   product,
@@ -5453,39 +4592,29 @@ function productMatchesSearch(
       rawTerm
     );
 
-
   if (
-    term === ""
+    !term
   ) {
 
     return true;
 
   }
 
-
-  const identityValues =
+  const identities =
     getIdentityValues(
       product
     );
-
 
   if (
     term.length === 1
   ) {
 
-    return identityValues.some(
+    return identities.some(
       function(value) {
 
-        const tokens =
-          value.split(" ");
-
-
-        return (
-          value === term
-          ||
-          value.startsWith(term)
-          ||
-          tokens.some(
+        return value
+          .split(" ")
+          .some(
             function(token) {
 
               return token.startsWith(
@@ -5493,41 +4622,55 @@ function productMatchesSearch(
               );
 
             }
-          )
-        );
+          );
 
       }
     );
 
   }
 
+  const searchText =
+    normalizeSearchText(
 
-  const searchableText =
-    getBroadSearchText(
-      product
+      product.name
+      +
+      " "
+      +
+      product.category
+      +
+      " "
+      +
+      product.amount
+      +
+      " "
+      +
+      (
+        product.keywords
+        ||
+        []
+      )
+      .join(" ")
+      +
+      " "
+      +
+      product.description
+
     );
 
+  return term
+    .split(" ")
+    .every(
+      function(word) {
 
-  const words =
-    term.split(" ");
+        return searchText.includes(
+          word
+        );
 
-
-  return words.every(
-    function(word) {
-
-      return searchableText.includes(
-        word
-      );
-
-    }
-  );
+      }
+    );
 
 }
 
-
-/* =========================================================
-   SEARCH SCORE
-========================================================= */
 
 function getSearchScore(
   product,
@@ -5539,7 +4682,6 @@ function getSearchScore(
       rawTerm
     );
 
-
   if (
     !term
   ) {
@@ -5548,33 +4690,24 @@ function getSearchScore(
 
   }
 
-
-  const normalizedName =
+  const name =
     normalizeSearchText(
       product.name
     );
 
-
-  const identityValues =
-    getIdentityValues(
-      product
-    );
-
-
-  let score = 0;
-
+  let score =
+    0;
 
   if (
-    normalizedName === term
+    name === term
   ) {
 
     score += 1000;
 
   }
 
-
   if (
-    normalizedName.startsWith(
+    name.startsWith(
       term
     )
   ) {
@@ -5583,8 +4716,10 @@ function getSearchScore(
 
   }
 
-
-  identityValues.forEach(
+  getIdentityValues(
+    product
+  )
+  .forEach(
     function(value) {
 
       if (
@@ -5605,19 +4740,8 @@ function getSearchScore(
 
       }
 
-      else if (
-        value.includes(
-          term
-        )
-      ) {
-
-        score += 80;
-
-      }
-
     }
   );
-
 
   return score;
 
@@ -5635,25 +4759,41 @@ function buildCatalog(
   catalogGrid.innerHTML =
     "";
 
-
   list.forEach(
     function(product) {
+
+      const productIndex =
+        products.indexOf(
+          product
+        );
 
       const card =
         document.createElement(
           "article"
         );
 
-
       card.className =
         "product-card";
 
-
-      const originalIndex =
-        products.indexOf(
+      const coas =
+        getProductCoas(
           product
         );
 
+      const safeName =
+        escapeHTML(
+          product.name
+        );
+
+      const safeCategory =
+        escapeHTML(
+          product.category
+        );
+
+      const safeAmount =
+        escapeHTML(
+          product.amount
+        );
 
       const vialName =
         escapeHTML(
@@ -5662,43 +4802,13 @@ function buildCatalog(
           )
         );
 
-
-      const safeName =
-        escapeHTML(
-          product.name
-        );
-
-
-      const safeCategory =
-        escapeHTML(
-          product.category
-        );
-
-
-      const safeAmount =
-        escapeHTML(
-          product.amount
-        );
-
-
       const safeDescription =
         escapeHTML(
           product.description
         );
 
-
-      const productCoas =
-        getProductCoas(
-          product
-        );
-
-
-      const coaCount =
-        productCoas.length;
-
-
-      const coaSection =
-        coaCount > 0
+      const coaIndicator =
+        coas.length
         ?
         `
 
@@ -5707,11 +4817,13 @@ function buildCatalog(
           <span class="coa-dot"></span>
 
           ${
-            coaCount > 1
+            coas.length === 1
             ?
-            coaCount + " COA REPORTS AVAILABLE"
+            "ANALYTICAL REPORT AVAILABLE"
             :
-            "COA AVAILABLE"
+            coas.length
+            +
+            " ANALYTICAL REPORTS AVAILABLE"
           }
 
         </div>
@@ -5720,24 +4832,25 @@ function buildCatalog(
         :
         "";
 
-
       const coaButton =
-        coaCount > 0
+        coas.length
         ?
         `
 
         <button
           type="button"
           class="btn btn-coa"
-          data-coa-index="${originalIndex}"
+          data-coa-index="${productIndex}"
         >
+
           ${
-            coaCount > 1
+            coas.length === 1
             ?
-            "VIEW COAs"
-            :
             "VIEW COA"
+            :
+            "VIEW COAs"
           }
+
         </button>
 
         `
@@ -5749,7 +4862,6 @@ function buildCatalog(
         </span>
 
         `;
-
 
       card.innerHTML = `
 
@@ -5780,7 +4892,7 @@ function buildCatalog(
           </p>
 
 
-          ${coaSection}
+          ${coaIndicator}
 
 
         </div>
@@ -5800,12 +4912,9 @@ function buildCatalog(
 
             <div class="vial-cap"></div>
 
-
             <div class="vial-neck"></div>
 
-
             <div class="vial-shine"></div>
-
 
             <div class="vial-shine-right"></div>
 
@@ -5889,9 +4998,7 @@ function buildCatalog(
 
         </div>
 
-
       `;
-
 
       catalogGrid.appendChild(
         card
@@ -5901,7 +5008,7 @@ function buildCatalog(
   );
 
 
-  document
+  catalogGrid
     .querySelectorAll(
       "[data-coa-index]"
     )
@@ -5914,7 +5021,8 @@ function buildCatalog(
 
             openCoaViewer(
               Number(
-                button.dataset.coaIndex
+                button.dataset
+                  .coaIndex
               )
             );
 
@@ -5928,7 +5036,7 @@ function buildCatalog(
 
 
 /* =========================================================
-   ACTIVE FILTER UI
+   FILTER / UPDATE
 ========================================================= */
 
 function setActiveFilterUI(
@@ -5940,7 +5048,9 @@ function setActiveFilterUI(
 
       button.classList.toggle(
         "active",
-        button.dataset.filter === filter
+        button.dataset.filter
+        ===
+        filter
       );
 
     }
@@ -5949,19 +5059,13 @@ function setActiveFilterUI(
 }
 
 
-/* =========================================================
-   UPDATE CATALOG
-========================================================= */
-
 function updateCatalog() {
 
   const rawTerm =
     search.value.trim();
 
-
   const hasSearch =
     rawTerm.length > 0;
-
 
   let filtered =
     products.filter(
@@ -5978,7 +5082,6 @@ function updateCatalog() {
 
         }
 
-
         return (
           activeFilter === "all"
           ||
@@ -5990,7 +5093,6 @@ function updateCatalog() {
       }
     );
 
-
   if (
     hasSearch
   ) {
@@ -6001,15 +5103,13 @@ function updateCatalog() {
         function(product) {
 
           return {
-
-            product: product,
-
+            product:
+              product,
             score:
               getSearchScore(
                 product,
                 rawTerm
               )
-
           };
 
         }
@@ -6031,11 +5131,9 @@ function updateCatalog() {
 
   }
 
-
   buildCatalog(
     filtered
   );
-
 
   count.textContent =
     filtered.length
@@ -6048,14 +5146,12 @@ function updateCatalog() {
       " RESEARCH LISTINGS"
     );
 
-
   noResults.style.display =
     filtered.length === 0
     ?
     "block"
     :
     "none";
-
 
   searchClear.classList.toggle(
     "visible",
@@ -6065,47 +5161,28 @@ function updateCatalog() {
 }
 
 
-/* =========================================================
-   SEARCH
-========================================================= */
-
-function handleSearchInput() {
-
-  if (
-    search.value.length > 0
-  ) {
-
-    activeFilter =
-      "all";
-
-
-    setActiveFilterUI(
-      "all"
-    );
-
-  }
-
-
-  updateCatalog();
-
-}
-
-
 search.addEventListener(
   "input",
-  handleSearchInput
+  function() {
+
+    if (
+      search.value.length
+    ) {
+
+      activeFilter =
+        "all";
+
+      setActiveFilterUI(
+        "all"
+      );
+
+    }
+
+    updateCatalog();
+
+  }
 );
 
-
-search.addEventListener(
-  "search",
-  handleSearchInput
-);
-
-
-/* =========================================================
-   CLEAR SEARCH
-========================================================= */
 
 searchClear.addEventListener(
   "click",
@@ -6114,28 +5191,20 @@ searchClear.addEventListener(
     search.value =
       "";
 
-
     activeFilter =
       "all";
-
 
     setActiveFilterUI(
       "all"
     );
 
-
     updateCatalog();
-
 
     search.focus();
 
   }
 );
 
-
-/* =========================================================
-   FILTERS
-========================================================= */
 
 filterButtons.forEach(
   function(button) {
@@ -6147,56 +5216,25 @@ filterButtons.forEach(
         activeFilter =
           button.dataset.filter;
 
-
         search.value =
           "";
-
 
         setActiveFilterUI(
           activeFilter
         );
 
-
         updateCatalog();
 
-      }
-    );
-
-  }
-);
-
-
-/* =========================================================
-   FILTER SCROLL
-========================================================= */
-
-filterBar.addEventListener(
-  "click",
-  function(event) {
-
-    const button =
-      event.target.closest(
-        ".filter-button"
-      );
-
-
-    if (
-      !button
-    ) {
-
-      return;
-
-    }
-
-
-    button.scrollIntoView(
-      {
-
-        behavior: "smooth",
-
-        block: "nearest",
-
-        inline: "center"
+        button.scrollIntoView(
+          {
+            behavior:
+              "smooth",
+            block:
+              "nearest",
+            inline:
+              "center"
+          }
+        );
 
       }
     );
@@ -6214,7 +5252,6 @@ const menuButton =
     "mobileMenuButton"
   );
 
-
 const menu =
   document.getElementById(
     "mobileMenu"
@@ -6230,15 +5267,8 @@ menuButton.addEventListener(
         "open"
       );
 
-
     menuButton.classList.toggle(
       "active",
-      open
-    );
-
-
-    menuButton.setAttribute(
-      "aria-expanded",
       open
     );
 
@@ -6259,15 +5289,8 @@ menu
             "open"
           );
 
-
           menuButton.classList.remove(
             "active"
-          );
-
-
-          menuButton.setAttribute(
-            "aria-expanded",
-            "false"
           );
 
         }
@@ -6286,18 +5309,11 @@ heroListingCount.textContent =
   +
   " LISTINGS";
 
-
-activeFilter =
-  "all";
-
-
 setActiveFilterUI(
   "all"
 );
 
-
 updateCatalog();
-
 
 restoreMemberSession();
 
