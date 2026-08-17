@@ -356,15 +356,15 @@ const products=[
 {name:"GHK-Cu",category:"RESEARCH MATERIAL",amount:"50 MG",price:25,groups:["recovery"],keywords:["g","ghk","ghkcu","ghk-cu","copper","50mg","50 mg"],coa:"ghkcu-50mg-coa.png",description:"GHK-Cu research-material listing at 50 mg."},
 {name:"GHK-Cu",category:"RESEARCH MATERIAL",amount:"100 MG",price:45,groups:["recovery"],keywords:["g","ghk","ghkcu","ghk-cu","copper","100mg","100 mg"],description:"GHK-Cu research-material listing at 100 mg."},
 {name:"Cartalax",category:"RESEARCH MATERIAL",amount:"20 MG",price:50,groups:["recovery"],keywords:["c","cartalax","cartilage","20mg","20 mg"],coa:"cartalax-20mg-coa.jpg",description:"Cartalax research-material listing at 20 mg."},
-{name:"N-Acetyl Semax (Amidate)",category:"RESEARCH MATERIAL",amount:"10 MG",price:45,groups:["mind"],keywords:["n","s","semax","n acetyl semax","amidate","10mg","10 mg"],description:"N-Acetyl Semax Amidate research-material listing at 10 mg."},
-{name:"N-Acetyl Selank (Amidate)",category:"RESEARCH MATERIAL",amount:"10 MG",price:45,groups:["mind"],keywords:["n","s","selank","n acetyl selank","amidate","10mg","10 mg"],description:"N-Acetyl Selank Amidate research-material listing at 10 mg."},
+{name:"N-Acetyl Semax (Amidate)",category:"RESEARCH MATERIAL",amount:"10 MG",price:45,groups:["mind"],keywords:["n","s","semax","n acetyl semax","amidate","10mg","10 mg"],coa:"Test Report #196930.png",description:"N-Acetyl Semax Amidate research-material listing at 10 mg."},
+{name:"N-Acetyl Selank (Amidate)",category:"RESEARCH MATERIAL",amount:"10 MG",price:45,groups:["mind"],keywords:["n","s","selank","n acetyl selank","amidate","10mg","10 mg"],coa:"Test Report #209069.png",description:"N-Acetyl Selank Amidate research-material listing at 10 mg."},
 {name:"PT-141",category:"RESEARCH MATERIAL",amount:"10 MG",price:35,groups:["mind"],keywords:["p","pt","pt141","pt-141","10mg"],description:"Research-material catalog listing at 10 mg."},
 {name:"Epithalon / Epitalon (Amidate)",category:"RESEARCH MATERIAL",amount:"10 MG",price:40,groups:["mind"],keywords:["e","epithalon","epitalon","amidate","10mg"],description:"Research-material catalog listing at 10 mg."},
 {name:"Pinealon",category:"RESEARCH MATERIAL",amount:"10 MG",price:40,groups:["mind"],keywords:["p","pinealon","10mg"],description:"Pinealon research-material catalog listing at 10 mg."},
-{name:"DSIP",category:"RESEARCH MATERIAL",amount:"5 MG",price:25,groups:["mind"],keywords:["d","dsip","sleep","5mg","5 mg"],description:"DSIP research-material listing at 5 mg."},
+{name:"DSIP",category:"RESEARCH MATERIAL",amount:"5 MG",price:25,groups:["mind"],keywords:["d","dsip","sleep","5mg","5 mg"],coa:"Test Report #195227.png",description:"DSIP research-material listing at 5 mg."},
 {name:"DSIP",category:"RESEARCH MATERIAL",amount:"10 MG",price:40,groups:["mind"],keywords:["d","dsip","sleep","10mg","10 mg"],coa:"coa-dsip-10mg-ils.jpg",description:"DSIP research-material listing at 10 mg."},
 {name:"ARA-290 (Cibinetide)",category:"RESEARCH MATERIAL",amount:"10 MG",price:40,groups:["recovery"],keywords:["a","ara","ara290","ara-290","cibinetide","10mg","10 mg"],description:"ARA-290 research-material catalog listing at 10 mg."},
-{name:"ARA-290",category:"RESEARCH MATERIAL",amount:"15 MG",price:60,groups:["recovery"],keywords:["a","ara","ara290","ara-290","cibinetide","15mg","15 mg","16mg","16 mg","209071"],description:"ARA-290 research-material catalog listing at 15 mg."},
+{name:"ARA-290",category:"RESEARCH MATERIAL",amount:"15 MG",price:60,groups:["recovery"],keywords:["a","ara","ara290","ara-290","cibinetide","15mg","15 mg","16mg","16 mg","209071"],coa:"Test Report #209071.png",description:"ARA-290 research-material catalog listing at 15 mg."},
 {name:"ARA-290",category:"RESEARCH MATERIAL",amount:"50 MG",price:90,groups:["recovery"],keywords:["a","ara","ara290","ara-290","cibinetide","50mg","50 mg"],description:"ARA-290 research-material catalog listing at 50 mg."},
 {name:"BPC-157 / TB-500",category:"WOLVERINE",amount:"10 MG",price:70,groups:["recovery"],keywords:["b","w","bpc","bpc157","bpc-157","tb500","tb-500","wolverine","10mg"],coa:"coa-bpc157-tb500-10mg-freedom.jpg",description:"Wolverine research-material combination listed at 10 mg total."},
 {name:"BPC-157 / TB-4",category:"WOLVERINE",amount:"20 MG",price:110,groups:["recovery"],keywords:["b","w","bpc","bpc157","tb4","tb-4","wolverine","20mg"],description:"Wolverine research-material combination listed at 20 mg total."},
@@ -496,7 +496,7 @@ function buildCatalog(list){
 
     if(product.coa){
       indicator='<div class="coa-indicator"><span class="coa-dot"></span>COA AVAILABLE</div>';
-      action=`<a href="./${escapeHTML(product.coa)}" target="_blank" rel="noopener noreferrer" class="btn btn-coa">VIEW COA</a>`;
+      action=`<a href="./${encodeURIComponent(product.coa)}" target="_blank" rel="noopener noreferrer" class="btn btn-coa">VIEW COA</a>`;
     }else if(!product.hideCoaStatus){
       action='<span class="btn-unavailable">COA PENDING</span>';
     }
