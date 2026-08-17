@@ -75,6 +75,10 @@ body {
   overflow-x: hidden;
 }
 
+body.coa-modal-open {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -739,7 +743,7 @@ button {
 
 
 /* =========================================================
-   CHECKOUT AREA
+   CHECKOUT
 ========================================================= */
 
 .checkout-section {
@@ -959,7 +963,7 @@ button {
 
 
 /* =========================================================
-   FILTER BUBBLES
+   FILTERS
 ========================================================= */
 
 .filter-bar {
@@ -1092,7 +1096,7 @@ button {
 
 
 /* =========================================================
-   PRODUCT GRID
+   GRID
 ========================================================= */
 
 .catalog-grid {
@@ -1274,8 +1278,7 @@ button {
 
 
 /* =========================================================
-   PCH PREMIUM GLASS VIAL
-   TALL / NARROW / CLEAR LIKE REFERENCE
+   VIAL
 ========================================================= */
 
 .vial-area {
@@ -1296,9 +1299,6 @@ button {
 
   pointer-events: none;
 }
-
-
-/* soft floor glow */
 
 .vial-glow {
   position: absolute;
@@ -1327,11 +1327,6 @@ button {
 
   opacity: .9;
 }
-
-
-/* =========================================================
-   VIAL GLASS BODY
-========================================================= */
 
 .vial {
   position: relative;
@@ -1373,11 +1368,6 @@ button {
     inset 0 -8px 10px rgba(255,255,255,.07);
 }
 
-
-/* =========================================================
-   GLASS SHOULDER
-========================================================= */
-
 .vial::before {
   content: "";
 
@@ -1417,11 +1407,6 @@ button {
   z-index: 1;
 }
 
-
-/* =========================================================
-   HEAVY GLASS BASE
-========================================================= */
-
 .vial::after {
   content: "";
 
@@ -1451,11 +1436,6 @@ button {
 
   z-index: 5;
 }
-
-
-/* =========================================================
-   CAP
-========================================================= */
 
 .vial-cap {
   position: absolute;
@@ -1495,9 +1475,6 @@ button {
     inset 0 -4px 5px rgba(0,0,0,.16);
 }
 
-
-/* black stopper top */
-
 .vial-cap::before {
   content: "";
 
@@ -1528,9 +1505,6 @@ button {
     0 2px 4px rgba(0,0,0,.45);
 }
 
-
-/* lower crimp edge */
-
 .vial-cap::after {
   content: "";
 
@@ -1556,11 +1530,6 @@ button {
 
   opacity: .85;
 }
-
-
-/* =========================================================
-   GLASS NECK
-========================================================= */
 
 .vial-neck {
   position: absolute;
@@ -1593,11 +1562,6 @@ button {
     inset 3px 0 3px rgba(255,255,255,.06),
     inset -3px 0 3px rgba(255,255,255,.04);
 }
-
-
-/* =========================================================
-   MAIN BLACK LABEL
-========================================================= */
 
 .vial-label {
   position: absolute;
@@ -1644,9 +1608,6 @@ button {
     inset -4px 0 8px rgba(255,255,255,.012);
 }
 
-
-/* subtle premium label texture */
-
 .vial-label::before {
   content: "";
 
@@ -1667,9 +1628,6 @@ button {
 
   pointer-events: none;
 }
-
-
-/* subtle label shine */
 
 .vial-label::after {
   content: "";
@@ -1693,11 +1651,6 @@ button {
 
   pointer-events: none;
 }
-
-
-/* =========================================================
-   LABEL CONTENT
-========================================================= */
 
 .vial-logo {
   position: relative;
@@ -1871,11 +1824,6 @@ button {
     );
 }
 
-
-/* =========================================================
-   EXTRA GLASS HIGHLIGHTS
-========================================================= */
-
 .vial-shine {
   position: absolute;
 
@@ -2026,6 +1974,14 @@ button {
     );
 }
 
+.btn-coa:hover {
+  border-color:
+    rgba(240,212,140,.9);
+
+  background:
+    rgba(213,173,85,.10);
+}
+
 .btn-unavailable {
   display: inline-flex;
 
@@ -2060,6 +2016,274 @@ button {
   font-weight: 900;
 
   letter-spacing: .8px;
+}
+
+
+/* =========================================================
+   COA MODAL
+========================================================= */
+
+.coa-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 10000;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    rgba(0,0,0,.9);
+
+  backdrop-filter:
+    blur(14px);
+}
+
+.coa-modal.open {
+  display: flex;
+}
+
+.coa-modal-card {
+  position: relative;
+
+  width:
+    min(
+      920px,
+      100%
+    );
+
+  max-height:
+    calc(
+      100vh - 40px
+    );
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border:
+    1px solid rgba(213,173,85,.34);
+
+  border-radius: 20px;
+
+  background: #0a0c0e;
+
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.75);
+}
+
+.coa-modal-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 18px 20px;
+
+  border-bottom:
+    1px solid #282d31;
+
+  background:
+    linear-gradient(
+      145deg,
+      #121517,
+      #090b0d
+    );
+}
+
+.coa-modal-heading {
+  min-width: 0;
+}
+
+.coa-modal-eyebrow {
+  color: var(--gold);
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.coa-modal-title {
+  margin-top: 2px;
+
+  font-size: 19px;
+
+  line-height: 1.2;
+
+  font-weight: 900;
+}
+
+.coa-close {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border:
+    1px solid #343a3f;
+
+  border-radius: 50%;
+
+  background: #121517;
+
+  color: #fff;
+
+  font-size: 22px;
+
+  line-height: 1;
+}
+
+.coa-tabs {
+  display: none;
+
+  gap: 8px;
+
+  padding: 12px 16px;
+
+  overflow-x: auto;
+
+  border-bottom:
+    1px solid #262b2f;
+
+  background: #080a0b;
+
+  scrollbar-width: none;
+}
+
+.coa-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.coa-tabs.visible {
+  display: flex;
+}
+
+.coa-tab {
+  flex: 0 0 auto;
+
+  min-height: 40px;
+
+  padding: 0 14px;
+
+  border:
+    1px solid #343a3f;
+
+  border-radius: 100px;
+
+  background: #101315;
+
+  color: #aeb4b8;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .5px;
+}
+
+.coa-tab.active {
+  border-color:
+    rgba(240,212,140,.85);
+
+  background:
+    linear-gradient(
+      135deg,
+      #b98a32,
+      #efd17b
+    );
+
+  color: #080909;
+}
+
+.coa-image-wrap {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow: auto;
+
+  padding: 18px;
+
+  background: #050607;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.coa-image-wrap img {
+  width: auto;
+
+  max-width: 100%;
+
+  margin: auto;
+
+  border-radius: 5px;
+
+  background: #fff;
+
+  box-shadow:
+    0 15px 50px rgba(0,0,0,.45);
+}
+
+.coa-modal-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 13px 18px;
+
+  border-top:
+    1px solid #282d31;
+
+  background: #0b0d0f;
+}
+
+.coa-modal-note {
+  color: #7f868b;
+
+  font-size: 8px;
+
+  line-height: 1.5;
+}
+
+.coa-open-original {
+  display: inline-flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 40px;
+
+  padding: 0 14px;
+
+  border:
+    1px solid rgba(213,173,85,.5);
+
+  border-radius: 9px;
+
+  background:
+    rgba(213,173,85,.045);
+
+  color: var(--gold2);
+
+  font-size: 8px;
+
+  font-weight: 900;
 }
 
 
@@ -2133,7 +2357,7 @@ button {
 
 
 /* =========================================================
-   MOBILE STICKY CHECKOUT
+   MOBILE CHECKOUT
 ========================================================= */
 
 .mobile-sticky-checkout {
@@ -2319,7 +2543,6 @@ footer {
     font-size: 8.5px;
   }
 
-
   .page-hero {
     padding: 34px 0 30px;
   }
@@ -2350,7 +2573,6 @@ footer {
     font-size: 7px;
   }
 
-
   .checkout-section {
     padding: 19px 0;
   }
@@ -2377,7 +2599,6 @@ footer {
     font-size: 9px;
   }
 
-
   .catalog-section {
     padding-top: 16px;
   }
@@ -2401,9 +2622,6 @@ footer {
   .search-icon {
     font-size: 24px;
   }
-
-
-  /* larger filter bubbles */
 
   .filter-bar {
     display: flex;
@@ -2444,7 +2662,6 @@ footer {
     letter-spacing: .8px;
   }
 
-
   .catalog-toolbar {
     margin: 19px 0 14px;
   }
@@ -2452,11 +2669,6 @@ footer {
   .catalog-count {
     font-size: 9px;
   }
-
-
-  /* =========================================================
-     MOBILE PRODUCT CARD
-  ========================================================= */
 
   .catalog-grid {
     gap: 17px;
@@ -2517,11 +2729,6 @@ footer {
 
     font-size: 7px;
   }
-
-
-  /* =========================================================
-     MOBILE PREMIUM VIAL
-  ========================================================= */
 
   .vial-area {
     top: 61px;
@@ -2660,7 +2867,6 @@ footer {
     height: 95px;
   }
 
-
   .product-bottom {
     gap: 9px;
 
@@ -2701,7 +2907,6 @@ footer {
     display: none;
   }
 
-
   .catalog-notice {
     margin-top: 28px;
 
@@ -2714,6 +2919,77 @@ footer {
 
   .catalog-notice p {
     font-size: 10px;
+  }
+
+  .coa-modal {
+    padding:
+      8px 8px
+      calc(
+        8px +
+        env(safe-area-inset-bottom)
+      );
+  }
+
+  .coa-modal-card {
+    width: 100%;
+
+    max-height:
+      calc(
+        100vh -
+        16px -
+        env(safe-area-inset-bottom)
+      );
+
+    border-radius: 16px;
+  }
+
+  .coa-modal-header {
+    padding: 14px;
+  }
+
+  .coa-modal-title {
+    font-size: 16px;
+  }
+
+  .coa-close {
+    width: 40px;
+    height: 40px;
+  }
+
+  .coa-tabs {
+    padding: 10px 11px;
+  }
+
+  .coa-tab {
+    min-height: 39px;
+
+    padding: 0 13px;
+
+    font-size: 7.5px;
+  }
+
+  .coa-image-wrap {
+    padding: 9px;
+  }
+
+  .coa-image-wrap img {
+    width: 100%;
+  }
+
+  .coa-modal-footer {
+    padding: 11px 12px;
+  }
+
+  .coa-modal-note {
+    font-size: 7px;
+  }
+
+  .coa-open-original {
+    min-height: 38px;
+
+    font-size: 7px;
+
+    padding: 0 11px;
   }
 
 }
@@ -2894,37 +3170,21 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 <nav class="nav-links">
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 
-<a href="research-information.html">
-Research
-</a>
+<a href="research-information.html">Research</a>
 
-<a href="catalog.html">
-Catalog
-</a>
+<a href="catalog.html">Catalog</a>
 
-<a href="quality-coa.html">
-Quality & COA
-</a>
+<a href="quality-coa.html">Quality & COA</a>
 
-<a href="recommended-supplies.html">
-Supplies
-</a>
+<a href="recommended-supplies.html">Supplies</a>
 
-<a href="policies.html">
-Policies
-</a>
+<a href="policies.html">Policies</a>
 
-<a href="faq.html">
-FAQ
-</a>
+<a href="faq.html">FAQ</a>
 
-<a href="contact.html">
-Contact
-</a>
+<a href="contact.html">Contact</a>
 
 </nav>
 
@@ -3499,6 +3759,93 @@ Not for human or animal use
 </div>
 
 
+<!-- =========================================================
+     COA VIEWER
+========================================================= -->
+
+<div
+  class="coa-modal"
+  id="coaModal"
+  aria-hidden="true"
+>
+
+<div class="coa-modal-card">
+
+
+<div class="coa-modal-header">
+
+<div class="coa-modal-heading">
+
+<div class="coa-modal-eyebrow">
+CERTIFICATE OF ANALYSIS
+</div>
+
+<div
+  class="coa-modal-title"
+  id="coaModalTitle"
+>
+Laboratory Documentation
+</div>
+
+</div>
+
+
+<button
+  type="button"
+  class="coa-close"
+  id="coaClose"
+  aria-label="Close Certificate of Analysis"
+>
+×
+</button>
+
+</div>
+
+
+<div
+  class="coa-tabs"
+  id="coaTabs"
+></div>
+
+
+<div class="coa-image-wrap">
+
+<img
+  id="coaModalImage"
+  src=""
+  alt="Certificate of Analysis"
+>
+
+</div>
+
+
+<div class="coa-modal-footer">
+
+<div class="coa-modal-note">
+Original analytical documentation.
+Each report applies only to the sample,
+lot or submission identified in the report.
+</div>
+
+
+<a
+  href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="coa-open-original"
+  id="coaOpenOriginal"
+>
+OPEN FULL SIZE
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+
 <script
   src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
 ></script>
@@ -3871,7 +4218,12 @@ const products = [
   price: 32,
   groups: ["bac"],
   keywords:
-    ["hospira", "bac", "water", "bacteriostatic"],
+    [
+      "hospira",
+      "bac",
+      "water",
+      "bacteriostatic"
+    ],
   description:
     "Laboratory supply listing with associated documentation information where available."
 },
@@ -3883,9 +4235,24 @@ const products = [
   price: 16,
   groups: ["bac"],
   keywords:
-    ["ebac", "bac", "water", "bacteriostatic"],
+    [
+      "ebac",
+      "bac",
+      "water",
+      "bacteriostatic",
+      "30ml",
+      "30 ml"
+    ],
+  coas: [
+    {
+      label:
+        "STERILITY / ENDOTOXIN",
+      file:
+        "coa-ebac-water-30ml-chromate.jpg"
+    }
+  ],
   description:
-    "Laboratory supply listing with associated documentation information where available."
+    "Laboratory supply listing with third-party analytical documentation available."
 },
 
 {
@@ -3952,8 +4319,28 @@ const products = [
       "30mg",
       "30 mg"
     ],
+  coas: [
+    {
+      label:
+        "FREEDOM COA",
+      file:
+        "coa-r30-freedom.jpg"
+    },
+    {
+      label:
+        "FREEDOM V3",
+      file:
+        "coa-r30-v3-freedom.jpg"
+    },
+    {
+      label:
+        "ENDOTOXIN",
+      file:
+        "coa-retatrutide-endotoxin-janoshik.jpg"
+    }
+  ],
   description:
-    "R-series research-material listing at 30 mg."
+    "R-series research-material listing at 30 mg with multiple analytical reports available."
 },
 
 {
@@ -4163,7 +4550,8 @@ const products = [
       "d",
       "dsip",
       "sleep",
-      "5mg"
+      "5mg",
+      "5 mg"
     ],
   description:
     "DSIP research-material listing at 5 mg."
@@ -4180,10 +4568,19 @@ const products = [
       "d",
       "dsip",
       "sleep",
-      "10mg"
+      "10mg",
+      "10 mg"
     ],
+  coas: [
+    {
+      label:
+        "ILS LABS",
+      file:
+        "coa-dsip-10mg-ils.jpg"
+    }
+  ],
   description:
-    "DSIP research-material listing at 10 mg."
+    "DSIP research-material listing at 10 mg with analytical documentation available."
 },
 
 {
@@ -4242,8 +4639,16 @@ const products = [
       "wolverine",
       "10mg"
     ],
+  coas: [
+    {
+      label:
+        "FREEDOM COA",
+      file:
+        "coa-bpc157-tb500-10mg-freedom.jpg"
+    }
+  ],
   description:
-    "Wolverine research-material combination listed at 10 mg total."
+    "Wolverine research-material combination listed at 10 mg total with analytical documentation available."
 },
 
 {
@@ -4301,10 +4706,25 @@ const products = [
     [
       "k",
       "klow",
-      "80mg"
+      "80mg",
+      "80 mg"
     ],
+  coas: [
+    {
+      label:
+        "PURITY / IDENTITY",
+      file:
+        "coa-klow-80mg-freedom.jpg"
+    },
+    {
+      label:
+        "ENDOTOXIN",
+      file:
+        "coa-klow-80mg-endotoxin-freedom.jpg"
+    }
+  ],
   description:
-    "KLOW research-material catalog listing at 80 mg."
+    "KLOW research-material catalog listing at 80 mg with multiple analytical reports available."
 },
 
 {
@@ -4333,10 +4753,23 @@ const products = [
     [
       "c",
       "cjc",
-      "5mg"
+      "cjc1295",
+      "cjc-1295",
+      "no dac",
+      "nodac",
+      "5mg",
+      "5 mg"
     ],
+  coas: [
+    {
+      label:
+        "CJC 5 MG COA",
+      file:
+        "coa-cjc-nodac-10mg-freedom.jpg"
+    }
+  ],
   description:
-    "CJC research-material catalog listing at 5 mg."
+    "CJC research-material catalog listing at 5 mg with analytical documentation available."
 },
 
 {
@@ -4408,10 +4841,16 @@ const products = [
       "10mg",
       "mitochondria"
     ],
-  coa:
-    "motsc-10mg-greencaps-coa.png",
+  coas: [
+    {
+      label:
+        "FREEDOM COA",
+      file:
+        "coa-motsc-10mg-freedom.jpg"
+    }
+  ],
   description:
-    "MOTS-C research-material catalog listing at 10 mg."
+    "MOTS-C research-material catalog listing at 10 mg with analytical documentation available."
 },
 
 {
@@ -4519,8 +4958,46 @@ const filterButtons =
     )
   );
 
+
+const coaModal =
+  document.getElementById(
+    "coaModal"
+  );
+
+const coaModalTitle =
+  document.getElementById(
+    "coaModalTitle"
+  );
+
+const coaModalImage =
+  document.getElementById(
+    "coaModalImage"
+  );
+
+const coaTabs =
+  document.getElementById(
+    "coaTabs"
+  );
+
+const coaClose =
+  document.getElementById(
+    "coaClose"
+  );
+
+const coaOpenOriginal =
+  document.getElementById(
+    "coaOpenOriginal"
+  );
+
+
 let activeFilter =
   "all";
+
+let activeCoaDocuments =
+  [];
+
+let activeCoaIndex =
+  0;
 
 
 /* =========================================================
@@ -4591,6 +5068,48 @@ function createVialName(
 
 
   return cleanName;
+
+}
+
+
+/* =========================================================
+   COA ARRAY
+========================================================= */
+
+function getProductCoas(
+  product
+) {
+
+  if (
+    Array.isArray(
+      product.coas
+    )
+    &&
+    product.coas.length
+  ) {
+
+    return product.coas;
+
+  }
+
+
+  if (
+    product.coa
+  ) {
+
+    return [
+      {
+        label:
+          "CERTIFICATE OF ANALYSIS",
+        file:
+          product.coa
+      }
+    ];
+
+  }
+
+
+  return [];
 
 }
 
@@ -4742,10 +5261,6 @@ function productMatchesSearch(
     );
 
 
-  /*
-    SINGLE CHARACTER SEARCH
-  */
-
   if (
     term.length === 1
   ) {
@@ -4778,10 +5293,6 @@ function productMatchesSearch(
 
   }
 
-
-  /*
-    MULTI CHARACTER SEARCH
-  */
 
   const searchableText =
     getBroadSearchText(
@@ -4906,6 +5417,291 @@ function getSearchScore(
 
 
 /* =========================================================
+   COA VIEWER
+========================================================= */
+
+function displayCoaDocument(
+  index
+) {
+
+  if (
+    !activeCoaDocuments.length
+  ) {
+
+    return;
+
+  }
+
+
+  activeCoaIndex =
+    index;
+
+
+  const coaDocument =
+    activeCoaDocuments[
+      activeCoaIndex
+    ];
+
+
+  coaModalImage.src =
+    coaDocument.file;
+
+
+  coaModalImage.alt =
+    coaDocument.label
+    +
+    " Certificate of Analysis";
+
+
+  coaOpenOriginal.href =
+    coaDocument.file;
+
+
+  const tabButtons =
+    Array.from(
+      coaTabs.querySelectorAll(
+        ".coa-tab"
+      )
+    );
+
+
+  tabButtons.forEach(
+    function(button) {
+
+      button.classList.toggle(
+        "active",
+        Number(
+          button.dataset.index
+        )
+        ===
+        activeCoaIndex
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   OPEN COA
+========================================================= */
+
+function openCoaModal(
+  productIndex
+) {
+
+  const product =
+    products[
+      productIndex
+    ];
+
+
+  if (
+    !product
+  ) {
+
+    return;
+
+  }
+
+
+  activeCoaDocuments =
+    getProductCoas(
+      product
+    );
+
+
+  if (
+    !activeCoaDocuments.length
+  ) {
+
+    return;
+
+  }
+
+
+  coaModalTitle.textContent =
+    product.name
+    +
+    " · "
+    +
+    product.amount;
+
+
+  coaTabs.innerHTML =
+    "";
+
+
+  activeCoaDocuments.forEach(
+    function(
+      coaDocument,
+      index
+    ) {
+
+      const button =
+        window.document.createElement(
+          "button"
+        );
+
+
+      button.type =
+        "button";
+
+
+      button.className =
+        "coa-tab";
+
+
+      button.dataset.index =
+        index;
+
+
+      button.textContent =
+        coaDocument.label;
+
+
+      button.addEventListener(
+        "click",
+        function() {
+
+          displayCoaDocument(
+            index
+          );
+
+        }
+      );
+
+
+      coaTabs.appendChild(
+        button
+      );
+
+    }
+  );
+
+
+  if (
+    activeCoaDocuments.length > 1
+  ) {
+
+    coaTabs.classList.add(
+      "visible"
+    );
+
+  }
+
+  else {
+
+    coaTabs.classList.remove(
+      "visible"
+    );
+
+  }
+
+
+  displayCoaDocument(
+    0
+  );
+
+
+  coaModal.classList.add(
+    "open"
+  );
+
+
+  coaModal.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+
+  document.body.classList.add(
+    "coa-modal-open"
+  );
+
+}
+
+
+/* =========================================================
+   CLOSE COA
+========================================================= */
+
+function closeCoaModal() {
+
+  coaModal.classList.remove(
+    "open"
+  );
+
+
+  coaModal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+
+  document.body.classList.remove(
+    "coa-modal-open"
+  );
+
+
+  coaModalImage.src =
+    "";
+
+
+  activeCoaDocuments =
+    [];
+
+
+  activeCoaIndex =
+    0;
+
+}
+
+
+coaClose.addEventListener(
+  "click",
+  closeCoaModal
+);
+
+
+coaModal.addEventListener(
+  "click",
+  function(event) {
+
+    if (
+      event.target === coaModal
+    ) {
+
+      closeCoaModal();
+
+    }
+
+  }
+);
+
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (
+      event.key === "Escape"
+      &&
+      coaModal.classList.contains(
+        "open"
+      )
+    ) {
+
+      closeCoaModal();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
    BUILD CATALOG
 ========================================================= */
 
@@ -4919,6 +5715,12 @@ function buildCatalog(
 
   list.forEach(
     function(product) {
+
+      const productIndex =
+        products.indexOf(
+          product
+        );
+
 
       const card =
         document.createElement(
@@ -4962,8 +5764,28 @@ function buildCatalog(
         );
 
 
+      const coaDocuments =
+        getProductCoas(
+          product
+        );
+
+
+      const hasCoa =
+        coaDocuments.length > 0;
+
+
+      const coaIndicatorText =
+        coaDocuments.length > 1
+        ?
+        coaDocuments.length
+        +
+        " LAB REPORTS AVAILABLE"
+        :
+        "COA AVAILABLE";
+
+
       const coaSection =
-        product.coa
+        hasCoa
         ?
         `
 
@@ -4971,7 +5793,7 @@ function buildCatalog(
 
           <span class="coa-dot"></span>
 
-          COA AVAILABLE
+          ${coaIndicatorText}
 
         </div>
 
@@ -4981,18 +5803,23 @@ function buildCatalog(
 
 
       const coaButton =
-        product.coa
+        hasCoa
         ?
         `
 
-        <a
-          href="${escapeHTML(product.coa)}"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="button"
           class="btn btn-coa"
+          data-coa-product-index="${productIndex}"
         >
-          VIEW COA
-        </a>
+          ${
+            coaDocuments.length > 1
+            ?
+            "VIEW COAs"
+            :
+            "VIEW COA"
+          }
+        </button>
 
         `
         :
@@ -5153,6 +5980,35 @@ function buildCatalog(
 
     }
   );
+
+
+  catalogGrid
+    .querySelectorAll(
+      "[data-coa-product-index]"
+    )
+    .forEach(
+      function(button) {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            const productIndex =
+              Number(
+                button.dataset
+                  .coaProductIndex
+              );
+
+
+            openCoaModal(
+              productIndex
+            );
+
+          }
+        );
+
+      }
+    );
 
 }
 
@@ -5330,24 +6186,6 @@ search.addEventListener(
 search.addEventListener(
   "search",
   handleSearchInput
-);
-
-
-search.addEventListener(
-  "keyup",
-  function(event) {
-
-    if (
-      event.key
-      &&
-      event.key.length === 1
-    ) {
-
-      handleSearchInput();
-
-    }
-
-  }
 );
 
 
@@ -5544,11 +6382,6 @@ setActiveFilterUI(
 );
 
 
-buildCatalog(
-  products
-);
-
-
 updateCatalog();
 
 
@@ -5559,4 +6392,4 @@ restoreMemberSession();
 
 </body>
 
-  </html>
+</html>
