@@ -84,6 +84,8 @@ button {
   --gold2: #f0d48c;
   --text: #f5f5f5;
   --muted: #9da3a8;
+  --silver: #d9d9d9;
+  --silver2: #8d9296;
 }
 
 .shell {
@@ -729,7 +731,7 @@ button {
 
 .hero-meta span {
   padding:
-    6px 10px;
+    7px 12px;
 
   border:
     1px solid #292e32;
@@ -740,7 +742,7 @@ button {
 
   color: #858c91;
 
-  font-size: 7px;
+  font-size: 8px;
 
   font-weight: 900;
 
@@ -852,7 +854,7 @@ button {
 
 
 /* =========================================
-   CATALOG AREA
+   CATALOG
 ========================================= */
 
 .catalog-section {
@@ -887,12 +889,12 @@ button {
   width: 100%;
 
   padding:
-    0 15px;
+    0 16px;
 
   border:
     1px solid #2c3135;
 
-  border-radius: 12px;
+  border-radius: 13px;
 
   background:
     linear-gradient(
@@ -904,23 +906,23 @@ button {
 
 .search-box:focus-within {
   border-color:
-    rgba(213,173,85,.65);
+    rgba(213,173,85,.7);
 
   box-shadow:
     0 0 0 3px
-    rgba(213,173,85,.05);
+    rgba(213,173,85,.06);
 }
 
 .search-icon {
   color: var(--gold);
 
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .search-box input {
   width: 100%;
 
-  min-height: 53px;
+  min-height: 56px;
 
   border: 0;
 
@@ -939,7 +941,7 @@ button {
 
 
 /* =========================================
-   FILTERS
+   FILTER BUBBLES
 ========================================= */
 
 .filter-bar {
@@ -951,31 +953,36 @@ button {
       minmax(0,1fr)
     );
 
-  gap: 8px;
+  gap: 10px;
 
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .filter-button {
-  min-height: 42px;
+  min-height: 48px;
 
   padding:
-    7px 11px;
+    9px 14px;
 
   border:
-    1px solid #2c3135;
+    1px solid #32373b;
 
-  border-radius: 9px;
+  border-radius: 12px;
 
-  background: #0d1012;
+  background:
+    linear-gradient(
+      145deg,
+      #111416,
+      #0a0c0e
+    );
 
-  color: #969da2;
+  color: #b3b8bc;
 
-  font-size: 8px;
+  font-size: 9px;
 
   font-weight: 900;
 
-  letter-spacing: .7px;
+  letter-spacing: .8px;
 
   line-height: 1.3;
 
@@ -1000,6 +1007,10 @@ button {
     );
 
   color: #080909;
+
+  box-shadow:
+    0 7px 18px
+    rgba(213,173,85,.15);
 }
 
 
@@ -1083,7 +1094,7 @@ button {
 .product-card {
   position: relative;
 
-  min-height: 320px;
+  min-height: 345px;
 
   overflow: hidden;
 
@@ -1096,19 +1107,23 @@ button {
   border:
     1px solid var(--border);
 
-  border-radius: 16px;
+  border-radius: 17px;
 
   background:
     radial-gradient(
-      circle at 92% 50%,
-      rgba(213,173,85,.07),
-      transparent 35%
+      circle at 87% 40%,
+      rgba(213,173,85,.09),
+      transparent 31%
     ),
     linear-gradient(
       145deg,
       #101315,
       #090b0c
     );
+
+  box-shadow:
+    inset 0 1px 0
+    rgba(255,255,255,.02);
 
   transition: .25s ease;
 }
@@ -1126,9 +1141,10 @@ button {
 
   z-index: 3;
 
-  width: calc(100% - 125px);
+  width:
+    calc(100% - 148px);
 
-  min-height: 190px;
+  min-height: 205px;
 }
 
 .card-top {
@@ -1136,10 +1152,9 @@ button {
 
   align-items: center;
 
-  justify-content:
-    space-between;
+  gap: 10px;
 
-  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .category {
@@ -1153,16 +1168,41 @@ button {
 }
 
 .amount-badge {
-  display: none;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 28px;
+
+  padding:
+    0 10px;
+
+  border:
+    1px solid #3b4044;
+
+  border-radius: 8px;
+
+  background:
+    rgba(255,255,255,.025);
+
+  color: #d8dadc;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .7px;
 }
 
 .product-card h2 {
   margin:
-    24px 0 8px;
+    20px 0 8px;
 
-  font-size: 26px;
+  font-size: 28px;
 
-  line-height: 1.1;
+  line-height: 1.08;
 }
 
 .product-description {
@@ -1198,21 +1238,25 @@ button {
   border-radius: 50%;
 
   background: var(--gold);
+
+  box-shadow:
+    0 0 8px
+    rgba(213,173,85,.5);
 }
 
 
 /* =========================================
-   VIAL VISUAL
+   PREMIUM PCH VIAL
 ========================================= */
 
 .vial-area {
   position: absolute;
 
-  top: 36px;
+  top: 38px;
   right: 24px;
 
-  width: 100px;
-  height: 180px;
+  width: 125px;
+  height: 210px;
 
   display: flex;
 
@@ -1226,100 +1270,146 @@ button {
 .vial-glow {
   position: absolute;
 
-  bottom: 0;
+  bottom: -5px;
 
-  width: 120px;
-  height: 95px;
+  width: 145px;
+  height: 110px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       ellipse,
-      rgba(213,173,85,.22),
-      rgba(213,173,85,.06) 45%,
+      rgba(213,173,85,.28),
+      rgba(213,173,85,.09) 40%,
       transparent 70%
     );
 
-  filter: blur(10px);
+  filter: blur(13px);
 }
 
 .vial {
   position: relative;
 
-  width: 66px;
-  height: 120px;
+  width: 82px;
+  height: 142px;
 
   border-radius:
-    8px 8px 14px 14px;
+    10px 10px 17px 17px;
 
   background:
     linear-gradient(
       90deg,
-      #08090a,
-      #1a1c1e 25%,
-      #060708 70%,
-      #181a1b
+      #050607 0%,
+      #25282a 20%,
+      #0b0c0d 42%,
+      #030404 68%,
+      #202325 88%,
+      #08090a 100%
     );
 
   border:
-    1px solid #363b3f;
+    1px solid #4a4e51;
 
   box-shadow:
-    0 15px 25px rgba(0,0,0,.65),
-    inset 5px 0 12px rgba(255,255,255,.035),
-    inset -5px 0 12px rgba(0,0,0,.45);
+    0 20px 32px
+    rgba(0,0,0,.8),
+
+    inset 7px 0 15px
+    rgba(255,255,255,.04),
+
+    inset -8px 0 16px
+    rgba(0,0,0,.58);
 }
 
-.vial::before {
-  content: "";
 
+/* SILVER METAL CAP */
+
+.vial-cap {
   position: absolute;
 
-  top: -20px;
-  left: 3px;
+  top: -28px;
+  left: 4px;
 
-  width: 58px;
-  height: 24px;
+  width: 72px;
+  height: 31px;
 
   border-radius:
-    8px 8px 5px 5px;
+    9px 9px 5px 5px;
 
   background:
     linear-gradient(
-      180deg,
-      #f2d58d,
-      #a97727 48%,
-      #e2bb62
+      90deg,
+      #676b6e,
+      #eeeeee 22%,
+      #9ca1a4 48%,
+      #eceeef 72%,
+      #666a6d
     );
 
   border:
-    1px solid rgba(255,255,255,.25);
+    1px solid #8b8f92;
 
   box-shadow:
-    0 3px 7px rgba(0,0,0,.6);
+    0 4px 8px
+    rgba(0,0,0,.7);
 }
 
-.vial::after {
+
+/* BLACK RUBBER TOP */
+
+.vial-cap::before {
   content: "";
 
   position: absolute;
 
-  top: -2px;
-  left: 7px;
+  top: -10px;
+  left: 4px;
 
-  width: 50px;
-  height: 9px;
+  width: 62px;
+  height: 14px;
 
-  border-radius: 2px;
+  border-radius:
+    10px 10px 4px 4px;
 
   background:
     linear-gradient(
       180deg,
-      #151719,
+      #252729,
+      #070809
+    );
+
+  border:
+    1px solid #333638;
+}
+
+
+/* BLACK NECK */
+
+.vial-neck {
+  position: absolute;
+
+  top: 0;
+  left: 10px;
+
+  width: 60px;
+  height: 14px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #1e2022,
       #050607
     );
+
+  border-radius:
+    0 0 7px 7px;
+
+  opacity: .9;
 }
+
+
+/* LABEL */
 
 .vial-label {
   position: absolute;
@@ -1327,9 +1417,9 @@ button {
   left: 7px;
   right: 7px;
 
-  top: 39px;
+  top: 34px;
 
-  min-height: 57px;
+  min-height: 92px;
 
   display: flex;
 
@@ -1337,66 +1427,189 @@ button {
 
   align-items: center;
 
-  justify-content: center;
+  justify-content: flex-start;
 
   padding:
-    5px 3px;
+    5px 4px 5px;
 
   border:
-    1px solid rgba(213,173,85,.35);
+    1px solid rgba(213,173,85,.44);
 
   background:
     linear-gradient(
       145deg,
-      #141515,
-      #060707
+      #101112,
+      #030404
     );
 
   text-align: center;
+
+  overflow: hidden;
 }
 
-.vial-pch {
-  color: var(--gold2);
+
+/* FAINT HEX TEXTURE */
+
+.vial-label::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: .12;
+
+  background:
+    repeating-linear-gradient(
+      60deg,
+      transparent 0,
+      transparent 8px,
+      rgba(213,173,85,.11) 8px,
+      rgba(213,173,85,.11) 9px
+    );
+
+  pointer-events: none;
+}
+
+.vial-logo {
+  position: relative;
+
+  width: 29px;
+  height: 29px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  margin-bottom: 3px;
+
+  border:
+    1px solid rgba(213,173,85,.28);
+}
+
+.vial-brand {
+  position: relative;
+
+  color: #e1e1e1;
 
   font-family: Georgia, serif;
 
-  font-size: 16px;
+  font-size: 6.5px;
 
-  letter-spacing: 2px;
+  font-weight: 700;
 
-  line-height: 1;
+  letter-spacing: 1px;
+
+  line-height: 1.1;
+}
+
+.vial-labs {
+  position: relative;
+
+  margin-top: 1px;
+
+  color: var(--gold);
+
+  font-size: 4px;
+
+  font-weight: 900;
+
+  letter-spacing: .8px;
+}
+
+.vial-divider {
+  position: relative;
+
+  width: 35px;
+  height: 1px;
+
+  margin:
+    4px 0 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
 }
 
 .vial-product {
+  position: relative;
+
   width: 100%;
 
-  margin-top: 5px;
+  color: #f1f1f1;
 
-  overflow: hidden;
+  font-size: 7px;
 
-  color: #d6b768;
+  font-weight: 900;
 
-  font-size: 5px;
+  letter-spacing: .35px;
+
+  line-height: 1.15;
+
+  text-transform: uppercase;
+
+  overflow-wrap: anywhere;
+}
+
+.vial-amount {
+  position: relative;
+
+  margin-top: 4px;
+
+  color: var(--gold2);
+
+  font-size: 8px;
 
   font-weight: 900;
 
   letter-spacing: .7px;
 
-  line-height: 1.15;
-
-  text-transform: uppercase;
+  line-height: 1;
 }
 
-.vial-amount {
-  margin-top: 3px;
+.vial-research {
+  position: relative;
 
-  color: #858b90;
+  margin-top: 4px;
 
-  font-size: 4.5px;
+  padding:
+    2px 4px;
+
+  border:
+    1px solid rgba(213,173,85,.45);
+
+  color: #d5ad55;
+
+  font-size: 3.4px;
 
   font-weight: 900;
 
-  letter-spacing: .6px;
+  letter-spacing: .35px;
+
+  line-height: 1;
+}
+
+.vial-bottom-line {
+  position: absolute;
+
+  left: 7px;
+  right: 7px;
+
+  bottom: 6px;
+
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
 }
 
 
@@ -1533,7 +1746,7 @@ button {
 
 
 /* =========================================
-   EMPTY RESULT
+   EMPTY RESULTS
 ========================================= */
 
 .no-results {
@@ -1554,6 +1767,12 @@ button {
   color: var(--muted);
 
   text-align: center;
+}
+
+.no-results strong {
+  color: #d6d8da;
+
+  font-size: 18px;
 }
 
 
@@ -1630,7 +1849,8 @@ button {
     blur(14px);
 
   box-shadow:
-    0 10px 32px rgba(0,0,0,.6);
+    0 10px 32px
+    rgba(0,0,0,.6);
 }
 
 .mobile-sticky-checkout a {
@@ -1642,7 +1862,7 @@ button {
 
   width: 100%;
 
-  min-height: 49px;
+  min-height: 53px;
 
   border-radius: 9px;
 
@@ -1655,7 +1875,7 @@ button {
 
   color: #080909;
 
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 900;
 
@@ -1715,7 +1935,7 @@ footer {
 @media(max-width:900px) {
 
   body {
-    padding-bottom: 78px;
+    padding-bottom: 82px;
   }
 
   .shell {
@@ -1782,9 +2002,9 @@ footer {
 
   .promo-track span {
     padding:
-      7px 25px;
+      8px 27px;
 
-    font-size: 8px;
+    font-size: 8.5px;
   }
 
 
@@ -1817,9 +2037,9 @@ footer {
 
   .hero-meta span {
     padding:
-      5px 8px;
+      7px 10px;
 
-    font-size: 6px;
+    font-size: 7px;
   }
 
 
@@ -1848,7 +2068,7 @@ footer {
   .checkout-button {
     width: 100%;
 
-    min-height: 44px;
+    min-height: 46px;
 
     font-size: 9px;
   }
@@ -1862,40 +2082,46 @@ footer {
 
   .search-wrap {
     padding:
-      8px 0 6px;
+      9px 0 7px;
   }
 
   .search-box {
     padding:
-      0 12px;
+      0 14px;
 
-    border-radius: 10px;
+    border-radius: 12px;
   }
 
   .search-box input {
-    min-height: 46px;
+    min-height: 52px;
 
-    font-size: 13px;
+    font-size: 14px;
+  }
+
+  .search-icon {
+    font-size: 22px;
   }
 
 
-  /* HORIZONTAL CATEGORY ROW */
+  /* =========================================
+     BIGGER MOBILE FILTER BUBBLES
+  ========================================= */
 
   .filter-bar {
     display: flex;
 
     width: 100%;
 
-    gap: 7px;
+    gap: 9px;
 
     overflow-x: auto;
 
     overflow-y: hidden;
 
-    margin-top: 8px;
+    margin-top: 10px;
 
     padding:
-      1px 1px 5px;
+      2px 2px 8px;
 
     scrollbar-width: none;
 
@@ -1910,16 +2136,18 @@ footer {
     flex:
       0 0 auto;
 
-    min-height: 34px;
+    min-height: 47px;
 
     padding:
-      0 12px;
+      0 18px;
 
     border-radius: 100px;
 
     white-space: nowrap;
 
-    font-size: 6.5px;
+    font-size: 8px;
+
+    letter-spacing: .75px;
   }
 
 
@@ -1927,45 +2155,58 @@ footer {
 
   .catalog-toolbar {
     margin:
-      14px 0 11px;
+      17px 0 13px;
   }
 
   .catalog-count {
-    font-size: 7.5px;
+    font-size: 8px;
   }
 
 
   /* PRODUCT CARD */
 
   .catalog-grid {
-    gap: 13px;
+    gap: 14px;
   }
 
   .product-card {
-    min-height: 240px;
+    min-height: 292px;
 
     padding:
-      18px;
+      20px;
 
-    border-radius: 14px;
+    border-radius: 15px;
   }
 
   .product-main {
     width:
-      calc(100% - 94px);
+      calc(100% - 118px);
 
-    min-height: 145px;
+    min-height: 180px;
+  }
+
+  .card-top {
+    gap: 6px;
   }
 
   .category {
-    font-size: 6.5px;
+    font-size: 7px;
 
-    letter-spacing: 1.1px;
+    letter-spacing: 1px;
+  }
+
+  .amount-badge {
+    min-height: 25px;
+
+    padding:
+      0 8px;
+
+    font-size: 6.5px;
   }
 
   .product-card h2 {
     margin:
-      16px 0 5px;
+      15px 0 6px;
 
     font-size: 23px;
   }
@@ -1983,43 +2224,52 @@ footer {
   }
 
 
-  /* SMALLER MOBILE VIAL */
+  /* =========================================
+     LARGER PREMIUM MOBILE VIAL
+  ========================================= */
 
   .vial-area {
-    top: 36px;
-    right: 17px;
+    top: 47px;
+    right: 15px;
 
-    width: 77px;
-    height: 135px;
+    width: 98px;
+    height: 165px;
   }
 
   .vial-glow {
-    width: 90px;
-    height: 70px;
+    width: 110px;
+    height: 80px;
   }
 
   .vial {
-    width: 48px;
-    height: 88px;
+    width: 66px;
+    height: 116px;
 
     border-radius:
-      6px 6px 10px 10px;
+      8px 8px 13px 13px;
   }
 
-  .vial::before {
-    top: -15px;
-    left: 2px;
+  .vial-cap {
+    top: -23px;
+    left: 3px;
 
-    width: 44px;
-    height: 18px;
+    width: 58px;
+    height: 26px;
   }
 
-  .vial::after {
-    top: -2px;
-    left: 5px;
+  .vial-cap::before {
+    top: -8px;
+    left: 4px;
 
-    width: 38px;
-    height: 7px;
+    width: 48px;
+    height: 11px;
+  }
+
+  .vial-neck {
+    left: 8px;
+
+    width: 48px;
+    height: 11px;
   }
 
   .vial-label {
@@ -2028,30 +2278,54 @@ footer {
 
     top: 27px;
 
-    min-height: 44px;
+    min-height: 78px;
 
     padding:
-      4px 2px;
+      4px 3px;
   }
 
-  .vial-pch {
-    font-size: 11px;
+  .vial-logo {
+    width: 22px;
+    height: 22px;
 
-    letter-spacing: 1.3px;
+    margin-bottom: 2px;
+  }
+
+  .vial-brand {
+    font-size: 5.1px;
+
+    letter-spacing: .7px;
+  }
+
+  .vial-labs {
+    font-size: 3.3px;
+
+    letter-spacing: .6px;
+  }
+
+  .vial-divider {
+    width: 28px;
+
+    margin:
+      3px 0 2px;
   }
 
   .vial-product {
-    margin-top: 3px;
+    font-size: 5.8px;
 
-    font-size: 3.8px;
-
-    letter-spacing: .45px;
+    letter-spacing: .2px;
   }
 
   .vial-amount {
-    margin-top: 2px;
+    margin-top: 3px;
 
-    font-size: 3.5px;
+    font-size: 6.8px;
+  }
+
+  .vial-research {
+    margin-top: 3px;
+
+    font-size: 2.7px;
   }
 
 
@@ -2060,15 +2334,15 @@ footer {
   .product-bottom {
     gap: 8px;
 
-    padding-top: 11px;
+    padding-top: 12px;
   }
 
   .price-label {
-    font-size: 5.5px;
+    font-size: 5.8px;
   }
 
   .price {
-    font-size: 27px;
+    font-size: 28px;
   }
 
   .product-actions {
@@ -2076,21 +2350,21 @@ footer {
   }
 
   .btn {
-    min-height: 34px;
+    min-height: 36px;
+
+    padding:
+      0 11px;
+
+    font-size: 6.7px;
+  }
+
+  .btn-unavailable {
+    min-height: 36px;
 
     padding:
       0 10px;
 
-    font-size: 6.5px;
-  }
-
-  .btn-unavailable {
-    min-height: 34px;
-
-    padding:
-      0 9px;
-
-    font-size: 5.5px;
+    font-size: 5.7px;
   }
 
   .research-note {
@@ -2103,15 +2377,15 @@ footer {
   .catalog-notice {
     margin-top: 26px;
 
-    padding: 17px;
+    padding: 18px;
   }
 
   .catalog-notice strong {
-    font-size: 8px;
+    font-size: 8.5px;
   }
 
   .catalog-notice p {
-    font-size: 8.5px;
+    font-size: 9px;
   }
 
 }
@@ -2174,23 +2448,41 @@ footer {
 }
 
 
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
 @media(max-width:390px) {
+
+  .product-card {
+    padding:
+      17px;
+  }
 
   .product-main {
     width:
-      calc(100% - 82px);
+      calc(100% - 108px);
   }
 
   .product-card h2 {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .vial-area {
-    right: 12px;
+    right: 10px;
   }
 
   .price {
     font-size: 25px;
+  }
+
+  .filter-button {
+    min-height: 45px;
+
+    padding:
+      0 16px;
+
+    font-size: 7.5px;
   }
 
 }
@@ -2574,7 +2866,7 @@ documentation.
 
 <div class="hero-meta">
 
-<span>
+<span id="heroListingCount">
 32 LISTINGS
 </span>
 
@@ -2670,7 +2962,7 @@ Sign in or create a PCH account to continue.
   id="catalogSearch"
   type="search"
   autocomplete="off"
-  placeholder="Search research materials..."
+  placeholder="Search R, T, GHK-Cu, MOTS-C, 10 MG..."
 >
 
 </div>
@@ -3278,6 +3570,8 @@ const products = [
   amount: "BAC WATER",
   price: 32,
   groups: ["bac"],
+  keywords:
+    ["hospira", "bac", "water", "bacteriostatic"],
   description:
     "Laboratory supply listing with associated documentation information where available."
 },
@@ -3288,6 +3582,8 @@ const products = [
   amount: "BAC WATER",
   price: 16,
   groups: ["bac"],
+  keywords:
+    ["ebac", "bac", "water", "bacteriostatic"],
   description:
     "Laboratory supply listing with associated documentation information where available."
 },
@@ -3298,6 +3594,18 @@ const products = [
   amount: "10 MG",
   price: 60,
   groups: ["glp"],
+  keywords:
+    [
+      "r",
+      "r10",
+      "reta",
+      "retatrutide",
+      "glp",
+      "glp3",
+      "glp-3",
+      "10mg",
+      "10 mg"
+    ],
   coa:
     "retatrutide-10mg-greencap-coa.jpg",
   description:
@@ -3310,6 +3618,18 @@ const products = [
   amount: "20 MG",
   price: 80,
   groups: ["glp"],
+  keywords:
+    [
+      "r",
+      "r20",
+      "reta",
+      "retatrutide",
+      "glp",
+      "glp3",
+      "glp-3",
+      "20mg",
+      "20 mg"
+    ],
   description:
     "R-series research-material listing at 20 mg."
 },
@@ -3320,6 +3640,18 @@ const products = [
   amount: "30 MG",
   price: 100,
   groups: ["glp"],
+  keywords:
+    [
+      "r",
+      "r30",
+      "reta",
+      "retatrutide",
+      "glp",
+      "glp3",
+      "glp-3",
+      "30mg",
+      "30 mg"
+    ],
   description:
     "R-series research-material listing at 30 mg."
 },
@@ -3330,6 +3662,18 @@ const products = [
   amount: "10 MG",
   price: 50,
   groups: ["glp"],
+  keywords:
+    [
+      "t",
+      "t10",
+      "tirz",
+      "tirzepatide",
+      "glp",
+      "glp2",
+      "glp-2",
+      "10mg",
+      "10 mg"
+    ],
   description:
     "T-series research-material listing at 10 mg."
 },
@@ -3340,6 +3684,18 @@ const products = [
   amount: "20 MG",
   price: 70,
   groups: ["glp"],
+  keywords:
+    [
+      "t",
+      "t20",
+      "tirz",
+      "tirzepatide",
+      "glp",
+      "glp2",
+      "glp-2",
+      "20mg",
+      "20 mg"
+    ],
   description:
     "T-series research-material listing at 20 mg."
 },
@@ -3350,6 +3706,15 @@ const products = [
   amount: "50 MG",
   price: 25,
   groups: ["recovery"],
+  keywords:
+    [
+      "ghk",
+      "ghkcu",
+      "ghk-cu",
+      "copper",
+      "50mg",
+      "50 mg"
+    ],
   coa:
     "ghkcu-50mg-coa.png",
   description:
@@ -3362,6 +3727,15 @@ const products = [
   amount: "100 MG",
   price: 45,
   groups: ["recovery"],
+  keywords:
+    [
+      "ghk",
+      "ghkcu",
+      "ghk-cu",
+      "copper",
+      "100mg",
+      "100 mg"
+    ],
   description:
     "GHK-Cu research-material listing at 100 mg."
 },
@@ -3372,6 +3746,13 @@ const products = [
   amount: "20 MG",
   price: 50,
   groups: ["recovery"],
+  keywords:
+    [
+      "cartalax",
+      "cartilage",
+      "20mg",
+      "20 mg"
+    ],
   coa:
     "cartalax-20mg-coa.jpg",
   description:
@@ -3384,6 +3765,13 @@ const products = [
   amount: "10 MG",
   price: 45,
   groups: ["mind"],
+  keywords:
+    [
+      "semax",
+      "n acetyl semax",
+      "amidate",
+      "10mg"
+    ],
   description:
     "Research catalog identification and analytical-documentation listing."
 },
@@ -3394,6 +3782,13 @@ const products = [
   amount: "10 MG",
   price: 45,
   groups: ["mind"],
+  keywords:
+    [
+      "selank",
+      "n acetyl selank",
+      "amidate",
+      "10mg"
+    ],
   description:
     "Research catalog identification and analytical-documentation listing."
 },
@@ -3404,6 +3799,12 @@ const products = [
   amount: "10 MG",
   price: 35,
   groups: ["mind"],
+  keywords:
+    [
+      "pt141",
+      "pt-141",
+      "10mg"
+    ],
   description:
     "Research-material catalog listing at 10 mg."
 },
@@ -3414,6 +3815,13 @@ const products = [
   amount: "10 MG",
   price: 40,
   groups: ["mind"],
+  keywords:
+    [
+      "epithalon",
+      "epitalon",
+      "amidate",
+      "10mg"
+    ],
   description:
     "Research catalog identification and analytical-documentation listing."
 },
@@ -3424,6 +3832,11 @@ const products = [
   amount: "10 MG",
   price: 40,
   groups: ["mind"],
+  keywords:
+    [
+      "pinealon",
+      "10mg"
+    ],
   description:
     "Pinealon research-material catalog listing at 10 mg."
 },
@@ -3434,6 +3847,12 @@ const products = [
   amount: "5 MG",
   price: 25,
   groups: ["mind"],
+  keywords:
+    [
+      "dsip",
+      "sleep",
+      "5mg"
+    ],
   description:
     "DSIP research-material listing at 5 mg."
 },
@@ -3444,6 +3863,12 @@ const products = [
   amount: "10 MG",
   price: 40,
   groups: ["mind"],
+  keywords:
+    [
+      "dsip",
+      "sleep",
+      "10mg"
+    ],
   description:
     "DSIP research-material listing at 10 mg."
 },
@@ -3454,6 +3879,14 @@ const products = [
   amount: "10 MG",
   price: 40,
   groups: ["recovery"],
+  keywords:
+    [
+      "ara",
+      "ara290",
+      "ara-290",
+      "cibinetide",
+      "10mg"
+    ],
   description:
     "ARA-290 research-material catalog listing at 10 mg."
 },
@@ -3464,6 +3897,14 @@ const products = [
   amount: "50 MG",
   price: 90,
   groups: ["recovery"],
+  keywords:
+    [
+      "ara",
+      "ara290",
+      "ara-290",
+      "cibinetide",
+      "50mg"
+    ],
   description:
     "ARA-290 research-material catalog listing at 50 mg."
 },
@@ -3474,6 +3915,16 @@ const products = [
   amount: "10 MG",
   price: 70,
   groups: ["recovery"],
+  keywords:
+    [
+      "bpc",
+      "bpc157",
+      "bpc-157",
+      "tb500",
+      "tb-500",
+      "wolverine",
+      "10mg"
+    ],
   description:
     "Wolverine research-material combination listed at 10 mg total."
 },
@@ -3484,6 +3935,16 @@ const products = [
   amount: "20 MG",
   price: 110,
   groups: ["recovery"],
+  keywords:
+    [
+      "bpc",
+      "bpc157",
+      "bpc-157",
+      "tb4",
+      "tb-4",
+      "wolverine",
+      "20mg"
+    ],
   description:
     "Wolverine research-material combination listed at 20 mg total."
 },
@@ -3494,6 +3955,17 @@ const products = [
   amount: "30 MG",
   price: 125,
   groups: ["recovery"],
+  keywords:
+    [
+      "bpc",
+      "bpc157",
+      "bpc-157",
+      "tb4",
+      "tb-4",
+      "cartalax",
+      "deadpool",
+      "30mg"
+    ],
   description:
     "Deadpool research-material combination listed at 30 mg total."
 },
@@ -3504,6 +3976,11 @@ const products = [
   amount: "80 MG",
   price: 115,
   groups: ["recovery"],
+  keywords:
+    [
+      "klow",
+      "80mg"
+    ],
   description:
     "KLOW research-material catalog listing at 80 mg."
 },
@@ -3514,6 +3991,11 @@ const products = [
   amount: "10 MG",
   price: 40,
   groups: ["recovery"],
+  keywords:
+    [
+      "kpv",
+      "10mg"
+    ],
   description:
     "KPV research-material catalog listing at 10 mg."
 },
@@ -3524,6 +4006,11 @@ const products = [
   amount: "5 MG",
   price: 30,
   groups: ["recovery"],
+  keywords:
+    [
+      "cjc",
+      "5mg"
+    ],
   description:
     "CJC research-material catalog listing at 5 mg."
 },
@@ -3534,6 +4021,12 @@ const products = [
   amount: "10 MG",
   price: 50,
   groups: ["recovery", "mind"],
+  keywords:
+    [
+      "ipamorelin",
+      "ipa",
+      "10mg"
+    ],
   description:
     "Ipamorelin research-material listing at 10 mg."
 },
@@ -3544,6 +4037,12 @@ const products = [
   amount: "10 MG",
   price: 60,
   groups: ["recovery"],
+  keywords:
+    [
+      "tesamorelin",
+      "tesa",
+      "10mg"
+    ],
   description:
     "Tesamorelin research-material listing at 10 mg."
 },
@@ -3554,6 +4053,14 @@ const products = [
   amount: "20 MG",
   price: 100,
   groups: ["recovery", "mind"],
+  keywords:
+    [
+      "cjc",
+      "ipamorelin",
+      "ipa",
+      "cjc ipa",
+      "20mg"
+    ],
   description:
     "Research-material combination listed at 20 mg total."
 },
@@ -3564,6 +4071,14 @@ const products = [
   amount: "10 MG",
   price: 45,
   groups: ["energy"],
+  keywords:
+    [
+      "mots",
+      "motsc",
+      "mots-c",
+      "10mg",
+      "mitochondria"
+    ],
   coa:
     "motsc-10mg-greencaps-coa.png",
   description:
@@ -3576,6 +4091,13 @@ const products = [
   amount: "50 MG",
   price: 100,
   groups: ["energy"],
+  keywords:
+    [
+      "ss31",
+      "ss-31",
+      "50mg",
+      "mitochondria"
+    ],
   description:
     "SS-31 research-material catalog listing at 50 mg."
 },
@@ -3586,6 +4108,14 @@ const products = [
   amount: "500 MG",
   price: 70,
   groups: ["energy"],
+  keywords:
+    [
+      "5 amino",
+      "5amino",
+      "1mq",
+      "5-amino-1mq",
+      "500mg"
+    ],
   description:
     "5-Amino-1MQ research-material listing at 500 mg."
 },
@@ -3596,6 +4126,13 @@ const products = [
   amount: "1000 MG",
   price: 40,
   groups: ["energy"],
+  keywords:
+    [
+      "nad",
+      "nad+",
+      "buffered",
+      "1000mg"
+    ],
   description:
     "Buffered NAD+ research-material catalog listing."
 }
@@ -3604,7 +4141,7 @@ const products = [
 
 
 /* =========================================
-   ELEMENTS
+   CATALOG ELEMENTS
 ========================================= */
 
 const catalogGrid =
@@ -3622,6 +4159,12 @@ const search =
 const count =
   document.getElementById(
     "catalogCount"
+  );
+
+
+const heroListingCount =
+  document.getElementById(
+    "heroListingCount"
   );
 
 
@@ -3644,10 +4187,12 @@ let activeFilter =
 
 
 /* =========================================
-   VIAL SHORT NAME
+   DISPLAY NAME FOR VIAL
 ========================================= */
 
-function createVialName(name) {
+function createVialName(
+  name
+) {
 
   let cleanName =
     name
@@ -3659,13 +4204,13 @@ function createVialName(name) {
 
 
   if (
-    cleanName.length > 15
+    cleanName.length > 19
   ) {
 
     cleanName =
       cleanName.substring(
         0,
-        15
+        19
       );
 
   }
@@ -3677,10 +4222,143 @@ function createVialName(name) {
 
 
 /* =========================================
+   NORMALIZE SEARCH TEXT
+========================================= */
+
+function normalizeSearchText(
+  value
+) {
+
+  return String(
+    value || ""
+  )
+  .toLowerCase()
+  .replace(
+    /[\u2010-\u2015]/g,
+    "-"
+  )
+  .replace(
+    /[^a-z0-9+]+/g,
+    " "
+  )
+  .replace(
+    /\s+/g,
+    " "
+  )
+  .trim();
+
+}
+
+
+/* =========================================
+   BUILD PRODUCT SEARCH STRING
+========================================= */
+
+function getProductSearchText(
+  product
+) {
+
+  const keywords =
+    Array.isArray(
+      product.keywords
+    )
+    ?
+    product.keywords.join(
+      " "
+    )
+    :
+    "";
+
+
+  return normalizeSearchText(
+
+    product.name
+    +
+    " "
+    +
+    product.category
+    +
+    " "
+    +
+    product.amount
+    +
+    " "
+    +
+    product.price
+    +
+    " "
+    +
+    product.groups.join(" ")
+    +
+    " "
+    +
+    keywords
+    +
+    " "
+    +
+    product.description
+
+  );
+
+}
+
+
+/* =========================================
+   SEARCH MATCH
+========================================= */
+
+function productMatchesSearch(
+  product,
+  rawTerm
+) {
+
+  const term =
+    normalizeSearchText(
+      rawTerm
+    );
+
+
+  if (
+    term === ""
+  ) {
+
+    return true;
+
+  }
+
+
+  const searchableText =
+    getProductSearchText(
+      product
+    );
+
+
+  const words =
+    term.split(
+      " "
+    );
+
+
+  return words.every(
+    function(word) {
+
+      return searchableText.includes(
+        word
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================
    BUILD CATALOG
 ========================================= */
 
-function buildCatalog(list) {
+function buildCatalog(
+  list
+) {
 
   catalogGrid.innerHTML =
     "";
@@ -3760,6 +4438,10 @@ function buildCatalog(list) {
               ${product.category}
             </div>
 
+            <div class="amount-badge">
+              ${product.amount}
+            </div>
+
           </div>
 
 
@@ -3785,21 +4467,56 @@ function buildCatalog(list) {
 
           <div class="vial">
 
+
+            <div class="vial-cap"></div>
+
+
+            <div class="vial-neck"></div>
+
+
             <div class="vial-label">
 
-              <div class="vial-pch">
-                PCH
+
+              <img
+                class="vial-logo"
+                src="pch-logo.jpg"
+                alt=""
+              >
+
+
+              <div class="vial-brand">
+                PLATINUM
               </div>
+
+
+              <div class="vial-labs">
+                CELLULAR HEALTH LABS
+              </div>
+
+
+              <div class="vial-divider"></div>
+
 
               <div class="vial-product">
                 ${vialName}
               </div>
 
+
               <div class="vial-amount">
                 ${product.amount}
               </div>
 
+
+              <div class="vial-research">
+                RESEARCH USE ONLY
+              </div>
+
+
             </div>
+
+
+            <div class="vial-bottom-line"></div>
+
 
           </div>
 
@@ -3851,20 +4568,51 @@ function buildCatalog(list) {
 
 /* =========================================
    FILTER / SEARCH
+
+   IMPORTANT CHANGE:
+   When somebody types in the search bar,
+   the category filter no longer blocks the
+   results. Search automatically searches
+   the ENTIRE catalog.
 ========================================= */
 
 function updateCatalog() {
 
-  const term =
-    search
-      .value
-      .toLowerCase()
-      .trim();
+  const rawTerm =
+    search.value.trim();
+
+
+  const hasSearch =
+    rawTerm.length > 0;
 
 
   const filtered =
     products.filter(
       function(product) {
+
+        const matchesSearch =
+          productMatchesSearch(
+            product,
+            rawTerm
+          );
+
+
+        /*
+        If the user is typing something,
+        search all categories.
+
+        If the search box is empty,
+        use the selected category filter.
+        */
+
+        if (
+          hasSearch
+        ) {
+
+          return matchesSearch;
+
+        }
+
 
         const matchesCategory =
           activeFilter === "all"
@@ -3874,40 +4622,7 @@ function updateCatalog() {
           );
 
 
-        const searchableText =
-          (
-            product.name
-            +
-            " "
-            +
-            product.category
-            +
-            " "
-            +
-            product.amount
-            +
-            " "
-            +
-            product.price
-            +
-            " "
-            +
-            product.description
-          )
-          .toLowerCase();
-
-
-        const matchesSearch =
-          searchableText.includes(
-            term
-          );
-
-
-        return (
-          matchesCategory
-          &&
-          matchesSearch
-        );
+        return matchesCategory;
 
       }
     );
@@ -3942,16 +4657,54 @@ function updateCatalog() {
 
 /* =========================================
    SEARCH EVENT
+
+   When search begins:
+   visually return filter to ALL so the
+   user understands the whole catalog
+   is being searched.
 ========================================= */
 
 search.addEventListener(
   "input",
-  updateCatalog
+  function() {
+
+    const hasSearch =
+      search.value.trim().length > 0;
+
+
+    if (
+      hasSearch
+    ) {
+
+      activeFilter =
+        "all";
+
+
+      filterButtons.forEach(
+        function(button) {
+
+          button.classList.toggle(
+            "active",
+            button.dataset.filter === "all"
+          );
+
+        }
+      );
+
+    }
+
+
+    updateCatalog();
+
+  }
 );
 
 
 /* =========================================
    FILTER EVENTS
+
+   Pressing a category clears the current
+   search and shows that category normally.
 ========================================= */
 
 filterButtons.forEach(
@@ -3963,6 +4716,10 @@ filterButtons.forEach(
 
         activeFilter =
           button.dataset.filter;
+
+
+        search.value =
+          "";
 
 
         filterButtons.forEach(
@@ -4065,6 +4822,12 @@ menu
 /* =========================================
    START
 ========================================= */
+
+heroListingCount.textContent =
+  products.length
+  +
+  " LISTINGS";
+
 
 buildCatalog(
   products
