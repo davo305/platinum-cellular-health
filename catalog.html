@@ -71,10 +71,6 @@ body {
   overflow-x: hidden;
 }
 
-body.coa-open {
-  overflow: hidden;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -1935,37 +1931,14 @@ CATALOG
 </div>
 
 
-<a href="index.html">
-Home
-</a>
-
-<a href="research-information.html">
-Research Information
-</a>
-
-<a href="catalog.html">
-Research Catalog
-</a>
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-<a href="recommended-supplies.html">
-Recommended Supplies
-</a>
-
-<a href="policies.html">
-Policies
-</a>
-
-<a href="faq.html">
-FAQ
-</a>
-
-<a href="contact.html">
-Contact
-</a>
+<a href="index.html">Home</a>
+<a href="research-information.html">Research Information</a>
+<a href="catalog.html">Research Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Recommended Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
 
 </div>
 
@@ -1976,37 +1949,15 @@ Contact
 
 <div class="promo-track">
 
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
+<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
+<span>$15 STANDARD SHIPPING VALUE</span>
+<span>✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦</span>
+<span>FREE STANDARD SHIPPING ON ORDERS OVER $280</span>
 
-<span>
-$15 STANDARD SHIPPING VALUE
-</span>
-
-<span>
-✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
-</span>
-
-<span>
-FREE STANDARD SHIPPING ON ORDERS OVER $280
-</span>
-
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
-
-<span>
-$15 STANDARD SHIPPING VALUE
-</span>
-
-<span>
-✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
-</span>
-
-<span>
-FREE STANDARD SHIPPING ON ORDERS OVER $280
-</span>
+<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
+<span>$15 STANDARD SHIPPING VALUE</span>
+<span>✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦</span>
+<span>FREE STANDARD SHIPPING ON ORDERS OVER $280</span>
 
 </div>
 
@@ -2123,7 +2074,7 @@ Sign in or create a PCH account to continue.
   id="catalogSearch"
   type="search"
   autocomplete="off"
-  placeholder="Search R, T, ARA, DSIP, 10 MG..."
+  placeholder="Search R, T, ARA, DSIP, Ipamorelin, 10 MG..."
 >
 
 <button
@@ -2304,17 +2255,11 @@ Not for human or animal use
 
 <script>
 
-/* =========================================================
-   SUPABASE
-========================================================= */
-
 const SUPABASE_URL =
   "https://rmjvhbfazakcunfeomao.supabase.co";
 
-
 const SUPABASE_PUBLISHABLE_KEY =
   "sb_publishable_m0snLFFTsLnUfENmvWsUuw_bjPkhMER";
-
 
 const supabaseClient =
   window.supabase.createClient(
@@ -2333,84 +2278,44 @@ const supabaseClient =
   );
 
 
-/* =========================================================
-   MEMBER ELEMENTS
-========================================================= */
-
 const desktopLoginLink =
-  document.getElementById(
-    "desktopLoginLink"
-  );
+  document.getElementById("desktopLoginLink");
 
 const desktopMemberArea =
-  document.getElementById(
-    "desktopMemberArea"
-  );
+  document.getElementById("desktopMemberArea");
 
 const desktopMemberName =
-  document.getElementById(
-    "desktopMemberName"
-  );
+  document.getElementById("desktopMemberName");
 
 const desktopSignout =
-  document.getElementById(
-    "desktopSignout"
-  );
+  document.getElementById("desktopSignout");
 
 const mobileLoginLink =
-  document.getElementById(
-    "mobileLoginLink"
-  );
+  document.getElementById("mobileLoginLink");
 
 const mobileMemberArea =
-  document.getElementById(
-    "mobileMemberArea"
-  );
+  document.getElementById("mobileMemberArea");
 
 const mobileMemberName =
-  document.getElementById(
-    "mobileMemberName"
-  );
+  document.getElementById("mobileMemberName");
 
 const mobileMemberEmail =
-  document.getElementById(
-    "mobileMemberEmail"
-  );
+  document.getElementById("mobileMemberEmail");
 
 const mobileSignout =
-  document.getElementById(
-    "mobileSignout"
-  );
+  document.getElementById("mobileSignout");
 
 const mainCheckoutButton =
-  document.getElementById(
-    "mainCheckoutButton"
-  );
+  document.getElementById("mainCheckoutButton");
 
 const toolbarCheckoutButton =
-  document.getElementById(
-    "toolbarCheckoutButton"
-  );
+  document.getElementById("toolbarCheckoutButton");
 
 const mobileCheckoutButton =
-  document.getElementById(
-    "mobileCheckoutButton"
-  );
+  document.getElementById("mobileCheckoutButton");
 
 const checkoutHeading =
-  document.getElementById(
-    "checkoutHeading"
-  );
-
-const checkoutDescription =
-  document.getElementById(
-    "checkoutDescription"
-  );
-
-const checkoutSmall =
-  document.getElementById(
-    "checkoutSmall"
-  );
+  document.getElementById("checkoutHeading");
 
 
 function showLoggedOutMemberState() {
@@ -2551,7 +2456,6 @@ desktopSignout.addEventListener(
   "click",
   signOutMember
 );
-
 
 mobileSignout.addEventListener(
   "click",
@@ -2857,11 +2761,6 @@ const products = [
     "DSIP research-material listing at 10 mg."
 },
 
-
-/* =========================================================
-   ARA-290 10 MG
-========================================================= */
-
 {
   name: "ARA-290 (Cibinetide)",
   category: "RESEARCH MATERIAL",
@@ -2881,11 +2780,6 @@ const products = [
   description:
     "ARA-290 research-material catalog listing at 10 mg."
 },
-
-
-/* =========================================================
-   ARA-290 15 MG — NEW PRODUCT
-========================================================= */
 
 {
   name: "ARA-290",
@@ -2909,11 +2803,6 @@ const products = [
   description:
     "ARA-290 research-material catalog listing at 15 mg."
 },
-
-
-/* =========================================================
-   ARA-290 50 MG
-========================================================= */
 
 {
   name: "ARA-290",
@@ -3050,8 +2939,13 @@ const products = [
       "i",
       "ipa",
       "ipamorelin",
-      "10mg"
+      "10mg",
+      "10 mg",
+      "99.90",
+      "9.77"
     ],
+  coa:
+    "IMG_20260817_115955_496.jpg",
   description:
     "Ipamorelin research-material listing at 10 mg."
 },
@@ -3159,7 +3053,7 @@ const products = [
 
 
 /* =========================================================
-   ELEMENTS
+   CATALOG ELEMENTS
 ========================================================= */
 
 const catalogGrid =
@@ -3203,10 +3097,6 @@ let activeFilter =
   "all";
 
 
-/* =========================================================
-   ESCAPE
-========================================================= */
-
 function escapeHTML(
   value
 ) {
@@ -3237,10 +3127,6 @@ function escapeHTML(
 
 }
 
-
-/* =========================================================
-   VIAL NAME
-========================================================= */
 
 function createVialName(
   name
@@ -3274,10 +3160,6 @@ function createVialName(
 
 }
 
-
-/* =========================================================
-   SEARCH
-========================================================= */
 
 function normalizeSearchText(
   value
@@ -3373,7 +3255,7 @@ function productMatchesSearch(
 
 
 /* =========================================================
-   BUILD CATALOG
+   BUILD CARDS
 ========================================================= */
 
 function buildCatalog(
@@ -3581,6 +3463,7 @@ function buildCatalog(
 
           </div>
 
+
           <div class="product-actions">
 
             ${action}
@@ -3603,7 +3486,7 @@ function buildCatalog(
 
 
 /* =========================================================
-   FILTER
+   UPDATE
 ========================================================= */
 
 function setActiveFilterUI(
@@ -3625,10 +3508,6 @@ function setActiveFilterUI(
 
 }
 
-
-/* =========================================================
-   UPDATE
-========================================================= */
 
 function updateCatalog() {
 
@@ -3700,7 +3579,7 @@ function updateCatalog() {
 
 
 /* =========================================================
-   SEARCH EVENTS
+   EVENTS
 ========================================================= */
 
 search.addEventListener(
@@ -3747,10 +3626,6 @@ searchClear.addEventListener(
   }
 );
 
-
-/* =========================================================
-   FILTER EVENTS
-========================================================= */
 
 filterButtons.forEach(
   function(button) {
@@ -3830,26 +3705,6 @@ updateCatalog();
 
 
 restoreMemberSession();
-
-
-console.log(
-  "PCH catalog loaded:",
-  products.length,
-  "products"
-);
-
-
-console.log(
-  "ARA products:",
-  products.filter(
-    product =>
-      product.name
-        .toLowerCase()
-        .includes(
-          "ara"
-        )
-  )
-);
 
 </script>
 
