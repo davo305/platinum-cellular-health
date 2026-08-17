@@ -850,8 +850,9 @@ button {
 }
 
 .search-box {
-  display: flex;
+  position: relative;
 
+  display: flex;
   align-items: center;
 
   gap: 11px;
@@ -939,7 +940,7 @@ button {
 
 
 /* =========================================================
-   FILTERS
+   FILTER BUBBLES
 ========================================================= */
 
 .filter-bar {
@@ -1221,7 +1222,7 @@ button {
 
 
 /* =========================================================
-   VIAL
+   PREMIUM VIAL
 ========================================================= */
 
 .vial-area {
@@ -1386,9 +1387,6 @@ button {
       #e5e7e8 84%,
       #656a6d 100%
     );
-
-  box-shadow:
-    0 5px 8px rgba(0,0,0,.6);
 }
 
 .vial-cap::before {
@@ -1404,9 +1402,6 @@ button {
 
   border-radius:
     11px 11px 5px 5px;
-
-  border:
-    1px solid rgba(91,94,96,.75);
 
   background:
     linear-gradient(
@@ -2048,7 +2043,7 @@ footer {
 
 
 /* =========================================================
-   MOBILE CHECKOUT
+   MOBILE STICKY CHECKOUT
 ========================================================= */
 
 .mobile-sticky-checkout {
@@ -2079,6 +2074,9 @@ footer {
 
   backdrop-filter:
     blur(16px);
+
+  box-shadow:
+    0 10px 32px rgba(0,0,0,.65);
 }
 
 .mobile-sticky-checkout a {
@@ -2105,6 +2103,8 @@ footer {
   font-size: 11px;
 
   font-weight: 900;
+
+  letter-spacing: .7px;
 }
 
 
@@ -2231,6 +2231,7 @@ footer {
     gap: 11px;
 
     overflow-x: auto;
+    overflow-y: hidden;
 
     margin-top: 12px;
 
@@ -2425,14 +2426,37 @@ LONGEVITY AT THE CELLULAR LEVEL
 
 <nav class="nav-links">
 
-<a href="index.html">Home</a>
-<a href="research-information.html">Research</a>
-<a href="catalog.html">Catalog</a>
-<a href="quality-coa.html">Quality & COA</a>
-<a href="recommended-supplies.html">Supplies</a>
-<a href="policies.html">Policies</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">Contact</a>
+<a href="index.html">
+Home
+</a>
+
+<a href="research-information.html">
+Research
+</a>
+
+<a href="catalog.html">
+Catalog
+</a>
+
+<a href="quality-coa.html">
+Quality & COA
+</a>
+
+<a href="recommended-supplies.html">
+Supplies
+</a>
+
+<a href="policies.html">
+Policies
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+<a href="contact.html">
+Contact
+</a>
 
 </nav>
 
@@ -2533,6 +2557,7 @@ SIGN OUT
 
 <div class="mobile-member-box">
 
+
 <a
   href="login.html"
   class="mobile-member-login"
@@ -2547,9 +2572,11 @@ SIGN OUT
   id="mobileMemberArea"
 >
 
+
 <div class="mobile-status">
 ● SIGNED IN
 </div>
+
 
 <div
   class="mobile-member-name"
@@ -2557,6 +2584,7 @@ SIGN OUT
 >
 PCH Member
 </div>
+
 
 <div
   class="mobile-member-email"
@@ -2589,6 +2617,7 @@ CATALOG
 </a>
 
 </div>
+
 
 </div>
 
@@ -2626,6 +2655,7 @@ FAQ
 <a href="contact.html">
 Contact
 </a>
+
 
 </div>
 
@@ -2672,6 +2702,7 @@ FREE STANDARD SHIPPING ON ORDERS OVER $280
 
 </div>
 
+
 </header>
 
 
@@ -2682,6 +2713,7 @@ FREE STANDARD SHIPPING ON ORDERS OVER $280
 
 <div class="shell">
 
+
 <a
   href="index.html"
   class="back-link"
@@ -2689,19 +2721,23 @@ FREE STANDARD SHIPPING ON ORDERS OVER $280
 ← BACK TO PCH LABS
 </a>
 
+
 <div class="eyebrow">
 RESEARCH MATERIAL CATALOG
 </div>
 
+
 <h1>
 Research catalog.
 </h1>
+
 
 <p>
 Browse currently listed research materials,
 amounts, pricing, and available analytical
 documentation.
 </p>
+
 
 <div class="hero-meta">
 
@@ -2716,6 +2752,7 @@ COA DOCUMENTATION WHERE AVAILABLE
 </span>
 
 </div>
+
 
 </div>
 
@@ -2734,14 +2771,17 @@ COA DOCUMENTATION WHERE AVAILABLE
 PCH MEMBER CHECKOUT
 </div>
 
+
 <h2 id="checkoutHeading">
 Ready to place an order?
 </h2>
+
 
 <p id="checkoutDescription">
 A verified PCH member account and research-use
 acknowledgment are required before checkout access.
 </p>
+
 
 <a
   href="login.html"
@@ -2751,12 +2791,14 @@ acknowledgment are required before checkout access.
 🔐 LOGIN TO CHECKOUT
 </a>
 
+
 <div
   class="checkout-small"
   id="checkoutSmall"
 >
 Sign in or create a PCH account to continue.
 </div>
+
 
 </div>
 
@@ -2807,6 +2849,7 @@ Sign in or create a PCH account to continue.
   id="filterBar"
 >
 
+
 <button
   class="filter-button active"
   type="button"
@@ -2814,6 +2857,7 @@ Sign in or create a PCH account to continue.
 >
 ALL
 </button>
+
 
 <button
   class="filter-button"
@@ -2823,6 +2867,7 @@ ALL
 BAC WATER
 </button>
 
+
 <button
   class="filter-button"
   type="button"
@@ -2830,6 +2875,7 @@ BAC WATER
 >
 GLP / WEIGHT LOSS
 </button>
+
 
 <button
   class="filter-button"
@@ -2839,6 +2885,7 @@ GLP / WEIGHT LOSS
 RECOVERY / HEALING
 </button>
 
+
 <button
   class="filter-button"
   type="button"
@@ -2846,6 +2893,7 @@ RECOVERY / HEALING
 >
 ENERGY / MITOCHONDRIA
 </button>
+
 
 <button
   class="filter-button"
@@ -2855,6 +2903,7 @@ ENERGY / MITOCHONDRIA
 MIND / LONGEVITY / SLEEP
 </button>
 
+
 </div>
 
 
@@ -2863,10 +2912,12 @@ MIND / LONGEVITY / SLEEP
 
 <div class="catalog-toolbar">
 
+
 <div
   id="catalogCount"
   class="catalog-count"
 ></div>
+
 
 <a
   href="login.html"
@@ -2875,6 +2926,7 @@ MIND / LONGEVITY / SLEEP
 >
 🔐 LOGIN TO CHECKOUT
 </a>
+
 
 </div>
 
@@ -2916,6 +2968,7 @@ original report.
 </p>
 
 </div>
+
 
 </div>
 
@@ -2969,7 +3022,7 @@ Not for human or animal use
 
 
 <!-- =========================================================
-     COA VIEWER
+     COA MODAL
 ========================================================= -->
 
 <div
@@ -2978,6 +3031,7 @@ Not for human or animal use
 >
 
 <div class="coa-panel">
+
 
 <div class="coa-header">
 
@@ -3030,8 +3084,7 @@ Certificate of Analysis
 <div class="coa-footer">
 
 <div class="coa-footer-note">
-Select a result above to view the corresponding
-laboratory report.
+Select a result above to view the corresponding laboratory report.
 </div>
 
 
@@ -3046,6 +3099,7 @@ OPEN FULL SIZE
 </a>
 
 </div>
+
 
 </div>
 
@@ -3076,14 +3130,22 @@ const supabaseClient =
     SUPABASE_URL,
     SUPABASE_PUBLISHABLE_KEY,
     {
+
       auth: {
+
         persistSession: true,
+
         autoRefreshToken: true,
+
         detectSessionInUrl: true,
+
         storage: window.localStorage,
+
         storageKey:
           "pch-member-auth"
+
       }
+
     }
   );
 
@@ -3169,7 +3231,7 @@ const checkoutSmall =
 
 
 /* =========================================================
-   MEMBER STATES
+   MEMBER STATE
 ========================================================= */
 
 function showLoggedOutMemberState() {
@@ -3436,10 +3498,7 @@ const products = [
       "r10",
       "reta",
       "retatrutide",
-      "glp",
-      "glp3",
-      "10mg",
-      "10 mg"
+      "10mg"
     ],
   coas: [
     {
@@ -3465,8 +3524,7 @@ const products = [
       "r20",
       "reta",
       "retatrutide",
-      "20mg",
-      "20 mg"
+      "20mg"
     ],
   description:
     "R-series research-material listing at 20 mg."
@@ -3484,8 +3542,7 @@ const products = [
       "r30",
       "reta",
       "retatrutide",
-      "30mg",
-      "30 mg"
+      "30mg"
     ],
   coas: [
     {
@@ -3508,7 +3565,7 @@ const products = [
     }
   ],
   description:
-    "R-series research-material listing at 30 mg with multiple analytical reports available."
+    "R-series research-material listing at 30 mg."
 },
 
 {
@@ -3559,9 +3616,7 @@ const products = [
       "ghk",
       "ghkcu",
       "ghk-cu",
-      "copper",
-      "50mg",
-      "50 mg"
+      "50mg"
     ],
   coas: [
     {
@@ -3586,9 +3641,7 @@ const products = [
       "g",
       "ghk",
       "ghkcu",
-      "ghk-cu",
-      "100mg",
-      "100 mg"
+      "100mg"
     ],
   description:
     "GHK-Cu research-material listing at 100 mg."
@@ -3604,9 +3657,7 @@ const products = [
     [
       "c",
       "cartalax",
-      "cartilage",
-      "20mg",
-      "20 mg"
+      "20mg"
     ],
   coas: [
     {
@@ -3633,15 +3684,14 @@ const products = [
       "semax",
       "n acetyl semax",
       "amidate",
-      "10mg",
-      "10 mg"
+      "10mg"
     ],
   coas: [
     {
       label:
         "99.029–99.181% · 10.52–11.56 MG",
       file:
-        "Test Report #196930.png"
+        "screenshot_20260817_115257_Chrome.jpg"
     }
   ],
   description:
@@ -3661,15 +3711,14 @@ const products = [
       "selank",
       "n acetyl selank",
       "amidate",
-      "10mg",
-      "10 mg"
+      "10mg"
     ],
   coas: [
     {
       label:
         "99.610–99.645% · 12.72–13.85 MG",
       file:
-        "Test Report #209069.png"
+        "screenshot_20260817_115303_Chrome.jpg"
     }
   ],
   description:
@@ -3747,7 +3796,7 @@ const products = [
       label:
         "99.426–99.485% · 6.73–6.81 MG",
       file:
-        "Test Report #195227.png"
+        "screenshot_20260817_115247_Chrome.jpg"
     }
   ],
   description:
@@ -3765,8 +3814,7 @@ const products = [
       "d",
       "dsip",
       "sleep",
-      "10mg",
-      "10 mg"
+      "10mg"
     ],
   coas: [
     {
@@ -3779,6 +3827,10 @@ const products = [
   description:
     "DSIP research-material listing at 10 mg."
 },
+
+/* =========================================================
+   ARA-290 — ALL THREE ARE SEPARATE PRODUCTS
+========================================================= */
 
 {
   name: "ARA-290",
@@ -3824,11 +3876,11 @@ const products = [
       label:
         "99.465–99.551% · 18.15–18.74 MG",
       file:
-        "1000073680.png"
+        "Test Report #209071.png"
     }
   ],
   description:
-    "ARA-290 research-material catalog listing at 15 mg with analytical documentation available."
+    "ARA-290 research-material catalog listing at 15 mg."
 },
 
 {
@@ -3844,8 +3896,7 @@ const products = [
       "ara290",
       "ara-290",
       "cibinetide",
-      "50mg",
-      "50 mg"
+      "50mg"
     ],
   description:
     "ARA-290 research-material catalog listing at 50 mg."
@@ -3935,7 +3986,6 @@ const products = [
       "k",
       "klow",
       "80mg",
-      "80 mg",
       "ghk",
       "kpv",
       "bpc",
@@ -4013,10 +4063,9 @@ const products = [
   keywords:
     [
       "i",
-      "ipamorelin",
       "ipa",
+      "ipamorelin",
       "10mg",
-      "10 mg",
       "99.90",
       "9.77"
     ],
@@ -4025,11 +4074,11 @@ const products = [
       label:
         "GRAY CAP · 99.90% · 9.77 MG",
       file:
-        "1000073679.jpg"
+        "IMG_20260817_115955_496.jpg"
     }
   ],
   description:
-    "Ipamorelin research-material listing at 10 mg with analytical documentation available."
+    "Ipamorelin research-material listing at 10 mg."
 },
 
 {
@@ -4194,6 +4243,11 @@ const noResults =
     "noResults"
   );
 
+const filterBar =
+  document.getElementById(
+    "filterBar"
+  );
+
 const filterButtons =
   Array.from(
     document.querySelectorAll(
@@ -4239,7 +4293,7 @@ let currentCoas =
 
 
 /* =========================================================
-   HELPERS
+   ESCAPE
 ========================================================= */
 
 function escapeHTML(
@@ -4272,6 +4326,38 @@ function escapeHTML(
 
 }
 
+
+/* =========================================================
+   SAFE FILE URL
+========================================================= */
+
+function getSafeFileUrl(
+  file
+) {
+
+  return "./"
+    +
+    String(
+      file || ""
+    )
+    .split("/")
+    .map(
+      function(part) {
+
+        return encodeURIComponent(
+          part
+        );
+
+      }
+    )
+    .join("/");
+
+}
+
+
+/* =========================================================
+   VIAL NAME
+========================================================= */
 
 function createVialName(
   name
@@ -4306,22 +4392,9 @@ function createVialName(
 }
 
 
-/*
-  IMPORTANT:
-  This safely handles filenames containing
-  spaces and # characters.
-*/
-
-function getSafeFileUrl(
-  file
-) {
-
-  return encodeURI(
-    "./" + file
-  );
-
-}
-
+/* =========================================================
+   SEARCH
+========================================================= */
 
 function normalizeSearchText(
   value
@@ -4348,7 +4421,42 @@ function normalizeSearchText(
 }
 
 
-function getSearchText(
+function getIdentityValues(
+  product
+) {
+
+  const values = [
+
+    product.name,
+    product.category,
+    product.amount
+
+  ];
+
+
+  if (
+    Array.isArray(
+      product.keywords
+    )
+  ) {
+
+    values.push(
+      ...product.keywords
+    );
+
+  }
+
+
+  return values
+    .map(
+      normalizeSearchText
+    )
+    .filter(Boolean);
+
+}
+
+
+function getBroadSearchText(
   product
 ) {
 
@@ -4402,7 +4510,7 @@ function productMatchesSearch(
 
 
   if (
-    !term
+    term === ""
   ) {
 
     return true;
@@ -4410,23 +4518,163 @@ function productMatchesSearch(
   }
 
 
-  const searchableText =
-    getSearchText(
+  const identityValues =
+    getIdentityValues(
       product
     );
 
 
-  return term
-    .split(" ")
-    .every(
-      function(word) {
+  if (
+    term.length === 1
+  ) {
 
-        return searchableText.includes(
-          word
+    return identityValues.some(
+      function(value) {
+
+        const tokens =
+          value.split(" ");
+
+
+        return (
+          value === term
+          ||
+          value.startsWith(term)
+          ||
+          tokens.some(
+            function(token) {
+
+              return token.startsWith(
+                term
+              );
+
+            }
+          )
         );
 
       }
     );
+
+  }
+
+
+  const searchableText =
+    getBroadSearchText(
+      product
+    );
+
+
+  const words =
+    term.split(" ");
+
+
+  return words.every(
+    function(word) {
+
+      return searchableText.includes(
+        word
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   SEARCH SCORE
+========================================================= */
+
+function getSearchScore(
+  product,
+  rawTerm
+) {
+
+  const term =
+    normalizeSearchText(
+      rawTerm
+    );
+
+
+  if (
+    !term
+  ) {
+
+    return 0;
+
+  }
+
+
+  const normalizedName =
+    normalizeSearchText(
+      product.name
+    );
+
+
+  const identityValues =
+    getIdentityValues(
+      product
+    );
+
+
+  let score = 0;
+
+
+  if (
+    normalizedName === term
+  ) {
+
+    score += 1000;
+
+  }
+
+
+  if (
+    normalizedName.startsWith(
+      term
+    )
+  ) {
+
+    score += 700;
+
+  }
+
+
+  identityValues.forEach(
+    function(value) {
+
+      if (
+        value === term
+      ) {
+
+        score += 500;
+
+      }
+
+      else if (
+        value.startsWith(
+          term
+        )
+      ) {
+
+        score += 250;
+
+      }
+
+      else if (
+        value.includes(
+          term
+        )
+      ) {
+
+        score += 80;
+
+      }
+
+    }
+  );
+
+
+  return score;
 
 }
 
@@ -4696,7 +4944,13 @@ function buildCatalog(
 
 
       const coas =
-        product.coas || [];
+        Array.isArray(
+          product.coas
+        )
+        ?
+        product.coas
+        :
+        [];
 
 
       const safeName =
@@ -4762,7 +5016,7 @@ function buildCatalog(
 
 
       if (
-        coas.length
+        coas.length > 0
       ) {
 
         actionHTML =
@@ -4861,8 +5115,8 @@ function buildCatalog(
 
 
               <img
-                src="pch-logo.jpg"
                 class="vial-logo"
+                src="pch-logo.jpg"
                 alt=""
               >
 
@@ -4967,7 +5221,7 @@ function buildCatalog(
 
 
 /* =========================================================
-   ACTIVE FILTER
+   FILTER UI
 ========================================================= */
 
 function setActiveFilterUI(
@@ -4996,21 +5250,25 @@ function setActiveFilterUI(
 
 function updateCatalog() {
 
-  const term =
+  const rawTerm =
     search.value.trim();
 
 
-  const filtered =
+  const hasSearch =
+    rawTerm.length > 0;
+
+
+  let filtered =
     products.filter(
       function(product) {
 
         if (
-          term
+          hasSearch
         ) {
 
           return productMatchesSearch(
             product,
-            term
+            rawTerm
           );
 
         }
@@ -5026,6 +5284,48 @@ function updateCatalog() {
 
       }
     );
+
+
+  if (
+    hasSearch
+  ) {
+
+    filtered =
+      filtered
+      .map(
+        function(product) {
+
+          return {
+
+            product:
+              product,
+
+            score:
+              getSearchScore(
+                product,
+                rawTerm
+              )
+
+          };
+
+        }
+      )
+      .sort(
+        function(a,b) {
+
+          return b.score - a.score;
+
+        }
+      )
+      .map(
+        function(item) {
+
+          return item.product;
+
+        }
+      );
+
+  }
 
 
   buildCatalog(
@@ -5046,18 +5346,16 @@ function updateCatalog() {
 
 
   noResults.style.display =
-    filtered.length
+    filtered.length === 0
     ?
-    "none"
+    "block"
     :
-    "block";
+    "none";
 
 
   searchClear.classList.toggle(
     "visible",
-    Boolean(
-      term
-    )
+    hasSearch
   );
 
 }
@@ -5097,6 +5395,10 @@ search.addEventListener(
   updateCatalog
 );
 
+
+/* =========================================================
+   CLEAR SEARCH
+========================================================= */
 
 searchClear.addEventListener(
   "click",
@@ -5153,12 +5455,16 @@ filterButtons.forEach(
 
         button.scrollIntoView(
           {
+
             behavior:
               "smooth",
+
             block:
               "nearest",
+
             inline:
               "center"
+
           }
         );
 
@@ -5179,7 +5485,7 @@ const menuButton =
   );
 
 
-const mobileMenu =
+const menu =
   document.getElementById(
     "mobileMenu"
   );
@@ -5190,7 +5496,7 @@ menuButton.addEventListener(
   function() {
 
     const open =
-      mobileMenu.classList.toggle(
+      menu.classList.toggle(
         "open"
       );
 
@@ -5210,7 +5516,7 @@ menuButton.addEventListener(
 );
 
 
-mobileMenu
+menu
   .querySelectorAll("a")
   .forEach(
     function(link) {
@@ -5219,7 +5525,7 @@ mobileMenu
         "click",
         function() {
 
-          mobileMenu.classList.remove(
+          menu.classList.remove(
             "open"
           );
 
@@ -5270,4 +5576,4 @@ restoreMemberSession();
 
 </body>
 
-  </html>
+</html>
