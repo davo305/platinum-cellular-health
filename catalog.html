@@ -1,4845 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
->
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#050607">
-
-<title>
-Research Catalog | Platinum Cellular Health Labs
-</title>
+<title>Research Catalog | Platinum Cellular Health Labs</title>
 
 <style>
-
-/* =========================================================
-   RESET / ROOT
-========================================================= */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-:root {
-  --black: #050607;
-  --black2: #080a0b;
-  --panel: #0d0f11;
-  --panel2: #111417;
-  --panel3: #15181b;
-  --border: #272c30;
-
-  --gold: #d5ad55;
-  --gold2: #f0d48c;
-  --gold3: #b98931;
-
-  --text: #f5f5f5;
-  --muted: #a7adb2;
-  --muted2: #747b80;
-
-  --silver: #eceeef;
-  --silver2: #9da2a6;
-}
-
-body {
-  min-height: 100vh;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(213,173,85,.075),
-      transparent 30%
-    ),
-    #050607;
-
-  color: var(--text);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  line-height: 1.6;
-
-  overflow-x: hidden;
-}
-
-body.coa-open {
-  overflow: hidden;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-.shell {
-  width:
-    min(
-      1220px,
-      calc(100% - 36px)
-    );
-
-  margin: auto;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.site-header {
-  position: sticky;
-  top: 0;
-
-  z-index: 1000;
-
-  background:
-    rgba(5,6,7,.97);
-
-  backdrop-filter:
-    blur(18px);
-
-  border-bottom:
-    1px solid rgba(255,255,255,.08);
-}
-
-.nav {
-  min-height: 80px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 22px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-
-  gap: 13px;
-
-  min-width: 0;
-}
-
-.brand img {
-  width: 54px;
-  height: 54px;
-
-  flex-shrink: 0;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  border:
-    1px solid rgba(213,173,85,.38);
-
-  box-shadow:
-    0 0 20px rgba(213,173,85,.06);
-}
-
-.brand-title {
-  font-size: 13px;
-
-  font-weight: 900;
-
-  letter-spacing: 1.1px;
-}
-
-.brand-sub {
-  margin-top: 2px;
-
-  color: var(--gold);
-
-  font-size: 8px;
-
-  letter-spacing: 2.1px;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-
-  gap: 15px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-
-  gap: 15px;
-
-  color: #bdc1c4;
-
-  font-size: 11px;
-
-  font-weight: 700;
-}
-
-.nav-links a:hover {
-  color: var(--gold2);
-}
-
-
-/* =========================================================
-   MEMBER AREA
-========================================================= */
-
-.member-area {
-  display: flex;
-  align-items: center;
-
-  gap: 7px;
-}
-
-.member-login {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 40px;
-
-  padding: 0 14px;
-
-  border:
-    1px solid rgba(213,173,85,.42);
-
-  border-radius: 10px;
-
-  background:
-    rgba(213,173,85,.04);
-
-  color: var(--gold2);
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: .75px;
-}
-
-.member-signed-in {
-  display: none;
-  align-items: center;
-
-  gap: 7px;
-}
-
-.member-signed-in.visible {
-  display: flex;
-}
-
-.member-pill {
-  display: flex;
-  align-items: center;
-
-  gap: 8px;
-
-  padding: 7px 10px;
-
-  border:
-    1px solid rgba(213,173,85,.28);
-
-  border-radius: 9px;
-
-  background:
-    rgba(213,173,85,.025);
-}
-
-.member-dot {
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: var(--gold);
-
-  box-shadow:
-    0 0 10px rgba(213,173,85,.45);
-}
-
-.member-info {
-  line-height: 1.15;
-}
-
-.member-label {
-  color: #767d82;
-
-  font-size: 6px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-.member-name {
-  max-width: 90px;
-
-  overflow: hidden;
-
-  color: var(--gold2);
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  white-space: nowrap;
-
-  text-overflow: ellipsis;
-}
-
-.member-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 37px;
-
-  padding: 0 11px;
-
-  border:
-    1px solid #30353a;
-
-  border-radius: 8px;
-
-  background: #0d1012;
-
-  color: #b9bdc0;
-
-  font-size: 7px;
-
-  font-weight: 900;
-}
-
-.member-link.gold {
-  border: none;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
-  color: #080909;
-}
-
-.member-signout {
-  border: 0;
-
-  background: transparent;
-
-  color: #747b80;
-
-  font-size: 7px;
-
-  font-weight: 900;
-}
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-.mobile-menu-button {
-  display: none;
-
-  width: 45px;
-  height: 45px;
-
-  min-width: 45px;
-
-  padding: 10px;
-
-  border:
-    1px solid #30353a;
-
-  border-radius: 10px;
-
-  background: #0d1012;
-}
-
-.mobile-menu-button span {
-  display: block;
-
-  width: 100%;
-  height: 2px;
-
-  margin: 5px 0;
-
-  border-radius: 10px;
-
-  background: var(--gold2);
-
-  transition: .25s ease;
-}
-
-.mobile-menu-button.active span:nth-child(1) {
-  transform:
-    translateY(7px)
-    rotate(45deg);
-}
-
-.mobile-menu-button.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu-button.active span:nth-child(3) {
-  transform:
-    translateY(-7px)
-    rotate(-45deg);
-}
-
-.mobile-menu {
-  display: none;
-
-  background:
-    rgba(6,7,8,.995);
-
-  border-top:
-    1px solid #202428;
-
-  border-bottom:
-    1px solid #252a2e;
-
-  box-shadow:
-    0 20px 40px rgba(0,0,0,.45);
-}
-
-.mobile-menu.open {
-  display: block;
-}
-
-.mobile-menu-inner {
-  display: grid;
-
-  padding: 10px 0 18px;
-}
-
-.mobile-menu-inner > a {
-  padding: 14px 3px;
-
-  border-bottom:
-    1px solid #1f2326;
-
-  color: #c6cacc;
-
-  font-size: 12px;
-
-  font-weight: 900;
-}
-
-
-/* =========================================================
-   MOBILE MEMBER
-========================================================= */
-
-.mobile-member-box {
-  margin-bottom: 12px;
-
-  padding: 16px;
-
-  border:
-    1px solid rgba(213,173,85,.25);
-
-  border-radius: 13px;
-
-  background:
-    rgba(213,173,85,.025);
-}
-
-.mobile-member-login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-
-  min-height: 49px;
-
-  border-radius: 9px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
-  color: #080909;
-
-  font-size: 10px;
-
-  font-weight: 900;
-}
-
-.mobile-member-signed-in {
-  display: none;
-}
-
-.mobile-member-signed-in.visible {
-  display: block;
-}
-
-.mobile-status {
-  color: var(--gold);
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-.mobile-member-name {
-  margin-top: 3px;
-
-  font-size: 18px;
-
-  font-weight: 900;
-}
-
-.mobile-member-email {
-  margin-top: 2px;
-
-  color: #777e83;
-
-  font-size: 9px;
-
-  word-break: break-word;
-}
-
-.mobile-member-actions {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 8px;
-
-  margin-top: 12px;
-}
-
-.mobile-member-actions a,
-.mobile-member-actions button {
-  min-height: 43px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border:
-    1px solid #30353a;
-
-  border-radius: 8px;
-
-  background: #0d1012;
-
-  color: #c5c9cc;
-
-  font-size: 9px;
-
-  font-weight: 900;
-}
-
-.mobile-member-actions .gold {
-  border: none;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #e2c16e
-    );
-
-  color: #080909;
-}
-
-
-/* =========================================================
-   PROMO
-========================================================= */
-
-.promo-banner {
-  width: 100%;
-
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      90deg,
-      #956b1d,
-      #d5ad55,
-      #f0d48c,
-      #d5ad55,
-      #956b1d
-    );
-
-  color: #080909;
-}
-
-.promo-track {
-  display: flex;
-
-  width: max-content;
-
-  white-space: nowrap;
-
-  animation:
-    promoScroll 24s linear infinite;
-}
-
-.promo-track span {
-  padding: 9px 36px;
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-@keyframes promoScroll {
-
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.page-hero {
-  padding: 70px 0 50px;
-
-  border-bottom:
-    1px solid var(--border);
-}
-
-.back-link {
-  display: inline-block;
-
-  margin-bottom: 26px;
-
-  color: var(--gold2);
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-.eyebrow {
-  margin-bottom: 12px;
-
-  color: var(--gold);
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-}
-
-.page-hero h1 {
-  max-width: 800px;
-
-  margin-bottom: 17px;
-
-  font-size:
-    clamp(
-      42px,
-      7vw,
-      68px
-    );
-
-  line-height: 1;
-
-  letter-spacing: -2px;
-}
-
-.page-hero p {
-  max-width: 750px;
-
-  color: var(--muted);
-
-  font-size: 15px;
-
-  line-height: 1.8;
-}
-
-.hero-meta {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 8px;
-
-  margin-top: 21px;
-}
-
-.hero-meta span {
-  padding: 7px 12px;
-
-  border:
-    1px solid #292e32;
-
-  border-radius: 100px;
-
-  background: #0c0e10;
-
-  color: #858c91;
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-
-/* =========================================================
-   CHECKOUT
-========================================================= */
-
-.checkout-section {
-  padding: 30px 0;
-
-  background: #080a0b;
-
-  border-bottom:
-    1px solid var(--border);
-}
-
-.checkout-box {
-  padding: 30px;
-
-  border:
-    1px solid rgba(213,173,85,.29);
-
-  border-radius: 16px;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(213,173,85,.075),
-      transparent 65%
-    ),
-    #0c0f11;
-
-  text-align: center;
-}
-
-.checkout-content {
-  max-width: 680px;
-
-  margin: auto;
-}
-
-.checkout-box h2 {
-  margin-bottom: 8px;
-
-  font-size:
-    clamp(
-      26px,
-      5vw,
-      38px
-    );
-}
-
-.checkout-box p {
-  margin-bottom: 20px;
-
-  color: var(--muted);
-
-  font-size: 13px;
-
-  line-height: 1.7;
-}
-
-.checkout-button {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-height: 52px;
-
-  padding: 0 29px;
-
-  border-radius: 11px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #f0d48c
-    );
-
-  color: #080909;
-
-  font-size: 12px;
-
-  font-weight: 900;
-
-  letter-spacing: .7px;
-}
-
-.checkout-small {
-  margin-top: 11px;
-
-  color: #737a7f;
-
-  font-size: 8px;
-
-  font-weight: 700;
-}
-
-
-/* =========================================================
-   CATALOG
-========================================================= */
-
-.catalog-section {
-  padding: 30px 0 100px;
-}
-
-.search-wrap {
-  position: sticky;
-
-  top: 80px;
-
-  z-index: 100;
-
-  padding: 13px 0 12px;
-
-  background:
-    rgba(5,6,7,.975);
-
-  backdrop-filter:
-    blur(18px);
-
-  border-bottom:
-    1px solid rgba(255,255,255,.025);
-}
-
-.search-box {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-
-  gap: 11px;
-
-  width: 100%;
-
-  padding: 0 17px;
-
-  border:
-    1px solid #343a3f;
-
-  border-radius: 15px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c
-    );
-
-  transition: .2s ease;
-}
-
-.search-box:focus-within {
-  border-color:
-    rgba(213,173,85,.85);
-
-  box-shadow:
-    0 0 0 3px rgba(213,173,85,.07);
-}
-
-.search-icon {
-  flex-shrink: 0;
-
-  color: var(--gold);
-
-  font-size: 25px;
-}
-
-.search-box input {
-  width: 100%;
-
-  min-height: 60px;
-
-  border: 0;
-
-  outline: none;
-
-  background: transparent;
-
-  color: #fff;
-
-  font-size: 16px;
-}
-
-.search-box input::placeholder {
-  color: #666d72;
-}
-
-.search-clear {
-  display: none;
-
-  width: 31px;
-  height: 31px;
-
-  flex-shrink: 0;
-
-  align-items: center;
-  justify-content: center;
-
-  border: 0;
-
-  border-radius: 50%;
-
-  background: #171a1d;
-
-  color: #8b9297;
-
-  font-size: 16px;
-
-  font-weight: 900;
-}
-
-.search-clear.visible {
-  display: flex;
-}
-
-
-/* =========================================================
-   FILTERS
-========================================================= */
-
-.filter-bar {
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      3,
-      minmax(0,1fr)
-    );
-
-  gap: 11px;
-
-  margin-top: 13px;
-}
-
-.filter-button {
-  min-height: 55px;
-
-  padding: 11px 16px;
-
-  border:
-    1px solid #343a3f;
-
-  border-radius: 15px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #121517,
-      #090b0d
-    );
-
-  color: #bec2c5;
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: .9px;
-
-  line-height: 1.25;
-}
-
-.filter-button.active {
-  border-color:
-    rgba(240,212,140,.9);
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #efd17b
-    );
-
-  color: #080909;
-
-  box-shadow:
-    0 8px 20px
-    rgba(213,173,85,.17);
-}
-
-
-/* =========================================================
-   TOOLBAR
-========================================================= */
-
-.catalog-toolbar {
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 18px;
-
-  margin: 26px 0 18px;
-}
-
-.catalog-count {
-  color: #8d9499;
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: .65px;
-}
-
-.catalog-checkout {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-height: 42px;
-
-  padding: 0 17px;
-
-  border-radius: 9px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #f0d48c
-    );
-
-  color: #080909;
-
-  font-size: 8px;
-
-  font-weight: 900;
-}
-
-
-/* =========================================================
-   PRODUCT GRID
-========================================================= */
-
-.catalog-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      2,
-      minmax(0,1fr)
-    );
-
-  gap: 20px;
-}
-
-
-/* =========================================================
-   PRODUCT CARD
-========================================================= */
-
-.product-card {
-  position: relative;
-
-  min-height: 420px;
-
-  overflow: hidden;
-
-  display: flex;
-
-  flex-direction: column;
-
-  padding: 31px;
-
-  border:
-    1px solid #292e32;
-
-  border-radius: 21px;
-
-  background:
-    radial-gradient(
-      circle at 84% 34%,
-      rgba(213,173,85,.075),
-      transparent 34%
-    ),
-    linear-gradient(
-      145deg,
-      #111416,
-      #090b0c 70%
-    );
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.025),
-    0 12px 32px rgba(0,0,0,.18);
-}
-
-.product-main {
-  position: relative;
-
-  z-index: 3;
-
-  width:
-    calc(100% - 160px);
-
-  min-height: 265px;
-}
-
-.card-top {
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  flex-wrap: wrap;
-}
-
-.category {
-  color: var(--gold);
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: 1.6px;
-}
-
-.amount-badge {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-height: 33px;
-
-  padding: 0 12px;
-
-  border:
-    1px solid #42474b;
-
-  border-radius: 10px;
-
-  background:
-    rgba(255,255,255,.025);
-
-  color: #e0e2e4;
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: .8px;
-}
-
-.product-card h2 {
-  margin: 23px 0 12px;
-
-  font-size: 32px;
-
-  line-height: 1.08;
-
-  letter-spacing: -.5px;
-}
-
-.product-description {
-  max-width: 390px;
-
-  color: #adb3b7;
-
-  font-size: 14px;
-
-  line-height: 1.72;
-}
-
-.coa-indicator {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  margin-top: 17px;
-
-  color: var(--gold2);
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: 1.1px;
-}
-
-.coa-dot {
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: var(--gold);
-
-  box-shadow:
-    0 0 10px rgba(213,173,85,.62);
-}
-
-
-/* =========================================================
-   VIAL
-========================================================= */
-
-.vial-area {
-  position: absolute;
-
-  top: 43px;
-  right: 30px;
-
-  width: 132px;
-  height: 258px;
-
-  z-index: 2;
-
-  display: flex;
-
-  align-items: flex-end;
-  justify-content: center;
-
-  pointer-events: none;
-}
-
-.vial-glow {
-  position: absolute;
-
-  left: 50%;
-  bottom: -5px;
-
-  width: 116px;
-  height: 34px;
-
-  transform:
-    translateX(-50%);
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      ellipse,
-      rgba(213,173,85,.24) 0%,
-      rgba(213,173,85,.075) 45%,
-      transparent 74%
-    );
-
-  filter:
-    blur(10px);
-}
-
-.vial {
-  position: relative;
-
-  width: 78px;
-  height: 174px;
-
-  margin-bottom: 9px;
-
-  border-radius:
-    20px 20px 17px 17px;
-
-  border:
-    1px solid rgba(216,221,224,.55);
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(240,244,246,.17) 0%,
-      rgba(255,255,255,.08) 8%,
-      rgba(98,104,108,.055) 18%,
-      rgba(9,11,12,.15) 35%,
-      rgba(4,5,6,.27) 50%,
-      rgba(8,10,11,.16) 68%,
-      rgba(110,116,120,.055) 84%,
-      rgba(255,255,255,.12) 94%,
-      rgba(222,228,231,.19) 100%
-    );
-
-  box-shadow:
-    0 17px 22px rgba(0,0,0,.68),
-    inset 4px 0 6px rgba(255,255,255,.11),
-    inset -4px 0 7px rgba(255,255,255,.055);
-}
-
-.vial::before {
-  content: "";
-
-  position: absolute;
-
-  top: -14px;
-  left: 8px;
-  right: 8px;
-
-  height: 29px;
-
-  border-radius:
-    16px 16px 8px 8px;
-
-  border-top:
-    1px solid rgba(235,239,241,.57);
-
-  border-left:
-    1px solid rgba(213,219,222,.34);
-
-  border-right:
-    1px solid rgba(213,219,222,.34);
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.14),
-      rgba(16,18,19,.07) 24%,
-      rgba(4,5,6,.18) 50%,
-      rgba(16,18,19,.07) 75%,
-      rgba(255,255,255,.12)
-    );
-}
-
-.vial-cap {
-  position: absolute;
-
-  top: -48px;
-  left: 3px;
-
-  width: 70px;
-  height: 31px;
-
-  z-index: 9;
-
-  border:
-    1px solid rgba(180,185,188,.9);
-
-  border-radius:
-    7px 7px 4px 4px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #5d6164 0%,
-      #bfc3c5 9%,
-      #f2f2f2 20%,
-      #a5aaad 35%,
-      #eeeeee 52%,
-      #a2a7aa 68%,
-      #e5e7e8 84%,
-      #656a6d 100%
-    );
-}
-
-.vial-cap::before {
-  content: "";
-
-  position: absolute;
-
-  top: -13px;
-  left: 4px;
-
-  width: 60px;
-  height: 17px;
-
-  border-radius:
-    11px 11px 5px 5px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #292b2d 0%,
-      #0b0c0d 45%,
-      #030404 100%
-    );
-}
-
-.vial-neck {
-  position: absolute;
-
-  top: -19px;
-  left: 15px;
-
-  width: 46px;
-  height: 24px;
-
-  z-index: 3;
-
-  border-left:
-    1px solid rgba(228,232,234,.42);
-
-  border-right:
-    1px solid rgba(228,232,234,.42);
-}
-
-.vial-label {
-  position: absolute;
-
-  top: 33px;
-  left: 5px;
-  right: 5px;
-
-  height: 119px;
-
-  z-index: 6;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  padding:
-    8px 4px 5px;
-
-  overflow: hidden;
-
-  border:
-    1px solid rgba(213,173,85,.68);
-
-  background:
-    linear-gradient(
-      100deg,
-      #080909 0%,
-      #121314 18%,
-      #050606 47%,
-      #0b0c0d 74%,
-      #141516 100%
-    );
-}
-
-.vial-logo {
-  width: 27px;
-  height: 27px;
-
-  margin-bottom: 3px;
-
-  border-radius: 50%;
-
-  object-fit: cover;
-
-  border:
-    1px solid rgba(213,173,85,.35);
-}
-
-.vial-brand {
-  color: #f1f1f1;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 6px;
-
-  font-weight: 700;
-
-  letter-spacing: 1px;
-}
-
-.vial-labs {
-  margin-top: 2px;
-
-  color: var(--gold);
-
-  font-size: 3.5px;
-
-  font-weight: 900;
-
-  letter-spacing: .65px;
-}
-
-.vial-divider {
-  width: 39px;
-  height: 1px;
-
-  margin:
-    6px 0 4px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--gold),
-      transparent
-    );
-}
-
-.vial-product {
-  width: 100%;
-
-  min-height: 18px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 0 2px;
-
-  color: #f5f5f5;
-
-  font-size: 7px;
-
-  font-weight: 900;
-
-  letter-spacing: .25px;
-
-  line-height: 1.1;
-
-  text-align: center;
-
-  text-transform: uppercase;
-
-  overflow-wrap: anywhere;
-}
-
-.vial-amount {
-  margin-top: 4px;
-
-  color: var(--gold2);
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: .8px;
-}
-
-.vial-research {
-  margin-top: 6px;
-
-  padding:
-    2px 4px;
-
-  border:
-    1px solid rgba(213,173,85,.52);
-
-  color: var(--gold);
-
-  font-size: 3px;
-
-  font-weight: 900;
-
-  letter-spacing: .35px;
-}
-
-
-/* =========================================================
-   PRICE / ACTIONS
-========================================================= */
-
-.product-bottom {
-  position: relative;
-
-  z-index: 4;
-
-  display: flex;
-
-  align-items: flex-end;
-  justify-content: space-between;
-
-  gap: 18px;
-
-  margin-top: auto;
-
-  padding-top: 20px;
-
-  border-top:
-    1px solid #272c30;
-}
-
-.price-label {
-  display: block;
-
-  color: #777e83;
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: 1.2px;
-}
-
-.price {
-  margin-top: 3px;
-
-  color: var(--gold2);
-
-  font-size: 37px;
-
-  line-height: 1;
-
-  font-weight: 900;
-
-  letter-spacing: -1px;
-}
-
-.product-actions {
-  display: flex;
-
-  align-items: center;
-
-  gap: 9px;
-}
-
-.btn {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-height: 44px;
-
-  padding: 0 16px;
-
-  border:
-    1px solid #3a4044;
-
-  border-radius: 10px;
-
-  background: #101214;
-
-  color: #f4f4f4;
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: .65px;
-}
-
-.btn-coa {
-  color: var(--gold2);
-
-  border-color:
-    rgba(213,173,85,.55);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(213,173,85,.06),
-      rgba(213,173,85,.015)
-    );
-}
-
-.btn-unavailable {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-height: 44px;
-
-  padding: 0 14px;
-
-  border:
-    1px solid #30353a;
-
-  border-radius: 10px;
-
-  background: #0b0d0f;
-
-  color: #737a7f;
-
-  font-size: 8px;
-
-  font-weight: 900;
-}
-
-
-/* =========================================================
-   EMPTY / NOTICE
-========================================================= */
-
-.no-results {
-  display: none;
-
-  margin-top: 20px;
-
-  padding: 44px 22px;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 15px;
-
-  background: #0d1012;
-
-  color: var(--muted);
-
-  text-align: center;
-}
-
-.no-results strong {
-  color: #d6d8da;
-
-  font-size: 19px;
-}
-
-.catalog-notice {
-  margin-top: 38px;
-
-  padding: 24px;
-
-  border:
-    1px solid rgba(213,173,85,.20);
-
-  border-radius: 14px;
-
-  background:
-    rgba(213,173,85,.025);
-}
-
-.catalog-notice strong {
-  display: block;
-
-  margin-bottom: 8px;
-
-  color: var(--gold2);
-
-  font-size: 11px;
-
-  letter-spacing: 1px;
-}
-
-.catalog-notice p {
-  color: var(--muted);
-
-  font-size: 12px;
-
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   MOBILE CHECKOUT
-========================================================= */
-
-.mobile-sticky-checkout {
-  display: none;
-
-  position: fixed;
-
-  left: 18px;
-  right: 18px;
-
-  bottom:
-    calc(
-      12px +
-      env(safe-area-inset-bottom)
-    );
-
-  z-index: 5000;
-
-  padding: 4px;
-
-  border:
-    1px solid rgba(213,173,85,.3);
-
-  border-radius: 14px;
-
-  background:
-    rgba(5,6,7,.95);
-
-  backdrop-filter:
-    blur(16px);
-}
-
-.mobile-sticky-checkout a {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-
-  min-height: 55px;
-
-  border-radius: 10px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #b98a32,
-      #efd17e
-    );
-
-  color: #080909;
-
-  font-size: 11px;
-
-  font-weight: 900;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-  padding: 42px 0;
-
-  border-top:
-    1px solid var(--border);
-
-  background: #030404;
-}
-
-.footer-grid {
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 30px;
-
-  color: #777d82;
-
-  font-size: 11px;
-}
-
-.footer-grid strong {
-  display: block;
-
-  margin-bottom: 4px;
-
-  color: #c7c9ca;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media(max-width:1100px) {
-
-  .member-area {
-    display: none;
-  }
-
-}
-
-
-@media(max-width:900px) {
-
-  body {
-    padding-bottom: 84px;
-  }
-
-  .shell {
-    width:
-      min(
-        calc(100% - 28px),
-        1220px
-      );
-  }
-
-  .nav {
-    min-height: 68px;
-  }
-
-  .brand img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .brand-title {
-    font-size: 10px;
-  }
-
-  .brand-sub {
-    font-size: 6.5px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .mobile-menu-button {
-    display: block;
-  }
-
-  .search-wrap {
-    top: 68px;
-  }
-
-  .catalog-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .catalog-checkout {
-    display: none;
-  }
-
-  .mobile-sticky-checkout {
-    display: block;
-  }
-
-  .footer-grid {
-    flex-direction: column;
-  }
-
-}
-
-
-@media(max-width:650px) {
-
-  .promo-track span {
-    padding: 9px 29px;
-
-    font-size: 8.5px;
-  }
-
-  .page-hero {
-    padding: 34px 0 30px;
-  }
-
-  .page-hero h1 {
-    font-size: 36px;
-  }
-
-  .page-hero p {
-    font-size: 13px;
-
-    line-height: 1.65;
-  }
-
-  .checkout-section {
-    padding: 19px 0;
-  }
-
-  .checkout-box {
-    padding: 21px 18px;
-  }
-
-  .checkout-button {
-    width: 100%;
-
-    min-height: 48px;
-
-    font-size: 9px;
-  }
-
-  .catalog-section {
-    padding-top: 16px;
-  }
-
-  .search-wrap {
-    padding: 10px 0 9px;
-  }
-
-  .search-box input {
-    min-height: 58px;
-
-    font-size: 16px;
-  }
-
-  .filter-bar {
-    display: flex;
-
-    width: 100%;
-
-    gap: 11px;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    margin-top: 12px;
-
-    padding:
-      2px 2px 10px;
-
-    scrollbar-width: none;
-  }
-
-  .filter-bar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .filter-button {
-    flex: 0 0 auto;
-
-    min-height: 58px;
-
-    padding:
-      0 23px;
-
-    border-radius: 100px;
-
-    white-space: nowrap;
-
-    font-size: 9px;
-  }
-
-  .product-card {
-    min-height: 376px;
-
-    padding:
-      25px 22px;
-
-    border-radius: 19px;
-  }
-
-  .product-main {
-    width:
-      calc(100% - 115px);
-
-    min-height: 250px;
-  }
-
-  .product-card h2 {
-    margin:
-      19px 0 9px;
-
-    font-size: 29px;
-  }
-
-  .product-description {
-    font-size: 13px;
-
-    line-height: 1.6;
-  }
-
-  .vial-area {
-    top: 61px;
-    right: 11px;
-
-    width: 106px;
-    height: 215px;
-
-    transform:
-      scale(.88);
-
-    transform-origin:
-      center right;
-  }
-
-  .price {
-    font-size: 34px;
-  }
-
-}
-
-
-@media(max-width:520px) {
-
-  .shell {
-    width:
-      calc(100% - 24px);
-  }
-
-  .product-card {
-    min-height: 364px;
-
-    padding:
-      23px 20px;
-  }
-
-  .product-main {
-    width:
-      calc(100% - 108px);
-  }
-
-  .product-card h2 {
-    font-size: 27px;
-  }
-
-  .product-description {
-    font-size: 12px;
-  }
-
-}
-
-
-@media(max-width:390px) {
-
-  .product-card {
-    padding:
-      21px 17px;
-
-    min-height: 350px;
-  }
-
-  .product-main {
-    width:
-      calc(100% - 100px);
-  }
-
-  .product-card h2 {
-    font-size: 24px;
-  }
-
-  .product-description {
-    font-size: 11.5px;
-  }
-
-  .price {
-    font-size: 31px;
-  }
-
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{--black:#050607;--panel:#0d0f11;--border:#272c30;--gold:#d5ad55;--gold2:#f0d48c;--text:#f5f5f5;--muted:#a7adb2}
+body{min-height:100vh;background:radial-gradient(circle at 50% 0%,rgba(213,173,85,.075),transparent 30%),#050607;color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%} button,input{font:inherit} button{cursor:pointer}
+.shell{width:min(1220px,calc(100% - 36px));margin:auto}
+
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(5,6,7,.97);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.brand img{width:54px;height:54px;flex-shrink:0;object-fit:cover;border-radius:50%;border:1px solid rgba(213,173,85,.38)}
+.brand-title{font-size:13px;font-weight:900;letter-spacing:1.1px}
+.brand-sub{margin-top:2px;color:var(--gold);font-size:8px;letter-spacing:2.1px}
+.nav-right,.nav-links,.member-area,.member-signed-in{display:flex;align-items:center}
+.nav-right{gap:15px}.nav-links{gap:15px;color:#bdc1c4;font-size:11px;font-weight:700}.nav-links a:hover{color:var(--gold2)}
+.member-area{gap:7px}.member-signed-in{display:none;gap:7px}.member-signed-in.visible{display:flex}
+.member-login,.member-link{display:inline-flex;align-items:center;justify-content:center;border-radius:9px;font-size:8px;font-weight:900}
+.member-login{min-height:40px;padding:0 14px;border:1px solid rgba(213,173,85,.42);background:rgba(213,173,85,.04);color:var(--gold2)}
+.member-link{min-height:37px;padding:0 11px;border:1px solid #30353a;background:#0d1012;color:#b9bdc0}.member-link.gold{border:0;background:linear-gradient(135deg,#b98a32,#e2c16e);color:#080909}
+.member-pill{display:flex;align-items:center;gap:8px;padding:7px 10px;border:1px solid rgba(213,173,85,.28);border-radius:9px;background:rgba(213,173,85,.025)}
+.member-dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.member-label{color:#767d82;font-size:6px;font-weight:900}.member-name{max-width:90px;overflow:hidden;color:var(--gold2);font-size:8px;font-weight:900;white-space:nowrap;text-overflow:ellipsis}
+.member-signout{border:0;background:transparent;color:#747b80;font-size:7px;font-weight:900}
+
+.mobile-menu-button{display:none;width:45px;height:45px;min-width:45px;padding:10px;border:1px solid #30353a;border-radius:10px;background:#0d1012}
+.mobile-menu-button span{display:block;width:100%;height:2px;margin:5px 0;border-radius:10px;background:var(--gold2)}
+.mobile-menu-button.active span:nth-child(1){transform:translateY(7px) rotate(45deg)} .mobile-menu-button.active span:nth-child(2){opacity:0}.mobile-menu-button.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;background:rgba(6,7,8,.995);border-top:1px solid #202428;border-bottom:1px solid #252a2e}.mobile-menu.open{display:block}
+.mobile-menu-inner{display:grid;padding:10px 0 18px}.mobile-menu-inner>a{padding:14px 3px;border-bottom:1px solid #1f2326;color:#c6cacc;font-size:12px;font-weight:900}
+.mobile-member-box{margin-bottom:12px;padding:16px;border:1px solid rgba(213,173,85,.25);border-radius:13px;background:rgba(213,173,85,.025)}
+.mobile-member-login{display:flex;align-items:center;justify-content:center;width:100%;min-height:49px;border-radius:9px;background:linear-gradient(135deg,#b98a32,#e2c16e);color:#080909;font-size:10px;font-weight:900}
+.mobile-member-signed-in{display:none}.mobile-member-signed-in.visible{display:block}.mobile-status{color:var(--gold);font-size:8px;font-weight:900}.mobile-member-name{margin-top:3px;font-size:18px;font-weight:900}.mobile-member-email{color:#777e83;font-size:9px;word-break:break-word}
+.mobile-member-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.mobile-member-actions a,.mobile-member-actions button{min-height:43px;display:flex;align-items:center;justify-content:center;border:1px solid #30353a;border-radius:8px;background:#0d1012;color:#c5c9cc;font-size:9px;font-weight:900}.mobile-member-actions .gold{border:0;background:linear-gradient(135deg,#b98a32,#e2c16e);color:#080909}
+
+.promo-banner{overflow:hidden;background:linear-gradient(90deg,#956b1d,#d5ad55,#f0d48c,#d5ad55,#956b1d);color:#080909}.promo-track{display:flex;width:max-content;white-space:nowrap;animation:promoScroll 24s linear infinite}.promo-track span{padding:9px 36px;font-size:9px;font-weight:900}@keyframes promoScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.page-hero{padding:70px 0 50px;border-bottom:1px solid var(--border)}.back-link{display:inline-block;margin-bottom:26px;color:var(--gold2);font-size:10px;font-weight:900}.eyebrow{margin-bottom:12px;color:var(--gold);font-size:9px;font-weight:900;letter-spacing:2px}.page-hero h1{margin-bottom:17px;font-size:clamp(42px,7vw,68px);line-height:1}.page-hero p{max-width:750px;color:var(--muted);font-size:15px;line-height:1.8}.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:21px}.hero-meta span{padding:7px 12px;border:1px solid #292e32;border-radius:100px;background:#0c0e10;color:#858c91;font-size:8px;font-weight:900}
+
+.checkout-section{padding:30px 0;background:#080a0b;border-bottom:1px solid var(--border)}.checkout-box{padding:30px;border:1px solid rgba(213,173,85,.29);border-radius:16px;background:#0c0f11;text-align:center}.checkout-content{max-width:680px;margin:auto}.checkout-box h2{margin-bottom:8px;font-size:clamp(26px,5vw,38px)}.checkout-box p{margin-bottom:20px;color:var(--muted);font-size:13px}.checkout-button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 29px;border-radius:11px;background:linear-gradient(135deg,#b98a32,#f0d48c);color:#080909;font-size:12px;font-weight:900}.checkout-small{margin-top:11px;color:#737a7f;font-size:8px}
+
+.catalog-section{padding:30px 0 100px}.search-wrap{position:sticky;top:80px;z-index:100;padding:13px 0 12px;background:rgba(5,6,7,.975);backdrop-filter:blur(18px)}
+.search-box{display:flex;align-items:center;gap:11px;width:100%;padding:0 17px;border:1px solid #343a3f;border-radius:15px;background:linear-gradient(145deg,#111416,#090b0c)}.search-box:focus-within{border-color:rgba(213,173,85,.85)}.search-icon{color:var(--gold);font-size:25px}.search-box input{width:100%;min-height:60px;border:0;outline:none;background:transparent;color:#fff;font-size:16px}.search-box input::placeholder{color:#666d72}.search-clear{display:none;width:31px;height:31px;border:0;border-radius:50%;background:#171a1d;color:#8b9297}.search-clear.visible{display:flex;align-items:center;justify-content:center}
+.filter-bar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:13px}.filter-button{min-height:55px;padding:11px 16px;border:1px solid #343a3f;border-radius:15px;background:linear-gradient(145deg,#121517,#090b0d);color:#bec2c5;font-size:10px;font-weight:900}.filter-button.active{border-color:rgba(240,212,140,.9);background:linear-gradient(135deg,#b98a32,#efd17b);color:#080909}
+.catalog-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:26px 0 18px}.catalog-count{color:#8d9499;font-size:11px;font-weight:900}.catalog-checkout{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 17px;border-radius:9px;background:linear-gradient(135deg,#b98a32,#f0d48c);color:#080909;font-size:8px;font-weight:900}
+
+.catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.product-card{position:relative;min-height:420px;overflow:hidden;display:flex;flex-direction:column;padding:31px;border:1px solid #292e32;border-radius:21px;background:radial-gradient(circle at 84% 34%,rgba(213,173,85,.075),transparent 34%),linear-gradient(145deg,#111416,#090b0c 70%)}
+.product-main{position:relative;z-index:3;width:calc(100% - 160px);min-height:265px}.card-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.category{color:var(--gold);font-size:10px;font-weight:900}.amount-badge{display:inline-flex;align-items:center;justify-content:center;min-height:33px;padding:0 12px;border:1px solid #42474b;border-radius:10px;color:#e0e2e4;font-size:9px;font-weight:900}.product-card h2{margin:23px 0 12px;font-size:32px;line-height:1.08}.product-description{color:#adb3b7;font-size:14px;line-height:1.72}.coa-indicator{display:inline-flex;align-items:center;gap:8px;margin-top:17px;color:var(--gold2);font-size:8px;font-weight:900}.coa-dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+
+.vial-area{position:absolute;top:43px;right:30px;width:132px;height:258px;z-index:2;display:flex;align-items:flex-end;justify-content:center;pointer-events:none}.vial-glow{position:absolute;left:50%;bottom:-5px;width:116px;height:34px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,rgba(213,173,85,.24),transparent 74%);filter:blur(10px)}
+.vial{position:relative;width:78px;height:174px;margin-bottom:9px;border-radius:20px 20px 17px 17px;border:1px solid rgba(216,221,224,.55);background:linear-gradient(90deg,rgba(240,244,246,.17),rgba(4,5,6,.27),rgba(222,228,231,.19))}
+.vial::before{content:"";position:absolute;top:-14px;left:8px;right:8px;height:29px;border-radius:16px 16px 8px 8px;border-top:1px solid rgba(235,239,241,.57);border-left:1px solid rgba(213,219,222,.34);border-right:1px solid rgba(213,219,222,.34)}
+.vial-cap{position:absolute;top:-48px;left:3px;width:70px;height:31px;z-index:9;border-radius:7px 7px 4px 4px;background:linear-gradient(90deg,#5d6164,#f2f2f2,#656a6d)}.vial-cap::before{content:"";position:absolute;top:-13px;left:4px;width:60px;height:17px;border-radius:11px 11px 5px 5px;background:linear-gradient(180deg,#292b2d,#030404)}.vial-neck{position:absolute;top:-19px;left:15px;width:46px;height:24px;border-left:1px solid rgba(228,232,234,.42);border-right:1px solid rgba(228,232,234,.42)}
+.vial-label{position:absolute;top:33px;left:5px;right:5px;height:119px;z-index:6;display:flex;flex-direction:column;align-items:center;padding:8px 4px 5px;border:1px solid rgba(213,173,85,.68);background:linear-gradient(100deg,#080909,#050606,#141516)}.vial-logo{width:27px;height:27px;margin-bottom:3px;border-radius:50%;object-fit:cover}.vial-brand{color:#f1f1f1;font-family:Georgia,serif;font-size:6px;font-weight:700}.vial-labs{margin-top:2px;color:var(--gold);font-size:3.5px;font-weight:900}.vial-divider{width:39px;height:1px;margin:6px 0 4px;background:var(--gold)}.vial-product{width:100%;min-height:18px;display:flex;align-items:center;justify-content:center;color:#f5f5f5;font-size:7px;font-weight:900;text-align:center;text-transform:uppercase}.vial-amount{margin-top:4px;color:var(--gold2);font-size:9px;font-weight:900}.vial-research{margin-top:6px;padding:2px 4px;border:1px solid rgba(213,173,85,.52);color:var(--gold);font-size:3px;font-weight:900}
+
+.product-bottom{position:relative;z-index:4;display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-top:auto;padding-top:20px;border-top:1px solid #272c30}.price-label{display:block;color:#777e83;font-size:8px;font-weight:900}.price{margin-top:3px;color:var(--gold2);font-size:37px;line-height:1;font-weight:900}.product-actions{display:flex;align-items:center;gap:9px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border:1px solid #3a4044;border-radius:10px;background:#101214;color:#f4f4f4;font-size:9px;font-weight:900}.btn-coa{color:var(--gold2);border-color:rgba(213,173,85,.55)}.btn-unavailable{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border:1px solid #30353a;border-radius:10px;background:#0b0d0f;color:#737a7f;font-size:8px;font-weight:900}
+
+.no-results{display:none;margin-top:20px;padding:44px 22px;border:1px solid var(--border);border-radius:15px;background:#0d1012;color:var(--muted);text-align:center}.catalog-notice{margin-top:38px;padding:24px;border:1px solid rgba(213,173,85,.20);border-radius:14px;background:rgba(213,173,85,.025)}.catalog-notice strong{display:block;margin-bottom:8px;color:var(--gold2)}.catalog-notice p{color:var(--muted);font-size:12px}
+
+footer{padding:42px 0;border-top:1px solid var(--border);background:#030404}.footer-grid{display:flex;justify-content:space-between;gap:30px;color:#777d82;font-size:11px}
+.mobile-sticky-checkout{display:none;position:fixed;left:18px;right:18px;bottom:12px;z-index:5000;padding:4px;background:#050607;border-radius:14px}.mobile-sticky-checkout a{display:flex;align-items:center;justify-content:center;min-height:55px;border-radius:10px;background:linear-gradient(135deg,#b98a32,#efd17e);color:#080909;font-size:11px;font-weight:900}
+
+@media(max-width:1100px){.member-area{display:none}}
+@media(max-width:900px){body{padding-bottom:84px}.nav{min-height:68px}.nav-links{display:none}.mobile-menu-button{display:block}.search-wrap{top:68px}.catalog-grid{grid-template-columns:1fr}.catalog-checkout{display:none}.mobile-sticky-checkout{display:block}.footer-grid{flex-direction:column}}
+@media(max-width:650px){.page-hero{padding:34px 0 30px}.page-hero h1{font-size:36px}.filter-bar{display:flex;overflow-x:auto;gap:11px}.filter-button{flex:0 0 auto;min-height:58px;padding:0 23px;border-radius:100px}.product-card{min-height:376px;padding:25px 22px}.product-main{width:calc(100% - 115px)}.product-card h2{font-size:29px}.product-description{font-size:13px}.vial-area{top:61px;right:11px;transform:scale(.88);transform-origin:center right}}
 </style>
-
 </head>
-
 
 <body>
 
-
 <header class="site-header">
-
 <div class="shell nav">
 
-
-<a
-  href="index.html"
-  class="brand"
->
-
-<img
-  src="pch-logo.jpg"
-  alt="PCH Labs"
->
-
+<a href="index.html" class="brand">
+<img src="pch-logo.jpg" alt="PCH Labs">
 <div>
-
-<div class="brand-title">
-PLATINUM CELLULAR HEALTH LABS
+<div class="brand-title">PLATINUM CELLULAR HEALTH LABS</div>
+<div class="brand-sub">LONGEVITY AT THE CELLULAR LEVEL</div>
 </div>
-
-<div class="brand-sub">
-LONGEVITY AT THE CELLULAR LEVEL
-</div>
-
-</div>
-
 </a>
-
 
 <div class="nav-right">
 
-
 <nav class="nav-links">
-
-<a href="index.html">
-Home
-</a>
-
-<a href="research-information.html">
-Research
-</a>
-
-<a href="catalog.html">
-Catalog
-</a>
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-<a href="recommended-supplies.html">
-Supplies
-</a>
-
-<a href="policies.html">
-Policies
-</a>
-
-<a href="faq.html">
-FAQ
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
+<a href="index.html">Home</a>
+<a href="research-information.html">Research</a>
+<a href="catalog.html">Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
 </nav>
 
-
 <div class="member-area">
+<a href="login.html" class="member-login" id="desktopLoginLink">🔐 MEMBER LOGIN</a>
 
-<a
-  href="login.html"
-  class="member-login"
-  id="desktopLoginLink"
->
-🔐 MEMBER LOGIN
-</a>
-
-
-<div
-  class="member-signed-in"
-  id="desktopMemberArea"
->
-
+<div class="member-signed-in" id="desktopMemberArea">
 <div class="member-pill">
-
 <span class="member-dot"></span>
-
-<div class="member-info">
-
-<div class="member-label">
-SIGNED IN
+<div>
+<div class="member-label">SIGNED IN</div>
+<div class="member-name" id="desktopMemberName">MEMBER</div>
+</div>
+</div>
+<a href="login.html" class="member-link">ACCOUNT</a>
+<a href="login.html" class="member-link gold">CHECKOUT</a>
+<button type="button" class="member-signout" id="desktopSignout">SIGN OUT</button>
+</div>
 </div>
 
-<div
-  class="member-name"
-  id="desktopMemberName"
->
-MEMBER
-</div>
-
-</div>
-
-</div>
-
-
-<a
-  href="login.html"
-  class="member-link"
->
-ACCOUNT
-</a>
-
-
-<a
-  href="login.html"
-  class="member-link gold"
->
-CHECKOUT
-</a>
-
-
-<button
-  type="button"
-  class="member-signout"
-  id="desktopSignout"
->
-SIGN OUT
+<button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-expanded="false">
+<span></span><span></span><span></span>
 </button>
 
 </div>
-
 </div>
 
-
-<button
-  class="mobile-menu-button"
-  id="mobileMenuButton"
-  type="button"
-  aria-label="Open navigation menu"
-  aria-expanded="false"
->
-
-<span></span>
-<span></span>
-<span></span>
-
-</button>
-
-</div>
-
-</div>
-
-
-<div
-  class="mobile-menu"
-  id="mobileMenu"
->
-
+<div class="mobile-menu" id="mobileMenu">
 <div class="shell mobile-menu-inner">
 
-
 <div class="mobile-member-box">
+<a href="login.html" class="mobile-member-login" id="mobileLoginLink">🔐 MEMBER LOGIN / CREATE ACCOUNT</a>
 
-<a
-  href="login.html"
-  class="mobile-member-login"
-  id="mobileLoginLink"
->
-🔐 MEMBER LOGIN / CREATE ACCOUNT
-</a>
-
-
-<div
-  class="mobile-member-signed-in"
-  id="mobileMemberArea"
->
-
-<div class="mobile-status">
-● SIGNED IN
-</div>
-
-<div
-  class="mobile-member-name"
-  id="mobileMemberName"
->
-PCH Member
-</div>
-
-<div
-  class="mobile-member-email"
-  id="mobileMemberEmail"
-></div>
-
+<div class="mobile-member-signed-in" id="mobileMemberArea">
+<div class="mobile-status">● SIGNED IN</div>
+<div class="mobile-member-name" id="mobileMemberName">PCH Member</div>
+<div class="mobile-member-email" id="mobileMemberEmail"></div>
 <div class="mobile-member-actions">
-
-<a href="login.html">
-MY ACCOUNT
-</a>
-
-<a
-  href="login.html"
-  class="gold"
->
-CHECKOUT
-</a>
-
-<button
-  type="button"
-  id="mobileSignout"
->
-SIGN OUT
-</button>
-
-<a href="catalog.html">
-CATALOG
-</a>
-
+<a href="login.html">MY ACCOUNT</a>
+<a href="login.html" class="gold">CHECKOUT</a>
+<button type="button" id="mobileSignout">SIGN OUT</button>
+<a href="catalog.html">CATALOG</a>
+</div>
+</div>
 </div>
 
-</div>
+<a href="index.html">Home</a>
+<a href="research-information.html">Research Information</a>
+<a href="catalog.html">Research Catalog</a>
+<a href="quality-coa.html">Quality & COA</a>
+<a href="recommended-supplies.html">Recommended Supplies</a>
+<a href="policies.html">Policies</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
 
 </div>
-
-
-<a href="index.html">
-Home
-</a>
-
-<a href="research-information.html">
-Research Information
-</a>
-
-<a href="catalog.html">
-Research Catalog
-</a>
-
-<a href="quality-coa.html">
-Quality & COA
-</a>
-
-<a href="recommended-supplies.html">
-Recommended Supplies
-</a>
-
-<a href="policies.html">
-Policies
-</a>
-
-<a href="faq.html">
-FAQ
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
 </div>
-
-</div>
-
 
 <div class="promo-banner">
-
 <div class="promo-track">
-
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
-
-<span>
-$15 STANDARD SHIPPING VALUE
-</span>
-
-<span>
-✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
-</span>
-
-<span>
-FREE STANDARD SHIPPING ON ORDERS OVER $280
-</span>
-
-<span>
-✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦
-</span>
-
-<span>
-$15 STANDARD SHIPPING VALUE
-</span>
-
-<span>
-✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦
-</span>
-
-<span>
-FREE STANDARD SHIPPING ON ORDERS OVER $280
-</span>
-
+<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
+<span>$15 STANDARD SHIPPING VALUE</span>
+<span>✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦</span>
+<span>FREE STANDARD SHIPPING ON ORDERS OVER $280</span>
+<span>✦ FREE STANDARD SHIPPING ON ORDERS OVER $280 ✦</span>
+<span>$15 STANDARD SHIPPING VALUE</span>
+<span>✦ OPTIONAL SHIPPING INSURANCE AVAILABLE ✦</span>
+<span>FREE STANDARD SHIPPING ON ORDERS OVER $280</span>
 </div>
-
 </div>
 
 </header>
 
-
 <main>
 
-
 <section class="page-hero">
-
 <div class="shell">
-
-<a
-  href="index.html"
-  class="back-link"
->
-← BACK TO PCH LABS
-</a>
-
-
-<div class="eyebrow">
-RESEARCH MATERIAL CATALOG
-</div>
-
-
-<h1>
-Research catalog.
-</h1>
-
-
-<p>
-Browse currently listed research materials,
-amounts, pricing, and available analytical
-documentation.
-</p>
-
-
+<a href="index.html" class="back-link">← BACK TO PCH LABS</a>
+<div class="eyebrow">RESEARCH MATERIAL CATALOG</div>
+<h1>Research catalog.</h1>
+<p>Browse currently listed research materials, amounts, pricing, and available analytical documentation.</p>
 <div class="hero-meta">
-
 <span id="heroListingCount"></span>
-
-<span>
-RESEARCH USE ONLY
-</span>
-
-<span>
-COA DOCUMENTATION WHERE AVAILABLE
-</span>
-
+<span>RESEARCH USE ONLY</span>
+<span>COA DOCUMENTATION WHERE AVAILABLE</span>
 </div>
-
 </div>
-
 </section>
-
 
 <section class="checkout-section">
-
 <div class="shell">
-
 <div class="checkout-box">
-
 <div class="checkout-content">
-
-<div class="eyebrow">
-PCH MEMBER CHECKOUT
+<div class="eyebrow">PCH MEMBER CHECKOUT</div>
+<h2 id="checkoutHeading">Ready to place an order?</h2>
+<p id="checkoutDescription">A verified PCH member account and research-use acknowledgment are required before checkout access.</p>
+<a href="login.html" class="checkout-button" id="mainCheckoutButton">🔐 LOGIN TO CHECKOUT</a>
+<div class="checkout-small" id="checkoutSmall">Sign in or create a PCH account to continue.</div>
 </div>
-
-
-<h2 id="checkoutHeading">
-Ready to place an order?
-</h2>
-
-
-<p id="checkoutDescription">
-A verified PCH member account and research-use
-acknowledgment are required before checkout access.
-</p>
-
-
-<a
-  href="login.html"
-  class="checkout-button"
-  id="mainCheckoutButton"
->
-🔐 LOGIN TO CHECKOUT
-</a>
-
-
-<div
-  class="checkout-small"
-  id="checkoutSmall"
->
-Sign in or create a PCH account to continue.
 </div>
-
 </div>
-
-</div>
-
-</div>
-
 </section>
 
-
 <section class="catalog-section">
-
 <div class="shell">
-
 
 <div class="search-wrap">
 
-
 <div class="search-box">
-
-<span class="search-icon">
-⌕
-</span>
-
-<input
-  id="catalogSearch"
-  type="search"
-  autocomplete="off"
-  autocapitalize="off"
-  spellcheck="false"
-  placeholder="Search R, T, GHK-Cu, ARA, Ipamorelin..."
->
-
-<button
-  type="button"
-  class="search-clear"
-  id="searchClear"
-  aria-label="Clear search"
->
-×
-</button>
-
+<span class="search-icon">⌕</span>
+<input id="catalogSearch" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Search R, T, GHK-Cu, ARA, Ipamorelin...">
+<button type="button" class="search-clear" id="searchClear">×</button>
 </div>
 
-
-<div
-  class="filter-bar"
-  id="filterBar"
->
-
-<button
-  class="filter-button active"
-  type="button"
-  data-filter="all"
->
-ALL
-</button>
-
-
-<button
-  class="filter-button"
-  type="button"
-  data-filter="bac"
->
-BAC WATER
-</button>
-
-
-<button
-  class="filter-button"
-  type="button"
-  data-filter="glp"
->
-GLP / WEIGHT LOSS
-</button>
-
-
-<button
-  class="filter-button"
-  type="button"
-  data-filter="recovery"
->
-RECOVERY / HEALING
-</button>
-
-
-<button
-  class="filter-button"
-  type="button"
-  data-filter="energy"
->
-ENERGY / MITOCHONDRIA
-</button>
-
-
-<button
-  class="filter-button"
-  type="button"
-  data-filter="mind"
->
-MIND / LONGEVITY / SLEEP
-</button>
-
+<div class="filter-bar" id="filterBar">
+<button class="filter-button active" type="button" data-filter="all">ALL</button>
+<button class="filter-button" type="button" data-filter="bac">BAC WATER</button>
+<button class="filter-button" type="button" data-filter="glp">GLP / WEIGHT LOSS</button>
+<button class="filter-button" type="button" data-filter="recovery">RECOVERY / HEALING</button>
+<button class="filter-button" type="button" data-filter="energy">ENERGY / MITOCHONDRIA</button>
+<button class="filter-button" type="button" data-filter="mind">MIND / LONGEVITY / SLEEP</button>
 </div>
 
 </div>
-
 
 <div class="catalog-toolbar">
-
-<div
-  id="catalogCount"
-  class="catalog-count"
-></div>
-
-
-<a
-  href="login.html"
-  class="catalog-checkout"
-  id="toolbarCheckoutButton"
->
-🔐 LOGIN TO CHECKOUT
-</a>
-
+<div id="catalogCount" class="catalog-count"></div>
+<a href="login.html" class="catalog-checkout" id="toolbarCheckoutButton">🔐 LOGIN TO CHECKOUT</a>
 </div>
 
+<div class="catalog-grid" id="catalogGrid"></div>
 
-<div
-  class="catalog-grid"
-  id="catalogGrid"
-></div>
-
-
-<div
-  class="no-results"
-  id="noResults"
->
-
-<strong>
-No research material found.
-</strong>
-
-<br>
-
+<div class="no-results" id="noResults">
+<strong>No research material found.</strong><br>
 Try another name, abbreviation, amount, or category.
-
 </div>
-
 
 <div class="catalog-notice">
-
-<strong>
-CATALOG & DOCUMENTATION NOTICE
-</strong>
-
-<p>
-Catalog pricing and availability may change.
-Certificates of Analysis are linked where corresponding
-documentation has been added. Each COA applies only to
-the sample, lot, batch, or laboratory submission
-identified in the original report.
-</p>
-
+<strong>CATALOG & DOCUMENTATION NOTICE</strong>
+<p>Catalog pricing and availability may change. Certificates of Analysis are linked where corresponding documentation has been added. Each COA applies only to the sample, lot, batch, or laboratory submission identified in the original report.</p>
 </div>
 
 </div>
-
 </section>
-
 
 </main>
 
-
 <footer>
-
 <div class="shell footer-grid">
-
-<div>
-
-<strong>
-Platinum Cellular Health Labs
-</strong>
-
-Longevity at the Cellular Level
-
+<div><strong>Platinum Cellular Health Labs</strong><br>Longevity at the Cellular Level</div>
+<div>contact@platinumcellularhealth.com<br>21+ · Research Use Only · Not for human or animal use</div>
 </div>
-
-
-<div>
-
-contact@platinumcellularhealth.com
-
-<br>
-
-21+ · Research Use Only ·
-Not for human or animal use
-
-</div>
-
-</div>
-
 </footer>
 
-
 <div class="mobile-sticky-checkout">
-
-<a
-  href="login.html"
-  id="mobileCheckoutButton"
->
-🔐 LOGIN TO CHECKOUT
-</a>
-
+<a href="login.html" id="mobileCheckoutButton">🔐 LOGIN TO CHECKOUT</a>
 </div>
 
-
-<script
-  src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
-></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
+const SUPABASE_URL="https://rmjvhbfazakcunfeomao.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY="sb_publishable_m0snLFFTsLnUfENmvWsUuw_bjPkhMER";
 
-/* =========================================================
-   SUPABASE
-========================================================= */
-
-const SUPABASE_URL =
-  "https://rmjvhbfazakcunfeomao.supabase.co";
-
-
-const SUPABASE_PUBLISHABLE_KEY =
-  "sb_publishable_m0snLFFTsLnUfENmvWsUuw_bjPkhMER";
-
-
-const supabaseClient =
-  window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_PUBLISHABLE_KEY,
-    {
-
-      auth: {
-
-        persistSession: true,
-
-        autoRefreshToken: true,
-
-        detectSessionInUrl: true,
-
-        storage: window.localStorage,
-
-        storageKey:
-          "pch-member-auth"
-
-      }
-
+const supabaseClient=window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY,
+  {
+    auth:{
+      persistSession:true,
+      autoRefreshToken:true,
+      detectSessionInUrl:true,
+      storage:window.localStorage,
+      storageKey:"pch-member-auth"
     }
-  );
-
-
-/* =========================================================
-   MEMBER ELEMENTS
-========================================================= */
-
-const desktopLoginLink =
-  document.getElementById(
-    "desktopLoginLink"
-  );
-
-const desktopMemberArea =
-  document.getElementById(
-    "desktopMemberArea"
-  );
-
-const desktopMemberName =
-  document.getElementById(
-    "desktopMemberName"
-  );
-
-const desktopSignout =
-  document.getElementById(
-    "desktopSignout"
-  );
-
-const mobileLoginLink =
-  document.getElementById(
-    "mobileLoginLink"
-  );
-
-const mobileMemberArea =
-  document.getElementById(
-    "mobileMemberArea"
-  );
-
-const mobileMemberName =
-  document.getElementById(
-    "mobileMemberName"
-  );
-
-const mobileMemberEmail =
-  document.getElementById(
-    "mobileMemberEmail"
-  );
-
-const mobileSignout =
-  document.getElementById(
-    "mobileSignout"
-  );
-
-const mainCheckoutButton =
-  document.getElementById(
-    "mainCheckoutButton"
-  );
-
-const toolbarCheckoutButton =
-  document.getElementById(
-    "toolbarCheckoutButton"
-  );
-
-const mobileCheckoutButton =
-  document.getElementById(
-    "mobileCheckoutButton"
-  );
-
-const checkoutHeading =
-  document.getElementById(
-    "checkoutHeading"
-  );
-
-const checkoutDescription =
-  document.getElementById(
-    "checkoutDescription"
-  );
-
-const checkoutSmall =
-  document.getElementById(
-    "checkoutSmall"
-  );
-
-
-/* =========================================================
-   MEMBER STATE
-========================================================= */
-
-function showLoggedOutMemberState() {
-
-  desktopLoginLink.style.display =
-    "inline-flex";
-
-  desktopMemberArea.classList.remove(
-    "visible"
-  );
-
-  mobileLoginLink.style.display =
-    "flex";
-
-  mobileMemberArea.classList.remove(
-    "visible"
-  );
-
-  mainCheckoutButton.textContent =
-    "🔐 LOGIN TO CHECKOUT";
-
-  toolbarCheckoutButton.textContent =
-    "🔐 LOGIN TO CHECKOUT";
-
-  mobileCheckoutButton.textContent =
-    "🔐 LOGIN TO CHECKOUT";
-
-  checkoutHeading.textContent =
-    "Ready to place an order?";
-
-  checkoutDescription.textContent =
-    "A verified PCH member account and research-use acknowledgment are required before checkout access.";
-
-  checkoutSmall.textContent =
-    "Sign in or create a PCH account to continue.";
-
-}
-
-
-function showLoggedInMemberState(
-  user
-) {
-
-  const username =
-    user.user_metadata
-    &&
-    user.user_metadata.username
-    ?
-    user.user_metadata.username
-    :
-    "PCH Member";
-
-
-  desktopLoginLink.style.display =
-    "none";
-
-  desktopMemberArea.classList.add(
-    "visible"
-  );
-
-  desktopMemberName.textContent =
-    username;
-
-  mobileLoginLink.style.display =
-    "none";
-
-  mobileMemberArea.classList.add(
-    "visible"
-  );
-
-  mobileMemberName.textContent =
-    username;
-
-  mobileMemberEmail.textContent =
-    user.email || "";
-
-  mainCheckoutButton.textContent =
-    "🛒 OPEN MEMBER CHECKOUT";
-
-  toolbarCheckoutButton.textContent =
-    "🛒 OPEN MEMBER CHECKOUT";
-
-  mobileCheckoutButton.textContent =
-    "🛒 OPEN MEMBER CHECKOUT";
-
-  checkoutHeading.textContent =
-    "Welcome back, "
-    +
-    username
-    +
-    ".";
-
-  checkoutDescription.textContent =
-    "Your PCH member session is active. Continue to your account to complete the required research-use acknowledgment before checkout.";
-
-  checkoutSmall.textContent =
-    "Your member login is active on this browser.";
-
-}
-
-
-async function restoreMemberSession() {
-
-  try {
-
-    const {
-      data
-    } =
-      await supabaseClient.auth
-        .getSession();
-
-
-    if (
-      data.session
-      &&
-      data.session.user
-    ) {
-
-      showLoggedInMemberState(
-        data.session.user
-      );
-
-    }
-
-    else {
-
-      showLoggedOutMemberState();
-
-    }
-
   }
+);
 
-  catch(error) {
+const desktopLoginLink=document.getElementById("desktopLoginLink");
+const desktopMemberArea=document.getElementById("desktopMemberArea");
+const desktopMemberName=document.getElementById("desktopMemberName");
+const desktopSignout=document.getElementById("desktopSignout");
+const mobileLoginLink=document.getElementById("mobileLoginLink");
+const mobileMemberArea=document.getElementById("mobileMemberArea");
+const mobileMemberName=document.getElementById("mobileMemberName");
+const mobileMemberEmail=document.getElementById("mobileMemberEmail");
+const mobileSignout=document.getElementById("mobileSignout");
+const mainCheckoutButton=document.getElementById("mainCheckoutButton");
+const toolbarCheckoutButton=document.getElementById("toolbarCheckoutButton");
+const mobileCheckoutButton=document.getElementById("mobileCheckoutButton");
+const checkoutHeading=document.getElementById("checkoutHeading");
+const checkoutDescription=document.getElementById("checkoutDescription");
+const checkoutSmall=document.getElementById("checkoutSmall");
 
-    console.error(
-      error
-    );
+function showLoggedOutMemberState(){
+  desktopLoginLink.style.display="inline-flex";
+  desktopMemberArea.classList.remove("visible");
+  mobileLoginLink.style.display="flex";
+  mobileMemberArea.classList.remove("visible");
+  mainCheckoutButton.textContent="🔐 LOGIN TO CHECKOUT";
+  toolbarCheckoutButton.textContent="🔐 LOGIN TO CHECKOUT";
+  mobileCheckoutButton.textContent="🔐 LOGIN TO CHECKOUT";
+  checkoutHeading.textContent="Ready to place an order?";
+  checkoutDescription.textContent="A verified PCH member account and research-use acknowledgment are required before checkout access.";
+  checkoutSmall.textContent="Sign in or create a PCH account to continue.";
+}
 
+function showLoggedInMemberState(user){
+  const username=user.user_metadata&&user.user_metadata.username?user.user_metadata.username:"PCH Member";
+  desktopLoginLink.style.display="none";
+  desktopMemberArea.classList.add("visible");
+  desktopMemberName.textContent=username;
+  mobileLoginLink.style.display="none";
+  mobileMemberArea.classList.add("visible");
+  mobileMemberName.textContent=username;
+  mobileMemberEmail.textContent=user.email||"";
+  mainCheckoutButton.textContent="🛒 OPEN MEMBER CHECKOUT";
+  toolbarCheckoutButton.textContent="🛒 OPEN MEMBER CHECKOUT";
+  mobileCheckoutButton.textContent="🛒 OPEN MEMBER CHECKOUT";
+  checkoutHeading.textContent="Welcome back, "+username+".";
+  checkoutDescription.textContent="Your PCH member session is active. Continue to your account to complete the required research-use acknowledgment before checkout.";
+  checkoutSmall.textContent="Your member login is active on this browser.";
+}
+
+async function restoreMemberSession(){
+  try{
+    const {data}=await supabaseClient.auth.getSession();
+    if(data.session&&data.session.user) showLoggedInMemberState(data.session.user);
+    else showLoggedOutMemberState();
+  }catch(error){
+    console.error(error);
     showLoggedOutMemberState();
-
   }
-
 }
 
-
-async function signOutMember() {
-
-  await supabaseClient.auth
-    .signOut();
-
+async function signOutMember(){
+  await supabaseClient.auth.signOut();
   showLoggedOutMemberState();
-
 }
 
+desktopSignout.addEventListener("click",signOutMember);
+mobileSignout.addEventListener("click",signOutMember);
+supabaseClient.auth.onAuthStateChange((event,session)=>{
+  if(session&&session.user) showLoggedInMemberState(session.user);
+  else showLoggedOutMemberState();
+});
+window.addEventListener("pageshow",restoreMemberSession);
 
-desktopSignout.addEventListener(
-  "click",
-  signOutMember
-);
-
-
-mobileSignout.addEventListener(
-  "click",
-  signOutMember
-);
-
-
-supabaseClient.auth
-  .onAuthStateChange(
-    function(
-      event,
-      session
-    ) {
-
-      if (
-        session
-        &&
-        session.user
-      ) {
-
-        showLoggedInMemberState(
-          session.user
-        );
-
-      }
-
-      else {
-
-        showLoggedOutMemberState();
-
-      }
-
-    }
-  );
-
-
-window.addEventListener(
-  "pageshow",
-  restoreMemberSession
-);
-
-
-/* =========================================================
-   PRODUCTS
-========================================================= */
-
-const products = [
-
-{
-  name: "Hospira BAC Water",
-  category: "LAB SUPPLY",
-  amount: "BAC WATER",
-  price: 32,
-  groups: ["bac"],
-  hideCoaStatus: true,
-  keywords:
-    [
-      "h",
-      "hospira",
-      "bac",
-      "water",
-      "bacteriostatic"
-    ],
-  description:
-    "Hospira bacteriostatic water laboratory-supply listing."
-},
-
-{
-  name: "EBAC BAC Water",
-  category: "LAB SUPPLY",
-  amount: "BAC WATER",
-  price: 16,
-  groups: ["bac"],
-  keywords:
-    [
-      "e",
-      "ebac",
-      "bac",
-      "water",
-      "bacteriostatic"
-    ],
-  coa:
-    "coa-ebac-water-30ml-chromate.jpg",
-  description:
-    "Laboratory supply listing with analytical documentation available."
-},
-
-{
-  name: "R10",
-  category: "R SERIES",
-  amount: "10 MG",
-  price: 60,
-  groups: ["glp"],
-  keywords:
-    [
-      "r",
-      "r10",
-      "reta",
-      "retatrutide",
-      "glp",
-      "10mg",
-      "10 mg"
-    ],
-  coa:
-    "retatrutide-10mg-greencap-coa.jpg",
-  description:
-    "R-series research-material listing at 10 mg."
-},
-
-{
-  name: "R20",
-  category: "R SERIES",
-  amount: "20 MG",
-  price: 80,
-  groups: ["glp"],
-  keywords:
-    [
-      "r",
-      "r20",
-      "reta",
-      "retatrutide",
-      "glp",
-      "20mg",
-      "20 mg"
-    ],
-  description:
-    "R-series research-material listing at 20 mg."
-},
-
-{
-  name: "R30",
-  category: "R SERIES",
-  amount: "30 MG",
-  price: 100,
-  groups: ["glp"],
-  keywords:
-    [
-      "r",
-      "r30",
-      "reta",
-      "retatrutide",
-      "glp",
-      "30mg",
-      "30 mg"
-    ],
-  coa:
-    "coa-r30-freedom.jpg",
-  description:
-    "R-series research-material listing at 30 mg."
-},
-
-{
-  name: "T10",
-  category: "T SERIES",
-  amount: "10 MG",
-  price: 50,
-  groups: ["glp"],
-  keywords:
-    [
-      "t",
-      "t10",
-      "tirz",
-      "tirzepatide",
-      "10mg",
-      "10 mg"
-    ],
-  description:
-    "T-series research-material listing at 10 mg."
-},
-
-{
-  name: "T20",
-  category: "T SERIES",
-  amount: "20 MG",
-  price: 70,
-  groups: ["glp"],
-  keywords:
-    [
-      "t",
-      "t20",
-      "tirz",
-      "tirzepatide",
-      "20mg",
-      "20 mg"
-    ],
-  description:
-    "T-series research-material listing at 20 mg."
-},
-
-{
-  name: "GHK-Cu",
-  category: "RESEARCH MATERIAL",
-  amount: "50 MG",
-  price: 25,
-  groups: ["recovery"],
-  keywords:
-    [
-      "g",
-      "ghk",
-      "ghkcu",
-      "ghk-cu",
-      "copper",
-      "50mg",
-      "50 mg"
-    ],
-  coa:
-    "ghkcu-50mg-coa.png",
-  description:
-    "GHK-Cu research-material listing at 50 mg."
-},
-
-{
-  name: "GHK-Cu",
-  category: "RESEARCH MATERIAL",
-  amount: "100 MG",
-  price: 45,
-  groups: ["recovery"],
-  keywords:
-    [
-      "g",
-      "ghk",
-      "ghkcu",
-      "ghk-cu",
-      "copper",
-      "100mg",
-      "100 mg"
-    ],
-  description:
-    "GHK-Cu research-material listing at 100 mg."
-},
-
-{
-  name: "Cartalax",
-  category: "RESEARCH MATERIAL",
-  amount: "20 MG",
-  price: 50,
-  groups: ["recovery"],
-  keywords:
-    [
-      "c",
-      "cartalax",
-      "cartilage",
-      "20mg",
-      "20 mg"
-    ],
-  coa:
-    "cartalax-20mg-coa.jpg",
-  description:
-    "Cartalax research-material listing at 20 mg."
-},
-
-{
-  name: "N-Acetyl Semax (Amidate)",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 45,
-  groups: ["mind"],
-  keywords:
-    [
-      "n",
-      "s",
-      "semax",
-      "n acetyl semax",
-      "amidate",
-      "10mg",
-      "10 mg"
-    ],
-  description:
-    "N-Acetyl Semax Amidate research-material listing at 10 mg."
-},
-
-{
-  name: "N-Acetyl Selank (Amidate)",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 45,
-  groups: ["mind"],
-  keywords:
-    [
-      "n",
-      "s",
-      "selank",
-      "n acetyl selank",
-      "amidate",
-      "10mg",
-      "10 mg"
-    ],
-  description:
-    "N-Acetyl Selank Amidate research-material listing at 10 mg."
-},
-
-{
-  name: "PT-141",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 35,
-  groups: ["mind"],
-  keywords:
-    [
-      "p",
-      "pt",
-      "pt141",
-      "pt-141",
-      "10mg"
-    ],
-  description:
-    "Research-material catalog listing at 10 mg."
-},
-
-{
-  name: "Epithalon / Epitalon (Amidate)",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 40,
-  groups: ["mind"],
-  keywords:
-    [
-      "e",
-      "epithalon",
-      "epitalon",
-      "amidate",
-      "10mg"
-    ],
-  description:
-    "Research-material catalog listing at 10 mg."
-},
-
-{
-  name: "Pinealon",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 40,
-  groups: ["mind"],
-  keywords:
-    [
-      "p",
-      "pinealon",
-      "10mg"
-    ],
-  description:
-    "Pinealon research-material catalog listing at 10 mg."
-},
-
-{
-  name: "DSIP",
-  category: "RESEARCH MATERIAL",
-  amount: "5 MG",
-  price: 25,
-  groups: ["mind"],
-  keywords:
-    [
-      "d",
-      "dsip",
-      "sleep",
-      "5mg",
-      "5 mg"
-    ],
-  description:
-    "DSIP research-material listing at 5 mg."
-},
-
-{
-  name: "DSIP",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 40,
-  groups: ["mind"],
-  keywords:
-    [
-      "d",
-      "dsip",
-      "sleep",
-      "10mg",
-      "10 mg"
-    ],
-  coa:
-    "coa-dsip-10mg-ils.jpg",
-  description:
-    "DSIP research-material listing at 10 mg."
-},
-
-{
-  name: "ARA-290 (Cibinetide)",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 40,
-  groups: ["recovery"],
-  keywords:
-    [
-      "a",
-      "ara",
-      "ara290",
-      "ara-290",
-      "cibinetide",
-      "10mg",
-      "10 mg"
-    ],
-  description:
-    "ARA-290 research-material catalog listing at 10 mg."
-},
-
-{
-  name: "ARA-290",
-  category: "RESEARCH MATERIAL",
-  amount: "15 MG",
-  price: 60,
-  groups: ["recovery"],
-  keywords:
-    [
-      "a",
-      "ara",
-      "ara290",
-      "ara-290",
-      "cibinetide",
-      "15mg",
-      "15 mg",
-      "16mg",
-      "16 mg",
-      "209071"
-    ],
-  description:
-    "ARA-290 research-material catalog listing at 15 mg."
-},
-
-{
-  name: "ARA-290",
-  category: "RESEARCH MATERIAL",
-  amount: "50 MG",
-  price: 90,
-  groups: ["recovery"],
-  keywords:
-    [
-      "a",
-      "ara",
-      "ara290",
-      "ara-290",
-      "cibinetide",
-      "50mg",
-      "50 mg"
-    ],
-  description:
-    "ARA-290 research-material catalog listing at 50 mg."
-},
-
-{
-  name: "BPC-157 / TB-500",
-  category: "WOLVERINE",
-  amount: "10 MG",
-  price: 70,
-  groups: ["recovery"],
-  keywords:
-    [
-      "b",
-      "w",
-      "bpc",
-      "bpc157",
-      "bpc-157",
-      "tb500",
-      "tb-500",
-      "wolverine",
-      "10mg"
-    ],
-  coa:
-    "coa-bpc157-tb500-10mg-freedom.jpg",
-  description:
-    "Wolverine research-material combination listed at 10 mg total."
-},
-
-{
-  name: "BPC-157 / TB-4",
-  category: "WOLVERINE",
-  amount: "20 MG",
-  price: 110,
-  groups: ["recovery"],
-  keywords:
-    [
-      "b",
-      "w",
-      "bpc",
-      "bpc157",
-      "tb4",
-      "tb-4",
-      "wolverine",
-      "20mg"
-    ],
-  description:
-    "Wolverine research-material combination listed at 20 mg total."
-},
-
-{
-  name: "BPC-157 / TB-4 / Cartalax",
-  category: "DEADPOOL",
-  amount: "30 MG",
-  price: 125,
-  groups: ["recovery"],
-  keywords:
-    [
-      "b",
-      "d",
-      "deadpool",
-      "bpc",
-      "bpc157",
-      "tb4",
-      "cartalax",
-      "30mg"
-    ],
-  description:
-    "Deadpool research-material combination listed at 30 mg total."
-},
-
-{
-  name: "KLOW",
-  category: "RESEARCH MATERIAL",
-  amount: "80 MG",
-  price: 115,
-  groups: ["recovery"],
-  keywords:
-    [
-      "k",
-      "klow",
-      "80mg"
-    ],
-  coa:
-    "coa-klow-80mg-freedom.jpg",
-  description:
-    "KLOW research-material catalog listing at 80 mg."
-},
-
-{
-  name: "KPV",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 40,
-  groups: ["recovery"],
-  keywords:
-    [
-      "k",
-      "kpv",
-      "10mg"
-    ],
-  description:
-    "KPV research-material catalog listing at 10 mg."
-},
-
-{
-  name: "CJC",
-  category: "RESEARCH MATERIAL",
-  amount: "5 MG",
-  price: 30,
-  groups: ["recovery"],
-  keywords:
-    [
-      "c",
-      "cjc",
-      "cjc1295",
-      "cjc-1295",
-      "no dac",
-      "nodac",
-      "5mg",
-      "5 mg"
-    ],
-  coa:
-    "coa-cjc-nodac-10mg-freedom.jpg",
-  description:
-    "CJC research-material catalog listing at 5 mg."
-},
-
-{
-  name: "Ipamorelin",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 50,
-  groups: ["recovery", "mind"],
-  keywords:
-    [
-      "i",
-      "ipa",
-      "ipamorelin",
-      "10mg",
-      "10 mg",
-      "99.90",
-      "9.77"
-    ],
-  coa:
-    "IMG_20260817_115955_496.jpg",
-  description:
-    "Ipamorelin research-material listing at 10 mg."
-},
-
-{
-  name: "Tesamorelin",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 60,
-  groups: ["recovery"],
-  keywords:
-    [
-      "t",
-      "tesamorelin",
-      "tesa",
-      "10mg"
-    ],
-  description:
-    "Tesamorelin research-material listing at 10 mg."
-},
-
-{
-  name: "CJC / Ipamorelin",
-  category: "RESEARCH COMBINATION",
-  amount: "20 MG",
-  price: 100,
-  groups: ["recovery", "mind"],
-  keywords:
-    [
-      "c",
-      "i",
-      "cjc",
-      "ipamorelin",
-      "ipa",
-      "cjc ipa",
-      "20mg"
-    ],
-  description:
-    "Research-material combination listed at 20 mg total."
-},
-
-{
-  name: "MOTS-C",
-  category: "RESEARCH MATERIAL",
-  amount: "10 MG",
-  price: 45,
-  groups: ["energy"],
-  keywords:
-    [
-      "m",
-      "mots",
-      "motsc",
-      "mots-c",
-      "10mg",
-      "mitochondria"
-    ],
-  coa:
-    "motsc-10mg-greencaps-coa.png",
-  description:
-    "MOTS-C research-material catalog listing at 10 mg."
-},
-
-{
-  name: "SS-31",
-  category: "RESEARCH MATERIAL",
-  amount: "50 MG",
-  price: 100,
-  groups: ["energy"],
-  keywords:
-    [
-      "s",
-      "ss",
-      "ss31",
-      "ss-31",
-      "50mg",
-      "mitochondria"
-    ],
-  description:
-    "SS-31 research-material catalog listing at 50 mg."
-},
-
-{
-  name: "5-Amino-1MQ",
-  category: "RESEARCH MATERIAL",
-  amount: "500 MG",
-  price: 70,
-  groups: ["energy"],
-  keywords:
-    [
-      "5",
-      "5 amino",
-      "5amino",
-      "1mq",
-      "5-amino-1mq",
-      "500mg"
-    ],
-  description:
-    "5-Amino-1MQ research-material listing at 500 mg."
-},
-
-{
-  name: "NAD+ (Buffered)",
-  category: "RESEARCH MATERIAL",
-  amount: "1000 MG",
-  price: 40,
-  groups: ["energy"],
-  keywords:
-    [
-      "n",
-      "nad",
-      "nad+",
-      "buffered",
-      "1000mg"
-    ],
-  description:
-    "Buffered NAD+ research-material catalog listing."
-}
-
+const products=[
+{name:"Hospira BAC Water",category:"LAB SUPPLY",amount:"BAC WATER",price:32,groups:["bac"],hideCoaStatus:true,keywords:["h","hospira","bac","water","bacteriostatic"],description:"Hospira bacteriostatic water laboratory-supply listing."},
+{name:"EBAC BAC Water",category:"LAB SUPPLY",amount:"BAC WATER",price:16,groups:["bac"],keywords:["e","ebac","bac","water","bacteriostatic"],coa:"coa-ebac-water-30ml-chromate.jpg",description:"Laboratory supply listing with analytical documentation available."},
+{name:"R10",category:"R SERIES",amount:"10 MG",price:60,groups:["glp"],keywords:["r","r10","reta","retatrutide","glp","10mg","10 mg"],coa:"retatrutide-10mg-greencap-coa.jpg",description:"R-series research-material listing at 10 mg."},
+{name:"R20",category:"R SERIES",amount:"20 MG",price:80,groups:["glp"],keywords:["r","r20","reta","retatrutide","glp","20mg","20 mg"],description:"R-series research-material listing at 20 mg."},
+{name:"R30",category:"R SERIES",amount:"30 MG",price:100,groups:["glp"],keywords:["r","r30","reta","retatrutide","glp","30mg","30 mg"],coa:"coa-r30-freedom.jpg",description:"R-series research-material listing at 30 mg."},
+{name:"T10",category:"T SERIES",amount:"10 MG",price:50,groups:["glp"],keywords:["t","t10","tirz","tirzepatide","10mg","10 mg"],description:"T-series research-material listing at 10 mg."},
+{name:"T20",category:"T SERIES",amount:"20 MG",price:70,groups:["glp"],keywords:["t","t20","tirz","tirzepatide","20mg","20 mg"],description:"T-series research-material listing at 20 mg."},
+{name:"GHK-Cu",category:"RESEARCH MATERIAL",amount:"50 MG",price:25,groups:["recovery"],keywords:["g","ghk","ghkcu","ghk-cu","copper","50mg","50 mg"],coa:"ghkcu-50mg-coa.png",description:"GHK-Cu research-material listing at 50 mg."},
+{name:"GHK-Cu",category:"RESEARCH MATERIAL",amount:"100 MG",price:45,groups:["recovery"],keywords:["g","ghk","ghkcu","ghk-cu","copper","100mg","100 mg"],description:"GHK-Cu research-material listing at 100 mg."},
+{name:"Cartalax",category:"RESEARCH MATERIAL",amount:"20 MG",price:50,groups:["recovery"],keywords:["c","cartalax","cartilage","20mg","20 mg"],coa:"cartalax-20mg-coa.jpg",description:"Cartalax research-material listing at 20 mg."},
+{name:"N-Acetyl Semax (Amidate)",category:"RESEARCH MATERIAL",amount:"10 MG",price:45,groups:["mind"],keywords:["n","s","semax","n acetyl semax","amidate","10mg","10 mg"],description:"N-Acetyl Semax Amidate research-material listing at 10 mg."},
+{name:"N-Acetyl Selank (Amidate)",category:"RESEARCH MATERIAL",amount:"10 MG",price:45,groups:["mind"],keywords:["n","s","selank","n acetyl selank","amidate","10mg","10 mg"],description:"N-Acetyl Selank Amidate research-material listing at 10 mg."},
+{name:"PT-141",category:"RESEARCH MATERIAL",amount:"10 MG",price:35,groups:["mind"],keywords:["p","pt","pt141","pt-141","10mg"],description:"Research-material catalog listing at 10 mg."},
+{name:"Epithalon / Epitalon (Amidate)",category:"RESEARCH MATERIAL",amount:"10 MG",price:40,groups:["mind"],keywords:["e","epithalon","epitalon","amidate","10mg"],description:"Research-material catalog listing at 10 mg."},
+{name:"Pinealon",category:"RESEARCH MATERIAL",amount:"10 MG",price:40,groups:["mind"],keywords:["p","pinealon","10mg"],description:"Pinealon research-material catalog listing at 10 mg."},
+{name:"DSIP",category:"RESEARCH MATERIAL",amount:"5 MG",price:25,groups:["mind"],keywords:["d","dsip","sleep","5mg","5 mg"],description:"DSIP research-material listing at 5 mg."},
+{name:"DSIP",category:"RESEARCH MATERIAL",amount:"10 MG",price:40,groups:["mind"],keywords:["d","dsip","sleep","10mg","10 mg"],coa:"coa-dsip-10mg-ils.jpg",description:"DSIP research-material listing at 10 mg."},
+{name:"ARA-290 (Cibinetide)",category:"RESEARCH MATERIAL",amount:"10 MG",price:40,groups:["recovery"],keywords:["a","ara","ara290","ara-290","cibinetide","10mg","10 mg"],description:"ARA-290 research-material catalog listing at 10 mg."},
+{name:"ARA-290",category:"RESEARCH MATERIAL",amount:"15 MG",price:60,groups:["recovery"],keywords:["a","ara","ara290","ara-290","cibinetide","15mg","15 mg","16mg","16 mg","209071"],description:"ARA-290 research-material catalog listing at 15 mg."},
+{name:"ARA-290",category:"RESEARCH MATERIAL",amount:"50 MG",price:90,groups:["recovery"],keywords:["a","ara","ara290","ara-290","cibinetide","50mg","50 mg"],description:"ARA-290 research-material catalog listing at 50 mg."},
+{name:"BPC-157 / TB-500",category:"WOLVERINE",amount:"10 MG",price:70,groups:["recovery"],keywords:["b","w","bpc","bpc157","bpc-157","tb500","tb-500","wolverine","10mg"],coa:"coa-bpc157-tb500-10mg-freedom.jpg",description:"Wolverine research-material combination listed at 10 mg total."},
+{name:"BPC-157 / TB-4",category:"WOLVERINE",amount:"20 MG",price:110,groups:["recovery"],keywords:["b","w","bpc","bpc157","tb4","tb-4","wolverine","20mg"],description:"Wolverine research-material combination listed at 20 mg total."},
+{name:"BPC-157 / TB-4 / Cartalax",category:"DEADPOOL",amount:"30 MG",price:125,groups:["recovery"],keywords:["b","d","deadpool","bpc","bpc157","tb4","cartalax","30mg"],description:"Deadpool research-material combination listed at 30 mg total."},
+{name:"KLOW",category:"RESEARCH MATERIAL",amount:"80 MG",price:115,groups:["recovery"],keywords:["k","klow","80mg"],coa:"coa-klow-80mg-freedom.jpg",description:"KLOW research-material catalog listing at 80 mg."},
+{name:"KPV",category:"RESEARCH MATERIAL",amount:"10 MG",price:40,groups:["recovery"],keywords:["k","kpv","10mg"],description:"KPV research-material catalog listing at 10 mg."},
+{name:"CJC",category:"RESEARCH MATERIAL",amount:"5 MG",price:30,groups:["recovery"],keywords:["c","cjc","cjc1295","cjc-1295","no dac","nodac","5mg","5 mg"],coa:"coa-cjc-nodac-10mg-freedom.jpg",description:"CJC research-material catalog listing at 5 mg."},
+{name:"Ipamorelin",category:"RESEARCH MATERIAL",amount:"10 MG",price:50,groups:["recovery","mind"],keywords:["i","ipa","ipamorelin","10mg","10 mg","99.90","9.77"],coa:"IMG_20260817_115955_496.jpg",description:"Ipamorelin research-material listing at 10 mg."},
+{name:"Tesamorelin",category:"RESEARCH MATERIAL",amount:"10 MG",price:60,groups:["recovery"],keywords:["t","tesamorelin","tesa","10mg"],description:"Tesamorelin research-material listing at 10 mg."},
+{name:"CJC / Ipamorelin",category:"RESEARCH COMBINATION",amount:"20 MG",price:100,groups:["recovery","mind"],keywords:["c","i","cjc","ipamorelin","ipa","cjc ipa","20mg"],description:"Research-material combination listed at 20 mg total."},
+{name:"MOTS-C",category:"RESEARCH MATERIAL",amount:"10 MG",price:45,groups:["energy"],keywords:["m","mots","motsc","mots-c","10mg","mitochondria"],coa:"motsc-10mg-greencaps-coa.png",description:"MOTS-C research-material catalog listing at 10 mg."},
+{name:"SS-31",category:"RESEARCH MATERIAL",amount:"50 MG",price:100,groups:["energy"],keywords:["s","ss","ss31","ss-31","50mg","mitochondria"],description:"SS-31 research-material catalog listing at 50 mg."},
+{name:"5-Amino-1MQ",category:"RESEARCH MATERIAL",amount:"500 MG",price:70,groups:["energy"],keywords:["5","5 amino","5amino","1mq","5-amino-1mq","500mg"],description:"5-Amino-1MQ research-material listing at 500 mg."},
+{name:"NAD+ (Buffered)",category:"RESEARCH MATERIAL",amount:"1000 MG",price:40,groups:["energy"],keywords:["n","nad","nad+","buffered","1000mg"],description:"Buffered NAD+ research-material catalog listing."}
 ];
 
+const catalogGrid=document.getElementById("catalogGrid");
+const search=document.getElementById("catalogSearch");
+const searchClear=document.getElementById("searchClear");
+const count=document.getElementById("catalogCount");
+const heroListingCount=document.getElementById("heroListingCount");
+const noResults=document.getElementById("noResults");
+const filterBar=document.getElementById("filterBar");
+const filterButtons=Array.from(document.querySelectorAll(".filter-button"));
+let activeFilter="all";
 
-/* =========================================================
-   CATALOG ELEMENTS
-========================================================= */
-
-const catalogGrid =
-  document.getElementById(
-    "catalogGrid"
-  );
-
-const search =
-  document.getElementById(
-    "catalogSearch"
-  );
-
-const searchClear =
-  document.getElementById(
-    "searchClear"
-  );
-
-const count =
-  document.getElementById(
-    "catalogCount"
-  );
-
-const heroListingCount =
-  document.getElementById(
-    "heroListingCount"
-  );
-
-const noResults =
-  document.getElementById(
-    "noResults"
-  );
-
-const filterBar =
-  document.getElementById(
-    "filterBar"
-  );
-
-const filterButtons =
-  Array.from(
-    document.querySelectorAll(
-      ".filter-button"
-    )
-  );
-
-let activeFilter =
-  "all";
-
-
-/* =========================================================
-   ESCAPE HTML
-========================================================= */
-
-function escapeHTML(
-  value
-) {
-
-  return String(
-    value ?? ""
-  )
-  .replace(
-    /&/g,
-    "&amp;"
-  )
-  .replace(
-    /</g,
-    "&lt;"
-  )
-  .replace(
-    />/g,
-    "&gt;"
-  )
-  .replace(
-    /"/g,
-    "&quot;"
-  )
-  .replace(
-    /'/g,
-    "&#039;"
-  );
-
+function escapeHTML(value){
+  return String(value??"")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 }
 
-
-/* =========================================================
-   VIAL NAME
-========================================================= */
-
-function createVialName(
-  name
-) {
-
-  let cleanName =
-    String(
-      name || ""
-    )
-    .replace(
-      /\(.*?\)/g,
-      ""
-    )
-    .trim();
-
-
-  if (
-    cleanName.length > 21
-  ) {
-
-    cleanName =
-      cleanName.substring(
-        0,
-        21
-      );
-
-  }
-
-
+function createVialName(name){
+  let cleanName=String(name||"").replace(/\(.*?\)/g,"").trim();
+  if(cleanName.length>21) cleanName=cleanName.substring(0,21);
   return cleanName;
-
 }
 
-
-/* =========================================================
-   NORMALIZE SEARCH
-========================================================= */
-
-function normalizeSearchText(
-  value
-) {
-
-  return String(
-    value || ""
-  )
-  .toLowerCase()
-  .replace(
-    /[\u2010-\u2015]/g,
-    "-"
-  )
-  .replace(
-    /[^a-z0-9+]+/g,
-    " "
-  )
-  .replace(
-    /\s+/g,
-    " "
-  )
-  .trim();
-
+function normalizeSearchText(value){
+  return String(value||"")
+    .toLowerCase()
+    .replace(/[\u2010-\u2015]/g,"-")
+    .replace(/[^a-z0-9+]+/g," ")
+    .replace(/\s+/g," ")
+    .trim();
 }
 
-
-/* =========================================================
-   SEARCH IDENTITIES
-========================================================= */
-
-function getIdentityValues(
-  product
-) {
-
-  const values = [
-
-    product.name,
-    product.category,
-    product.amount
-
-  ];
-
-
-  if (
-    Array.isArray(
-      product.keywords
-    )
-  ) {
-
-    values.push(
-      ...product.keywords
-    );
-
+/* One-letter search uses ONLY product name + explicit single-letter keywords.
+   This prevents "r" from matching every "RESEARCH MATERIAL" card. */
+function getSingleLetterSearchValues(product){
+  const values=[];
+  if(product.name) values.push(normalizeSearchText(product.name));
+  if(Array.isArray(product.keywords)){
+    product.keywords.forEach(keyword=>{
+      const v=normalizeSearchText(keyword);
+      if(v.length===1) values.push(v);
+    });
   }
-
-
-  return values
-    .map(
-      normalizeSearchText
-    )
-    .filter(Boolean);
-
+  return values.filter(Boolean);
 }
 
-
-/* =========================================================
-   BROAD SEARCH
-========================================================= */
-
-function getBroadSearchText(
-  product
-) {
-
+function getBroadSearchText(product){
   return normalizeSearchText(
-
-    product.name
-    +
-    " "
-    +
-    product.category
-    +
-    " "
-    +
-    product.amount
-    +
-    " "
-    +
-    product.price
-    +
-    " "
-    +
-    product.groups.join(" ")
-    +
-    " "
-    +
-    (
-      Array.isArray(
-        product.keywords
-      )
-      ?
-      product.keywords.join(" ")
-      :
-      ""
-    )
-    +
-    " "
-    +
+    product.name+" "+
+    product.category+" "+
+    product.amount+" "+
+    product.price+" "+
+    product.groups.join(" ")+" "+
+    (Array.isArray(product.keywords)?product.keywords.join(" "):"")+" "+
     product.description
-
   );
-
 }
 
+function productMatchesSearch(product,rawTerm){
+  const term=normalizeSearchText(rawTerm);
+  if(term==="") return true;
 
-/* =========================================================
-   INSTANT SEARCH MATCHING
-========================================================= */
-
-function productMatchesSearch(
-  product,
-  rawTerm
-) {
-
-  const term =
-    normalizeSearchText(
-      rawTerm
+  if(term.length===1){
+    return getSingleLetterSearchValues(product).some(value=>
+      value===term || (value.length>1 && value.startsWith(term))
     );
-
-
-  if (
-    term === ""
-  ) {
-
-    return true;
-
   }
 
-
-  const identityValues =
-    getIdentityValues(
-      product
-    );
-
-
-  /*
-     SINGLE CHARACTER
-
-     Examples:
-     i -> Ipamorelin
-     r -> R10 / R20 / R30
-     g -> GHK-Cu
-     a -> ARA
-     t -> T10 / T20 / Tesamorelin
-     d -> DSIP
-  */
-
-  if (
-    term.length === 1
-  ) {
-
-    return identityValues.some(
-      function(value) {
-
-        const tokens =
-          value.split(" ");
-
-
-        return (
-          value === term
-          ||
-          value.startsWith(
-            term
-          )
-          ||
-          tokens.some(
-            function(token) {
-
-              return token.startsWith(
-                term
-              );
-
-            }
-          )
-        );
-
-      }
-    );
-
-  }
-
-
-  /*
-     MULTIPLE CHARACTERS
-  */
-
-  const searchableText =
-    getBroadSearchText(
-      product
-    );
-
-
-  const words =
-    term.split(" ");
-
-
-  return words.every(
-    function(word) {
-
-      return searchableText.includes(
-        word
-      );
-
-    }
-  );
-
+  const searchableText=getBroadSearchText(product);
+  return term.split(" ").every(word=>searchableText.includes(word));
 }
 
+function getSearchScore(product,rawTerm){
+  const term=normalizeSearchText(rawTerm);
+  if(!term) return 0;
 
-/* =========================================================
-   SEARCH SCORE
-========================================================= */
+  const name=normalizeSearchText(product.name);
+  let score=0;
 
-function getSearchScore(
-  product,
-  rawTerm
-) {
+  if(name===term) score+=2000;
+  if(name.startsWith(term)) score+=1200;
+  if(name.split(" ").some(token=>token.startsWith(term))) score+=700;
 
-  const term =
-    normalizeSearchText(
-      rawTerm
-    );
-
-
-  if (
-    !term
-  ) {
-
-    return 0;
-
+  if(Array.isArray(product.keywords)){
+    product.keywords.forEach(keyword=>{
+      const value=normalizeSearchText(keyword);
+      if(value===term) score+=600;
+      else if(value.startsWith(term)) score+=300;
+      else if(value.includes(term)) score+=100;
+    });
   }
-
-
-  const normalizedName =
-    normalizeSearchText(
-      product.name
-    );
-
-
-  const identityValues =
-    getIdentityValues(
-      product
-    );
-
-
-  let score =
-    0;
-
-
-  if (
-    normalizedName === term
-  ) {
-
-    score +=
-      1000;
-
-  }
-
-
-  if (
-    normalizedName.startsWith(
-      term
-    )
-  ) {
-
-    score +=
-      700;
-
-  }
-
-
-  identityValues.forEach(
-    function(value) {
-
-      if (
-        value === term
-      ) {
-
-        score +=
-          500;
-
-      }
-
-      else if (
-        value.startsWith(
-          term
-        )
-      ) {
-
-        score +=
-          250;
-
-      }
-
-      else if (
-        value.includes(
-          term
-        )
-      ) {
-
-        score +=
-          80;
-
-      }
-
-    }
-  );
-
 
   return score;
-
 }
 
-
-/* =========================================================
-   BUILD CATALOG
-========================================================= */
-
-function buildCatalog(
-  list
-) {
-
-  catalogGrid.innerHTML =
-    "";
-
-
-  list.forEach(
-    function(product) {
-
-      const card =
-        document.createElement(
-          "article"
-        );
-
-
-      card.className =
-        "product-card";
-
-
-      const safeName =
-        escapeHTML(
-          product.name
-        );
-
-
-      const safeCategory =
-        escapeHTML(
-          product.category
-        );
-
-
-      const safeAmount =
-        escapeHTML(
-          product.amount
-        );
-
-
-      const safeDescription =
-        escapeHTML(
-          product.description
-        );
-
-
-      const vialName =
-        escapeHTML(
-          createVialName(
-            product.name
-          )
-        );
-
-
-      let indicator =
-        "";
-
-
-      let action =
-        "";
-
-
-      if (
-        product.coa
-      ) {
-
-        indicator =
-          `
-
-          <div class="coa-indicator">
-
-            <span class="coa-dot"></span>
-
-            COA AVAILABLE
-
-          </div>
-
-          `;
-
-
-        action =
-          `
-
-          <a
-            href="${escapeHTML(product.coa)}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-coa"
-          >
-            VIEW COA
-          </a>
-
-          `;
-
-      }
-
-      else if (
-        !product.hideCoaStatus
-      ) {
-
-        action =
-          `
-
-          <span class="btn-unavailable">
-            COA PENDING
-          </span>
-
-          `;
-
-      }
-
-
-      card.innerHTML =
-        `
-
-        <div class="product-main">
-
-
-          <div class="card-top">
-
-            <div class="category">
-              ${safeCategory}
-            </div>
-
-            <div class="amount-badge">
-              ${safeAmount}
-            </div>
-
-          </div>
-
-
-          <h2>
-            ${safeName}
-          </h2>
-
-
-          <p class="product-description">
-            ${safeDescription}
-          </p>
-
-
-          ${indicator}
-
-
-        </div>
-
-
-        <div
-          class="vial-area"
-          aria-hidden="true"
-        >
-
-          <div class="vial-glow"></div>
-
-
-          <div class="vial">
-
-            <div class="vial-cap"></div>
-
-            <div class="vial-neck"></div>
-
-            <div class="vial-label">
-
-              <img
-                class="vial-logo"
-                src="pch-logo.jpg"
-                alt=""
-              >
-
-              <div class="vial-brand">
-                PLATINUM
-              </div>
-
-              <div class="vial-labs">
-                CELLULAR HEALTH LABS
-              </div>
-
-              <div class="vial-divider"></div>
-
-              <div class="vial-product">
-                ${vialName}
-              </div>
-
-              <div class="vial-amount">
-                ${safeAmount}
-              </div>
-
-              <div class="vial-research">
-                RESEARCH USE ONLY
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="product-bottom">
-
-          <div>
-
-            <span class="price-label">
-              PRICE
-            </span>
-
-            <div class="price">
-              $${product.price}
-            </div>
-
-          </div>
-
-
-          <div class="product-actions">
-
-            ${action}
-
-          </div>
-
-        </div>
-
-        `;
-
-
-      catalogGrid.appendChild(
-        card
-      );
-
+function buildCatalog(list){
+  catalogGrid.innerHTML="";
+
+  list.forEach(product=>{
+    const card=document.createElement("article");
+    card.className="product-card";
+
+    const safeName=escapeHTML(product.name);
+    const safeCategory=escapeHTML(product.category);
+    const safeAmount=escapeHTML(product.amount);
+    const safeDescription=escapeHTML(product.description);
+    const vialName=escapeHTML(createVialName(product.name));
+
+    let indicator="";
+    let action="";
+
+    if(product.coa){
+      indicator='<div class="coa-indicator"><span class="coa-dot"></span>COA AVAILABLE</div>';
+      action=`<a href="./${escapeHTML(product.coa)}" target="_blank" rel="noopener noreferrer" class="btn btn-coa">VIEW COA</a>`;
+    }else if(!product.hideCoaStatus){
+      action='<span class="btn-unavailable">COA PENDING</span>';
     }
-  );
 
+    card.innerHTML=`
+      <div class="product-main">
+        <div class="card-top">
+          <div class="category">${safeCategory}</div>
+          <div class="amount-badge">${safeAmount}</div>
+        </div>
+
+        <h2>${safeName}</h2>
+        <p class="product-description">${safeDescription}</p>
+        ${indicator}
+      </div>
+
+      <div class="vial-area" aria-hidden="true">
+        <div class="vial-glow"></div>
+        <div class="vial">
+          <div class="vial-cap"></div>
+          <div class="vial-neck"></div>
+          <div class="vial-label">
+            <img class="vial-logo" src="pch-logo.jpg" alt="">
+            <div class="vial-brand">PLATINUM</div>
+            <div class="vial-labs">CELLULAR HEALTH LABS</div>
+            <div class="vial-divider"></div>
+            <div class="vial-product">${vialName}</div>
+            <div class="vial-amount">${safeAmount}</div>
+            <div class="vial-research">RESEARCH USE ONLY</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-bottom">
+        <div>
+          <span class="price-label">PRICE</span>
+          <div class="price">$${product.price}</div>
+        </div>
+        <div class="product-actions">${action}</div>
+      </div>
+    `;
+
+    catalogGrid.appendChild(card);
+  });
 }
 
-
-/* =========================================================
-   ACTIVE FILTER
-========================================================= */
-
-function setActiveFilterUI(
-  filter
-) {
-
-  filterButtons.forEach(
-    function(button) {
-
-      button.classList.toggle(
-        "active",
-        button.dataset.filter
-        ===
-        filter
-      );
-
-    }
-  );
-
+function setActiveFilterUI(filter){
+  filterButtons.forEach(button=>{
+    button.classList.toggle("active",button.dataset.filter===filter);
+  });
 }
 
+function updateCatalog(){
+  const rawTerm=search.value.trim();
+  const hasSearch=rawTerm.length>0;
 
-/* =========================================================
-   UPDATE CATALOG
-========================================================= */
+  let filtered=products.filter(product=>{
+    if(hasSearch) return productMatchesSearch(product,rawTerm);
+    return activeFilter==="all" || product.groups.includes(activeFilter);
+  });
 
-function updateCatalog() {
-
-  const rawTerm =
-    search.value.trim();
-
-
-  const hasSearch =
-    rawTerm.length > 0;
-
-
-  let filtered =
-    products.filter(
-      function(product) {
-
-        if (
-          hasSearch
-        ) {
-
-          return productMatchesSearch(
-            product,
-            rawTerm
-          );
-
-        }
-
-
-        return (
-          activeFilter === "all"
-          ||
-          product.groups.includes(
-            activeFilter
-          )
-        );
-
-      }
-    );
-
-
-  /*
-     Sort search results by relevance
-  */
-
-  if (
-    hasSearch
-  ) {
-
-    filtered =
-      filtered
-      .map(
-        function(product) {
-
-          return {
-
-            product:
-              product,
-
-            score:
-              getSearchScore(
-                product,
-                rawTerm
-              )
-
-          };
-
-        }
-      )
-      .sort(
-        function(a,b) {
-
-          return b.score
-            -
-            a.score;
-
-        }
-      )
-      .map(
-        function(item) {
-
-          return item.product;
-
-        }
-      );
-
+  if(hasSearch){
+    filtered=filtered
+      .map(product=>({product,score:getSearchScore(product,rawTerm)}))
+      .sort((a,b)=>b.score-a.score)
+      .map(item=>item.product);
   }
 
+  buildCatalog(filtered);
 
-  buildCatalog(
-    filtered
-  );
-
-
-  count.textContent =
-    filtered.length
-    +
-    (
-      filtered.length === 1
-      ?
-      " RESEARCH LISTING"
-      :
-      " RESEARCH LISTINGS"
-    );
-
-
-  noResults.style.display =
-    filtered.length === 0
-    ?
-    "block"
-    :
-    "none";
-
-
-  searchClear.classList.toggle(
-    "visible",
-    hasSearch
-  );
-
+  count.textContent=filtered.length+(filtered.length===1?" RESEARCH LISTING":" RESEARCH LISTINGS");
+  noResults.style.display=filtered.length===0?"block":"none";
+  searchClear.classList.toggle("visible",hasSearch);
 }
 
-
-/* =========================================================
-   LIVE SEARCH
-========================================================= */
-
-function handleSearchInput() {
-
-  if (
-    search.value.length > 0
-  ) {
-
-    activeFilter =
-      "all";
-
-
-    setActiveFilterUI(
-      "all"
-    );
-
+function handleSearchInput(){
+  if(search.value.trim().length>0){
+    activeFilter="all";
+    setActiveFilterUI("all");
   }
-
-
   updateCatalog();
-
 }
 
+search.addEventListener("input",handleSearchInput);
+search.addEventListener("search",handleSearchInput);
 
-search.addEventListener(
-  "input",
-  handleSearchInput
-);
+searchClear.addEventListener("click",()=>{
+  search.value="";
+  activeFilter="all";
+  setActiveFilterUI("all");
+  updateCatalog();
+  search.focus();
+});
 
-
-search.addEventListener(
-  "search",
-  handleSearchInput
-);
-
-
-search.addEventListener(
-  "keyup",
-  function(event) {
-
-    if (
-      event.key
-      &&
-      event.key.length === 1
-    ) {
-
-      handleSearchInput();
-
-    }
-
-  }
-);
-
-
-/* =========================================================
-   CLEAR SEARCH
-========================================================= */
-
-searchClear.addEventListener(
-  "click",
-  function() {
-
-    search.value =
-      "";
-
-
-    activeFilter =
-      "all";
-
-
-    setActiveFilterUI(
-      "all"
-    );
-
-
+filterButtons.forEach(button=>{
+  button.addEventListener("click",()=>{
+    activeFilter=button.dataset.filter;
+    search.value="";
+    setActiveFilterUI(activeFilter);
     updateCatalog();
+  });
+});
 
+filterBar.addEventListener("click",event=>{
+  const button=event.target.closest(".filter-button");
+  if(!button) return;
+  button.scrollIntoView({behavior:"smooth",block:"nearest",inline:"center"});
+});
 
-    search.focus();
+const menuButton=document.getElementById("mobileMenuButton");
+const menu=document.getElementById("mobileMenu");
 
-  }
-);
+menuButton.addEventListener("click",()=>{
+  const open=menu.classList.toggle("open");
+  menuButton.classList.toggle("active",open);
+  menuButton.setAttribute("aria-expanded",open);
+});
 
+menu.querySelectorAll("a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    menu.classList.remove("open");
+    menuButton.classList.remove("active");
+    menuButton.setAttribute("aria-expanded","false");
+  });
+});
 
-/* =========================================================
-   FILTERS
-========================================================= */
-
-filterButtons.forEach(
-  function(button) {
-
-    button.addEventListener(
-      "click",
-      function() {
-
-        activeFilter =
-          button.dataset.filter;
-
-
-        search.value =
-          "";
-
-
-        setActiveFilterUI(
-          activeFilter
-        );
-
-
-        updateCatalog();
-
-      }
-    );
-
-  }
-);
-
-
-/* =========================================================
-   FILTER SCROLL
-========================================================= */
-
-filterBar.addEventListener(
-  "click",
-  function(event) {
-
-    const button =
-      event.target.closest(
-        ".filter-button"
-      );
-
-
-    if (
-      !button
-    ) {
-
-      return;
-
-    }
-
-
-    button.scrollIntoView(
-      {
-
-        behavior:
-          "smooth",
-
-        block:
-          "nearest",
-
-        inline:
-          "center"
-
-      }
-    );
-
-  }
-);
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-const menuButton =
-  document.getElementById(
-    "mobileMenuButton"
-  );
-
-
-const menu =
-  document.getElementById(
-    "mobileMenu"
-  );
-
-
-menuButton.addEventListener(
-  "click",
-  function() {
-
-    const open =
-      menu.classList.toggle(
-        "open"
-      );
-
-
-    menuButton.classList.toggle(
-      "active",
-      open
-    );
-
-
-    menuButton.setAttribute(
-      "aria-expanded",
-      open
-    );
-
-  }
-);
-
-
-menu
-  .querySelectorAll("a")
-  .forEach(
-    function(link) {
-
-      link.addEventListener(
-        "click",
-        function() {
-
-          menu.classList.remove(
-            "open"
-          );
-
-
-          menuButton.classList.remove(
-            "active"
-          );
-
-
-          menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-        }
-      );
-
-    }
-  );
-
-
-/* =========================================================
-   START
-========================================================= */
-
-heroListingCount.textContent =
-  products.length
-  +
-  " LISTINGS";
-
-
-activeFilter =
-  "all";
-
-
-setActiveFilterUI(
-  "all"
-);
-
-
+heroListingCount.textContent=products.length+" LISTINGS";
+activeFilter="all";
+setActiveFilterUI("all");
 updateCatalog();
-
-
 restoreMemberSession();
-
-
-console.log(
-  "PCH catalog loaded:",
-  products.length,
-  "products"
-);
-
 </script>
 
-
 </body>
-
 </html>
